@@ -15,7 +15,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://distillerymap.ie"),
+  metadataBase: new URL("https://distillerymap.org"),
   title: "Distillery Map — Every Distillery in the World",
   description:
     "A free, open distillery map with 6,497 distilleries, tasting rooms, and spirit producers worldwide. Community-built and growing.",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Distillery Map — Every Distillery in the World",
     description:
       "A free, open distillery map with 6,497 distilleries, tasting rooms, and spirit producers worldwide. Community-built and growing.",
-    url: "https://distillerymap.ie",
+    url: "https://distillerymap.org",
     siteName: "Distillery Map",
     locale: "en_IE",
     type: "website",
