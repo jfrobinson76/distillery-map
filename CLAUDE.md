@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-- **URL**: distillerymap.ie (also owns distillerymap.org, redirects to .ie)
+- **URL**: distillerymap.org (primary), distillerymap.ie (redirects to .org)
 - **Stack**: Next.js 16, React 19, TypeScript, Tailwind CSS 4, Mapbox GL
 - **Hosting**: Vercel (Hobby plan — never add Co-Authored-By to commits)
 - **Forms**: Formspree (ID: mjgpywkp — shared for submissions + claims)
@@ -64,9 +64,14 @@ Claimed listing model: free base layer → claim & correct → enhanced listing 
 Every claim submission is a warm lead. The form captures structured data that becomes the premium listing schema.
 No pricing page. No "For Business." The CRM conversation happens in email after they claim.
 
+## Planned
+
+- **Angel's Share infographic** — visual explainer of barrel evaporation during maturation (~2% per year). Standalone content piece, not a full education section. Reference data exists in GWC project (`docs/whiskey-glossary-research.md`).
+
 ## Contact
 
 - hello@distillerymap.ie (forwards to John's inbox)
+- hello@distillerymap.org (forwards to John's inbox)
 
 ## Parent Project
 
