@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# data pipeline outputs
+/data/enriched/
+__pycache__/
+*.pyc
+.venv/
