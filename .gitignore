@@ -42,6 +42,9 @@ next-env.d.ts
 
 # data pipeline outputs
 /data/enriched/
+/data/stillbound_intelligence.db
+/data/phase2_run.log
+/data/geocode_cache.json
 __pycache__/
 *.pyc
 .venv/
