@@ -1,0 +1,986 @@
+[
+ [
+  "Q30038251",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30062430",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q115910579",
+  "Czech Republic",
+  "lihovar Josefov",
+  "lihovar v okrese Náchod"
+ ],
+ [
+  "Q116321216",
+  "Czech Republic",
+  "lihovar klášterního dvora v Plasích",
+  "lihovar kláštera Plasy v okrese Plzeň-sever"
+ ],
+ [
+  "Q12033527",
+  "Czech Republic",
+  "Lihovar v Rájci-Jestřebí",
+  "lihovar na území Rájce-Jestřebí"
+ ],
+ [
+  "Q124614459",
+  "Czech Republic",
+  "palírna Dubsko",
+  "provozovna pěstitelského pálení"
+ ],
+ [
+  "Q124614875",
+  "Czech Republic",
+  "bývalý pivovar a lihovar v Uhřicích",
+  "součást poplužního dvora u tvrze v Uhřicích, části města Sedlec-Prčice v okrese Příbram"
+ ],
+ [
+  "Q37180944",
+  "Czech Republic",
+  "Panská vinopalna",
+  "kulturní památka České republiky na území obce Drahenice"
+ ],
+ [
+  "Q37324537",
+  "Czech Republic",
+  "Palírna",
+  "kulturní památka České republiky na území obce Jindřichův Hradec"
+ ],
+ [
+  "Q37422265",
+  "Czech Republic",
+  "Lihovar",
+  "kulturní památka České republiky na území obce Klášterec nad Ohří"
+ ],
+ [
+  "Q38044496",
+  "Czech Republic",
+  "Lihovar",
+  "kulturní památka České republiky na území obce Ostrava"
+ ],
+ [
+  "Q38092918",
+  "Czech Republic",
+  "Lihovar",
+  "kulturní památka České republiky na území obce Ruda nad Moravou"
+ ],
+ [
+  "Q38096258",
+  "Czech Republic",
+  "Palírna",
+  "kulturní památka České republiky na území obce Slavkov u Brna"
+ ],
+ [
+  "Q38229492",
+  "Czech Republic",
+  "Lihovar - škrobárna, původně mlýn",
+  "kulturní památka České republiky na území obce Zámrsk"
+ ],
+ [
+  "Q55501458",
+  "Czech Republic",
+  "Lihovar Velký Ratmírov",
+  "bývalý lihovar ve Velkém Ratmírově"
+ ],
+ [
+  "Q61451446",
+  "Czech Republic",
+  "Lihovar Nemyšl",
+  "lihovar v Nemyšli"
+ ],
+ [
+  "Q61454505",
+  "Czech Republic",
+  "Zámecký lihovar Pyšely",
+  "lihovar na území Pyšel"
+ ],
+ [
+  "Q63061827",
+  "Czech Republic",
+  "Lihovar, Mladá Boleslav",
+  "lihovar na území Mladé Boleslavi III"
+ ],
+ [
+  "Q104028430",
+  "France",
+  "maison Lacaux",
+  "maison du directeur de l'ancienne distillerie Lacaux Frères"
+ ],
+ [
+  "Q109771908",
+  "France",
+  "distillerie d'absinthe Delizy et Doistau",
+  "ancienne distillerie à Pantin, France"
+ ],
+ [
+  "Q115928768",
+  "France",
+  "distillerie de Bou",
+  "ancienne distillerie dans le Loiret, en France"
+ ],
+ [
+  "Q88324482",
+  "France",
+  "distillerie Cusenier",
+  "ancienne distillerie située à Charenton-le-Pont, en France"
+ ],
+ [
+  "Q909290",
+  "Germany",
+  "Brennerei Elmendorf",
+  "ehemalige Brennerei im Gütersloher Stadtteil Isselhorst"
+ ],
+ [
+  "Q113669509",
+  "Poland",
+  "drożdżownia gorzelni Henryków",
+  "budynek w Warszawie"
+ ],
+ [
+  "Q121885529",
+  "Poland",
+  "gorzelnia dworska",
+  "zabytkowa gorzelnia w województwie podlaskim, w powiecie sejneńskim"
+ ],
+ [
+  "Q121897265",
+  "Poland",
+  "d. wytwórnia koniaków i szampana A. Krumnow&Co., ob. budynek mieszkalny, Plac Jana Matejki 20 w Zielonej Górze",
+  "zabytkowa gorzelnia w Zielonej Górze"
+ ],
+ [
+  "Q122103548",
+  "Poland",
+  "kompleks gorzelni, Tuczki 28, Tuczki",
+  "zabytkowa gorzelnia w województwie warmińsko-mazurskim, w powiecie działdowskim"
+ ],
+ [
+  "Q122112504",
+  "Poland",
+  "skrzydło północne budynku gorzelni w Rytwianach",
+  "zabytkowa gorzelnia w województwie świętokrzyskim, w powiecie staszowskim"
+ ],
+ [
+  "Q122157690",
+  "Poland",
+  "gorzelnia w Pomieniu",
+  "zabytkowa gorzelnia w województwie zachodniopomorskim, w powiecie choszczeńskim"
+ ],
+ [
+  "Q122158003",
+  "Poland",
+  "gorzelnia w Gwiazdowie",
+  "zabytkowa gorzelnia w województwie zachodniopomorskim, w powiecie szczecineckim"
+ ],
+ [
+  "Q122172428",
+  "Poland",
+  "gorzelnia, Okmiany",
+  "zabytkowa gorzelnia w województwie dolnośląskim, w powiecie legnickim"
+ ],
+ [
+  "Q122177186",
+  "Poland",
+  "gorzelnia w Kołaczkowie",
+  "zabytkowa gorzelnia w województwie wielkopolskim, w powiecie gnieźnieńskim"
+ ],
+ [
+  "Q122177474",
+  "Poland",
+  "gorzelnia majątkowa",
+  "zabytkowa gorzelnia w województwie wielkopolskim, w powiecie poznańskim"
+ ],
+ [
+  "Q122177578",
+  "Poland",
+  "gorzelnia 3 w Pożarowie",
+  "zabytkowa gorzelnia w województwie wielkopolskim, w powiecie szamotulskim"
+ ],
+ [
+  "Q122195353",
+  "Poland",
+  "gorzelnia w Starej Wsi",
+  "zabytkowa gorzelnia w województwie mazowieckim, w powiecie grójeckim"
+ ],
+ [
+  "Q122195406",
+  "Poland",
+  "gorzelnia w Janowie",
+  "zabytkowa gorzelnia w województwie mazowieckim, w powiecie mińskim"
+ ],
+ [
+  "Q136243074",
+  "Poland",
+  "Gorzelnia w Wałyczu",
+  ""
+ ],
+ [
+  "Q137485284",
+  "Poland",
+  "gorzelnia w zespole folwarcznym w Stypułowie",
+  "zabytek w województwie lubuskim, w powiecie nowosolskim"
+ ],
+ [
+  "Q137485349",
+  "Poland",
+  "gorzelnia wraz z kartoflarzem w Kamosowie",
+  "Zabytek w województwie zachodniopomorskim, w powiecie białogardzkim"
+ ],
+ [
+  "Q137996563",
+  "Poland",
+  "gorzelnia w Bełdowie",
+  "dawny zakład produkcyjny w województwie łódzkim w Polsce"
+ ],
+ [
+  "Q29965170",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q29965391",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q29974776",
+  "Poland",
+  "gorzelnia w Wichorzu",
+  "zabytek w Wichorzu"
+ ],
+ [
+  "Q29975141",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q29975627",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q29975732",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q29976537",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q29976664",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q29976804",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30037385",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30037453",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30037492",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30038029",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30038589",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30041504",
+  "Poland",
+  "Gorzelnia",
+  "zabytek nieruchomy w województwie dolnośląskim"
+ ],
+ [
+  "Q30041616",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30041825",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30045179",
+  "Poland",
+  "Gorzelnia w zespole pałacowo-folwarcznym w Budziszowie Małym",
+  "zabytek nieruchomy w województwie dolnośląskim"
+ ],
+ [
+  "Q30070171",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30072190",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30073214",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30078287",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30078662",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30078855",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30079398",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30089642",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30090694",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30092193",
+  "Poland",
+  "Gorzelnia (dec. zajazd)",
+  ""
+ ],
+ [
+  "Q30092473",
+  "Poland",
+  "Gorzelnia w Moszczenicy",
+  ""
+ ],
+ [
+  "Q30097163",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30097444",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30099236",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30100531",
+  "Poland",
+  "Gorzelnia (ruina)",
+  ""
+ ],
+ [
+  "Q30102209",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30103476",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30103632",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30103895",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30104038",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30104436",
+  "Poland",
+  "Gorzelnia",
+  "zabytek nieruchomy w województwie lubuskim"
+ ],
+ [
+  "Q30106797",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30135941",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30136735",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30136791",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30143668",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30215649",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30231213",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30232262",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30244684",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30531788",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30536242",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30552250",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30572483",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30582980",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30583399",
+  "Poland",
+  "Gorzelnia, XIX/XX",
+  ""
+ ],
+ [
+  "Q30779075",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30954117",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q30955024",
+  "Poland",
+  "Komin gorzelni w Chynowiu",
+  ""
+ ],
+ [
+  "Q30961352",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q31107544",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q31107773",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q31108117",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q31108819",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q31110007",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q31125106",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q31132659",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q31804804",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q31860352",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q31862871",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q31864359",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q31867123",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q31874295",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q32022821",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q32038288",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q32137194",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q32144914",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q32146060",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q32262540",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q32264841",
+  "Poland",
+  "Gorzelnia w folwarku w Szczepowicach",
+  ""
+ ],
+ [
+  "Q32265331",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q32267988",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q32270698",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q32982168",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q32998834",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q32999423",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q32999741",
+  "Poland",
+  "Gorzelnia z kominem",
+  ""
+ ],
+ [
+  "Q33000248",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33000985",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33001062",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33007178",
+  "Poland",
+  "Piwnice gorzelni",
+  ""
+ ],
+ [
+  "Q33008661",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33009275",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33013938",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33014583",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33083572",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33083635",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33083747",
+  "Poland",
+  "Gorzelnia w Mnichach",
+  ""
+ ],
+ [
+  "Q33083885",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33086728",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33088629",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33089030",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33090710",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33092749",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33092762",
+  "Poland",
+  "Gorzelnia w Golinie Wielkiej",
+  ""
+ ],
+ [
+  "Q33092906",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33092983",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33135139",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33135246",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33135366",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33136608",
+  "Poland",
+  "Gorzelnia, XVIII/XIX",
+  ""
+ ],
+ [
+  "Q33137079",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33137198",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33143318",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33236218",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33255473",
+  "Poland",
+  "Gorzelnia z wieżą ciśnień",
+  ""
+ ],
+ [
+  "Q33305193",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33310008",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33402221",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33419515",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33421807",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33422866",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33473391",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33484243",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33507201",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ],
+ [
+  "Q33508019",
+  "Poland",
+  "Gorzelnia",
+  ""
+ ]
+]
