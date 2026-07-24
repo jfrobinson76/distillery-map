@@ -1,0 +1,2330 @@
+[
+ {
+  "slug": "brennerei-wirtshaus-und-hotel-sponsel-zum-schwarzen-adler",
+  "name": "Brennerei, Wirtshaus und Hotel Sponsel \"Zum Schwarzen Adler\"",
+  "region": "europe",
+  "website": "https://www.gasthaus-sponsel.de/",
+  "address": "Hauptstraße 45, 91356 Kirchehrenbach, Germany",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   11.147332,
+   49.7343753
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "destillerie-likormanufaktur-deheck-e-k",
+  "name": "Destillerie & Likörmanufaktur Deheck e.K.",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.4015193,
+   49.7497835
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "getranke-lukas",
+  "name": "Getränke Lukas",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   11.2410961,
+   49.2564627
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brelinger-kornbrennerei",
+  "name": "Brelinger Kornbrennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm+wikidata",
+  "coords": [
+   9.67772,
+   52.54999
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "erste-dresdner-spezialitatenbrennerei-gmbh-augustus-rex",
+  "name": "Erste Dresdner Spezialitätenbrennerei GmbH Augustus Rex",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   13.7669099,
+   51.1127444
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-ernst-ziegler",
+  "name": "Brennerei Ernst Ziegler",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.5651469,
+   48.3770848
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "fa-gert-scheithauer-dipl-ing-fh-brennereispezialitaten",
+  "name": "Fa. Gert Scheithauer (Dipl.-Ing. FH) Brennereispezialitäten",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   12.5660378,
+   51.6056697
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "grungefuhl",
+  "name": "Grüngefühl",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.131727,
+   48.888107
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "obstbrennerei-scholtes",
+  "name": "Obstbrennerei Scholtes",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "Edelbrände & Likör Mitglied der Viezstraße / Route du Cidre",
+  "source": "osm",
+  "coords": [
+   6.5914537,
+   49.3748468
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "edelbrennerei-schnaps-bartel",
+  "name": "Edelbrennerei \"Schnaps-Bartel\"",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   11.1417329,
+   49.6825402
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "likorfabrikation-leonard-herbst",
+  "name": "Likörfabrikation Leonard Herbst",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   11.1964019,
+   49.7997759
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "schwarzbrennerei-georg-schwarz",
+  "name": "\"Schwarzbrennerei\" Georg Schwarz",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   10.6162756,
+   49.7630622
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "edelobstbrennerei-jochen-fischer-kg",
+  "name": "Edelobstbrennerei Jochen Fischer KG",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   10.3436231,
+   49.7931793
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "wolfersdorfer-brennerei-mit-safterei",
+  "name": "Wölfersdorfer Brennerei mit Safterei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   11.2986539,
+   49.6452337
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "meinel-s-hofbrennerei",
+  "name": "Meinel's Hofbrennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   11.9175117,
+   50.3265164
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-fritz-wohlhofer",
+  "name": "Brennerei Fritz Wohlhöfer",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   11.1403763,
+   49.6714547
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-schmitt",
+  "name": "Brennerei Schmitt",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   11.4024694,
+   49.7991702
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "alte-hausbrennerei-alfred-wecklein",
+  "name": "Alte Hausbrennerei Alfred Wecklein",
+  "region": "europe",
+  "website": "http://www.wecklein.de/",
+  "address": "Ammannstraße 9, 97450 Arnstein, Germany",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   10.008355,
+   49.9502569
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "obstbrennerei-frankle",
+  "name": "Obstbrennerei Fränkle",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.5342707,
+   48.9403333
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "old-gamundia-whisky",
+  "name": "Old Gamundia Whisky",
+  "region": "europe",
+  "website": "https://www.old-gamundia.de/",
+  "address": "",
+  "description": "Whiskybrennerei mit Museum",
+  "source": "osm",
+  "coords": [
+   9.879953,
+   48.7254295
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "hofbrennerei-friedlhof",
+  "name": "Hofbrennerei Friedlhof",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   11.1158955,
+   48.3041779
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-hubert-schmid",
+  "name": "Brennerei Hubert Schmid",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.1779408,
+   47.8649901
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "specht-brennerei",
+  "name": "Specht Brennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.384323,
+   48.8860967
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "destillerie-achim-lingenfelder",
+  "name": "Destillerie Achim Lingenfelder",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.227475,
+   49.5449575
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "obstbau-brennerei-zurn",
+  "name": "Obstbau - Brennerei Zürn",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.6405137,
+   47.5700939
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "likorfactory-vertriebs-ohg",
+  "name": "LikörFactory Vertriebs oHG",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   12.1847364,
+   50.0597683
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "achim-thumser-fruchtweine",
+  "name": "Achim Thumser Fruchtweine",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   12.0895151,
+   50.0978473
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "weingut-und-brennerei-horner",
+  "name": "Weingut und Brennerei Hörner",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.6166717,
+   49.7673819
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-molitor",
+  "name": "Brennerei Molitor",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   6.2633531,
+   49.9150359
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "hausbrennerei-thomas-uhl",
+  "name": "Hausbrennerei Thomas Uhl",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   7.8125375,
+   47.9319519
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "fruchtsaftkellerei-brennerei-m-schmitt",
+  "name": "Fruchtsaftkellerei-Brennerei M. Schmitt",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   10.0081292,
+   49.5150574
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennhiesli",
+  "name": "Brennhiesli",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.0068019,
+   48.4905738
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "vorstadt-brennerei",
+  "name": "Vorstadt Brennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.8936083,
+   48.6403876
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "rottaler-brennerei",
+  "name": "Rottaler Brennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "Edelbrände;Liköre;Geiste;Geschenkpakete",
+  "source": "osm",
+  "coords": [
+   12.7485618,
+   48.4345539
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "obstbrennerei-m-fandel",
+  "name": "Obstbrennerei M. Fandel",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   6.3948865,
+   49.9447981
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "schnapsbrennerei-wenzel",
+  "name": "Schnapsbrennerei Wenzel",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.6461416,
+   50.1460652
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "manufaktur-jorg-geiger",
+  "name": "Manufaktur Jörg Geiger",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.7048244,
+   48.6524715
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "poschinger-edelbrandmanufaktur",
+  "name": "Poschinger Edelbrandmanufaktur",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   13.3019637,
+   48.9844387
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "dr-zimmermann",
+  "name": "Dr. Zimmermann",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.3208375,
+   48.5163649
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "gunter-kummet",
+  "name": "Günter Kümmet",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.8467541,
+   49.881805
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "schnapsbrennerei-meckel",
+  "name": "Schnapsbrennerei Meckel",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   7.9231372,
+   50.3782147
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "good-old-riedbacher",
+  "name": "GOOD OLD RIEDBACHER",
+  "region": "europe",
+  "website": "https://www.riedbacher.de/good-old-riedbacher-single-malt-whisky/",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.9164253,
+   49.3494038
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "hausbrennerei-wagner",
+  "name": "Hausbrennerei Wagner",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   13.3063539,
+   48.4067514
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "heidenbuhl-hof-brennerei",
+  "name": "Heidenbühl-Hof Brennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.0964809,
+   48.4087119
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "theihof-brennerei",
+  "name": "Theißhof Brennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "Prämierte Edelbrände & Likör Mitglied der Viezstraße / Route du Cidre",
+  "source": "osm",
+  "coords": [
+   6.5988639,
+   49.4175476
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "obsthof-und-edelbrennerei-samson",
+  "name": "Obsthof und Edelbrennerei Samson",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "Viez",
+  "source": "osm",
+  "coords": [
+   6.4538361,
+   49.5832449
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distellerie-megerle",
+  "name": "Distellerie Megerle",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.3145438,
+   47.6757566
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-keidel",
+  "name": "Brennerei Keidel",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.183531,
+   49.6040474
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "edelbrandmanufaktur-haas",
+  "name": "Edelbrandmanufaktur Haas",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   7.9503774,
+   48.3255296
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "rundai-brennerei",
+  "name": "Rundai-Brennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   13.1034402,
+   49.0702839
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "werner-schaal",
+  "name": "Werner Schaal",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.1749806,
+   48.4986077
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-m-zilavec",
+  "name": "Brennerei M. Zilavec",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.3071753,
+   48.8162999
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "destillerie-pipper",
+  "name": "Destillerie Pipper",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.1590673,
+   49.4942309
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "hofbrennerei-oberkorb",
+  "name": "Hofbrennerei Oberkorb",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   12.2251712,
+   48.3129875
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "old-well-distillery",
+  "name": "Old Well Distillery",
+  "region": "europe",
+  "website": "https://oldwell.de/",
+  "address": "Belower Str. 10, 17255 Wesenberg, Germany",
+  "description": "Absinth;Fruit_Spirit;Gin;Vodka",
+  "source": "osm",
+  "coords": [
+   13.0188869,
+   53.2978474
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "stollengrundhof",
+  "name": "Stollengrundhof",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.1118074,
+   48.404868
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "muserhof",
+  "name": "Muserhof",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.1021595,
+   48.3930121
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "zimmerer-hof",
+  "name": "Zimmerer-Hof",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.0861172,
+   48.3862073
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "heinrich-rube",
+  "name": "Heinrich Rube",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.5620282,
+   48.8330176
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "feines-aus-alten-sorten-gerhard-helle",
+  "name": "Feines aus alten Sorten - Gerhard Helle",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.0552902,
+   48.4494008
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "edelbrande-single-malt-whisky-gunther-busch",
+  "name": "Edelbrände & Single Malt Whisky Günther Busch",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "Edelbrände;Single_Malt_Whisky",
+  "source": "osm",
+  "coords": [
+   9.2761059,
+   48.789446
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-spielberger",
+  "name": "Brennerei Spielberger",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   10.4142774,
+   48.7832402
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "valhalla",
+  "name": "Valhalla",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "tasting@valhalla-harz.eu",
+  "source": "osm",
+  "coords": [
+   10.6117261,
+   51.7264919
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-fink",
+  "name": "Brennerei Fink",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "Brände_Und_Liköre",
+  "source": "osm",
+  "coords": [
+   9.2108343,
+   49.0006945
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-am-feuergraben",
+  "name": "Brennerei am Feuergraben",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.0764436,
+   48.6288321
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "biersack-hausbrennerei",
+  "name": "Biersack Hausbrennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "Hausbrennerei beim Stettener Schlösschen",
+  "source": "osm",
+  "coords": [
+   7.6633713,
+   47.6010885
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "schwarzwalder-hausbrennerei-fam-lang",
+  "name": "Schwarzwälder Hausbrennerei Fam. Lang",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.3698818,
+   48.5032593
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "likormanufaktur-bodensee",
+  "name": "Likörmanufaktur Bodensee",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "Liqueur",
+  "source": "osm",
+  "coords": [
+   9.6349268,
+   47.6985855
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "furstenhofer-brennerei",
+  "name": "Fürstenhöfer-Brennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.4219199,
+   52.0185661
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "q135956775",
+  "name": "Q135956775",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   8.99972,
+   49.21543
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "q138568935",
+  "name": "Q138568935",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   10.234742182,
+   52.319801185
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "q2360131",
+  "name": "Q2360131",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   8.9576,
+   47.8737
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "q909290",
+  "name": "Q909290",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   8.4106,
+   51.9456
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "q98633822",
+  "name": "Q98633822",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   10.476072513,
+   49.672751999
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "alte-kornbrennerei",
+  "name": "Alte Kornbrennerei",
+  "region": "europe",
+  "website": "http://www.museum-kornbrennerei.de/",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   8.00518,
+   51.329532
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "brennerei-am-schloberg-12-am-schloberg-14-am-schloberg-16-in-nittenau",
+  "name": "Brennerei Am Schloßberg 12; Am Schloßberg 14; Am Schloßberg 16 in Nittenau",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   12.204020265,
+   49.212927454
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-im-klosterbauhof-6-im-klosterbauhof-7-in-ebersberg",
+  "name": "Brennerei Im Klosterbauhof 6; Im Klosterbauhof 7 in Ebersberg",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   11.970741597,
+   48.075864719
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-schlostrae-4-in-pentling",
+  "name": "Brennerei Schloßstraße 4 in Pentling",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   12.081080625,
+   48.960976573
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-tiefengruner-strae-7-in-berg-oberfranken",
+  "name": "Brennerei Tiefengrüner Straße 7 in Berg (Oberfranken)",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   11.795968436,
+   50.400945483
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "kornbrennerei-knappertsbusch",
+  "name": "Kornbrennerei Knappertsbusch",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   7.12349,
+   51.2614
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "leydicke",
+  "name": "Leydicke",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   13.3668,
+   52.4926
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "test-and-teaching-distillery-weihenstephan",
+  "name": "Test and teaching distillery Weihenstephan",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   11.724248545,
+   48.395290895
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "watermill-and-distillery-hiddingsel",
+  "name": "Watermill and distillery (Hiddingsel)",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   7.421196092,
+   51.838900248
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "old-distillery-gotha",
+  "name": "old distillery Gotha",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   12.611689623,
+   51.414109522
+  ],
+  "reasons": [
+   "historic",
+   "stub"
+  ]
+ },
+ {
+  "slug": "schnaps-und-edelbrennerei-heilmann",
+  "name": "Schnaps- und Edelbrennerei Heilmann",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   11.1173353,
+   49.6924786
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-fleischmann",
+  "name": "Brennerei Fleischmann",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   10.9926748,
+   49.8137382
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-burg",
+  "name": "Brennerei Burg",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   6.6043201,
+   49.6807557
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "adolf-weisenbach-schwarzwalder-edelbranntweinbrennerei",
+  "name": "Adolf Weisenbach Schwarzwälder Edelbranntweinbrennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.1151574,
+   48.5946642
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "hotel-gasthof-destille-eisenbahn",
+  "name": "Hotel-Gasthof-Destille Eisenbahn",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.1112374,
+   49.3491653
+  ],
+  "reasons": [
+   "poi-name",
+   "stub"
+  ]
+ },
+ {
+  "slug": "enzianbrennerei-grassl-am-funtensee",
+  "name": "Enzianbrennerei Grassl am Funtensee",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "eine von mehreren Enzian-Brennereien der Firma Grassl",
+  "source": "osm",
+  "coords": [
+   12.9407951,
+   47.4915631
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "edelbrandbrennerei-junger",
+  "name": "Edelbrandbrennerei Junger",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.0833581,
+   48.4732997
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-johanneshof",
+  "name": "Brennerei Johanneshof",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   6.5944245,
+   49.6608844
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "les-caves-de-wissembourg",
+  "name": "Les Caves de Wissembourg",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   7.9525611,
+   49.0310011
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "steinhauser-gmbh-alte-bodensee-hausbrennerei-weinkellerei",
+  "name": "Steinhauser GmbH - Alte Bodensee Hausbrennerei & Weinkellerei",
+  "region": "europe",
+  "website": "https://www.steinhauser-bodensee.de/",
+  "address": "Raiffeisenstraße 23, 88079 Kressbronn am Bodensee, Germany",
+  "description": "Die alte familiengeführte Bodensee Hausbrennerei Steinhauser steht für feinste u",
+  "source": "osm",
+  "coords": [
+   9.5972719,
+   47.6043354
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "hauler-edelbranntweinbrennerei",
+  "name": "Häußler Edelbranntweinbrennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   7.9442026,
+   48.6660064
+  ],
+  "reasons": [
+   "dupe",
+   "stub"
+  ]
+ },
+ {
+  "slug": "paehler-rietberg-markenspirituosen-gmbh",
+  "name": "Paehler-Rietberg Markenspirituosen GmbH",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.3825734,
+   51.7683817
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "buhler-s-old-rhein-river-brennerei",
+  "name": "Bühler's Old Rhein River Brennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.0549387,
+   48.7641154
+  ],
+  "reasons": [
+   "historic",
+   "stub"
+  ]
+ },
+ {
+  "slug": "steigerwalder-brennerei-guttler",
+  "name": "Steigerwälder Brennerei Güttler",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   10.6609521,
+   49.7870041
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-m-eichhorn",
+  "name": "Brennerei M. Eichhorn",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   10.9217369,
+   49.7988563
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-inge-blank",
+  "name": "Brennerei Inge Blank",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   11.1940156,
+   49.8462945
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "kornbrennerei-krummesse",
+  "name": "Kornbrennerei Krummesse",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   10.6307645,
+   53.7790402
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "luner-braumanufaktur",
+  "name": "Lüner Braumanufaktur",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   7.5569319,
+   51.6282908
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "obstbrennerei-gebr-zenkel",
+  "name": "Obstbrennerei Gebr. Zenkel",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   10.8778118,
+   49.8940997
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "3-tannen-brennerei",
+  "name": "3 Tannen Brennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.2063618,
+   48.8474699
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "spessarthof",
+  "name": "Spessarthof",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.5730302,
+   50.1790823
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "roser-hausbrennerei",
+  "name": "Roser Hausbrennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   7.999014,
+   48.4318579
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "fischer-reinhard-edelbranntweinbrennerei",
+  "name": "Fischer Reinhard Edelbranntweinbrennerei",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   7.995372,
+   48.6250659
+  ],
+  "reasons": [
+   "dupe",
+   "stub"
+  ]
+ },
+ {
+  "slug": "kleinbrennerei-k-p-hummel",
+  "name": "Kleinbrennerei K. & P. Hummel",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   7.8533612,
+   48.6251509
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-elfriede-hummel",
+  "name": "Brennerei Elfriede Hummel",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   7.8591901,
+   48.6221229
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "harzer-grubenlicht",
+  "name": "Harzer Grubenlicht",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   10.784708,
+   51.50851
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "weinbau-und-obstbrennerei-hans-meyer",
+  "name": "Weinbau und Obstbrennerei Hans Meyer",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   10.3654281,
+   49.7519039
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "destillerie-gutting",
+  "name": "Destillerie Gutting",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.2913065,
+   49.4544736
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "schwarzhofs-back-und-brennhisli",
+  "name": "Schwarzhofs Back- und Brennhisli",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   8.0844721,
+   48.4151217
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "mnnerhobby-destille",
+  "name": "MÆNNERHOBBY Destille",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   12.2429439,
+   54.1348916
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "hans-loch",
+  "name": "Hans Loch",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   6.8004216,
+   49.8503945
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "friedrich-jaster-co",
+  "name": "Friedrich Jaster & Co.",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.7741754,
+   52.0839323
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "historic-distillery-ronsahl",
+  "name": "Historic Distillery Rönsahl",
+  "region": "europe",
+  "website": "https://historischebrennerei.de/",
+  "address": "Hauptstraße 23, 58566 Kierspe, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   7.506025200000001,
+   51.111336
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "brudergeist-gmbh-brennerei-bar-tasting",
+  "name": "Brüdergeist GmbH - Brennerei, Bar, Tasting",
+  "region": "europe",
+  "website": "http://www.bruedergeist.com/",
+  "address": "Hülser Str. 54, 47647 Kerken, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   6.4334976,
+   51.432291199999995
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "historic-weinbrennerei-dujardin",
+  "name": "Historic Weinbrennerei Dujardin",
+  "region": "europe",
+  "website": "http://www.weinbrennerei-dujardin.de/",
+  "address": "Hohenbudberger Str. 10, 47829 Krefeld, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   6.6495555,
+   51.3583372
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "old-distillery-schwake",
+  "name": "Old distillery Schwake",
+  "region": "europe",
+  "website": "http://www.alte-brennerei-ennigerloh.de/",
+  "address": "Liebfrauenstraße 6, 59320 Ennigerloh, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   8.0232533,
+   51.836616799999994
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "old-distillery-hilbers",
+  "name": "Old distillery Hilbers",
+  "region": "europe",
+  "website": "http://altebrennerei-hilbers.de/",
+  "address": "Butjadinger Str. 346, 26125 Oldenburg (Oldb), Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   8.2481403,
+   53.1894226
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "alte-kornbrennerei-herrenhaus",
+  "name": "Alte Kornbrennerei - Herrenhaus",
+  "region": "europe",
+  "website": "http://www.alte-kornbrennerei.de/",
+  "address": "Poggenort 19, 49584 Fürstenau, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   7.623164599999999,
+   52.492525199999996
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "alte-mackenstedter-kornbrennerei-hans-turner-gmbh",
+  "name": "Alte Mackenstedter Kornbrennerei Hans Turner GmbH",
+  "region": "europe",
+  "website": "https://www.mackenstedter.de/",
+  "address": "Delmenhorster Str. 123, 28816 Stuhr, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   8.708627300000002,
+   52.997038499999995
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "wohnmobilstellplatz-alte-brennerei",
+  "name": "Wohnmobilstellplatz Alte Brennerei",
+  "region": "europe",
+  "website": "https://www.zuraltenbrennerei.de/",
+  "address": "Landstraße 4, 88719 Stetten, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   9.2982531,
+   47.6930263
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "verein-alte-brennerei-niemberg-e-v",
+  "name": "Verein \" Alte Brennerei-Niemberg e.V.",
+  "region": "europe",
+  "website": "http://www.alte-brennerei-niemberg.de/",
+  "address": "Wendenring 10, 06188 Landsberg, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   12.0908993,
+   51.5493891
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "museum-alte-brennerei",
+  "name": "Museum \"Alte Brennerei\"",
+  "region": "europe",
+  "website": "https://www.altebrennereihille.de/",
+  "address": "Mindener Str. 71, 32479 Hille, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   8.7448278,
+   52.336844400000004
+  ],
+  "reasons": [
+   "historic",
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "cinema-old-distillery",
+  "name": "Cinema Old distillery",
+  "region": "europe",
+  "website": "http://www.wendland-kino.de/",
+  "address": "Rosenstraße 19, 29439 Lüchow (Wendland), Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   11.1562307,
+   52.9679511
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "alte-brennerei-flechtingen",
+  "name": "Alte Brennerei Flechtingen",
+  "region": "europe",
+  "website": "https://www.world-qr.com/inhalte/new/qr-fuehrer/de/sachsen_anhalt/landkreis_boerde/ortsfuehrer/stadtfuehrer_flechtingen/gemeinde_flechtingen_storchennest?lat=0&lng=0",
+  "address": "Im Grund, 39345 Flechtingen, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   11.2364794,
+   52.3334182
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "alte-brennerei",
+  "name": "Alte Brennerei",
+  "region": "europe",
+  "website": "http://www.cafezumspeicher.com/",
+  "address": "11, 17337 Uckerland, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   13.88875,
+   53.44442360000001
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "weinhaus-alte-brennerei",
+  "name": "Weinhaus Alte Brennerei",
+  "region": "europe",
+  "website": "http://www.alte-brennerei-holz.de/",
+  "address": "Schulstraße 5, 71083 Herrenberg, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   8.8697745,
+   48.5957195
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "alte-brennerei-backnang",
+  "name": "Alte Brennerei - Backnang",
+  "region": "europe",
+  "website": "http://www.altebrennerei.com/",
+  "address": "Karl-Ferdinand-Braun-Straße 8, 71522 Backnang, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   9.4236,
+   48.96158
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "alte-brennerei-liepe",
+  "name": "Alte Brennerei Liepe",
+  "region": "europe",
+  "website": "https://www.goettliches-projekt.de/seite/466076/das-restaurant.html",
+  "address": "Breite Str. 41, 14715 Nennhausen, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   12.6010878,
+   52.612946799999996
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "gutshof-brennerei-begatal-store",
+  "name": "Gutshof Brennerei Begatal Store",
+  "region": "europe",
+  "website": "http://www.gutshof-brennerei-begatal.de/",
+  "address": "Mittelstraße 100, 32657 Lemgo, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   8.8976963,
+   52.0286532
+  ],
+  "reasons": [
+   "dupe",
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "hotel-alte-brennerei",
+  "name": "HOTEL ALTE BRENNEREI",
+  "region": "europe",
+  "website": "http://hotel-alte-brennerei.de/",
+  "address": "Breite Str. 97, 38855 Wernigerode, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   10.791774199999999,
+   51.836293399999995
+  ],
+  "reasons": [
+   "historic",
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "edelbrennerei-erich-lang",
+  "name": "Edelbrennerei Erich Lang",
+  "region": "europe",
+  "website": "www.brennerei-Lang.de",
+  "address": "Dobenreuther Str. 10, 91361 Pinzberg, Germany",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   11.1303525,
+   49.6955705
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "edelbrennerei-haas",
+  "name": "Edelbrennerei Haas",
+  "region": "europe",
+  "website": "www.destillerie-haas.de",
+  "address": "Schmiedsgasse 2, 91362 Pretzfeld, Germany",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   11.1753291,
+   49.7556736
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "grassl",
+  "name": "Grassl",
+  "region": "europe",
+  "website": "https://www.enzian-grassl.com/",
+  "address": "Weihnachtsschützenpl. 2/1/2, 83471 Berchtesgaden, Germany",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   13.0009352,
+   47.6320164
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "enzianbrennerei-grassl",
+  "name": "Enzianbrennerei Grassl",
+  "region": "europe",
+  "website": "https://www.enzian-grassl.com/",
+  "address": "Salzburger Str. 105, 83471 Berchtesgaden, Germany",
+  "description": "",
+  "source": "osm+wikidata",
+  "coords": [
+   13.0407186,
+   47.6567058
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "franz-fies-feingeistbrennerei",
+  "name": "Franz Fies Feingeistbrennerei",
+  "region": "europe",
+  "website": "http://www.feingeistbrennerei.de/",
+  "address": "Heugasse 5, 77704 Oberkirch, Germany",
+  "description": "Schnaps;Schwarzwälder_Kirschwasser;Alcohol;Likör",
+  "source": "osm",
+  "coords": [
+   8.0537356,
+   48.5653603
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "schwarzwalder-feingeistbrennerei-franz-fies",
+  "name": "Schwarzwälder Feingeistbrennerei Franz Fies",
+  "region": "europe",
+  "website": "http://www.feingeistbrennerei.de/",
+  "address": "Kastelberg 2, 77704 Oberkirch, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   8.08799,
+   48.55732
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "q104599947",
+  "name": "Q104599947",
+  "region": "europe",
+  "website": "http://odenwalddestillerie.de",
+  "address": "",
+  "description": "",
+  "source": "osm+wikidata",
+  "coords": [
+   9.32866,
+   49.53764
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "q104599705",
+  "name": "Q104599705",
+  "region": "europe",
+  "website": "https://www.altenderle.de",
+  "address": "",
+  "description": "",
+  "source": "osm+wikidata",
+  "coords": [
+   9.4535471,
+   49.4863524
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "gutshof-brennerei-begatal",
+  "name": "Gutshof Brennerei Begatal",
+  "region": "europe",
+  "website": "http://www.gutshof-brennerei-begatal.de/",
+  "address": "u. Dorfstraße 3-7, 32694 Dörentrup, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   9.0562162,
+   52.022200399999996
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "the-waters-distillery",
+  "name": "The Waters Distillery",
+  "region": "europe",
+  "website": "http://thewatersdistillery.com/",
+  "address": "Ritterstraße 6, 75181 Pforzheim, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   8.7380238,
+   48.8545926
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "brennerei-walther",
+  "name": "Brennerei Walther",
+  "region": "europe",
+  "website": "https://www.instagram.com/brennerei_walther?igsh=c2V4ODg0bHRtemNx",
+  "address": "Kirchstraße 5, 75245 Neulingen, Germany",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   8.7036324,
+   48.9570845
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ }
+]
