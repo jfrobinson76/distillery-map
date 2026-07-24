@@ -1,0 +1,36 @@
+# Distillery Map
+
+> A free, open distillery map — 6,497 distilleries, tasting rooms, and spirit
+> producers worldwide, community-built and growing. distillerymap.org
+
+## What this site is
+
+Distillery Map is the largest free, open map of the world's distilleries.
+It covers whiskey, whisky, bourbon, gin, and other spirit producers across
+every continent, with names, locations, websites, and visitor information
+where available. It is community-built: anyone can submit a new distillery,
+report a closure, or suggest a correction, and distillery owners can claim
+their listing to keep details accurate.
+
+## Key facts
+
+- 6,497 distilleries, tasting rooms, and spirit producers mapped worldwide
+- Data compiled from OpenStreetMap, Wikidata, and community submissions
+- Free to use; no account required
+- Dataset available as GeoJSON: https://distillerymap.org/data/distilleries.geojson
+- Embeddable map for partners: https://distillerymap.org/embed
+
+## Key pages
+
+- Home / interactive map: https://distillerymap.org
+- Embed (for websites wanting the map): https://distillerymap.org/embed
+
+## For distillery owners
+
+If your distillery is listed, you can claim the listing from its map popup to
+correct your details and add visitor information (tours, tastings, booking
+links). New distilleries can be submitted from the map's Contribute button.
+
+## Contact
+
+hello@distillerymap.org
