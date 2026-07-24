@@ -1,0 +1,245 @@
+{
+ "kind": "status",
+ "entries": [
+  {
+   "slug": "fruchtsaftkellerei-brennerei-m-schmitt",
+   "name": "Fruchtsaftkellerei-Brennerei M. Schmitt",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    10.0081292,
+    49.5150574
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennhiesli",
+   "name": "Brennhiesli",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.0068019,
+    48.4905738
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "vorstadt-brennerei",
+   "name": "Vorstadt Brennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.8936083,
+    48.6403876
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "rottaler-brennerei",
+   "name": "Rottaler Brennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "Edelbrände;Liköre;Geiste;Geschenkpakete",
+   "source": "osm",
+   "coords": [
+    12.7485618,
+    48.4345539
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "obstbrennerei-m-fandel",
+   "name": "Obstbrennerei M. Fandel",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    6.3948865,
+    49.9447981
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "schnapsbrennerei-wenzel",
+   "name": "Schnapsbrennerei Wenzel",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.6461416,
+    50.1460652
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "manufaktur-jorg-geiger",
+   "name": "Manufaktur Jörg Geiger",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.7048244,
+    48.6524715
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "poschinger-edelbrandmanufaktur",
+   "name": "Poschinger Edelbrandmanufaktur",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    13.3019637,
+    48.9844387
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "dr-zimmermann",
+   "name": "Dr. Zimmermann",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.3208375,
+    48.5163649
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "gunter-kummet",
+   "name": "Günter Kümmet",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.8467541,
+    49.881805
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "schnapsbrennerei-meckel",
+   "name": "Schnapsbrennerei Meckel",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    7.9231372,
+    50.3782147
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "good-old-riedbacher",
+   "name": "GOOD OLD RIEDBACHER",
+   "region": "europe",
+   "website": "https://www.riedbacher.de/good-old-riedbacher-single-malt-whisky/",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.9164253,
+    49.3494038
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "hausbrennerei-wagner",
+   "name": "Hausbrennerei Wagner",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    13.3063539,
+    48.4067514
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "heidenbuhl-hof-brennerei",
+   "name": "Heidenbühl-Hof Brennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.0964809,
+    48.4087119
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "theihof-brennerei",
+   "name": "Theißhof Brennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "Prämierte Edelbrände & Likör Mitglied der Viezstraße / Route du Cidre",
+   "source": "osm",
+   "coords": [
+    6.5988639,
+    49.4175476
+   ],
+   "reasons": [
+    "stub"
+   ]
+  }
+ ]
+}

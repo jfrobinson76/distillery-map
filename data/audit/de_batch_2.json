@@ -1,0 +1,245 @@
+{
+ "kind": "status",
+ "entries": [
+  {
+   "slug": "brennerei-wirtshaus-und-hotel-sponsel-zum-schwarzen-adler",
+   "name": "Brennerei, Wirtshaus und Hotel Sponsel \"Zum Schwarzen Adler\"",
+   "region": "europe",
+   "website": "https://www.gasthaus-sponsel.de/",
+   "address": "Hauptstraße 45, 91356 Kirchehrenbach, Germany",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    11.147332,
+    49.7343753
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "destillerie-likormanufaktur-deheck-e-k",
+   "name": "Destillerie & Likörmanufaktur Deheck e.K.",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.4015193,
+    49.7497835
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "getranke-lukas",
+   "name": "Getränke Lukas",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    11.2410961,
+    49.2564627
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brelinger-kornbrennerei",
+   "name": "Brelinger Kornbrennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm+wikidata",
+   "coords": [
+    9.67772,
+    52.54999
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "erste-dresdner-spezialitatenbrennerei-gmbh-augustus-rex",
+   "name": "Erste Dresdner Spezialitätenbrennerei GmbH Augustus Rex",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    13.7669099,
+    51.1127444
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-ernst-ziegler",
+   "name": "Brennerei Ernst Ziegler",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.5651469,
+    48.3770848
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "fa-gert-scheithauer-dipl-ing-fh-brennereispezialitaten",
+   "name": "Fa. Gert Scheithauer (Dipl.-Ing. FH) Brennereispezialitäten",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    12.5660378,
+    51.6056697
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "grungefuhl",
+   "name": "Grüngefühl",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.131727,
+    48.888107
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "obstbrennerei-scholtes",
+   "name": "Obstbrennerei Scholtes",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "Edelbrände & Likör Mitglied der Viezstraße / Route du Cidre",
+   "source": "osm",
+   "coords": [
+    6.5914537,
+    49.3748468
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "edelbrennerei-schnaps-bartel",
+   "name": "Edelbrennerei \"Schnaps-Bartel\"",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    11.1417329,
+    49.6825402
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "likorfabrikation-leonard-herbst",
+   "name": "Likörfabrikation Leonard Herbst",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    11.1964019,
+    49.7997759
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "schwarzbrennerei-georg-schwarz",
+   "name": "\"Schwarzbrennerei\" Georg Schwarz",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    10.6162756,
+    49.7630622
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "edelobstbrennerei-jochen-fischer-kg",
+   "name": "Edelobstbrennerei Jochen Fischer KG",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    10.3436231,
+    49.7931793
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "wolfersdorfer-brennerei-mit-safterei",
+   "name": "Wölfersdorfer Brennerei mit Safterei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    11.2986539,
+    49.6452337
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "meinel-s-hofbrennerei",
+   "name": "Meinel's Hofbrennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    11.9175117,
+    50.3265164
+   ],
+   "reasons": [
+    "stub"
+   ]
+  }
+ ]
+}

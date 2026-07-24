@@ -1,0 +1,245 @@
+{
+ "kind": "status",
+ "entries": [
+  {
+   "slug": "obsthof-und-edelbrennerei-samson",
+   "name": "Obsthof und Edelbrennerei Samson",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "Viez",
+   "source": "osm",
+   "coords": [
+    6.4538361,
+    49.5832449
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "distellerie-megerle",
+   "name": "Distellerie Megerle",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.3145438,
+    47.6757566
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-keidel",
+   "name": "Brennerei Keidel",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.183531,
+    49.6040474
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "edelbrandmanufaktur-haas",
+   "name": "Edelbrandmanufaktur Haas",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    7.9503774,
+    48.3255296
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "rundai-brennerei",
+   "name": "Rundai-Brennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    13.1034402,
+    49.0702839
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "werner-schaal",
+   "name": "Werner Schaal",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.1749806,
+    48.4986077
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-m-zilavec",
+   "name": "Brennerei M. Zilavec",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.3071753,
+    48.8162999
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "destillerie-pipper",
+   "name": "Destillerie Pipper",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.1590673,
+    49.4942309
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "hofbrennerei-oberkorb",
+   "name": "Hofbrennerei Oberkorb",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    12.2251712,
+    48.3129875
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "old-well-distillery",
+   "name": "Old Well Distillery",
+   "region": "europe",
+   "website": "https://oldwell.de/",
+   "address": "Belower Str. 10, 17255 Wesenberg, Germany",
+   "description": "Absinth;Fruit_Spirit;Gin;Vodka",
+   "source": "osm",
+   "coords": [
+    13.0188869,
+    53.2978474
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "stollengrundhof",
+   "name": "Stollengrundhof",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.1118074,
+    48.404868
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "muserhof",
+   "name": "Muserhof",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.1021595,
+    48.3930121
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "zimmerer-hof",
+   "name": "Zimmerer-Hof",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.0861172,
+    48.3862073
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "heinrich-rube",
+   "name": "Heinrich Rube",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.5620282,
+    48.8330176
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "feines-aus-alten-sorten-gerhard-helle",
+   "name": "Feines aus alten Sorten - Gerhard Helle",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.0552902,
+    48.4494008
+   ],
+   "reasons": [
+    "stub"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,245 @@
+{
+ "kind": "status",
+ "entries": [
+  {
+   "slug": "brennerei-fritz-wohlhofer",
+   "name": "Brennerei Fritz Wohlhöfer",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    11.1403763,
+    49.6714547
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-schmitt",
+   "name": "Brennerei Schmitt",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    11.4024694,
+    49.7991702
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "alte-hausbrennerei-alfred-wecklein",
+   "name": "Alte Hausbrennerei Alfred Wecklein",
+   "region": "europe",
+   "website": "http://www.wecklein.de/",
+   "address": "Ammannstraße 9, 97450 Arnstein, Germany",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    10.008355,
+    49.9502569
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "obstbrennerei-frankle",
+   "name": "Obstbrennerei Fränkle",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.5342707,
+    48.9403333
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "old-gamundia-whisky",
+   "name": "Old Gamundia Whisky",
+   "region": "europe",
+   "website": "https://www.old-gamundia.de/",
+   "address": "",
+   "description": "Whiskybrennerei mit Museum",
+   "source": "osm",
+   "coords": [
+    9.879953,
+    48.7254295
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "hofbrennerei-friedlhof",
+   "name": "Hofbrennerei Friedlhof",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    11.1158955,
+    48.3041779
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-hubert-schmid",
+   "name": "Brennerei Hubert Schmid",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.1779408,
+    47.8649901
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "specht-brennerei",
+   "name": "Specht Brennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.384323,
+    48.8860967
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "destillerie-achim-lingenfelder",
+   "name": "Destillerie Achim Lingenfelder",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.227475,
+    49.5449575
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "obstbau-brennerei-zurn",
+   "name": "Obstbau - Brennerei Zürn",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.6405137,
+    47.5700939
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "likorfactory-vertriebs-ohg",
+   "name": "LikörFactory Vertriebs oHG",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    12.1847364,
+    50.0597683
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "achim-thumser-fruchtweine",
+   "name": "Achim Thumser Fruchtweine",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    12.0895151,
+    50.0978473
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "weingut-und-brennerei-horner",
+   "name": "Weingut und Brennerei Hörner",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.6166717,
+    49.7673819
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-molitor",
+   "name": "Brennerei Molitor",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    6.2633531,
+    49.9150359
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "hausbrennerei-thomas-uhl",
+   "name": "Hausbrennerei Thomas Uhl",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    7.8125375,
+    47.9319519
+   ],
+   "reasons": [
+    "stub"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,476 @@
+{
+ "kind": "combined",
+ "pairs": [
+  [
+   "Starward Distillery",
+   "Starward Distillery & Bar",
+   3.1,
+   0.73
+  ],
+  [
+   "Black Gate Distillery",
+   "Black Gate Distillery Mendooran",
+   1.1,
+   0.65
+  ],
+  [
+   "Eucalyptus Distillery Museum",
+   "Eucalyptus Distillery",
+   6.6,
+   0.71
+  ]
+ ],
+ "entries": [
+  {
+   "slug": "sullivan-s-cove-distillery",
+   "name": "Sullivan's Cove Distillery",
+   "region": "australia",
+   "website": "",
+   "address": "",
+   "description": "World's best single malt whisky winner, Tasmania",
+   "source": "curated",
+   "coords": [
+    147.2925,
+    -42.8267
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "heathcote-gin",
+   "name": "Heathcote Gin",
+   "region": "australia",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    144.7109698,
+    -36.9249327
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "old-young-s",
+   "name": "Old Young's",
+   "region": "australia",
+   "website": "https://oldyoungs.com.au/",
+   "address": "10581 W Swan Rd, Henley Brook WA 6055, Australia",
+   "description": "Gin",
+   "source": "osm",
+   "coords": [
+    115.9999007,
+    -31.806271
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "new-tricks",
+   "name": "New Tricks",
+   "region": "australia",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    153.0444048,
+    -27.43288
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "old-kempton-distillery",
+   "name": "Old Kempton Distillery",
+   "region": "australia",
+   "website": "http://www.oldkemptondistillery.com.au/",
+   "address": "26 Main St, Kempton TAS 7030, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    147.20439389999999,
+    -42.5382951
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "starward-distillery-bar",
+   "name": "Starward Distillery & Bar",
+   "region": "australia",
+   "website": "https://starward.com.au/?utm_source=google&utm_medium=organic&utm_campaign=gmb_listing",
+   "address": "50 Bertie St, Port Melbourne VIC 3207, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    144.9388541,
+    -37.829574799999996
+   ],
+   "reasons": [
+    "dupe",
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "king-island-distillery-airport-bar",
+   "name": "King Island Distillery Airport Bar",
+   "region": "australia",
+   "website": "https://kingislanddistillery.com.au/",
+   "address": "102 Morrison Ave, Loorana TAS 7256, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    143.8820547,
+    -39.8797299
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "itinerant-spirits-cocktail-bar-distillery",
+   "name": "Itinerant Spirits Cocktail Bar & Distillery",
+   "region": "australia",
+   "website": "https://www.itinerantspirits.com/",
+   "address": "200 Lydiard St N, Soldiers Hill VIC 3350, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    143.8594949,
+    -37.5579561
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "traveller-s-rest-hotel-distillery",
+   "name": "Traveller's Rest Hotel & Distillery",
+   "region": "australia",
+   "website": "http://www.travellersresthotel.com/",
+   "address": "Station Street, Thorpdale VIC 3835, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    146.1759185,
+    -38.2880554
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "eucalyptus-distillery-museum",
+   "name": "Eucalyptus Distillery Museum",
+   "region": "australia",
+   "website": "http://www.eucymuseum.com.au/",
+   "address": "20 Grant St N, Inglewood VIC 3517, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    143.8649348,
+    -36.5686867
+   ],
+   "reasons": [
+    "dupe",
+    "historic",
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "ambra-spirits-distillery-bar-restaurant",
+   "name": "Ambra Spirits Distillery Bar & Restaurant",
+   "region": "australia",
+   "website": "https://www.ambraspirits.com.au/",
+   "address": "43 Phillips St, Thebarton SA 5031, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    138.5732464,
+    -34.914155199999996
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "ruedins-historic-eucalyptus-distillery",
+   "name": "Ruedins Historic Eucalyptus Distillery",
+   "region": "australia",
+   "website": "https://vhd.heritagecouncil.vic.gov.au/places/5383/download-report",
+   "address": "North, Huntly VIC 3551, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    144.40181149999998,
+    -36.533318
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "old-salt-distillery",
+   "name": "Old Salt Distillery",
+   "region": "australia",
+   "website": "http://www.oldsaltdistillery.com.au/",
+   "address": "Unit 1/18 Tom Thumb Ave, South Nowra NSW 2541, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    150.5828794,
+    -34.9126555
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "millsheds-distillery-bar",
+   "name": "Millsheds Distillery & Bar",
+   "region": "australia",
+   "website": "https://www.millsheds.com.au/",
+   "address": "Shop 9/210-224 Bong Bong St, Bowral NSW 2576, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    150.4190203,
+    -34.4762911
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "historic-eucalyptus-distillery",
+   "name": "Historic Eucalyptus Distillery",
+   "region": "australia",
+   "website": "https://www.tidbinbilla.act.gov.au/",
+   "address": "Paddys River Road, Australian Capital Territory 2620, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    148.9200107,
+    -35.4231978
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "joadja-distillery-tourism-historic-site",
+   "name": "Joadja Distillery, Tourism, Historic Site",
+   "region": "australia",
+   "website": "http://www.joadjadistillery.com.au/",
+   "address": "1760 Joadja Rd, Joadja NSW 2575, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    150.22684049999998,
+    -34.4045962
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "the-carlisle-hotel-distillery",
+   "name": "The Carlisle Hotel & Distillery",
+   "region": "australia",
+   "website": "https://thecarlislehotel.com.au/?utm_source=local&utm_medium=organic&utm_campaign=gmb",
+   "address": "174 Rutland Ave, Carlisle WA 6101, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    115.9108697,
+    -31.979763099999996
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "the-old-shed-distillery-bilpin-blue-mountains",
+   "name": "The Old Shed Distillery: Bilpin, Blue Mountains",
+   "region": "australia",
+   "website": "https://www.oldsheddistillery.com/",
+   "address": "2419 Bells Line of Rd, Bilpin NSW 2758, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    150.5269236,
+    -33.501293200000006
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "wharf-st-distillery-restaurant",
+   "name": "Wharf St. Distillery Restaurant",
+   "region": "australia",
+   "website": "https://wharfst.com.au/",
+   "address": "8 Wharf St, Forster NSW 2428, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    152.5089571,
+    -32.1803269
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "bunker-distillery-cellar-door-bar-grafton-nsw",
+   "name": "Bunker Distillery Cellar Door & Bar Grafton NSW",
+   "region": "australia",
+   "website": "http://www.bunkerdistillery.com.au/",
+   "address": "505, 170 North St, Grafton NSW 2460, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    152.9398907,
+    -29.670997099999994
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "nosferatu-distillery-bar-cafe",
+   "name": "Nosferatu Distillery Bar + Cafe",
+   "region": "australia",
+   "website": "https://www.nosferatu.com.au/",
+   "address": "26 Jeays St, Bowen Hills QLD 4006, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    153.0362537,
+    -27.449518899999998
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "montvale-gin-distillery-bar",
+   "name": "Montvale Gin Distillery & Bar",
+   "region": "australia",
+   "website": "https://www.montvale.com.au/distillery",
+   "address": "92 Main St, Montville QLD 4560, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    152.8889887,
+    -26.685504299999998
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "yangan-hotel-distillery-co",
+   "name": "Yangan Hotel & Distillery Co",
+   "region": "australia",
+   "website": "http://www.yanganhotel.com.au/",
+   "address": "Yangan Hotel, 13 King St, Yangan QLD 4371, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    152.21015839999998,
+    -28.1964972
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "site-of-normanby-mill-distillery-1873-1968",
+   "name": "Site of Normanby Mill & Distillery (1873-1968)",
+   "region": "australia",
+   "website": "https://www.loststory.net/tips/strathpine",
+   "address": "Strathpine QLD 4500, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    152.9967223,
+    -27.3066541
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "starward-distillery",
+   "name": "Starward Distillery",
+   "region": "australia",
+   "website": "https://mindspirits.com.au/",
+   "address": "7/52 Wirraway Dr, Port Melbourne VIC 3207, Australia",
+   "description": "Melbourne whisky matured in Australian wine barrels",
+   "source": "curated",
+   "coords": [
+    144.9042,
+    -37.8256
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "black-gate-distillery",
+   "name": "Black Gate Distillery",
+   "region": "australia",
+   "website": "https://www.blackgatedistillery.com/",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    149.1186142,
+    -31.8241052
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "black-gate-distillery-mendooran",
+   "name": "Black Gate Distillery Mendooran",
+   "region": "australia",
+   "website": "http://www.blackgatedistillery.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=11264087470386142378",
+   "address": "72 Forrest Road, Mendooran NSW 2842, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    149.1154898,
+    -31.8338911
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "eucalyptus-distillery",
+   "name": "Eucalyptus Distillery",
+   "region": "australia",
+   "website": "https://www.parks.vic.gov.au/",
+   "address": "Inglewood VIC 3517, Australia",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    143.8175168,
+    -36.613902599999996
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  }
+ ]
+}
