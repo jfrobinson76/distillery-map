@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import DistilleryMapApp from "@/components/DistilleryMapApp";
 import { getDistilleryCount } from "@/lib/data";
 import { SITE_URL, WOW } from "@/lib/constants";
@@ -45,6 +46,14 @@ function WelcomeCopy({ count }: { count: number }) {
           <span><strong style={{ color: WOW.charcoal }}>Contribute</strong> &mdash; know a distillery we&apos;re missing? Add it, report a closure, or suggest a fix</span>
         </div>
       </div>
+
+      <p className="mt-5 text-xs" style={{ color: WOW.muted }}>
+        Prefer a list?{" "}
+        <Link href="/distilleries" className="underline" style={{ color: WOW.amber }}>
+          Browse distilleries by country
+        </Link>
+        .
+      </p>
     </>
   );
 }
