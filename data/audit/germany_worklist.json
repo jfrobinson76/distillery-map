@@ -1104,12 +1104,28 @@
   ]
  },
  {
-  "slug": "q135956775",
-  "name": "Q135956775",
+  "slug": "gebr-niemeyer",
+  "name": "Gebr. Niemeyer",
   "region": "europe",
   "website": "",
   "address": "",
-  "description": "",
+  "description": "1787 in Linden vor Hannover gegründete Kornbranntweinbrennerei, Sitz in der Davenstedter Straße 33",
+  "source": "wikidata",
+  "coords": [
+   9.709409361,
+   52.367019376
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "brennerei-j-rgen-bentz",
+  "name": "Brennerei Jürgen Bentz",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "Brennerei in Kirchardt, Landkreis Heilbronn, Baden-Württemberg, Deutschland",
   "source": "wikidata",
   "coords": [
    8.99972,
@@ -1120,12 +1136,12 @@
   ]
  },
  {
-  "slug": "q138568935",
-  "name": "Q138568935",
+  "slug": "wredesche-spritfabrik",
+  "name": "Wredesche Spritfabrik",
   "region": "europe",
   "website": "",
   "address": "",
-  "description": "",
+  "description": "1862 in Peine durch den Bauherrn Julius Wrede errichtete Fabrik für technische Alkohole und Brenn-Sp",
   "source": "wikidata",
   "coords": [
    10.234742182,
@@ -1136,12 +1152,12 @@
   ]
  },
  {
-  "slug": "q2360131",
-  "name": "Q2360131",
+  "slug": "st-hlem-hle",
+  "name": "Stählemühle",
   "region": "europe",
   "website": "",
   "address": "",
-  "description": "",
+  "description": "building in Eigeltingen, Freiburg Government Region, Bade-Württemberg, Germany",
   "source": "wikidata",
   "coords": [
    8.9576,
@@ -1152,28 +1168,12 @@
   ]
  },
  {
-  "slug": "q909290",
-  "name": "Q909290",
+  "slug": "brennerei-schloss-schwarzenberg",
+  "name": "Brennerei Schloss Schwarzenberg",
   "region": "europe",
   "website": "",
   "address": "",
-  "description": "",
-  "source": "wikidata",
-  "coords": [
-   8.4106,
-   51.9456
-  ],
-  "reasons": [
-   "stub"
-  ]
- },
- {
-  "slug": "q98633822",
-  "name": "Q98633822",
-  "region": "europe",
-  "website": "",
-  "address": "",
-  "description": "",
+  "description": "Brennerei",
   "source": "wikidata",
   "coords": [
    10.476072513,
@@ -1495,7 +1495,7 @@
   "region": "europe",
   "website": "https://www.steinhauser-bodensee.de/",
   "address": "Raiffeisenstraße 23, 88079 Kressbronn am Bodensee, Germany",
-  "description": "Die alte familiengeführte Bodensee Hausbrennerei Steinhauser steht für feinste u",
+  "description": "Die alte familiengeführte Bodensee Hausbrennerei Steinhauser steht für feinste und hochwertige Edelb",
   "source": "osm",
   "coords": [
    9.5972719,
@@ -2242,38 +2242,6 @@
   "coords": [
    8.08799,
    48.55732
-  ],
-  "reasons": [
-   "dupe"
-  ]
- },
- {
-  "slug": "q104599947",
-  "name": "Q104599947",
-  "region": "europe",
-  "website": "http://odenwalddestillerie.de",
-  "address": "",
-  "description": "",
-  "source": "osm+wikidata",
-  "coords": [
-   9.32866,
-   49.53764
-  ],
-  "reasons": [
-   "dupe"
-  ]
- },
- {
-  "slug": "q104599705",
-  "name": "Q104599705",
-  "region": "europe",
-  "website": "https://www.altenderle.de",
-  "address": "",
-  "description": "",
-  "source": "osm+wikidata",
-  "coords": [
-   9.4535471,
-   49.4863524
   ],
   "reasons": [
    "dupe"
