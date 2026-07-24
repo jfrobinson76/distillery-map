@@ -61,8 +61,22 @@ Uses the WOW (World of Whiskey) palette — amber/oak/parchment. Self-contained,
 ## Monetisation (subtle, not overt)
 
 Claimed listing model: free base layer → claim & correct → enhanced listing (paid, future).
+First 50 claims get the enhanced listing free (logo + URL); after that, €25/year (decided 24 Jul 2026, not yet public).
 Every claim submission is a warm lead. The form captures structured data that becomes the premium listing schema.
 No pricing page. No "For Business." The CRM conversation happens in email after they claim.
+
+### Claim workflow (rule, applies to every validated claim)
+
+When a claim is validated (real person from the distillery confirms via the form/email):
+1. Apply their listing updates to the geojson.
+2. Set `"claimed": true` on the feature — this swaps the popup's "Claim it" link
+   for a "✓ Verified by the distillery" badge and adds a ✓ Verified tick on country pages.
+3. Contact details (name, email, role) stay in John's Gmail ONLY — NEVER in the
+   geojson (it is publicly served) and never committed anywhere in this repo.
+   GDPR basis: they submitted the claim to manage their listing; use contacts for
+   that purpose only — no marketing without separate consent, honour deletion requests.
+
+Claimed so far: Lough Ree Distillery (Michael Clancy, CTO — 24 Jul 2026).
 
 ## Planned
 

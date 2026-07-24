@@ -793,7 +793,9 @@ export default function DistilleryMapApp({
                   ${hasRichData && props.booking_link ? `<a href="${props.booking_link}" target="_blank" rel="noopener noreferrer" style="font-size: 12px; color: ${WOW.amber}; font-weight: 500;">Book a visit &rarr;</a>` : ""}
                 </div>
                 <div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid ${WOW.parchmentDark};">
-                  <a href="#" class="claim-link" data-distillery="${escapedName}" style="font-size: 11px; color: ${WOW.muted}; text-decoration: none;">Is this your distillery? Claim it.</a>
+                  ${props.claimed
+                    ? `<span style="font-size: 11px; color: ${WOW.amber}; font-weight: 600;">&#10003; Verified by the distillery</span>`
+                    : `<a href="#" class="claim-link" data-distillery="${escapedName}" style="font-size: 11px; color: ${WOW.muted}; text-decoration: none;">Is this your distillery? Claim it.</a>`}
                 </div>
               </div>
             `;
