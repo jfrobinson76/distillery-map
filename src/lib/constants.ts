@@ -1,3 +1,5 @@
+export const SITE_URL = "https://distillerymap.org";
+
 export const WOW = {
   amber: "#c47b2b",
   amberLight: "#d4923f",
