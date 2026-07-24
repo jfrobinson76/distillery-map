@@ -1,0 +1,2988 @@
+[
+ {
+  "slug": "a-smith-bowman-distillery",
+  "name": "A. Smith Bowman Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -77.351389,
+   38.956722
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "old-prentice-distillery",
+  "name": "Old Prentice Distillery",
+  "region": "usa",
+  "website": "http://fourrosesbourbon.com/",
+  "address": "1224 Bonds Mill Rd, Lawrenceburg, KY 40342, USA",
+  "description": "",
+  "source": "osm+wikidata",
+  "coords": [
+   -84.898333333,
+   37.973055555
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "wild-turkey-distillery",
+  "name": "Wild Turkey Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "Home of Wild Turkey and Russell's Reserve bourbon",
+  "source": "curated+osm",
+  "coords": [
+   -84.8444,
+   38.0903
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "four-roses-distillery",
+  "name": "Four Roses Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "Kentucky straight bourbon with 10 distinct recipes",
+  "source": "curated",
+  "coords": [
+   -84.8558,
+   37.9642
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "bulleit-frontier-whiskey",
+  "name": "Bulleit Frontier Whiskey",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "High-rye bourbon in Shelbyville, Kentucky",
+  "source": "curated",
+  "coords": [
+   -85.2794,
+   38.0611
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "angel-s-envy-distillery",
+  "name": "Angel's Envy Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "Port barrel-finished bourbon in Louisville",
+  "source": "curated",
+  "coords": [
+   -85.7494,
+   38.2461
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "town-branch-distillery",
+  "name": "Town Branch Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "Lexington Brewing & Distilling Co.",
+  "source": "curated",
+  "coords": [
+   -84.4978,
+   38.0481
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "balcones-distilling",
+  "name": "Balcones Distilling",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "Texas whisky and bourbon",
+  "source": "curated",
+  "coords": [
+   -97.1517,
+   31.5568
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "whistlepig-farm-distillery",
+  "name": "WhistlePig Farm Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "Rye whiskey from Shoreham, Vermont",
+  "source": "curated",
+  "coords": [
+   -72.5822,
+   44.5264
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "hudson-whiskey-tuthilltown",
+  "name": "Hudson Whiskey (Tuthilltown)",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "New York's first whiskey distillery since Prohibition",
+  "source": "curated",
+  "coords": [
+   -74.1533,
+   41.6764
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "garrison-brothers-distillery",
+  "name": "Garrison Brothers Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "First legal bourbon distillery in Texas",
+  "source": "curated+osm",
+  "coords": [
+   -98.4261,
+   30.3564
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "leopold-bros",
+  "name": "Leopold Bros",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "Colorado craft distillery, Three Chambers Rye",
+  "source": "curated",
+  "coords": [
+   -104.9728,
+   39.7808
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "sagamore-spirit-distillery",
+  "name": "Sagamore Spirit Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "Maryland-style rye whiskey in Baltimore",
+  "source": "curated",
+  "coords": [
+   -76.5978,
+   39.2672
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "catoctin-creek-distillery",
+  "name": "Catoctin Creek Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "Virginia organic rye whisky",
+  "source": "curated",
+  "coords": [
+   -77.8117,
+   39.1006
+  ],
+  "reasons": [
+   "dupe",
+   "stub"
+  ]
+ },
+ {
+  "slug": "woodinville-whiskey-co",
+  "name": "Woodinville Whiskey Co",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "Washington state bourbon and rye",
+  "source": "curated",
+  "coords": [
+   -122.1644,
+   47.7542
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "eagle-cliffs-distillery",
+  "name": "Eagle Cliffs Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -123.1755632,
+   46.1929887
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "young-hearts-distilling-restaurant-and-bar",
+  "name": "Young Hearts Distilling, Restaurant and Bar",
+  "region": "usa",
+  "website": "https://www.trophybrewing.com",
+  "address": "228 Fayetteville St Ste 201, Raleigh, NC 27601, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -78.6381231,
+   35.7774605
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "ye-old-grog-distillery",
+  "name": "Ye Old Grog Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -122.8281437,
+   45.8447477
+  ],
+  "reasons": [
+   "historic",
+   "stub"
+  ]
+ },
+ {
+  "slug": "the-new-york-distilling-company",
+  "name": "The New York Distilling Company",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -73.9487299,
+   40.7185465
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "deep-roots-distillery",
+  "name": "Deep Roots Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -63.2155439,
+   46.2759676
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "old-still",
+  "name": "Old Still",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -77.5520098,
+   37.3878238
+  ],
+  "reasons": [
+   "historic",
+   "stub"
+  ]
+ },
+ {
+  "slug": "upstate-distilling",
+  "name": "Upstate Distilling",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -73.8145748,
+   43.060104
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "appalachian-heritage-distillery",
+  "name": "Appalachian Heritage Distillery",
+  "region": "usa",
+  "website": "https://www.ahddamascus.com/",
+  "address": "110 W Laurel Ave, Damascus, VA 24236, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -81.7890934,
+   36.6349653
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "distillerie-fils-du-roy-quebec",
+  "name": "Distillerie Fils du Roy Québec",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -69.4372633,
+   47.9155272
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "twin-spirits-distillery-m-coffee-shop",
+  "name": "Twin Spirits Distillery &M Coffee Shop",
+  "region": "usa",
+  "website": "https://twinspirits.us",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -93.2468805,
+   45.0213142
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "beach-time-distilling",
+  "name": "Beach Time Distilling",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -75.187419,
+   38.7521225
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "county-seat-spirits",
+  "name": "County Seat Spirits",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -75.2277265,
+   40.6976895
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "dry-fly-distillery",
+  "name": "Dry Fly Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -117.3941875,
+   47.6630098
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "thrasher-s-rum",
+  "name": "Thrasher's Rum",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -77.0273405,
+   38.88098
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "good-shepherd-distillery",
+  "name": "Good Shepherd Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -73.7371652,
+   40.9513529
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "doc-water-s-cidery",
+  "name": "Doc Water's Cidery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "Hard_Cider;Snack",
+  "source": "osm",
+  "coords": [
+   -77.2012183,
+   39.2247957
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "tenth-ward-distilling",
+  "name": "Tenth Ward Distilling",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -77.40138,
+   39.4166276
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "local-cider",
+  "name": "Local Cider",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -95.9660508,
+   36.1511647
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "jones-von-drehle-vineyards",
+  "name": "Jones von Drehle Vineyards",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -80.9501818,
+   36.3779181
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "elysian-desert-distilleries",
+  "name": "Elysian Desert Distilleries",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -111.923031,
+   33.824033
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "route-40-distilling-co",
+  "name": "Route 40 Distilling Co.",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -78.9282646,
+   39.6577393
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "heritage-distilling-company",
+  "name": "Heritage Distilling Company",
+  "region": "usa",
+  "website": "https://heritagedistilling.com/pages/waterfront",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -122.5810991,
+   47.3294369
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "old-mission-distilling",
+  "name": "Old Mission Distilling",
+  "region": "usa",
+  "website": "https://www.sevenhillstc.com/",
+  "address": "13795 Seven Hills Rd, Traverse City, MI 49686, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -85.5164298,
+   44.8883796
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "1832-distilling",
+  "name": "1832 Distilling",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -93.5700717,
+   38.990813
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "the-doing-time-distillery",
+  "name": "The Doing Time Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -78.4383556,
+   41.0256222
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "new-heritage-distilling",
+  "name": "New Heritage Distilling",
+  "region": "usa",
+  "website": "https://newheritagedistilling.com/",
+  "address": "737 William Ave Suite 1, Davis, WV 26260, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -79.4690627,
+   39.1272298
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "bomberger-s-distillery",
+  "name": "Bomberger's Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -76.320194,
+   40.276917
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "mount-rose-distillery",
+  "name": "Mount Rose Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -74.747083333,
+   40.367361111
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "old-taylor-distillery",
+  "name": "Old Taylor distillery",
+  "region": "usa",
+  "website": "http://www.castleandkey.com/",
+  "address": "4445 McCracken Pike, Frankfort, KY 40601, USA",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -84.832716666,
+   38.147036111
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "ironton-distillery-and-crafthouse",
+  "name": "Ironton Distillery and Crafthouse",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -104.9784821,
+   39.7728848
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "old-sugar-distillery",
+  "name": "Old Sugar Distillery",
+  "region": "usa",
+  "website": "https://oldsugardistillery.com/",
+  "address": "931 E Main St #8, Madison, WI 53703, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -89.3706293,
+   43.0823931
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "lakeward-spirits-craft-distillery",
+  "name": "Lakeward Spirits Craft Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -78.860963,
+   42.866191
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "oversea-distillery-bar",
+  "name": "Oversea Distillery & Bar",
+  "region": "usa",
+  "website": "http://overseadistillery.com/",
+  "address": "9315 Snowden River Pkwy Suite J, Columbia, MD 21046, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -76.8346326,
+   39.1744805
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "murlarkey-distilled-spirits",
+  "name": "MurLarkey Distilled Spirits",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -77.5706594,
+   38.7829945
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "oligan-distilling",
+  "name": "Oligan Distilling",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -73.8146816,
+   42.7602686
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "dayton-barrel-works",
+  "name": "Dayton Barrel Works",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -84.1857798,
+   39.7616319
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "astraluna-brands",
+  "name": "AstraLuna Brands",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -71.3207458,
+   42.194531
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "bourbon-30",
+  "name": "Bourbon 30",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -84.5615011,
+   38.2087252
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "ivory-bill-brewing",
+  "name": "Ivory Bill Brewing",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -94.5381011,
+   36.1838221
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "four-roses-cox-s-creek-distillery",
+  "name": "Four Roses Cox's Creek Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -85.5855478,
+   37.917974
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "old-forester-distillery",
+  "name": "Old Forester Distillery",
+  "region": "usa",
+  "website": "https://www.oldforester.com/distillery/",
+  "address": "119 W Main St, Louisville, KY 40202, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -85.7524489,
+   38.2565773
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "west-fork-whiskey-co",
+  "name": "West Fork Whiskey Co.",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -86.1425741,
+   39.7901504
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "old-forge-distillery",
+  "name": "Old Forge Distillery",
+  "region": "usa",
+  "website": "http://www.oldforgedistillery.com/",
+  "address": "170 Old Mill Ave, Pigeon Forge, TN 37863, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -83.5534514,
+   35.7884675
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "the-distillery-high-ridge-spirits",
+  "name": "The Distillery High Ridge Spirits",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -87.6584369,
+   34.8040622
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "riverhead-ciderhouse",
+  "name": "Riverhead Ciderhouse",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -72.729551,
+   40.9584306
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "anvil-distillery",
+  "name": "Anvil Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -105.1222241,
+   40.1565179
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "four-fights-distilling",
+  "name": "Four Fights Distilling",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -77.0385892,
+   42.1408556
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "lockhouse-distillery",
+  "name": "Lockhouse Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -78.8725662,
+   42.8734448
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "yardley-distillery-production-site",
+  "name": "Yardley Distillery Production Site",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -74.8381284,
+   40.2416748
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "honeoye-falls-distillery",
+  "name": "Honeoye Falls Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -77.604408,
+   42.948002
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "old-fourth-distillery",
+  "name": "Old Fourth Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -84.3716361,
+   33.75412
+  ],
+  "reasons": [
+   "dupe",
+   "historic",
+   "stub"
+  ]
+ },
+ {
+  "slug": "omega-gin-company",
+  "name": "Omega Gin Company",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -83.5657663,
+   31.3720691
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "graybeard-distillery",
+  "name": "Graybeard Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -78.9018846,
+   35.9393744
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "old-dominick-s",
+  "name": "Old Dominick's",
+  "region": "usa",
+  "website": "http://olddominick.com/",
+  "address": "305 S Front St, Memphis, TN 38103, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -90.0583371,
+   35.138536
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "rlb-distillery-co",
+  "name": "RLB Distillery Co.",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -80.6929887,
+   32.4421543
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "bud-light",
+  "name": "Bud Light",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -108.8392836,
+   35.5072909
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "caledonia-spirits-inc",
+  "name": "Caledonia Spirits Inc.",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -72.5945228,
+   44.2748603
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "lux-row-distillers",
+  "name": "Lux Row Distillers",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -85.4240978,
+   37.8081956
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "bluegrass-distillers",
+  "name": "Bluegrass Distillers",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -84.4920446,
+   38.0599078
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "moonshine-ridge",
+  "name": "Moonshine Ridge",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -98.4113974,
+   30.2774089
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "old-glory-distilling-company",
+  "name": "Old Glory Distilling Company",
+  "region": "usa",
+  "website": "http://www.oldglorydistilling.com/",
+  "address": "451 Alfred Thun Rd, Clarksville, TN 37040, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -87.2776948,
+   36.5968433
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "seven-troughs-distilling-co",
+  "name": "Seven Troughs Distilling Co.",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -119.7342922,
+   39.5247691
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "eureka-springs-brewery",
+  "name": "Eureka Springs Brewery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -93.7067332,
+   36.3894858
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "rock-solid-distillery",
+  "name": "Rock Solid Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -83.7232465,
+   33.9925
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "striped-lion-distilling",
+  "name": "Striped Lion Distilling",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -75.145559,
+   39.8471728
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "bismarck-brewing",
+  "name": "Bismarck Brewing",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -100.773795,
+   46.8627732
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "bently-heritage-estate-distillery-public-house",
+  "name": "Bently Heritage Estate Distillery & Public House",
+  "region": "usa",
+  "website": "https://bentlyheritage.com/",
+  "address": "1601 Water St, Minden, NV 89423, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -119.7643884,
+   38.9546627
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "roughhouse-brewing",
+  "name": "Roughhouse Brewing",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -98.0613849,
+   29.9363758
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "springbrook-hollow-farm-distillery",
+  "name": "Springbrook Hollow Farm Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -73.6132292,
+   43.4048042
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "carmichael-brother-s-distillery",
+  "name": "Carmichael Brother's Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -79.4449146,
+   34.8029142
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "fierce-whiskers-distillery",
+  "name": "Fierce Whiskers Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -97.7270954,
+   30.2055105
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "mayberry-spirits-distillery",
+  "name": "Mayberry Spirits Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -80.6162809,
+   36.5038367
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "whiskey-hollow-distillery",
+  "name": "Whiskey Hollow Distillery",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -97.1644773,
+   33.4880431
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "gasparilla-distillery-cocktail-bar",
+  "name": "Gasparilla Distillery & Cocktail Bar",
+  "region": "usa",
+  "website": "https://www.gasparilladistillery.net/",
+  "address": "2102 E 4th Ave, Tampa, FL 33605, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -82.4352991,
+   27.958312199999998
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "old-a1a-distillery",
+  "name": "Old A1A Distillery",
+  "region": "usa",
+  "website": "https://www.olda1adistillery.com/",
+  "address": "611 N Ocean Shore Blvd, Flagler Beach, FL 32136, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -81.1293796,
+   29.4844539
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "old-humble-distilling-company",
+  "name": "Old Humble Distilling Company",
+  "region": "usa",
+  "website": "https://www.oldhumbledistilling.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=4348612227838977857",
+  "address": "19103 Continental Pkwy suite c, Atascocita, TX 77346, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -95.1999493,
+   29.997258300000002
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "elk-store-winery-distillery",
+  "name": "Elk Store Winery & Distillery",
+  "region": "usa",
+  "website": "http://elkstore1895.net/",
+  "address": "327 E Main St, Fredericksburg, TX 78624, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -98.8681113,
+   30.271782100000003
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "lula-restaurant-distillery",
+  "name": "Lula Restaurant Distillery",
+  "region": "usa",
+  "website": "https://www.lulanola.com/",
+  "address": "1532 St Charles Ave, New Orleans, LA 70130, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -90.0755789,
+   29.938239399999997
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "old-alker-distillery",
+  "name": "Old Alker Distillery",
+  "region": "usa",
+  "website": "https://oldalkerdistillery.com/",
+  "address": "8304 Oak St, New Orleans, LA 70118, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -90.1318573,
+   29.948712300000004
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "old-harbor-distilling-co",
+  "name": "Old Harbor Distilling Co.",
+  "region": "usa",
+  "website": "http://www.oldharbordistilling.com/",
+  "address": "270 17th St, San Diego, CA 92101, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -117.14883599999999,
+   32.708146899999996
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "old-savannah-distillery",
+  "name": "Old Savannah Distillery",
+  "region": "usa",
+  "website": "https://www.oldsavannahdistillery.com/",
+  "address": "245 Montgomery St, Savannah, GA 31401, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -81.0981149,
+   32.0764895
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "old-pueblo-distilling-company",
+  "name": "Old Pueblo Distilling Company",
+  "region": "usa",
+  "website": "https://www.oldpueblodistilling.com/",
+  "address": "3810 E 44th St Suit 307, Tucson, AZ 85713, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -110.9114625,
+   32.1850052
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "entrance-kiepersol-winery-distillery-restaurant-and-vineyard",
+  "name": "Entrance - Kiepersol Winery, Distillery, Restaurant, and Vineyard",
+  "region": "usa",
+  "website": "http://kiepersol.com/",
+  "address": "4120 Farm to Market 344 E, Tyler, TX 75703, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -95.2838968,
+   32.1552016
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "old-fourth-distillery-kitchen",
+  "name": "Old Fourth Distillery + Kitchen",
+  "region": "usa",
+  "website": "https://o4d.com/o4d-kitchen/",
+  "address": "6000 N Terminal Pkwy Concourse E Space EN-16, Atlanta, GA 30320, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -84.4467829,
+   33.6402032
+  ],
+  "reasons": [
+   "dupe",
+   "historic"
+  ]
+ },
+ {
+  "slug": "barley-and-boar-restaurant-brewhouse-distillery",
+  "name": "Barley and Boar - Restaurant • Brewhouse • Distillery",
+  "region": "usa",
+  "website": "https://www.barleyandboar.com/",
+  "address": "5925 Entrada Ave, Atascadero, CA 93422, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -120.6685876,
+   35.4897007
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "grand-canyon-brewery-and-distillery-cabin-historic-tack-house",
+  "name": "Grand Canyon Brewery and Distillery Cabin-Historic Tack House",
+  "region": "usa",
+  "website": "https://www.us.despegar.com/hotels/h-6466937",
+  "address": "Williams, AZ 86046, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -112.19651789999999,
+   35.2555313
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "nashville-barrel-company-distillery-and-whiskey-bar",
+  "name": "Nashville Barrel Company Distillery and Whiskey Bar",
+  "region": "usa",
+  "website": "https://www.nashvillebarrelco.com/",
+  "address": "809 Heathcote Ave, Nashville, TN 37210, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -86.741726,
+   36.152099
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "old-tennessee-distilling-co",
+  "name": "Old Tennessee Distilling Co.",
+  "region": "usa",
+  "website": "http://www.oldtennesseedistillingco.com/",
+  "address": "3605 Outdoor Sportsman Pl, Kodak, TN 37764, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -83.6095657,
+   35.9859542
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "brinson-spirits-distillery-winery-and-restaurant",
+  "name": "Brinson Spirits Distillery, Winery, and Restaurant",
+  "region": "usa",
+  "website": "https://brinsonspirits.com/",
+  "address": "210 E Cherokee St, Blacksburg, SC 29702, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -81.51285299999999,
+   35.122172899999995
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "old-nick-williams-co-farm-distillery",
+  "name": "Old Nick Williams Co. Farm & Distillery",
+  "region": "usa",
+  "website": "http://www.oldnickwhiskey.com/",
+  "address": "2675 Williams Rd, Lewisville, NC 27023, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -80.4720534,
+   36.069975299999996
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "verdigris-restaurant-and-oxford-oaks-distillery",
+  "name": "Verdigris Restaurant and Oxford Oaks Distillery",
+  "region": "usa",
+  "website": "https://www.oxfordoaksdistillery.com/",
+  "address": "127 College St, Oxford, NC 27565, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -78.5898873,
+   36.3123095
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "brucato-l-restaurant-and-distillery",
+  "name": "Brucato l Restaurant and Distillery",
+  "region": "usa",
+  "website": "https://www.brucatospirits.com/",
+  "address": "275 S Van Ness Ave, San Francisco, CA 94103, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -122.4175194,
+   37.7688565
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "distillery-244-old-town",
+  "name": "Distillery 244 Old Town",
+  "region": "usa",
+  "website": "http://www.distillery244.com/",
+  "address": "244 N Mosley St, Wichita, KS 67202, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -97.32740629999999,
+   37.6893909
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "old-monroe-distilling-co-formerly-stumpys-spirits",
+  "name": "Old Monroe Distilling Co. (Formerly Stumpy’s Spirits)",
+  "region": "usa",
+  "website": "http://drinkoldmonroe.com/",
+  "address": "8787 Rickhouse Rd, Columbia, IL 62236, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -90.1706193,
+   38.393114
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "creek-bottom-brewing-distillery-restaurant",
+  "name": "Creek Bottom Brewing, Distillery & Restaurant",
+  "region": "usa",
+  "website": "https://www.cbbrews.com/",
+  "address": "307 N Meadow St, Galax, VA 24333, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -80.92027780000001,
+   36.6663889
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "georgetown-distillery-restaurant",
+  "name": "Georgetown Distillery & Restaurant",
+  "region": "usa",
+  "website": "http://gtdistillery.com/",
+  "address": "6101 CA-193, Georgetown, CA 95634, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -120.8499617,
+   38.90847850000001
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "old-ozarkian-distillery",
+  "name": "Old Ozarkian Distillery",
+  "region": "usa",
+  "website": "http://www.oldozarkiandistillery.com/",
+  "address": "203 E Main St A, Union, MO 63084, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -91.0072703,
+   38.445578999999995
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "montanya-distillers-cocktail-bar",
+  "name": "Montanya Distillers | Cocktail Bar",
+  "region": "usa",
+  "website": "https://www.montanyarum.com/",
+  "address": "204 Elk Ave, Crested Butte, CO 81224, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -106.98715700000001,
+   38.869630699999995
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "breckenridge-distillery-restaurant",
+  "name": "Breckenridge Distillery Restaurant",
+  "region": "usa",
+  "website": "http://www.breckenridgedistillery.com/restaurant",
+  "address": "1925 Airport Rd, Breckenridge, CO 80424, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -106.05230100000001,
+   39.510233400000004
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "mad-rabbit-distillery-pub",
+  "name": "Mad Rabbit Distillery - Pub",
+  "region": "usa",
+  "website": "http://madrabbitdistillery.net/",
+  "address": "10860 N Dover St #2000, Westminster, CO 80021, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -105.0919962,
+   39.893994
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "stranahan-s-whiskey-distillery-cocktail-bar",
+  "name": "Stranahan's Whiskey Distillery & Cocktail Bar",
+  "region": "usa",
+  "website": "http://www.stranahans.com/?utm_source=gmb&utm_medium=gmb&utm_campaign=gmb",
+  "address": "200 S Kalamath St, Denver, CO 80223, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -104.998606,
+   39.7123554
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "old-herald-brewery-distillery",
+  "name": "Old Herald Brewery & Distillery",
+  "region": "usa",
+  "website": "https://www.oldheraldbrewing.com/",
+  "address": "115 E Clay St, Collinsville, IL 62234, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -89.986116,
+   38.6713918
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "old-homestead-distilling-co",
+  "name": "Old Homestead Distilling Co.",
+  "region": "usa",
+  "website": "https://www.oldhomesteaddc.com/",
+  "address": "2730 Station Dr, Eckerty, IN 47116, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -86.64338509999999,
+   38.3779034
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "lf-heritage-distilling-co-on-limestone-farm",
+  "name": "LF Heritage Distilling Co. On Limestone Farm",
+  "region": "usa",
+  "website": "http://www.lfdistilling.com/",
+  "address": "197 Soards Rd, Georgetown, KY 40324, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -84.65992639999999,
+   38.2049569
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "the-old-pogue-distillery",
+  "name": "The Old Pogue Distillery",
+  "region": "usa",
+  "website": "http://www.oldpogue.com/",
+  "address": "705 Germantown Rd, Maysville, KY 41056, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -83.779519,
+   38.660859099999996
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "yardley-distillery-tex-mex-restaurant",
+  "name": "Yardley Distillery Tex-Mex Restaurant",
+  "region": "usa",
+  "website": "http://yardleydistillery.com/",
+  "address": "897 W Trenton Ave, Morrisville, PA 19067, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -74.8010183,
+   40.20800940000001
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "old-trestle-distillery",
+  "name": "Old Trestle Distillery",
+  "region": "usa",
+  "website": "http://www.oldtrestle.com/",
+  "address": "10434 River Park Pl #2, Truckee, CA 96161, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -120.1941525,
+   39.3212432
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "old-55-distillery",
+  "name": "Old 55 Distillery",
+  "region": "usa",
+  "website": "http://www.old55distillery.com/",
+  "address": "311 Washington St, Newtown, IN 47969, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -87.14513,
+   40.2040984
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "pathfinder-farm-distillery-tasting-room-and-cocktail-bar",
+  "name": "Pathfinder Farm Distillery Tasting Room and Cocktail Bar",
+  "region": "usa",
+  "website": "https://pathfinder.farm/",
+  "address": "14 S Main St, Boonsboro, MD 21713, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -77.6521909,
+   39.506078599999995
+  ],
+  "reasons": [
+   "dupe",
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "old-courthouse-distilling",
+  "name": "Old Courthouse Distilling",
+  "region": "usa",
+  "website": "http://oldcourthousedistilling.com/",
+  "address": "204 Banjo Ln Suite E, Centreville, MD 21617, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -76.06271509999999,
+   39.0451719
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "old-republic-distillery-tavern",
+  "name": "Old Republic Distillery Tavern",
+  "region": "usa",
+  "website": "http://www.ephrataspeakeasy.com/",
+  "address": "3 Dutchland Ave, Ephrata, PA 17522, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -76.1768795,
+   40.1931304
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "ironton-distillery-pop-up-bar",
+  "name": "Ironton Distillery (Pop-Up Bar)",
+  "region": "usa",
+  "website": "https://www.irontondistillery.com/",
+  "address": "1303 Empire Rd, Louisville, CO 80027, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -105.12603260000002,
+   39.977934399999995
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "old-republic-distillery",
+  "name": "Old Republic Distillery",
+  "region": "usa",
+  "website": "https://www.drinkord.com/",
+  "address": "2067 Springwood Rd, York, PA 17403, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -76.69322079999999,
+   39.941666
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "living-spirits-distillery-and-cocktail-bar",
+  "name": "Living Spirits Distillery and Cocktail Bar",
+  "region": "usa",
+  "website": "https://www.livingspiritsdistillery.com/",
+  "address": "300 Valentine St, Hackettstown, NJ 07840, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -74.83357869999999,
+   40.852542899999996
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "tierra-distilling-co-cafe",
+  "name": "Tierra Distilling Co. & Cafe",
+  "region": "usa",
+  "website": "http://www.tierradistilling.com/",
+  "address": "211 Burlington Ave, Clarendon Hills, IL 60514, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -87.955383,
+   41.797171
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "the-conjure-bar-stage-at-inspired-by-spirits-distillery",
+  "name": "The Conjure Bar & Stage (at Inspired by Spirits Distillery)",
+  "region": "usa",
+  "website": "http://inspiredbyspirits.com/",
+  "address": "Inside the Inspired by Spirits Distillery, 753 E Warrington Ave, Pittsburgh, PA 15210, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.993893,
+   40.4218963
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "wyoming-whiskey-distillery-shop",
+  "name": "Wyoming Whiskey Distillery Shop",
+  "region": "usa",
+  "website": "https://www.wyomingwhiskey.com/",
+  "address": "120 E Main St, Kirby, WY 82430, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -108.17719939999999,
+   43.8054548
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "rustic-luxury-w-horses-historic-whiskey-distillery",
+  "name": "Rustic Luxury w/Horses-Historic Whiskey Distillery",
+  "region": "usa",
+  "website": "https://www.us.despegar.com/hotels/h-6769338",
+  "address": "Delaware Township, PA 17777, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -76.87184909999999,
+   41.1488418
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "magnanini-winery-restaurant-distillery-wedding-venue",
+  "name": "Magnanini Winery, Restaurant, Distillery & Wedding Venue",
+  "region": "usa",
+  "website": "http://magwine.com/",
+  "address": "172 Strawridge Rd, Wallkill, NY 12589, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -74.15225389999999,
+   41.5973603
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "rhodium-room-distillery-bar-ri-spirits",
+  "name": "Rhodium Room Distillery Bar @ RI Spirits",
+  "region": "usa",
+  "website": "http://www.rhodeislandspirits.com/",
+  "address": "40 Bayley St, Pawtucket, RI 02860, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.38872429999999,
+   41.877791900000005
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "nashoba-valley-winery-distillery-brewery-and-restaurant",
+  "name": "Nashoba Valley Winery, Distillery, Brewery and Restaurant",
+  "region": "usa",
+  "website": "http://nashobawinery.com/",
+  "address": "100 Wattaquadock Hill Rd, Bolton, MA 01740, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.6163967,
+   42.4302705
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "the-distillery-restaurant-mt-hope",
+  "name": "The Distillery Restaurant Mt. Hope",
+  "region": "usa",
+  "website": "https://thedistillery.com/",
+  "address": "1142 Mt Hope Ave, Rochester, NY 14620, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -77.61559,
+   43.1276
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "the-distillery-restaurant-henrietta",
+  "name": "The Distillery Restaurant Henrietta",
+  "region": "usa",
+  "website": "https://thedistillery.com/",
+  "address": "3010 S Winton Rd, Henrietta, NY 14623, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -77.5809426,
+   43.0953373
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "the-distillery-restaurant-victor",
+  "name": "The Distillery Restaurant Victor",
+  "region": "usa",
+  "website": "https://thedistillery.com/",
+  "address": "10 Square Dr, Victor, NY 14564, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -77.44057049999999,
+   43.032939299999995
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "old-scotland-road-distillery",
+  "name": "Old Scotland Road Distillery",
+  "region": "usa",
+  "website": "https://oldscotlandroaddistillery.com/",
+  "address": "7010 Scotland Rd, Akron, NY 14001, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -78.4761285,
+   43.0381352
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "old-home-distillers",
+  "name": "Old Home Distillers",
+  "region": "usa",
+  "website": "http://www.oldhomedistillers.com/",
+  "address": "964 Campbell Rd, Lebanon, NY 13332, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -75.655076,
+   42.766856
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "kaptain-jimmy-s-restaurant-distillery",
+  "name": "Kaptain Jimmy's Restaurant & Distillery",
+  "region": "usa",
+  "website": "http://kaptainjimmys.com/",
+  "address": "916 Suffield St, Agawam, MA 01001, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -72.6333222,
+   42.05860620000001
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "bardenay-restaurant-distillery-eagle",
+  "name": "Bardenay Restaurant & Distillery | Eagle",
+  "region": "usa",
+  "website": "http://www.bardenay.com/",
+  "address": "155 E Riverside Dr, Eagle, ID 83616, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -116.3522409,
+   43.686634399999996
+  ],
+  "reasons": [
+   "dupe",
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "bardenay-restaurant-distillery-boise",
+  "name": "Bardenay Restaurant & Distillery | Boise",
+  "region": "usa",
+  "website": "http://www.bardenay.com/",
+  "address": "610 W Grove St, Boise, ID 83702, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -116.20217789999998,
+   43.6140498
+  ],
+  "reasons": [
+   "dupe",
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "old-town-distillery-by-wonder",
+  "name": "Old Town Distillery by Wonder",
+  "region": "usa",
+  "website": "http://gowonder.net/",
+  "address": "124 S Michigan Ave, Saginaw, MI 48602, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -83.9648361,
+   43.4167974
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "distillery-pub-llc",
+  "name": "Distillery Pub LLC",
+  "region": "usa",
+  "website": "http://distillery-llc.poi.place/",
+  "address": "515 N Main St, Oshkosh, WI 54901, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -88.5377364,
+   44.020255399999996
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "fabrika-kachka-distillery-zakuski-bar",
+  "name": "Fabrika: Kachka Distillery & Zakuski Bar",
+  "region": "usa",
+  "website": "http://www.kachkafabrika.com/",
+  "address": "Bindery Annex, 2117 NE Oregon St Suite 202, Portland, OR 97232, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -122.64400029999999,
+   45.5288335
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "can-bar-w-agrodolce-distilling-co",
+  "name": "Can Bar w/ Agrodolce Distilling Co.",
+  "region": "usa",
+  "website": "https://www.agrodolceco.com/",
+  "address": "2225 E Burnside St, Portland, OR 97214, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -122.6428073,
+   45.523135700000005
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "old-soldier-distillery",
+  "name": "Old Soldier Distillery",
+  "region": "usa",
+  "website": "http://www.oldsoldierdistillery.com/",
+  "address": "309 B1 Puyallup Ave, Tacoma, WA 98421, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -122.43037840000001,
+   47.240645199999996
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "old-log-cabin-distillery",
+  "name": "Old Log Cabin Distillery",
+  "region": "usa",
+  "website": "https://oldlogcabin.com/about/old-log-cabin-history/",
+  "address": "1417 Elliott Ave W, Seattle, WA 98119, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -122.374107,
+   47.630775
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "bardenay-restaurant-distillery-coeur-d-alene",
+  "name": "Bardenay Restaurant & Distillery - Coeur d'Alene",
+  "region": "usa",
+  "website": "http://www.bardenay.com/",
+  "address": "1710 W Riverstone Dr, Coeur d'Alene, ID 83814, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -116.8105607,
+   47.695583199999994
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "bob-s-classic-restaurant-distillery",
+  "name": "Bob's Classic Restaurant & Distillery",
+  "region": "usa",
+  "website": "https://www.bobsclassicrestaurant.com/",
+  "address": "474 Grant Rd, East Wenatchee, WA 98802, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -120.28229999999998,
+   47.405125
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "saxtons-distillery-tasting-room-and-cafe",
+  "name": "Saxtons Distillery Tasting Room and Cafe",
+  "region": "usa",
+  "website": "http://www.saxtonsdistillery.com/",
+  "address": "485 W River Rd, Brattleboro, VT 05301, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -72.57650989999999,
+   42.879558200000005
+  ],
+  "reasons": [
+   "dupe",
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "orange-county-distillery",
+  "name": "Orange County Distillery",
+  "region": "usa",
+  "website": "http://www.orangecountydistillery.com/",
+  "address": "19B Maloney Ln, Goshen, NY 10924, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -74.3903148,
+   41.3528791
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "twisted-tap-distillery",
+  "name": "Twisted Tap Distillery",
+  "region": "usa",
+  "website": "https://www.twistedtapdistillery.com/",
+  "address": "4717 Broadmoor Ave SE suite f, Kentwood, MI 49512, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -85.5618477,
+   42.8780815
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "twisted-tap-distillery-downtown-gr",
+  "name": "Twisted Tap Distillery Downtown GR",
+  "region": "usa",
+  "website": "https://www.twistedtapdistillery.com/",
+  "address": "146 Monroe Center St NW Suite 150, Grand Rapids, MI 49503, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -85.671548,
+   42.9660557
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "asw-exchange",
+  "name": "ASW Exchange",
+  "region": "usa",
+  "website": "http://aswdistillery.com/",
+  "address": "1000 White St SW, Atlanta, GA 30310, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -84.418218,
+   33.7298991
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "pathfinder-farm-distillery",
+  "name": "Pathfinder Farm Distillery",
+  "region": "usa",
+  "website": "https://pathfinder.farm/",
+  "address": "5515 Mt Carmel Church Rd, Keedysville, MD 21756, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -77.6620014,
+   39.466394699999995
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "little-toad-creek-brewery-distillery-las-cruces",
+  "name": "Little Toad Creek Brewery & Distillery Las Cruces",
+  "region": "usa",
+  "website": "http://www.littletoadcreek.com/",
+  "address": "119 N Main St, Las Cruces, NM 88001, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -106.7788501,
+   32.3100421
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "northern-latitudes-distillery",
+  "name": "Northern Latitudes Distillery",
+  "region": "usa",
+  "website": "http://www.northernlatitudesdistillery.com/",
+  "address": "7150 E Duck Lake Rd, Lake Leelanau, MI 49653, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -85.7098753,
+   44.9817685
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "crooked-palm-cabana-islamorada-brewery-distillery",
+  "name": "Crooked Palm Cabana (Islamorada Brewery & Distillery)",
+  "region": "usa",
+  "website": "https://www.crookedpalmdistillery.com/cabana",
+  "address": "90184 Overseas Hwy, Tavernier, FL 33070, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -80.5380936,
+   24.998341399999997
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "saxtons-distillery",
+  "name": "Saxtons Distillery",
+  "region": "usa",
+  "website": "http://www.saxtonsdistillery.com/",
+  "address": "155 Chickering Dr, Brattleboro, VT 05301, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -72.56253629999999,
+   42.8797189
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "ch-distillery-joto-sushi",
+  "name": "CH Distillery | Jōtō Sushi",
+  "region": "usa",
+  "website": "http://www.chdistillery.com/",
+  "address": "564 W Randolph St, Chicago, IL 60661, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -87.6422109,
+   41.8846382
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "golden-beaver-distillery",
+  "name": "Golden Beaver Distillery",
+  "region": "usa",
+  "website": "http://goldenbeaverdistillery.com/",
+  "address": "13464 Browns Valley Dr, Chico, CA 95973, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -121.8430938,
+   39.7924003
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "asw-distillery-at-the-battery-atlanta-home-of-fiddler-bourbon-hunker-vodka-more",
+  "name": "ASW Distillery at The Battery Atlanta, home of Fiddler Bourbon, Hunker Vodka & more",
+  "region": "usa",
+  "website": "http://aswdistillery.com/",
+  "address": "900 Battery Ave SE Suite 1035, Atlanta, GA 30339, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -84.4701396,
+   33.8889609
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "loon-liquors",
+  "name": "Loon Liquors",
+  "region": "usa",
+  "website": "https://loonliquors.com/",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -93.1797392,
+   44.4512541
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "orange-county-distillery-at-brown-barn-farms",
+  "name": "Orange County Distillery at Brown Barn Farms",
+  "region": "usa",
+  "website": "http://www.orangecountydistillery.com/",
+  "address": "286 Maple Ave, New Hampton, NY 10958, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -74.39752849999999,
+   41.3740009
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "islamorada-brewery-distillery-islamorada",
+  "name": "Islamorada Brewery & Distillery (Islamorada)",
+  "region": "usa",
+  "website": "http://www.islamoradabreweryanddistillery.com/",
+  "address": "82229 Overseas Hwy, Islamorada, FL 33036, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -80.6279569,
+   24.9241705
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "central-standard-crafthouse-kitchen-craft-distillery",
+  "name": "Central Standard Crafthouse & Kitchen & Craft Distillery",
+  "region": "usa",
+  "website": "https://thecentralstandard.com/",
+  "address": "320 E Clybourn St, Milwaukee, WI 53202, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -87.9068104,
+   43.0365693
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "cooperstown-distillery-beverage-exchange",
+  "name": "Cooperstown Distillery Beverage Exchange",
+  "region": "usa",
+  "website": "http://cooperstowndistillery.com/visit",
+  "address": "73 Main St, Cooperstown, NY 13326, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -74.92417619999999,
+   42.70030130000001
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "central-standard-craft-distillery",
+  "name": "Central Standard Craft Distillery",
+  "region": "usa",
+  "website": "https://thecentralstandard.com/",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -87.9426388,
+   43.0363158
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "chattanooga-whiskey-riverfront-distillery",
+  "name": "Chattanooga Whiskey Riverfront Distillery",
+  "region": "usa",
+  "website": "https://chattanoogawhiskey.com/",
+  "address": "765 W M.L.K. Blvd, Chattanooga, TN 37402, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -85.32066569999999,
+   35.049496999999995
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "the-oak-room-by-american-oak-distillery",
+  "name": "The Oak Room By: American Oak Distillery",
+  "region": "usa",
+  "website": "http://www.americanoakwhiskey.com/",
+  "address": "4941 Lake Shore Dr, Bolton Landing, NY 12814, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.6555755,
+   43.5564033
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "chattanooga-whiskey",
+  "name": "Chattanooga Whiskey",
+  "region": "usa",
+  "website": "https://chattanoogawhiskey.com/",
+  "address": "1439 Market St, Chattanooga, TN 37402, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -85.3075485,
+   35.0372634
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "las-cruces-distilling-co",
+  "name": "Las Cruces Distilling Co",
+  "region": "usa",
+  "website": "https://lascrucesdistilling.com/",
+  "address": "2825 W Picacho Ave, Las Cruces, NM 88007, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -106.81755229999999,
+   32.3105495
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "bardenay-distilling-co",
+  "name": "Bardenay Distilling Co.",
+  "region": "usa",
+  "website": "https://www.bardenaydistilling.com/",
+  "address": "3100 W Chinden Blvd, Boise, ID 83714, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -116.2362349,
+   43.6211408
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "wonderland-distilling-production",
+  "name": "Wonderland Distilling Production",
+  "region": "usa",
+  "website": "http://www.wonderlanddistilling.com/",
+  "address": "2217 Lemuel St, Muskegon Heights, MI 49444, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -86.2585866,
+   43.2119809
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "loon-liquors-distillery-pizzeria",
+  "name": "Loon Liquors Distillery & Pizzeria",
+  "region": "usa",
+  "website": "http://www.loonliquors.com/",
+  "address": "115 5th St W, Northfield, MN 55057, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -93.16106309999999,
+   44.4548707
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "ch-distillery",
+  "name": "CH Distillery",
+  "region": "usa",
+  "website": "https://chdistillery.com",
+  "address": "1629 S Clinton St, Chicago, IL 60616, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -87.6406961,
+   41.8595337
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "american-oak-distillery",
+  "name": "American Oak Distillery",
+  "region": "usa",
+  "website": "http://www.americanoakwhiskey.com/",
+  "address": "209 New Vermont Rd, Bolton Landing, NY 12814, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.6945705,
+   43.6117357
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "cooperstown-distillery",
+  "name": "Cooperstown Distillery",
+  "region": "usa",
+  "website": "http://cooperstowndistillery.com/",
+  "address": "11 Railroad Ave, Cooperstown, NY 13326, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -74.9319285,
+   42.6994987
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "golden-beaver-distillery-park-ave-still-house",
+  "name": "Golden Beaver Distillery - Park Ave Still House",
+  "region": "usa",
+  "website": "https://www.goldenbeaverdistillery.com/",
+  "address": "2420 Park Ave, Chico, CA 95928, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -121.8155355,
+   39.71458
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "northern-latitudes-distillery-suttons-bay",
+  "name": "Northern Latitudes Distillery Suttons Bay",
+  "region": "usa",
+  "website": "https://www.northernlatitudesdistillery.com/media",
+  "address": "310 N St Joseph St, Suttons Bay, MI 49682, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -85.6506144,
+   44.9772277
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "catoctin-creek-distilling-company",
+  "name": "Catoctin Creek Distilling Company",
+  "region": "usa",
+  "website": "http://catoctincreekdistilling.com/",
+  "address": "120 W Main St, Purcellville, VA 20132, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -77.7150616,
+   39.1365068
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "asw-distillery",
+  "name": "ASW Distillery",
+  "region": "usa",
+  "website": "https://www.aswdistillery.com/",
+  "address": "199 Armour Dr NE c, Atlanta, GA 30324, USA",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -84.3821088,
+   33.8093363
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "wonderland-distilling-co",
+  "name": "Wonderland Distilling Co",
+  "region": "usa",
+  "website": "https://wonderlanddistilling.com/",
+  "address": "1989 Lakeshore Dr Suite B, Muskegon, MI 49441, USA",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -86.2925805,
+   43.2154397
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ }
+]

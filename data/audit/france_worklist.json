@@ -1,0 +1,1257 @@
+[
+ {
+  "slug": "chevalier-de-villarcon-distillery-ruins",
+  "name": "Chevalier de Villarçon distillery ruins",
+  "region": "rest",
+  "website": "",
+  "address": "",
+  "description": "Rum",
+  "source": "osm",
+  "coords": [
+   -60.8333445,
+   14.4377636
+  ],
+  "reasons": [
+   "historic",
+   "stub"
+  ]
+ },
+ {
+  "slug": "paties-james-jackie",
+  "name": "Paties James Jackie",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   3.7544216,
+   49.5220222
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "gabarex-daniel-burte",
+  "name": "Gabarex Daniel Burte",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   5.8657403,
+   48.7661973
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "caractere",
+  "name": "Caractère",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   5.9768719,
+   43.8431228
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "chateau-pomes-peberere",
+  "name": "Château Pomès-Pébérère",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   0.308741,
+   43.9715401
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "domaine-du-capitaine",
+  "name": "Domaine du Capitaine",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   0.382196,
+   43.8426562
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie-de-la-roche-saint-secret",
+  "name": "Distillerie de la Roche saint Secret",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "distillerie de lavande",
+  "source": "osm",
+  "coords": [
+   5.0280958,
+   44.4761893
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "thienot",
+  "name": "Thiénot",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   2.310084,
+   48.8752751
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "earl-marquet",
+  "name": "EARL Marquet",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "Prendre contact avec le propriétaire",
+  "source": "osm",
+  "coords": [
+   -0.3349174,
+   43.807102
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "armagnac-du-chateau",
+  "name": "Armagnac du Chateau",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "Prendre contact avec les propriétaires",
+  "source": "osm",
+  "coords": [
+   -0.3521952,
+   43.8136605
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "la-fraignaude",
+  "name": "La Fraignaude",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   6.1676001,
+   46.8579691
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "dpso-ottrott",
+  "name": "DPSO Ottrott",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   7.4251157,
+   48.4578979
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "la-maison-du-rhum",
+  "name": "La Maison du Rhum",
+  "region": "rest",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   55.2232251,
+   -21.0744078
+  ],
+  "reasons": [
+   "dupe",
+   "stub"
+  ]
+ },
+ {
+  "slug": "helios-di-corsica",
+  "name": "Helios di Corsica",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   9.4367194,
+   42.0036932
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "les-huiles-essentielles-de-cherchebrot",
+  "name": "Les Huiles Essentielles de Cherchebrot",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   4.0079887,
+   45.2679438
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie-jurassienne",
+  "name": "Distillerie jurassienne",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   5.5983062,
+   46.7579423
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "la-belle-plante",
+  "name": "La Belle Plante",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   5.3872328,
+   46.459699
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie-artisanale",
+  "name": "Distillerie Artisanale",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   6.6654352,
+   46.1556887
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "mon-petit-arrange",
+  "name": "Mon Petit Arrangé",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "Rhum arrangé artisanal",
+  "source": "osm",
+  "coords": [
+   3.3488825,
+   47.8224635
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie-le-claux-du-puits",
+  "name": "Distillerie Le Claux Du Puits",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "Lavande",
+  "source": "osm",
+  "coords": [
+   5.4696172,
+   44.1017245
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "altitude",
+  "name": "Altitude",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "Gin",
+  "source": "osm",
+  "coords": [
+   6.7873207,
+   45.8902511
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie-du-pere-francois",
+  "name": "Distillerie du Père François",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   6.7015925,
+   46.1834123
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "ferme-distillerie-du-petit-fahys",
+  "name": "ferme-distillerie du Petit-Fahys",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "ferme et distillerie à Fougerolles (Haute-Saône)",
+  "source": "wikidata",
+  "coords": [
+   6.4013,
+   47.9071
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie-des-chartreux-de-fourvoirie",
+  "name": "distillerie des Chartreux de Fourvoirie",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "distillerie à Saint-Laurent-du-Pont (Isère)",
+  "source": "wikidata",
+  "coords": [
+   5.7456,
+   45.3794
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie-cusenier",
+  "name": "distillerie Cusenier",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "distillerie à Ornans (Doubs)",
+  "source": "osm+wikidata",
+  "coords": [
+   6.151656,
+   47.104047
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie-maurin-vey",
+  "name": "distillerie Maurin-Vey",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "distillerie à Espaly-Saint-Marcel (Haute-Loire)",
+  "source": "osm+wikidata",
+  "coords": [
+   3.8615,
+   45.0491
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie-19-25-rue-du-commandant-ren-mouchotte",
+  "name": "distillerie, 19-25 rue du Commandant René Mouchotte",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "distillerie située à Saint-Mandé, en France",
+  "source": "wikidata",
+  "coords": [
+   2.4173,
+   48.8373
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "espace-fernet-branca",
+  "name": "Espace Fernet-Branca",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   7.56014,
+   47.5851
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "habitation-routa",
+  "name": "Habitation Routa",
+  "region": "rest",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -61.6368,
+   16.2459
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "sucrerie-de-francieres",
+  "name": "Sucrerie de Francières",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   2.6537,
+   49.453
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie-de-merxheim",
+  "name": "Distillerie de Merxheim",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   7.2867769,
+   47.8529584
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie-de-bois-roche",
+  "name": "Distillerie de Bois-Roche",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -0.3782353,
+   45.7326575
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "milles",
+  "name": "Milles",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   2.8274924,
+   42.6686309
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie-les-fontaines",
+  "name": "Distillerie les Fontaines",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   5.4128932,
+   44.1231456
+  ],
+  "reasons": [
+   "dupe",
+   "stub"
+  ]
+ },
+ {
+  "slug": "champagne-martel",
+  "name": "Champagne Martel",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   4.0431807,
+   49.2446467
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "les-vergers-d-auvillars",
+  "name": "Les Vergers d'Auvillars",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -0.3317255,
+   49.3039105
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "ancienne-distillerie",
+  "name": "ancienne distillerie",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   6.1234025,
+   43.913455
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "calvados-preaux",
+  "name": "Calvados Préaux",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -0.7977084,
+   48.5178703
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie",
+  "name": "Distillerie",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   5.3907451,
+   44.2514718
+  ],
+  "reasons": [
+   "dupe",
+   "stub"
+  ]
+ },
+ {
+  "slug": "le-bio-d-olivier",
+  "name": "Le BIO d'Olivier",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   5.869704,
+   43.117657
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie-communale",
+  "name": "Distillerie Communale",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   6.238052,
+   49.468229
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "cuvee-des-dracs",
+  "name": "Cuvée des Dracs",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   1.8792524,
+   44.7638042
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "marcel-michel-fils-successeur",
+  "name": "Marcel MICHEL Fils Successeur",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   6.1390785,
+   46.6210812
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillerie-vinicole-du-blayais",
+  "name": "Distillerie Vinicole du Blayais",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -0.6342701,
+   45.0793812
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "blind-pig-distillers",
+  "name": "Blind Pig Distillers",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -0.2293712,
+   43.2801777
+  ],
+  "reasons": [
+   "dupe",
+   "stub"
+  ]
+ },
+ {
+  "slug": "alambic-beauquis-pere-et-fils",
+  "name": "Alambic Beauquis, père et fils",
+  "region": "europe",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   4.6829433,
+   45.3644841
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "palais-benedictine-distillerie-bar-a-cocktails",
+  "name": "Palais Bénédictine - Distillerie - Bar à cocktails",
+  "region": "uk",
+  "website": "http://www.palaisbenedictine.com/",
+  "address": "110 Rue Alexandre le Grand, 76400 Fécamp, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   0.3676384,
+   49.758763599999995
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "la-distillerie-restaurant-brasserie",
+  "name": "La Distillerie | Restaurant Brasserie",
+  "region": "europe",
+  "website": "https://www.lachartreuse.com/ladistillerie/",
+  "address": "1 Rue de Fouquières, 62199 Gosnay, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   2.5925007000000004,
+   50.507283099999995
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "restaurant-la-distillerie-maison-faivre-cuisine-gastronomique-francaise-traiteur",
+  "name": "RESTAURANT LA DISTILLERIE 🇫🇷 Maison Faivre (Cuisine Gastronomique Française) Traiteur",
+  "region": "europe",
+  "website": "http://www.faivrejmagine.org/le-menu-de-la-semaine",
+  "address": "1623 Rte de Saint-Vincent, 47310 Saint-Vincent-de-Lamontjoie, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   0.521587,
+   44.088902399999995
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "distilleries-et-domaines-de-provence-store-museum",
+  "name": "Distilleries et Domaines de Provence Store & Museum",
+  "region": "europe",
+  "website": "http://www.distilleries-provence.com/",
+  "address": "9 Av. Saint-Promasse, 04300 Forcalquier, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   5.782367499999999,
+   43.9602011
+  ],
+  "reasons": [
+   "dupe",
+   "historic",
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "maison-jouffe-distillerie-et-brasserie-restaurant-cave-bar",
+  "name": "Maison Jouffe Distillerie et Brasserie : Restaurant, Cave & Bar",
+  "region": "europe",
+  "website": "https://www.jouffe.fr/",
+  "address": "6/8 ZA des Vergers, 22130 Saint-Lormel, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -2.2245645,
+   48.5313686
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "hotel-de-la-distillerie",
+  "name": "Hotel de la Distillerie",
+  "region": "europe",
+  "website": "https://htel-de-la-distillerie.explorefrance.top/",
+  "address": "Lieu Dit A Murticcia, 20233 Pietracorbara, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   9.446231299999999,
+   42.8449746
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "distillerie-rhum-damoiseau",
+  "name": "Distillerie Rhum Damoiseau",
+  "region": "rest",
+  "website": "https://rhum-damoiseau.com/",
+  "address": "Bellevue, Le Moule 97160, Guadeloupe",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -61.3753781,
+   16.3210457
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-jm",
+  "name": "Distillerie JM",
+  "region": "rest",
+  "website": "https://www.rhum-jm.com/",
+  "address": "Fond Préville, Macouba 97218, Martinique",
+  "description": "",
+  "source": "osm+wikidata",
+  "coords": [
+   -61.1364257,
+   14.8628437
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "meyer",
+  "name": "Meyer",
+  "region": "europe",
+  "website": "http://www.distillerie-meyer.fr/",
+  "address": "",
+  "description": "distillerie de whisky",
+  "source": "wikidata",
+  "coords": [
+   7.32514,
+   48.3379
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "c-est-nous",
+  "name": "C'est Nous",
+  "region": "europe",
+  "website": "https://www.facebook.com/profile.php?id=100057236897953",
+  "address": "1 Av. de la Voie au Coq, 14760 Bretteville-sur-Odon, France",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -0.4218025,
+   49.166351
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "damoiseau-distillery",
+  "name": "Damoiseau distillery",
+  "region": "rest",
+  "website": "http://damoiseau.fr/fr/",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -61.353699,
+   16.329231
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "alambic-bourguignon-sab-s-distillery",
+  "name": "Alambic bourguignon - SAB'S Distillery",
+  "region": "europe",
+  "website": "http://www.alambic-bourguignon.com/",
+  "address": "10 Av. Albert Bichot, 21200 Beaune, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   4.858863599999999,
+   47.011401199999995
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-bielle",
+  "name": "Distillerie Bielle",
+  "region": "rest",
+  "website": "https://www.rhumbielle.com/",
+  "address": "WP9M+4F9, Grand-Bourg 97112, Guadeloupe",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -61.2662881,
+   15.917775299999999
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-merlet-fils",
+  "name": "Distillerie Merlet & Fils",
+  "region": "europe",
+  "website": "https://www.distillerie-merlet.com/",
+  "address": "40 Rue de Chevessac, 17610 Saint-Sauvant, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -0.5078123,
+   45.734371599999996
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-depaz",
+  "name": "Distillerie Depaz",
+  "region": "rest",
+  "website": "http://www.depaz.fr/",
+  "address": "Plantation de la Montagne Pelée, Saint-Pierre 97250, Martinique",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -61.1654127,
+   14.7575744
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-c-est-nous",
+  "name": "Distillerie C'est Nous",
+  "region": "europe",
+  "website": "http://www.cestnous-gin.com/",
+  "address": "6 Rue Francis de Pressencé, 14460 Colombelles, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -0.2839221,
+   49.1961069
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "blind-pigs-distillers",
+  "name": "Blind Pigs Distillers",
+  "region": "europe",
+  "website": "http://www.blindpigs.fr/",
+  "address": "13 Chem. du Soleil Levant, 64420 Nousty, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -0.206116,
+   43.266115899999996
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-mazy",
+  "name": "Distillerie Mazy",
+  "region": "europe",
+  "website": "http://www.distillerie-mazy.fr/",
+  "address": "33 Rue de Mazy, 21160 Marsannay-la-Côte, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   4.9873639,
+   47.2691884
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-bellevue",
+  "name": "Distillerie Bellevue",
+  "region": "rest",
+  "website": "https://www.habitation-bellevue.com/",
+  "address": "Marie-Galante, Capesterre-de-Marie-Galante 97140, Guadeloupe",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -61.2412932,
+   15.9261315
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distilleries-et-domaines-de-provence",
+  "name": "Distilleries et Domaines de Provence",
+  "region": "europe",
+  "website": "http://www.distilleries-provence.com/",
+  "address": "Z.A. Les Chalus, 04300 Forcalquier, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   5.796786099999999,
+   43.9578887
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-warenghem",
+  "name": "Distillerie Warenghem",
+  "region": "europe",
+  "website": "http://www.whisky-breton.com/",
+  "address": "Route de Guingamp, Boutill, 22300 Lannion, France",
+  "description": "",
+  "source": "osm+wikidata",
+  "coords": [
+   -3.43324,
+   48.7244
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-magnenet",
+  "name": "Distillerie Magnenet",
+  "region": "europe",
+  "website": "https://distillerie-magnenet.fr/",
+  "address": "8 Rue Henri de Bahezre, 21700 Nuits-Saint-Georges, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   4.9487505999999994,
+   47.139401
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-montebello",
+  "name": "Distillerie Montebello",
+  "region": "rest",
+  "website": "https://distillerie-montebello.fr/",
+  "address": "Chem. de Montebello, Petit-Bourg 97170, Guadeloupe",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -61.5956444,
+   16.1750687
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "la-grange",
+  "name": "La Grange",
+  "region": "europe",
+  "website": "https://distillerielagrange.com/",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   7.3845449,
+   48.0061335
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-bonne-mere",
+  "name": "Distillerie Bonne-Mère",
+  "region": "rest",
+  "website": "https://distilleriebonnemere.com/",
+  "address": "5000 Rue de la Distillerie, Sainte-Rose 97115, Guadeloupe",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -61.6749823,
+   16.2705184
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "meyer-4864",
+  "name": "Meyer",
+  "region": "europe",
+  "website": "https://distilleriemeyer.fr",
+  "address": "18 Rue St Gilles, 67220 Saint-Pierre-Bois, France",
+  "description": "Wiskey",
+  "source": "osm",
+  "coords": [
+   7.3540858,
+   48.3372846
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-ar-roc-h",
+  "name": "Distillerie Ar Roc'h",
+  "region": "europe",
+  "website": "https://distillerie-arroch.fr/",
+  "address": "21 bis Rue aux Toiles, 22450 La Roche-Jaudy, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -3.2577697999999997,
+   48.745917000000006
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-merlet-et-fils",
+  "name": "Distillerie Merlet et Fils",
+  "region": "europe",
+  "website": "https://www.distillerie-merlet.com/",
+  "address": "49 Rte du Martret, 17610 Chérac, France",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -0.4355153,
+   45.7031877
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-h-b-s",
+  "name": "Distillerie H.B.S.",
+  "region": "rest",
+  "website": "https://www.facebook.com/rhumbeausejour",
+  "address": "Habitation Beauséjour, Grand'Rivière 97218, Martinique",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -61.173491,
+   14.872857199999999
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "maison-du-geranium",
+  "name": "Maison du Géranium",
+  "region": "rest",
+  "website": "http://ladistilleriedumaido.com/",
+  "address": "700 Rte du Maido, Saint-Paul 97423, Réunion",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   55.352376,
+   -21.0505733
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "distillerie-la-grange",
+  "name": "Distillerie La Grange",
+  "region": "europe",
+  "website": "http://www.distillerielagrange.com/",
+  "address": "11 Rue du Riesling, 68420 Eguisheim, France",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   7.308131,
+   48.042427499999995
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "alambic-bourguignon",
+  "name": "Alambic Bourguignon",
+  "region": "europe",
+  "website": "https://www.alambic-bourguignon.com",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   4.86177,
+   47.0196562
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ }
+]
