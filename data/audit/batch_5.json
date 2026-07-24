@@ -1,0 +1,229 @@
+{
+ "kind": "status",
+ "entries": [
+  {
+   "slug": "kilbagie",
+   "name": "Kilbagie",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.724796,
+    56.090196
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "kimbland-distillery",
+   "name": "Kimbland distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -2.4617,
+    59.2831
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "kirkliston-distillery",
+   "name": "Kirkliston Distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.405843,
+    55.953313
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "langholm-distillery",
+   "name": "Langholm Distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -2.988877,
+    55.142568
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "limavady-distillery",
+   "name": "Limavady Distillery",
+   "region": "ireland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -6.94861111,
+    55.0575
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "lochrin",
+   "name": "Lochrin",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.2059,
+    55.942622
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "lochside-distillery",
+   "name": "Lochside distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -2.47056,
+    56.7222
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "millburn-distillery",
+   "name": "Millburn distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -4.205007,
+    57.482585
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "mother-s-ruin-1751-distilling-company-ltd",
+   "name": "Mother's Ruin 1751 Distilling Company Ltd",
+   "region": "uk",
+   "website": "http://mothersruin1751.co.uk/",
+   "address": "Enterprise Court, Marine Dr, Torpoint PL11 2EH, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -4.1949324,
+    50.3726738
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "octomore",
+   "name": "Octomore",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -6.385977,
+    55.745484
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "old-bakery-gin-rum-whisky-distillery-est-1860",
+   "name": "Old Bakery Gin Rum & Whisky Distillery est 1860",
+   "region": "uk",
+   "website": "http://www.oldbakerygin.com/",
+   "address": "The Old Bakery, 2 - 3 Pymmes Mews, London N13 4PF, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -0.11788730000000001,
+    51.612007299999995
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "old-market-distillery",
+   "name": "Old Market Distillery",
+   "region": "uk",
+   "website": "http://www.oldmarketdistillery.com/",
+   "address": "Old Castle Green, 46 Gloucester Ln, Bristol BS2 0DP, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -2.5787382,
+    51.4570485
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "pollo",
+   "name": "Pollo",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -4.109863,
+    57.719306
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "provanmill",
+   "name": "Provanmill",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -4.196244,
+    55.876602
+   ],
+   "reasons": [
+    "stub"
+   ]
+  }
+ ]
+}

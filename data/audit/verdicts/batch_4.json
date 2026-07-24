@@ -1,0 +1,16 @@
+[
+{"slug":"glenaden","verdict":"remove","reason":"Farm distillery closed permanently 1915","source_url":"https://whiskipedia.com/distilleries/glenugie/","confidence":"high"},
+{"slug":"glenflagler-distillery","verdict":"remove","reason":"Closed July 1985, demolished 1988; warehouses are Inver House offices","source_url":"https://en.wikipedia.org/wiki/Glen_Flagler_distillery","confidence":"high"},
+{"slug":"glengilp-distillery","verdict":"remove","reason":"Closed 1937, demolished 1996","source_url":"https://en.wikipedia.org/wiki/Glengilp_distillery","confidence":"high"},
+{"slug":"gleniffer","verdict":"remove","reason":"Closed 1894 after 1889 liquidation","source_url":"https://www.gracesguide.co.uk/Gleniffer_Distillery","confidence":"high"},
+{"slug":"glenmavis","verdict":"remove","reason":"Closed 1910; site now residential","source_url":"https://www.undiscoveredscotland.co.uk/bathgate/bathgate/index.html","confidence":"high"},
+{"slug":"glenochil","verdict":"remove","reason":"Whisky production stopped 1929; later DCL yeast/research facility","source_url":"https://clackmannanshire.scot/index.php/industry-and-commerce/glenochil-distillery","confidence":"high"},
+{"slug":"glentarras","verdict":"remove","reason":"Silent c. 1914-16; demolished/converted, no revival found","source_url":"https://www.gracesguide.co.uk/Glentarras_Distillery","confidence":"high"},
+{"slug":"glenury-distillery","verdict":"remove","reason":"Closed 1985, demolished 1993; apartments on site","source_url":"https://en.wikipedia.org/wiki/Glenury_distillery","confidence":"high"},
+{"slug":"grandtully","verdict":"remove","reason":"Closed permanently early 1900s","source_url":"https://www.trove.scot/place/25715","confidence":"high"},
+{"slug":"grange-distillery-burntisland","verdict":"remove","reason":"Ceased c. 1927; warehouses decommissioned 1987","source_url":"https://foodanddrink.scotsman.com/distilleries/the-story-of-burntislands-lost-grange-distillery/","confidence":"high"},
+{"slug":"haig-s-distillery-markinch","verdict":"remove","reason":"Blending/bottling plant not a distillery; closed 1983-84, now Haig Business Park","source_url":"https://www.thecourier.co.uk/fp/news/fife/4983445/markinch-haig-whisky-demolition/","confidence":"high"},
+{"slug":"hillside-distillery","verdict":"remove","reason":"Glenesk mothballed 1985, licence lost 1992, demolished 1996; maltings only","source_url":"https://en.wikipedia.org/wiki/Glenesk_distillery","confidence":"high"},
+{"slug":"home-farm-gin-distillery-shop","verdict":"update","name":"Home Farm Gin","website":"https://www.homefarmgin.co.uk/","description":"Small-batch Norfolk gin distillery founded in 2019 on a farm at Hethersett, distilling on a copper still with its own water supply, with an on-site shop, tours, tastings and cocktail experiences.","reason":"Operating farm gin distillery with physical site and 2026 events calendar","source_url":"https://www.homefarmgin.co.uk/","confidence":"high"},
+{"slug":"kennetpans-distillery","verdict":"remove","reason":"Ruined 18th-century scheduled monument; no production for ~two centuries","source_url":"https://en.wikipedia.org/wiki/Kennetpans_distillery","confidence":"high"}
+]

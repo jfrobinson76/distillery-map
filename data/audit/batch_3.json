@@ -1,0 +1,229 @@
+{
+ "kind": "status",
+ "entries": [
+  {
+   "slug": "boness-distillery",
+   "name": "Bo\u2019ness distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.620353,
+    56.014318
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "cambus",
+   "name": "Cambus",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.844369,
+    56.125619
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "camlachie",
+   "name": "Camlachie",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -4.212184,
+    55.853107
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "canonmills",
+   "name": "Canonmills",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.204469,
+    55.96232
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "carsebridge",
+   "name": "Carsebridge",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.777147,
+    56.121737
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "coleburn",
+   "name": "Coleburn",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.272011158,
+    57.581602632
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "convalmore",
+   "name": "Convalmore",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.13334,
+    57.46124
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "cotswolds-distillery-shop",
+   "name": "Cotswolds Distillery Shop",
+   "region": "uk",
+   "website": "http://www.cotswoldsdistillery.com/",
+   "address": "2, The Forge, High St, Bourton-on-the-Water, Cheltenham GL54 2AN, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -1.7578865,
+    51.8849605
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "devanha-distillery",
+   "name": "Devanha Distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -2.097274,
+    57.131372
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "dumbarton-distillery",
+   "name": "Dumbarton distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -4.56777,
+    55.942092
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "dundashill",
+   "name": "Dundashill",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -4.255527,
+    55.87177
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "finnieston-distillery",
+   "name": "Finnieston distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -4.281,
+    55.862
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "gerston",
+   "name": "Gerston",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.507558,
+    58.517025
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "glen-albyn",
+   "name": "Glen Albyn",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -4.24719,
+    57.48163
+   ],
+   "reasons": [
+    "stub"
+   ]
+  }
+ ]
+}

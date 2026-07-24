@@ -1,0 +1,560 @@
+{
+ "kind": "dupes",
+ "pairs": [
+  [
+   "Tormore Distillery",
+   "Cooperage, Tormore Distillery",
+   "1.0",
+   "0.58"
+  ],
+  [
+   "Tormore Distillery",
+   "Duty Free Wharehouse Number 1 and 2, Tormore Distillery",
+   "1.0",
+   "0.28"
+  ],
+  [
+   "Edinburgh whisky distillery",
+   "Edinburgh Gin",
+   "1.4",
+   "0.76"
+  ],
+  [
+   "Rosebank Distillery, Camelon Road, Falkirk",
+   "Falkirk Distillery",
+   "4.9",
+   "0.38"
+  ],
+  [
+   "Strathmill",
+   "Strathisla Distillery",
+   "0.8",
+   "0.8"
+  ],
+  [
+   "Abhainn Dearg Distillery",
+   "Taigh-staile Abhainn Dearg",
+   "1.5",
+   "0.68"
+  ],
+  [
+   "Edradour Distillery",
+   "Edradour Distillery, Milton of Edradour",
+   "0.9",
+   "0.47"
+  ],
+  [
+   "Scapa Distillery",
+   "Scapa Distillery Brand Home",
+   "1.0",
+   "0.45"
+  ],
+  [
+   "Arbikie Distillery",
+   "Arbikie Highland Estate Distillery",
+   "2.8",
+   "0.47"
+  ]
+ ],
+ "entries": [
+  {
+   "slug": "abhainn-dearg-distillery",
+   "name": "Abhainn Dearg Distillery",
+   "region": "scotland",
+   "website": "https://www.abhainndearg.co.uk/",
+   "address": "",
+   "description": "Highland Malt",
+   "source": "completely-smashed+wikidata",
+   "coords": [
+    -7.0501074,
+    58.1571612
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "arbikie-distillery",
+   "name": "Arbikie Distillery",
+   "region": "scotland",
+   "website": "https://www.arbikie.com/",
+   "address": "",
+   "description": "Highland Malt",
+   "source": "completely-smashed+osm+wikidata",
+   "coords": [
+    -2.5588801,
+    56.6447806
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "arbikie-highland-estate-distillery",
+   "name": "Arbikie Highland Estate Distillery",
+   "region": "scotland",
+   "website": "http://www.arbikie.com/",
+   "address": "Arbikie Distillery, Montrose DD10 9TR, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -2.5280407,
+    56.6637935
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "bath-botanical-gin-distillery",
+   "name": "Bath Botanical Gin Distillery",
+   "region": "uk",
+   "website": "https://www.beatone.co.uk/bath?utm_source=gmb&utm_medium=organic&utm_campaign=homepage",
+   "address": "Unit V6, The Vaults, 11 Brunel Square, Bath BA1 1SX, UK",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    -2.3530263,
+    51.3761667
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "bath-botanical-gin-distillery-and-herbal-apothecary",
+   "name": "Bath Botanical Gin Distillery and Herbal Apothecary",
+   "region": "uk",
+   "website": "https://www.bathbotanics.co.uk/",
+   "address": "76 Walcot St, Bath BA1 5BD, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -2.359539,
+    51.385788299999994
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "bristol-bath-rum-distillery",
+   "name": "Bristol & Bath Rum Distillery",
+   "region": "uk",
+   "website": "http://www.bristolrumschool.com/",
+   "address": "87-89 Park St, Bristol BS1 5PW, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -2.6043748,
+    51.4554848
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "bristol-distilling-co",
+   "name": "Bristol Distilling Co",
+   "region": "uk",
+   "website": "http://www.bristoldistilling.com/",
+   "address": "Unit D, Malago Vale Trading Estate, St John's Ln, Bristol BS3 5BQ, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -2.5984201,
+    51.437796399999996
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "bristol-dry-gin",
+   "name": "Bristol Dry Gin",
+   "region": "uk",
+   "website": "https://bristoldrygin.com/",
+   "address": "All Saints Ln, Bristol BS1 1JH, UK",
+   "description": "Gin",
+   "source": "osm",
+   "coords": [
+    -2.5930131,
+    51.454363
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "cooperage-tormore-distillery",
+   "name": "Cooperage, Tormore Distillery",
+   "region": "scotland",
+   "website": "https://elixirdistillers.com/distilleries/",
+   "address": "United Kingdom, Grantown-on-Spey, Advie, Richardson Rd, Tormore Distillery",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.40909,
+    57.3976
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "duty-free-wharehouse-number-1-and-2-tormore-distillery",
+   "name": "Duty Free Wharehouse Number 1 and 2, Tormore Distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.40633,
+    57.38
+   ],
+   "reasons": [
+    "dupe",
+    "stub"
+   ]
+  },
+  {
+   "slug": "eden-mill-distillery",
+   "name": "Eden Mill Distillery",
+   "region": "scotland",
+   "website": "https://www.edenmill.com/",
+   "address": "",
+   "description": "Lowland Malt",
+   "source": "completely-smashed",
+   "coords": [
+    -2.8824076,
+    56.3660542
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "eden-mill-st-andrews",
+   "name": "Eden Mill St Andrews",
+   "region": "scotland",
+   "website": "https://www.edenmill.com/",
+   "address": "Eden Mill, Eden Campus, Guardbridge, St Andrews KY16 0US, UK",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -2.892174,
+    56.363945
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "edinburgh-gin",
+   "name": "Edinburgh Gin",
+   "region": "scotland",
+   "website": "https://www.edinburghgin.com/visit",
+   "address": "Arch 16, The Arches, E Market St, Edinburgh EH8 8FS, UK",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    -3.1845694,
+    55.9513434
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "edinburgh-whisky-distillery",
+   "name": "Edinburgh whisky distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.18287,
+    55.938451
+   ],
+   "reasons": [
+    "dupe",
+    "stub"
+   ]
+  },
+  {
+   "slug": "edradour-distillery",
+   "name": "Edradour Distillery",
+   "region": "scotland",
+   "website": "https://www.edradour.com/",
+   "address": "",
+   "description": "Highland Malt",
+   "source": "completely-smashed+osm+wikidata",
+   "coords": [
+    -3.6865085,
+    56.7008127
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "edradour-distillery-milton-of-edradour",
+   "name": "Edradour Distillery, Milton of Edradour",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.70079,
+    56.7018
+   ],
+   "reasons": [
+    "dupe",
+    "stub"
+   ]
+  },
+  {
+   "slug": "falkirk-distillery",
+   "name": "Falkirk Distillery",
+   "region": "scotland",
+   "website": "https://www.falkirkdistillery.com/",
+   "address": "Grandsable Rd, Polmont, Falkirk FK2 0WA, UK",
+   "description": "Lowland Malt",
+   "source": "completely-smashed+osm+wikidata",
+   "coords": [
+    -3.72517,
+    55.99491
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "london-distillery-company",
+   "name": "London Distillery Company",
+   "region": "uk",
+   "website": "https://www.londondistillery.com",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    -0.168296,
+    51.47977
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "office-range-and-proof-house-royal-lochnagar-distillery",
+   "name": "Office Range and Proof House, Royal Lochnagar Distillery",
+   "region": "scotland",
+   "website": "http://www.royallochnagardistillery.com/",
+   "address": "Crathie, Balmoral, Ballater AB35 5TB, UK",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.20966,
+    57.0302
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "pennington-s-distillery",
+   "name": "Pennington's Distillery",
+   "region": "uk",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    -2.7453151,
+    54.3282295
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "pennington-s-spirits-liqueurs-pennington-s-distillery",
+   "name": "Pennington's Spirits & Liqueurs (Pennington's Distillery)",
+   "region": "uk",
+   "website": "https://www.penningtonspirits.com/",
+   "address": "Unit 3, Millennium House, Boundary Bank, Kendal LA9 5RR, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -2.7721964,
+    54.330428500000004
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "rosebank-distillery-camelon-road-falkirk",
+   "name": "Rosebank Distillery, Camelon Road, Falkirk",
+   "region": "scotland",
+   "website": "https://www.rosebank.com/",
+   "address": "Camelon Rd, Falkirk FK1 5SQ, UK",
+   "description": "",
+   "source": "osm+wikidata",
+   "coords": [
+    -3.80356,
+    56.0023
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "royal-lochnagar-distillery",
+   "name": "Royal Lochnagar Distillery",
+   "region": "scotland",
+   "website": "https://www.malts.com/en-row/distilleries/royal-lochnagar/",
+   "address": "",
+   "description": "Highland Malt",
+   "source": "completely-smashed+osm+wikidata",
+   "coords": [
+    -3.2228232,
+    57.0289286
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "scapa-distillery",
+   "name": "Scapa Distillery",
+   "region": "scotland",
+   "website": "http://scapawhisky.com/",
+   "address": "",
+   "description": "Highland Malt",
+   "source": "completely-smashed+osm+wikidata",
+   "coords": [
+    -3.0020706,
+    58.9632797
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "scapa-distillery-brand-home",
+   "name": "Scapa Distillery Brand Home",
+   "region": "scotland",
+   "website": "http://www.scapawhisky.com/",
+   "address": "St Ola, Kirkwall KW15 1SE, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -2.9853,
+    58.96323770000001
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "strathisla-distillery",
+   "name": "Strathisla Distillery",
+   "region": "scotland",
+   "website": "https://www.maltwhiskydistilleries.com/strathisla/",
+   "address": "Seafield Ave, Keith AB55 5BS, UK",
+   "description": "Speyside Malt",
+   "source": "completely-smashed+osm+wikidata",
+   "coords": [
+    -2.9533575,
+    57.5460552
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "strathmill",
+   "name": "Strathmill",
+   "region": "scotland",
+   "website": "https://www.malts.com/en-row/our-whisky-collection/strathmill/",
+   "address": "",
+   "description": "Speyside Malt",
+   "source": "completely-smashed+osm+wikidata",
+   "coords": [
+    -2.961226,
+    57.540324
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "taigh-staile-abhainn-dearg",
+   "name": "Taigh-staile Abhainn Dearg",
+   "region": "scotland",
+   "website": "https://www.abhainndearg.co.uk/",
+   "address": "Carnish, Isle of Lewis HS2 9EX, UK",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    -7.0446409,
+    58.1706971
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "thames-distillers-london-distillery",
+   "name": "Thames Distillers (London Distillery)",
+   "region": "uk",
+   "website": "http://www.thamesdistillers.co.uk/",
+   "address": "12 Ossory Rd, London SE1 5AN, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -0.0713454,
+    51.4847776
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "the-bath-distillery",
+   "name": "The Bath Distillery",
+   "region": "uk",
+   "website": "https://www.thebathgincompany.co.uk/",
+   "address": "20-22 Monmouth Pl, Bath BA1 2AY, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -2.3659019999999997,
+    51.3828549
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "tormore-distillery",
+   "name": "Tormore Distillery",
+   "region": "scotland",
+   "website": "http://www.tormoredistillery.com/",
+   "address": "",
+   "description": "Speyside Malt",
+   "source": "completely-smashed+osm+wikidata",
+   "coords": [
+    -3.409987,
+    57.3883687
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  }
+ ]
+}
