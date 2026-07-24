@@ -171,6 +171,15 @@ export default async function CountryPage({ params }: Props) {
                 <div className="flex items-baseline justify-between gap-2">
                   <span className="text-sm font-medium" style={{ color: WOW.oak }}>
                     {f.properties.name}
+                    {f.properties.claimed && (
+                      <span
+                        className="ml-1.5 text-[10px] font-semibold"
+                        style={{ color: WOW.amber }}
+                        title="Verified by the distillery"
+                      >
+                        &#10003; Verified
+                      </span>
+                    )}
                   </span>
                   {f.properties.website && (
                     <a

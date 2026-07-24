@@ -64,6 +64,7 @@ type DistilleryProps = {
   description?: string;
   address?: string;
   slug?: string;
+  claimed?: boolean;
 };
 
 export const getCountries = cache(async (): Promise<CountryEntry[]> => {
