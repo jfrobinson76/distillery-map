@@ -59,6 +59,15 @@ function EmbedMapInner() {
                 (f.properties as Record<string, string>)?.country?.toLowerCase() ===
                 countryParam.toLowerCase()
             );
+
+            // Fit the view to the filtered country's pins
+            if (data.features.length > 0) {
+              const bounds = new mapboxgl.LngLatBounds();
+              for (const f of data.features as GeoJSON.Feature<GeoJSON.Point>[]) {
+                bounds.extend(f.geometry.coordinates as [number, number]);
+              }
+              map.current!.fitBounds(bounds, { padding: 40, maxZoom: 9, duration: 0 });
+            }
           }
 
           setCount(data.features.length);

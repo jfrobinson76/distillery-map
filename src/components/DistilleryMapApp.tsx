@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { WOW, FORMSPREE_SUBMIT_ID, regionViews, regionLabels, type Region } from "@/lib/constants";
@@ -939,6 +940,10 @@ export default function DistilleryMapApp({
         <div className="mx-auto flex max-w-7xl items-center justify-between text-[10px]" style={{ color: WOW.muted }}>
           <span>
             Data: Google Places, OpenStreetMap, Wikidata &middot;{" "}
+            <Link href="/distilleries" style={{ color: WOW.amberGlow }}>
+              Browse by country
+            </Link>{" "}
+            &middot;{" "}
             <a href="mailto:hello@distillerymap.ie" style={{ color: WOW.amberGlow }}>
               hello@distillerymap.ie
             </a>
