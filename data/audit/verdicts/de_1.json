@@ -1,0 +1,8 @@
+[
+{"slug":"hauler-edelbranntweinbrennerei","verdict":"keep","reason":"Distinct family fruit-brandy distillery, Rheinau-Freistett","source_url":"https://www.goyellow.de/home/brennerei-haeussler-rheinau-freistett--bpwxv3.html","confidence":"medium"},
+{"slug":"fischer-reinhard-edelbranntweinbrennerei","verdict":"keep","reason":"Distinct fruit-brandy distillery/orchard, Achern-Wagshurst","source_url":"https://www.dasoertliche.de/Themen/Fischer-Reinhard-Edelbranntweinbrennerei-Obstbau-Achern-Wagshurst-Am-Waldeck","confidence":"medium"},
+{"slug":"gutshof-brennerei-begatal","verdict":"keep","reason":"Actual working farm distillery site, Dörentrup","source_url":"https://www.gutshof-brennerei-begatal.de/impressum/","confidence":"high"},
+{"slug":"gutshof-brennerei-begatal-store","verdict":"remove","reason":"Retail shop in Lemgo, not a production site — distillery already listed separately","source_url":"https://www.lippe-news.de/2022/08/31/gutshof-brennerei-begatal-nun-auch-in-der-lemgoer-innenstadt/","confidence":"high"},
+{"slug":"the-waters-distillery","verdict":"keep","reason":"Confirmed operating distillery, Pforzheim, active website","source_url":"https://www.thewatersdistillery.com/kontakt/","confidence":"high"},
+{"slug":"brennerei-walther","verdict":"keep","reason":"Separate family distillery, Neulingen, confirmed via directory + Instagram","source_url":"https://www.instagram.com/brennerei_walther/","confidence":"medium"}
+]

@@ -1,0 +1,374 @@
+[
+ {
+  "slug": "karuizawa-distillery",
+  "name": "Karuizawa distillery",
+  "region": "japan",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   138.506666666,
+   36.322777777
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "nikka-yoichi-distillery",
+  "name": "Nikka Yoichi Distillery",
+  "region": "japan",
+  "website": "",
+  "address": "",
+  "description": "Founded by Masataka Taketsuru, the father of Japanese whisky",
+  "source": "curated",
+  "coords": [
+   140.7547,
+   43.1958
+  ],
+  "reasons": [
+   "dupe",
+   "stub"
+  ]
+ },
+ {
+  "slug": "nikka-miyagikyo-distillery",
+  "name": "Nikka Miyagikyo Distillery",
+  "region": "japan",
+  "website": "",
+  "address": "",
+  "description": "Nikka's lowland-style distillery near Sendai",
+  "source": "curated",
+  "coords": [
+   140.6592,
+   38.2994
+  ],
+  "reasons": [
+   "dupe",
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillery-japan-2",
+  "name": "霧島酒造",
+  "region": "japan",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   131.0758964,
+   31.747349
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillery-japan-3",
+  "name": "町田酒造",
+  "region": "asia",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   129.5846656,
+   28.3890717
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillery-japan-7",
+  "name": "合同会社ねっか 奥会津蒸留所",
+  "region": "japan",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   139.4800414,
+   37.2921554
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillery-japan-11",
+  "name": "天領",
+  "region": "japan",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   137.2093467,
+   35.8760099
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillery-japan-13",
+  "name": "京都蒸溜所",
+  "region": "japan",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   135.7349387,
+   34.9618277
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillery-japan-15",
+  "name": "麦酒館",
+  "region": "japan",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   131.3567541,
+   33.2594928
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillery-japan-16",
+  "name": "熊屋酒造有限会社",
+  "region": "japan",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   133.8180415,
+   34.5381029
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillery-japan-17",
+  "name": "マクドナルド宮津店",
+  "region": "japan",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   135.1920554,
+   35.5397153
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillery-japan-21",
+  "name": "さつま無双",
+  "region": "japan",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   130.5132182,
+   31.4768844
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillery-japan-26",
+  "name": "宝酒造 島原工場",
+  "region": "japan",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   130.3754943,
+   32.7839854
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillery-japan-27",
+  "name": "小泉本店",
+  "region": "japan",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   132.4024128,
+   34.3815938
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "distillery-japan-33",
+  "name": "（株）都城酒造",
+  "region": "japan",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   131.025343,
+   31.7639992
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "ishigura-museum-shirakane-distillery",
+  "name": "Ishigura Museum (Shirakane Distillery)",
+  "region": "japan",
+  "website": "https://www.shirakane.jp/ishigura-m/",
+  "address": "1933 Wakimoto, Aira, Kagoshima 899-5651, Japan",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   130.6142044,
+   31.700964499999998
+  ],
+  "reasons": [
+   "historic",
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "shochu-distillery-museum-toji-no-sato-kasasa",
+  "name": "Shochu Distillery Museum Toji-no-Sato Kasasa",
+  "region": "japan",
+  "website": "http://www.toujinosato.co.jp/index.html",
+  "address": "6762 Kasasachō Akougi, Minamisatsuma, Kagoshima 897-1302, Japan",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   130.1685186,
+   31.379216099999997
+  ],
+  "reasons": [
+   "historic",
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "yabu-distillery-restaurant",
+  "name": "Yabu Distillery Restaurant 養父蒸溜所",
+  "region": "japan",
+  "website": "https://yabu-distillery.co.jp/",
+  "address": "Japan, 〒542-0081 Osaka, Chuo Ward, Minamisenba, 4-chōme−10−１８ ナサ・プライム ハウス別館 1F2F",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   135.4982561,
+   34.677036099999995
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "sicx-gin-distillery-cafe-bar",
+  "name": "SiCX京都蒸留所 Gin Distillery & Cafe Bar",
+  "region": "japan",
+  "website": "https://www.sicx.jp/",
+  "address": "234 Shimohorizumechō, Higashiyama Ward, Kyoto, 605-0992, Japan",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   135.7685909,
+   34.9893956
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "yoichi-distillery",
+  "name": "Yoichi distillery",
+  "region": "japan",
+  "website": "https://www.nikka.com/distilleries/yoichi/",
+  "address": "Japan, 〒046-0003 Hokkaido, Yoichi District, Yoichi, Kurokawachō, 7-chōme−６−１３３",
+  "description": "",
+  "source": "osm+wikidata",
+  "coords": [
+   140.791666666,
+   43.1875
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "fuji-gotemba-distillery",
+  "name": "Fuji Gotemba distillery",
+  "region": "japan",
+  "website": "https://www.kirin.co.jp/experience/factory/gotemba/",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   138.934444444,
+   35.308611111
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "kirin-fuji-gotemba-distillery",
+  "name": "Kirin Fuji Gotemba Distillery",
+  "region": "japan",
+  "website": "https://www.fujigotemba-distillery.com/",
+  "address": "970 Shibanta, Gotemba, Shizuoka 412-0003, Japan",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   138.8968073,
+   35.3366322
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "miyagikyo-distillery",
+  "name": "Miyagikyo distillery",
+  "region": "japan",
+  "website": "http://www.nikka.com/eng/",
+  "address": "1番地 Nikka, Aoba Ward, Sendai, Miyagi 989-3433, Japan",
+  "description": "",
+  "source": "osm+wikidata",
+  "coords": [
+   140.650555555,
+   38.308055555
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ }
+]

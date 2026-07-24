@@ -1,0 +1,245 @@
+{
+ "kind": "status",
+ "entries": [
+  {
+   "slug": "edelbrande-single-malt-whisky-gunther-busch",
+   "name": "Edelbrände & Single Malt Whisky Günther Busch",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "Edelbrände;Single_Malt_Whisky",
+   "source": "osm",
+   "coords": [
+    9.2761059,
+    48.789446
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-spielberger",
+   "name": "Brennerei Spielberger",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    10.4142774,
+    48.7832402
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "valhalla",
+   "name": "Valhalla",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "tasting@valhalla-harz.eu",
+   "source": "osm",
+   "coords": [
+    10.6117261,
+    51.7264919
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-fink",
+   "name": "Brennerei Fink",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "Brände_Und_Liköre",
+   "source": "osm",
+   "coords": [
+    9.2108343,
+    49.0006945
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-am-feuergraben",
+   "name": "Brennerei am Feuergraben",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.0764436,
+    48.6288321
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "biersack-hausbrennerei",
+   "name": "Biersack Hausbrennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "Hausbrennerei beim Stettener Schlösschen",
+   "source": "osm",
+   "coords": [
+    7.6633713,
+    47.6010885
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "schwarzwalder-hausbrennerei-fam-lang",
+   "name": "Schwarzwälder Hausbrennerei Fam. Lang",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.3698818,
+    48.5032593
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "likormanufaktur-bodensee",
+   "name": "Likörmanufaktur Bodensee",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "Liqueur",
+   "source": "osm",
+   "coords": [
+    9.6349268,
+    47.6985855
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "furstenhofer-brennerei",
+   "name": "Fürstenhöfer-Brennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.4219199,
+    52.0185661
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "gebr-niemeyer",
+   "name": "Gebr. Niemeyer",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "1787 in Linden vor Hannover gegründete Kornbranntweinbrennerei, Sitz in der Davenstedter Straße 33",
+   "source": "wikidata",
+   "coords": [
+    9.709409361,
+    52.367019376
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-j-rgen-bentz",
+   "name": "Brennerei Jürgen Bentz",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "Brennerei in Kirchardt, Landkreis Heilbronn, Baden-Württemberg, Deutschland",
+   "source": "wikidata",
+   "coords": [
+    8.99972,
+    49.21543
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "wredesche-spritfabrik",
+   "name": "Wredesche Spritfabrik",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "1862 in Peine durch den Bauherrn Julius Wrede errichtete Fabrik für technische Alkohole und Brenn-Sp",
+   "source": "wikidata",
+   "coords": [
+    10.234742182,
+    52.319801185
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "st-hlem-hle",
+   "name": "Stählemühle",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "building in Eigeltingen, Freiburg Government Region, Bade-Württemberg, Germany",
+   "source": "wikidata",
+   "coords": [
+    8.9576,
+    47.8737
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-schloss-schwarzenberg",
+   "name": "Brennerei Schloss Schwarzenberg",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "Brennerei",
+   "source": "wikidata",
+   "coords": [
+    10.476072513,
+    49.672751999
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "alte-kornbrennerei",
+   "name": "Alte Kornbrennerei",
+   "region": "europe",
+   "website": "http://www.museum-kornbrennerei.de/",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    8.00518,
+    51.329532
+   ],
+   "reasons": [
+    "historic"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,247 @@
+{
+ "kind": "status",
+ "entries": [
+  {
+   "slug": "brennerei-am-schloberg-12-am-schloberg-14-am-schloberg-16-in-nittenau",
+   "name": "Brennerei Am Schloßberg 12; Am Schloßberg 14; Am Schloßberg 16 in Nittenau",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    12.204020265,
+    49.212927454
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-im-klosterbauhof-6-im-klosterbauhof-7-in-ebersberg",
+   "name": "Brennerei Im Klosterbauhof 6; Im Klosterbauhof 7 in Ebersberg",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    11.970741597,
+    48.075864719
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-schlostrae-4-in-pentling",
+   "name": "Brennerei Schloßstraße 4 in Pentling",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    12.081080625,
+    48.960976573
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-tiefengruner-strae-7-in-berg-oberfranken",
+   "name": "Brennerei Tiefengrüner Straße 7 in Berg (Oberfranken)",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    11.795968436,
+    50.400945483
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "kornbrennerei-knappertsbusch",
+   "name": "Kornbrennerei Knappertsbusch",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    7.12349,
+    51.2614
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "leydicke",
+   "name": "Leydicke",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    13.3668,
+    52.4926
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "test-and-teaching-distillery-weihenstephan",
+   "name": "Test and teaching distillery Weihenstephan",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    11.724248545,
+    48.395290895
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "watermill-and-distillery-hiddingsel",
+   "name": "Watermill and distillery (Hiddingsel)",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    7.421196092,
+    51.838900248
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "old-distillery-gotha",
+   "name": "old distillery Gotha",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    12.611689623,
+    51.414109522
+   ],
+   "reasons": [
+    "historic",
+    "stub"
+   ]
+  },
+  {
+   "slug": "schnaps-und-edelbrennerei-heilmann",
+   "name": "Schnaps- und Edelbrennerei Heilmann",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    11.1173353,
+    49.6924786
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-fleischmann",
+   "name": "Brennerei Fleischmann",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    10.9926748,
+    49.8137382
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-burg",
+   "name": "Brennerei Burg",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    6.6043201,
+    49.6807557
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "adolf-weisenbach-schwarzwalder-edelbranntweinbrennerei",
+   "name": "Adolf Weisenbach Schwarzwälder Edelbranntweinbrennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.1151574,
+    48.5946642
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "hotel-gasthof-destille-eisenbahn",
+   "name": "Hotel-Gasthof-Destille Eisenbahn",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.1112374,
+    49.3491653
+   ],
+   "reasons": [
+    "poi-name",
+    "stub"
+   ]
+  },
+  {
+   "slug": "enzianbrennerei-grassl-am-funtensee",
+   "name": "Enzianbrennerei Grassl am Funtensee",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "eine von mehreren Enzian-Brennereien der Firma Grassl",
+   "source": "osm",
+   "coords": [
+    12.9407951,
+    47.4915631
+   ],
+   "reasons": [
+    "stub"
+   ]
+  }
+ ]
+}

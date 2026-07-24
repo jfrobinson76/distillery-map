@@ -1,0 +1,220 @@
+{
+ "kind": "dupes",
+ "pairs": [
+  [
+   "Häußler Edelbranntweinbrennerei",
+   "Fischer Reinhard Edelbranntweinbrennerei",
+   5.9,
+   0.78
+  ],
+  [
+   "Gutshof Brennerei Begatal",
+   "Gutshof Brennerei Begatal Store",
+   10.9,
+   0.84
+  ],
+  [
+   "The Waters Distillery",
+   "Brennerei Walther",
+   11.7,
+   0.77
+  ]
+ ],
+ "entries": [
+  {
+   "slug": "the-waters-distillery",
+   "name": "The Waters Distillery",
+   "region": "europe",
+   "website": "http://thewatersdistillery.com/",
+   "address": "Ritterstraße 6, 75181 Pforzheim, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    8.7380238,
+    48.8545926
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "edelbrennerei-erich-lang",
+   "name": "Edelbrennerei Erich Lang",
+   "region": "europe",
+   "website": "www.brennerei-Lang.de",
+   "address": "Dobenreuther Str. 10, 91361 Pinzberg, Germany",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    11.1303525,
+    49.6955705
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "hauler-edelbranntweinbrennerei",
+   "name": "Häußler Edelbranntweinbrennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    7.9442026,
+    48.6660064
+   ],
+   "reasons": [
+    "dupe",
+    "stub"
+   ]
+  },
+  {
+   "slug": "gutshof-brennerei-begatal-store",
+   "name": "Gutshof Brennerei Begatal Store",
+   "region": "europe",
+   "website": "http://www.gutshof-brennerei-begatal.de/",
+   "address": "Mittelstraße 100, 32657 Lemgo, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    8.8976963,
+    52.0286532
+   ],
+   "reasons": [
+    "dupe",
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "edelbrennerei-haas",
+   "name": "Edelbrennerei Haas",
+   "region": "europe",
+   "website": "www.destillerie-haas.de",
+   "address": "Schmiedsgasse 2, 91362 Pretzfeld, Germany",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    11.1753291,
+    49.7556736
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "fischer-reinhard-edelbranntweinbrennerei",
+   "name": "Fischer Reinhard Edelbranntweinbrennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    7.995372,
+    48.6250659
+   ],
+   "reasons": [
+    "dupe",
+    "stub"
+   ]
+  },
+  {
+   "slug": "enzianbrennerei-grassl",
+   "name": "Enzianbrennerei Grassl",
+   "region": "europe",
+   "website": "https://www.enzian-grassl.com/",
+   "address": "Salzburger Str. 105, 83471 Berchtesgaden, Germany",
+   "description": "",
+   "source": "osm+wikidata",
+   "coords": [
+    13.0407186,
+    47.6567058
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "gutshof-brennerei-begatal",
+   "name": "Gutshof Brennerei Begatal",
+   "region": "europe",
+   "website": "http://www.gutshof-brennerei-begatal.de/",
+   "address": "u. Dorfstraße 3-7, 32694 Dörentrup, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    9.0562162,
+    52.022200399999996
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "schwarzwalder-feingeistbrennerei-franz-fies",
+   "name": "Schwarzwälder Feingeistbrennerei Franz Fies",
+   "region": "europe",
+   "website": "http://www.feingeistbrennerei.de/",
+   "address": "Kastelberg 2, 77704 Oberkirch, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    8.08799,
+    48.55732
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "brennerei-walther",
+   "name": "Brennerei Walther",
+   "region": "europe",
+   "website": "https://www.instagram.com/brennerei_walther?igsh=c2V4ODg0bHRtemNx",
+   "address": "Kirchstraße 5, 75245 Neulingen, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    8.7036324,
+    48.9570845
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "grassl",
+   "name": "Grassl",
+   "region": "europe",
+   "website": "https://www.enzian-grassl.com/",
+   "address": "Weihnachtsschützenpl. 2/1/2, 83471 Berchtesgaden, Germany",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    13.0009352,
+    47.6320164
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  },
+  {
+   "slug": "franz-fies-feingeistbrennerei",
+   "name": "Franz Fies Feingeistbrennerei",
+   "region": "europe",
+   "website": "http://www.feingeistbrennerei.de/",
+   "address": "Heugasse 5, 77704 Oberkirch, Germany",
+   "description": "Schnaps;Schwarzwälder_Kirschwasser;Alcohol;Likör",
+   "source": "osm",
+   "coords": [
+    8.0537356,
+    48.5653603
+   ],
+   "reasons": [
+    "dupe"
+   ]
+  }
+ ]
+}

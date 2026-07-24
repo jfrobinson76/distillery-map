@@ -2,7 +2,7 @@
 
 # Distillery Map — distillerymap.ie
 
-> A free, open distillery map — 6,255 distilleries, tasting rooms, and spirit producers worldwide. Community-built and growing.
+> A free, open distillery map — 6,201 distilleries, tasting rooms, and spirit producers worldwide. Community-built and growing.
 
 ## Project Overview
 
@@ -37,7 +37,7 @@ src/lib/
 └── constants.ts          # WOW palette, regions, Formspree ID
 
 public/data/
-└── distilleries.geojson  # 6,255 entries (OSM, Wikidata, Google Places, curated)
+└── distilleries.geojson  # 6,201 entries (OSM, Wikidata, Google Places, curated)
 ```
 
 ## Form Types (all via Formspree mjgpywkp)

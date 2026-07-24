@@ -1,0 +1,183 @@
+{
+ "kind": "status",
+ "entries": [
+  {
+   "slug": "alte-mackenstedter-kornbrennerei-hans-turner-gmbh",
+   "name": "Alte Mackenstedter Kornbrennerei Hans Turner GmbH",
+   "region": "europe",
+   "website": "https://www.mackenstedter.de/",
+   "address": "Delmenhorster Str. 123, 28816 Stuhr, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    8.708627300000002,
+    52.997038499999995
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "wohnmobilstellplatz-alte-brennerei",
+   "name": "Wohnmobilstellplatz Alte Brennerei",
+   "region": "europe",
+   "website": "https://www.zuraltenbrennerei.de/",
+   "address": "Landstraße 4, 88719 Stetten, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    9.2982531,
+    47.6930263
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "verein-alte-brennerei-niemberg-e-v",
+   "name": "Verein \" Alte Brennerei-Niemberg e.V.",
+   "region": "europe",
+   "website": "http://www.alte-brennerei-niemberg.de/",
+   "address": "Wendenring 10, 06188 Landsberg, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    12.0908993,
+    51.5493891
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "museum-alte-brennerei",
+   "name": "Museum \"Alte Brennerei\"",
+   "region": "europe",
+   "website": "https://www.altebrennereihille.de/",
+   "address": "Mindener Str. 71, 32479 Hille, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    8.7448278,
+    52.336844400000004
+   ],
+   "reasons": [
+    "historic",
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "cinema-old-distillery",
+   "name": "Cinema Old distillery",
+   "region": "europe",
+   "website": "http://www.wendland-kino.de/",
+   "address": "Rosenstraße 19, 29439 Lüchow (Wendland), Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    11.1562307,
+    52.9679511
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "alte-brennerei-flechtingen",
+   "name": "Alte Brennerei Flechtingen",
+   "region": "europe",
+   "website": "https://www.world-qr.com/inhalte/new/qr-fuehrer/de/sachsen_anhalt/landkreis_boerde/ortsfuehrer/stadtfuehrer_flechtingen/gemeinde_flechtingen_storchennest?lat=0&lng=0",
+   "address": "Im Grund, 39345 Flechtingen, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    11.2364794,
+    52.3334182
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "alte-brennerei",
+   "name": "Alte Brennerei",
+   "region": "europe",
+   "website": "http://www.cafezumspeicher.com/",
+   "address": "11, 17337 Uckerland, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    13.88875,
+    53.44442360000001
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "weinhaus-alte-brennerei",
+   "name": "Weinhaus Alte Brennerei",
+   "region": "europe",
+   "website": "http://www.alte-brennerei-holz.de/",
+   "address": "Schulstraße 5, 71083 Herrenberg, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    8.8697745,
+    48.5957195
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "alte-brennerei-backnang",
+   "name": "Alte Brennerei - Backnang",
+   "region": "europe",
+   "website": "http://www.altebrennerei.com/",
+   "address": "Karl-Ferdinand-Braun-Straße 8, 71522 Backnang, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    9.4236,
+    48.96158
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "alte-brennerei-liepe",
+   "name": "Alte Brennerei Liepe",
+   "region": "europe",
+   "website": "https://www.goettliches-projekt.de/seite/466076/das-restaurant.html",
+   "address": "Breite Str. 41, 14715 Nennhausen, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    12.6010878,
+    52.612946799999996
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "hotel-alte-brennerei",
+   "name": "HOTEL ALTE BRENNEREI",
+   "region": "europe",
+   "website": "http://hotel-alte-brennerei.de/",
+   "address": "Breite Str. 97, 38855 Wernigerode, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    10.791774199999999,
+    51.836293399999995
+   ],
+   "reasons": [
+    "historic",
+    "poi-name"
+   ]
+  }
+ ]
+}

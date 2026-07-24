@@ -1,0 +1,245 @@
+{
+ "kind": "status",
+ "entries": [
+  {
+   "slug": "kleinbrennerei-k-p-hummel",
+   "name": "Kleinbrennerei K. & P. Hummel",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    7.8533612,
+    48.6251509
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-elfriede-hummel",
+   "name": "Brennerei Elfriede Hummel",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    7.8591901,
+    48.6221229
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "harzer-grubenlicht",
+   "name": "Harzer Grubenlicht",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    10.784708,
+    51.50851
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "weinbau-und-obstbrennerei-hans-meyer",
+   "name": "Weinbau und Obstbrennerei Hans Meyer",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    10.3654281,
+    49.7519039
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "destillerie-gutting",
+   "name": "Destillerie Gutting",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.2913065,
+    49.4544736
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "schwarzhofs-back-und-brennhisli",
+   "name": "Schwarzhofs Back- und Brennhisli",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.0844721,
+    48.4151217
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "mnnerhobby-destille",
+   "name": "MÆNNERHOBBY Destille",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    12.2429439,
+    54.1348916
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "hans-loch",
+   "name": "Hans Loch",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    6.8004216,
+    49.8503945
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "friedrich-jaster-co",
+   "name": "Friedrich Jaster & Co.",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.7741754,
+    52.0839323
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "historic-distillery-ronsahl",
+   "name": "Historic Distillery Rönsahl",
+   "region": "europe",
+   "website": "https://historischebrennerei.de/",
+   "address": "Hauptstraße 23, 58566 Kierspe, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    7.506025200000001,
+    51.111336
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "brudergeist-gmbh-brennerei-bar-tasting",
+   "name": "Brüdergeist GmbH - Brennerei, Bar, Tasting",
+   "region": "europe",
+   "website": "http://www.bruedergeist.com/",
+   "address": "Hülser Str. 54, 47647 Kerken, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    6.4334976,
+    51.432291199999995
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "historic-weinbrennerei-dujardin",
+   "name": "Historic Weinbrennerei Dujardin",
+   "region": "europe",
+   "website": "http://www.weinbrennerei-dujardin.de/",
+   "address": "Hohenbudberger Str. 10, 47829 Krefeld, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    6.6495555,
+    51.3583372
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "old-distillery-schwake",
+   "name": "Old distillery Schwake",
+   "region": "europe",
+   "website": "http://www.alte-brennerei-ennigerloh.de/",
+   "address": "Liebfrauenstraße 6, 59320 Ennigerloh, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    8.0232533,
+    51.836616799999994
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "old-distillery-hilbers",
+   "name": "Old distillery Hilbers",
+   "region": "europe",
+   "website": "http://altebrennerei-hilbers.de/",
+   "address": "Butjadinger Str. 346, 26125 Oldenburg (Oldb), Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    8.2481403,
+    53.1894226
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "alte-kornbrennerei-herrenhaus",
+   "name": "Alte Kornbrennerei - Herrenhaus",
+   "region": "europe",
+   "website": "http://www.alte-kornbrennerei.de/",
+   "address": "Poggenort 19, 49584 Fürstenau, Germany",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    7.623164599999999,
+    52.492525199999996
+   ],
+   "reasons": [
+    "historic"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,246 @@
+{
+ "kind": "status",
+ "entries": [
+  {
+   "slug": "edelbrandbrennerei-junger",
+   "name": "Edelbrandbrennerei Junger",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.0833581,
+    48.4732997
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-johanneshof",
+   "name": "Brennerei Johanneshof",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    6.5944245,
+    49.6608844
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "les-caves-de-wissembourg",
+   "name": "Les Caves de Wissembourg",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    7.9525611,
+    49.0310011
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "steinhauser-gmbh-alte-bodensee-hausbrennerei-weinkellerei",
+   "name": "Steinhauser GmbH - Alte Bodensee Hausbrennerei & Weinkellerei",
+   "region": "europe",
+   "website": "https://www.steinhauser-bodensee.de/",
+   "address": "Raiffeisenstraße 23, 88079 Kressbronn am Bodensee, Germany",
+   "description": "Die alte familiengeführte Bodensee Hausbrennerei Steinhauser steht für feinste und hochwertige Edelb",
+   "source": "osm",
+   "coords": [
+    9.5972719,
+    47.6043354
+   ],
+   "reasons": [
+    "historic"
+   ]
+  },
+  {
+   "slug": "paehler-rietberg-markenspirituosen-gmbh",
+   "name": "Paehler-Rietberg Markenspirituosen GmbH",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.3825734,
+    51.7683817
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "buhler-s-old-rhein-river-brennerei",
+   "name": "Bühler's Old Rhein River Brennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.0549387,
+    48.7641154
+   ],
+   "reasons": [
+    "historic",
+    "stub"
+   ]
+  },
+  {
+   "slug": "steigerwalder-brennerei-guttler",
+   "name": "Steigerwälder Brennerei Güttler",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    10.6609521,
+    49.7870041
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-m-eichhorn",
+   "name": "Brennerei M. Eichhorn",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    10.9217369,
+    49.7988563
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "brennerei-inge-blank",
+   "name": "Brennerei Inge Blank",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    11.1940156,
+    49.8462945
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "kornbrennerei-krummesse",
+   "name": "Kornbrennerei Krummesse",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    10.6307645,
+    53.7790402
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "luner-braumanufaktur",
+   "name": "Lüner Braumanufaktur",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    7.5569319,
+    51.6282908
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "obstbrennerei-gebr-zenkel",
+   "name": "Obstbrennerei Gebr. Zenkel",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    10.8778118,
+    49.8940997
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "3-tannen-brennerei",
+   "name": "3 Tannen Brennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    8.2063618,
+    48.8474699
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "spessarthof",
+   "name": "Spessarthof",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    9.5730302,
+    50.1790823
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "roser-hausbrennerei",
+   "name": "Roser Hausbrennerei",
+   "region": "europe",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    7.999014,
+    48.4318579
+   ],
+   "reasons": [
+    "stub"
+   ]
+  }
+ ]
+}

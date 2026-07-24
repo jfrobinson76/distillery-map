@@ -1,0 +1,8 @@
+[
+{"slug":"edelbrennerei-erich-lang","verdict":"keep","reason":"Distinct family distillery, Pinzberg-Dobenreuth","source_url":"https://www.brennerei-lang.de/","confidence":"high"},
+{"slug":"edelbrennerei-haas","verdict":"keep","reason":"Separate distillery in Pretzfeld, founded 1901","source_url":"https://destilleriehaas.de/de/","confidence":"high"},
+{"slug":"grassl","verdict":"remove","reason":"Town-centre retail shop, not the production site","source_url":"https://blog.berchtesgadener-land.com/2018/06/06/neue-enzian-grassl-filiale/","confidence":"medium"},
+{"slug":"enzianbrennerei-grassl","verdict":"keep","reason":"Confirmed main production site of Grassl Enzianbrennerei","source_url":"https://www.enzian-grassl.com/","confidence":"high"},
+{"slug":"franz-fies-feingeistbrennerei","verdict":"remove","reason":"Beverage sales/distribution address, duplicate of Kastelberg production site","source_url":"https://adresse.dastelefonbuch.de/Oberkirch/3-Getr%C3%A4nkevertrieb-Fies-Franz-GmbH-Schwarzw%C3%A4lder-Edelbranntweinbrennerei-Oberkirch-Heugasse.html","confidence":"medium"},
+{"slug":"schwarzwalder-feingeistbrennerei-franz-fies","verdict":"keep","reason":"Actual distillery/production site with visitor tours","source_url":"https://www.renchtal-tourismus.de/poi/104-feingeistbrennerei-franz-fies/","confidence":"medium"}
+]
