@@ -1,0 +1,229 @@
+{
+ "kind": "status",
+ "entries": [
+  {
+   "slug": "glenaden",
+   "name": "Glenaden",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -2.04834,
+    57.514995
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "glenflagler-distillery",
+   "name": "Glenflagler distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.926668,
+    55.863187
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "glengilp-distillery",
+   "name": "Glengilp distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -5.44774,
+    56.02288
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "gleniffer",
+   "name": "Gleniffer",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -4.482852,
+    55.825251
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "glenmavis",
+   "name": "Glenmavis",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.635665,
+    55.909499
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "glenochil",
+   "name": "Glenochil",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.839792,
+    56.147251
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "glentarras",
+   "name": "Glentarras",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -2.970087,
+    55.122995
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "glenury-distillery",
+   "name": "Glenury distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -2.214639,
+    56.972407
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "grandtully",
+   "name": "Grandtully",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.828162,
+    56.634404
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "grange-distillery-burntisland",
+   "name": "Grange distillery, Burntisland",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.242,
+    56.0659
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "haig-s-distillery-markinch",
+   "name": "Haig's Distillery, Markinch",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.13218,
+    56.1995
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "hillside-distillery",
+   "name": "Hillside Distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -2.463627,
+    56.744568
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "home-farm-gin-distillery-shop",
+   "name": "Home Farm Gin Distillery/Shop",
+   "region": "uk",
+   "website": "https://homefarmgin.co.uk/",
+   "address": "Ketteringham Ln, Hethersett, Norwich NR9 3DF, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    1.178818,
+    52.5893753
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "kennetpans-distillery",
+   "name": "Kennetpans Distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.7473141,
+    56.08011
+   ],
+   "reasons": [
+    "stub"
+   ]
+  }
+ ]
+}

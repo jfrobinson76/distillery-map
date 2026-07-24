@@ -1,0 +1,534 @@
+type,country,name,name2,km,sim
+stub,United Kingdom,Dumbarton distillery,,,
+stub,United Kingdom,Abbeyhill,,,
+stub,United Kingdom,Auchnagie,,,
+stub,United Kingdom,Auchorachan,,,
+stub,United Kingdom,Auchtermuchty,,,
+stub,United Kingdom,Auchtertool,,,
+stub,United Kingdom,Ballechin,,,
+stub,United Kingdom,Bon Accord,,,
+stub,United Kingdom,Bo’ness distillery,,,
+stub,United Kingdom,Banff distillery,,,
+stub,United Kingdom,Lochside distillery,,,
+stub,United Kingdom,Glenury distillery,,,
+stub,United States,A. Smith Bowman Distillery,,,
+stub,United Kingdom,Adelphi Whisky,,,
+stub,United Kingdom,Millburn distillery,,,
+stub,Japan,Karuizawa distillery,,,
+stub,Ireland,Bandon Distillery,,,
+stub,United Kingdom,Kennetpans Distillery,,,
+stub,United Kingdom,Auchinblae distillery,,,
+stub,United Kingdom,Dundashill,,,
+stub,United Kingdom,Glenflagler distillery,,,
+stub,United Kingdom,Cambus,,,
+stub,United Kingdom,Camlachie,,,
+stub,United Kingdom,Canonmills,,,
+stub,United Kingdom,Carsebridge,,,
+stub,United Kingdom,Coleburn,,,
+stub,United Kingdom,Convalmore,,,
+stub,United Kingdom,Devanha Distillery,,,
+stub,United Kingdom,Glen Albyn,,,
+stub,United Kingdom,Edinburgh whisky distillery,,,
+stub,United Kingdom,Alloa distillery,,,
+stub,United Kingdom,Gerston,,,
+stub,United Kingdom,Glenaden,,,
+stub,United Kingdom,Hillside Distillery,,,
+stub,United Kingdom,Glengilp distillery,,,
+stub,United Kingdom,Gleniffer,,,
+stub,United Kingdom,Glenmavis,,,
+stub,United Kingdom,Glenochil,,,
+stub,United Kingdom,Glentarras,,,
+stub,United Kingdom,Grandtully,,,
+stub,United Kingdom,Provanmill,,,
+stub,United Kingdom,Lochrin,,,
+stub,United Kingdom,Kilbagie,,,
+stub,United Kingdom,Kirkliston Distillery,,,
+stub,United Kingdom,Langholm Distillery,,,
+stub,United Kingdom,Octomore,,,
+stub,United Kingdom,Pollo,,,
+stub,United Kingdom,Saucel,,,
+stub,United Kingdom,St Magdalene distillery,,,
+stub,United Kingdom,Strathdee,,,
+stub,United Kingdom,Stromness,,,
+stub,United Kingdom,Tambowie,,,
+stub,United Kingdom,"Grange distillery, Burntisland",,,
+stub,United Kingdom,Yoker,,,
+stub,United Kingdom,Benbecula Distillery,,,
+stub,Austria,Q95567620,,,
+stub,Austria,Q95994314,,,
+stub,Belgium,Q134732560,,,
+stub,Belgium,Anglo-Belge,,,
+stub,Belgium,Bal & Co,,,
+stub,Belgium,Brouwerij Bourgogne,,,
+stub,Belgium,Columbia,,,
+stub,Belgium,Cosemans,,,
+stub,Belgium,De L'Auvre,,,
+stub,Belgium,Den Betsberg,,,
+stub,Belgium,Director's residence and distillery Dumont frères,,,
+stub,Belgium,Distillery Bouckaert,,,
+stub,Belgium,Distillery De Drie Sterren,,,
+stub,Belgium,Durca,,,
+stub,Belgium,"Elens, C.",,,
+stub,Belgium,Guilliams,,,
+stub,Belgium,Hayen,,,
+stub,Belgium,"Kerkhofs, Hubert",,,
+stub,Belgium,La Grande Distillerie Belge,,,
+stub,Belgium,Le Dragon,,,
+stub,Belgium,Leynen,,,
+stub,Belgium,Likeurstokerij 'Mijn Druppeltje',,,
+stub,Belgium,Likeurstokerij 't Zwaantje,,,
+stub,Belgium,Louis Meeus,,,
+stub,Belgium,Malico,,,
+stub,Belgium,Marres-Coenegrachts,,,
+stub,Belgium,"Masquelier, E.",,,
+stub,Belgium,Motmans,,,
+stub,Belgium,Neefs,,,
+stub,Belgium,Notermans,,,
+stub,Belgium,Nys-Feytons,,,
+stub,Belgium,Pollaris,,,
+stub,Belgium,Rigaux,,,
+stub,Belgium,"Robben-Delbon, Georges",,,
+stub,Belgium,"Schaltin, Pierry & Cie",,,
+stub,Belgium,Serruys,,,
+stub,Belgium,Thienpont,,,
+stub,Belgium,Van Himbeeck,,,
+stub,Belgium,Van Hoorebeke (Eeklo),,,
+stub,Belgium,"Van Lancker, R.",,,
+stub,Belgium,Van Leemput,,,
+stub,Belgium,Vroonen-Aerts,,,
+stub,Brazil,Bunge Distillery Plant,,,
+stub,Brazil,Cachaça João Mendes,,,
+stub,Brazil,Destilaria Central,,,
+stub,Brazil,Vale do Tijuco Plant,,,
+stub,Czech Republic,Q115910579,,,
+stub,Czech Republic,Q116321216,,,
+stub,Czech Republic,Q12033527,,,
+stub,Czech Republic,Q124614459,,,
+stub,Czech Republic,Q124614875,,,
+stub,Czech Republic,Q37180944,,,
+stub,Czech Republic,Q37324537,,,
+stub,Czech Republic,Q37422265,,,
+stub,Czech Republic,Q38044496,,,
+stub,Czech Republic,Q38092918,,,
+stub,Czech Republic,Q38096258,,,
+stub,Czech Republic,Q38229492,,,
+stub,Czech Republic,Q55501458,,,
+stub,Czech Republic,Q61451446,,,
+stub,Czech Republic,Q61454505,,,
+stub,Czech Republic,Q63061827,,,
+stub,Czech Republic,Horní Libeň Distillery,,,
+stub,Czech Republic,Octárna,,,
+stub,Czech Republic,Zlíchov Distillery,,,
+stub,Electorate of Hanover,Q135988472,,,
+stub,Estonia,Q107602705,,,
+stub,Estonia,Q98190058,,,
+stub,Estonia,Lehola manor distillery,,,
+stub,Finland,Q56401458,,,
+stub,Finland,Koskenkorva distillery,,,
+stub,France,Q104028430,,,
+stub,France,Q109771908,,,
+stub,France,Q115928768,,,
+stub,France,Q13517713,,,
+stub,France,Q22969164,,,
+stub,France,Q88210482,,,
+stub,France,Q88324482,,,
+stub,France,Espace Fernet-Branca,,,
+stub,France,Habitation Routa,,,
+stub,France,Sucrerie de Francières,,,
+stub,Germany,Q135956775,,,
+stub,Germany,Q138568935,,,
+stub,Germany,Q2360131,,,
+stub,Germany,Q909290,,,
+stub,Germany,Q98633822,,,
+stub,Germany,Brennerei Am Schloßberg 12; Am Schloßberg 14; Am Schloßberg 16 in Nittenau,,,
+stub,Germany,Brennerei Im Klosterbauhof 6; Im Klosterbauhof 7 in Ebersberg,,,
+stub,Germany,Brennerei Schloßstraße 4 in Pentling,,,
+stub,Germany,Brennerei Tiefengrüner Straße 7 in Berg (Oberfranken),,,
+stub,Germany,Kornbrennerei Knappertsbusch,,,
+stub,Germany,Leydicke,,,
+stub,Germany,Test and teaching distillery Weihenstephan,,,
+stub,Germany,Watermill and distillery (Hiddingsel),,,
+stub,Germany,old distillery Gotha,,,
+stub,Ireland,The Watercourse Distillery,,,
+stub,Poland,Q113669509,,,
+stub,Poland,Q121885529,,,
+stub,Poland,Q122103548,,,
+stub,Poland,Q122112504,,,
+stub,Poland,Q122157690,,,
+stub,Poland,Q122158003,,,
+stub,Poland,Q122172428,,,
+stub,Poland,Q122177186,,,
+stub,Poland,Q122177474,,,
+stub,Poland,Q122177578,,,
+stub,Poland,Q122195353,,,
+stub,Poland,Q122195406,,,
+stub,Poland,Q136243074,,,
+stub,Poland,Q137485284,,,
+stub,Poland,Q137485349,,,
+stub,Poland,Q137996563,,,
+stub,Poland,Q29965170,,,
+stub,Poland,Q29965391,,,
+stub,Poland,Q29975141,,,
+stub,Poland,Q29975627,,,
+stub,Poland,Q29975732,,,
+stub,Poland,Q29976537,,,
+stub,Poland,Q29976664,,,
+stub,Poland,Q29976804,,,
+stub,Poland,Q30037385,,,
+stub,Poland,Q30037453,,,
+stub,Poland,Q30037492,,,
+stub,Poland,Q30038029,,,
+stub,Poland,Q30038589,,,
+stub,Poland,Q30041504,,,
+stub,Poland,Q30041616,,,
+stub,Poland,Q30041825,,,
+stub,Poland,Q30045179,,,
+stub,Poland,Q30070171,,,
+stub,Poland,Q30072190,,,
+stub,Poland,Q30073214,,,
+stub,Poland,Q30078287,,,
+stub,Poland,Q30078662,,,
+stub,Poland,Q30078855,,,
+stub,Poland,Q30079398,,,
+stub,Poland,Q30089642,,,
+stub,Poland,Q30090694,,,
+stub,Poland,Q30092193,,,
+stub,Poland,Q30092473,,,
+stub,Poland,Q30097163,,,
+stub,Poland,Q30097444,,,
+stub,Poland,Q30099236,,,
+stub,Poland,Q30100531,,,
+stub,Poland,Q30102209,,,
+stub,Poland,Q30103476,,,
+stub,Poland,Q30103632,,,
+stub,Poland,Q30103895,,,
+stub,Poland,Q30104038,,,
+stub,Poland,Q30104436,,,
+stub,Poland,Q30106797,,,
+stub,Poland,Q30135941,,,
+stub,Poland,Q30136735,,,
+stub,Poland,Q30136791,,,
+stub,Poland,Q30143668,,,
+stub,Poland,Q30215649,,,
+stub,Poland,Q30231213,,,
+stub,Poland,Q30232262,,,
+stub,Poland,Q30244684,,,
+stub,Poland,Q30531788,,,
+stub,Poland,Q30536242,,,
+stub,Poland,Q30552250,,,
+stub,Poland,Q30572483,,,
+stub,Poland,Q30582980,,,
+stub,Poland,Q30583399,,,
+stub,Poland,Q30779075,,,
+stub,Poland,Q30954117,,,
+stub,Poland,Q30955024,,,
+stub,Poland,Q30961352,,,
+stub,Poland,Q31107544,,,
+stub,Poland,Q31107773,,,
+stub,Poland,Q31108117,,,
+stub,Poland,Q31108819,,,
+stub,Poland,Q31110007,,,
+stub,Poland,Q31125106,,,
+stub,Poland,Q31132659,,,
+stub,Poland,Q31804804,,,
+stub,Poland,Q31860352,,,
+stub,Poland,Q31862871,,,
+stub,Poland,Q31864359,,,
+stub,Poland,Q31867123,,,
+stub,Poland,Q31874295,,,
+stub,Poland,Q32022821,,,
+stub,Poland,Q32038288,,,
+stub,Poland,Q32137194,,,
+stub,Poland,Q32144914,,,
+stub,Poland,Q32146060,,,
+stub,Poland,Q32262540,,,
+stub,Poland,Q32264841,,,
+stub,Poland,Q32265331,,,
+stub,Poland,Q32267988,,,
+stub,Poland,Q32270698,,,
+stub,Poland,Q32982168,,,
+stub,Poland,Q32998834,,,
+stub,Poland,Q32999423,,,
+stub,Poland,Q32999741,,,
+stub,Poland,Q33000248,,,
+stub,Poland,Q33000985,,,
+stub,Poland,Q33001062,,,
+stub,Poland,Q33007178,,,
+stub,Poland,Q33008661,,,
+stub,Poland,Q33009275,,,
+stub,Poland,Q33013938,,,
+stub,Poland,Q33014583,,,
+stub,Poland,Q33083572,,,
+stub,Poland,Q33083635,,,
+stub,Poland,Q33083747,,,
+stub,Poland,Q33083885,,,
+stub,Poland,Q33086728,,,
+stub,Poland,Q33088629,,,
+stub,Poland,Q33089030,,,
+stub,Poland,Q33090710,,,
+stub,Poland,Q33092749,,,
+stub,Poland,Q33092762,,,
+stub,Poland,Q33092906,,,
+stub,Poland,Q33092983,,,
+stub,Poland,Q33135139,,,
+stub,Poland,Q33135246,,,
+stub,Poland,Q33135366,,,
+stub,Poland,Q33136608,,,
+stub,Poland,Q33137079,,,
+stub,Poland,Q33137198,,,
+stub,Poland,Q33143318,,,
+stub,Poland,Q33236218,,,
+stub,Poland,Q33255473,,,
+stub,Poland,Q33305193,,,
+stub,Poland,Q33310008,,,
+stub,Poland,Q33402221,,,
+stub,Poland,Q33419515,,,
+stub,Poland,Q33421807,,,
+stub,Poland,Q33473391,,,
+stub,Poland,Q33484243,,,
+stub,Poland,Q33507201,,,
+stub,Poland,Q33508019,,,
+stub,Poland,14 Parkowa Street in Świerklaniec,,,
+stub,Poland,Distillery in Bąkowo,,,
+stub,Poland,Distillery in Konin Gosławice,,,
+stub,Poland,Distillery in Zalesie,,,
+stub,Poland,Former distillery in Simoradz,,,
+stub,Poland,Old distillery in Chruściechów,,,
+stub,Poland,Old distillery in Irządze,,,
+stub,Poland,Old distillery in Policzna,,,
+stub,Slovakia,Q112093385,,,
+stub,Slovakia,Q112094915,,,
+stub,Slovakia,Q112098752,,,
+stub,Slovakia,Q112103579,,,
+stub,Slovakia,Q12776343,,,
+stub,Spain,Q69698079,,,
+stub,Spain,Cooperativa Alcoholera Mopesa factory,,,
+stub,Spain,"Destillery at 24 San Ildefonso street, Utiel",,,
+stub,Spain,Fassina,,,
+stub,Spain,Fábrica de Aguardiente,,,
+stub,Spain,Joaquín Vento destillery,,,
+stub,Spain,Nave de la Cooperativa Campo de Tejada,,,
+stub,United Kingdom,"Duty Free Wharehouse Number 1 and 2, Tormore Distillery",,,
+stub,United Kingdom,"Edradour Distillery, Milton of Edradour",,,
+stub,United Kingdom,Finnieston distillery,,,
+stub,United Kingdom,"Haig's Distillery, Markinch",,,
+stub,United Kingdom,Kimbland distillery,,,
+stub,United Kingdom,Limavady Distillery,,,
+stub,United States,Bomberger's Distillery,,,
+stub,United States,Mount Rose Distillery,,,
+historic,United States,Old Prentice Distillery,,,
+historic,France,Chevalier de Villarçon distillery ruins,,,
+historic,United States,Ye Old Grog Distillery,,,
+historic,Germany,Old Gamundia Whisky,,,
+historic,United States,Old Still,,,
+historic,United States,Appalachian Heritage Distillery,,,
+historic,Germany,GOOD OLD RIEDBACHER,,,
+historic,Australia,Old Young's,,,
+historic,United States,Heritage Distilling Company,,,
+historic,India,Goa Heritage Distillery,,,
+historic,Germany,Old Well Distillery,,,
+historic,United States,Old Mission Distilling,,,
+historic,United States,New Heritage Distilling,,,
+historic,Germany,old distillery Gotha,,,
+historic,Poland,Former distillery in Simoradz,,,
+historic,Poland,Old distillery in Chruściechów,,,
+historic,Poland,Old distillery in Irządze,,,
+historic,Poland,Old distillery in Międzyrzec Podlaski,,,
+historic,Poland,Old distillery in Policzna,,,
+historic,United States,Old Taylor distillery,,,
+historic,United States,Old Sugar Distillery,,,
+historic,Germany,Bühler's Old Rhein River Brennerei,,,
+historic,United States,Old Forester Distillery,,,
+historic,United States,Old Forge Distillery,,,
+historic,United States,Old Fourth Distillery,,,
+historic,Ireland,The Old Distillery,,,
+historic,United States,Old Dominick's,,,
+historic,New Zealand,Cardrona Distillery & Museum,,,
+historic,United States,Old Glory Distilling Company,,,
+historic,United States,Bently Heritage Estate Distillery & Public House,,,
+historic,Ireland,Old Carrick Mill Distillery,,,
+historic,United States,Old A1A Distillery,,,
+historic,United States,Old Humble Distilling Company,,,
+historic,United States,Old Alker Distillery,,,
+historic,United States,Old Harbor Distilling Co.,,,
+historic,United States,Old Savannah Distillery,,,
+historic,United States,Old Pueblo Distilling Company,,,
+historic,United States,Old Fourth Distillery + Kitchen,,,
+historic,United States,Grand Canyon Brewery and Distillery Cabin-Historic Tack House,,,
+historic,United States,Old Tennessee Distilling Co.,,,
+historic,United States,Old Nick Williams Co. Farm & Distillery,,,
+historic,United States,Distillery 244 Old Town,,,
+historic,United States,Old Monroe Distilling Co. (Formerly Stumpy’s Spirits),,,
+historic,United States,Old Ozarkian Distillery,,,
+historic,United States,Old Herald Brewery & Distillery,,,
+historic,United States,Old Homestead Distilling Co.,,,
+historic,United States,LF Heritage Distilling Co. On Limestone Farm,,,
+historic,United States,The Old Pogue Distillery,,,
+historic,United States,Old Trestle Distillery,,,
+historic,United States,Old 55 Distillery,,,
+historic,United States,Old Courthouse Distilling,,,
+historic,United States,Old Republic Distillery Tavern,,,
+historic,United States,Old Republic Distillery,,,
+historic,United States,Rustic Luxury w/Horses-Historic Whiskey Distillery,,,
+historic,United States,Old Scotland Road Distillery,,,
+historic,United States,Old Home Distillers,,,
+historic,United States,Old Town Distillery by Wonder,,,
+historic,United States,Old Soldier Distillery,,,
+historic,United States,Old Log Cabin Distillery,,,
+historic,Canada,Heritage Acres Distilling,,,
+historic,Canada,Old Prospector Distilling,,,
+historic,Australia,Old Kempton Distillery,,,
+historic,Australia,Eucalyptus Distillery Museum,,,
+historic,Australia,Ruedins Historic Eucalyptus Distillery,,,
+historic,Australia,Old Salt Distillery,,,
+historic,Australia,Historic Eucalyptus Distillery,,,
+historic,Australia,"Joadja Distillery, Tourism, Historic Site",,,
+historic,Australia,"The Old Shed Distillery: Bilpin, Blue Mountains",,,
+historic,Australia,Site of Normanby Mill & Distillery (1873-1968),,,
+historic,Taiwan,地酒博物館Distillery Museum,,,
+historic,Taiwan,Yilan Distillery Chia Chi Lan Wine Museum,,,
+historic,United Kingdom,Old Market Distillery,,,
+historic,United Kingdom,Mother's Ruin 1751 Distilling Company Ltd,,,
+historic,United Kingdom,Old Bakery Gin Rum & Whisky Distillery est 1860,,,
+historic,Japan,Ishigura Museum (Shirakane Distillery),,,
+historic,Japan,Shochu Distillery Museum Toji-no-Sato Kasasa,,,
+historic,South Africa,The Old Packhouse Distillery,,,
+historic,Netherlands,Van Kleef Distillery Museum,,,
+historic,Germany,Historic Distillery Rönsahl,,,
+historic,Germany,Historic Weinbrennerei Dujardin,,,
+historic,Germany,Old distillery Schwake,,,
+historic,Germany,Old distillery Hilbers,,,
+historic,France,Distilleries et Domaines de Provence Store & Museum,,,
+historic,Croatia,Old gods distillery,,,
+historic,Czech Republic,Old Distillery s.r.o.,,,
+historic,Czech Republic,"Stará Dáma / Old Dame, Distillery & Fruit-press",,,
+historic,Poland,PFW Old Distillery,,,
+historic,Germany,"Museum ""Alte Brennerei""",,,
+historic,Germany,Cinema Old distillery,,,
+historic,Portugal,Art Douro - Historic Distillery,,,
+historic,New Zealand,Old Hokonui Moonshine Museum & Distillery,,,
+historic,Chile,The Old Bastard Distillery,,,
+dupe,United Kingdom,Tormore Distillery,"Cooperage, Tormore Distillery",1.0,0.58
+dupe,United Kingdom,Tormore Distillery,"Duty Free Wharehouse Number 1 and 2, Tormore Distillery",1.0,0.28
+dupe,United Kingdom,Edinburgh whisky distillery,Edinburgh Gin,1.4,0.76
+dupe,United Kingdom,"Rosebank Distillery, Camelon Road, Falkirk",Falkirk Distillery,4.9,0.38
+dupe,United Kingdom,Strathmill,Strathisla Distillery,0.8,0.8
+dupe,United Kingdom,Abhainn Dearg Distillery,Taigh-staile Abhainn Dearg,1.5,0.68
+dupe,United Kingdom,Edradour Distillery,"Edradour Distillery, Milton of Edradour",0.9,0.47
+dupe,United Kingdom,Scapa Distillery,Scapa Distillery Brand Home,1.0,0.45
+dupe,United Kingdom,Arbikie Distillery,Arbikie Highland Estate Distillery,2.8,0.47
+dupe,United Kingdom,Royal Lochnagar Distillery,"Office Range and Proof House, Royal Lochnagar Distillery",0.8,0.51
+dupe,United Kingdom,Eden Mill Distillery,Eden Mill St Andrews,0.6,0.62
+dupe,United Kingdom,London Distillery Company,Thames Distillers (London Distillery),6.7,0.6
+dupe,United Kingdom,Bristol Dry Gin,Bristol Distilling Co,1.9,0.64
+dupe,United Kingdom,Bristol Distilling Co,Bristol & Bath Rum Distillery,2.0,0.58
+dupe,United Kingdom,Bath Botanical Gin Distillery,Bath Botanical Gin Distillery and Herbal Apothecary,1.2,0.61
+dupe,United Kingdom,Bath Botanical Gin Distillery,The Bath Distillery,1.2,0.36
+dupe,United Kingdom,Bath Botanical Gin Distillery and Herbal Apothecary,The Bath Distillery,0.5,0.18
+dupe,United Kingdom,Pennington's Distillery,Pennington's Spirits & Liqueurs (Pennington's Distillery),1.8,0.42
+dupe,Ireland,Jameson,Jameson Distillery Bow St.,1.7,0.64
+dupe,France,Distillerie Warenghem,Distillerie Ar Roc'h,13.1,0.75
+dupe,France,Q88210482,Q88324482,2.1,0.78
+dupe,France,Distillerie les Fontaines,Distillerie,14.4,0.61
+dupe,France,Maison du Géranium,La Maison du Rhum,13.7,0.76
+dupe,France,Alambic Bourguignon,Alambic bourguignon - SAB'S Distillery,0.9,0.86
+dupe,France,La Grange,Distillerie La Grange,7.0,0.6
+dupe,France,Damoiseau distillery,Distillerie Rhum Damoiseau,2.5,0.51
+dupe,France,Distillerie JM,Distillerie H.B.S.,4.1,0.83
+dupe,France,Distillerie JM,Distillerie Depaz,12.1,0.77
+dupe,France,Distillerie H.B.S.,Distillerie Depaz,12.8,0.75
+dupe,France,Distillerie Montebello,Distillerie Bonne-Mère,13.6,0.76
+dupe,France,Distillerie Merlet et Fils,Distillerie Merlet & Fils,6.6,0.96
+dupe,France,C'est Nous,Distillerie C'est Nous,10.6,0.6
+dupe,France,Distillerie Bellevue,Distillerie Bielle,2.8,0.89
+dupe,France,Blind Pig Distillers,Blind Pigs Distillers,2.4,0.95
+dupe,France,Distilleries et Domaines de Provence,Distilleries et Domaines de Provence Store & Museum,1.2,0.84
+dupe,France,Distillerie Mazy,Distillerie Magnenet,14.7,0.78
+dupe,Japan,Yoichi distillery,Nikka Yoichi Distillery,3.1,0.67
+dupe,Japan,Fuji Gotemba distillery,Kirin Fuji Gotemba Distillery,4.6,0.8
+dupe,Japan,Miyagikyo distillery,Nikka Miyagikyo Distillery,1.2,0.75
+dupe,United States,Catoctin Creek Distillery,Catoctin Creek Distilling Company,9.2,1.0
+dupe,United States,Chattanooga Whiskey,Chattanooga Whiskey Riverfront Distillery,1.8,0.78
+dupe,United States,CH Distillery,CH Distillery | Jōtō Sushi,2.8,0.27
+dupe,United States,Central Standard Craft Distillery,Central Standard Crafthouse & Kitchen & Craft Distillery,2.9,0.68
+dupe,United States,Loon Liquors,Loon Liquors Distillery & Pizzeria,1.5,0.69
+dupe,United States,Twisted Tap Distillery Downtown GR,Twisted Tap Distillery,13.2,0.63
+dupe,United States,ASW Distillery,ASW Exchange,9.4,0.4
+dupe,United States,ASW Distillery,"ASW Distillery at The Battery Atlanta, home of Fiddler Bourbon, Hunker Vodka & more",12.0,0.09
+dupe,United States,Old Fourth Distillery,Old Fourth Distillery + Kitchen,14.4,0.67
+dupe,United States,Northern Latitudes Distillery,Northern Latitudes Distillery Suttons Bay,4.7,0.73
+dupe,United States,Orange County Distillery at Brown Barn Farms,Orange County Distillery,2.4,0.55
+dupe,United States,Cooperstown Distillery,Cooperstown Distillery Beverage Exchange,0.6,0.54
+dupe,United States,Pathfinder Farm Distillery,Pathfinder Farm Distillery Tasting Room and Cocktail Bar,4.5,0.49
+dupe,United States,Islamorada Brewery & Distillery (Islamorada),Crooked Palm Cabana (Islamorada Brewery & Distillery),12.3,0.52
+dupe,United States,Little Toad Creek Brewery & Distillery Las Cruces,Las Cruces Distilling Co,3.6,0.42
+dupe,United States,Golden Beaver Distillery,Golden Beaver Distillery - Park Ave Still House,9.0,0.53
+dupe,United States,Saxtons Distillery,Saxtons Distillery Tasting Room and Cafe,1.1,0.38
+dupe,United States,Bardenay Restaurant & Distillery | Eagle,Bardenay Distilling Co.,11.8,0.44
+dupe,United States,Bardenay Restaurant & Distillery | Eagle,Bardenay Restaurant & Distillery | Boise,14.5,0.86
+dupe,United States,Bardenay Distilling Co.,Bardenay Restaurant & Distillery | Boise,2.9,0.44
+dupe,United States,Wonderland Distilling Co,Wonderland Distilling Production,2.8,0.62
+dupe,United States,The Oak Room By: American Oak Distillery,American Oak Distillery,6.9,0.67
+dupe,Germany,Edelbrennerei Erich Lang,Edelbrennerei Haas,7.4,0.76
+dupe,Germany,Brennerei Gruel,Brennerei Sigel,3.3,0.87
+dupe,Germany,Grassl,Enzianbrennerei Grassl,4.1,0.43
+dupe,Germany,Obstbrennerei Scholtes,Brennerei Schütz,3.6,0.76
+dupe,Germany,Franz Fies Feingeistbrennerei,Schwarzwälder Feingeistbrennerei Franz Fies,2.7,0.62
+dupe,Germany,Häußler Edelbranntweinbrennerei,Fischer Reinhard Edelbranntweinbrennerei,5.9,0.78
+dupe,Germany,Q104599947,Q104599705,10.7,0.8
+dupe,Germany,Brennerei Wild,Brennerei Vitt,7.2,0.79
+dupe,Germany,Brennerei Lackas,Brennerei Holbach,2.8,0.79
+dupe,Germany,Brennerei Hettinger,Brennerei Bürger,3.6,0.76
+dupe,Germany,Brennerei Thiel,Brennerei Hauer,11.6,0.8
+dupe,Germany,Brennerei M. Zilavec,Brennerei Müller,14.8,0.76
+dupe,Germany,Gutshof Brennerei Begatal,Gutshof Brennerei Begatal Store,10.9,0.89
+dupe,Germany,Brennerei Penth,Brennerei Mühlenthal,12.2,0.82
+dupe,Belgium,Bal & Co,Bal & Louis Meeùs,2.0,0.33
+dupe,Belgium,Bal & Louis Meeùs,Louis Meeus,3.5,0.77
+dupe,Belgium,Motmans,Notermans,3.0,0.75
+dupe,Belgium,Brussels distillery,Les Distilleries Bruxelloises - Brussels Dry Gin,2.2,0.29
+dupe,Austria,Destillerie Farthofer - Mostelleria,Destillerie Farthofer GmbH,8.7,0.77
+dupe,Canada,First Light Distillery,The Cove by First Light Distillery,7.5,0.73
+dupe,Canada,Seaside Cottage at Steinhart Distillery with ocean views. Cottage 1.,Seaside Cottage at Steinhart Distillery with ocean views. Pet-friendly!,0.6,0.86
+dupe,India,Amrut Distillery,Amrut Distilleries Private Limited,0.5,0.26
+dupe,India,Amrut Distilleries Private Limited,Shashi Distilleries Private Limited,9.9,0.87
+dupe,India,Puducherry Distilleries Limited,Ravikumar Distilleries Limited,11.2,0.75
+dupe,Australia,Starward Distillery,Starward Distillery & Bar,3.1,0.73
+dupe,Australia,Black Gate Distillery,Black Gate Distillery Mendooran,1.1,0.65
+dupe,Australia,Eucalyptus Distillery Museum,Eucalyptus Distillery,6.6,0.71
+dupe,Italy,Distilleria Angeli,Distilleria Tranquillini,5.4,0.76
+dupe,Italy,Distilleria Lidia,Distilleria Rossi d'Asiago,3.8,0.76
+dupe,Italy,Cavalin Distillerie,Poli Distillerie,13.7,0.8
+dupe,Italy,Distilleria La Cava,Distilleria Marna,9.7,0.78
+dupe,Italy,Fratelli Branca Distillerie srl,FRATELLI BRANCA DISTILLERIE,3.2,0.93
+dupe,Italy,Pircher,Pircher Brennerei,2.4,0.58
+dupe,Italy,Distilleria Enrico Toro,Liquori Toro - Enrico Toro Distilleria,2.6,0.5
+dupe,Italy,Distilleria Fedrizzi,Distilleria Pezzi,3.9,0.86
+dupe,Italy,Distilleria De Luca srl,Distillerie Cappello Srl,11.3,0.77
+dupe,Italy,Distillerie Bonollo S.p.A,Distillerie Bonollo Shop - Anagni (FR),2.3,0.79
+dupe,Czech Republic,Green Tree Distillery,Green Tree Distillery and. S.,0.7,0.74
+dupe,Slovakia,Q112093385,Q112098752,5.6,0.8
+dupe,Hungary,Pálinkafőzde,Érmelléki Pálinkafőzde (Monostorpályi Pálinkafőzde),13.1,0.38
+dupe,Spain,Mallorca Gin Distillery,Mallorca Distillery,4.4,0.8
+dupe,Switzerland,ORMA Whisky Distillery,ORMA Whisky Destillerie,4.1,0.65
+dupe,Switzerland,Brennerei Marchon GmbH,Brennerei Hürst Gmbh,12.1,0.78
+dupe,Poland,Q30037385,Q30037453,13.0,0.78
+dupe,Poland,Q33000248,Q33001062,10.9,0.78
+dupe,Poland,Q33000248,Q33000985,7.3,0.78
+dupe,Poland,Q33092749,Q33092762,2.8,0.78
+dupe,Poland,Q33092749,Q33092983,11.4,0.78
+dupe,Poland,Q33083572,Q33083635,1.6,0.78
+dupe,Poland,Q33083572,Q33083747,7.3,0.78
+dupe,Poland,Gorzelnia,Gorzelnia Łukowo Intrade Sp. Z. O. O,14.3,0.44
+dupe,Poland,Q33092983,Q33092906,12.6,0.78
+dupe,Poland,Q33507201,Q33508019,8.8,0.78
+dupe,New Zealand,The Distillery- Lavender Farm Studio apartment - Family Room with Garden View,The Distillery- studio Room,3.0,0.31
+dupe,Slovenia,"Blackmill Distillery®, bussines unit of SVAROG SISTEMI, Brewing and distilling solutions, Ltd.","SVAROG SISTEMI, Brewing and distilling solutions, Ltd.",1.2,0.76
+dupe,Argentina,Distillery Argentina,Dapsa Destileria Argentina de Petroleo,13.1,0.38
+dupe,Namibia,Swakopmund Craft Distillery,Stillhouse Atlantic - Swakopmund Craft Distillery,2.1,0.6
+dupe,Estonia,Junimperium Distillery & Bar,Junimperium Distillery,13.2,0.79
+dupe,Serbia,Belgrade Urban Distillery,Belgrade Gin Distillery,10.3,0.77
+dupe,China,Forgood Distillery Franchise Store,Forgood Distillery,1.1,0.45
+dupe,Singapore,The Whisky Distillery Marina Bay Sands,The Whisky Distillery,3.6,0.4
+dupe,Singapore,The Whisky Distillery OUE Downtown,The Whisky Distillery,3.5,0.46
+dupe,Singapore,The Whisky Distillery Great World,The Whisky Distillery,1.2,0.48

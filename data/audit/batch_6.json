@@ -1,0 +1,181 @@
+{
+ "kind": "status",
+ "entries": [
+  {
+   "slug": "saucel",
+   "name": "Saucel",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -4.421313,
+    55.841206
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "spirit-of-masham-distillery-gin-experience",
+   "name": "Spirit of Masham Distillery & Gin Experience",
+   "region": "uk",
+   "website": "https://spiritofmasham.co.uk/",
+   "address": "Unit, Masham Business Park, Fearby Rd, Masham, Ripon HG4 4FA, UK",
+   "description": "",
+   "source": "osm",
+   "coords": [
+    -1.6641285,
+    54.223943
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "st-magdalene-distillery",
+   "name": "St Magdalene distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.59139,
+    55.9764
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "strathdee",
+   "name": "Strathdee",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -2.118945,
+    57.138902
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "stromness",
+   "name": "Stromness",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.302056,
+    58.957833
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "tambowie",
+   "name": "Tambowie",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -4.357379,
+    55.951568
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "the-strands-hotel-inn-micro-brewery-distillery",
+   "name": "The Strands Hotel / Inn & Micro Brewery & Distillery",
+   "region": "uk",
+   "website": "http://www.strandsandscrees.com/",
+   "address": "Nether Wasdale, Seascale CA20 1ET, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -3.351876,
+    54.423958999999996
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "the-wee-farm-distillery-and-steak-still-farm-shop",
+   "name": "The Wee Farm Distillery and Steak & Still Farm Shop",
+   "region": "scotland",
+   "website": "http://www.theweefarmdistillery.co.uk/",
+   "address": "Forth Mains Farm, Climpy Rd, Forth, Lanark ML11 8EN, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -3.7017976000000004,
+    55.7744739
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "wharf-distillery-bar-shop",
+   "name": "Wharf Distillery Bar & Shop",
+   "region": "uk",
+   "website": "http://wharfdistillery.co.uk/shop/",
+   "address": "Wharf Distillery, 2 Brackley Rd, Towcester NN12 6DJ, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -0.9914508999999999,
+    52.1332927
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "wild-atlantic-distillery-tours-ni",
+   "name": "Wild Atlantic Distillery & Tours NI",
+   "region": "ireland",
+   "website": "http://www.wildatlanticdistillery.ie/",
+   "address": "20 Trienamongan Rd, Aghyaran, Castlederg BT81 7XF, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -7.6938095,
+    54.6953555
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "yoker",
+   "name": "Yoker",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -4.382815,
+    55.888093
+   ],
+   "reasons": [
+    "stub"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,229 @@
+{
+ "kind": "status",
+ "entries": [
+  {
+   "slug": "abbeyhill",
+   "name": "Abbeyhill",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.171359,
+    55.954664
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "aber-falls-distillery-pier-shop",
+   "name": "Aber Falls Distillery Pier Shop",
+   "region": "uk",
+   "website": "https://www.aberfallsdistillery.com/",
+   "address": "Llandudno Pier, Llandudno LL30 2LP, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -3.8293193,
+    53.327905099999995
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "adelphi-whisky",
+   "name": "Adelphi Whisky",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -4.251844,
+    55.852597
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "alloa-distillery",
+   "name": "Alloa distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.803524,
+    56.113945
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "auchinblae-distillery",
+   "name": "Auchinblae distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -2.450165,
+    56.897204
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "auchnagie",
+   "name": "Auchnagie",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.625829,
+    56.64953
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "auchorachan",
+   "name": "Auchorachan",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.315485,
+    57.332606
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "auchtermuchty",
+   "name": "Auchtermuchty",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.234476,
+    56.293758
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "auchtertool",
+   "name": "Auchtertool",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.260483,
+    56.10257
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "ballechin",
+   "name": "Ballechin",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -3.726533,
+    56.657216
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "banff-distillery",
+   "name": "Banff distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -2.559428,
+    57.667247
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "bankhall-distillery-store-blackpool",
+   "name": "Bankhall Distillery Store Blackpool",
+   "region": "uk",
+   "website": "https://bankhallwhiskey.com/",
+   "address": "5 Burton Rd, Blackpool FY4 4NW, UK",
+   "description": "",
+   "source": "google-places",
+   "coords": [
+    -3.0214588,
+    53.7982656
+   ],
+   "reasons": [
+    "poi-name"
+   ]
+  },
+  {
+   "slug": "benbecula-distillery",
+   "name": "Benbecula Distillery",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -7.32,
+    57.446
+   ],
+   "reasons": [
+    "stub"
+   ]
+  },
+  {
+   "slug": "bon-accord",
+   "name": "Bon Accord",
+   "region": "scotland",
+   "website": "",
+   "address": "",
+   "description": "",
+   "source": "wikidata",
+   "coords": [
+    -2.113658,
+    57.132216
+   ],
+   "reasons": [
+    "stub"
+   ]
+  }
+ ]
+}

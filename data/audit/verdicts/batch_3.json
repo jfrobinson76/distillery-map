@@ -1,0 +1,16 @@
+[
+{"slug":"boness-distillery","verdict":"remove","reason":"Ceased 1922, closed by DCL 1925, demolished 1930s","source_url":"https://whiskipedia.com/distilleries/boness/","confidence":"high"},
+{"slug":"cambus","verdict":"remove","reason":"Grain distillery closed 1993; site is now Diageo cooperage/warehousing","source_url":"https://scotchwhisky.com/whiskypedia/1995/cambus/","confidence":"high"},
+{"slug":"camlachie","verdict":"remove","reason":"Closed by DCL 1920; warehouse use ended 1985","source_url":"https://scotchwhisky.com/whiskypedia/5894/bulloch-lade-company/","confidence":"high"},
+{"slug":"canonmills","verdict":"remove","reason":"18th-century Haig distillery, long ceased; site now housing","source_url":"http://lostdistillery.com/01lowlands-lothian/011lowlands-lothiana-g/canonmills.html","confidence":"high"},
+{"slug":"carsebridge","verdict":"remove","reason":"Mothballed 1983, demolished 1992; cooperage closed 2011","source_url":"https://whiskipedia.com/distilleries/carsebridge/","confidence":"high"},
+{"slug":"coleburn","verdict":"update","name":"The Distillery at Coleburn","description":"Speyside distillery mothballed since 1985, now home to Murray McDavid's maturation warehouses, with a confirmed rebuild announced in August 2025 to resume distilling in 2027 under master distiller Keith Cruickshank.","reason":"Revival confirmed and underway (announced Aug 2025, reopening 2027); active maturation site","source_url":"https://www.thespiritsbusiness.com/2025/08/coleburn-distillery-to-reopen-after-40-years/","confidence":"medium"},
+{"slug":"convalmore","verdict":"remove","reason":"Closed 1985; William Grant warehousing only","source_url":"https://en.wikipedia.org/wiki/Convalmore_distillery","confidence":"high"},
+{"slug":"cotswolds-distillery-shop","verdict":"remove","reason":"Off-site retail shop in Bourton-on-the-Water; distillery is in Stourton","source_url":"https://www.cotswoldsdistillery.com/pages/our-shops-new","confidence":"high"},
+{"slug":"devanha-distillery","verdict":"remove","reason":"Ceased c. 1910-15","source_url":"https://whiskipedia.com/barnard/devanha/","confidence":"high"},
+{"slug":"dumbarton-distillery","verdict":"remove","reason":"Closed 2002; final still tower demolished 2017","source_url":"https://scotchwhisky.com/magazine/latest-news/12448/dumbarton-s-distillery-tower-to-be-destroyed/","confidence":"high"},
+{"slug":"dundashill","verdict":"remove","reason":"Closed 1902; successor cooperage closed 2010","source_url":"https://whiskipedia.com/barnard/dundashill/","confidence":"high"},
+{"slug":"finnieston-distillery","verdict":"remove","reason":"Operated only 1824-1827","source_url":"https://scotchwhisky.com/whiskypedia/14218/finnieston/","confidence":"high"},
+{"slug":"gerston","verdict":"remove","reason":"Gerston I demolished 1882; Gerston II ceased by 1911","source_url":"https://scotchwhisky.com/whiskypedia/3272/gerston/","confidence":"high"},
+{"slug":"glen-albyn","verdict":"remove","reason":"Closed 1983, demolished 1988; site is a retail park","source_url":"https://en.wikipedia.org/wiki/Glen_Albyn_distillery","confidence":"high"}
+]

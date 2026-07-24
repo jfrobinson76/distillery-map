@@ -1,0 +1,1573 @@
+[
+ {
+  "slug": "abbeyhill",
+  "name": "Abbeyhill",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.171359,
+   55.954664
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "aber-falls-distillery-pier-shop",
+  "name": "Aber Falls Distillery Pier Shop",
+  "region": "uk",
+  "website": "https://www.aberfallsdistillery.com/",
+  "address": "Llandudno Pier, Llandudno LL30 2LP, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -3.8293193,
+   53.327905099999995
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "abhainn-dearg-distillery",
+  "name": "Abhainn Dearg Distillery",
+  "region": "scotland",
+  "website": "https://www.abhainndearg.co.uk/",
+  "address": "",
+  "description": "Highland Malt",
+  "source": "completely-smashed+wikidata",
+  "coords": [
+   -7.0501074,
+   58.1571612
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "adelphi-whisky",
+  "name": "Adelphi Whisky",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -4.251844,
+   55.852597
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "alloa-distillery",
+  "name": "Alloa distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.803524,
+   56.113945
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "arbikie-distillery",
+  "name": "Arbikie Distillery",
+  "region": "scotland",
+  "website": "https://www.arbikie.com/",
+  "address": "",
+  "description": "Highland Malt",
+  "source": "completely-smashed+osm+wikidata",
+  "coords": [
+   -2.5588801,
+   56.6447806
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "arbikie-highland-estate-distillery",
+  "name": "Arbikie Highland Estate Distillery",
+  "region": "scotland",
+  "website": "http://www.arbikie.com/",
+  "address": "Arbikie Distillery, Montrose DD10 9TR, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -2.5280407,
+   56.6637935
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "auchinblae-distillery",
+  "name": "Auchinblae distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -2.450165,
+   56.897204
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "auchnagie",
+  "name": "Auchnagie",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.625829,
+   56.64953
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "auchorachan",
+  "name": "Auchorachan",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.315485,
+   57.332606
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "auchtermuchty",
+  "name": "Auchtermuchty",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.234476,
+   56.293758
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "auchtertool",
+  "name": "Auchtertool",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.260483,
+   56.10257
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "ballechin",
+  "name": "Ballechin",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.726533,
+   56.657216
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "banff-distillery",
+  "name": "Banff distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -2.559428,
+   57.667247
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "bankhall-distillery-store-blackpool",
+  "name": "Bankhall Distillery Store Blackpool",
+  "region": "uk",
+  "website": "https://bankhallwhiskey.com/",
+  "address": "5 Burton Rd, Blackpool FY4 4NW, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -3.0214588,
+   53.7982656
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "bath-botanical-gin-distillery",
+  "name": "Bath Botanical Gin Distillery",
+  "region": "uk",
+  "website": "https://www.beatone.co.uk/bath?utm_source=gmb&utm_medium=organic&utm_campaign=homepage",
+  "address": "Unit V6, The Vaults, 11 Brunel Square, Bath BA1 1SX, UK",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -2.3530263,
+   51.3761667
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "bath-botanical-gin-distillery-and-herbal-apothecary",
+  "name": "Bath Botanical Gin Distillery and Herbal Apothecary",
+  "region": "uk",
+  "website": "https://www.bathbotanics.co.uk/",
+  "address": "76 Walcot St, Bath BA1 5BD, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -2.359539,
+   51.385788299999994
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "benbecula-distillery",
+  "name": "Benbecula Distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -7.32,
+   57.446
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "bon-accord",
+  "name": "Bon Accord",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -2.113658,
+   57.132216
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "boness-distillery",
+  "name": "Bo\u2019ness distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.620353,
+   56.014318
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "bristol-bath-rum-distillery",
+  "name": "Bristol & Bath Rum Distillery",
+  "region": "uk",
+  "website": "http://www.bristolrumschool.com/",
+  "address": "87-89 Park St, Bristol BS1 5PW, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -2.6043748,
+   51.4554848
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "bristol-distilling-co",
+  "name": "Bristol Distilling Co",
+  "region": "uk",
+  "website": "http://www.bristoldistilling.com/",
+  "address": "Unit D, Malago Vale Trading Estate, St John's Ln, Bristol BS3 5BQ, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -2.5984201,
+   51.437796399999996
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "bristol-dry-gin",
+  "name": "Bristol Dry Gin",
+  "region": "uk",
+  "website": "https://bristoldrygin.com/",
+  "address": "All Saints Ln, Bristol BS1 1JH, UK",
+  "description": "Gin",
+  "source": "osm",
+  "coords": [
+   -2.5930131,
+   51.454363
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "cambus",
+  "name": "Cambus",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.844369,
+   56.125619
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "camlachie",
+  "name": "Camlachie",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -4.212184,
+   55.853107
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "canonmills",
+  "name": "Canonmills",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.204469,
+   55.96232
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "carsebridge",
+  "name": "Carsebridge",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.777147,
+   56.121737
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "coleburn",
+  "name": "Coleburn",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.272011158,
+   57.581602632
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "convalmore",
+  "name": "Convalmore",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.13334,
+   57.46124
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "cooperage-tormore-distillery",
+  "name": "Cooperage, Tormore Distillery",
+  "region": "scotland",
+  "website": "https://elixirdistillers.com/distilleries/",
+  "address": "United Kingdom, Grantown-on-Spey, Advie, Richardson Rd, Tormore Distillery",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.40909,
+   57.3976
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "cotswolds-distillery-shop",
+  "name": "Cotswolds Distillery Shop",
+  "region": "uk",
+  "website": "http://www.cotswoldsdistillery.com/",
+  "address": "2, The Forge, High St, Bourton-on-the-Water, Cheltenham GL54 2AN, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -1.7578865,
+   51.8849605
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "devanha-distillery",
+  "name": "Devanha Distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -2.097274,
+   57.131372
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "dumbarton-distillery",
+  "name": "Dumbarton distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -4.56777,
+   55.942092
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "dundashill",
+  "name": "Dundashill",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -4.255527,
+   55.87177
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "duty-free-wharehouse-number-1-and-2-tormore-distillery",
+  "name": "Duty Free Wharehouse Number 1 and 2, Tormore Distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.40633,
+   57.38
+  ],
+  "reasons": [
+   "dupe",
+   "stub"
+  ]
+ },
+ {
+  "slug": "eden-mill-distillery",
+  "name": "Eden Mill Distillery",
+  "region": "scotland",
+  "website": "https://www.edenmill.com/",
+  "address": "",
+  "description": "Lowland Malt",
+  "source": "completely-smashed",
+  "coords": [
+   -2.8824076,
+   56.3660542
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "eden-mill-st-andrews",
+  "name": "Eden Mill St Andrews",
+  "region": "scotland",
+  "website": "https://www.edenmill.com/",
+  "address": "Eden Mill, Eden Campus, Guardbridge, St Andrews KY16 0US, UK",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -2.892174,
+   56.363945
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "edinburgh-gin",
+  "name": "Edinburgh Gin",
+  "region": "scotland",
+  "website": "https://www.edinburghgin.com/visit",
+  "address": "Arch 16, The Arches, E Market St, Edinburgh EH8 8FS, UK",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -3.1845694,
+   55.9513434
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "edinburgh-whisky-distillery",
+  "name": "Edinburgh whisky distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.18287,
+   55.938451
+  ],
+  "reasons": [
+   "dupe",
+   "stub"
+  ]
+ },
+ {
+  "slug": "edradour-distillery",
+  "name": "Edradour Distillery",
+  "region": "scotland",
+  "website": "https://www.edradour.com/",
+  "address": "",
+  "description": "Highland Malt",
+  "source": "completely-smashed+osm+wikidata",
+  "coords": [
+   -3.6865085,
+   56.7008127
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "edradour-distillery-milton-of-edradour",
+  "name": "Edradour Distillery, Milton of Edradour",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.70079,
+   56.7018
+  ],
+  "reasons": [
+   "dupe",
+   "stub"
+  ]
+ },
+ {
+  "slug": "falkirk-distillery",
+  "name": "Falkirk Distillery",
+  "region": "scotland",
+  "website": "https://www.falkirkdistillery.com/",
+  "address": "Grandsable Rd, Polmont, Falkirk FK2 0WA, UK",
+  "description": "Lowland Malt",
+  "source": "completely-smashed+osm+wikidata",
+  "coords": [
+   -3.72517,
+   55.99491
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "finnieston-distillery",
+  "name": "Finnieston distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -4.281,
+   55.862
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "gerston",
+  "name": "Gerston",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.507558,
+   58.517025
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "glen-albyn",
+  "name": "Glen Albyn",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -4.24719,
+   57.48163
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "glenaden",
+  "name": "Glenaden",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -2.04834,
+   57.514995
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "glenflagler-distillery",
+  "name": "Glenflagler distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.926668,
+   55.863187
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "glengilp-distillery",
+  "name": "Glengilp distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -5.44774,
+   56.02288
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "gleniffer",
+  "name": "Gleniffer",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -4.482852,
+   55.825251
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "glenmavis",
+  "name": "Glenmavis",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.635665,
+   55.909499
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "glenochil",
+  "name": "Glenochil",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.839792,
+   56.147251
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "glentarras",
+  "name": "Glentarras",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -2.970087,
+   55.122995
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "glenury-distillery",
+  "name": "Glenury distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -2.214639,
+   56.972407
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "grandtully",
+  "name": "Grandtully",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.828162,
+   56.634404
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "grange-distillery-burntisland",
+  "name": "Grange distillery, Burntisland",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.242,
+   56.0659
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "haig-s-distillery-markinch",
+  "name": "Haig's Distillery, Markinch",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.13218,
+   56.1995
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "hillside-distillery",
+  "name": "Hillside Distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -2.463627,
+   56.744568
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "home-farm-gin-distillery-shop",
+  "name": "Home Farm Gin Distillery/Shop",
+  "region": "uk",
+  "website": "https://homefarmgin.co.uk/",
+  "address": "Ketteringham Ln, Hethersett, Norwich NR9 3DF, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   1.178818,
+   52.5893753
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "kennetpans-distillery",
+  "name": "Kennetpans Distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.7473141,
+   56.08011
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "kilbagie",
+  "name": "Kilbagie",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.724796,
+   56.090196
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "kimbland-distillery",
+  "name": "Kimbland distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -2.4617,
+   59.2831
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "kirkliston-distillery",
+  "name": "Kirkliston Distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.405843,
+   55.953313
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "langholm-distillery",
+  "name": "Langholm Distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -2.988877,
+   55.142568
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "limavady-distillery",
+  "name": "Limavady Distillery",
+  "region": "ireland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -6.94861111,
+   55.0575
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "lochrin",
+  "name": "Lochrin",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.2059,
+   55.942622
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "lochside-distillery",
+  "name": "Lochside distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -2.47056,
+   56.7222
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "london-distillery-company",
+  "name": "London Distillery Company",
+  "region": "uk",
+  "website": "https://www.londondistillery.com",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -0.168296,
+   51.47977
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "millburn-distillery",
+  "name": "Millburn distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -4.205007,
+   57.482585
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "mother-s-ruin-1751-distilling-company-ltd",
+  "name": "Mother's Ruin 1751 Distilling Company Ltd",
+  "region": "uk",
+  "website": "http://mothersruin1751.co.uk/",
+  "address": "Enterprise Court, Marine Dr, Torpoint PL11 2EH, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -4.1949324,
+   50.3726738
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "octomore",
+  "name": "Octomore",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -6.385977,
+   55.745484
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "office-range-and-proof-house-royal-lochnagar-distillery",
+  "name": "Office Range and Proof House, Royal Lochnagar Distillery",
+  "region": "scotland",
+  "website": "http://www.royallochnagardistillery.com/",
+  "address": "Crathie, Balmoral, Ballater AB35 5TB, UK",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.20966,
+   57.0302
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "old-bakery-gin-rum-whisky-distillery-est-1860",
+  "name": "Old Bakery Gin Rum & Whisky Distillery est 1860",
+  "region": "uk",
+  "website": "http://www.oldbakerygin.com/",
+  "address": "The Old Bakery, 2 - 3 Pymmes Mews, London N13 4PF, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -0.11788730000000001,
+   51.612007299999995
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "old-market-distillery",
+  "name": "Old Market Distillery",
+  "region": "uk",
+  "website": "http://www.oldmarketdistillery.com/",
+  "address": "Old Castle Green, 46 Gloucester Ln, Bristol BS2 0DP, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -2.5787382,
+   51.4570485
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "pennington-s-distillery",
+  "name": "Pennington's Distillery",
+  "region": "uk",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -2.7453151,
+   54.3282295
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "pennington-s-spirits-liqueurs-pennington-s-distillery",
+  "name": "Pennington's Spirits & Liqueurs (Pennington's Distillery)",
+  "region": "uk",
+  "website": "https://www.penningtonspirits.com/",
+  "address": "Unit 3, Millennium House, Boundary Bank, Kendal LA9 5RR, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -2.7721964,
+   54.330428500000004
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "pollo",
+  "name": "Pollo",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -4.109863,
+   57.719306
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "provanmill",
+  "name": "Provanmill",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -4.196244,
+   55.876602
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "rosebank-distillery-camelon-road-falkirk",
+  "name": "Rosebank Distillery, Camelon Road, Falkirk",
+  "region": "scotland",
+  "website": "https://www.rosebank.com/",
+  "address": "Camelon Rd, Falkirk FK1 5SQ, UK",
+  "description": "",
+  "source": "osm+wikidata",
+  "coords": [
+   -3.80356,
+   56.0023
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "royal-lochnagar-distillery",
+  "name": "Royal Lochnagar Distillery",
+  "region": "scotland",
+  "website": "https://www.malts.com/en-row/distilleries/royal-lochnagar/",
+  "address": "",
+  "description": "Highland Malt",
+  "source": "completely-smashed+osm+wikidata",
+  "coords": [
+   -3.2228232,
+   57.0289286
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "saucel",
+  "name": "Saucel",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -4.421313,
+   55.841206
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "scapa-distillery",
+  "name": "Scapa Distillery",
+  "region": "scotland",
+  "website": "http://scapawhisky.com/",
+  "address": "",
+  "description": "Highland Malt",
+  "source": "completely-smashed+osm+wikidata",
+  "coords": [
+   -3.0020706,
+   58.9632797
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "scapa-distillery-brand-home",
+  "name": "Scapa Distillery Brand Home",
+  "region": "scotland",
+  "website": "http://www.scapawhisky.com/",
+  "address": "St Ola, Kirkwall KW15 1SE, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -2.9853,
+   58.96323770000001
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "spirit-of-masham-distillery-gin-experience",
+  "name": "Spirit of Masham Distillery & Gin Experience",
+  "region": "uk",
+  "website": "https://spiritofmasham.co.uk/",
+  "address": "Unit, Masham Business Park, Fearby Rd, Masham, Ripon HG4 4FA, UK",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -1.6641285,
+   54.223943
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "st-magdalene-distillery",
+  "name": "St Magdalene distillery",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.59139,
+   55.9764
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "strathdee",
+  "name": "Strathdee",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -2.118945,
+   57.138902
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "strathisla-distillery",
+  "name": "Strathisla Distillery",
+  "region": "scotland",
+  "website": "https://www.maltwhiskydistilleries.com/strathisla/",
+  "address": "Seafield Ave, Keith AB55 5BS, UK",
+  "description": "Speyside Malt",
+  "source": "completely-smashed+osm+wikidata",
+  "coords": [
+   -2.9533575,
+   57.5460552
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "strathmill",
+  "name": "Strathmill",
+  "region": "scotland",
+  "website": "https://www.malts.com/en-row/our-whisky-collection/strathmill/",
+  "address": "",
+  "description": "Speyside Malt",
+  "source": "completely-smashed+osm+wikidata",
+  "coords": [
+   -2.961226,
+   57.540324
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "stromness",
+  "name": "Stromness",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -3.302056,
+   58.957833
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "taigh-staile-abhainn-dearg",
+  "name": "Taigh-staile Abhainn Dearg",
+  "region": "scotland",
+  "website": "https://www.abhainndearg.co.uk/",
+  "address": "Carnish, Isle of Lewis HS2 9EX, UK",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -7.0446409,
+   58.1706971
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "tambowie",
+  "name": "Tambowie",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -4.357379,
+   55.951568
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "thames-distillers-london-distillery",
+  "name": "Thames Distillers (London Distillery)",
+  "region": "uk",
+  "website": "http://www.thamesdistillers.co.uk/",
+  "address": "12 Ossory Rd, London SE1 5AN, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -0.0713454,
+   51.4847776
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "the-bath-distillery",
+  "name": "The Bath Distillery",
+  "region": "uk",
+  "website": "https://www.thebathgincompany.co.uk/",
+  "address": "20-22 Monmouth Pl, Bath BA1 2AY, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -2.3659019999999997,
+   51.3828549
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "the-strands-hotel-inn-micro-brewery-distillery",
+  "name": "The Strands Hotel / Inn & Micro Brewery & Distillery",
+  "region": "uk",
+  "website": "http://www.strandsandscrees.com/",
+  "address": "Nether Wasdale, Seascale CA20 1ET, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -3.351876,
+   54.423958999999996
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "the-wee-farm-distillery-and-steak-still-farm-shop",
+  "name": "The Wee Farm Distillery and Steak & Still Farm Shop",
+  "region": "scotland",
+  "website": "http://www.theweefarmdistillery.co.uk/",
+  "address": "Forth Mains Farm, Climpy Rd, Forth, Lanark ML11 8EN, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -3.7017976000000004,
+   55.7744739
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "tormore-distillery",
+  "name": "Tormore Distillery",
+  "region": "scotland",
+  "website": "http://www.tormoredistillery.com/",
+  "address": "",
+  "description": "Speyside Malt",
+  "source": "completely-smashed+osm+wikidata",
+  "coords": [
+   -3.409987,
+   57.3883687
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "wharf-distillery-bar-shop",
+  "name": "Wharf Distillery Bar & Shop",
+  "region": "uk",
+  "website": "http://wharfdistillery.co.uk/shop/",
+  "address": "Wharf Distillery, 2 Brackley Rd, Towcester NN12 6DJ, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -0.9914508999999999,
+   52.1332927
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "wild-atlantic-distillery-tours-ni",
+  "name": "Wild Atlantic Distillery & Tours NI",
+  "region": "ireland",
+  "website": "http://www.wildatlanticdistillery.ie/",
+  "address": "20 Trienamongan Rd, Aghyaran, Castlederg BT81 7XF, UK",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -7.6938095,
+   54.6953555
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "yoker",
+  "name": "Yoker",
+  "region": "scotland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -4.382815,
+   55.888093
+  ],
+  "reasons": [
+   "stub"
+  ]
+ }
+]
