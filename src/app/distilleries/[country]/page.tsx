@@ -135,7 +135,7 @@ export default async function CountryPage({ params }: Props) {
         >
           Distilleries in {entry.name}
         </h1>
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed" style={{ color: WOW.muted }}>
+        <p className="mt-3 text-sm leading-relaxed" style={{ color: WOW.muted }}>
           There are{" "}
           <strong style={{ color: WOW.amber }}>{entry.count.toLocaleString()}</strong>{" "}
           distilleries, tasting rooms, and spirit producers in {inName} on the
@@ -215,7 +215,7 @@ export default async function CountryPage({ params }: Props) {
           >
             Claim your Verified badge
           </h2>
-          <p className="mt-2 max-w-2xl text-sm" style={{ color: WOW.charcoal }}>
+          <p className="mt-2 text-sm" style={{ color: WOW.charcoal }}>
             The first 50 distilleries to claim their listing get the{" "}
             &#10003; Verified badge and an enhanced profile, free. Open the{" "}
             <Link href="/" className="underline" style={{ color: WOW.amber }}>
@@ -240,7 +240,7 @@ export default async function CountryPage({ params }: Props) {
                 <dt className="text-sm font-semibold" style={{ color: WOW.charcoal }}>
                   {f.q}
                 </dt>
-                <dd className="mt-1 max-w-2xl text-sm" style={{ color: WOW.muted }}>
+                <dd className="mt-1 text-sm" style={{ color: WOW.muted }}>
                   {f.a}
                 </dd>
               </div>
