@@ -78,6 +78,25 @@ When a claim is validated (real person from the distillery confirms via the form
 
 Claimed so far: Lough Ree Distillery (Michael Clancy, CTO — 24 Jul 2026).
 
+## Country Page Editorial (voice + review gate)
+
+Country page intro copy is not templated boilerplate — Search Console flagged 68 of
+71 pages as effectively unindexed (28 Jul 2026) because the identical intro sentence
+across every country reads as thin/duplicate content to Google.
+
+- `docs/editorial-voice.md` — the voice bible. Read before writing or revising any
+  country intro. Defines who's "talking" (a drinks trade veteran, not a travel
+  blogger or AI), banned phrases, AI-tell patterns to avoid, and the 3-point content
+  checklist (scale in context / what's actually distinct / what the list below offers).
+- `/review-country-copy` — 5-persona review (Marguerite/accuracy, Fintan/voice+
+  uniqueness, Priya/reader, Callum/commercial neutrality, Yuki/SEO). **Gate: no
+  country-page copy is committed without passing this review** — applies to copy
+  written in-session or by a delegated subagent. A subagent must run the review
+  itself and report the table alongside the copy.
+- Ireland, Scotland, USA, Japan were the first batch (drafted 28 Jul 2026) — check
+  those files/commits for the calibrated example of what "PASS" looks like before
+  writing the next batch.
+
 ## Planned
 
 - **Angel's Share infographic** — visual explainer of barrel evaporation during maturation (~2% per year). Standalone content piece, not a full education section. Reference data exists in GWC project (`docs/whiskey-glossary-research.md`).

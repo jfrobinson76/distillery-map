@@ -7,6 +7,7 @@ import {
   countryDisplayName,
 } from "@/lib/data";
 import { SITE_URL, WOW } from "@/lib/constants";
+import { countryCopy } from "@/lib/country-copy";
 
 type Props = { params: Promise<{ country: string }> };
 
@@ -138,8 +139,9 @@ export default async function CountryPage({ params }: Props) {
           There are{" "}
           <strong style={{ color: WOW.amber }}>{entry.count.toLocaleString()}</strong>{" "}
           distilleries, tasting rooms, and spirit producers in {inName} on the
-          Distillery Map — from household names to one-room craft operations.
-          Community-built, free, and growing.
+          Distillery Map.{" "}
+          {countryCopy[entry.slug] ??
+            "From household names to one-room craft operations, community-built, free, and growing."}
         </p>
 
         <div
