@@ -1,0 +1,179 @@
+[
+ {
+  "slug": "bandon-distillery",
+  "name": "Bandon Distillery",
+  "region": "ireland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -8.719777777,
+   51.746805555
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "royal-oak-distillery",
+  "name": "Royal Oak Distillery",
+  "region": "ireland",
+  "website": "",
+  "address": "",
+  "description": "Home of Bushmills-style single pot still whiskey",
+  "source": "curated",
+  "coords": [
+   -6.9486,
+   52.5068
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "slane-distillery",
+  "name": "Slane Distillery",
+  "region": "ireland",
+  "website": "",
+  "address": "",
+  "description": "Triple-casked Irish whiskey on the Slane Castle estate",
+  "source": "curated",
+  "coords": [
+   -6.5428,
+   53.7094
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "connacht-whiskey-company",
+  "name": "Connacht Whiskey Company",
+  "region": "ireland",
+  "website": "",
+  "address": "",
+  "description": "Craft distillery in Ballina, Co. Mayo",
+  "source": "curated+osm",
+  "coords": [
+   -8.7411,
+   53.7983
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "nephin-whiskey",
+  "name": "Nephin Whiskey",
+  "region": "ireland",
+  "website": "",
+  "address": "",
+  "description": "Small batch whiskey from the west of Ireland",
+  "source": "curated",
+  "coords": [
+   -9.7833,
+   53.9333
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "the-watercourse-distillery",
+  "name": "The Watercourse Distillery",
+  "region": "ireland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -8.474,
+   51.909
+  ],
+  "reasons": [
+   "stub"
+  ]
+ },
+ {
+  "slug": "the-old-distillery",
+  "name": "The Old Distillery",
+  "region": "ireland",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -7.8178592,
+   52.008814
+  ],
+  "reasons": [
+   "historic",
+   "stub"
+  ]
+ },
+ {
+  "slug": "the-shed-distillery",
+  "name": "The Shed Distillery",
+  "region": "ireland",
+  "website": "http://thesheddistillery.com/",
+  "address": "The Food Hub, Carricknabrack, Drumshanbo, Co. Leitrim, N41 WR22, Ireland",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -8.043600099999999,
+   54.047608
+  ],
+  "reasons": [
+   "poi-name"
+  ]
+ },
+ {
+  "slug": "old-carrick-mill-distillery",
+  "name": "Old Carrick Mill Distillery",
+  "region": "ireland",
+  "website": "http://www.oldcarrickmill.com/",
+  "address": "Derrylavan, Co. Monaghan, Ireland",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -6.7557984,
+   53.9700613
+  ],
+  "reasons": [
+   "historic"
+  ]
+ },
+ {
+  "slug": "jameson-distillery-bow-st",
+  "name": "Jameson Distillery Bow St.",
+  "region": "ireland",
+  "website": "https://www.jamesonwhiskey.com/en-ie/visit-our-distilleries/jameson-bow-street-distillery-tour/",
+  "address": "Bow St, Smithfield, Dublin 7, D07 V57C, Ireland",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -6.2770288999999995,
+   53.3481851
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ },
+ {
+  "slug": "jameson",
+  "name": "Jameson",
+  "region": "ireland",
+  "website": "http://jamesonwhiskey.com",
+  "address": "13-17, 13-17 Newmarket, The Liberties, Dublin 8, D08 KD91, Ireland",
+  "description": "",
+  "source": "osm+wikidata",
+  "coords": [
+   -6.277222,
+   53.333333
+  ],
+  "reasons": [
+   "dupe"
+  ]
+ }
+]
