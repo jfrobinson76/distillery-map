@@ -57,7 +57,7 @@ export default async function CountryPage({ params }: Props) {
     },
     {
       q: `I run a distillery in ${inName} — how do I update my listing?`,
-      a: `Open the interactive map, find your pin, and choose "Is this your distillery? Claim it." Claiming is free and lets you correct your details and add visitor information like tours and bookings.`,
+      a: `Find your distillery in the list on this page and choose "Is this your distillery? Claim it." Claiming is free and lets you correct your details and add visitor information like tours and bookings.`,
     },
   ];
 
@@ -194,6 +194,20 @@ export default async function CountryPage({ params }: Props) {
                     {f.properties.address || f.properties.description}
                   </p>
                 )}
+                {!f.properties.claimed && (
+                  <Link
+                    href={`/?claim=${encodeURIComponent(f.properties.name || "")}`}
+                    // Functional link, not editorial. Without nofollow this puts
+                    // ~6,100 distinct /?claim= URLs in front of the crawler, all
+                    // canonicalising to "/" — pure crawl-budget waste on a site
+                    // that is already fighting to get its country pages indexed.
+                    rel="nofollow"
+                    className="mt-1.5 inline-block text-[11px] underline"
+                    style={{ color: WOW.muted }}
+                  >
+                    Is this your distillery? Claim it
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -211,13 +225,14 @@ export default async function CountryPage({ params }: Props) {
           </h2>
           <p className="mt-2 text-sm" style={{ color: WOW.charcoal }}>
             The first 50 distilleries to claim their listing get the{" "}
-            &#10003; Verified badge and an enhanced profile, free. Open the{" "}
+            &#10003; Verified badge and an enhanced profile, free. Find your
+            name in the list above and choose &ldquo;Claim it&rdquo; — you can
+            correct your details and add tours, tastings, and booking links.
+            Not listed yet?{" "}
             <Link href="/" className="underline" style={{ color: WOW.amber }}>
-              interactive map
-            </Link>
-            , find your pin, and choose &ldquo;Claim it&rdquo; to correct your
-            details and add tours, tastings, and booking links. Not listed yet?
-            Use the map&apos;s Contribute button and we&apos;ll add you.
+              Open the map
+            </Link>{" "}
+            and use the Contribute button, and we&apos;ll add you.
           </p>
         </section>
 

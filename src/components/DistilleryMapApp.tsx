@@ -636,6 +636,20 @@ export default function DistilleryMapApp({
   const [claimDistillery, setClaimDistillery] = useState("");
   const [allFeatures, setAllFeatures] = useState<GeoJSON.Feature[]>([]);
 
+  // Deep link from the country pages: /?claim=<distillery name> opens the claim
+  // form already filled in. Those pages list every distillery by name, so an
+  // owner reading their own listing can claim from that row instead of being
+  // sent to the map to hunt for their own pin.
+  useEffect(() => {
+    const name = new URLSearchParams(window.location.search).get("claim");
+    if (!name) return;
+    setClaimDistillery(name);
+    setShowClaim(true);
+    setShowWelcome(false);
+    // Drop the param so a refresh or a shared URL doesn't reopen the form.
+    window.history.replaceState({}, "", window.location.pathname);
+  }, []);
+
   useEffect(() => {
     if (!mapContainer.current || map.current) return;
 
