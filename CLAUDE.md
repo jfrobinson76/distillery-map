@@ -1,6 +1,33 @@
 @AGENTS.md
 
-# Distillery Map — distillerymap.ie
+# Distillery Map by Stillbound — distillerymap.org
+
+## Canon: this is a Stillbound ecosystem product
+
+Decided 2 Aug 2026. Distillery Map is not a standalone test build — it is a
+product in the Stillbound ecosystem, named the same way as Distill by Stillbound.
+Stillbound is the AI-for-whiskey platform; the map is its public, free layer.
+
+**Light touch, deliberately.** "by Stillbound" is a byline, not a rename:
+page titles, site name, header wordmark, footer. The domain does NOT move —
+distillerymap.org is the SEO asset and stays put.
+
+**Timing rule.** Search Console flagged 68 of 71 country pages as effectively
+unindexed on 28 Jul 2026. Any deeper rebrand (OG imagery, domain, visual system)
+waits until indexation recovers. Ship country copy first, rebrand from strength.
+
+**Who the dataset actually reaches.** Of the full dataset, roughly 2,600 sit in
+Stillbound's stated jurisdiction sequence (IE→NI→UK→US→CA), about 2,500 of those
+with a website on file. The rest are German fruit distillers, French cognac
+houses, Italian grappa makers. Whiskey is the niche where Stillbound wins, but
+the underlying system is category-agnostic — a gin producer has the same
+inventory, maturation and compliance problems. Do not oversell this as "6,000
+customers"; the defensible number is the jurisdiction-sequence figure.
+
+Every claimed listing is a warm inbound from a distillery that came to us. That
+is the bridge from map to Stillbound, independent of branding.
+
+---
 
 > A free, open distillery map — a community-built dataset of distilleries, tasting rooms, and spirit producers worldwide.
 

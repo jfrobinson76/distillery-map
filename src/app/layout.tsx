@@ -20,25 +20,25 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL("https://distillerymap.org"),
   title: {
-    default: "Distillery Map — Every Distillery in the World",
-    template: "%s — Distillery Map",
+    default: "Distillery Map by Stillbound — Every Distillery in the World",
+    template: "%s — Distillery Map by Stillbound",
   },
   description:
-    "A free, open distillery map with 6,497 distilleries, tasting rooms, and spirit producers worldwide. Community-built and growing.",
+    "A free, open map of distilleries, tasting rooms, and spirit producers worldwide. Community-built and growing.",
   openGraph: {
-    title: "Distillery Map — Every Distillery in the World",
+    title: "Distillery Map by Stillbound — Every Distillery in the World",
     description:
-      "A free, open distillery map with 6,497 distilleries, tasting rooms, and spirit producers worldwide. Community-built and growing.",
+      "A free, open map of distilleries, tasting rooms, and spirit producers worldwide. Community-built and growing.",
     url: "https://distillerymap.org",
-    siteName: "Distillery Map",
+    siteName: "Distillery Map by Stillbound",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Distillery Map — Every Distillery in the World",
+    title: "Distillery Map by Stillbound — Every Distillery in the World",
     description:
-      "A free, open distillery map with 6,497 distilleries, tasting rooms, and spirit producers worldwide.",
+      "A free, open map of distilleries, tasting rooms, and spirit producers worldwide. Community-built and growing.",
   },
 };
 

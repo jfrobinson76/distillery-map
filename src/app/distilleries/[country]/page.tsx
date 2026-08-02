@@ -109,7 +109,10 @@ export default async function CountryPage({ params }: Props) {
             className="text-xl font-bold font-[family-name:var(--font-fraunces)]"
             style={{ color: WOW.amberGlow }}
           >
-            Distillery Map
+            Distillery Map{" "}
+            <span className="text-sm font-normal" style={{ color: WOW.parchmentDark }}>
+              by Stillbound
+            </span>
           </Link>
           <Link
             href="/"

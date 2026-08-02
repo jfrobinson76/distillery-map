@@ -854,7 +854,13 @@ export default function DistilleryMapApp({
               className="text-xl font-bold font-[family-name:var(--font-fraunces)]"
               style={{ color: WOW.amberGlow }}
             >
-              Distillery Map
+              Distillery Map{" "}
+              <span
+                className="text-sm font-normal"
+                style={{ color: WOW.parchmentDark }}
+              >
+                by Stillbound
+              </span>
             </h1>
             <p className="text-xs" style={{ color: WOW.parchmentDark }}>
               {count.toLocaleString()} locations and counting &middot;{" "}
@@ -951,7 +957,7 @@ export default function DistilleryMapApp({
             </a>
           </span>
           <span>
-            &copy; {new Date().getFullYear()} Distillery Map
+            &copy; {new Date().getFullYear()} Distillery Map by Stillbound
           </span>
         </div>
       </div>
