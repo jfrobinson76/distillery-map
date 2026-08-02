@@ -3,8 +3,8 @@
 **Status: draft, not published. John posts it or he doesn't.**
 Links to `distillerymap.org/whiskey-aging-inventory`.
 
-Attach the map image (screenshot the map card on the page at desktop width —
-it's built to be screenshotted).
+Image: `public/share/whiskey-aging-inventory-1200.png` (1200x1200, retina).
+Regenerate any time with `npm run share-card` while a dev server is up.
 
 ---
 
@@ -14,7 +14,7 @@ I went looking for the number. There isn't one. No registry, no agreed unit, no
 shared reporting year. So I built the best estimate I could, and left the holes
 where they are.
 
-About 57 million casks. Range 52–64 million. Almost certainly the most ever
+About 58 million casks. Range 52–65 million. Almost certainly the most ever
 maturing at one time.
 
 What the published figures actually say:
@@ -37,7 +37,10 @@ count. Nobody has one.
 **Japan** — nothing. One of the four great whisky nations publishes no
 aggregate figure whatsoever.
 
-Two countries hold 82% of the world's maturing whiskey. Everything else on the
+**India** — an estimated 900,000 casks. Roughly 1.6% of world stock. That will
+look wrong to anyone who knows the sales figures, so here is why it isn't.
+
+Two countries hold 81% of the world's maturing whiskey. Everything else on the
 map is a rounding error or a guess.
 
 The figure that stopped me: American whiskey inventory is around 1.5 billion
@@ -55,6 +58,14 @@ not a cask count.
 much the warehouses hold, not what is in them. Capacity is a building.
 
 **A state is not a country.** See Kentucky, above.
+
+**Sales are not stock.** Eight Indian brands sit in the world's twenty
+best-selling whiskies — around 141 million cases a year, and McDowell's No. 1
+outsells every Scotch on earth. India still holds under 2% of the world's
+maturing casks. Most Indian whisky is molasses-based spirit that never sees
+oak, several of the big blends import their malt already matured from Scotland,
+and a tropical angel's share of 8–12% a year turns stock over in two or three
+years rather than twelve. A bottle sold is not a cask resting.
 
 The map is on DistilleryMap.org with every figure, every source and every
 caveat, including the ones that make our own numbers look weak. It's free and
@@ -80,6 +91,11 @@ What am I getting wrong?
   route into a claim conversation than "add your distillery."
 - Deliberately no cask-investment angle. That audience is noisy and it would
   drag the comments somewhere unhelpful.
+- The India section is the most likely source of pushback, which is why it is
+  argued rather than asserted. Note that a widely-shared infographic claims
+  "over half of India's alcohol sales are local single-malt whiskies" — that is
+  wrong (Officer's Choice and Imperial Blue are molasses-based IMFL blends, not
+  single malts) and repeating it would be an easy way to lose the room.
 
 ## Follow-up posts this opens up (don't fire them all at once)
 

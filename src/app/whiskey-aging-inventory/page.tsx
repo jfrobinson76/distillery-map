@@ -11,6 +11,7 @@ import {
   DARK_SHARE,
   US_YEARS_OF_SUPPLY,
   BOTTLE_EQUIVALENT_BN,
+  INDIA_SHARE,
   type Tier,
 } from "@/lib/aging-inventory";
 
@@ -191,7 +192,7 @@ export default async function AgingInventoryPage() {
             className="font-[family-name:var(--font-fraunces)] text-2xl font-bold"
             style={{ color: WOW.oak }}
           >
-            Three rules we held to
+            Four rules we held to
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed" style={{ color: WOW.oakLight }}>
             Most published versions of this number are inflated by the same three mistakes.
@@ -210,6 +211,10 @@ export default async function AgingInventoryPage() {
               {
                 h: "A state is not a country.",
                 p: "Kentucky's 17.1 million barrels gets quoted as the American figure. It is one state, and it counts all spirits, not just whiskey. Nationally the US holds roughly 25 million barrels — Kentucky is about two-thirds of it, with Tennessee, Indiana and a couple of thousand craft distillers making up the rest.",
+              },
+              {
+                h: "Sales are not stock.",
+                p: `India is the trap. Eight Indian brands sit in the world's twenty best-selling whiskies, together shifting around 141 million cases a year — McDowell's No. 1 outsells every Scotch on earth. Yet India holds an estimated ${INDIA_SHARE}% of the world's maturing casks. Most Indian whisky is molasses-based spirit that never sees oak, some of the malt in the big blends is imported from Scotland already matured, and a tropical angel's share of 8–12% a year turns stock over in two or three years rather than twelve. A bottle sold is not a cask resting.`,
               },
             ].map((r) => (
               <li key={r.h} className="flex gap-4">

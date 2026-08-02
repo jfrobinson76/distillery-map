@@ -176,18 +176,19 @@ export const ENTRIES: Entry[] = [
     name: "India",
     lon: 79,
     lat: 22.5,
-    central: 0.4,
-    low: 0.2,
-    high: 0.8,
+    central: 0.9,
+    low: 0.4,
+    high: 2,
     tier: "dark",
     dx: 0,
     dy: -44,
     anchor: "middle",
-    basis: "No aggregate exists. Order-of-magnitude only.",
+    basis:
+      "No aggregate exists. Sized from bottled volume: eight Indian brands sit in the world's top twenty, together shifting roughly 141m nine-litre cases a year. Applying a small matured fraction and a short residence time gives the widest range on this map.",
     source: "No published national figure",
-    asOf: "—",
+    asOf: "\u2014",
     caveat:
-      "India drinks more whisky than anyone, but most Indian whisky is molasses-based and never sees a cask. Huge market, comparatively small maturing stock — Amrut, Paul John and Rampur are the aged exceptions.",
+      "The most misread market here. India outsells everyone \u2014 McDowell's No. 1 alone shifts more cases than any Scotch \u2014 but sales volume is not maturing stock. Most Indian whisky is molasses-based spirit that never sees oak, and several of the big blends import their malt already matured from Scotland, where it is counted. Add a tropical angel's share of 8\u201312% a year against Scotland's 2%, and stock turns over in two or three years rather than twelve. Amrut, Paul John, Rampur and Indri are real, aged and growing fast \u2014 but they are a fraction of the volume. If any figure here deserves to be overturned by someone with better data, it is this one.",
   },
   {
     id: "europe",
@@ -330,6 +331,13 @@ const byId = (id: string) => ENTRIES.find((e) => e.id === id)!;
 export const BIG_TWO_SHARE = Math.round(
   ((byId("usa").central + byId("scotland").central) / TOTAL.central) * 100
 );
+
+/**
+ * India's share of world maturing stock, against its share of world sales.
+ * The gap between the two is the single most counter-intuitive fact here.
+ */
+export const INDIA_SHARE =
+  Math.round((byId("india").central / TOTAL.central) * 1000) / 10;
 
 /** Share sitting in countries with no national count at all. */
 export const DARK_SHARE = Math.round(
