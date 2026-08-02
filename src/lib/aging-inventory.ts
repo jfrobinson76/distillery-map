@@ -184,11 +184,11 @@ export const ENTRIES: Entry[] = [
     dy: -44,
     anchor: "middle",
     basis:
-      "No aggregate exists. Sized from bottled volume: eight Indian brands sit in the world's top twenty, together shifting roughly 141m nine-litre cases a year. Applying a small matured fraction and a short residence time gives the widest range on this map.",
+      "No aggregate exists. Sized from bottled volume: eight Indian brands sit in the world's top twenty, together shifting roughly 141m nine-litre cases a year. Applying the matured fraction of that volume and a short tropical residence time gives the widest range on this map.",
     source: "No published national figure",
     asOf: "\u2014",
     caveat:
-      "The most misread market here. India outsells everyone \u2014 McDowell's No. 1 alone shifts more cases than any Scotch \u2014 but sales volume is not maturing stock. Most Indian whisky is molasses-based spirit that never sees oak, and several of the big blends import their malt already matured from Scotland, where it is counted. Add a tropical angel's share of 8\u201312% a year against Scotland's 2%, and stock turns over in two or three years rather than twelve. Amrut, Paul John, Rampur and Indri are real, aged and growing fast \u2014 but they are a fraction of the volume. If any figure here deserves to be overturned by someone with better data, it is this one.",
+      "The most misread market here, and the one we most expect to be corrected on. India outsells everyone \u2014 McDowell's No. 1 alone shifts more cases than any Scotch \u2014 but sales volume is not maturing stock. The bulk of an Indian blend is extra neutral alcohol, a near-pure column spirit that is not cask-matured. Whether that ENA comes from molasses (still common in the value tier) or from grain (McDowell's, Royal Stag and Imperial Blue have all moved to grain spirit) changes the feedstock, not the maturation. The malt that gives these blends their character is frequently imported from Scotland already aged \u2014 and already counted in Scotland's 22m. Add a tropical angel's share of 8\u201312% a year against Scotland's 2%, turning domestic stock over in two or three years rather than twelve. Amrut, Paul John, Rampur and Indri are genuinely aged and growing fast, but they are a fraction of the volume.",
   },
   {
     id: "europe",

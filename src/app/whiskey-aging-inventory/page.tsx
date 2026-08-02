@@ -214,7 +214,7 @@ export default async function AgingInventoryPage() {
               },
               {
                 h: "Sales are not stock.",
-                p: `India is the trap. Eight Indian brands sit in the world's twenty best-selling whiskies, together shifting around 141 million cases a year — McDowell's No. 1 outsells every Scotch on earth. Yet India holds an estimated ${INDIA_SHARE}% of the world's maturing casks. Most Indian whisky is molasses-based spirit that never sees oak, some of the malt in the big blends is imported from Scotland already matured, and a tropical angel's share of 8–12% a year turns stock over in two or three years rather than twelve. A bottle sold is not a cask resting.`,
+                p: `India is the trap. Eight Indian brands sit in the world's twenty best-selling whiskies, together shifting around 141 million cases a year — McDowell's No. 1 outsells every Scotch on earth. Yet India holds an estimated ${INDIA_SHARE}% of the world's maturing casks. The bulk of an Indian blend is extra neutral alcohol, a near-pure column spirit that never goes into a cask — and the biggest brands have moved from molasses to grain feedstock, which changes what it is distilled from, not whether it is matured. The malt that flavours them is frequently imported from Scotland, already aged and already counted there. Add a tropical angel's share of 8–12% a year and whatever is laid down in India turns over in two or three years rather than twelve. A bottle sold is not a cask resting.`,
               },
             ].map((r) => (
               <li key={r.h} className="flex gap-4">

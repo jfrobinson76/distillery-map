@@ -62,10 +62,12 @@ much the warehouses hold, not what is in them. Capacity is a building.
 **Sales are not stock.** Eight Indian brands sit in the world's twenty
 best-selling whiskies — around 141 million cases a year, and McDowell's No. 1
 outsells every Scotch on earth. India still holds under 2% of the world's
-maturing casks. Most Indian whisky is molasses-based spirit that never sees
-oak, several of the big blends import their malt already matured from Scotland,
-and a tropical angel's share of 8–12% a year turns stock over in two or three
-years rather than twelve. A bottle sold is not a cask resting.
+maturing casks. The bulk of an Indian blend is extra neutral alcohol, a
+near-pure column spirit that never goes into a cask. The malt that flavours it
+is frequently imported from Scotland, already aged and already counted there.
+And a tropical angel's share of 8–12% a year turns whatever is laid down in
+India over in two or three years rather than twelve. A bottle sold is not a
+cask resting.
 
 The map is on DistilleryMap.org with every figure, every source and every
 caveat, including the ones that make our own numbers look weak. It's free and
@@ -92,10 +94,19 @@ What am I getting wrong?
 - Deliberately no cask-investment angle. That audience is noisy and it would
   drag the comments somewhere unhelpful.
 - The India section is the most likely source of pushback, which is why it is
-  argued rather than asserted. Note that a widely-shared infographic claims
-  "over half of India's alcohol sales are local single-malt whiskies" — that is
-  wrong (Officer's Choice and Imperial Blue are molasses-based IMFL blends, not
-  single malts) and repeating it would be an easy way to lose the room.
+  argued rather than asserted.
+- **Do not say Indian whisky is "molasses-based."** It is the obvious line and
+  it is out of date. McDowell's No. 1, Royal Stag and Imperial Blue — the three
+  biggest brands, over half the Indian volume — all use grain spirit, and Royal
+  Stag and Imperial Blue actively market themselves *against* molasses blends.
+  Molasses ENA still dominates the value tier below about ₹800 (Officer's
+  Choice sits there), but as a blanket claim it is wrong and an Indian distiller
+  will say so. The argument that works is about **neutral spirit not being
+  cask-matured**, which is true regardless of feedstock.
+- Equally, a widely-shared infographic claims "over half of India's alcohol
+  sales are local single-malt whiskies." That is also wrong, in the opposite
+  direction. Officer's Choice and Imperial Blue are blends, not single malts.
+  Both errors are easy to make and either one loses the room.
 
 ## Follow-up posts this opens up (don't fire them all at once)
 
