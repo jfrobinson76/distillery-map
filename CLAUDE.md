@@ -126,6 +126,20 @@ across every country reads as thin/duplicate content to Google.
   those files/commits for the calibrated example of what "PASS" looks like before
   writing the next batch.
 
+## Research
+
+`/whiskey-aging-inventory` — the global aging-inventory map and estimate (~58m casks).
+Figures live in `src/lib/aging-inventory.ts` (source of truth). The reasoning, arithmetic,
+sources and dated correction log live in `docs/research/whiskey-aging-inventory-evidence.md`.
+
+**Rule: change a number in the module, add the reasoning to the evidence doc in the same
+session.** Two figures in the first pass were wrong in ways invisible from the conclusion
+alone (Kentucky quoted as the US national total; an out-of-date claim about Indian whisky
+being molasses-based). A derivation that exists only in a chat transcript cannot be defended
+when a distiller pushes back.
+
+Share image: `npm run share-card` with a dev server up, writes `public/share/`.
+
 ## Planned
 
 - **Angel's Share infographic** — visual explainer of barrel evaporation during maturation (~2% per year). Standalone content piece, not a full education section. Reference data exists in GWC project (`docs/whiskey-glossary-research.md`).
