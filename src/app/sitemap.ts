@@ -28,6 +28,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    {
+      // Research piece — real publication date, and it genuinely won't change
+      // until the underlying trade-body figures are restated.
+      url: `${SITE_URL}/whiskey-aging-inventory`,
+      lastModified: COPY_SHIPPED,
+      changeFrequency: "yearly",
+      priority: 0.8,
+    },
     ...countries.map((c) => {
       const hasCopy = Boolean(countryCopy[c.slug]);
       return {
