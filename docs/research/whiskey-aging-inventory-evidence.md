@@ -366,3 +366,119 @@ the correct figure is approximately 12,000 at 200L.
 | 2026-08-02 | India reasoning | "most Indian whisky is molasses-based" | neutral-spirit argument | Top three brands use grain spirit. Feedstock was never the load-bearing point |
 | 2026-08-02 | Operator count caveat | undercount only | overcount flagged | Dataset has no spirit-category field. ~2,600 in jurisdiction, not 6,400 |
 | 2026-08-02 | Tasmania | 26,000 barrel equivalents | ~12,000 at 200L | Source conversion does not reproduce |
+
+---
+
+# Part 10. How this was produced, and how to rerun it
+
+Written so the exercise can be repeated rather than reconstructed. The figures below will
+move. The method should not.
+
+## Starting inputs
+
+The first pass came from a Manus wide-research run, delivered as files in `~/Downloads/`:
+
+- `Global Whiskey Aging Inventory Estimates (2024-2026).md` — the headline estimates
+- `Whiskey Aging Inventory_ Disclosure-Source Map and Evidence Rules.md` — **the most
+  valuable of the set.** The evidence-tier framework came from here and was kept
+- `Entity Cards - Whiskey Maturing-Inventory Disclosure Screen.md` — corporate disclosure screen
+- `research_whiskey_aging_inventory.csv` — per-country findings with confidence grades
+- `research_whiskey_inventory_disclosures.csv` — Diageo, Pernod, Brown-Forman, Suntory
+- `kentucky_bourbon_cycle_data.csv` — KDA stock-vs-flow series 2020 to 2024
+- `distillery_pause_registry.csv`, `The Whiskey Correction_....txt` — pause/correction narrative
+- `Review of LYQD Irish Whiskey Supply Report 2026 (1).md` — supplied later, during the
+  Ireland cross-check
+- Two rendered images: a Kentucky stock-vs-flow chart, and a first-cut world map
+
+**If rerunning:** the tier framework and the corporate disclosure screen are reusable as-is.
+The rendered map was not, for the reasons in Part 6.
+
+## What the first pass got wrong, as a checklist
+
+Every one of these is a generic failure mode, not a one-off. Check each on any rerun.
+
+1. **A state quoted as a country.** Kentucky's 17.1m presented as "USA". Also counted all
+   spirits, not just whiskey
+2. **Mixed units on one visual.** Casks, barrels and litres plotted as if comparable
+3. **A conversion that does not reproduce.** Tasmania's "26,000 barrel equivalents" from
+   2.4m litres. Correct figure is ~12,000 at 200L. Always re-run the arithmetic yourself
+4. **Markers not scaled.** 22m and 50k drawn the same size
+5. **Capacity treated as inventory.** Kavalan's 300,000 barrels
+6. **No total.** The single thing the exercise was for
+7. **A weak source dressed as evidence.** The Tasmania figure traced to a Facebook post
+
+## Method that worked
+
+1. **Read every supplied file before building anything.** The tier framework was buried in
+   the file that looked least like data
+2. **Find the missing aggregate.** The largest gap was the US national figure. One web
+   search on DISCUS inventory found 1.5bn proof gallons, which reshaped the whole map
+3. **Convert only with the arithmetic shown**, and state the band rather than a point
+4. **Test every headline figure against a second, independent quantity.** Ireland's 4.5m was
+   tested against capacity (140 MLPA) and against published case volumes. Both agreed.
+   The 16m failed both. This step is what caught the error
+5. **Grade every figure and publish the grade.** The gaps became the reason for the post
+6. **Build the map from data already in the repo.** `scripts/build-world-svg.mjs` bakes
+   Natural Earth boundaries into inline SVG. No new dependency, no Mapbox call
+7. **Look at the render.** Four defects were invisible in code and obvious on screen:
+   clipped label, off-canvas label, colliding labels, dead ocean
+
+## Searches that produced the key figures
+
+- `DISCUS American whiskey inventory "proof gallons" record 2024 aging warehouses billion`
+  gave the 1.5bn proof gallons and the 58m/45m sales-and-export split behind the 14.6 years
+- `Indian whisky molasses extra neutral alcohol ENA definition not grain EU whisky standard`
+  established that India has no compulsory whisky definition and no maturation requirement
+- `"Royal Stag" OR "Imperial Blue" OR "McDowell's No 1" whisky made from grain spirit or
+  molasses ENA blended Scotch malt` produced the brand-level composition that refuted the
+  molasses claim
+- `India ENA shift molasses to grain based alcohol ethanol blending programme` gave the
+  feedstock shift context
+
+A search for TTB storage reports did **not** produce a usable national figure. DISCUS did.
+
+## The challenge sequence, and what each one changed
+
+John pushed back four times. Three of the four found something real. Recording them because
+the pattern is the useful part: **every challenge that cited a specific external fact was
+right, and the one that was a placement judgement was also right.**
+
+| Challenge | Outcome |
+|---|---|
+| "I wanted a global number, not the correction story" | Reframed from narrative to a single defensible total with a range. Correct |
+| "Your Indian numbers concerned me" + top-20 sales data | India raised 0.4m to 0.9m, range widened to 0.4-2m. The first pass had not accounted for 141m cases a year. Correct |
+| "I find the molasses claim hard to believe" | Claim was out of date and partly wrong. Top three brands use grain spirit. Estimate held; the reasoning was rebuilt on neutral spirit not being cask-matured. Correct |
+| "Why Stillbound, it was part of DistilleryMap" | Evidence base had been filed in the wrong repo. Moved here, slide subset left there. Correct |
+
+**Lesson for the rerun:** when a figure is challenged, separate the *number* from the
+*reason for it*. Twice the number survived and the reason did not. Defending the reason
+because the number was right is the trap.
+
+## Regenerating the outputs
+
+```bash
+node scripts/build-world-svg.mjs   # only if boundaries or projection change
+npm run build                      # validate; no test suite in this repo
+npm run dev                        # then, with a server up:
+npm run share-card                 # writes public/share/whiskey-aging-inventory-1200.png
+```
+
+The share card renders `/whiskey-aging-inventory/share-card` through headless Chrome at 2x.
+It is noindex and excluded from the sitemap. Change figures in `src/lib/aging-inventory.ts`
+and every output follows: page, map, stat tiles, share card, and the page description.
+
+## What to re-check on any rerun
+
+Ordered by how likely it is to have moved.
+
+1. **KDA annual report.** Kentucky inventory and production. Published early each year
+2. **DISCUS inventory.** The US national figure, and the sales/export denominator behind
+   the years-of-supply number. The correction was under way in 2025 to 2026, so this is
+   the fastest-moving figure in the set
+3. **SWA Facts and Figures.** Scotland has been stable at ~22m but confirm the vintage
+4. **LYQD.** Whether a later Irish supply report exists, and whether the full 2026 report
+   is obtainable. Still the only Irish number available
+5. **English Whisky Guild.** Fastest-growing category on the map from a tiny base
+6. **Japan.** Still the largest hole. Any credible aggregate would be the single biggest
+   improvement to the dataset
+7. **The distillery count.** Re-derive from the geojson. Never carry the previous number
