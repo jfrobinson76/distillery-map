@@ -8,6 +8,7 @@ import {
 } from "@/lib/data";
 import { SITE_URL, WOW } from "@/lib/constants";
 import { countryCopy } from "@/lib/country-copy";
+import { CountryMapPreview } from "@/components/CountryMapPreview";
 
 type Props = { params: Promise<{ country: string }> };
 
@@ -144,17 +145,7 @@ export default async function CountryPage({ params }: Props) {
             "From household names to one-room craft operations, community-built, free, and growing."}
         </p>
 
-        <div
-          className="mt-8 overflow-hidden rounded-2xl"
-          style={{ border: `1px solid ${WOW.parchmentDark}` }}
-        >
-          <iframe
-            src={embedSrc}
-            title={`Map of distilleries in ${entry.name}`}
-            className="h-96 w-full"
-            loading="lazy"
-          />
-        </div>
+        <CountryMapPreview src={embedSrc} countryName={entry.name} />
 
         <section className="mt-10">
           <h2
