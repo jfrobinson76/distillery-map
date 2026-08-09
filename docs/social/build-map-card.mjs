@@ -36,13 +36,13 @@ const TIER_FILL = { counted: SB.copper, estimate: SB.gold, producer: SB.amber };
 
 const ENTRIES = [
   { id: "usa", lon: -100, lat: 41, central: 25, tier: "counted" },
-  { id: "scotland", lon: -31, lat: 60, central: 22, tier: "counted", aLon: -4.2, aLat: 57.2 },
+  { id: "scotland", lon: -13, lat: 62.5, central: 22, tier: "counted", aLon: -4.2, aLat: 57.2 },
   { id: "ireland", lon: -20, lat: 46.5, central: 4.5, tier: "estimate", aLon: -8, aLat: 53.3 },
-  { id: "canada", lon: -122, lat: 63, central: 4.5, tier: "producer", aLon: -97, aLat: 50.6 },
+  { id: "canada", lon: -112, lat: 60, central: 4.3, tier: "producer", aLon: -97, aLat: 50.6 },
   { id: "japan", lon: 139.5, lat: 37, central: 2.3, tier: "producer" },
   { id: "china", lon: 103, lat: 36, central: 0.75, tier: "producer" },
   { id: "india", lon: 79, lat: 22.5, central: 0.5, tier: "producer" },
-  { id: "europe", lon: 14, lat: 49, central: 0.3, tier: "dark" },
+  { id: "europe", lon: 14, lat: 49, central: 0.4, tier: "producer" },
   { id: "taiwan", lon: 121.5, lat: 23.7, central: 0.15, tier: "dark" },
   { id: "southafrica", lon: 25, lat: -29, central: 0.15, tier: "producer" },
   { id: "restofworld", lon: -58, lat: -18, central: 0.15, tier: "dark" },
@@ -50,14 +50,23 @@ const ENTRIES = [
   { id: "england", lon: -1.6, lat: 52.4, central: 0.05, tier: "counted" },
 ];
 
-// Feed-size discipline: only these get labels. name (mono) + number (serif).
-// dx/dy offset from mound apex; anchor = text-anchor.
+// Big five get the two-line treatment (mono name + serif number); everything
+// else gets a small mono tag so no cask sits unexplained. dx/dy from mound
+// apex (small tags: from cask base); anchor = text-anchor.
 const LABELS = {
-  usa: { name: "UNITED STATES", num: "~25m casks", dx: 0, dy: -66, anchor: "middle" },
-  scotland: { name: "SCOTLAND", num: "22m casks", dx: 0, dy: -30, anchor: "middle" },
-  ireland: { name: "IRELAND", num: "4.5m", dx: -58, dy: 8, anchor: "end" },
-  canada: { name: "CANADA", num: "~4.5m", dx: -14, dy: -58, anchor: "end" },
-  japan: { name: "JAPAN · NO OFFICIAL COUNT", num: "~2.3m derived", dx: -40, dy: -14, anchor: "end" },
+  usa: { name: "UNITED STATES", num: "~25m casks*", dx: 0, dy: 152, anchor: "middle" },
+  scotland: { name: "SCOTLAND", num: "22m casks*", dx: 0, dy: -30, anchor: "middle" },
+  ireland: { name: "IRELAND", num: "4.5m*", dx: -58, dy: 8, anchor: "end" },
+  canada: { name: "CANADA", num: "~4.3m*", dx: 0, dy: -44, anchor: "middle" },
+  japan: { name: "JAPAN", num: "~2.3m*", dx: -40, dy: -68, anchor: "end" },
+  china: { small: "CHINA 0.75m*", dx: 22, dy: -16, anchor: "start" },
+  india: { small: "INDIA 0.5m*", dx: 0, dy: 28, anchor: "middle" },
+  europe: { small: "EUROPE 0.4m*", dx: 0, dy: 26, anchor: "middle" },
+  taiwan: { small: "TAIWAN 0.15m*", dx: 16, dy: -4, anchor: "start" },
+  southafrica: { small: "SOUTH AFRICA 0.15m*", dx: 16, dy: -8, anchor: "start" },
+  australia: { small: "AUSTRALIA 0.1m*", dx: -10, dy: -20, anchor: "end" },
+  england: { small: "ENGLAND 50k*", dx: 10, dy: -6, anchor: "start" },
+  restofworld: { small: "REST OF WORLD 0.15m*", dx: 16, dy: -6, anchor: "start" },
 };
 
 /** One barrel seen end-on: staved circle with hoop rings and a bung dot. */
@@ -121,9 +130,12 @@ function label(e) {
   if (!cfg) return "";
   const [x, baseY] = project(e.lon, e.lat);
   const apexY = baseY - moundW(e.central) * RATIO;
+  const halo = `stroke="${SB.page}" stroke-width="10" stroke-linejoin="round" paint-order="stroke"`;
+  if (cfg.small) {
+    return `<text x="${x + cfg.dx}" y="${apexY + cfg.dy}" text-anchor="${cfg.anchor}" font-family="'JetBrains Mono', monospace" font-size="21" letter-spacing="2" fill="${SB.stone}" ${halo}>${cfg.small}</text>`;
+  }
   const lx = x + cfg.dx;
   const ly = apexY + cfg.dy;
-  const halo = `stroke="${SB.page}" stroke-width="10" stroke-linejoin="round" paint-order="stroke"`;
   const numFill = e.tier === "dark" ? SB.stone : SB.oak;
   const numStyle = e.tier === "dark" ? `font-style="italic" font-size="32"` : `font-size="44" font-weight="600"`;
   return (
@@ -166,7 +178,9 @@ const html = `<!doctype html>
     display: flex; flex-direction: column;
     padding: 78px 84px 64px;
     font-family: 'Instrument Sans', system-ui, sans-serif;
+    position: relative;
   }
+  .sb { position: absolute; top: 64px; right: 76px; width: 72px; height: 72px; }
   .eyebrow {
     font-family: 'JetBrains Mono', monospace; font-size: 17px;
     text-transform: uppercase; letter-spacing: 0.24em; color: ${SB.stone};
@@ -177,6 +191,10 @@ const html = `<!doctype html>
     margin: 22px 0 0; max-width: 21ch;
   }
   h1 .a { font-style: italic; font-weight: 300; color: ${SB.copper}; }
+  .lede {
+    font-size: 27px; line-height: 1.5; color: ${SB.stone};
+    margin-top: 20px; max-width: 44ch;
+  }
   .map { margin: 10px 0 0 -54px; width: calc(100% + 108px); }
   .kicker {
     font-family: Newsreader, Georgia, serif; font-style: italic; font-weight: 300;
@@ -189,9 +207,19 @@ const html = `<!doctype html>
     margin-top: 4px;
   }
   .sw { display: inline-block; width: 15px; height: 15px; margin-right: 9px; vertical-align: -2px; }
+  .footnote {
+    font-family: 'JetBrains Mono', monospace; font-size: 15px;
+    text-transform: uppercase; letter-spacing: 0.12em; color: ${SB.stone};
+    margin-top: 14px;
+  }
   .footer {
     margin-top: auto; display: flex; justify-content: space-between; align-items: baseline;
     border-top: 1px solid ${SB.rule}; padding-top: 26px;
+  }
+  .tagline {
+    font-family: 'JetBrains Mono', monospace; font-size: 14px;
+    text-transform: uppercase; letter-spacing: 0.22em; color: ${SB.copper};
+    margin-left: 22px;
   }
   .wm { font-family: Newsreader, Georgia, serif; font-size: 33px; color: ${SB.oak}; }
   .wm i { font-style: italic; font-weight: 300; color: ${SB.copper}; }
@@ -204,19 +232,17 @@ const html = `<!doctype html>
 <body>
   <script>if (location.search.includes("full")) document.body.classList.add("full");</script>
   <div class="card">
-    <div class="eyebrow">The world's maturing whiskey · drawn to true scale</div>
-    <h1>How much whiskey is aging on Earth? <span class="a">Nobody knows. Best estimate: 60 million casks.</span></h1>
+    <svg class="sb" viewBox="0 0 100 100"><text x="50.5" y="59" text-anchor="middle" dominant-baseline="central" font-family="Newsreader, Georgia, serif" font-size="84" font-weight="400" letter-spacing="-3" fill="${SB.copper}">S<tspan font-style="italic" font-weight="300" fill="${SB.gold}">b</tspan></text></svg>
+    <div class="eyebrow">Global Whiskey Aging Inventory · August 2026</div>
+    <h1>60.4 million* casks of whiskey are aging <span class="a">right now.</span></h1>
+    <div class="lede">We went looking for global aged whiskey stock levels. No world number existed. So we are building one.</div>
     <div class="map">${svg}</div>
-    <div class="kicker">Two countries hold 78% of it.</div>
-    <div class="legend">
-      <span><span class="sw" style="background:${SB.copper}"></span>Counted</span>
-      <span><span class="sw" style="background:${SB.gold}"></span>Estimated</span>
-      <span><span class="sw" style="background:${SB.amber}"></span>Producer floor</span>
-      <span><span class="sw" style="border:2px dashed ${SB.stone}; box-sizing:border-box"></span>No published figure</span>
-    </div>
+    <div class="kicker">Two countries hold 78%* of it.</div>
+    <div class="footnote">Solid casks: published or derived figures · dashed: no published figure</div>
+    <div class="footnote">* Estimated on Stillbound research data · full sources &amp; caveats at distillerymap.org</div>
     <div class="footer">
-      <span class="wm">Still<i>bound</i></span>
-      <span class="site">Every source &amp; caveat · distillerymap.org</span>
+      <span><span class="wm">Still<i>bound</i></span><span class="tagline">Liquid intelligence</span></span>
+      <span class="site">distillerymap.org</span>
     </div>
   </div>
 </body>

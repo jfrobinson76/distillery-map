@@ -29,6 +29,14 @@ John explicitly resumes it. (Resumed 9 Aug 2026 — editorial big-number card in
 
 ---
 
+## Posture rule (John, 9 Aug 2026)
+
+The LYQD lesson: a small player commissioned a report, stated a number, and stood by
+it — and got quoted. We do the same. **State the exact figure (60.5m, not "about 60"),
+own it, drop every "nobody knows" opener.** Invitation to correct comes from strength
+("we stand by it, show us better") not from hedging. The card masthead is styled as a
+report edition: "Global Whiskey Aging Inventory · August 2026".
+
 ## Japan-gap angle (added 9 Aug 2026 — John's call, current direction)
 
 The post leads with the Japan hole instead of the global number, and the graphic is the
@@ -57,11 +65,13 @@ comments on his own steam or not at all. A cold tag that gets no engagement hurt
 
 ### Post draft — Japan-led variant
 
-> Nobody knows how much whiskey is aging in Japan. Possibly including Japan.
+> We went looking for global aged whiskey stock levels. No world number existed.
+> So we are building one.
 >
-> I've been assembling a global estimate of maturing whiskey stock from every published
-> count. Scotland counts its casks: 22 million. America publishes enough to derive
-> roughly 25 million. Ireland has a fresh independent estimate: 4.5 million.
+> Today it stands at 60.4 million casks, and we stand by it. Scotland counts its
+> casks: 22 million. America publishes enough to derive roughly 25 million.
+> Ireland has a fresh independent estimate: 4.5 million. The hardest country to
+> pin down was Japan.
 >
 > Japan? No official count exists. Japan measures whisky at bottling, not at
 > distillation, so maturing new-make is invisible in every official series. One of
@@ -72,7 +82,7 @@ comments on his own steam or not at all. A cold tag that gets no engagement hurt
 > with a wide honest range of 1.3 to 4 million. It rests on assumptions I'd love to
 > replace with facts.
 >
-> Best estimate for the world: about 60 million casks. Two countries hold 78% of it.
+> Two countries hold 78% of the world's total.
 >
 > If you know Japan's whisky industry, or know someone who does, I'd rather publish
 > your number than my derivation. Every figure, source and caveat is on the map,
@@ -87,15 +97,16 @@ The full global-number draft below stays as the fallback / follow-up.
 
 ---
 
-Nobody knows how much whiskey is aging in the world.
+We went looking for global aged whiskey stock levels. No world number existed.
+So we are building one.
 
-I went looking for the number. There isn't one. No registry, no agreed unit, no
-shared reporting year. So I built the best estimate I could, and left the holes
-where they are.
+Today it stands at 60.4 million casks. There is no registry, no agreed unit, no
+shared reporting year. We assembled every published count, report and producer
+disclosure, derived the rest with the method shown, and we stand by it.
 
-About 60 million casks. Source-bounded scenarios run 54 to 68 million. The lower
-case applies every regional low at once. Almost certainly the most ever maturing
-at one time.
+Source-bounded range 55 to 68 million. The lower case applies every regional low
+at once. Scotland and America both describe their own maturing stocks as record
+highs, and they hold most of the world's.
 
 What the published figures actually say:
 
