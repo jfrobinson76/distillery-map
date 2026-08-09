@@ -8,7 +8,6 @@ import {
 } from "@/lib/data";
 import { SITE_URL, WOW } from "@/lib/constants";
 import { countryCopy } from "@/lib/country-copy";
-import { CountryMapPreview } from "@/components/CountryMapPreview";
 
 type Props = { params: Promise<{ country: string }> };
 
@@ -40,11 +39,6 @@ export default async function CountryPage({ params }: Props) {
   const inName = countryDisplayName(entry.name);
   const countries = await getCountries();
   const others = countries.filter((c) => c.slug !== entry.slug).slice(0, 12);
-
-  const embedSrc =
-    entry.kind === "region"
-      ? `/embed?region=scotland`
-      : `/embed?country=${encodeURIComponent(entry.name)}`;
 
   const faqs = [
     {
@@ -147,8 +141,6 @@ export default async function CountryPage({ params }: Props) {
           {countryCopy[entry.slug] ??
             "From household names to one-room craft operations, community-built, free, and growing."}
         </p>
-
-        <CountryMapPreview src={embedSrc} countryName={entry.name} />
 
         <section className="mt-10">
           <h2
