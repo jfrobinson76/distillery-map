@@ -35,8 +35,8 @@ not belong here and it certainly does not belong on a slide.
 
 # Part 1. Global standing stock, August 2026
 
-Best estimate: **60.5 million casks and barrels**, presented publicly as approximately 60
-million. Source-bounded scenarios run from 53.9 to 68.0 million, rounded publicly to 54 to
+Best estimate: **60.3 million casks and barrels**, presented publicly as approximately 60
+million. Source-bounded scenarios run from 54.7 to 67.7 million, rounded publicly to 55 to
 68. The lower case is the mechanical sum of every regional low at once, not a statistical
 confidence interval. Almost certainly the largest volume of whiskey ever maturing at one
 time.
@@ -50,7 +50,7 @@ of truth. If the two disagree, the module wins and this table needs updating.
 | United States | 25m | 23 to 27m | Derived | DISCUS national inventory, KDA |
 | Scotland | 22m | 21 to 23m | Counted | Scotch Whisky Association |
 | Ireland | 4.5m | 4 to 5m | Estimate | LYQD Irish Whiskey Supply Report 2026 |
-| Canada | 4.5m | 3.1 to 5.5m | Producer | Crown Royal; Hiram Walker/Pike Creek |
+| Canada | 4.3m | 3.9 to 5.2m | Producer | Crown Royal, Hiram Walker, Alberta Distillers, Black Velvet (Part 4F) |
 | Japan | 2.3m | 1.3 to 4m | Producer | NTA throughput model; Ōmi cellar ~600k casks (Part 4E) |
 | China | 0.75m | 0.6 to 1m | Producer | Bairun 2025 AR; CADA 2023 survey |
 | India | 0.5m | 0.3 to 0.9m | Producer | Indian Malt Whisky Association |
@@ -76,25 +76,28 @@ alcohol lost to evaporation gives a working band of 55 to 66 proof gallons per b
 58m domestic sales plus 45m exports = 103m proof gallons a year. 1,500 / 103 = 14.6 years.
 This is arithmetic on their own published figures, not our modelling.
 
-**Bottle equivalent, ~27bn.** 59.7m casks at a deliberately conservative 450 bottles each.
+**Bottle equivalent, ~27bn.** 60.3m casks at a deliberately conservative 450 bottles each.
 The SWA's own ratio (22m casks = 12bn bottles) implies 545; we blended that down against
 smaller US barrel yields. Illustration only.
 
-**Lower scenario, 53.9m.** This is 23 US + 21 Scotland + 4 Ireland + 3.1 Canada +
+**Lower scenario, 54.7m.** This is 23 US + 21 Scotland + 4 Ireland + 3.9 Canada +
 1.3 Japan + 0.6 China + 0.3 India + 0.2 continental Europe + 0.1 Taiwan + 0.1 South
-Africa + 0.04 Australia + 0.05 England and Wales + 0.1 rest of world = **53.89m**.
-Relative to the 60.45m central sum, 2m comes from the US proof-gallon conversion, 1.4m
-from using only Canada's published floor, 1m from SWA's rounded "some 22m", 1m from
-Japan and 0.5m from Ireland. All other downward allowances together are about 0.7m. It is
+Africa + 0.04 Australia + 0.05 England and Wales + 0.1 rest of world = **54.69m**.
+Relative to the 60.25m central sum, 2m comes from the US proof-gallon conversion, 1m
+from SWA's rounded "some 22m", 1m from Japan, 0.5m from Ireland and 0.4m from using only
+Canada's published floor. All other downward allowances together are about 0.7m. It is
 a conservative simultaneous-low case, not a claim that each downside is correlated.
 
-**Canada, 4.5m barrels.** The published floor is Crown Royal/Gimli at 1.5m plus Hiram
-Walker/Pike Creek at more than 1.6m = **3.1m**. The Hiram Walker number is public, not an
-internal figure: a 2017 distillery visit recorded 1.6m across 16 warehouses, and a later
-profile of brand ambassador Dave Mitton states that the site ages more than 1.6m "at any
-given time." Central 4.5m adds 1.4m for Diageo's Valleyfield site, Alberta Distillers and
-the smaller producers. Range 3.1m, the hard floor, to 5.5m. Quoted Valleyfield and Alberta
-warehouse capacities only bound that allowance; they are not counted as filled stock.
+**Canada, 4.3m barrels.** The published floor is now four sites: Crown Royal/Gimli 1.5m
+(company page), Hiram Walker/Pike Creek more than 1.6m (2016 Trillium profile, 2017 site
+visit, later ambassador profile), Alberta Distillers 447k (company page, current) and
+Black Velvet/Lethbridge ~340k (Heaven Hill editorial, 2019) = **3.9m**. Central 4.3m adds
+an itemised ~0.6m allowance for Diageo's Valleyfield site, the Sazerac system (Canadian
+Mist, Old Montreal) and the long tail, shaded down because a withdrawal-times-residence
+model built on US consumption (~16.9m 9-litre cases), domestic sales and StatCan's dead
+1946–1996 bonded-stock series centres lower, at 3.2m. Range 3.9m, the published sum, to
+5.2m, where both methods top out. Full derivation, arithmetic and weaknesses in Part 4F.
+Quoted warehouse capacities (Alberta's 500k maximum) are never counted as filled stock.
 
 **China, 0.75m casks.** Bairun's exchange-filed 2025 annual report says Laizhou had filled
 nearly 600,000 maturation casks at year-end. China Daily reported Laizhou at roughly 80%
@@ -644,6 +647,191 @@ larger than the misattributed figure. Logged in Part 9.
 
 ---
 
+# Part 4F. Canada derivation — 9 Aug 2026
+
+The Canada entry moves from 4.5m (3.1–5.5m, producer) to **4.3m casks, range 3.9–5.2m,
+grade producer**. The headline barely moves; what changes is the quality underneath it.
+The published floor rises from 3.1m to 3.9m on two company disclosures that were not in
+the evidence base, the unmeasured allowance shrinks from 1.4m un-itemised to ~0.6m
+itemised, and the whole entry gains what it never had: an official (if historical)
+government stock series and a full throughput model.
+
+## What official Canada actually publishes
+
+**Statistics Canada Table 16-10-0091 (formerly CANSIM 303-0019), "Production, bottling
+or stocks of beverages", monthly 1946–2007, archived.** Survey source: Canada Revenue
+Agency — this is administrative excise data, not a survey of firms. Dataset page:
+`https://open.canada.ca/data/en/dataset/6198e838-b634-4aee-8fe8-ac929bd6200f`; CSV:
+`https://www150.statcan.gc.ca/n1/tbl/csv/16100091-eng.zip`. Four series; the one that
+matters is **"Stocks of liquor in distilleries and bond warehouse"**, in millions of
+litres of absolute alcohol (LAA), end of period:
+
+| Dec of | 1950 | 1960 | 1970 | 1977 | 1980 | 1985 | 1990 | 1993 | 1995 | May 1996 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| m LAA | 208 | 362 | 833 | 1,096 | 1,079 | 926 | 589 | 659 | 440 | 362 (final) |
+
+The series is **terminated May 1996** — Canada has published no national spirits-stock
+figure for thirty years. Three honesty notes: (1) it covers *all* spirits in excise bond,
+including rum, brandy and imported goods held in bond, so it is an upper bound on whisky;
+(2) there is an unexplained step down between Feb 1995 (628m) and Mar 1995 (398m), and
+again into Jan 1996 — a reporting-coverage break, so the mid-90s level is 360–440m LAA,
+not a precise point; (3) the companion "production of distilleries alcohol (ethyl)"
+series becomes useless for whisky after ~2004 because fuel-ethanol plants flood it
+(monthly values jump from ~32m to ~93m LAA in 2005).
+
+What the dead series still proves: Canadian maturing stock ran ~1.1bn LAA at the late-70s
+peak (≈ 8m barrels-equivalent — Canada was then the world's largest whisky category, and
+the 1980s glut is documented history), and ~360–440m LAA (≈ 2.8–3.4m barrels-equivalent
+at 130 LAA/cask) by the mid-1990s. A modern national figure in the 3.9–5.2m-barrel range
+(≈ 500–620m LAA) requires stock to have grown 15–40% since 1996. Directionally consistent
+with Crown Royal's US volume roughly doubling since the mid-2000s and the industry-wide
+laydown of 2015–2022, but not provable from any current official source. CRA's current
+Excise Duty Statistical Tables report duty assessed in dollars by fiscal year — money,
+which house rule 1 forbids converting — and no stock quantity.
+
+## Method A: withdrawal × residence
+
+Canadian whisky must age at least three years in small wood in Canada
+(`https://laws-lois.justice.gc.ca/eng/regulations/C.R.C.%2C_c._870/section-B.02.023.html`),
+which anchors minimum residence. All figures in litres of absolute alcohol (LAA).
+
+**Step 1 — US withdrawals.** The US is the market: the Trade Commissioner Service states
+the US takes ~90% of Canada's beverage-alcohol exports
+(`https://www.tradecommissioner.gc.ca/en/market-industry-info/search-industry/alcoholic-beverages.html`),
+and Forbes (Feb 2021) reports 18.69m 9-litre cases exported to the US in 2020
+(`https://www.forbes.com/sites/joemicallef/2021/02/20/there-is-a-lot-more-to-canadian-whisky-then-you-realized/`).
+Beverage Information Group / DISCUS-adjacent reporting puts US Canadian-whisky volume at
+**17.4m 9-litre cases in 2022, −3.1% in 2023 ≈ 16.9m cases**
+(`https://bevinfogroup.com/2024/03/28/canadian-whisky-trends-2024-sales-brands-whiskey/`);
+NABCA control-state data show a further ~2.6% decline in 2024. Using 2023: 16.9m × 9L =
+152.1m litres at 40% = **60.8m LAA**. Consumption is used instead of trade data
+deliberately: Canadian whisky moves to the US in a mix of bottled goods and high-proof
+bulk, and the customs litre counts are not comparable across that mix, but every litre
+consumed as Canadian whisky was matured in Canada regardless of shipping form. One
+deduction: Canadian food-and-drug rules allow up to one-eleventh (9.09%) of a Canadian
+whisky blend to be non-whisky flavouring (spirits or wine); volume brands use some of
+this headroom, premium brands use none. Deduct 0% / 5% / 9%: **60.8 / 57.8 / 55.3m LAA**
+(high- / central / low-stock case).
+
+**Step 2 — domestic withdrawals.** StatCan's Control and sale of alcoholic beverages,
+FY2023/24: total spirits sales **184.9m litres**
+(`https://www150.statcan.gc.ca/n1/daily-quotidien/250307/dq250307b-eng.htm`), whisky
+~25–30% of spirits volume (46–55m litres; secondary reporting puts whisky at 46.7m litres
+in 2024). Canadian whisky's share of domestic whisky sales against imported Scotch,
+bourbon and Irish: assumed **55–65%**. Result: 26–35m litres at 40% =
+**10.3 / 12 / 14.1m LAA**.
+
+**Step 3 — other exports.** If the US is ~90% of exports, the rest of the world is ~10/90
+of the US figure ≈ 6.8m LAA. Assumed **4 / 6 / 8m LAA**.
+
+**Step 4 — total withdrawals and stock.** W = **69.6 / 75.8 / 82.9m LAA** ≈ 70/76/83.
+Residence: legal floor 3 years; the volume brands (Black Velvet, Canadian Mist, Rich &
+Rare) run 3–5; Canadian Club and Crown Royal blends run longer; and Canada's documented
+surplus of well-aged stock (the bulk 8–15-year whisky sold to US non-distiller producers
+through the 2010s) stretches the volume-weighted mean. Assumed **4 / 5.5 / 7 years**.
+Stock = 280 / 418 / 581m LAA.
+
+**Step 5 — casks.** Canadian practice: ~200L ex-bourbon barrels re-used across multiple
+fills, entry strength often above US practice, long residence and prairie-climate
+evaporation. Assumed **145 / 130 / 115 LAA per cask** (the lean figure pairs with the
+long-residence case, since older stock has evaporated more).
+
+| Case | Arithmetic | Casks |
+|---|---|---|
+| Low | 280 / 145 | **1.9m** |
+| Central | 418 / 130 | **3.2m** |
+| High | 581 / 115 | **5.1m** |
+
+## Method B: producer bottom-up
+
+Published, reported filled stock — not capacity:
+
+- **Crown Royal, Gimli, Manitoba: 1.5m barrels across 51 warehouses.** Company page,
+  undated, accessed Aug 2026: `https://www.crownroyal.com/story/our-home`. Cross-check:
+  Crown Royal sells ~9m 9-litre cases a year ≈ 32m LAA of withdrawals; 1.5m barrels ≈
+  195m LAA implies ~6 years' residence — internally consistent for its blend ages.
+- **Hiram Walker & Sons, Windsor/Lakeshore (Pike Creek), Ontario: 1.6m barrels.** Three
+  independent statements: Trillium Network manufacturing profile, Sept 2016 ("holds 1.6
+  million barrels of spirits in its 14 maturing warehouses",
+  `https://trilliummfg.ca/profile/hiram-walker-sons/`); Toronto Whisky Society site
+  visit, Mar 2017 (1.6m across 16 warehouses,
+  `https://torontowhiskysociety.ca/2017/03/28/tws-visits-hiram-walker-distillery-part-2/`);
+  and a later brand-ambassador profile ("more than 1.6m at any given time",
+  `https://candradrinks.com/dave-mitton-meet-the-expert/`). Vintage 2016–2019, and
+  "barrels of spirits" includes some maturing rum (Lamb's), not whisky alone.
+- **Alberta Distillers, Calgary: 447,000 barrels, 23 warehouses.** 🆕 The company's own
+  current site: "447k Barrels", "23 Warehouses", 19m OLA annual distillation
+  (`https://www.albertadistillers.com/sustainability/our-distillery`, accessed Aug 2026).
+  The separately quoted 500,000-barrel maximum (company anniversary site adl75.ca) is
+  capacity and is not counted.
+- **Black Velvet, Lethbridge, Alberta: ~340,000 barrels, three warehouses.** 🆕 Heaven
+  Hill's own editorial, 13 Aug 2019: "placed in one of the three Black Velvet Distilling
+  Company Warehouses among approximately 340,000 other barrels"
+  (`https://heavenhill.com/news-and-notes/what-is-black-velvet-canadian-whisky/`).
+
+**Published sum: 1.5 + 1.6 + 0.447 + 0.34 = 3.887 ≈ 3.9m barrels.**
+
+Unreported sites, itemised allowance (all inference, no counts published):
+
+- Diageo Valleyfield, Québec — distills, ages and bottles Crown Royal (Diageo 2021
+  release); second-largest unreported hole: 0.15–0.5m, central 0.3m.
+- Sazerac system — Canadian Mist, Collingwood (nine warehouses, ~3m US gal/yr) plus Old
+  Montreal Distillery, against a US portfolio of roughly 4–5m cases (Rich & Rare,
+  Canadian LTD, Seagram's VO, Five Star, Canadian Mist): 0.15–0.4m, central 0.2m. Held
+  down because part of Sazerac's liquid is bought in bulk from Alberta Distillers and
+  Hiram Walker and is therefore already inside their reported barns — the double-count
+  risk runs through this whole allowance.
+- Forty Creek (Campari), Highwood, Shelter Point, Macaloney's, Two Brewers and ~200
+  craft distilleries: 0.05–0.3m, central 0.1m.
+
+Allowance 0.35–1.2m, central **0.6m**. Method B total: low 3.9m (published sum alone,
+with the minimal allowance offsetting possible staleness in the 2016–2019 figures),
+central **4.5m**, high 5.1m.
+
+## Reconciliation and the number
+
+Method A central (3.2m) sits *below* Method B's published floor (3.9m) — the same
+failure direction Japan showed: a steady-state flow model underestimates a market whose
+stock reflects decades of higher laydown and long-tailed aging. Reported filled stock
+wins where they conflict; the deficit is read as evidence that true mean residence runs
+nearer 7 years than 5.5 (76m LAA × 7 / 130 = 4.1m), which is exactly what Canada's
+well-documented aged-stock surplus implies. **Central 4.3m** — Method B's 4.5m shaded
+down toward Method A, because two of the four published figures are 2016–2019 vintage,
+one mixes rum into "barrels of spirits", and Gimli's 1.5m is brand-page copy rather than
+a filing. **Low 3.9m** — the published sum; the flow model's mechanical 1.9m low is
+overridden by reported stock, as Japan's was. **High 5.2m** — both methods top out at
+5.1m independently; 5.2m adds a token margin for simultaneous understatement, and the
+old 5.5m high is cut because neither method reaches it.
+
+Implied national stock at the central: 4.3m × 130 ≈ 560m LAA — 25–40% above the last
+official reading (1995–96, 360–440m LAA), carried by Crown Royal's growth and the
+2015–2022 laydown. Stated as an implication, not a fact.
+
+## Weaknesses, admitted
+
+1. **Half the floor is stale.** Hiram Walker's 1.6m dates to 2016–2019 and includes
+   maturing rum; Black Velvet's 340k is 2019. Either could be 10–20% different today,
+   in either direction.
+2. **The flow model disagrees with the floor.** Method A's central is 0.7m below the
+   published sum. The reconciliation explains the gap (long residence, category
+   decline) but cannot prove it; if Gimli or Hiram Walker's figures are marketing
+   generosity, the truth sits lower than 4.3m.
+3. **No current official aggregate exists at all.** The only government stock series
+   died in 1996, its last years have a visible coverage break, and it never separated
+   whisky from other bonded spirits. Everything since is producer copy and modelling.
+4. Smaller: the domestic Canadian-whisky share (55–65%) and the 9.09% additive
+   deduction are assumptions; the Sazerac allowance carries live double-count risk
+   against bulk whisky aging in counted warehouses.
+
+## Grade decision
+
+Producer, unchanged and now more solidly so: four sites with published filled stock
+covering ~90% of the central figure, an itemised inferred allowance for the rest, and a
+flow model plus a dead official series as discipline. Not "counted" — no national body
+counts anything; not "estimate" — no named commercial report exists for Canada.
+
+---
+
 # Part 5. What this dataset does and does not count
 
 **The full distillery count is not a whiskey count.** The current build contains **6,197
@@ -718,6 +906,24 @@ Two further points:
   `https://torontowhiskysociety.ca/2017/03/28/tws-visits-hiram-walker-distillery-part-2/`
 - Dave Mitton profile: Hiram Walker aging more than 1.6m barrels at any time and draining
   and filling 1,300 a day: `https://candradrinks.com/dave-mitton-meet-the-expert/`
+- Trillium Network manufacturing profile, Sept 2016: Hiram Walker "holds 1.6 million
+  barrels of spirits in its 14 maturing warehouses":
+  `https://trilliummfg.ca/profile/hiram-walker-sons/`
+- Alberta Distillers company page: 447k barrels, 23 warehouses, 19m OLA annual
+  distillation: `https://www.albertadistillers.com/sustainability/our-distillery`
+- Heaven Hill editorial, 13 Aug 2019: ~340,000 barrels in three Black Velvet warehouses,
+  Lethbridge: `https://heavenhill.com/news-and-notes/what-is-black-velvet-canadian-whisky/`
+- Statistics Canada Table 16-10-0091 (CANSIM 303-0019), stocks of liquor in distilleries
+  and bond warehouse, monthly 1946–1996 (terminated), CRA administrative data:
+  `https://open.canada.ca/data/en/dataset/6198e838-b634-4aee-8fe8-ac929bd6200f`
+- StatCan Daily, Control and sale of alcoholic beverages FY2023/24, spirits 184.9m litres:
+  `https://www150.statcan.gc.ca/n1/daily-quotidien/250307/dq250307b-eng.htm`
+- Beverage Information Group: US Canadian whisky 17.4m 9L cases 2022, −3.1% 2023:
+  `https://bevinfogroup.com/2024/03/28/canadian-whisky-trends-2024-sales-brands-whiskey/`
+- Forbes, Feb 2021: 18.69m 9L cases exported to the US in 2020:
+  `https://www.forbes.com/sites/joemicallef/2021/02/20/there-is-a-lot-more-to-canadian-whisky-then-you-realized/`
+- Trade Commissioner Service: US takes ~90% of Canadian beverage-alcohol exports:
+  `https://www.tradecommissioner.gc.ca/en/market-industry-info/search-industry/alcoholic-beverages.html`
 - Corby history and ownership: `https://corby.ca/en/about-corby/history/`
 - Diageo confirms Valleyfield distills, barrel-ages and bottles Crown Royal; no stock count:
   `https://www.diageo.com/en/news-and-media/press-releases/2021/diageo-s-valleyfield-distillery-to-become-carbon-neutral-by-2025`
@@ -912,9 +1118,11 @@ the correct figure is approximately 12,000 at 200L.
       coverage boundary explicitly and resist turning unmapped production into zero.
       Every result must preserve the same date, unit, scope, provenance and duplicate-
       control fields used elsewhere in this document; do not extrapolate from capacity.
-- [ ] Canada. Ask Spirits Canada and Davin de Kergommeaux to validate the 3.1m published
-      floor and estimate current filled stock at Valleyfield, Alberta Distillers, Black
-      Velvet/Lethbridge and the independent long tail.
+- [ ] Canada. Ask Spirits Canada and Davin de Kergommeaux to validate the 3.9m published
+      floor (Part 4F), re-date the 2016–2019 Hiram Walker and Black Velvet figures, and
+      estimate current filled stock at Valleyfield, Canadian Mist/Collingwood, Old
+      Montreal and the independent long tail. Ask whether any successor to StatCan's
+      terminated bonded-stock series (16-10-0091) exists inside CRA.
 - [ ] China. Obtain the CADA 2023 report itself and request its next survey, scope rules
       and duplicate controls. Reconcile the nearly 600k Laizhou filing with CADA's 450k
       national 2023 count before treating 0.75m as anything stronger than Producer.
@@ -1006,6 +1214,8 @@ stock.
 | 2026-08-09 | Japan standing stock | 1.5m, range 0.8 to 2.5m, dark | 2.3m, range 1.3 to 4m, producer | Withdrawal-times-residence model on NTA throughput aggregates, reconciled with Ōmi ~600k stored casks. Full derivation in Part 4E |
 | 2026-08-09 | Japan caveat, Suntory "abandoned 500,000-barrel maturation site" | implied Japanese stock | removed | The scrapped 2026 site was Kingswell, East Ayrshire, Scotland — Scotch maturation, and capacity not filled stock. Never part of Japan's inventory |
 | 2026-08-09 | Global totals | 59.7m, scenarios 53.4 to 66.5 | 60.5m, scenarios 53.9 to 68.0 | Mechanical consequence of the Japan re-derivation |
+| 2026-08-09 | Canada standing stock | 4.5m, range 3.1 to 5.5m | 4.3m, range 3.9 to 5.2m | Published floor rises to 3.9m on Alberta Distillers 447k (company page) and Black Velvet ~340k (Heaven Hill, 2019); withdrawal-times-residence model centres at 3.2m and caps the high; StatCan's terminated 1946–1996 bonded-stock series added as historical anchor. Full derivation in Part 4F |
+| 2026-08-09 | Global totals | 60.5m, scenarios 53.9 to 68.0 | 60.3m, scenarios 54.7 to 67.7 | Mechanical consequence of the Canada re-derivation |
 
 ---
 

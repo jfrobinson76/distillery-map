@@ -306,7 +306,7 @@ export default async function AgingInventoryPage() {
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed" style={{ color: WOW.parchmentDark }}>
             Japan is a model built on one reported warehouse complex. So is Canada beyond
-            Manitoba. So is
+            its four reported sites. So is
             every distillery in Africa outside a single Western Cape site. If you work at a
             distillery and you know your own numbers, we would rather publish your figure
             than our estimate.
