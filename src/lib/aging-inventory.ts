@@ -219,18 +219,21 @@ export const ENTRIES: Entry[] = [
     name: "Continental Europe",
     lon: 14,
     lat: 49,
-    central: 0.3,
-    low: 0.2,
-    high: 0.5,
-    tier: "dark",
+    central: 0.4,
+    low: 0.25,
+    high: 0.55,
+    tier: "producer",
     dx: 24,
     dy: -6,
     anchor: "start",
-    basis: "No aggregate exists. Summed order-of-magnitude across active producers.",
-    source: "No published national figure",
-    asOf: "—",
+    basis:
+      "Bottom-up across published stock: Spain's DYC trade-reported at 170,000 aging casks, High Coast publishes 20,000+, St. Kilian ~10,500 counted, plus a flow model on the INAO's official French production series (~100 distilleries, 20,000 hl pure alcohol in 2020).",
+    source: "Alimarket (DYC); INAO Whisky Français note; producer disclosures",
+    sourceUrl:
+      "https://www.alimarket.es/alimentacion/noticia/295757/beam-suntory-eleva-su-capacidad-en-espana-e-inicia-la-exportacion-de--dyc--a-latinoamerica",
+    asOf: "2019–2026, mixed",
     caveat:
-      "France, Germany, Sweden, Denmark and the Netherlands all have real whisky industries now. Not one publishes a maturing-stock total.",
+      "About 40% of this hangs on one 2019 Spanish trade figure that may describe DYC's cellar complement rather than filled casks. France is a model, not a count; Germany, Denmark and the rest are allowances. No European body publishes a maturing-stock total.",
   },
   {
     id: "taiwan",
@@ -239,16 +242,17 @@ export const ENTRIES: Entry[] = [
     lat: 23.7,
     central: 0.15,
     low: 0.1,
-    high: 0.3,
+    high: 0.25,
     tier: "dark",
     dx: -20,
     dy: 8,
     anchor: "end",
-    basis: "No inventory figure. Inferred from known warehouse footprint.",
-    source: "No published national figure",
-    asOf: "—",
+    basis:
+      "Withdrawal × residence model: Kavalan's 10m+ bottles a year at 4–6 years' subtropical residence implies ~90,000–200,000 filled casks. Nantou/Omar adds a reported ~4,500-cask floor from a 2017 site visit.",
+    source: "Derived; no producer publishes filled stock",
+    asOf: "2026 model on 2024–25 disclosures",
     caveat:
-      "Kavalan's widely-quoted 300,000 barrels is storage capacity, not stock. Capacity is a building; inventory is what is in it. We do not count capacity.",
+      "Kavalan's widely-quoted 300,000 barrels is storage capacity, not stock — we still refuse to count capacity, and the model says the warehouses are roughly half full. Bottle volumes and residence are assumptions, so the grade stays dark.",
   },
   {
     id: "southafrica",
@@ -263,11 +267,11 @@ export const ENTRIES: Entry[] = [
     dy: 8,
     anchor: "start",
     basis:
-      "James Sedgwick, Africa's major whisky distillery, has been described as holding 150,000 casks across five warehouses.",
+      "James Sedgwick, Africa's major whisky distillery, reported at 150,000+ casks — five warehouses in a dated 2018 visit, seven in post-Heineken-merger trade profiles.",
     source: "Trade reporting on James Sedgwick Distillery",
-    asOf: "2018",
+    asOf: "2018, corroborated post-2023",
     caveat:
-      "Eight years old and single-sourced. Africa's whisky stock is effectively unmapped — this is the weakest figure here and we would happily be corrected.",
+      "The 150,000 recurs on both sides of the 2023 Distell–Heineken merger but has never been company-published, and may be a recycled talking-point. The craft tail is an allowance. Still the entry we would most like to be corrected on.",
   },
   {
     id: "australia",

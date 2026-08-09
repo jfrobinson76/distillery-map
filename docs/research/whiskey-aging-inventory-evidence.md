@@ -35,7 +35,7 @@ not belong here and it certainly does not belong on a slide.
 
 # Part 1. Global standing stock, August 2026
 
-Best estimate: **60.3 million casks and barrels**, presented publicly as approximately 60
+Best estimate: **60.4 million casks and barrels**, presented publicly as approximately 60
 million. Source-bounded scenarios run from 54.7 to 67.7 million, rounded publicly to 55 to
 68. The lower case is the mechanical sum of every regional low at once, not a statistical
 confidence interval. Almost certainly the largest volume of whiskey ever maturing at one
@@ -54,9 +54,9 @@ of truth. If the two disagree, the module wins and this table needs updating.
 | Japan | 2.3m | 1.3 to 4m | Producer | NTA throughput model; Ōmi cellar ~600k casks (Part 4E) |
 | China | 0.75m | 0.6 to 1m | Producer | Bairun 2025 AR; CADA 2023 survey |
 | India | 0.5m | 0.3 to 0.9m | Producer | Piccadily Agro FY26 disclosure; Paul John trade reporting; IMWA (Part 4G) |
-| Continental Europe | 0.3m | 0.2 to 0.5m | Dark | None published |
-| Taiwan | 0.15m | 0.1 to 0.3m | Dark | None published |
-| South Africa | 0.15m | 0.1 to 0.2m | Producer | James Sedgwick, 2018 trade reporting |
+| Continental Europe | 0.4m | 0.25 to 0.55m | Producer | DYC 2019 trade figure; High Coast, St. Kilian counts; INAO France flow (Part 4H) |
+| Taiwan | 0.15m | 0.1 to 0.25m | Dark | Withdrawal × residence model; capacity never counted (Part 4H) |
+| South Africa | 0.15m | 0.1 to 0.2m | Producer | James Sedgwick, 2018 trade reporting, post-2023 corroboration (Part 4H) |
 | Australia and Tasmania | 0.1m | 0.04 to 0.2m | Producer | Lark, ASX reporting |
 | England and Wales | 0.05m | 0.05 to 0.07m | Counted | English Whisky Guild |
 | Rest of world | 0.15m | 0.1 to 0.3m | Dark | None published |
@@ -76,16 +76,16 @@ alcohol lost to evaporation gives a working band of 55 to 66 proof gallons per b
 58m domestic sales plus 45m exports = 103m proof gallons a year. 1,500 / 103 = 14.6 years.
 This is arithmetic on their own published figures, not our modelling.
 
-**Bottle equivalent, ~27bn.** 60.3m casks at a deliberately conservative 450 bottles each.
+**Bottle equivalent, ~27bn.** 60.4m casks at a deliberately conservative 450 bottles each.
 The SWA's own ratio (22m casks = 12bn bottles) implies 545; we blended that down against
 smaller US barrel yields. Illustration only.
 
 **Lower scenario, 54.7m.** This is 23 US + 21 Scotland + 4 Ireland + 3.9 Canada +
-1.3 Japan + 0.6 China + 0.3 India + 0.2 continental Europe + 0.1 Taiwan + 0.1 South
-Africa + 0.04 Australia + 0.05 England and Wales + 0.1 rest of world = **54.69m**.
-Relative to the 60.25m central sum, 2m comes from the US proof-gallon conversion, 1m
+1.3 Japan + 0.6 China + 0.3 India + 0.25 continental Europe + 0.1 Taiwan + 0.1 South
+Africa + 0.04 Australia + 0.05 England and Wales + 0.1 rest of world = **54.74m**.
+Relative to the 60.35m central sum, 2m comes from the US proof-gallon conversion, 1m
 from SWA's rounded "some 22m", 1m from Japan, 0.5m from Ireland and 0.4m from using only
-Canada's published floor. All other downward allowances together are about 0.7m. It is
+Canada's published floor. All other downward allowances together are about 0.8m. It is
 a conservative simultaneous-low case, not a claim that each downside is correlated.
 
 **Canada, 4.3m barrels.** The published floor is now four sites: Crown Royal/Gimli 1.5m
@@ -1020,6 +1020,205 @@ barrel tile as a census. Sales are not stock.
 
 ---
 
+# Part 4H. Continental Europe, Taiwan, South Africa — 9 Aug 2026
+
+Three entries firmed up in one pass, ~30 web lookups. The headline changes: Continental
+Europe moves from 0.3m (0.2–0.5m, dark) to **0.4m casks, range 0.25–0.55m, grade
+producer** — the upgrade is driven by one previously-missed anchor, Spain's DYC, plus
+two producers who publish actual counted stock. Taiwan keeps its 0.15m central but the
+range tightens to **0.1–0.25m** and the basis changes from "inferred from warehouse
+footprint" to a stated withdrawal × residence model; grade stays **dark**, honestly.
+South Africa's number does not move — **0.15m, 0.1–0.2m, producer** — but the 2018
+single-source figure is now corroborated by a post-Heineken-merger profile, which is
+worth more than a number change.
+
+## Continental Europe: the bottom-up that was missing
+
+No European country and no EU body publishes a whisky maturing-stock total. What exists
+is producer disclosure, one official French flow series, and allowances. Summed:
+
+**Spain — DYC, ~170,000 casks, the missed elephant.** Trade press (Alimarket, 29 Mar
+2019) describes Beam Suntory's DYC plant at Palazuelos de Eresma, Segovia as having
+"seis alambiques y 170.000 barricas de envejecimiento" — six stills and 170,000 aging
+casks (`https://www.alimarket.es/alimentacion/noticia/295757/beam-suntory-eleva-su-capacidad-en-espana-e-inicia-la-exportacion-de--dyc--a-latinoamerica`).
+Cross-checks: El Español's site report (8 Dec 2024,
+`https://www.elespanol.com/reportajes/20241208/destilerias-dyc-cuna-whisky-espana-toman-bebida-barata-cata-ciegas-no-diferencian-macallan/906409730_0.html`)
+gives 9–11m bottles a year and ~1m LAA/yr of malt spirit alone; Wikipedia records 20m
+litres/yr capacity in the 1980s, since running at a fraction
+(`https://en.wikipedia.org/wiki/Destiler%C3%ADas_y_Crianza_del_Whisky_S.A.`).
+Sanity: 10m bottles × 0.7L × 40% ≈ 2.8m LAA/yr of withdrawals; at 3.5–5 years'
+volume-weighted residence that needs 10–14m LAA in wood ≈ 90–130k × ~110-LAA ex-bourbon
+barrels before counting the older premium stock — 170k filled casks is consistent, not
+inflated. Honesty notes: the figure is 2019, single-outlet, and "barricas de
+envejecimiento" could be read as the cellars' cask complement rather than an audited
+stock count. Taken at 165k central, 120–180k.
+
+**France — official flow, modelled stock, ~100,000 casks.** The INAO's Commission
+Nationale note on the Whisky Français GI application (séance of 7 Jun 2023,
+`https://extranet.inao.gouv.fr/fichier/COMNAT-EDV-20230607-Note-Whisky-Fran%C3%A7ais.pdf`)
+is the best official document any European country has: ~100 active distilleries plus
+~10 éleveurs-affineurs; **20,000 hl of pure alcohol of French whisky produced in 2020**
+(vs ~500 hl in 2000, 14,000 hl in 2019); **>4,500 hl AP commercialised in 2022**; only
+about half the distilleries yet hold 3-year-old spirit; the four largest produce ~1,800
+hl AP each. The Fédération du Whisky de France (65 member companies; ~2m bottles sold
+2024, 250k exported — `https://distilnews.fr/federation-whisky-france-10-ans-indication-geographique/`)
+represents "la quasi-totalité" of production. Stock model, production-integral form
+(France is stock-building — output is ~4× sales, so withdrawal × residence would be
+structurally wrong here, the mirror of the India Part 4G case):
+cumulative production 2010–2025 ≈ 126,500 hl (linear ramp 3,000→20,000 hl to 2020)
+plus 2021–25 at ~20,000 hl/yr ±20% ≈ 100,000 hl → ~226,500 hl central (range
+150,000–250,000). Minus cumulative withdrawals ~30–40,000 hl (sales ramp 1,000→6,000
+hl/yr) and evaporation ~25–35,000 hl (2–4%/yr on young stock). Stock ≈ **8.5 / 16 / 20m
+LAA**. At 110–150 LAA per cask (French practice mixes 190–225L ex-bourbon with 300–400L
+wine and cognac wood): 57k / 123k / 182k. Central shaded to **100k (60–170k)** because
+not every distilled hectolitre is held as whisky and some producers have cut laydown.
+
+**Sweden — one published count, one bankruptcy estate, ~45,000 casks.** High Coast
+publishes actual stock: "more than 20,000 casks are maturing in the warehouses" —
+company press release, 8 Apr 2026, which also announces production cut from 200,000 to
+~70,000 LPA/yr with warehouses full
+(`https://www.highcoastwhisky.se/pressmeddelande/high-coast-distillery-adapts-for-continued-expansion`).
+Mackmyra filed for bankruptcy 19 Aug 2024
+(`https://www.svt.se/nyheter/lokalt/gavleborg/mackmyra-whisky-ansoker-om-konkurs`;
+`https://spiritsnews.se/mackmyra-i-konkurs/`); press coverage quoted ~4,500 reserved
+customer 30L casks in store, and the 2023 annual report
+(`https://mb.cision.com/Main/411/3963446/2741000.pdf`) records >24,000 personal casks
+sold since 2002 and a 49 MSEK write-down of the maturing stock — money, which rule 1
+forbids converting, so Mackmyra's own full-size stock enters as a 10–25k allowance.
+Smögen, Hven, Agitator, Norrtelje and the rest: 5–15k. Sweden **45k (35–60k)**, noting
+much of it is 30–100L casks, which inflates cask counts relative to litres.
+
+**Germany — one counted producer, a long micro tail, ~35,000 casks.** St. Kilian, the
+largest German whisky distillery, stores ~10,500 casks in 21 converted ammunition
+bunkers (~600 casks each) at Hainhaus plus ~1,030 mostly-30L customer casks on site;
+2024 production 70,000 LPA against a 2021 peak of 280,000 LPA
+(`https://fosm.de/st-kilian-destillerie-2024/`; German press put the bunker count at
+10,679 casks as of Feb 2025). The Verband Deutscher Whiskybrenner counts 50+ member
+craft distilleries (`https://www.deutsche-whiskybrenner.de/`); total German whisky
+producers run into the hundreds, nearly all fruit-brandy-scale. Tail allowance 15–35k
+(Slyrs, Finch, Hercynian in the low thousands each; micros in the dozens). Germany
+**35k (25–50k)**.
+
+**Denmark — flow-modelled, ~22,000 casks.** Stauning: Diageo/Distill Ventures-funded
+expansion to 24 stills and 750,000 LPA capacity
+(`https://www.masterofmalt.com/distilleries/stauning/`;
+`https://stauningwhisky.com/pages/distillery`), scaled back ~25% of staff after
+Diageo's exit (`https://www.thespiritsbusiness.com/2025/04/stauning-cuts-jobs-as-diageo-exits/`).
+No cask count published anywhere we could find. At an assumed 300–500k LPA/yr actual
+2018–2024, stock ≈ 2m LAA ≈ 15–25k casks; Thy, Fary Lochan, Nyborg, Copenhagen and the
+rest add 3–7k. Denmark **22k (15–30k)**.
+
+**Netherlands — back-calculated from an evaporation disclosure, ~7,000 casks.**
+Zuidam/Millstone's profile states warehouse evaporation of 4–6%/yr, "approximately 125
+litres per day" (`https://www.whisky.com/whisky-database/distilleries/details/zuidam.html`).
+125 L/day × 365 ≈ 45,600 L/yr; at 4–6% that implies ~760–1,140k litres in wood ≈
+3,800–5,700 × 200L casks. Undated database figure, so held loosely. NL incl. Kampen
+and others: **7k (4–10k)**.
+
+**Rest of the continent — allowance, ~30,000 casks.** Austria's and Switzerland's
+micro clusters, Finland (Kyrö, Teerenpeli), Italy (Puni), Belgium (Owl), Czechia
+(Gold Cock), plus everything unnamed: **30k (20–50k)**. Pure judgment, said plainly.
+
+**Sum:** central 165+100+35+45+22+7+30 = **404k ≈ 0.4m casks**. Low: 120+60+25+35+15+4+20
+= 279k ≈ **0.25m**. High: 180+170+50+60+30+10+50 = 550k ≈ **0.55m**.
+
+### Grade decision — Europe
+
+**Producer.** The definition requires one or more producers publishing actual filled
+stock with the national total an inferred allowance: DYC (170k, trade-reported), High
+Coast (20k+, company-published, 2026) and St. Kilian (~10.5k, counted, 2024–25) clear
+that bar, and the French component sits on an official INAO flow series. The weakness,
+admitted: **~40% of the central number hangs on one 2019 Spanish trade figure** that
+has never been re-reported and might describe cellar complement rather than filled
+stock. If DYC were half full, Europe's central drops to ~0.32m — inside the stated range.
+
+## Taiwan: a model instead of a shrug
+
+**What exists.** Kavalan publishes capacity, not stock: third maturation warehouse
+completed 2024, taking storage capacity to 300,000+ casks; production >10m bottles/yr
+(`https://en.wikipedia.org/wiki/Kavalan_Distillery`). Whisky.com's database adds that
+the 2024 warehouse roughly doubled the space of the first two combined
+(`https://www.whisky.com/whisky-database/distilleries/details/kavalan-yuan-shan-distillery.html`)
+— which implies warehouses 1–2 hold ~100k and were near full when the build was
+justified. TTL's Nantou/Omar distillery was visit-reported at **4,500 casks on site**
+in racked warehouses, 180–225L bourbon and sherry wood, 6–7%/yr angel's share, typical
+4–5-year maturation (`https://www.whiskygeeks.sg/2017/12/19/taiwanese-whisky-omar-distillery/`;
+`http://www.whisky-distillery.net/www.whisky-distilleries.net/Asia/Seiten/Nantou.html`).
+No official Taiwanese stock series exists; TTL's public reporting is financial.
+
+**Withdrawal × residence (Kavalan).** Withdrawals: 10m+ bottles × 0.7L at 40–46%
+average strength = **2.8–3.2m LAA/yr**. Residence: subtropical maturation, core range
+4–8 years, taken at **4 / 5 / 6**. Stock = 11.2 / 14.5 / 19.2m LAA. LAA per cask:
+Kavalan's mix runs 200L ex-bourbon through 225–300L wine barriques to 500L sherry
+butts, but subtropical evaporation of ~10%/yr strips mid-maturation casks hard —
+**130 / 110 / 95 LAA** (high per-cask pairs with the low-stock case):
+
+| Case | Arithmetic | Casks |
+|---|---|---|
+| Low | 11.2m / 130 | **86k** |
+| Central | 14.5m / 110 | **132k** |
+| High | 19.2m / 95 | **202k** |
+
+Capacity cross-check, never counted: 132k central is ~45% of the 300k+ post-2024
+capacity, and consistent with warehouses 1–2 (~100k) being full by 2023. Add Nantou
+(4.5k floor in 2017, grown since: 5 / 10 / 15k) and the micro tail (Holy Distillery
+and others, 1–3k): **91k / 144k / 220k → 0.15m central, range 0.1–0.25m.** The prior
+0.3m high assumed Kavalan could be at capacity; the model says it is not.
+
+### Grade decision — Taiwan
+
+**Dark, still.** The only published filled-stock figure in the country is a 2017 blog
+visit report covering ~3% of the estimate; the dominant producer publishes capacity
+only. Producer grade on that basis would be exactly the association-tile mistake India
+Part 4G corrected. What improved is the basis — a stated model with arithmetic instead
+of "inferred from warehouse footprint" — not the evidence class. Weaknesses: the
+bottle-count is a "10,000,000+" infobox figure of uncertain vintage; average residence
+and per-cask LAA are assumptions; Nantou's growth since 2017 is a guess.
+
+## South Africa: same number, better dated
+
+**The anchor, re-dated.** The 150,000-cask James Sedgwick figure traces to a dated
+site visit: 20 Nov 2018, "Five warehouses are at all times holding 150 000 casks with
+maturing whisky", production 10m LAA/yr, angel's share ~5%/yr, then Distell-owned
+(`https://whiskyadventurer.com/the-james-sedgwick-distillery/`). The post-merger
+corroboration: Maltspedia's current profile describes **"seven large racked warehouses
+holding over 150,000 casks"** under Heineken Beverages ownership, 9m litres/yr
+(`https://maltspedia.com/distilleries/james-sedgwick-distillery/`). Distell was folded
+into Heineken Beverages in 2023 (the profile dates the operational merger 2024). So the
+figure now appears on both sides of the ownership change, with the warehouse count
+rising 5 → 7 — consistent with stock held or grown, not run down.
+
+**Throughput tension, admitted rather than resolved.** 10m LAA/yr of production
+against 150k casks (~16–20m LAA) implies very short average residence. The likely
+resolution is that Sedgwick historically distilled grain spirit for Distell blends
+sold young or unaged, so whisky-cask residence and total distillation are not the same
+series — but no source splits them.
+
+**The craft tail.** Boplaas, Drayman's, Incendo and the rest are real but small; no
+stock disclosure was found for any of them (Boplaas was searched for and not found —
+said plainly). Allowance ≤10k casks.
+
+**Number: unchanged. 0.15m central, 0.1–0.2m, producer.** What changed is honesty:
+"eight years stale, single source" becomes "a 2018 dated count corroborated by an
+undated post-2023 profile, neither company-published."
+
+### Grade decision — South Africa
+
+**Producer, kept.** One site's trade-reported stock covers ~100% of the estimate —
+the same shape that earns the grade elsewhere. Weaknesses: the corroborating source
+is an unbylined aggregator; Heineken Beverages has published no stock figure of its
+own; the round 150,000 may simply be the same talking-point recycled for a decade.
+This remains the entry we would most like to be corrected on.
+
+## Part 1 effects
+
+Continental Europe +0.1m central lifts the world total from 60.25m to **60.35m ≈
+60.4m**; publicly still "approximately 60 million". Low scenario: Europe's low rises
+0.2 → 0.25m, so the mechanical low sum moves 54.69 → **54.74m**, still rounding to
+54.7. High: Europe +0.05m and Taiwan −0.05m cancel; 67.7m stands.
+
+---
+
 # Part 5. What this dataset does and does not count
 
 **The full distillery count is not a whiskey count.** The current build contains **6,197
@@ -1427,6 +1626,10 @@ stock.
 | 2026-08-09 | Canada standing stock | 4.5m, range 3.1 to 5.5m | 4.3m, range 3.9 to 5.2m | Published floor rises to 3.9m on Alberta Distillers 447k (company page) and Black Velvet ~340k (Heaven Hill, 2019); withdrawal-times-residence model centres at 3.2m and caps the high; StatCan's terminated 1946–1996 bonded-stock series added as historical anchor. Full derivation in Part 4F |
 | 2026-08-09 | Global totals | 60.5m, scenarios 53.9 to 68.0 | 60.3m, scenarios 54.7 to 67.7 | Mechanical consequence of the Canada re-derivation |
 | 2026-08-09 | India basis | IMWA "300,000+ barrels" read as a published stock floor | 0.5m, 0.3–0.9m unchanged; floor re-based on Piccadily Agro ~85k held barrels (listed-company disclosure, Apr 2026) plus Paul John ~33.5k (trade, Nov 2025); IMWA tile flagged as scope-ambiguous — its flagship member uses the same "Barrels" tile convention for warehouse capacity | Full derivation in Part 4G. Totals unmoved |
+| 2026-08-09 | Continental Europe | 0.3m, range 0.2 to 0.5m, dark | 0.4m, range 0.25 to 0.55m, producer | DYC's Segovia plant trade-reported at 170,000 aging casks (Alimarket, 2019) was missing entirely; High Coast publishes 20,000+ casks (Apr 2026), St. Kilian ~10,500 counted; France re-derived from the INAO's official flow series. Full derivation in Part 4H |
+| 2026-08-09 | Taiwan | 0.15m, range 0.1 to 0.3m, "inferred from warehouse footprint" | 0.15m, range 0.1 to 0.25m, dark, withdrawal-times-residence model | Model on Kavalan's 10m+ bottles/yr at 4–6 years' subtropical residence centres at ~144k national; 300k capacity cross-checked, never counted. High trimmed — capacity-full was never plausible. Part 4H |
+| 2026-08-09 | South Africa asOf | 2018, single source | 2018 count corroborated by post-2023 Heineken Beverages-era profile (seven warehouses, >150,000 casks); number and grade unchanged | Neither source is company-published; recycled talking-point risk flagged. Part 4H |
+| 2026-08-09 | Global totals | 60.3m, scenarios 54.7 to 67.7 | 60.4m, scenarios 54.7 to 67.7 | Mechanical consequence of the Europe re-derivation |
 
 ---
 
