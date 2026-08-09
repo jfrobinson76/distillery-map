@@ -349,7 +349,9 @@ const sum = (k: "central" | "low" | "high") =>
   ENTRIES.reduce((a, e) => a + e[k], 0);
 
 export const TOTAL = {
-  central: Math.round(sum("central") * 10) / 10,
+  // Epsilon guards the half-up convention: the entry sum can land exactly on a
+  // .x5 boundary (60.35 in Aug 2026) and float error would otherwise round it down.
+  central: Math.round(sum("central") * 10 + 1e-6) / 10,
   low: Math.round(sum("low")),
   high: Math.round(sum("high")),
 };
