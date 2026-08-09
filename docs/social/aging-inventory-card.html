@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aging inventory — LinkedIn card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Geist:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* 1200x1200 social card. Screenshot the .card element at 1x for the final asset. */
+  body { margin: 0; background: #555; display: grid; place-items: center; min-height: 100vh; }
+  /* Preview scaling only — capture the .card at 1200x1200 with ?full appended to the URL. */
+  body:not(.full) { height: 100vh; overflow: hidden; }
+  body:not(.full) .card {
+    position: fixed; left: 50%; top: 50%;
+    transform: translate(-50%, -50%) scale(min(calc(100vw / 1260px), calc(100vh / 1260px)));
+  }
+  .card {
+    width: 1200px; height: 1200px; box-sizing: border-box;
+    background: #faf6ee;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 96px 104px;
+    font-family: Geist, system-ui, sans-serif; color: #3b2314;
+    position: relative; overflow: hidden;
+  }
+  .rule { height: 6px; width: 120px; background: #c47b2b; }
+  .eyebrow {
+    margin-top: 56px; font-size: 34px; letter-spacing: 0.01em;
+    line-height: 1.45; max-width: 20ch; color: #2a2520;
+  }
+  .big {
+    font-family: Fraunces, Georgia, serif; font-weight: 700;
+    font-size: 182px; line-height: 0.95; letter-spacing: -0.02em;
+    color: #3b2314; margin: 40px 0 0 -6px;
+  }
+  .big .unit {
+    display: block; font-size: 76px; font-weight: 600; letter-spacing: 0;
+    color: #c47b2b; margin-top: 22px;
+  }
+  .sub {
+    font-size: 30px; color: #8a7e6e; margin-top: 44px; max-width: 34ch; line-height: 1.5;
+  }
+  .bar { margin-top: 60px; }
+  .bar-track { display: flex; height: 34px; border-radius: 8px; overflow: hidden; }
+  .seg-us { background: #7a3f18; }
+  .seg-scot { background: #c47b2b; }
+  .seg-rest { background: #d9a566; }
+  .bar-labels {
+    display: flex; justify-content: space-between;
+    font-size: 24px; color: #5c3a24; margin-top: 16px;
+  }
+  .footer {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 26px; color: #8a7e6e; margin-top: 64px;
+  }
+  .footer .site { color: #3b2314; font-weight: 500; }
+</style>
+</head>
+<body>
+  <script>if (location.search.includes("full")) document.body.classList.add("full");</script>
+  <div class="card">
+    <div>
+      <div class="rule"></div>
+      <div class="eyebrow">Nobody knows how much whiskey is aging on Earth. So we built the best estimate there is.</div>
+      <div class="big">60,000,000<span class="unit">casks, resting right now</span></div>
+      <div class="sub">Assembled from every published count and disclosure. The holes stay visible.</div>
+    </div>
+    <div>
+      <div class="bar">
+        <div class="bar-track">
+          <div class="seg-us" style="flex: 25;"></div>
+          <div class="seg-scot" style="flex: 22;"></div>
+          <div class="seg-rest" style="flex: 13;"></div>
+        </div>
+        <div class="bar-labels">
+          <span>United States ~25m</span>
+          <span>Scotland 22m</span>
+          <span>Everyone else ~13m</span>
+        </div>
+      </div>
+      <div class="footer">
+        <span class="site">distillerymap.org</span>
+        <span>Sources and caveats on the map</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

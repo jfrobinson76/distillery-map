@@ -128,7 +128,7 @@ across every country reads as thin/duplicate content to Google.
 
 ## Research
 
-`/whiskey-aging-inventory` — the global aging-inventory map and estimate (~58m casks).
+`/whiskey-aging-inventory` — the global aging-inventory map and estimate (~60m casks).
 Figures live in `src/lib/aging-inventory.ts` (source of truth). The reasoning, arithmetic,
 sources and dated correction log live in `docs/research/whiskey-aging-inventory-evidence.md`.
 

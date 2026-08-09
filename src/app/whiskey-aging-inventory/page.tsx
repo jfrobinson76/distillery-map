@@ -16,7 +16,7 @@ import {
 } from "@/lib/aging-inventory";
 
 const TITLE = "How Much Whiskey Is Aging in the World?";
-const DESCRIPTION = `Roughly ${TOTAL.low}–${TOTAL.high} million casks of whiskey are maturing worldwide — probably the most ever held at one time. A mapped, sourced estimate, with the data gaps left visible.`;
+const DESCRIPTION = `Best estimate: ${TOTAL.central} million casks of whiskey maturing worldwide. Source-bounded scenarios span ${TOTAL.low}–${TOTAL.high} million, with the data gaps left visible.`;
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -117,8 +117,9 @@ export default async function AgingInventoryPage() {
             ~{Math.round(TOTAL.central)} million casks
           </div>
           <div className="mt-3 text-sm" style={{ color: WOW.parchmentDark }}>
-            Plausible range {TOTAL.low}–{TOTAL.high} million. Almost certainly the largest
-            volume of whiskey ever maturing at one time.
+            Source-bounded scenarios: {TOTAL.low}–{TOTAL.high} million. The lower case
+            applies every regional low at once; it is not a statistical confidence
+            interval. Almost certainly the largest volume ever maturing at one time.
           </div>
         </div>
 
@@ -304,7 +305,8 @@ export default async function AgingInventoryPage() {
             Help us fill the gaps
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed" style={{ color: WOW.parchmentDark }}>
-            Japan is a guess. So is Canada beyond one warehouse complex in Manitoba. So is
+            Japan is a model built on one reported warehouse complex. So is Canada beyond
+            Manitoba. So is
             every distillery in Africa outside a single Western Cape site. If you work at a
             distillery and you know your own numbers, we would rather publish your figure
             than our estimate.

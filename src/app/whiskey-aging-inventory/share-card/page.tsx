@@ -78,8 +78,8 @@ export default function ShareCard() {
         </div>
       </div>
       <div style={{ marginTop: 10, fontSize: 21, color: WOW.oakLight }}>
-        Range {TOTAL.low}–{TOTAL.high} million. Almost certainly the most ever maturing at
-        one time.
+        Source-bounded scenarios {TOTAL.low}–{TOTAL.high} million. Almost certainly the
+        most ever maturing at one time.
       </div>
 
       <div style={{ marginTop: 20, marginLeft: -44, marginRight: -44 }}>
