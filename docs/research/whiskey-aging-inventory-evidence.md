@@ -53,7 +53,7 @@ of truth. If the two disagree, the module wins and this table needs updating.
 | Canada | 4.3m | 3.9 to 5.2m | Producer | Crown Royal, Hiram Walker, Alberta Distillers, Black Velvet (Part 4F) |
 | Japan | 2.3m | 1.3 to 4m | Producer | NTA throughput model; Ōmi cellar ~600k casks (Part 4E) |
 | China | 0.75m | 0.6 to 1m | Producer | Bairun 2025 AR; CADA 2023 survey |
-| India | 0.5m | 0.3 to 0.9m | Producer | Indian Malt Whisky Association |
+| India | 0.5m | 0.3 to 0.9m | Producer | Piccadily Agro FY26 disclosure; Paul John trade reporting; IMWA (Part 4G) |
 | Continental Europe | 0.3m | 0.2 to 0.5m | Dark | None published |
 | Taiwan | 0.15m | 0.1 to 0.3m | Dark | None published |
 | South Africa | 0.15m | 0.1 to 0.2m | Producer | James Sedgwick, 2018 trade reporting |
@@ -104,11 +104,14 @@ nearly 600,000 maturation casks at year-end. China Daily reported Laizhou at rou
 of domestic whisky production and oak-barrel supply. 0.6m / 0.80 = **0.75m**. Range 0.6m,
 the filed producer floor, to 1m. This is deliberately not the sum of every map marker.
 
-**India, 0.5m barrels.** IMWA publishes **300,000+ barrels**, 20+ distilleries and 15m
-litres a year of capacity. Its named members account for more than 75% of Indian
-malt-whisky revenue, but IMWA does not say whether the barrel figure is member stock or a
-national malt total. Central 0.5m treats 0.3m as a floor and adds 0.2m for non-members and
-other domestically matured whisky. Range 0.3m to 0.9m. Revenue share is not barrel share.
+**India, 0.5m barrels.** The counted anchor is now NSE-listed Piccadily Agro, which told
+investors in April 2026 it holds ~85,000 barrels at Indri; Paul John is trade-reported at
+~33,500 casks in Goa. A producer bottom-up across the 20+ malt distilleries lands at
+~235k malt casks (range 195–300k), bracketing IMWA's ambiguous "300000+ Barrels" tile —
+which may be stock or capacity, since its flagship member uses the same convention for
+capacity. Central 0.5m = ~0.3m domestically maturing malt + ~0.15m allowance for matured
+grain whisky and drift, rounded up. Range 0.3m to 0.9m. Full derivation in Part 4G.
+Revenue share is not barrel share, and sales are not stock.
 
 ---
 
@@ -832,6 +835,191 @@ counts anything; not "estimate" — no named commercial report exists for Canada
 
 ---
 
+# Part 4G. India derivation — 9 Aug 2026
+
+The India entry stays at **0.5m casks, range 0.3–0.9m, grade producer**. The headline
+does not move; what changes is what holds it up. The floor gains its first anchor that
+does not rest on an association stat tile — a listed company telling its investors a
+barrel count — and the IMWA figure itself gains a scope warning it should always have
+carried.
+
+## What the IMWA figure actually is
+
+The Indian Malt Whisky Association site (`https://indianmaltwhisky.org/`, accessed
+9 Aug 2026) presents six stat tiles, quoted verbatim: **"20+" Distilleries · "300000+"
+Barrels · "15+" Capacity (Million ltrs. per year) · "100+" Expressions · "300+" Awards ·
+"80+" Export to Countries**. The barrel tile's label is one word, "Barrels" — no verb, no
+date, no scope. The association was incorporated 8 July 2024 and launched publicly on
+20 March 2025 (just-drinks; The Print/ANI); the figures have not visibly been updated
+since. Six named members — Amrut, John Distilleries, Radico Khaitan, Piccadily Agro,
+Diageo India, Alcobrew — are said to account for more than 75% of Indian malt-whisky
+*revenue*.
+
+**The new caution:** Piccadily's own 2024 investor presentation uses the identical
+stat-tile convention for warehouse **capacity** — "India's largest independent malt
+warehousing capacity: 45,000+ Barrels with holding capacity of 10+ Mn liters of spirit"
+(≈222L per barrel). And Piccadily's capacity (100,000) demonstrably exceeds its filled
+stock (~85,000). So the IMWA tile has three possible readings — member filled stock,
+national malt total, or member barrel capacity — and the site chooses none of them.
+Treating 300,000 as a hard published stock floor, as the previous entry did, overstated
+its quality.
+
+## Listed-company disclosures — the new floor
+
+**Piccadily Agro (NSE: PICCADIL, BSE: 530305), Indri, Haryana.** Q4 FY26 results
+(board meeting 28 Apr 2026, earnings call 29 Apr 2026, via ScanX/MarketsMojo coverage):
+the company **"currently holds approximately 85,000 barrels and plans to increase this
+to 100,000 barrels in the current year"**; **83,800 barrels were procured in FY26**;
+warehouse capacity is being scaled from 45,000 to 100,000 barrels by March 2027; malt
+distillation capacity rose from 12 to 30 KLPD during 2025. This is an investor-facing
+statement by a listed company, the strongest single India number available.
+
+**Radico Khaitan (NSE: RADICO, BSE: 532497), Rampur, UP.** No barrel count published
+anywhere. The company states Rampur has "one of the largest malt spirit maturation
+facilities with a capacity of 2.6 million litres per annum" (company site; Feb 2026
+investor presentation: Rampur 104.4m litres total capacity, of which 2.6m is malt).
+That is an annual **flow**, not stock, and is not converted into a barrel count — it is
+used only to discipline an inference below.
+
+**United Spirits / Diageo India (Godawan, Alwar; Epitome Reserve)** and **Allied
+Blenders (Iconiq)**: nothing quantitative published on casks or maturation capacity.
+
+**Private producers with trade-reported numbers:**
+- **Paul John / John Distilleries, Goa:** "up to 30,000 casks are maturing in a total
+  of five warehouses" plus ~3,500 casks in underground cellars — Whisky Advocate,
+  17 Nov 2025. Production capacity doubled from 1.5m to 3m litres of alcohol a year in
+  2024 (The Drinks Business / The Spirits Business, Aug 2024).
+- **Amrut, Bengaluru:** no current count. A 2013 interview reported 4,000 barrels
+  (Business Standard); distillation capacity rose from 0.9m to ~1.4m litres a year from
+  April 2025 (Ambrosia, Apr 2025).
+
+**Counted + trade-reported floor: 85,000 + 33,500 = 118,500 casks across two of the
+20+ distilleries.** Small, but it is the first India floor independent of the IMWA tile.
+
+## Method A: withdrawal × residence
+
+**Step 1 — withdrawals.** CIABC data: Indian-origin single malts sold 345,000 9-litre
+cases domestically in 2023 (53% of the ~675,000-case single-malt market — the year they
+first outsold Scotch single malts in India), ~400,000 in 2024, and **500,000 in 2025**
+(Business Standard, 26 Jul 2026). 500,000 × 9L = 4.5m litres bottled at ~44% average
+ABV ≈ **2.0m LPA**. Exports (Amrut and Paul John are export-led; IMWA claims 80+
+countries): assumed +0.3 / +0.6 / +1.0m LPA. Domestically matured malt blended into
+premium IMFL: assumed +0.3 / +0.7 / +1.5m LPA. W = **2.6 / 3.3 / 4.5m LPA**
+(low- / central / high-stock case).
+
+**Step 2 — residence.** IMWA's voluntary standard sets a three-year minimum; core
+ranges run 3–7 years old (Paul John's core span is stated as "3 to 7 year old");
+tropical angel's share is ~8%/yr in Goa (Whisky Advocate: "an astounding 8% average"
+vs Scotland's 2%) and commonly quoted at 10–12% inland. Paul John's own line — "one
+year in India is equivalent to four years" — is the mechanism that keeps residence
+short. Assumed **3 / 4 / 5.5 years**.
+
+**Step 3 — casks.** ~200–222L barrels (Piccadily's own ratio: 45,000 barrels ≈ 10m
+litres) filled at ~62.5% ≈ 125 LPA at fill, falling fast at 8–12%/yr evaporation.
+Working mid-life figure **105 / 95 / 85 LPA per cask** (leaner casks pair with the
+long-residence case).
+
+| Case | Arithmetic | Casks |
+|---|---|---|
+| Low | 2.6m × 3 = 7.8m LPA ÷ 105 | **74k** |
+| Central | 3.3m × 4 = 13.2m LPA ÷ 95 | **139k** |
+| High | 4.5m × 5.5 = 24.8m LPA ÷ 85 | **291k** |
+
+Steady state centres at ~140k — barely above the two-site counted floor and far below
+the bottom-up. **Same failure direction as Japan and Canada**, and here it is provable:
+the category is growing 25–75% a year, and Piccadily alone procured 83,800 barrels in
+FY26 while the entire country's single-malt withdrawals were ~500,000 cases ≈ 22–25k
+cask-yields. Laydown is running perhaps three to four times disgorgement. A steady-state
+model measures the past, not the warehouse; per the Canada precedent, reported stock
+wins.
+
+## Method A′: laydown-side check
+
+IMWA's capacity tile: 15+ million litres a year. Members' stated nameplates reconcile —
+Piccadily 30 KLPD ≈ 9–10m L/yr (at ~330 operating days), Paul John 3m, Rampur 2.6m,
+Amrut 1.4m ≈ 16m across four members' *current* (post-expansion) figures. At 60–80%
+utilisation that fills roughly 45–60k barrels a year at ~200L, against ~20–25k
+cask-yields disgorged: net stock growth of ~25–40k casks a year. Integrating the ramp
+(capacity was perhaps a third of today's before 2019–2021) supports a standing malt
+stock in the **200–350k band by mid-2026**. Consistent with reading the IMWA tile as
+stock; also consistent with it being capacity that fills are rapidly catching.
+
+## Method B: producer bottom-up
+
+| Producer | Casks | Basis |
+|---|---|---|
+| Piccadily (Indri) | **~85k** | Counted — listed-company investor disclosure, Apr 2026 |
+| Paul John (Goa) | **~33.5k** | Trade-reported, Nov 2025 |
+| Rampur (Radico) | 37–62k, central 50k | Inferred: 2.6m L/yr maturation intake × 3–5 yr ÷ ~210L |
+| Amrut | 17–26k, central 20k | Inferred: 0.9m L/yr × 4–6 yr ÷ ~210L |
+| Diageo India, Alcobrew, non-members (Mohan Meakin, Khoday's, Kamet/Peak Spirits, craft) | 25–75k, central 45k | Allowance, nothing published |
+
+Sum: low ~195k, central **~235k**, high ~300k domestically maturing malt casks. Only
+118.5k of that is counted or reported; the rest is flow inference and says so. The IMWA
+tile (300k+) sits at the very top of this range — read it either as a stock claim
+slightly ahead of what member disclosures can support, or as a capacity figure in the
+Piccadily convention. Either way, domestic malt sits at **0.2–0.35m casks**.
+
+## Reconciliation and the number
+
+- **Malt: central ~0.3m.** Bottom-up central 235k, shaded up because every dated anchor
+  is pre-mid-2026 in a market adding ~25–40k casks net a year, and because the Rampur
+  and Amrut inferences deliberately ignore pre-2019 cumulative laydown (Rampur has
+  matured malt for its blends since the 1990s).
+- **Non-malt matured whisky: allowance 0.05–0.3m, central ~0.15m.** Matured Indian
+  grain whisky inside premium IMFL (any product labelled "matured" triggers FSSAI's
+  one-year rule) plus experimental stock. Nothing published by anyone; this is the
+  weakest line in the entry.
+- **Central 0.5m** = 0.3 + 0.15, rounded up within the honesty band for snapshot drift.
+  A central of 0.45m would also be defensible; 0.5m is kept because the counted anchors
+  are all pre-mid-2026 lower bounds in the fastest-growing laydown market on the map.
+- **Low 0.3m.** The strict counted-plus-minimal-inference floor is ~0.25m (118.5k
+  counted + minimal inferences + 0.05m allowance). 0.3m is kept as the low because it
+  only requires the IMWA tile to be directionally right about stock *or* fills to have
+  largely caught the capacity it may describe — and every flow anchor says they have.
+- **High 0.9m.** Requires the IMWA tile to be member-only stock with a substantial
+  non-member malt tail *and* an unreported matured-grain inventory near 0.3m. Nothing
+  found supports more.
+
+Sales-to-stock, restated with the new anchors: India moves ~141m cases of whisky a year
+and holds ~0.8% of the world's maturing casks, because the bulk of a blend is un-casked
+neutral spirit, the imported Scotch malt component is already counted in Scotland's 22m,
+and what India does mature turns over in 2–4 years at 8–12%/yr evaporation.
+
+## Weaknesses, admitted
+
+1. **The IMWA tile's scope is unknown.** One word, "Barrels" — and the flagship
+   member's own materials use that convention for capacity. The 300k "published floor"
+   in the previous entry was weaker than it looked; the floor now rests on Piccadily
+   and Paul John instead.
+2. **"Holds approximately 85,000 barrels" is earnings-call language via financial-news
+   aggregators.** "Holds" may include procured-but-unfilled barrels (83,800 were bought
+   in FY26 during a capacity ramp), and the primary transcript has not been checked.
+   At 12 KLPD pre-2025, cumulative fills since Indri's ~2017–18 laydown support a
+   filled count near 85k, but do not prove it.
+3. **The grain-whisky allowance (~0.15m central) has no anchor at all.** No Indian
+   producer publishes matured grain stock. 0.05–0.3m is judgment.
+4. **Unit ambiguity throughout.** Indian disclosures mix litres of spirit, LPA and
+   KLPD nameplate; conversions assumed ~200–222L casks and ~330 operating days.
+5. **The flow model is structurally invalid here** (steady state in a 25–75%/yr growth
+   market) and is used only as a lower-bound discipline, per the Canada precedent.
+
+## Grade decision
+
+Producer, now properly earned rather than borrowed from an association tile: one listed
+company disclosing a held-barrel count to investors, a second site trade-reported, member
+fill-rates published, and a national total that is an inferred allowance disciplined by a
+throughput model — the same shape as Canada (Part 4F) and Japan (Part 4E).
+
+## 🔴 Standing traps, reaffirmed from Part 4
+
+Do not say Indian whisky is molasses-based (the big three are grain-ENA based; molasses
+persists in the value tier). Do not say India has no whisky definition or maturation rule
+(broad FSSAI definition; one-year rule where "matured" is claimed). Do not quote the IMWA
+barrel tile as a census. Sales are not stock.
+
+---
+
 # Part 5. What this dataset does and does not count
 
 **The full distillery count is not a whiskey count.** The current build contains **6,197
@@ -931,8 +1119,30 @@ Two further points:
 - Canadian three-year legal rule: `https://laws-lois.justice.gc.ca/eng/regulations/C.R.C.%2C_c._870/section-B.02.023.html`
 
 ## India
-- Indian Malt Whisky Association, 300,000+ barrels, 20+ distilleries, 15m-LPA capacity,
-  member list and voluntary definition: `https://indianmaltwhisky.org/`
+- Indian Malt Whisky Association, stat tiles ("300000+ Barrels", "20+" distilleries,
+  "15+" million litres/yr capacity — label gives no scope), member list and voluntary
+  definition: `https://indianmaltwhisky.org/`
+- IMWA incorporation (8 Jul 2024) and public launch (20 Mar 2025):
+  `https://www.just-drinks.com/news/indian-malt-whisky-trade-body/` and
+  `https://theprint.in/ani-press-releases/indian-malt-whisky-association-imwa-formed-to-redefine-indias-global-standing-in-premium-malt-whiskies/2557167/`
+- Piccadily Agro Q4 FY26 (board 28 Apr 2026): "holds approximately 85,000 barrels",
+  83,800 barrels procured in FY26, capacity 45,000→100,000 by Mar 2027, malt 12→30 KLPD:
+  `https://scanx.trade/stock-market-news/companies/piccadily-agro-industries-reports-record-inr1-143-crores-revenue-in-fy26-targets-60-70-growth/39248202`
+- Piccadily Agro Investor Presentation 2024: "45,000+ Barrels with holding capacity of
+  10+ Mn liters of spirit" — capacity phrased as a barrels tile:
+  `https://www.picagro.com/themes/custom/investor/images/Investor%20Presentation%202024.pdf`
+- Radico Khaitan, Rampur malt maturation facility capacity 2.6m litres per annum:
+  `https://radicokhaitan.com/key-verticals/manufacturing/rampur-distillery/`
+- Paul John: "up to 30,000 casks... in five warehouses" + ~3,500 underground; 8%/yr
+  angel's share in Goa (Whisky Advocate, 17 Nov 2025):
+  `https://whiskyadvocate.com/paul-john-indian-single-malt-whisky-explained`
+- Paul John capacity doubled 1.5m→3m litres of alcohol/yr (Aug 2024):
+  `https://www.thedrinksbusiness.com/2024/08/paul-john-doubles-indian-whisky-production/`
+- Amrut capacity 0.9m→~1.4m litres/yr from Apr 2025 (Ambrosia):
+  `https://www.ambrosiaindia.com/2025/04/amrut-distilleries-expanding-capacity-and-eyeing-partnership/`
+- CIABC single-malt volumes: 345k Indian-origin cases 2023 (53% of ~675k), 500k in 2025:
+  `https://www.business-standard.com/amp/industry/news/indian-single-malts-beat-global-brands-capture-53-sales-in-2023-report-124010800414_1.html` and
+  `https://www.business-standard.com/industry/news/indian-single-malt-sales-hit-500k-in-2025-local-firms-dominate-ciabc-126072600137_1.html`
 - FSSAI Alcoholic Beverages Regulations, Version V, current broad whisky and "matured"
   rules: `https://fssai.gov.in/upload/uploadfiles/files/Comp_Alcoholic_Beverages_V_04_12_2025.pdf`
 - The Whiskey Wash, Indian whisky overview:
@@ -1216,6 +1426,7 @@ stock.
 | 2026-08-09 | Global totals | 59.7m, scenarios 53.4 to 66.5 | 60.5m, scenarios 53.9 to 68.0 | Mechanical consequence of the Japan re-derivation |
 | 2026-08-09 | Canada standing stock | 4.5m, range 3.1 to 5.5m | 4.3m, range 3.9 to 5.2m | Published floor rises to 3.9m on Alberta Distillers 447k (company page) and Black Velvet ~340k (Heaven Hill, 2019); withdrawal-times-residence model centres at 3.2m and caps the high; StatCan's terminated 1946–1996 bonded-stock series added as historical anchor. Full derivation in Part 4F |
 | 2026-08-09 | Global totals | 60.5m, scenarios 53.9 to 68.0 | 60.3m, scenarios 54.7 to 67.7 | Mechanical consequence of the Canada re-derivation |
+| 2026-08-09 | India basis | IMWA "300,000+ barrels" read as a published stock floor | 0.5m, 0.3–0.9m unchanged; floor re-based on Piccadily Agro ~85k held barrels (listed-company disclosure, Apr 2026) plus Paul John ~33.5k (trade, Nov 2025); IMWA tile flagged as scope-ambiguous — its flagship member uses the same "Barrels" tile convention for warehouse capacity | Full derivation in Part 4G. Totals unmoved |
 
 ---
 
@@ -1344,7 +1555,11 @@ Ordered by how likely it is to have moved.
    is obtainable. Still the only Irish number available
 5. **Bairun and CADA.** Laizhou's annual filing moves quickly; compare it with the next
    national association survey and do not add them
-6. **IMWA.** Clarify whether 300,000+ covers members or the whole Indian malt category
+6. **India.** Re-based 9 Aug 2026 (Part 4G): the floor is now Piccadily's listed-company
+   ~85k held barrels plus Paul John's trade-reported ~33.5k. Re-check Piccadily's next
+   earnings call (barrel count moves ~15k/yr) and whether the "holds" figure means
+   filled. Still ask IMWA whether "300000+ Barrels" is stock or capacity, member or
+   national — the tile answers none of it
 7. **English Whisky Guild.** Fastest-growing category on the map from a tiny base
 8. **Japan.** Re-derived 9 Aug 2026 (Part 4E): NTA throughput model plus the Ōmi anchor,
    now producer grade. The remaining gap is structural — new-make laydown is published

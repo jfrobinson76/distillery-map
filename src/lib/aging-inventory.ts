@@ -186,12 +186,12 @@ export const ENTRIES: Entry[] = [
     dy: -44,
     anchor: "middle",
     basis:
-      "The Indian Malt Whisky Association publishes 300,000+ barrels across an industry it describes as 20+ distilleries. Its named members account for more than 75% of Indian malt-whisky revenue. The 0.5m central estimate treats 300,000 as a published floor and adds an explicit allowance for non-members and other domestically matured whisky.",
-    source: "Indian Malt Whisky Association",
+      "Two sites are independently anchored: NSE-listed Piccadily Agro told investors in April 2026 it holds ~85,000 barrels at Indri, and Paul John is trade-reported at ~33,500 casks in Goa. A producer bottom-up across the 20+ malt distilleries lands at ~235k malt casks, bracketing the Indian Malt Whisky Association's 300,000+ barrel figure. The 0.5m central is ~0.3m domestically maturing malt plus an allowance for matured grain whisky and non-members.",
+    source: "Piccadily Agro investor disclosures; Paul John trade reporting; Indian Malt Whisky Association",
     sourceUrl: "https://indianmaltwhisky.org/",
-    asOf: "Accessed Aug 2026",
+    asOf: "Piccadily Apr 2026; IMWA accessed Aug 2026",
     caveat:
-      "The association does not say whether 300,000 is member stock or a national malt-whisky total, and revenue share is not barrel share. India still outsells every whisky nation because the broad FSSAI whisky category may include neutral or rectified spirit and does not require all whisky to mature; only a product labelled 'matured' triggers the one-year rule. IMWA's three-year, under-700L malt standard is voluntary and narrower.",
+      "IMWA's figure is labelled simply 'Barrels' — it does not say stock or capacity, member or national, and its flagship member uses the same convention for warehouse capacity. India still outsells every whisky nation because the broad FSSAI whisky category may include neutral or rectified spirit and does not require all whisky to mature; only a product labelled 'matured' triggers the one-year rule, and tropical evaporation of 8–12% a year turns what is laid down over in 2–4 years.",
   },
   {
     id: "china",
