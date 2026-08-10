@@ -114,12 +114,13 @@ export default async function AgingInventoryPage() {
             Best estimate, August 2026
           </div>
           <div className="mt-2 font-[family-name:var(--font-fraunces)] text-4xl font-bold leading-none sm:text-6xl">
-            ~{Math.round(TOTAL.central)} million casks
+            {TOTAL.central} million casks
           </div>
           <div className="mt-3 text-sm" style={{ color: WOW.parchmentDark }}>
             Source-bounded scenarios: {TOTAL.low}–{TOTAL.high} million. The lower case
             applies every regional low at once; it is not a statistical confidence
-            interval. Almost certainly the largest volume ever maturing at one time.
+            interval. Scotland and America both describe their own maturing stocks as
+            record highs, and they hold most of the world&apos;s.
           </div>
         </div>
 

@@ -35,81 +35,75 @@ function fmt(m: number) {
   return `${Math.round(m * 1000)}k`;
 }
 
+/** One barrel seen end-on: staved circle with a hoop ring and a bung dot. */
+function Barrel({ cx, cy, r, fill }: { cx: number; cy: number; r: number; fill: string }) {
+  return (
+    <g>
+      <circle cx={cx} cy={cy} r={r} fill={fill} stroke="#3b2314" strokeOpacity={0.55} strokeWidth={1} />
+      {r >= 4.5 && (
+        <>
+          <circle cx={cx} cy={cy} r={r * 0.62} fill="none" stroke="#faf6ee" strokeWidth={0.9} strokeOpacity={0.5} />
+          <circle cx={cx} cy={cy} r={Math.max(0.8, r * 0.13)} fill="#faf6ee" fillOpacity={0.55} />
+        </>
+      )}
+    </g>
+  );
+}
+
 /**
- * A traditional stacked-cask mound: a triangle built out of rows, with the row
- * divided into individual cask ends. Row i holds i+1 casks, which is how these
- * things were drawn on old trade maps.
+ * A mound built from actual casks: pyramid rows of barrel ends, the way old
+ * trade maps drew warehouse stocks. The footprint stays area-proportional
+ * (w x h from the sqrt rule); barrel size adapts per mound so each stack
+ * stays legible — the honesty lives in the footprint, not the barrel count.
  */
 function BarrelMound({ entry }: { entry: Entry }) {
   const [x, baseY] = project(entry.lon, entry.lat);
   const w = moundWidth(entry.central);
   const h = w * RATIO;
-  const apexY = baseY - h;
   const fill = TIERS[entry.tier].color;
 
-  // Rows scale with the mound so tiny ones don't turn into mush.
-  const rows = Math.max(2, Math.min(9, Math.round(h / 9)));
-  const rowH = h / rows;
-  const halfAt = (y: number) => (w / 2) * ((y - apexY) / h);
+  const shadow = (
+    <ellipse
+      cx={x}
+      cy={baseY + 1.5}
+      rx={w / 2 + 2}
+      ry={Math.max(2, w * 0.05)}
+      fill="#3b2314"
+      opacity={0.13}
+    />
+  );
 
-  const bands = [];
-  for (let i = 0; i < rows; i++) {
-    const yTop = apexY + i * rowH;
-    const yBot = apexY + (i + 1) * rowH;
-    const tHalf = halfAt(yTop);
-    const bHalf = halfAt(yBot);
-    const d = `M${x - tHalf} ${yTop}L${x + tHalf} ${yTop}L${x + bHalf} ${yBot}L${
-      x - bHalf
-    } ${yBot}Z`;
-
-    // Cask divisions inside the row — only when there is room to see them.
-    const casks = i + 1;
-    const ticks = [];
-    if (rowH > 5) {
-      for (let j = 1; j < casks; j++) {
-        const f = j / casks;
-        ticks.push(
-          <line
-            key={j}
-            x1={x - tHalf + 2 * tHalf * f}
-            y1={yTop}
-            x2={x - bHalf + 2 * bHalf * f}
-            y2={yBot}
-            stroke="#faf6ee"
-            strokeWidth={0.9}
-            strokeOpacity={0.55}
-          />
-        );
-      }
-    }
-
-    bands.push(
-      <g key={i}>
-        <path d={d} fill={fill} fillOpacity={i % 2 === 0 ? 1 : 0.86} />
-        {ticks}
+  // Tiny entries are a single cask — drawn to true scale, which is the point.
+  if (w <= 20) {
+    return (
+      <g>
+        {shadow}
+        <Barrel cx={x} cy={baseY - w / 2} r={w / 2} fill={fill} />
       </g>
     );
   }
 
+  const d = w / Math.max(3, Math.round(w / 17));
+  const r = d / 2;
+  const rowStep = d * 0.85; // rows nest into the gaps below
+  const rows = Math.max(2, Math.round(h / rowStep));
+
+  const barrels = [];
+  for (let k = 0; k < rows; k++) {
+    const y = baseY - r - k * rowStep;
+    const rowW = w * (1 - k / rows);
+    const count = Math.max(1, Math.round(rowW / d));
+    const startX = x - ((count - 1) * d) / 2;
+    for (let j = 0; j < count; j++) {
+      barrels.push(<Barrel key={`${k}-${j}`} cx={startX + j * d} cy={y} r={r} fill={fill} />);
+    }
+    if (count === 1) break;
+  }
+
   return (
     <g>
-      {/* Ground shadow so the mound sits on the map rather than floating. */}
-      <ellipse
-        cx={x}
-        cy={baseY + 1.5}
-        rx={w / 2 + 2}
-        ry={Math.max(2, w * 0.05)}
-        fill="#3b2314"
-        opacity={0.13}
-      />
-      {bands}
-      <path
-        d={`M${x} ${apexY}L${x + w / 2} ${baseY}L${x - w / 2} ${baseY}Z`}
-        fill="none"
-        stroke="#3b2314"
-        strokeOpacity={0.45}
-        strokeWidth={1}
-      />
+      {shadow}
+      {barrels}
     </g>
   );
 }
