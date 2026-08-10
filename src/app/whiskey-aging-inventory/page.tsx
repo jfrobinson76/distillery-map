@@ -279,7 +279,20 @@ export default async function AgingInventoryPage() {
                     {TIERS[e.tier].label}
                   </span>
                   <span className="text-[11px]" style={{ color: WOW.muted }}>
-                    {e.source} · {e.asOf}
+                    {e.sourceUrl ? (
+                      <a
+                        href={e.sourceUrl}
+                        target="_blank"
+                        rel="noopener"
+                        className="underline decoration-dotted underline-offset-2"
+                      >
+                        {e.source}
+                      </a>
+                    ) : (
+                      e.source
+                    )}
+                    {" · "}
+                    {e.asOf}
                   </span>
                 </div>
 

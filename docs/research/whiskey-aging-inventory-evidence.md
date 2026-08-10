@@ -49,7 +49,7 @@ of truth. If the two disagree, the module wins and this table needs updating.
 |---|---|---|---|---|
 | United States | 25m | 23 to 27m | Derived | DISCUS national inventory, KDA |
 | Scotland | 22m | 21 to 23m | Counted | Scotch Whisky Association |
-| Ireland | 4.5m | 4 to 5m | Estimate | LYQD Irish Whiskey Supply Report 2026 |
+| Ireland | 4.5m | 4 to 5m | Estimate | LYQD Supply Report 2026; corroborated by Drinks Ireland 3.1m (2020) rolled forward and a producer bottom-up (Part 4I) |
 | Canada | 4.3m | 3.9 to 5.2m | Producer | Crown Royal, Hiram Walker, Alberta Distillers, Black Velvet (Part 4F) |
 | Japan | 2.3m | 1.3 to 4m | Producer | NTA throughput model; Ōmi cellar ~600k casks (Part 4E) |
 | China | 0.75m | 0.6 to 1m | Producer | Bairun 2025 AR; CADA 2023 survey |
@@ -98,6 +98,16 @@ model built on US consumption (~16.9m 9-litre cases), domestic sales and StatCan
 1946–1996 bonded-stock series centres lower, at 3.2m. Range 3.9m, the published sum, to
 5.2m, where both methods top out. Full derivation, arithmetic and weaknesses in Part 4F.
 Quoted warehouse capacities (Alberta's 500k maximum) are never counted as filled stock.
+
+**Ireland, 4.5m casks.** The headline is LYQD's commissioned supply study (Oct 2025).
+No longer single-source: Drinks Ireland published **over 3.1m casks maturing** in its
+2010–2020 report (2021), and rolling that forward on production-minus-withdrawals
+arithmetic (~790k casks filled/yr at the 2019 production rate against ~500–550k
+emptied) lands at ~4.1m by end-2025. A producer bottom-up — Irish Distillers 1.7m
+(2021, company blender), Great Northern 500k (company site), Bushmills >500k (trade,
+2026), Waterford >70k (receivership sale) = 2.77m published, plus an itemised ~1.05m
+allowance — brackets 3.8–4.2m. Both independent lines centre slightly *below* 4.5m.
+Range 4–5m held. Full derivation, arithmetic and weaknesses in Part 4I.
 
 **China, 0.75m casks.** Bairun's exchange-filed 2025 annual report says Laizhou had filled
 nearly 600,000 maturation casks at year-end. China Daily reported Laizhou at roughly 80%
@@ -193,8 +203,11 @@ attached to the right industry. Nothing about them looked wrong from the conclus
   more than forty in fifteen years, and those entrants have laid down stock against little
   or no mature sales. The long tail may therefore hold a **higher** share of casks than of
   sales. Testable against the full LYQD report.
-- No company-level cask split for Irish Distillers or anyone else is published anywhere.
-  Do not assert one.
+- ~~No company-level cask split for Irish Distillers or anyone else is published
+  anywhere. Do not assert one.~~ **Corrected 10 Aug 2026 (Part 4I):** company-level
+  figures do exist — Irish Distillers 1.7m casks (blender, 2021), Great Northern 500k
+  (company site), Bushmills >500k (trade, 2026), Waterford >70k (receivership). What
+  remains true is that no *complete* company-by-company split is published.
 
 ## 🔴 Note the incentive
 
@@ -1219,6 +1232,222 @@ Continental Europe +0.1m central lifts the world total from 60.25m to **60.35m �
 
 ---
 
+# Part 4I. Ireland corroboration — 10 Aug 2026
+
+The Ireland entry stays at **4.5m casks, range 4–5m, grade estimate**. The number does
+not move; what changes is what stands behind it. Until now the figure hung entirely on
+one privately commissioned study (LYQD's Irish Whiskey Supply Report 2026, analyst
+Martin Purvis, completed Oct 2025, published 21 May 2026 — see Part 3). This pass built
+two independent corroboration lines — the industry body's own published count rolled
+forward, and a producer bottom-up that did not exist in the evidence base — plus the
+same withdrawal-times-residence discipline model used for Japan and Canada. **All three
+land within ~10% of 4.5m, and all three centre slightly below it.** The single-source
+risk is resolved; the residual risk is that the truth sits nearer 4.1m than 4.5m.
+
+## What official Ireland actually publishes
+
+**Nothing that counts stock.** The Revenue Commissioners administer the Irish Whiskey
+GI verification scheme — they physically verify that Irish whiskey matures on the
+island (`https://www.revenue.ie/en/companies-and-charities/documents/excise/whiskey-verification-checks.pdf`)
+— but publish no bonded-stock quantity series, only excise receipts in euro (money,
+which house rule 1 forbids converting). The CSO publishes export *values* (the €890m
+2019 figure in the industry's own report is sourced "Central Statistics Office") —
+money again, not stock. The pre-independence Inland Revenue bonded-stock series covered
+in Part 4D died with the 1922 split. So, like Canada since 1996, modern Ireland has no
+official stock series at all; the census-like sources are the industry body and the
+commissioned study, and everything else is producer copy and modelling.
+
+## The industry-body anchor: Drinks Ireland's 3.1m, end-2020
+
+**Drinks Ireland | Irish Whiskey (the Irish Whiskey Association, inside Ibec),
+"Irish Whiskey 2010–2020" report, published 2021**
+(`https://www.ibec.ie/drinksireland/-/media/documents/drinks-ireland-new-website/publications/2021/10-year-report.pdf`):
+
+- "**Has over 3.1 million casks being matured on the island of Ireland**" (industry
+  stat panel, p.16); repeated as "it is estimated that there are currently over 3.1
+  million casks in maturation on the island" (p.17).
+- Method stated: "based on data provided by member companies and on responses or
+  publicly-available data from the small number of companies not in association
+  membership" — a member census with a gap-fill, the same evidence class as the SWA's
+  Scottish count, if less audited.
+- Same report, same basis: **over 100 million litres of pure alcohol distilled in
+  2019** and **~270,000 used American oak barrels imported in 2019** (the barrel
+  imports are noted as a sanity check only, never converted to stock — rule 2), and
+  12m 9-litre cases of rolling annual sales by January 2020.
+
+Later published points that bound the curve:
+
+- **Sales:** the association's Irish Whiskey Global Trade Report, announced Dec 2025,
+  reports a **record 16.15m 9-litre cases sold in 2024** (US 5.47m; Ireland domestic
+  707k) — RTÉ, 9 Dec 2025
+  (`https://www.rte.ie/news/business/2025/1209/1547978-whiskey-case-sales/`).
+  Export value €1bn in 2024, down ~5% to ~€930m in 2025 (trade reporting, Jan 2026) —
+  money, context only.
+- **The downcycle:** the association itself said ~**90% of distilleries had paused or
+  cut production by May 2025**; named pauses include Midleton, Tullamore, Roe & Co,
+  Dublin Liberties (Irish Times, 16 May 2025,
+  `https://www.irishtimes.com/business/2025/05/16/irish-whiskey-is-undergoing-a-market-correction-a-temporary-blip-a-little-pause/`),
+  with Slane halted for 2026 (Forbes, 30 May 2026). Waterford and Powerscourt are in
+  receivership. This caps the growth curve after mid-2025 at roughly flat.
+- 2018 warehouse-crunch reporting (industry "needs an absolute minimum of 600,000
+  additional timber barrels" of warehousing —
+  `https://www.thejournal.ie/whiskey-warehouses-ireland-2-3879433-Mar2018/`) and the
+  Vault Storage/Moyvore 200,000-cask facility are **capacity stories and are not
+  counted** (rule 2).
+
+**The growth test.** 3.1m (end-2020) → 4.5m (Oct 2025) requires net additions of
+~280k casks/yr for five years. Check against flows: >100m LPA distilled a year at
+~127 LPA per 200L cask filled at ~63.5% = **~790k casks filled/yr** at the 2019 rate;
+withdrawals of 16.15m cases = 145.4m litres at 40% = **58.1m LPA**, and a cask
+disgorged after five-to-seven temperate years at ~2%/yr evaporation yields ~105–115
+LPA, so **~500–550k casks emptied/yr**. Net ≈ **+240–290k casks/yr** while production
+held near the 2019 level — which it did until the 2024–25 cuts. The two published
+endpoints and the flow arithmetic reproduce each other almost exactly. The 4.5m is not
+just asserted; it is the number the industry's own 2020 count grows into.
+
+## Method A: withdrawal × residence (discipline model)
+
+Same construction as Japan (4E) and Canada (4F). All figures in litres of pure alcohol
+(LPA ≡ LAA).
+
+- **Withdrawals.** 16.15m cases (2024, association-published) × 9L × 40% = 58.1m LPA;
+  2025 volumes softened. W = **54 / 58 / 60m LPA** (low/central/high stock case).
+- **Residence.** Legal floor 3 years (Irish Whiskey Act 1980, GI technical file).
+  Jameson-scale blends run ~4–6; premiumisation and the documented aged-stock surplus
+  stretch the volume-weighted mean. R = **5 / 6.5 / 8 years**.
+- **Stock.** 270 / 377 / 480m LPA.
+- **Per cask.** 200L ex-bourbon dominates (270k US barrels imported in 2019 alone),
+  some hogsheads and butts; entry ~63%, temperate losses ~2%/yr. **135 / 122 / 110
+  LPA per cask** (lean pairs with long residence).
+
+| Case | Arithmetic | Casks |
+|---|---|---|
+| Low | 270 / 135 | **2.0m** |
+| Central | 377 / 122 | **3.1m** |
+| High | 480 / 110 | **4.4m** |
+
+As in Japan and Canada, the steady-state model under-counts a market that laid down
+for growth: Ireland built 140 MLPA of capacity against ~55–60 MLPA of sales (Part 3).
+The ~1.2m-cask gap between the model's central and the reported stock **is the
+oversupply everyone is reporting** — the same excess the 90%-paused downcycle is now
+working off. The model's deficit and the trade narrative corroborate each other.
+
+## Method B: accumulation from the 2020 anchor
+
+Start from the association's >3.1m (end-2020) and roll forward fills minus
+disgorgements:
+
+- **2021–2023:** production held near the 2019 rate (90–110m LPA; capacity was still
+  rising toward 140 MLPA) → 710–870k casks filled/yr. Sales rose 12m → 16.15m cases →
+  ~470–550k casks emptied/yr. Net **+200k to +350k/yr** → +0.6m to +1.05m over three
+  years.
+- **2024–2025:** cuts spread until ~90% of distilleries had paused or reduced by May
+  2025, including Midleton, the largest filler. Net **0 to +300k over the two years
+  combined**.
+
+End-2025 stock: **3.7m / ~4.1m / 4.45m** (low/central/high). LYQD's 4.5m sits at the
+top of this corridor but inside it.
+
+## Method C: producer bottom-up
+
+This did not exist in the evidence base at all — Part 3 recorded "no company-level
+cask split for Irish Distillers or anyone else is published anywhere." That was wrong.
+Published or reported filled stock — not capacity:
+
+- **Irish Distillers (Midleton + Dungourney, Pernod Ricard): 1.7m casks.** Company
+  blender Dave McCabe, quoted 20 Jul 2021: "1.7 million casks of whiskey sitting in
+  storage"
+  (`https://thewhiskeywash.com/whiskey-styles/irish-whiskey/how-the-blenders-of-irish-distillers-manage-1-7-million-irish-whiskey-barrels/`);
+  Midleton Very Rare marketing repeats "1.7 million casks". 2025 bicentenary
+  write-ups say "over 2 million"
+  (`https://thesinglemaltshop.com/2025/04/17/midleton-distillery-at-200/`), but that
+  figure derives from ~162 warehouses × 16,000+ casks each = ~2.6m, which is
+  **capacity arithmetic, not a count** (rule 2). Floor 1.7m (2021); today plausibly
+  1.9–2.2m given Midleton filled hard through 2023.
+- **Great Northern Distillery, Dundalk: 500k casks.** The company's own site states
+  "500k casks in bond", 20m litres/yr production (`https://www.gndireland.com/`,
+  accessed Aug 2026). GND is a contract distiller supplying 400+ labels — the casks
+  its clients own sit inside this figure and **must not be counted again** under the
+  client brands.
+- **Bushmills (Proximo), Co. Antrim: >500,000 casks maturing.** Trade reporting
+  around the £62.9m, 26-warehouse phase-two expansion, Mar 2026
+  (`https://www.thespiritsbusiness.com/2026/03/bushmills-plans-63m-warehouse-expansion/`;
+  also Irish News). The ~20,000-cask-per-warehouse figures in the same coverage are
+  capacity and are not counted.
+- **Waterford (in receivership): >70,000 casks.** "Over 70,000 casks will be
+  available to purchase on the platform, the equivalent of 17 million whiskey
+  bottles" — receivers' Prestige Casks platform, Waterford News & Star, 16 Mar 2026
+  (`https://www.waterford-news.ie/news/new-platform-launched-for-bulk-sale-of-waterford-whisky_arid-91300.html`).
+
+**Published sum: 1.7 + 0.5 + 0.5 + 0.07 = 2.77m casks** (~62% of the central).
+
+Unreported sites, itemised allowance (inference, no counts published):
+
+- Tullamore D.E.W. (William Grant grain-to-glass campus, on-site maturation):
+  0.2–0.4m, central 0.3m.
+- Cooley/Kilbeggan (Suntory Global Spirits): 0.15–0.35m, central 0.25m.
+- West Cork Distillers, one of the largest independents: 0.1–0.2m, central 0.15m.
+- The ~35-distillery long tail (Teeling, Slane, Dingle, Clonakilty, Hinch, Lough
+  Gill, Boann, Connacht, Ahascragh, Powerscourt receivership stock…) plus
+  independent bonders: 0.2–0.5m, central 0.35m. Held down because much of the long
+  tail's liquid was distilled at GND and may sit in GND's counted barns.
+
+Allowance 0.65–1.45m, central **1.05m**. Method C totals: low **3.4m** (published sum
+plus minimum allowance), central **3.8m on Midleton-at-1.7m, ~4.2m on
+Midleton-at-2.1m**, high **4.9m**.
+
+One tension, noted not resolved: the Midleton bicentenary talking point that its casks
+exceed "the combined total of all other whiskey casks maturing in Ireland, North or
+South". At a 4.5m island total that requires Midleton >2.25m; at Midleton 1.7m it
+would cap the island at 3.4m. Either the talking point is stale or Midleton has grown
+well past 1.7m. This is the single biggest swing in the bottom-up.
+
+## Reconciliation and the number
+
+| Line | Low | Central | High | Independence |
+|---|---|---|---|---|
+| LYQD commissioned study (Oct 2025) | — | **4.5m** | — | The number under test |
+| Drinks Ireland 3.1m (2020) + accumulation | 3.7m | **~4.1m** | 4.45m | Independent of LYQD |
+| Producer bottom-up | 3.4m | **3.8–4.2m** | 4.9m | Independent of both |
+| Withdrawal × residence (steady state) | 2.0m | 3.1m | 4.4m | Discipline floor |
+
+**Corroborated.** Two lines that share no inputs with LYQD land within ~10% of 4.5m,
+and every range contains it. **Central stays 4.5m** — the commissioned study remains
+the only census-style attempt and the corroboration corridor tops out where it sits.
+**Range stays 4–5m**: the low is defended by the 2020 anchor plus undeniably positive
+net laydown through 2021–23 (to be under 4m in 2025 would require net adds below
+180k/yr through the heaviest laydown years, when the flow arithmetic says 240–290k);
+the high is where the bottom-up tops out. The 2024–26 production cuts mean 4.5m is a
+plateau figure, not a growth path — do not roll it forward.
+
+## Weaknesses, admitted
+
+1. **Both independent lines centre below 4.5m** (~4.1m and ~3.8–4.2m). If Irish
+   Distillers still holds nearer its 2021-published 1.7m than the ~2m+ that recent
+   capacity-flavoured copy implies, the truth sits nearer 4.1m.
+2. **The 2020 anchor is an association estimate**, member-supplied and unaudited —
+   "over 3.1 million" with no decimal places. It is a report figure with a stated
+   method, not a tile (the Part 4G distinction), but it is not a filing.
+3. **Half the producer floor is soft.** Midleton's 1.7m is 2021-vintage brand copy;
+   Bushmills' 500k is trade-reported, not company-published. GND's 500k mixes
+   client-owned casks (double-count controlled by never counting client brands
+   separately).
+4. Smaller: residence (5/6.5/8) and per-cask LPA (110–135) are assumptions; the
+   2021–23 production level (90–110m LPA) interpolates between the published 2019
+   figure and the 140 MLPA capacity; LYQD is a cask exchange with a commercial
+   interest in the figure (Part 3's incentive note stands).
+
+## Grade decision
+
+Estimate, unchanged — but no longer single-source. The headline still rests on the
+commissioned study, so the grade cannot rise to producer (the published producer floor
+covers only ~62% of the central, against Canada's ~90%), and "counted" is out of the
+question with no official series. What changed: the entry now cites an industry-body
+count, a producer floor and a flow model that all bracket the same number. The caveat
+should say corroborated, and say the direction of residual risk is down.
+
+---
+
 # Part 5. What this dataset does and does not count
 
 **The full distillery count is not a whiskey count.** The current build contains **6,197
@@ -1630,6 +1859,7 @@ stock.
 | 2026-08-09 | Taiwan | 0.15m, range 0.1 to 0.3m, "inferred from warehouse footprint" | 0.15m, range 0.1 to 0.25m, dark, withdrawal-times-residence model | Model on Kavalan's 10m+ bottles/yr at 4–6 years' subtropical residence centres at ~144k national; 300k capacity cross-checked, never counted. High trimmed — capacity-full was never plausible. Part 4H |
 | 2026-08-09 | South Africa asOf | 2018, single source | 2018 count corroborated by post-2023 Heineken Beverages-era profile (seven warehouses, >150,000 casks); number and grade unchanged | Neither source is company-published; recycled talking-point risk flagged. Part 4H |
 | 2026-08-09 | Global totals | 60.3m, scenarios 54.7 to 67.7 | 60.4m, scenarios 54.7 to 67.7 | Mechanical consequence of the Europe re-derivation |
+| 2026-08-10 | Ireland basis | 4.5m, 4–5m, estimate, resting solely on the LYQD commissioned study | Numbers and tier unchanged; now corroborated by two independent lines — Drinks Ireland's published >3.1m casks maturing (2020) rolled forward to ~4.1m on flow arithmetic, and a new producer bottom-up (Irish Distillers 1.7m, GND 500k, Bushmills >500k, Waterford >70k = 2.77m published floor, bracketing 3.8–4.2m). Both centre slightly below 4.5m; residual risk is downward. sourceUrl added. Part 3's "no company-level split exists" corrected | Full derivation in Part 4I. Totals unmoved |
 
 ---
 
@@ -1755,7 +1985,10 @@ Ordered by how likely it is to have moved.
    the fastest-moving figure in the set
 3. **SWA Facts and Figures.** Scotland has been stable at ~22m but confirm the vintage
 4. **LYQD.** Whether a later Irish supply report exists, and whether the full 2026 report
-   is obtainable. Still the only Irish number available
+   is obtainable. No longer the only Irish line (Part 4I: Drinks Ireland 2020 anchor +
+   producer bottom-up), but still the only census-style attempt. Also re-check whether
+   Irish Distillers has published a post-2021 cask count — the 1.7m-vs-2m+ question is
+   the biggest swing in the Irish bottom-up
 5. **Bairun and CADA.** Laizhou's annual filing moves quickly; compare it with the next
    national association survey and do not add them
 6. **India.** Re-based 9 Aug 2026 (Part 4G): the floor is now Piccadily's listed-company

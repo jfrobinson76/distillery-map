@@ -125,11 +125,13 @@ export const ENTRIES: Entry[] = [
     dx: -52,
     dy: -4,
     anchor: "end",
-    basis: "Independent supply study commissioned by a cask-market platform.",
-    source: "LYQD, Irish Whiskey Supply Report 2026",
-    asOf: "2026",
+    basis:
+      "Independent supply study commissioned by a cask-market platform (analysis Oct 2025), corroborated by two lines that share none of its inputs: Drinks Ireland's published count of over 3.1m casks maturing in 2020, rolled forward on production-minus-withdrawals arithmetic to ~4.1m; and a producer bottom-up — Irish Distillers 1.7m casks (2021, company blender), Great Northern 500k (company site), Bushmills 500k+ (trade, 2026), Waterford 70k+ (receivership sale) — that brackets 3.8–4.2m with an itemised allowance for Tullamore, Cooley, West Cork and the long tail.",
+    source: "LYQD Irish Whiskey Supply Report 2026; Drinks Ireland; producer disclosures",
+    sourceUrl: "https://exchange.lyqd.io/lyqd-irish-whiskey-supply-report-2026/",
+    asOf: "Analysis Oct 2025, published May 2026",
     caveat:
-      "The strongest Irish number available, but privately commissioned. Sample frame, cut-off date and duplicate controls are not public. A good estimate, not a census.",
+      "Privately commissioned and unaudited, but no longer standing alone: two independent derivations land within ten percent of it. Both centre slightly below 4.5m, so the residual risk points down, not up — and with most Irish distilleries pausing or cutting production since 2025, this is a plateau figure, not a growth path. Ireland publishes no official stock series.",
   },
   {
     id: "canada",
