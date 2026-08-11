@@ -256,8 +256,11 @@ What the published figures actually say:
 **Scotland** — 22 million casks. Counted, by the Scotch Whisky Association.
 
 **United States** — roughly 25 million barrels. Not 17 million. Kentucky's
-much-quoted 17.1m is one state, and it counts all spirits, not just whiskey.
-It's about two-thirds of America, not America.
+much-quoted 17.1m is one state, and it counts all spirits: 16.1m barrels of
+bourbon plus about a million of everything else. A state total, not a national
+one. (Corrected 11 Aug: this paragraph previously ended "It's about two-thirds
+of America" — that ratio is retracted, it divides an all-spirits state figure by
+a whiskey-only national one.)
 
 **Ireland** — 4.5 million casks, per the LYQD Irish Whiskey Supply Report 2026.
 Nearly nine years of global supply.

@@ -81,6 +81,24 @@ honest. Flagged independently three times on the same day. New tier added betwee
 "counted" and "private-report estimate"; Scotland and England & Wales keep "counted"
 because the SWA and the English Whisky Guild publish actual cask figures.
 
+**Tiering rule, to write onto the page in the November edition.** A tier describes the
+*dominant input*, not the best input. "Published partial stock" is a claim about what
+exists in the world; "official aggregate, converted" is a claim about what we did to it.
+Where an entry has both, the tier follows whichever carries the majority of the figure
+and the width of the range.
+
+Applying it, for November, not now:
+- **Japan is probably mis-tiered.** Ōmi is 600k of 2.3m, roughly a quarter. The other
+  three-quarters is the NTA conversion, and that conversion is what carries the 1.3–4m
+  range. So "published partial stock" is being set by the minority contributor. Japan
+  likely belongs in "official aggregate, converted", with Ōmi demoted to a corroborating
+  floor in the basis line rather than the tier justification.
+- **Canada then stands up cleanly.** Its 3.9m producer floor genuinely is the majority of
+  4.3m, so "published partial stock" is correct there on the same rule.
+
+Deferred deliberately: retiering Japan the same day as the US would be two evidence-class
+changes in one pass, and the rule is worth stating publicly at the same time it is applied.
+
 **US years of supply, 14.6.** Same DISCUS release: 1.5bn proof gallons of stock against
 58m domestic sales plus 45m exports = 103m proof gallons a year. 1,500 / 103 = 14.6 years.
 This is arithmetic on their own published figures, not our modelling.
