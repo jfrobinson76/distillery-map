@@ -28,9 +28,17 @@ export const metadata: Metadata = {
     url: "/whiskey-aging-inventory",
     type: "article",
   },
+  // Without this the root layout's generic site copy ("A free, open map of
+  // distilleries...") is what X and any twitter-tag reader previews for this
+  // article. openGraph was overridden here; twitter was not.
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
-const TIER_ORDER: Tier[] = ["counted", "estimate", "producer", "dark"];
+const TIER_ORDER: Tier[] = ["counted", "derived", "estimate", "producer", "dark"];
 
 function fmt(m: number) {
   return m >= 1 ? `${m % 1 === 0 ? m : m.toFixed(1)}m` : `${Math.round(m * 1000)}k`;
@@ -94,13 +102,13 @@ export default async function AgingInventoryPage() {
           className="mt-2 font-[family-name:var(--font-fraunces)] text-3xl font-bold leading-tight sm:text-5xl"
           style={{ color: WOW.oak }}
         >
-          How much whiskey is aging in the world?
+          How much whisk(e)y is aging in the world?
         </h1>
         <p
           className="mt-4 max-w-2xl text-base leading-relaxed"
           style={{ color: WOW.oakLight }}
         >
-          Nobody actually knows. There is no world census of maturing whiskey — no
+          Nobody actually knows. There is no world census of maturing whisk(e)y — no
           registry, no agreed unit, no shared reporting year. What follows is the best
           estimate we can build from what producers and trade bodies publish, with the
           holes left where they are rather than papered over.
@@ -114,13 +122,20 @@ export default async function AgingInventoryPage() {
             Best estimate, August 2026
           </div>
           <div className="mt-2 font-[family-name:var(--font-fraunces)] text-4xl font-bold leading-none sm:text-6xl">
-            {TOTAL.central} million casks
+            {TOTAL.central} million<span style={{ color: WOW.amberGlow }}>*</span> casks
           </div>
           <div className="mt-3 text-sm" style={{ color: WOW.parchmentDark }}>
             Source-bounded scenarios: {TOTAL.low}–{TOTAL.high} million. The lower case
             applies every regional low at once; it is not a statistical confidence
             interval. Scotland and America both describe their own maturing stocks as
             record highs, and they hold most of the world&apos;s.
+          </div>
+          {/* The social card carries the same asterisk. Anyone arriving from it should
+              find the footnote here rather than wonder what it pointed at. */}
+          <div className="mt-3 text-xs" style={{ color: WOW.parchmentDark }}>
+            <span style={{ color: WOW.amberGlow }}>*</span> A total assembled by
+            Stillbound from published counts and stated-method derivations. Counted,
+            estimated and guessed figures are marked separately for every country below.
           </div>
         </div>
 
@@ -160,7 +175,7 @@ export default async function AgingInventoryPage() {
           </div>
 
           <p className="mt-4 text-xs leading-relaxed" style={{ color: WOW.muted }}>
-            Mounds are scaled by <strong>area</strong>, not height — twice the whiskey
+            Mounds are scaled by <strong>area</strong>, not height — twice the whisk(e)y
             covers twice the ink. Every mound is drawn to true scale, which is why England
             is a speck and Tasmania is almost invisible. That is the honest picture.
             Scotland, Ireland and Canada&apos;s mounds are parked offshore for room and
@@ -172,7 +187,7 @@ export default async function AgingInventoryPage() {
         <section className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <Stat
             value={`${BIG_TWO_SHARE}%`}
-            label="of the world's maturing whiskey sits in just two places: the United States and Scotland."
+            label="of the world's maturing whisk(e)y sits in just two places: the United States and Scotland."
           />
           <Stat
             value={`${US_YEARS_OF_SUPPLY} yrs`}
@@ -212,7 +227,7 @@ export default async function AgingInventoryPage() {
               },
               {
                 h: "A state is not a country.",
-                p: "Kentucky's 17.1 million barrels gets quoted as the American figure. It is one state, and it counts all spirits, not just whiskey. Nationally the US holds roughly 25 million barrels — Kentucky is about two-thirds of it, with Tennessee, Indiana and a couple of thousand craft distillers making up the rest.",
+                p: "Kentucky's 17.1 million barrels gets quoted as the American figure. It is one state, and it counts all spirits, not just whiskey. That 17.1m is 16.1m barrels of bourbon plus about a million of other spirits, filed with the Kentucky Department of Revenue. Nationally the US holds roughly 25 million barrels, derived separately from about 1.5bn proof gallons of whiskey inventory, with Tennessee, Indiana and a couple of thousand craft distillers alongside Kentucky.",
               },
               {
                 h: "Sales are not stock.",
@@ -262,8 +277,11 @@ export default async function AgingInventoryPage() {
                     {e.name}
                   </h3>
                   <div className="flex items-baseline gap-3">
+                    {/* A counted figure is not an approximation — the tilde belongs on
+                        everything else, not on Scotland's and England's published counts. */}
                     <span className="text-base font-bold" style={{ color: WOW.copper }}>
-                      ~{fmt(e.central)} casks
+                      {e.tier === "counted" ? "" : "~"}
+                      {fmt(e.central)} casks
                     </span>
                     <span className="text-xs" style={{ color: WOW.muted }}>
                       {fmt(e.low)}–{fmt(e.high)}

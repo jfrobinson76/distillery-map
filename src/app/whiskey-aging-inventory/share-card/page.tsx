@@ -64,7 +64,7 @@ export default function ShareCard() {
           letterSpacing: "-0.01em",
         }}
       >
-        How much whiskey is aging
+        How much whisk(e)y is aging
         <br />
         in the world?
       </h1>

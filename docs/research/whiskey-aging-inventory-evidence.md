@@ -72,9 +72,42 @@ the 125-proof legal maximum holds 66.25 proof gallons; allowing for lower fill p
 alcohol lost to evaporation gives a working band of 55 to 66 proof gallons per barrel.
 1,500m / 66.25 = 22.6m. 1,500m / 55 = 27.3m. Central 25m.
 
+**US tier changed to "Official aggregate, converted", 11 Aug 2026.** The US sat in
+"Officially counted" while its own basis line read "converted from a national aggregate".
+DISCUS publishes proof gallons, not a cask count, and the conversion carries an 18% band
+(55–66 proof gallons per filled barrel). Grading that as counted is Rule 3 applied to
+everyone except ourselves, on the page whose entire credibility rests on the tiers being
+honest. Flagged independently three times on the same day. New tier added between
+"counted" and "private-report estimate"; Scotland and England & Wales keep "counted"
+because the SWA and the English Whisky Guild publish actual cask figures.
+
+**Tiering rule, to write onto the page in the November edition.** A tier describes the
+*dominant input*, not the best input. "Published partial stock" is a claim about what
+exists in the world; "official aggregate, converted" is a claim about what we did to it.
+Where an entry has both, the tier follows whichever carries the majority of the figure
+and the width of the range.
+
+Applying it, for November, not now:
+- **Japan is probably mis-tiered.** Ōmi is 600k of 2.3m, roughly a quarter. The other
+  three-quarters is the NTA conversion, and that conversion is what carries the 1.3–4m
+  range. So "published partial stock" is being set by the minority contributor. Japan
+  likely belongs in "official aggregate, converted", with Ōmi demoted to a corroborating
+  floor in the basis line rather than the tier justification.
+- **Canada then stands up cleanly.** Its 3.9m producer floor genuinely is the majority of
+  4.3m, so "published partial stock" is correct there on the same rule.
+
+Deferred deliberately: retiering Japan the same day as the US would be two evidence-class
+changes in one pass, and the rule is worth stating publicly at the same time it is applied.
+
 **US years of supply, 14.6.** Same DISCUS release: 1.5bn proof gallons of stock against
 58m domestic sales plus 45m exports = 103m proof gallons a year. 1,500 / 103 = 14.6 years.
 This is arithmetic on their own published figures, not our modelling.
+
+⚠️ **Unverified, 11 Aug 2026.** We have not confirmed that the 58m domestic-sales figure
+counts only American whiskey rather than all whiskey sold in the US including imported
+Scotch and Irish. If imports are in there the denominator is too large, so 14.6 would be
+an understatement and the true figure higher. The error, if any, runs conservative — but
+pin the DISCUS split before quoting 14.6 in anything adversarial.
 
 **Bottle equivalent, ~27bn.** 60.4m casks at a deliberately conservative 450 bottles each.
 The SWA's own ratio (22m casks = 12bn bottles) implies 545; we blended that down against
@@ -140,8 +173,21 @@ warehouses hold, not what is in them. Capacity is a building. The same applies t
 output: a barrel made this year is an input flow, not stock under maturation.
 
 **3. A state is not a country.** Kentucky's 17.1m barrels is quoted everywhere as the
-American figure. It is one state and it counts all spirits, not just whiskey. It is roughly
-two-thirds of the US national total.
+American figure. It is one state and it counts all spirits, not just whiskey.
+
+Pinned 11 Aug 2026. KDA, "The Bourbon State: Challenges Continue Amid Record Barrel
+Inventory & Skyrocketing Taxes", 8 Oct 2025: **16.1m barrels of bourbon + ~1m barrels of
+other spirits = 17.1m total**, from inventories reported as of 1 Jan 2025 by distilleries
+and warehousing companies to the **Kentucky Department of Revenue**.
+`https://kybourbon.com/industry-news/the-bourbon-state-challenges-continue-amid-record-barrel-inventory-skyrocketing-taxes/`
+
+So 17.1m is not a wrong number. It is a correct state number quoted as a national one.
+That is the sharper correction and it is now fully sourced.
+
+**Retracted in the same pass: "roughly two-thirds of the US national total."** It appeared
+here and in the module caveat, and it does not hold. It divides an all-spirits state figure
+(17.1m) by a whiskey-only national figure (25m). Those measure different populations, so
+the ratio is not real. Compare like with like or not at all. Never restore this line.
 
 **4. Sales are not stock.** India is the case study. See Part 4.
 

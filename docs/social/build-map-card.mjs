@@ -30,12 +30,13 @@ const K = 38;
 const RATIO = 0.62;
 const moundW = (m) => K * Math.sqrt(m);
 
-// tier → treatment. counted = copper solid; estimate = gold; producer = amber;
+// tier → treatment. counted = copper solid; derived = a shade lighter (official
+// aggregate converted, not counted); estimate = gold; producer = amber;
 // dark = dashed outline, no fill (nobody publishes anything).
-const TIER_FILL = { counted: SB.copper, estimate: SB.gold, producer: SB.amber };
+const TIER_FILL = { counted: SB.copper, derived: "#A05A22", estimate: SB.gold, producer: SB.amber };
 
 const ENTRIES = [
-  { id: "usa", lon: -100, lat: 41, central: 25, tier: "counted" },
+  { id: "usa", lon: -100, lat: 41, central: 25, tier: "derived" },
   { id: "scotland", lon: -13, lat: 62.5, central: 22, tier: "counted", aLon: -4.2, aLat: 57.2 },
   { id: "ireland", lon: -20, lat: 46.5, central: 4.5, tier: "estimate", aLon: -8, aLat: 53.3 },
   { id: "canada", lon: -112, lat: 60, central: 4.3, tier: "producer", aLon: -97, aLat: 50.6 },
@@ -45,28 +46,52 @@ const ENTRIES = [
   { id: "europe", lon: 14, lat: 49, central: 0.4, tier: "producer" },
   { id: "taiwan", lon: 121.5, lat: 23.7, central: 0.15, tier: "dark" },
   { id: "southafrica", lon: 25, lat: -29, central: 0.15, tier: "producer" },
-  { id: "restofworld", lon: -58, lat: -18, central: 0.15, tier: "dark" },
+  // Open ocean, not Brazil: on land the mound reads as "South America holds
+  // stock" even with the label attached. It is a residual, so it sits nowhere.
+  { id: "restofworld", lon: -30, lat: -24, central: 0.15, tier: "dark" },
   { id: "australia", lon: 146, lat: -30, central: 0.1, tier: "producer" },
   { id: "england", lon: -1.6, lat: 52.4, central: 0.05, tier: "counted" },
 ];
 
-// Big five get the two-line treatment (mono name + serif number); everything
-// else gets a small mono tag so no cask sits unexplained. dx/dy from mound
-// apex (small tags: from cask base); anchor = text-anchor.
+// v10, 11 Aug 2026 — every country labelled on the map, web-page treatment.
+//
+// The history, so nobody re-runs it: v7 tagged all thirteen with a single cramped
+// mono line each (~6px at LinkedIn feed width, England overprinting Europe). v8
+// cut the small labels and cropped the map — John rejected it, names lost and
+// South America clipped. v9 moved the tail into a strip below the map — rejected
+// too, he wants the names where the casks are.
+//
+// v10 takes the treatment off distillerymap.org, which works: every country gets
+// name-above-figure on two lines instead of one squeezed line. Two weight tiers
+// keep the big five dominant. Positions are hand-placed because the crowded
+// quadrant (Ireland, England, Europe, Scotland) cannot be resolved by a rule.
+//
+// The square format is still tighter than the web map's wide one, so the minor
+// labels sit near the floor of feed legibility. That is the cost of names on the
+// map and it is John's call, made twice.
+//
+// The asterisk marks a Stillbound derivation, so Scotland and England & Wales do
+// not carry one: the SWA and the English Whisky Guild publish actual cask counts,
+// and the absence of the mark is the signal.
 const LABELS = {
   usa: { name: "UNITED STATES", num: "~25m casks*", dx: 0, dy: 152, anchor: "middle" },
-  scotland: { name: "SCOTLAND", num: "22m casks*", dx: 0, dy: -30, anchor: "middle" },
+  scotland: { name: "SCOTLAND", num: "22m casks", dx: 0, dy: -30, anchor: "middle" },
   ireland: { name: "IRELAND", num: "4.5m*", dx: -58, dy: 8, anchor: "end" },
   canada: { name: "CANADA", num: "~4.3m*", dx: 0, dy: -44, anchor: "middle" },
+  // Left of the mound, not right: Japan sits at x≈1775 and the viewBox ends at
+  // 1890, so a start-anchored label runs off the card.
   japan: { name: "JAPAN", num: "~2.3m*", dx: -40, dy: -68, anchor: "end" },
-  china: { small: "CHINA 0.75m*", dx: 22, dy: -16, anchor: "start" },
-  india: { small: "INDIA 0.5m*", dx: 0, dy: 28, anchor: "middle" },
-  europe: { small: "EUROPE 0.4m*", dx: 0, dy: 26, anchor: "middle" },
-  taiwan: { small: "TAIWAN 0.15m*", dx: 16, dy: -4, anchor: "start" },
-  southafrica: { small: "SOUTH AFRICA 0.15m*", dx: 16, dy: -8, anchor: "start" },
-  australia: { small: "AUSTRALIA 0.1m*", dx: -10, dy: -20, anchor: "end" },
-  england: { small: "ENGLAND 50k*", dx: 10, dy: -6, anchor: "start" },
-  restofworld: { small: "REST OF WORLD 0.15m*", dx: 16, dy: -6, anchor: "start" },
+
+  // Left of its mound and dropped a row: above-centre put it under Japan's
+  // serif figure, which reaches ~150 units left of its own anchor.
+  china: { minor: true, name: "CHINA", num: "~750k*", dx: -30, dy: 8, anchor: "end" },
+  india: { minor: true, name: "INDIA", num: "~500k*", dx: -26, dy: -14, anchor: "end" },
+  europe: { minor: true, name: "CONTINENTAL EUROPE", num: "~400k*", dx: 30, dy: -26, anchor: "start" },
+  taiwan: { minor: true, name: "TAIWAN", num: "~150k*", dx: 26, dy: 4, anchor: "start" },
+  southafrica: { minor: true, name: "SOUTH AFRICA", num: "~150k*", dx: 26, dy: 6, anchor: "start" },
+  restofworld: { minor: true, name: "REST OF WORLD", num: "~150k*", dx: 26, dy: 6, anchor: "start" },
+  australia: { minor: true, name: "AUSTRALIA & TASMANIA", num: "~100k*", dx: -26, dy: 6, anchor: "end" },
+  england: { minor: true, name: "ENGLAND & WALES", num: "~50k", dx: -30, dy: 92, anchor: "end" },
 };
 
 /** One barrel seen end-on: staved circle with hoop rings and a bung dot. */
@@ -130,25 +155,32 @@ function label(e) {
   if (!cfg) return "";
   const [x, baseY] = project(e.lon, e.lat);
   const apexY = baseY - moundW(e.central) * RATIO;
-  const halo = `stroke="${SB.page}" stroke-width="10" stroke-linejoin="round" paint-order="stroke"`;
-  if (cfg.small) {
-    return `<text x="${x + cfg.dx}" y="${apexY + cfg.dy}" text-anchor="${cfg.anchor}" font-family="'JetBrains Mono', monospace" font-size="21" letter-spacing="2" fill="${SB.stone}" ${halo}>${cfg.small}</text>`;
-  }
+  const halo = `stroke="${SB.page}" stroke-width="12" stroke-linejoin="round" paint-order="stroke"`;
   const lx = x + cfg.dx;
   const ly = apexY + cfg.dy;
-  const numFill = e.tier === "dark" ? SB.stone : SB.oak;
-  const numStyle = e.tier === "dark" ? `font-style="italic" font-size="32"` : `font-size="44" font-weight="600"`;
+  // Two weight tiers. Minor is as small as survives a 550px feed render; going
+  // below this is what made v7 unreadable.
+  const nameSize = cfg.minor ? 21 : 26;
+  const numSize = cfg.minor ? 33 : 52;
+  const gap = cfg.minor ? 34 : 48;
+  const numFill = cfg.minor ? SB.copper : SB.oak;
   return (
-    `<text x="${lx}" y="${ly}" text-anchor="${cfg.anchor}" font-family="'JetBrains Mono', monospace" font-size="22" letter-spacing="3" fill="${SB.stone}" ${halo}>${cfg.name}</text>` +
-    `<text x="${lx}" y="${ly + 42}" text-anchor="${cfg.anchor}" font-family="Newsreader, Georgia, serif" ${numStyle} fill="${numFill}" ${halo}>${cfg.num}</text>`
+    `<text x="${lx}" y="${ly}" text-anchor="${cfg.anchor}" font-family="'JetBrains Mono', monospace" font-size="${nameSize}" letter-spacing="3" fill="${SB.stone}" ${halo}>${cfg.name}</text>` +
+    `<text x="${lx}" y="${ly + gap}" text-anchor="${cfg.anchor}" font-family="Newsreader, Georgia, serif" font-size="${numSize}" font-weight="600" fill="${numFill}" ${halo}>${cfg.num}</text>`
   );
 }
 
+// The long tail, in words rather than scattered across the map. England has no
+// asterisk for the same reason Scotland does not: the English Whisky Guild
+// publishes a count. Rest of World is here and not on the map by design.
 const ordered = [...ENTRIES].sort((a, b) => b.central - a.central);
 // Crop empty Pacific both sides; keep room above Scotland's label.
+// Height stays at 828: v8 trimmed it to 730 to kill dead southern ocean, but it
+// clipped the tip of South America and John called it — a world map that stops
+// above Patagonia looks broken, and the whitespace was never the problem.
 const VB = { x: 150, y: -50, w: 1740, h: 828 };
 const svg =
-  `<svg viewBox="${VB.x} ${VB.y} ${VB.w} ${VB.h}" width="100%" role="img" aria-label="World map of maturing whiskey by country, cask mounds drawn to true scale.">` +
+  `<svg viewBox="${VB.x} ${VB.y} ${VB.w} ${VB.h}" width="100%" role="img" aria-label="World map of maturing whisk(e)y by country, cask mounds drawn to true scale.">` +
   `<path d="${WORLD_BASE_PATH}" fill="${SB.paperSunk}" stroke="${SB.rule}" stroke-width="0.6"/>` +
   Object.values(COUNTRY_PATHS)
     .map((d) => `<path d="${d}" fill="${SB.paperSunk}" stroke="${SB.rule}" stroke-width="0.6"/>`)
@@ -233,16 +265,21 @@ const html = `<!doctype html>
   <script>if (location.search.includes("full")) document.body.classList.add("full");</script>
   <div class="card">
     <svg class="sb" viewBox="0 0 100 100"><text x="50.5" y="59" text-anchor="middle" dominant-baseline="central" font-family="Newsreader, Georgia, serif" font-size="84" font-weight="400" letter-spacing="-3" fill="${SB.copper}">S<tspan font-style="italic" font-weight="300" fill="${SB.gold}">b</tspan></text></svg>
-    <div class="eyebrow">Global Whiskey Aging Inventory · August 2026</div>
-    <h1>60.4 million* casks of whiskey are aging <span class="a">right now.</span></h1>
-    <div class="lede">We went looking for global aged whiskey stock levels. No world number existed. So we are building one.</div>
+    <div class="eyebrow">Global Whisk(e)y Aging Inventory · August 2026</div>
+    <h1>60.4 million* casks of whisk(e)y are aging <span class="a">right now.</span></h1>
+    <div class="lede">We went looking for global aged whisk(e)y stock levels. No world number existed. So we are building one.</div>
     <div class="map">${svg}</div>
-    <div class="kicker">Two countries hold 78%* of it.</div>
-    <div class="footnote">Solid casks: published or derived figures · dashed: no published figure</div>
-    <div class="footnote">* Estimated on Stillbound research data · full sources &amp; caveats at distillerymap.org</div>
+    <!-- Asterisked: 78% is 22m counted plus 25m converted, so it leans on a
+         Stillbound derivation the same way the headline total does. -->
+    <div class="kicker">Scotland and America hold 78%* of it.</div>
+    <div class="footnote">Range 55–68m · * derived where no official cask count exists · dashed: no published figure</div>
+    <div class="footnote">Mounds scaled by area, not height · reporting years 2018–2026 · all sources published</div>
     <div class="footer">
       <span><span class="wm">Still<i>bound</i></span><span class="tagline">Liquid intelligence</span></span>
-      <span class="site">distillerymap.org</span>
+      <!-- The card is Stillbound-branded, so the URL in the footer is Stillbound's.
+           distillerymap.org is credited in the footnote as where the detail lives;
+           stillbound.ai/research links onward to it. One brand, one destination. -->
+      <span class="site">stillbound.ai/research</span>
     </div>
   </div>
 </body>
