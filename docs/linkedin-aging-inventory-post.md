@@ -67,9 +67,12 @@ volunteering it kills "so you don't actually know" before it starts.
 > What the numbers actually say:
 >
 > • Scotland counts its casks properly and publishes the total. 22 million.
-> • America holds roughly 25 million. The 17.1 million everyone quotes is Kentucky, and
->   it counts all spirits, not just whiskey. That is one state, about two thirds of the
->   country.
+> • America holds roughly 25 million barrels. That comes from a national whiskey
+>   inventory of about 1.5 billion proof gallons, converted at 55 to 66 proof gallons
+>   per barrel.
+> • The Kentucky figure that gets quoted as America is one state. Kentucky reports about
+>   16 million barrels of aging bourbon, and the higher number in circulation counts all
+>   aging spirits, not just whiskey.
 > • Japan has no official count at all. It measures whisky at bottling rather than at
 >   distillation, so maturing stock is invisible in every government series. The only
 >   hard number in the country is Suntory's Ōmi cellar, a reported 600,000 casks.
@@ -102,6 +105,26 @@ of humour beats portentous.
 
 Canada line sourced: StatCan Table 16-10-0091, "Stocks of liquor in distilleries and bond
 warehouse", CRA excise data, terminated May 1996. See the evidence doc.
+
+### US / Kentucky, handle with care (John's question, 11 Aug)
+
+The 25m is **not** scaled up from Kentucky. It is derived independently from DISCUS
+national whiskey inventory (~1.5bn proof gallons end-2024) at 55–66 proof gallons per
+barrel, giving 23–27m, central 25m. That figure is whiskey-specific.
+
+Kentucky is a separate number and there are two of them: KDA's **16.1m barrels of aging
+bourbon** (2024), and the **17.1m all-aging-spirits** count for the state. Roughly a
+million apart, measuring different things.
+
+Therefore: never express Kentucky as a fraction of the US whiskey total. An all-spirits
+state number over a whiskey-only national number is not a real ratio. The earlier draft
+said "one state, about two thirds of the country" — that was a research sense-check
+promoted into published copy by mistake. Removed.
+
+⚠️ **OPEN BEFORE POSTING.** The evidence doc sources 16.1m to a named KDA report but
+never pins **17.1m** to a specific release or year. The post makes a public correction
+resting on that number, aimed at the readers most likely to know it cold. Pin the
+citation or drop the specific figure.
 
 ---
 
