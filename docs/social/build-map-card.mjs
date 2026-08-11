@@ -269,7 +269,9 @@ const html = `<!doctype html>
     <h1>60.4 million* casks of whisk(e)y are aging <span class="a">right now.</span></h1>
     <div class="lede">We went looking for global aged whisk(e)y stock levels. No world number existed. So we are building one.</div>
     <div class="map">${svg}</div>
-    <div class="kicker">Scotland and America hold 78% of it.</div>
+    <!-- Asterisked: 78% is 22m counted plus 25m converted, so it leans on a
+         Stillbound derivation the same way the headline total does. -->
+    <div class="kicker">Scotland and America hold 78%* of it.</div>
     <div class="footnote">Range 55–68m · * derived where no official cask count exists · dashed cask: no published figure</div>
     <div class="footnote">Mounds scaled by area, not height · reporting years 2018–2026 · every source and caveat published in full</div>
     <div class="footer">
