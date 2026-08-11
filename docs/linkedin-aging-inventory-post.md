@@ -43,6 +43,56 @@ own it, drop every "nobody knows" opener.** Invitation to correct comes from str
 ("we stand by it, show us better") not from hedging. The card masthead is styled as a
 report edition: "Global Whisk(e)y Aging Inventory · August 2026".
 
+## FINAL — as posted by John, 11 Aug 2026
+
+John's own edit. Differences from the draft below, all his and all kept: the
+whisk(e)y bracket is explained in the second line rather than left to puzzle over,
+the Kentucky bullet leads with the misquote instead of the correct figure, and it
+signs off in his voice. Two accuracy fixes flagged before posting are folded in:
+DISCUS named as an industry body rather than implied to be a government source,
+and "whiskey inventory" restored so 1.5bn proof gallons is not read as all spirits.
+
+> 60.4 million casks.
+>
+> That is how much whisk(e)y is aging in the world right now. Ireland and America
+> spell it whiskey, the rest of the world whisky, so the brackets stay.
+>
+> I put the number together over the past few months for a piece of Stillbound work.
+> It did not exist anywhere in one place.
+>
+> Some of what I found:
+>
+> • Scotland counts its casks and publishes the total. 22 million, and the only major
+>   figure on the map that needs no caveat.
+> • America publishes no barrel count at all. Its industry body reports 1.5 billion
+>   proof gallons of whiskey inventory, which works out at roughly 25 million barrels.
+> • The 17.1 million barrels you see quoted as America is one state. That is Kentucky,
+>   filed with its Department of Revenue, 16.1 million of it bourbon.
+> • Between them, Scotland and the US hold 78% of the world's maturing whisk(e)y.
+> • Japan has no official count. It taxes whisky at bottling rather than at
+>   distillation, so maturing stock never appears in a government series. The only hard
+>   number in the country is Suntory's Ōmi cellar, a reported 600,000 casks.
+> • Canada published national bonded spirits stock every month from 1946 until May 1996,
+>   then stopped. Thirty years of silence from a country that once had the biggest
+>   whisky category on earth.
+> • No shared unit and no shared year. Scotland counts casks, America proof gallons,
+>   Canada used litres of absolute alcohol. The inputs span 2018 to 2026.
+>
+> 60.4 million. But the range sits between 55 million and 68 million casks. I tried to
+> be as transparent as possible about where I pulled the data from.
+>
+> Have a look, and if you have better data, happy to update and attribute.
+>
+> https://stillbound.ai/research
+>
+> Cheers,
+> John
+
+Image: `docs/social/aging-inventory-map-card-1200.png` (2400x2400 retina, upload as-is).
+No tags, no DM, organic reach only.
+
+---
+
 ## Post draft — global-led (11 Aug 2026, CURRENT DIRECTION)
 
 Why this replaced the Japan-led variant: the Japan lead existed to set up the Blair DM.
