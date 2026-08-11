@@ -114,13 +114,20 @@ export default async function AgingInventoryPage() {
             Best estimate, August 2026
           </div>
           <div className="mt-2 font-[family-name:var(--font-fraunces)] text-4xl font-bold leading-none sm:text-6xl">
-            {TOTAL.central} million casks
+            {TOTAL.central} million<span style={{ color: WOW.amberGlow }}>*</span> casks
           </div>
           <div className="mt-3 text-sm" style={{ color: WOW.parchmentDark }}>
             Source-bounded scenarios: {TOTAL.low}–{TOTAL.high} million. The lower case
             applies every regional low at once; it is not a statistical confidence
             interval. Scotland and America both describe their own maturing stocks as
             record highs, and they hold most of the world&apos;s.
+          </div>
+          {/* The social card carries the same asterisk. Anyone arriving from it should
+              find the footnote here rather than wonder what it pointed at. */}
+          <div className="mt-3 text-xs" style={{ color: WOW.parchmentDark }}>
+            <span style={{ color: WOW.amberGlow }}>*</span> A total assembled by
+            Stillbound from published counts and stated-method derivations. Counted,
+            estimated and guessed figures are marked separately for every country below.
           </div>
         </div>
 
@@ -262,8 +269,11 @@ export default async function AgingInventoryPage() {
                     {e.name}
                   </h3>
                   <div className="flex items-baseline gap-3">
+                    {/* A counted figure is not an approximation — the tilde belongs on
+                        everything else, not on Scotland's and England's published counts. */}
                     <span className="text-base font-bold" style={{ color: WOW.copper }}>
-                      ~{fmt(e.central)} casks
+                      {e.tier === "counted" ? "" : "~"}
+                      {fmt(e.central)} casks
                     </span>
                     <span className="text-xs" style={{ color: WOW.muted }}>
                       {fmt(e.low)}–{fmt(e.high)}
