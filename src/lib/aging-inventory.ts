@@ -184,7 +184,7 @@ export const ENTRIES: Entry[] = [
     sourceUrl: "https://www.nta.go.jp/taxes/sake/shiori-gaikyo/shiori/2025/index.htm",
     asOf: "FY2024, year to March 2025",
     caveat:
-      "Japan measures whisky at bottling, not at distillation — maturing new-make is explicitly excluded from every official series, so no stock count exists. The filler-spirit share and average age are assumptions, and only 0.6m of the central figure is reported stock. The 500,000-barrel site Suntory abandoned in 2026 was in Ayrshire, Scotland — never part of Japan's inventory.",
+      "Japan publishes no usable national maturing-stock aggregate. The NTA's public series excludes whisky new-make, although manufacturers report it separately to the tax authority. The filler-spirit share and average age are assumptions, and only 0.6m of the central figure is reported stock. The 500,000-barrel site Suntory abandoned in 2026 was in Ayrshire, Scotland — never part of Japan's inventory.",
   },
   {
     id: "india",
