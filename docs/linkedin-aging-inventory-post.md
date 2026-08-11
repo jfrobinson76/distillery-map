@@ -58,20 +58,24 @@ and "whiskey inventory" restored so 1.5bn proof gallons is not read as all spiri
 > spell it whiskey, the rest of the world whisky, so the brackets stay.
 >
 > I put the number together over the past few months for a piece of Stillbound work.
-> It did not exist anywhere in one place.
+> It did not exist anywhere.
 >
 > Some of what I found:
 >
 > • Scotland counts its casks and publishes the total. 22 million, and the only major
 >   figure on the map that needs no caveat.
-> • America publishes no barrel count at all. Its industry body reports 1.5 billion
->   proof gallons of whiskey inventory, which works out at roughly 25 million barrels.
+> • America publishes no barrel count at all. DISCUS, the industry body, reports 1.5
+>   billion proof gallons of whiskey inventory, which converts to roughly 25 million
+>   barrels at 55 to 66 proof gallons a barrel.
 > • The 17.1 million barrels you see quoted as America is one state. That is Kentucky,
->   filed with its Department of Revenue, 16.1 million of it bourbon.
+>   from distillery filings with its Department of Revenue, and 16.1 million of it is
+>   bourbon.
 > • Between them, Scotland and the US hold 78% of the world's maturing whisk(e)y.
 > • Japan has no official count. It taxes whisky at bottling rather than at
 >   distillation, so maturing stock never appears in a government series. The only hard
->   number in the country is Suntory's Ōmi cellar, a reported 600,000 casks.
+>   number in the country is Suntory's Ōmi cellar, a reported 600,000 casks. The rest I
+>   derived from national tax throughput and an assumed maturation window, which is why
+>   Japan carries the widest range on the map: 1.3 to 4 million.
 > • Canada published national bonded spirits stock every month from 1946 until May 1996,
 >   then stopped. Thirty years of silence from a country that once had the biggest
 >   whisky category on earth.
@@ -81,7 +85,8 @@ and "whiskey inventory" restored so 1.5bn proof gallons is not read as all spiri
 > 60.4 million. But the range sits between 55 million and 68 million casks. I tried to
 > be as transparent as possible about where I pulled the data from.
 >
-> Have a look, and if you have better data, happy to update and attribute.
+> Second edition lands November. If you hold better data, I would rather publish your
+> number than my estimate.
 >
 > https://stillbound.ai/research
 >

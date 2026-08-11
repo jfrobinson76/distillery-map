@@ -30,12 +30,13 @@ const K = 38;
 const RATIO = 0.62;
 const moundW = (m) => K * Math.sqrt(m);
 
-// tier → treatment. counted = copper solid; estimate = gold; producer = amber;
+// tier → treatment. counted = copper solid; derived = a shade lighter (official
+// aggregate converted, not counted); estimate = gold; producer = amber;
 // dark = dashed outline, no fill (nobody publishes anything).
-const TIER_FILL = { counted: SB.copper, estimate: SB.gold, producer: SB.amber };
+const TIER_FILL = { counted: SB.copper, derived: "#A05A22", estimate: SB.gold, producer: SB.amber };
 
 const ENTRIES = [
-  { id: "usa", lon: -100, lat: 41, central: 25, tier: "counted" },
+  { id: "usa", lon: -100, lat: 41, central: 25, tier: "derived" },
   { id: "scotland", lon: -13, lat: 62.5, central: 22, tier: "counted", aLon: -4.2, aLat: 57.2 },
   { id: "ireland", lon: -20, lat: 46.5, central: 4.5, tier: "estimate", aLon: -8, aLat: 53.3 },
   { id: "canada", lon: -112, lat: 60, central: 4.3, tier: "producer", aLon: -97, aLat: 50.6 },
@@ -45,7 +46,9 @@ const ENTRIES = [
   { id: "europe", lon: 14, lat: 49, central: 0.4, tier: "producer" },
   { id: "taiwan", lon: 121.5, lat: 23.7, central: 0.15, tier: "dark" },
   { id: "southafrica", lon: 25, lat: -29, central: 0.15, tier: "producer" },
-  { id: "restofworld", lon: -58, lat: -18, central: 0.15, tier: "dark" },
+  // Open ocean, not Brazil: on land the mound reads as "South America holds
+  // stock" even with the label attached. It is a residual, so it sits nowhere.
+  { id: "restofworld", lon: -30, lat: -24, central: 0.15, tier: "dark" },
   { id: "australia", lon: 146, lat: -30, central: 0.1, tier: "producer" },
   { id: "england", lon: -1.6, lat: 52.4, central: 0.05, tier: "counted" },
 ];
@@ -267,8 +270,8 @@ const html = `<!doctype html>
     <div class="lede">We went looking for global aged whisk(e)y stock levels. No world number existed. So we are building one.</div>
     <div class="map">${svg}</div>
     <div class="kicker">Scotland and America hold 78% of it.</div>
-    <div class="footnote">* Derived by Stillbound where no official cask count exists · reporting years 2018–2026</div>
-    <div class="footnote">Country-by-country map, every source and caveat, at distillerymap.org</div>
+    <div class="footnote">Range 55–68m · * derived where no official cask count exists · dashed cask: no published figure</div>
+    <div class="footnote">Mounds scaled by area, not height · reporting years 2018–2026 · every source and caveat published in full</div>
     <div class="footer">
       <span><span class="wm">Still<i>bound</i></span><span class="tagline">Liquid intelligence</span></span>
       <!-- The card is Stillbound-branded, so the URL in the footer is Stillbound's.

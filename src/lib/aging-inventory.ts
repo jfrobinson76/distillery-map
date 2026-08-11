@@ -13,7 +13,7 @@
  * numbers, and neither is a count of casks currently full.
  */
 
-export type Tier = "counted" | "estimate" | "producer" | "dark";
+export type Tier = "counted" | "derived" | "estimate" | "producer" | "dark";
 
 export const TIERS: Record<Tier, { label: string; blurb: string; color: string }> = {
   counted: {
@@ -21,6 +21,17 @@ export const TIERS: Record<Tier, { label: string; blurb: string; color: string }
     blurb:
       "A trade body, tax authority or regulator publishes a physical count of casks or barrels.",
     color: "#7a3f18",
+  },
+  // Added 11 Aug 2026. The US was tiered "counted" while its own basis said
+  // "converted from a national aggregate", which is Rule 3 applied to everyone
+  // but ourselves: an official total in another unit, divided by an assumed
+  // per-barrel fill, is not a physical count. Flagged independently three times
+  // in one day, which is how often a sharp reader will find it.
+  derived: {
+    label: "Official aggregate, converted",
+    blurb:
+      "A government or trade body publishes a national total, but in another unit. The cask count is converted with a stated divisor and a visible assumption band, not counted.",
+    color: "#a05a22",
   },
   estimate: {
     label: "Private-report estimate",
@@ -78,7 +89,7 @@ export const ENTRIES: Entry[] = [
     central: 25,
     low: 23,
     high: 27,
-    tier: "counted",
+    tier: "derived",
     dx: 0,
     dy: -48,
     anchor: "middle",

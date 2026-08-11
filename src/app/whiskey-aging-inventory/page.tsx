@@ -28,9 +28,17 @@ export const metadata: Metadata = {
     url: "/whiskey-aging-inventory",
     type: "article",
   },
+  // Without this the root layout's generic site copy ("A free, open map of
+  // distilleries...") is what X and any twitter-tag reader previews for this
+  // article. openGraph was overridden here; twitter was not.
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
 };
 
-const TIER_ORDER: Tier[] = ["counted", "estimate", "producer", "dark"];
+const TIER_ORDER: Tier[] = ["counted", "derived", "estimate", "producer", "dark"];
 
 function fmt(m: number) {
   return m >= 1 ? `${m % 1 === 0 ? m : m.toFixed(1)}m` : `${Math.round(m * 1000)}k`;

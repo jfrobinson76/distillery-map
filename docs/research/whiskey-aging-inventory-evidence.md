@@ -72,9 +72,24 @@ the 125-proof legal maximum holds 66.25 proof gallons; allowing for lower fill p
 alcohol lost to evaporation gives a working band of 55 to 66 proof gallons per barrel.
 1,500m / 66.25 = 22.6m. 1,500m / 55 = 27.3m. Central 25m.
 
+**US tier changed to "Official aggregate, converted", 11 Aug 2026.** The US sat in
+"Officially counted" while its own basis line read "converted from a national aggregate".
+DISCUS publishes proof gallons, not a cask count, and the conversion carries an 18% band
+(55–66 proof gallons per filled barrel). Grading that as counted is Rule 3 applied to
+everyone except ourselves, on the page whose entire credibility rests on the tiers being
+honest. Flagged independently three times on the same day. New tier added between
+"counted" and "private-report estimate"; Scotland and England & Wales keep "counted"
+because the SWA and the English Whisky Guild publish actual cask figures.
+
 **US years of supply, 14.6.** Same DISCUS release: 1.5bn proof gallons of stock against
 58m domestic sales plus 45m exports = 103m proof gallons a year. 1,500 / 103 = 14.6 years.
 This is arithmetic on their own published figures, not our modelling.
+
+⚠️ **Unverified, 11 Aug 2026.** We have not confirmed that the 58m domestic-sales figure
+counts only American whiskey rather than all whiskey sold in the US including imported
+Scotch and Irish. If imports are in there the denominator is too large, so 14.6 would be
+an understatement and the true figure higher. The error, if any, runs conservative — but
+pin the DISCUS split before quoting 14.6 in anything adversarial.
 
 **Bottle equivalent, ~27bn.** 60.4m casks at a deliberately conservative 450 bottles each.
 The SWA's own ratio (22m casks = 12bn bottles) implies 545; we blended that down against
