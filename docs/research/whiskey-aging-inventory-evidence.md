@@ -140,8 +140,21 @@ warehouses hold, not what is in them. Capacity is a building. The same applies t
 output: a barrel made this year is an input flow, not stock under maturation.
 
 **3. A state is not a country.** Kentucky's 17.1m barrels is quoted everywhere as the
-American figure. It is one state and it counts all spirits, not just whiskey. It is roughly
-two-thirds of the US national total.
+American figure. It is one state and it counts all spirits, not just whiskey.
+
+Pinned 11 Aug 2026. KDA, "The Bourbon State: Challenges Continue Amid Record Barrel
+Inventory & Skyrocketing Taxes", 8 Oct 2025: **16.1m barrels of bourbon + ~1m barrels of
+other spirits = 17.1m total**, from inventories reported as of 1 Jan 2025 by distilleries
+and warehousing companies to the **Kentucky Department of Revenue**.
+`https://kybourbon.com/industry-news/the-bourbon-state-challenges-continue-amid-record-barrel-inventory-skyrocketing-taxes/`
+
+So 17.1m is not a wrong number. It is a correct state number quoted as a national one.
+That is the sharper correction and it is now fully sourced.
+
+**Retracted in the same pass: "roughly two-thirds of the US national total."** It appeared
+here and in the module caveat, and it does not hold. It divides an all-spirits state figure
+(17.1m) by a whiskey-only national figure (25m). Those measure different populations, so
+the ratio is not real. Compare like with like or not at all. Never restore this line.
 
 **4. Sales are not stock.** India is the case study. See Part 4.
 

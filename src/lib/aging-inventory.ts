@@ -88,7 +88,7 @@ export const ENTRIES: Entry[] = [
     sourceUrl: "https://distilledspirits.org/",
     asOf: "End 2024",
     caveat:
-      "Kentucky's much-quoted 17.1m barrels is one state, and it counts all spirits, not just whiskey. It is roughly two-thirds of the national figure — not the national figure.",
+      "Kentucky's much-quoted 17.1m barrels is one state, and it counts all spirits: 16.1m barrels of bourbon plus ~1m of other spirits, per the KDA release of 8 Oct 2025, from inventories reported to the Kentucky Department of Revenue as of 1 Jan 2025. It is a state total, not the national one. Do not express it as a fraction of the US figure — an all-spirits state number over a whiskey-only national number is not a real ratio.",
   },
   {
     id: "scotland",

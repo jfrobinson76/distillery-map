@@ -58,46 +58,38 @@ volunteering it kills "so you don't actually know" before it starts.
 
 > **60.4 million casks.**
 >
-> That is how much whiskey is aging in the world right now. I went looking for the
-> number earlier this year for a piece of Stillbound work and found plenty of people
-> quoting one, but nobody showing where it came from. So we built our own and published
-> the working: every count, producer disclosure and official aggregate we could find,
-> each figure sourced, each one marked where it is a derivation rather than a count.
+> That is how much whiskey is aging in the world right now. I put the number together
+> over the past few months because I needed it for a piece of Stillbound work and it did
+> not exist anywhere in one place.
 >
-> What the numbers actually say:
+> What surprised me is how little of it is actually counted.
 >
-> • Scotland counts its casks properly and publishes the total. 22 million.
-> • America holds roughly 25 million barrels. That comes from a national whiskey
->   inventory of about 1.5 billion proof gallons, converted at 55 to 66 proof gallons
->   per barrel.
-> • The Kentucky figure that gets quoted as America is one state. Kentucky reports about
->   16 million barrels of aging bourbon, and the higher number in circulation counts all
->   aging spirits, not just whiskey.
-> • Japan has no official count at all. It measures whisky at bottling rather than at
->   distillation, so maturing stock is invisible in every government series. The only
->   hard number in the country is Suntory's Ōmi cellar, a reported 600,000 casks.
-> • Canada published this monthly from 1946 until May 1996, then stopped. Thirty years
->   with no national figure.
-> • Scotland and America hold 78% of the world's maturing whiskey between them.
+> Scotland counts its casks and publishes the total. 22 million. America does not publish
+> a barrel count but reports around 1.5 billion proof gallons of whiskey inventory, which
+> works out at roughly 25 million barrels. Those two hold 78% of the world's maturing
+> whiskey between them.
 >
-> The other problem is that nobody measures in the same thing. Scotland talks in casks,
-> America in proof gallons, Canada used litres of absolute alcohol, and a cask is not a
-> standard size to begin with. A good half of this project was getting everyone onto the
-> same footing before anything could be added up.
+> After that it thins out fast. Japan has no official count, because it taxes whisky at
+> bottling rather than at distillation, so maturing stock never appears in a government
+> series. The only hard number in the country is Suntory's Ōmi cellar, a reported 600,000
+> casks. Canada is odder still. Statistics Canada published national bonded spirits stock
+> every month from 1946 until May 1996, then stopped. Thirty years of silence from a
+> country that once had the biggest whisky category on earth.
 >
-> Stack every regional low at once and you get 55 million. Every high, 68 million. 60.4
-> is where the evidence sits, and I will stand behind it until somebody shows me better.
+> Kentucky's famous 17.1 million barrels is 16.1 million of bourbon plus about a million
+> of other spirits, in one state, filed with the Kentucky Department of Revenue. It gets
+> quoted as America almost every time.
 >
-> It is free and public with every source and caveat attached, including the ones that
-> make our own numbers look weak. Same principle as the distillery map. If your numbers
-> are better than mine I would rather publish yours, and Japan and Canada are where I
-> would start.
+> Nobody uses the same unit either. Scotland counts casks, America counts proof gallons,
+> Canada used litres of absolute alcohol. And there is no shared reporting year, so the
+> inputs span 2018 to 2026.
+>
+> 60.4 million. Range 55 to 68. Every source and caveat is public, including the ones
+> that make my own numbers look weak.
+>
+> If yours are better, I would rather publish yours.
 >
 > distillerymap.org/whiskey-aging-inventory
->
-> What am I getting wrong?
->
-> #IrishWhiskey #Scotch #JapaneseWhisky #Distilling
 
 Format rule (John, 11 Aug): no line-per-sentence LinkedIn slop, no grandiose one-liners.
 Real paragraphs, bullets only where the content is genuinely a list. Natural and a bit

@@ -45,28 +45,35 @@ const ENTRIES = [
   { id: "europe", lon: 14, lat: 49, central: 0.4, tier: "producer" },
   { id: "taiwan", lon: 121.5, lat: 23.7, central: 0.15, tier: "dark" },
   { id: "southafrica", lon: 25, lat: -29, central: 0.15, tier: "producer" },
-  { id: "restofworld", lon: -58, lat: -18, central: 0.15, tier: "dark" },
+  // Rest of World has no mound: it is a residual bucket, not a place. Drawn at
+  // lon -58 it put a cask in Brazil, which is not what it means. It appears in
+  // the strip instead, where the words carry it.
   { id: "australia", lon: 146, lat: -30, central: 0.1, tier: "producer" },
   { id: "england", lon: -1.6, lat: 52.4, central: 0.05, tier: "counted" },
 ];
 
-// Big five get the two-line treatment (mono name + serif number); everything
-// else gets a small mono tag so no cask sits unexplained. dx/dy from mound
-// apex (small tags: from cask base); anchor = text-anchor.
+// v9, 11 Aug 2026 — big five on the map, everyone else in a strip beneath it.
+//
+// v7 tagged all thirteen on the map. Those small mono tags rendered around 21px
+// inside a 1740-unit viewBox, roughly 6px once LinkedIn serves the square at feed
+// width: illegible, with England and Europe printed on top of each other.
+// v8 cut them entirely, which fixed legibility but lost the country names and
+// left small mounds sitting unexplained. John rejected that trade.
+//
+// v9 keeps every name. The long tail moves off the map into an aligned text strip
+// (see TAIL below), where horizontal, same-baseline text stays readable at feed
+// size in a way that scattered map labels never will. The map keeps its mounds,
+// so the scale story still reads at a glance, and it stops fighting the labels.
+//
+// The asterisk marks a Stillbound derivation, so Scotland and England do not carry
+// one: the SWA and the English Whisky Guild publish actual cask counts, and the
+// absence of the mark is the signal.
 const LABELS = {
   usa: { name: "UNITED STATES", num: "~25m casks*", dx: 0, dy: 152, anchor: "middle" },
-  scotland: { name: "SCOTLAND", num: "22m casks*", dx: 0, dy: -30, anchor: "middle" },
+  scotland: { name: "SCOTLAND", num: "22m casks", dx: 0, dy: -30, anchor: "middle" },
   ireland: { name: "IRELAND", num: "4.5m*", dx: -58, dy: 8, anchor: "end" },
   canada: { name: "CANADA", num: "~4.3m*", dx: 0, dy: -44, anchor: "middle" },
   japan: { name: "JAPAN", num: "~2.3m*", dx: -40, dy: -68, anchor: "end" },
-  china: { small: "CHINA 0.75m*", dx: 22, dy: -16, anchor: "start" },
-  india: { small: "INDIA 0.5m*", dx: 0, dy: 28, anchor: "middle" },
-  europe: { small: "EUROPE 0.4m*", dx: 0, dy: 26, anchor: "middle" },
-  taiwan: { small: "TAIWAN 0.15m*", dx: 16, dy: -4, anchor: "start" },
-  southafrica: { small: "SOUTH AFRICA 0.15m*", dx: 16, dy: -8, anchor: "start" },
-  australia: { small: "AUSTRALIA 0.1m*", dx: -10, dy: -20, anchor: "end" },
-  england: { small: "ENGLAND 50k*", dx: 10, dy: -6, anchor: "start" },
-  restofworld: { small: "REST OF WORLD 0.15m*", dx: 16, dy: -6, anchor: "start" },
 };
 
 /** One barrel seen end-on: staved circle with hoop rings and a bung dot. */
@@ -130,22 +137,32 @@ function label(e) {
   if (!cfg) return "";
   const [x, baseY] = project(e.lon, e.lat);
   const apexY = baseY - moundW(e.central) * RATIO;
-  const halo = `stroke="${SB.page}" stroke-width="10" stroke-linejoin="round" paint-order="stroke"`;
-  if (cfg.small) {
-    return `<text x="${x + cfg.dx}" y="${apexY + cfg.dy}" text-anchor="${cfg.anchor}" font-family="'JetBrains Mono', monospace" font-size="21" letter-spacing="2" fill="${SB.stone}" ${halo}>${cfg.small}</text>`;
-  }
+  const halo = `stroke="${SB.page}" stroke-width="12" stroke-linejoin="round" paint-order="stroke"`;
   const lx = x + cfg.dx;
   const ly = apexY + cfg.dy;
-  const numFill = e.tier === "dark" ? SB.stone : SB.oak;
-  const numStyle = e.tier === "dark" ? `font-style="italic" font-size="32"` : `font-size="44" font-weight="600"`;
+  // Sized for the feed, not for this screen: at LinkedIn's ~550px square these
+  // land near 8px and 16px respectively. Anything smaller does not survive.
   return (
-    `<text x="${lx}" y="${ly}" text-anchor="${cfg.anchor}" font-family="'JetBrains Mono', monospace" font-size="22" letter-spacing="3" fill="${SB.stone}" ${halo}>${cfg.name}</text>` +
-    `<text x="${lx}" y="${ly + 42}" text-anchor="${cfg.anchor}" font-family="Newsreader, Georgia, serif" ${numStyle} fill="${numFill}" ${halo}>${cfg.num}</text>`
+    `<text x="${lx}" y="${ly}" text-anchor="${cfg.anchor}" font-family="'JetBrains Mono', monospace" font-size="26" letter-spacing="3" fill="${SB.stone}" ${halo}>${cfg.name}</text>` +
+    `<text x="${lx}" y="${ly + 48}" text-anchor="${cfg.anchor}" font-family="Newsreader, Georgia, serif" font-size="52" font-weight="600" fill="${SB.oak}" ${halo}>${cfg.num}</text>`
   );
 }
 
+// The long tail, in words rather than scattered across the map. England has no
+// asterisk for the same reason Scotland does not: the English Whisky Guild
+// publishes a count. Rest of World is here and not on the map by design.
+// Split into two explicit rows rather than left to wrap: a wrapped row put the
+// separator at the start of line two, which looks like a typo.
+const TAIL_ROWS = [
+  ["China 0.75m*", "India 0.5m*", "Europe 0.4m*", "Taiwan 0.15m*"],
+  ["South Africa 0.15m*", "Australia 0.1m*", "England 50k", "Rest of world 0.15m*"],
+];
+
 const ordered = [...ENTRIES].sort((a, b) => b.central - a.central);
 // Crop empty Pacific both sides; keep room above Scotland's label.
+// Height stays at 828: v8 trimmed it to 730 to kill dead southern ocean, but it
+// clipped the tip of South America and John called it — a world map that stops
+// above Patagonia looks broken, and the whitespace was never the problem.
 const VB = { x: 150, y: -50, w: 1740, h: 828 };
 const svg =
   `<svg viewBox="${VB.x} ${VB.y} ${VB.w} ${VB.h}" width="100%" role="img" aria-label="World map of maturing whiskey by country, cask mounds drawn to true scale.">` +
@@ -196,6 +213,19 @@ const html = `<!doctype html>
     margin-top: 20px; max-width: 44ch;
   }
   .map { margin: 10px 0 0 -54px; width: calc(100% + 108px); }
+  /* 24px in a 1200px card is ~11px at LinkedIn feed width. Aligned on one
+     baseline it reads; the same text scattered over the map did not. */
+  .tail {
+    font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 24px;
+    line-height: 1.55; color: ${SB.stone}; margin: 4px 0 0;
+  }
+  /* Indent row two to clear the "Also aging:" label above it. */
+  .tail2 { margin-top: 0; padding-left: 150px; }
+  .tailhead {
+    font-family: 'JetBrains Mono', monospace; font-size: 17px;
+    text-transform: uppercase; letter-spacing: 0.18em; color: ${SB.copper};
+    margin-right: 12px;
+  }
   .kicker {
     font-family: Newsreader, Georgia, serif; font-style: italic; font-weight: 300;
     font-size: 34px; color: ${SB.copper}; margin: 10px 0 18px;
@@ -237,9 +267,11 @@ const html = `<!doctype html>
     <h1>60.4 million* casks of whiskey are aging <span class="a">right now.</span></h1>
     <div class="lede">We went looking for global aged whiskey stock levels. No world number existed. So we are building one.</div>
     <div class="map">${svg}</div>
-    <div class="kicker">Two countries hold 78%* of it.</div>
-    <div class="footnote">Solid casks: published or derived figures · dashed: no published figure</div>
-    <div class="footnote">* Estimated on Stillbound research data · full sources &amp; caveats at distillerymap.org</div>
+    <div class="tail"><span class="tailhead">Also aging:</span> ${TAIL_ROWS[0].join(" &nbsp;·&nbsp; ")}</div>
+    <div class="tail tail2">${TAIL_ROWS[1].join(" &nbsp;·&nbsp; ")}</div>
+    <div class="kicker">Scotland and America hold 78% of it.</div>
+    <div class="footnote">* Derived by Stillbound where no official cask count exists · reporting years 2018–2026</div>
+    <div class="footnote">Every country, figure, source and caveat at distillerymap.org</div>
     <div class="footer">
       <span><span class="wm">Still<i>bound</i></span><span class="tagline">Liquid intelligence</span></span>
       <span class="site">distillerymap.org</span>
