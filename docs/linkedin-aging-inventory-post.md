@@ -64,25 +64,23 @@ volunteering it kills "so you don't actually know" before it starts.
 >
 > What surprised me is how little of it is actually counted.
 >
-> Scotland counts its casks and publishes the total. 22 million. America does not publish
-> a barrel count but reports around 1.5 billion proof gallons of whiskey inventory, which
-> works out at roughly 25 million barrels. Those two hold 78% of the world's maturing
-> whiskey between them.
->
-> After that it thins out fast. Japan has no official count, because it taxes whisky at
-> bottling rather than at distillation, so maturing stock never appears in a government
-> series. The only hard number in the country is Suntory's Ōmi cellar, a reported 600,000
-> casks. Canada is odder still. Statistics Canada published national bonded spirits stock
-> every month from 1946 until May 1996, then stopped. Thirty years of silence from a
-> country that once had the biggest whisky category on earth.
->
-> Kentucky's famous 17.1 million barrels is 16.1 million of bourbon plus about a million
-> of other spirits, in one state, filed with the Kentucky Department of Revenue. It gets
-> quoted as America almost every time.
->
-> Nobody uses the same unit either. Scotland counts casks, America counts proof gallons,
-> Canada used litres of absolute alcohol. And there is no shared reporting year, so the
-> inputs span 2018 to 2026.
+> • Scotland counts its casks and publishes the total. 22 million, and it is the only
+>   major figure on the map that needs no caveat at all.
+> • America publishes no barrel count. It reports around 1.5 billion proof gallons of
+>   whiskey inventory, which works out at roughly 25 million barrels. Those two countries
+>   hold 78% of the world's maturing whiskey between them.
+> • Japan has no official count. It taxes whisky at bottling rather than at distillation,
+>   so maturing stock never appears in a government series. The only hard number in the
+>   country is Suntory's Ōmi cellar, a reported 600,000 casks.
+> • Canada published national bonded spirits stock every month from 1946 until May 1996,
+>   then stopped. Thirty years of silence from a country that once had the biggest whisky
+>   category on earth.
+> • Kentucky's famous 17.1 million barrels is 16.1 million of bourbon plus about a million
+>   of other spirits, in one state, filed with the Kentucky Department of Revenue. It gets
+>   quoted as America almost every time.
+> • Nobody uses the same unit. Scotland counts casks, America counts proof gallons, Canada
+>   used litres of absolute alcohol.
+> • There is no shared reporting year either. The inputs span 2018 to 2026.
 >
 > 60.4 million. Range 55 to 68. Every source and caveat is public, including the ones
 > that make my own numbers look weak.

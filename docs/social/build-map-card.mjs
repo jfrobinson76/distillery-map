@@ -45,35 +45,50 @@ const ENTRIES = [
   { id: "europe", lon: 14, lat: 49, central: 0.4, tier: "producer" },
   { id: "taiwan", lon: 121.5, lat: 23.7, central: 0.15, tier: "dark" },
   { id: "southafrica", lon: 25, lat: -29, central: 0.15, tier: "producer" },
-  // Rest of World has no mound: it is a residual bucket, not a place. Drawn at
-  // lon -58 it put a cask in Brazil, which is not what it means. It appears in
-  // the strip instead, where the words carry it.
+  { id: "restofworld", lon: -58, lat: -18, central: 0.15, tier: "dark" },
   { id: "australia", lon: 146, lat: -30, central: 0.1, tier: "producer" },
   { id: "england", lon: -1.6, lat: 52.4, central: 0.05, tier: "counted" },
 ];
 
-// v9, 11 Aug 2026 — big five on the map, everyone else in a strip beneath it.
+// v10, 11 Aug 2026 — every country labelled on the map, web-page treatment.
 //
-// v7 tagged all thirteen on the map. Those small mono tags rendered around 21px
-// inside a 1740-unit viewBox, roughly 6px once LinkedIn serves the square at feed
-// width: illegible, with England and Europe printed on top of each other.
-// v8 cut them entirely, which fixed legibility but lost the country names and
-// left small mounds sitting unexplained. John rejected that trade.
+// The history, so nobody re-runs it: v7 tagged all thirteen with a single cramped
+// mono line each (~6px at LinkedIn feed width, England overprinting Europe). v8
+// cut the small labels and cropped the map — John rejected it, names lost and
+// South America clipped. v9 moved the tail into a strip below the map — rejected
+// too, he wants the names where the casks are.
 //
-// v9 keeps every name. The long tail moves off the map into an aligned text strip
-// (see TAIL below), where horizontal, same-baseline text stays readable at feed
-// size in a way that scattered map labels never will. The map keeps its mounds,
-// so the scale story still reads at a glance, and it stops fighting the labels.
+// v10 takes the treatment off distillerymap.org, which works: every country gets
+// name-above-figure on two lines instead of one squeezed line. Two weight tiers
+// keep the big five dominant. Positions are hand-placed because the crowded
+// quadrant (Ireland, England, Europe, Scotland) cannot be resolved by a rule.
 //
-// The asterisk marks a Stillbound derivation, so Scotland and England do not carry
-// one: the SWA and the English Whisky Guild publish actual cask counts, and the
-// absence of the mark is the signal.
+// The square format is still tighter than the web map's wide one, so the minor
+// labels sit near the floor of feed legibility. That is the cost of names on the
+// map and it is John's call, made twice.
+//
+// The asterisk marks a Stillbound derivation, so Scotland and England & Wales do
+// not carry one: the SWA and the English Whisky Guild publish actual cask counts,
+// and the absence of the mark is the signal.
 const LABELS = {
   usa: { name: "UNITED STATES", num: "~25m casks*", dx: 0, dy: 152, anchor: "middle" },
   scotland: { name: "SCOTLAND", num: "22m casks", dx: 0, dy: -30, anchor: "middle" },
   ireland: { name: "IRELAND", num: "4.5m*", dx: -58, dy: 8, anchor: "end" },
   canada: { name: "CANADA", num: "~4.3m*", dx: 0, dy: -44, anchor: "middle" },
+  // Left of the mound, not right: Japan sits at x≈1775 and the viewBox ends at
+  // 1890, so a start-anchored label runs off the card.
   japan: { name: "JAPAN", num: "~2.3m*", dx: -40, dy: -68, anchor: "end" },
+
+  // Left of its mound and dropped a row: above-centre put it under Japan's
+  // serif figure, which reaches ~150 units left of its own anchor.
+  china: { minor: true, name: "CHINA", num: "~750k*", dx: -30, dy: 8, anchor: "end" },
+  india: { minor: true, name: "INDIA", num: "~500k*", dx: -26, dy: -14, anchor: "end" },
+  europe: { minor: true, name: "CONTINENTAL EUROPE", num: "~400k*", dx: 30, dy: -26, anchor: "start" },
+  taiwan: { minor: true, name: "TAIWAN", num: "~150k*", dx: 26, dy: 4, anchor: "start" },
+  southafrica: { minor: true, name: "SOUTH AFRICA", num: "~150k*", dx: 26, dy: 6, anchor: "start" },
+  restofworld: { minor: true, name: "REST OF WORLD", num: "~150k*", dx: 26, dy: 6, anchor: "start" },
+  australia: { minor: true, name: "AUSTRALIA & TASMANIA", num: "~100k*", dx: -26, dy: 6, anchor: "end" },
+  england: { minor: true, name: "ENGLAND & WALES", num: "~50k", dx: -30, dy: 92, anchor: "end" },
 };
 
 /** One barrel seen end-on: staved circle with hoop rings and a bung dot. */
@@ -140,24 +155,21 @@ function label(e) {
   const halo = `stroke="${SB.page}" stroke-width="12" stroke-linejoin="round" paint-order="stroke"`;
   const lx = x + cfg.dx;
   const ly = apexY + cfg.dy;
-  // Sized for the feed, not for this screen: at LinkedIn's ~550px square these
-  // land near 8px and 16px respectively. Anything smaller does not survive.
+  // Two weight tiers. Minor is as small as survives a 550px feed render; going
+  // below this is what made v7 unreadable.
+  const nameSize = cfg.minor ? 21 : 26;
+  const numSize = cfg.minor ? 33 : 52;
+  const gap = cfg.minor ? 34 : 48;
+  const numFill = cfg.minor ? SB.copper : SB.oak;
   return (
-    `<text x="${lx}" y="${ly}" text-anchor="${cfg.anchor}" font-family="'JetBrains Mono', monospace" font-size="26" letter-spacing="3" fill="${SB.stone}" ${halo}>${cfg.name}</text>` +
-    `<text x="${lx}" y="${ly + 48}" text-anchor="${cfg.anchor}" font-family="Newsreader, Georgia, serif" font-size="52" font-weight="600" fill="${SB.oak}" ${halo}>${cfg.num}</text>`
+    `<text x="${lx}" y="${ly}" text-anchor="${cfg.anchor}" font-family="'JetBrains Mono', monospace" font-size="${nameSize}" letter-spacing="3" fill="${SB.stone}" ${halo}>${cfg.name}</text>` +
+    `<text x="${lx}" y="${ly + gap}" text-anchor="${cfg.anchor}" font-family="Newsreader, Georgia, serif" font-size="${numSize}" font-weight="600" fill="${numFill}" ${halo}>${cfg.num}</text>`
   );
 }
 
 // The long tail, in words rather than scattered across the map. England has no
 // asterisk for the same reason Scotland does not: the English Whisky Guild
 // publishes a count. Rest of World is here and not on the map by design.
-// Split into two explicit rows rather than left to wrap: a wrapped row put the
-// separator at the start of line two, which looks like a typo.
-const TAIL_ROWS = [
-  ["China 0.75m*", "India 0.5m*", "Europe 0.4m*", "Taiwan 0.15m*"],
-  ["South Africa 0.15m*", "Australia 0.1m*", "England 50k", "Rest of world 0.15m*"],
-];
-
 const ordered = [...ENTRIES].sort((a, b) => b.central - a.central);
 // Crop empty Pacific both sides; keep room above Scotland's label.
 // Height stays at 828: v8 trimmed it to 730 to kill dead southern ocean, but it
@@ -213,19 +225,6 @@ const html = `<!doctype html>
     margin-top: 20px; max-width: 44ch;
   }
   .map { margin: 10px 0 0 -54px; width: calc(100% + 108px); }
-  /* 24px in a 1200px card is ~11px at LinkedIn feed width. Aligned on one
-     baseline it reads; the same text scattered over the map did not. */
-  .tail {
-    font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 24px;
-    line-height: 1.55; color: ${SB.stone}; margin: 4px 0 0;
-  }
-  /* Indent row two to clear the "Also aging:" label above it. */
-  .tail2 { margin-top: 0; padding-left: 150px; }
-  .tailhead {
-    font-family: 'JetBrains Mono', monospace; font-size: 17px;
-    text-transform: uppercase; letter-spacing: 0.18em; color: ${SB.copper};
-    margin-right: 12px;
-  }
   .kicker {
     font-family: Newsreader, Georgia, serif; font-style: italic; font-weight: 300;
     font-size: 34px; color: ${SB.copper}; margin: 10px 0 18px;
@@ -267,8 +266,6 @@ const html = `<!doctype html>
     <h1>60.4 million* casks of whiskey are aging <span class="a">right now.</span></h1>
     <div class="lede">We went looking for global aged whiskey stock levels. No world number existed. So we are building one.</div>
     <div class="map">${svg}</div>
-    <div class="tail"><span class="tailhead">Also aging:</span> ${TAIL_ROWS[0].join(" &nbsp;·&nbsp; ")}</div>
-    <div class="tail tail2">${TAIL_ROWS[1].join(" &nbsp;·&nbsp; ")}</div>
     <div class="kicker">Scotland and America hold 78% of it.</div>
     <div class="footnote">* Derived by Stillbound where no official cask count exists · reporting years 2018–2026</div>
     <div class="footnote">Every country, figure, source and caveat at distillerymap.org</div>
