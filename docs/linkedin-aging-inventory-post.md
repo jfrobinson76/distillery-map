@@ -56,6 +56,18 @@ Same positioning as the distillery database.
 **Range: include it, one clause.** The readers worth having would ask for it, and
 volunteering it kills "so you don't actually know" before it starts.
 
+**Destination: stillbound.ai/research, not distillerymap.org** (11 Aug, John's question
+about brand confusion). The post says "a piece of Stillbound work" and the card carries
+the Stillbound wordmark, so pointing at a second domain is the confusion. stillbound.ai/
+research is already branded "Stillbound Research · Global Whiskey Aging Inventory ·
+August 2026 · First Edition", carries the 60.4m headline and the tier methodology, and
+links onward to distillerymap.org/whiskey-aging-inventory for the interactive map and
+country detail. DistilleryMap still gets the traffic, one click later and better
+qualified. Cost, stated plainly: a second click loses some readers.
+
+Card footer follows the same rule — stillbound.ai/research bottom right, distillerymap.org
+credited in the footnote as where the detail lives.
+
 > **60.4 million casks.**
 >
 > That is how much whiskey is aging in the world right now. I put the number together
@@ -87,7 +99,7 @@ volunteering it kills "so you don't actually know" before it starts.
 >
 > If yours are better, I would rather publish yours.
 >
-> distillerymap.org/whiskey-aging-inventory
+> stillbound.ai/research
 
 Format rule (John, 11 Aug): no line-per-sentence LinkedIn slop, no grandiose one-liners.
 Real paragraphs, bullets only where the content is genuinely a list. Natural and a bit

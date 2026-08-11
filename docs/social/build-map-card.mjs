@@ -268,10 +268,13 @@ const html = `<!doctype html>
     <div class="map">${svg}</div>
     <div class="kicker">Scotland and America hold 78% of it.</div>
     <div class="footnote">* Derived by Stillbound where no official cask count exists · reporting years 2018–2026</div>
-    <div class="footnote">Every country, figure, source and caveat at distillerymap.org</div>
+    <div class="footnote">Country-by-country map, every source and caveat, at distillerymap.org</div>
     <div class="footer">
       <span><span class="wm">Still<i>bound</i></span><span class="tagline">Liquid intelligence</span></span>
-      <span class="site">distillerymap.org</span>
+      <!-- The card is Stillbound-branded, so the URL in the footer is Stillbound's.
+           distillerymap.org is credited in the footnote as where the detail lives;
+           stillbound.ai/research links onward to it. One brand, one destination. -->
+      <span class="site">stillbound.ai/research</span>
     </div>
   </div>
 </body>
