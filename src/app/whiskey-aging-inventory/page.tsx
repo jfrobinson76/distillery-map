@@ -94,13 +94,13 @@ export default async function AgingInventoryPage() {
           className="mt-2 font-[family-name:var(--font-fraunces)] text-3xl font-bold leading-tight sm:text-5xl"
           style={{ color: WOW.oak }}
         >
-          How much whiskey is aging in the world?
+          How much whisk(e)y is aging in the world?
         </h1>
         <p
           className="mt-4 max-w-2xl text-base leading-relaxed"
           style={{ color: WOW.oakLight }}
         >
-          Nobody actually knows. There is no world census of maturing whiskey — no
+          Nobody actually knows. There is no world census of maturing whisk(e)y — no
           registry, no agreed unit, no shared reporting year. What follows is the best
           estimate we can build from what producers and trade bodies publish, with the
           holes left where they are rather than papered over.
@@ -167,7 +167,7 @@ export default async function AgingInventoryPage() {
           </div>
 
           <p className="mt-4 text-xs leading-relaxed" style={{ color: WOW.muted }}>
-            Mounds are scaled by <strong>area</strong>, not height — twice the whiskey
+            Mounds are scaled by <strong>area</strong>, not height — twice the whisk(e)y
             covers twice the ink. Every mound is drawn to true scale, which is why England
             is a speck and Tasmania is almost invisible. That is the honest picture.
             Scotland, Ireland and Canada&apos;s mounds are parked offshore for room and
@@ -179,7 +179,7 @@ export default async function AgingInventoryPage() {
         <section className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <Stat
             value={`${BIG_TWO_SHARE}%`}
-            label="of the world's maturing whiskey sits in just two places: the United States and Scotland."
+            label="of the world's maturing whisk(e)y sits in just two places: the United States and Scotland."
           />
           <Stat
             value={`${US_YEARS_OF_SUPPLY} yrs`}
@@ -219,7 +219,7 @@ export default async function AgingInventoryPage() {
               },
               {
                 h: "A state is not a country.",
-                p: "Kentucky's 17.1 million barrels gets quoted as the American figure. It is one state, and it counts all spirits, not just whiskey. Nationally the US holds roughly 25 million barrels — Kentucky is about two-thirds of it, with Tennessee, Indiana and a couple of thousand craft distillers making up the rest.",
+                p: "Kentucky's 17.1 million barrels gets quoted as the American figure. It is one state, and it counts all spirits, not just whiskey. That 17.1m is 16.1m barrels of bourbon plus about a million of other spirits, filed with the Kentucky Department of Revenue. Nationally the US holds roughly 25 million barrels, derived separately from about 1.5bn proof gallons of whiskey inventory, with Tennessee, Indiana and a couple of thousand craft distillers alongside Kentucky.",
               },
               {
                 h: "Sales are not stock.",

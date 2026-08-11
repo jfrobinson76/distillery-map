@@ -177,7 +177,7 @@ const ordered = [...ENTRIES].sort((a, b) => b.central - a.central);
 // above Patagonia looks broken, and the whitespace was never the problem.
 const VB = { x: 150, y: -50, w: 1740, h: 828 };
 const svg =
-  `<svg viewBox="${VB.x} ${VB.y} ${VB.w} ${VB.h}" width="100%" role="img" aria-label="World map of maturing whiskey by country, cask mounds drawn to true scale.">` +
+  `<svg viewBox="${VB.x} ${VB.y} ${VB.w} ${VB.h}" width="100%" role="img" aria-label="World map of maturing whisk(e)y by country, cask mounds drawn to true scale.">` +
   `<path d="${WORLD_BASE_PATH}" fill="${SB.paperSunk}" stroke="${SB.rule}" stroke-width="0.6"/>` +
   Object.values(COUNTRY_PATHS)
     .map((d) => `<path d="${d}" fill="${SB.paperSunk}" stroke="${SB.rule}" stroke-width="0.6"/>`)
@@ -262,9 +262,9 @@ const html = `<!doctype html>
   <script>if (location.search.includes("full")) document.body.classList.add("full");</script>
   <div class="card">
     <svg class="sb" viewBox="0 0 100 100"><text x="50.5" y="59" text-anchor="middle" dominant-baseline="central" font-family="Newsreader, Georgia, serif" font-size="84" font-weight="400" letter-spacing="-3" fill="${SB.copper}">S<tspan font-style="italic" font-weight="300" fill="${SB.gold}">b</tspan></text></svg>
-    <div class="eyebrow">Global Whiskey Aging Inventory · August 2026</div>
-    <h1>60.4 million* casks of whiskey are aging <span class="a">right now.</span></h1>
-    <div class="lede">We went looking for global aged whiskey stock levels. No world number existed. So we are building one.</div>
+    <div class="eyebrow">Global Whisk(e)y Aging Inventory · August 2026</div>
+    <h1>60.4 million* casks of whisk(e)y are aging <span class="a">right now.</span></h1>
+    <div class="lede">We went looking for global aged whisk(e)y stock levels. No world number existed. So we are building one.</div>
     <div class="map">${svg}</div>
     <div class="kicker">Scotland and America hold 78% of it.</div>
     <div class="footnote">* Derived by Stillbound where no official cask count exists · reporting years 2018–2026</div>

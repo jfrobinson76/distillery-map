@@ -75,10 +75,24 @@ country, without following an identical sentence pattern page to page:
   boom following relaxed state licensing after ~2010, Japanese whisky's global
   breakout following Yamazaki's 2014 Jim Murray award and the resulting supply
   shortage). Do not invent specific statistics, awards, or dates you can't defend.
-- Get whisky/whiskey spelling right per country: Scotland, Canada, Japan = "whisky";
-  Ireland, USA = "whiskey" (USA is mixed by law/brand but "whiskey" is the common
-  spelling; Maker's Mark is the well-known exception — don't need to caveat this in
-  copy, just don't misspell the country's own convention).
+- Get whisky/whiskey spelling right per country. Full list:
+  - **whiskey** — Ireland, United States
+  - **whisky** — Scotland, Canada, Japan, England & Wales, India, Taiwan, Australia,
+    South Africa, China, continental Europe
+  - Mnemonic: if the country name has an E in it, so does its whiskey. Ir**e**land and
+    Unit**e**d Stat**e**s take the e; Scotland, Canada and Japan do not.
+  - USA is mixed by law and brand — federal standards of identity spell it "whisky",
+    and Maker's Mark, George Dickel, Old Forester and Early Times follow suit — but
+    "whiskey" is the common spelling and the right default. Don't caveat this in copy,
+    just don't misspell a country's own convention.
+  - Australia is genuinely mixed in practice; "whisky" dominates.
+- **Global totals and multi-country statements use "whisk(e)y"** (John, 11 Aug 2026).
+  A worldwide figure that says "whiskey" is spelling roughly 40% of itself wrong —
+  Scotland alone is 22m of the 60.4m, Japan another 2.3m. Diageo and the trade press
+  use whisk(e)y for the same reason. Country-specific sentences keep that country's
+  spelling: "American whiskey supply" stays, "Japan taxes whisky at bottling" stays.
+- Proper nouns are never respelled: Scotch Whisky Association, Irish Whiskey Supply
+  Report, English Whisky Guild, Kentucky Distillers' Association.
 - Never conflate Scotland with the United Kingdom as if they're the same page —
   they're separate entries in the data (UK is the country total; Scotland is a
   called-out region within it). Don't repeat the same claims on both pages.
