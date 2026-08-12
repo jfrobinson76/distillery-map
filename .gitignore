@@ -52,3 +52,4 @@ __pycache__/
 # Spirit categorisation: batches are regenerable from the geojson, model
 # verdicts are not — keep the verdicts, drop the intermediates.
 data/categories/batch_*.json
+data/categories/fetch_cache.json

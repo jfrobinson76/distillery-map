@@ -26,6 +26,8 @@ import argparse
 import collections
 import json
 import re
+import socket
+import sys
 import time
 import urllib.error
 import urllib.parse
@@ -41,6 +43,12 @@ VERDICTS = CATDIR / "out_fetch.json"
 
 UA = "distillerymap.org research bot (+https://distillerymap.org; hello@distillerymap.org)"
 TIMEOUT = 12
+
+# robotparser.read() takes no timeout argument and will sit on a dead host until
+# the OS gives up. Over a few thousand domains, a meaningful share of which are
+# lapsed, that is the difference between an hour and a night. The default socket
+# timeout is the only lever that reaches it.
+socket.setdefaulttimeout(TIMEOUT)
 PER_HOST_DELAY = 1.0
 MAX_BYTES = 400_000
 
@@ -67,8 +75,11 @@ TERMS = [
     ("shochu",    r"\bshochu\b"),
     ("soju",      r"\bsoju\b"),
     ("baijiu",    r"\bbaijiu\b"),
-    ("beer",      r"\bbrewery\b|\bbrewing\b|\bbeers?\b|\bales?\b"),
-    ("wine",      r"\bwinery\b|\bvineyard\b|\bwines?\b"),
+    # Only the words that name the BUSINESS. "ale" and "wine" appear all over a
+    # whisky producer's site — ale describes the wash, wine describes the casks —
+    # and matching them filed a Slovak fruit distillery under beer.
+    ("beer",      r"\bbrewery\b|\bbrewing\b|\bbrauerei\b"),
+    ("wine",      r"\bwinery\b|\bvineyard\b|\bweingut\b"),
 ]
 COMPILED = [(label, re.compile(rx, re.I)) for label, rx in TERMS]
 
@@ -89,8 +100,14 @@ def page_text(url: str) -> str | None:
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html))
 
 
-def classify(text: str) -> tuple[list[str], str]:
-    counts = {lab: len(rx.findall(text)) for lab, rx in COMPILED}
+def term_counts(text: str) -> dict[str, int]:
+    return {lab: n for lab, rx in COMPILED if (n := len(rx.findall(text)))}
+
+
+def classify(counts: dict[str, int]) -> tuple[list[str], str]:
+    """Thresholds applied to counts, deliberately separate from fetching. The
+    counts are cached, so retuning MIN_HITS or MIN_SHARE is free — otherwise
+    every threshold change would mean crawling several thousand sites again."""
     counts = {k: v for k, v in counts.items() if v >= MIN_HITS}
     if not counts:
         return [], "low"
@@ -122,7 +139,12 @@ def main() -> None:
         p = CATDIR / name
         if p.exists():
             settled |= set(json.loads(p.read_text()))
-    for out in CATDIR.glob("out_p*.json"):
+    # Every model output, not just the priority run — the pilot wrote out_000..003
+    # and an earlier glob of out_p*.json missed them, which sent a whole sample
+    # back over Ardbeg and Talisker instead of the records that still need work.
+    for out in CATDIR.glob("out_*.json"):
+        if out.name == VERDICTS.name:
+            continue
         for slug, v in json.loads(out.read_text()).items():
             if v.get("confidence") in ("high", "medium"):
                 settled.add(slug)
@@ -173,8 +195,9 @@ def main() -> None:
             stats["unreachable"] += 1
             continue
 
-        spirits, conf = classify(text or "")
-        cache[slug] = {"status": "ok", "chars": len(text or "")}
+        counts = term_counts(text or "")
+        spirits, conf = classify(counts)
+        cache[slug] = {"status": "ok", "chars": len(text or ""), "counts": counts}
         if spirits:
             verdicts[slug] = {"spirits": spirits, "confidence": conf, "source": "website"}
             stats[f"resolved_{conf}"] += 1
@@ -182,7 +205,7 @@ def main() -> None:
             stats["no_signal"] += 1
 
         if i % 25 == 0:
-            print(f"  {i}/{len(todo)} ...")
+            print(f"  {i}/{len(todo)} ...", flush=True)
             CACHE.write_text(json.dumps(cache, indent=2))
             VERDICTS.write_text(json.dumps(verdicts, indent=2, ensure_ascii=False))
 
