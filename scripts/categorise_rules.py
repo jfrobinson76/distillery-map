@@ -31,6 +31,20 @@ OUTDIR = ROOT / "data" / "categories"
 # difference between an hour and a week.
 BATCH_SIZE = 50
 
+# Batch ordering. The dataset's natural order is incidental, which makes
+# "stop the run halfway" a coin flip. Ordering by commercial priority instead
+# means a partial run is still a useful run: the whiskey world lands first, the
+# continental fruit-distiller tail last. Tier 1 is the jurisdiction sequence the
+# rest of the business is built around, plus the whisky-producing nations that
+# earn their own country pages.
+PRIORITY = {
+    "Ireland": 0, "United Kingdom": 0, "United States": 0, "Canada": 0,
+    "Japan": 1, "Australia": 1, "India": 1, "Taiwan": 1, "New Zealand": 1,
+    "Mexico": 2,  # the tequila/mezcal query this run was prompted by
+    "France": 3, "Sweden": 3, "Denmark": 3, "Netherlands": 3, "Norway": 3,
+}
+TAIL = 9  # everything unlisted: Germany, Austria, Switzerland, Italy, ...
+
 # Controlled vocabulary. Deliberately granular where the law is granular:
 # tequila and mezcal are separate denominations, cognac and armagnac separate
 # AOCs, and whiskey people care about exactly those distinctions. `beer` and
@@ -90,10 +104,23 @@ def signals(props: dict) -> list[str]:
     return list(dict.fromkeys(found))
 
 
+def already_done() -> set[str]:
+    """Slugs a subagent has already ruled on. Re-batching must not re-bill work
+    that is finished — verdicts are keyed by slug and survive re-runs."""
+    done: set[str] = set()
+    for out in OUTDIR.glob("out_*.json"):
+        try:
+            done.update(json.loads(out.read_text()).keys())
+        except (json.JSONDecodeError, OSError):
+            continue
+    return done
+
+
 def main() -> None:
     data = json.loads(DISTILLERIES.read_text())
     features = data["features"]
     OUTDIR.mkdir(parents=True, exist_ok=True)
+    done = already_done()
 
     resolved: dict[str, dict] = {}
     unresolved: list[dict] = []
@@ -113,20 +140,29 @@ def main() -> None:
             }
             for h in hits:
                 counts[h] += 1
-        else:
+        elif slug not in done:
             # Send the model the minimum it needs to recognise a distillery:
             # name, country, and the domain (which often IS the answer).
             site = (p.get("website") or "").strip()
             domain = re.sub(r"^https?://(www\.)?", "", site).split("/")[0] if site else ""
+            country = (p.get("country") or "").strip()
             unresolved.append({
                 "slug": slug,
                 "name": p.get("name") or "",
-                "country": (p.get("country") or "").strip(),
+                "country": country,
                 "domain": domain,
                 "generic_name": bool(GENERIC.search(p.get("name") or "")),
+                "_tier": PRIORITY.get(country, TAIL),
             })
 
     (OUTDIR / "rules.json").write_text(json.dumps(resolved, indent=2, ensure_ascii=False))
+
+    # Priority first, then country, so a batch stays topically coherent — a
+    # model does better on fifty Irish distilleries than on a scattered fifty.
+    unresolved.sort(key=lambda u: (u["_tier"], u["country"], u["name"]))
+    tiers = Counter(u["_tier"] for u in unresolved)
+    for u in unresolved:
+        del u["_tier"]
 
     batches = [unresolved[i:i + BATCH_SIZE] for i in range(0, len(unresolved), BATCH_SIZE)]
     for old in OUTDIR.glob("batch_*.json"):
@@ -137,10 +173,17 @@ def main() -> None:
         )
 
     total = len(features)
-    print(f"records:           {total}")
-    print(f"resolved by rules: {len(resolved)} ({len(resolved) * 100 // total}%)")
-    print(f"to the model:      {len(unresolved)} in {len(batches)} batches of {BATCH_SIZE}")
-    print(f"  of those, {sum(1 for u in unresolved if not u['domain'])} have no website to fall back on")
+    print(f"records:            {total}")
+    print(f"resolved by rules:  {len(resolved)} ({len(resolved) * 100 // total}%)")
+    print(f"already ruled on:   {len(done)}")
+    print(f"to the model:       {len(unresolved)} in {len(batches)} batches of {BATCH_SIZE}")
+    print(f"  no website to fall back on: {sum(1 for u in unresolved if not u['domain'])}")
+    print()
+    running = 0
+    for tier in sorted(tiers):
+        running += tiers[tier]
+        label = "tail (DE/AT/CH/IT/...)" if tier == TAIL else f"tier {tier}"
+        print(f"  {label:24}{tiers[tier]:5}  -> through batch {(running - 1) // BATCH_SIZE:03d}")
     print()
     for k, v in counts.most_common():
         print(f"  {k:11}{v}")

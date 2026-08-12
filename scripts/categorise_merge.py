@@ -100,6 +100,17 @@ def main() -> None:
     data = json.loads(DISTILLERIES.read_text())
     features = data["features"]
 
+    # A verdict for a slug that isn't in the dataset means the model invented a
+    # record rather than classifying one. Harmless to the geojson (nothing joins)
+    # but it means that batch's output can't be trusted at face value, so it gets
+    # counted and named rather than silently dropped.
+    real_slugs = {f["properties"].get("slug") for f in features}
+    ghosts = sorted(s for s in verdicts if s not in real_slugs)
+    for g in ghosts[:10]:
+        problems.append(f"verdict for {g!r}, which is not in the dataset")
+    if len(ghosts) > 10:
+        problems.append(f"...and {len(ghosts) - 10} more slugs not in the dataset")
+
     applied = 0
     spirit_counts: Counter = Counter()
     covered_slugs = set()
