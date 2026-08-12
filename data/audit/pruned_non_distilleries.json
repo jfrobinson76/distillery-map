@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "distillery-bend-trailhead",
+    "name": "Distillery Bend Trailhead",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "hiking trailhead"
+  },
+  {
+    "slug": "distillery-commons",
+    "name": "Distillery Commons",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "office park, Louisville"
+  },
+  {
+    "slug": "distillery-labs",
+    "name": "Distillery Labs",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "startup incubator"
+  },
+  {
+    "slug": "distillery-gallery",
+    "name": "Distillery Gallery",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "art gallery"
+  },
+  {
+    "slug": "distillery-road-conservation-area",
+    "name": "Distillery Road Conservation Area",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "conservation area"
+  },
+  {
+    "slug": "madan-singh-anand-sons-storage-tanks-liquor-bottling-plant-distillation-plant-rectified-spirit-plant-pot-still-plant",
+    "name": "Madan Singh Anand & Sons |Storage Tanks|Liquor Bottling Plant|Distillation Plant|Rectified Spirit Plant|Pot Still Plant|",
+    "country": "India",
+    "source": "google-places",
+    "reason": "equipment supplier and bottling plant, not a producer"
+  },
+  {
+    "slug": "the-distillers-library",
+    "name": "The Distillers Library",
+    "country": "Vietnam",
+    "source": "google-places",
+    "reason": "whisky bar, not a producer"
+  },
+  {
+    "slug": "the-distillers-library-bangkok",
+    "name": "The Distillers Library Bangkok",
+    "country": "Thailand",
+    "source": "google-places",
+    "reason": "whisky bar, not a producer"
+  },
+  {
+    "slug": "the-whisky-distillery-marina-bay-sands",
+    "name": "The Whisky Distillery Marina Bay Sands",
+    "country": "Singapore",
+    "source": "google-places",
+    "reason": "whisky retail and bar, not a producer"
+  },
+  {
+    "slug": "distillery-apartments",
+    "name": "Distillery Apartments",
+    "country": "Germany",
+    "source": "google-places",
+    "reason": "residential apartments, Germany"
+  },
+  {
+    "slug": "mercidistillery-magasin-de-running-trail-outdoor-provisions-a-grenoble",
+    "name": "Mercidistillery - Magasin de Running, Trail & Outdoor Provisions à Grenoble",
+    "country": "France",
+    "source": "google-places",
+    "reason": "running and outdoor shop, Grenoble"
+  },
+  {
+    "slug": "the-distillery-lavender-farm-studio-apartment-family-room-with-garden-view",
+    "name": "The Distillery- Lavender Farm Studio apartment - Family Room with Garden View",
+    "country": "New Zealand",
+    "source": "google-places",
+    "reason": "holiday rental"
+  }
+]
