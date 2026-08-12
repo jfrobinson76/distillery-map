@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import DistilleryMapApp from "@/components/DistilleryMapApp";
-import { getDistilleryCount } from "@/lib/data";
+import { getCountries, getDistilleryCount } from "@/lib/data";
 import { SITE_URL, WOW } from "@/lib/constants";
+
+/* How many country links ride in the footer row. Short on purpose: the point is
+   to concentrate crawl signal on the biggest pages, which a long list undoes. */
+const FOOTER_COUNTRY_LINKS = 12;
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -59,7 +63,16 @@ function WelcomeCopy({ count }: { count: number }) {
 }
 
 export default async function Page() {
-  const count = await getDistilleryCount();
+  const [count, countries] = await Promise.all([getDistilleryCount(), getCountries()]);
+
+  /* getCountries() is already sorted by size. Ireland is pinned on top of the
+     cut because it anchors the whiskey audience this map is built for, and it
+     sits just outside the largest dozen on raw distillery count. */
+  const top = countries.slice(0, FOOTER_COUNTRY_LINKS);
+  const ireland = countries.find((c) => c.slug === "ireland");
+  const topCountries = [...top, ...(ireland && !top.includes(ireland) ? [ireland] : [])].map(
+    ({ name, slug, count }) => ({ name, slug, count })
+  );
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -104,7 +117,11 @@ export default async function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
-      <DistilleryMapApp count={count} welcome={<WelcomeCopy count={count} />} />
+      <DistilleryMapApp
+        count={count}
+        welcome={<WelcomeCopy count={count} />}
+        topCountries={topCountries}
+      />
     </>
   );
 }

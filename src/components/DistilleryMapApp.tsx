@@ -622,9 +622,11 @@ function SearchBar({ features, onSelect }: {
 export default function DistilleryMapApp({
   count,
   welcome,
+  topCountries,
 }: {
   count: number;
   welcome: React.ReactNode;
+  topCountries: { name: string; slug: string; count: number }[];
 }) {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
@@ -959,6 +961,26 @@ export default function DistilleryMapApp({
         className="px-4 py-2 sm:px-6 z-10"
         style={{ background: WOW.oak, borderTop: `1px solid ${WOW.oakLight}` }}
       >
+        {/* Largest country pages, linked from the homepage so they sit one click
+            from the root rather than behind the 69-link index. Search Console had
+            Germany, the UK and Japan as discovered-but-never-crawled while every
+            country page sat at depth 2. Deliberately short — a full list here
+            would just recreate the flat hub it exists to bypass. */}
+        <div
+          className="mx-auto max-w-7xl pb-1.5 text-[10px] leading-relaxed"
+          style={{ color: WOW.muted }}
+        >
+          <span>Distilleries by country: </span>
+          {topCountries.map((c, i) => (
+            <span key={c.slug}>
+              {i > 0 && <span aria-hidden="true"> &middot; </span>}
+              <Link href={`/distilleries/${c.slug}`} style={{ color: WOW.amberGlow }}>
+                {c.name}
+              </Link>
+            </span>
+          ))}
+        </div>
+
         <div className="mx-auto flex max-w-7xl items-center justify-between text-[10px]" style={{ color: WOW.muted }}>
           <span>
             Data: Google Places, OpenStreetMap, Wikidata &middot;{" "}
