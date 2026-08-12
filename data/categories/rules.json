@@ -1,0 +1,7232 @@
+{
+  "jameson": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "isle-of-jura-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "strathclyde-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "glencadam-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "dailuaine": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bushmills-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "auchroisk-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "aberlour-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "glenlossie": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "strathmill": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ardmore-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "arran-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "braeval-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fettercairn-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kininvie-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "inchgower-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "scapa-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-mavela": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-warenghem": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-des-menhirs": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "guillon": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kaerilis": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "meyer": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "jameson-distillery-midleton": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "teaninich-distllery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "yoichi-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "aultmore-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "invergordon-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "stauning-whisky": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "miyagikyo-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kavalan-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "old-prentice-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "pearse-lyons-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bonnington": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "roe-co-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "nagahama-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "whiskydestillerie-haider": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "1000-hills-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "highland-park-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "dufftown-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "strathisla-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cameronbridge-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "craigellachie": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "north-british-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tamnavulin-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "miltonduff-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "imperial-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lind-lime-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kilbeggan-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lochranza-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "knockando-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "starlaw-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "dingle-distillery": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "waterford-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "west-cork-distillers": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "clonakilty-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "royal-oak-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "slane-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "connacht-whiskey-company": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "boann-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "wild-turkey-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "jim-beam": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "four-roses-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bulleit-frontier-whiskey": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "angel-s-envy-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "rabbit-hole-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "town-branch-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "barton-1792-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "stranahan-s-colorado-whiskey": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "westland-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "balcones-distilling": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "whistlepig-farm-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hudson-whiskey-tuthilltown": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kings-county-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "garrison-brothers-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "george-washington-s-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sagamore-spirit-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "new-riff-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "catoctin-creek-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "copper-fox-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "few-spirits": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "woodinville-whiskey-co": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "chichibu-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hiram-walker-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "crown-royal-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "forty-creek": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "shelter-point-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "amrut-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "paul-john-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sullivan-s-cove-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lark-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "blacks-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cooley-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-quiet-man-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "walsh-whiskey-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brauerei-gasthaus-seitz-elch-brau": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "blaue-maus": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destillerie-likormanufaktur-deheck-e-k": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "weingut-klaus-simon": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "erste-dresdner-spezialitatenbrennerei-gmbh-augustus-rex": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "edinburgh-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "takamaka-rum": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "engenhos-do-norte": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "young-hearts-distilling-restaurant-and-bar": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-kormann": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schnapsbrennerei-steinlechner": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "nestville-park": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bottelarij-sybrandy": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "weingut-huck-wagner": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-wild": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "grungefuhl": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "obstbrennerei-scholtes": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-lackas": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "stohrs-likormanufaktur": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "edelbrennerei-schnaps-bartel": {
+    "spirits": [
+      "brandy",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "likorfabrikation-leonard-herbst": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-schutz": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schwarzbrennerei-georg-schwarz": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "edelobstbrennerei-jochen-fischer-kg": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "chevalier-de-villarcon-distillery-ruins": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "habitation-saint-etienne": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "rhum-a1710": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "meinel-s-hofbrennerei": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "alte-hausbrennerei-alfred-wecklein": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hedgehog": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "marys-destille": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "old-gamundia-whisky": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "obstbrennerei-heffner": {
+    "spirits": [
+      "brandy",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "chattanooga-whiskey": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-three-wheel-gin-co": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "magic-alambic-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "heinrich-schroeder": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "aba-pisquera": {
+    "spirits": [
+      "pisco"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "four-pillars-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "klipdrift-brandy": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destillerie-koller": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-gruel": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-volker-theurer-im-gasthof-lamm": {
+    "spirits": [
+      "whisky",
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "preussischer-whisky": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lucky-bastards-destillers": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "glina-whisky-destillerie": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fabrica-de-ron-legendario": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cleveland-whiskey": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "highglen-whisky-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "historische-whisky-destillerie-gemmer": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "einfalt-johann-schnapsbrennerei": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "milk-honey-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "casa-orendain": {
+    "spirits": [
+      "tequila"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "r-whisky": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "domaine-pari-pari": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-japan-2": {
+    "spirits": [
+      "shochu"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "aurora-spirit-destillery-as": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "borens-brande": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bowens-whiskey": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-grallet-dupic": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cooper-king-distillery": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "edelobstbrennerei-lutz": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-stadelmann": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "freytag-liqueurs-spirits": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "domaine-de-lapeyrade": {
+    "spirits": [
+      "armagnac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "copper-rivet-distillery": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fesslermill-1396": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "borhaz-uzeme": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "granddad-jacks-craft-distillery": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "st-lucia-distillers": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "last-hope-distillery": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-japan-3": {
+    "spirits": [
+      "shochu"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "callwood-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "specht-brennerei": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sun-king-spirits": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "elrick-house-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "calvados-christian-drouin": {
+    "spirits": [
+      "calvados"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-du-vercors": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "rhine-hall-distillery": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-la-favorite": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "langatun": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "reyka-vodka": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "calarasi-divin": {
+    "spirits": [
+      "cognac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "richmand-rum": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "union-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tower-56-distilling": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "10th-mountain-whiskey-spirit-company": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "domaine-du-peto": {
+    "spirits": [
+      "armagnac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "dartmoor-gin": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tsc-whiskey-and-wine": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "wilderer-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "rebenveredlung-edle-likore-brange-manfred-henninger": {
+    "spirits": [
+      "brandy",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mezcal-mil-demonios": {
+    "spirits": [
+      "mezcal"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "weingut-und-brennerei-horner": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cachacaria-velho-alambique": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-molitor": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "edelobstbrennerei-kieling": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "diemelstrand-ug-co-kg": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-moon-harbor": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "aristides-distilling": {
+    "spirits": [
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "absinthe-la-valote-martin": {
+    "spirits": [
+      "absinthe"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mezcalaria-cuish": {
+    "spirits": [
+      "mezcal"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "stillman-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tesseron-cognac": {
+    "spirits": [
+      "cognac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-japan-5": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "connewitzer-likorfabrik": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schonbuch-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-bond-store-fine-spirits-and-liqueurs": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cognac-seguinot": {
+    "spirits": [
+      "cognac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "vorstadt-brennerei": {
+    "spirits": [
+      "gin",
+      "brandy",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "thrasher-s-rum": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "rottaler-brennerei": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "le-vieux-presbytere": {
+    "spirits": [
+      "calvados"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "skin-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gidis-genusswerkstatt": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cornish-rock-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cognac-couprie": {
+    "spirits": [
+      "cognac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "la-champagne-de-saint-preuil": {
+    "spirits": [
+      "cognac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gineffect-gmbh": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "round-turn-distilliing": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schnapsbrennerei-wenzel": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "oak-and-maple-whisky-and-waffle-co": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "la-grappa-licores-e-destilados": {
+    "spirits": [
+      "grappa"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "poschinger-edelbrandmanufaktur": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "dr-zimmermann": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destillerie-reif": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schnapsbrennerei-marchsteiner": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "jones-von-drehle-vineyards": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "dorodouli-distillery": {
+    "spirits": [
+      "gin",
+      "rum",
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brother-justus-whiskey-company": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "margaret-river-distilling-company": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "north-spirit-distillery-after-six-vodka": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cognac-frapin": {
+    "spirits": [
+      "cognac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "white-hills-distillery": {
+    "spirits": [
+      "whisky",
+      "vodka",
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "njord-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "armagnac-du-chateau": {
+    "spirits": [
+      "armagnac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "patent-5-spirits": {
+    "spirits": [
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "eberhards-finest": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-a-facon": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sturmiushof-die-rhoner-whiskey-brenner-doris-walter-zeitz": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schnapsbrennerei-meckel": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kelso-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "good-old-riedbacher": {
+    "spirits": [
+      "whisky",
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "maidstone-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "stockport-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-japan-6": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "stortebeker-brennerei": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sall-whisky-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gin-eva": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kelterei-brennerei-gorges-gmbh": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "monter-genussbrennerei": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "theihof-brennerei": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "oberwiesenhof-brennerei-streit": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "thy-whisky": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "opificio-il-reale": {
+    "spirits": [
+      "gin",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distellerie-megerle": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schnaps-muller": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "old-young-s": {
+    "spirits": [
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ferme-du-promenoir": {
+    "spirits": [
+      "calvados"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hallasan-soju": {
+    "spirits": [
+      "soju"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bigourdan-distillerie-de-camargue": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-aarau-klg": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "turicum-distillery": {
+    "spirits": [
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "golitzwander-destillate-likore": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "purnerweindl": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bodega-san-nicolas": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bodega-huamani": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cachaca-artesanal-rossi": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "scoundrel-s-distilling": {
+    "spirits": [
+      "gin",
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "obdo": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "high-coast-whisky": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "worthing-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "rola-weinbrennerei-und-likorfabrik": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "grand-whisky": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cachacaria-weber-haus": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "madrugada-brewing-company-brewpub": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cachacaria-melicana": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "us-heit-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "depot-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "aguilar-destilerias": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "grappa-brugnolaro": {
+    "spirits": [
+      "grappa"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "likore-edelbrandr-farber": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "juni-gin-lab": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bootleggers-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "yoga-pants-vodkas": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "le-champ-du-frene": {
+    "spirits": [
+      "cognac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "domaine-des-chaillis": {
+    "spirits": [
+      "cognac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tequileria-trujillo": {
+    "spirits": [
+      "tequila"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tequila-5-blancos": {
+    "spirits": [
+      "tequila"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "riverina-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kasers-schloss": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "oreli-s-distillerie": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-japan-7": {
+    "spirits": [
+      "shochu"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "swan-valley-gin-company": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "limeburners-and-ginversity-in-the-valley": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kimberley-rum-c": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "la-maison-du-rhum": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "vintersol-distillery": {
+    "spirits": [
+      "aquavit",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-japan-8": {
+    "spirits": [
+      "shochu"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "crab-island-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hinrichsen-s-whisky": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "braud-quenesson": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "flinders-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gammelstilla-whisky": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-du-saut-du-doubs": {
+    "spirits": [
+      "absinthe",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "roulaison-distilling-co": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "trainer-edelbrande-und-likore": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "myken-destilleri-as": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "all-points-west": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "vodka",
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "farmers-wife-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tequila-322pv": {
+    "spirits": [
+      "tequila"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "maria-river-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "aggregation-distilling-company": {
+    "spirits": [
+      "gin",
+      "vodka",
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "red-locks-irish-whiskey": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "spice-island-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bus-whisky": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-indiana-whiskey-company": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "waubs-harbour-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-japan-9": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "old-well-distillery": {
+    "spirits": [
+      "absinthe",
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "zimmerer-hof": {
+    "spirits": [
+      "brandy",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "restinga-gin-artesanal": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "vanagandr-destilerias-s-l": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "edelbrande-single-malt-whisky-gunther-busch": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "domaine-du-coquerel": {
+    "spirits": [
+      "calvados"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "alrich-likormanufaktur": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-spielberger": {
+    "spirits": [
+      "whisky",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mon-petit-arrange": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-aymonier-la-semilla": {
+    "spirits": [
+      "absinthe"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "foxdog-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fahner-landbrennerei": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "domaine-de-lassaubatju": {
+    "spirits": [
+      "armagnac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "michls-edelbrande-und-likore": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "shed-one": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destilerias-pepe-albela": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kymsee-whisky": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "domaine-de-marquestau": {
+    "spirits": [
+      "armagnac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "portmagee": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-fink": {
+    "spirits": [
+      "whisky",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-des-hautes-terres": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "derailed-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "altitude": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schadl-edelbrande-likore": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "danish-west-coast-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "matrikel-5l": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bristol-dry-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "armagnac-delord": {
+    "spirits": [
+      "armagnac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "liqueur-du-berry": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-am-feuergraben": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "biersack-hausbrennerei": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "likormanufaktur-bodensee": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "engenho-fulo-do-mato": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "eimverk-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-chamberick": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destilerija-kristal": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "terra-distillerie-gin-vodka-artisanaux": {
+    "spirits": [
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "koldmose-whisky": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-fuchs": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-japan-12": {
+    "spirits": [
+      "shochu"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "benbecula-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "beenleigh-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bundaberg-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kuenz-naturbrennerei": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "foursquare-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hougardia": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "vandelaer": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cachaca-joao-mendes": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-longueteau": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-la-mauny": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-jm": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-saint-james": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "weingut-brennerei-manfred-seiter": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "politschek-weingut-brennerei": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "whisky-brennerei": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "leydicke": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tagohinke-brewery-products": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "humdinger-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "nantou-winery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ttl-puli-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "wuri-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "allt-a-bhainne": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-english-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cathedral-of-rum": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "crowded-barrel-whiskey-co": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schnaps-und-edelbrennerei-heilmann": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "crossbill": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "enzianbrennerei-grassl-am-funtensee": {
+    "spirits": [
+      "gin",
+      "brandy",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bietzer-muhlenbrand-edelobstbrennerei": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schnapsmanufaktur-denzer-thieser": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "knysna-gin-distillery-cocktail-bar": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "steinhauser-gmbh-alte-bodensee-hausbrennerei-weinkellerei": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-rhum-damoiseau": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "talisman-brewing-company": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "whisky-destillerie-affenzeller": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "buhler-s-old-rhein-river-brennerei": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "burgbrauhaus": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-m-eichhorn": {
+    "spirits": [
+      "brandy",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-inge-blank": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "j-gow-rum": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-schnapsbud": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brauerei-neunspringe": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "la-tondena-distilleria-bago-inc": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "weingut-aichinger": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "calvados-preaux": {
+    "spirits": [
+      "calvados"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-franz-kostenzer": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "achill-island-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-japan-13": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "calvados-pere-magloire": {
+    "spirits": [
+      "calvados"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "spessarthof": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-russia-12": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "glen-turner-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bent-river-brewing-company": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "haitzinger-resch-whisky-und-schnapsbrennerei": {
+    "spirits": [
+      "whisky",
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bethel-rd-distillary-winery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bourbon-30": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "stork-club-whiskey-destillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ivory-bill-brewing": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "killik-handcrafted-rum": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "landgasthof-zum-schnapsbrenner": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "nordpfalzer-edelobst-und-whiskydestille": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "barwurzerei-obstbrennerei-whisky-destillerie-drexler-arrach": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "maine-distilleries-cold-river-vodka": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "just-rum": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "maringers-schnapsspezialitaten": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kleinbrennerei-k-p-hummel": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "house-of-whiskey-gin-rum": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "harzer-grubenlicht": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "weinbau-und-obstbrennerei-hans-meyer": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "west-fork-whiskey-co": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "liqueurs-de-warang": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hunter-distillery": {
+    "spirits": [
+      "vodka",
+      "brandy",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "macaloney-s-island-distillery-and-twa-dogs-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bath-botanical-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "71-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "firestone-robertson-distilling-co": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gatehouse-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destillerie-gutting": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mej-bezuidenhout-distillery": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "deep-eddy-distillery": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cotherman-distilling-company": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schwarzhofs-back-und-brennhisli": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "new-tricks": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "unser-schnaps-cachacaria": {
+    "spirits": [
+      "rum",
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "grappa-mazzetti-altavilla": {
+    "spirits": [
+      "grappa"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fraxner-schnapsatelier": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "wigle-whiskey-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "circle-city-whiskey-co": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "enchanted-rock-vodka": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "j-henry-sons-bourbon-tasting-room-farm": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "zeitzer-whisky-manufaktur": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "omega-gin-company": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "slake-spirits": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brandywine-branch-distillers": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cachacaria-casa-poletto": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cachacaria-porto-morretes": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-japan-21": {
+    "spirits": [
+      "shochu"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mnnerhobby-destille": {
+    "spirits": [
+      "gin",
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "big-machine-distillery-tavern": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "green-river-distilling-co": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tequila-don-ramon": {
+    "spirits": [
+      "tequila"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ridge-runner-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fabrica-de-ron": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "dorcol-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cava-ron-san-miguel": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hofbrennerei-paul-kiefer": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "source-farmhouse-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "alambique-de-cachaca-artesanal-spezia": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bayou-rum-louisiana-spirits-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "milam-and-greene-whiskey-distillery-and-tasting-room": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "orkney-gin-distillery": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-japan-24": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gin-sul": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bardstown-bourbon-company": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hans-loch": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hacienda-de-corralejo": {
+    "spirits": [
+      "tequila"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "belgian-owl-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "seeker-s-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "eureka-springs-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "alqueva-lake-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "warrior-liquor": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "anther-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gin-kitchen": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bismarck-brewing": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-japan-26": {
+    "spirits": [
+      "shochu"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "single-fin-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "coachella-valley-brewing-company": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "roughhouse-brewing": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tequila-san-matias-de-jalisco": {
+    "spirits": [
+      "tequila"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bebidas-bompani": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fierce-whiskers-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "friedrich-jaster-co": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "praban-na-linne": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fabrica-de-ron-classico": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mackmyra-whiskyby": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "adnams-whiskey-dunnage": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "spirit-of-masham-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "rick-thomas-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "whiskey-thief-distilery-co": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-domaine-de-letaye": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "whiskey-hollow-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "duluth-whiskey-project": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "calvados-boulard": {
+    "spirits": [
+      "calvados"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sigrano-club-vodka": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "talofa-spirits-and-liqueurs": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-ingram-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-japan-33": {
+    "spirits": [
+      "shochu",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "two-stacks-irish-whiskey": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "j-j-corry-irish-whiskey": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "georgian-bay-spirit-co": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tomintoul-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lagg-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "jameson-distillery-bow-st": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "garden-county-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "dundalk-bay-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "woodstone-creek-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "american-freedom-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "islamorada-brewery-distillery-islamorada": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "crooked-palm-cabana-islamorada-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "islamorada-brewery-distillery-fort-pierce": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "frazier-creek-brewing-distilling-co": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "south-texas-distillery-home-of-wild-rag-vodka": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "devils-river-whiskey-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "dripping-springs-distilling-small-batch-vodka-savor-it": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "deep-eddy-vodka-distillery": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "homosassa-distillery-brewing-company": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "rockpit-brewing-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ranger-creek-brewing-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "k-spoetzl-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "toddy-blends-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "highway-distillery": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "clear-creek-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ogle-brewery-arch-ray-winery-paul-bee-distillery-at-arch-ray-resort": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "elk-store-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schitz-creek-distillery-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "real-spirits-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "pontchartrain-distilling-co-paul-kelly-vodka": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fruitcraft-winery-distillery-event-venue": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "flying-leap-vineyards-distillery-winery-estate-elgin-az": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "little-toad-creek-brewery-distillery-las-cruces": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "webb-s-distillery-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "left-coast-brewing-co-tasting-room-smokehouse-distillery-irvine": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "beachwood-brewing-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "little-toad-creek-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-distillery-cloudcroft-brewing-co": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "five-points-distilling-lone-elm-whiskey": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hardscoop-distillery-winery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bns-brewing-and-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "36522-the-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "1968-cellars-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "julie-s-dream-winery-distillery-vineyards": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ohso-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "desert-rock-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "santan-gardens-brewery-distillery-tours": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "herman-marshall-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "entrance-kiepersol-winery-distillery-restaurant-and-vineyard": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ozan-winery-yh-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "redmont-distilling-co": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "wild-leap-lagrange-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-lost-druid-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "asw-distillery-at-the-battery-atlanta-home-of-fiddler-bourbon-hunker-vodka-more": {
+    "spirits": [
+      "whisky",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "social-fox-brewing-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "remedy-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mutation-brewing-and-distilling-company": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "california-tacos-cantina-and-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "left-coast-brewing-co-tasting-room-smokehouse-distillery-ontario": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "blue-ridge-distilling-co-inc": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "momentum-distillery": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "wild-atlantic-distillery": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "re-find-distillery-villicana-winery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "la-bay-gin-distillerie-californienne": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-grand-canyon-brewing-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "unhinged-brewing-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "vara-winery-and-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tumbleroot-brewery-and-distillery-alegria-on-agua-fria": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tumbleroot-brewing-and-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "scissortail-distillery-llc": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "chattanooga-whiskey-riverfront-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "southern-grace-distilleries": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "seven-jars-winery-and-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "grand-canyon-brewery-and-distillery-cabin-historic-tack-house": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "white-mule-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "missouri-ridge-distillery-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "purple-toad-winery-and-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "nashville-barrel-company-distillery-and-whiskey-bar": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brinson-spirits-distillery-winery-and-restaurant": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "city-walk-brewing-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "old-nick-williams-co-farm-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "icw-brewery-136-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "raven-ranch-distilling-co-kaweah-brewing-co": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "red-river-brewing-company-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "core-brewing-distilling-co": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gunpowder-creek-distillers": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "chef-life-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "alpha-brewing-co-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brewing-distilling-center": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "creek-bottom-brewing-distillery-restaurant": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "davis-valley-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "moab-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bottom-of-the-barrel-winery-and-tc-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "purple-toad-winery-and-distillery-bowling-green": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mb-roland-distillery-cave-du-bourbon": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "blue-rook-cane-spirits-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lexington-brewing-distilling-co": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fresh-bourbon-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bourbon-30-spirits-j-mattingly-1845-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "three-notch-d-brewery-distillery-craft-kitchen-nelson-county": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "filibuster-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-winery-at-rapidan-war-craft-brewery-cidery-distillery": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "10-torr-distilling-and-brewing": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "stranahan-s-whiskey-distillery-cocktail-bar": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "felene-distillery": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fence-stile-vineyards-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "burnt-barrel-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "friendship-brewing-distilling-company": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "old-herald-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "monkey-hollow-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "saddlestone-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "black-diamond-brewery-distillery-waverly": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "black-diamond-brewery-and-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "black-diamond-brewery-and-distillery-circleville": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fallen-oak-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "jaxon-keys-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "almendra-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "anvil-forge-brewing-and-distilling-company": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cedar-creek-winery-brewing-co-and-distillery": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brain-brew-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "wenzel-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "northern-row-brewery-distillery-taproom": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "springfield-manor-winery-distillery-brewery": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "charis-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fiore-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "whiskey-acres-distilling-co": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "march-first-brewing-and-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "warwick-valley-winery-distillery-orchard": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brickway-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "judge-richard-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "templeton-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tycoga-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "maplewood-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "18th-street-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "greenport-distilling-one-woman-winery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "stoutridge-distillery-and-winery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "wyoming-whiskey-distillery-shop": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "stone-faces-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "pollyanna-brewing-distilling-company-st-charles": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "st-julian-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "chateau-aeronautique-winery-blue-skies-brewery-mile-high-distillery-irish-hills": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-whiskey-factory-detroit-city-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "shankar-distillers-home-of-varchas-premium-spirits-900-grados-tequila": {
+    "spirits": [
+      "tequila"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "chateau-aeronautique-winery-blue-skies-brewery-mile-high-distillery-airpark": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "conneaut-cellars-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "idol-ridge-winery-alder-creek-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "rustic-luxury-w-horses-historic-whiskey-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sorrenti-family-estate-winery-distillery-pizzeria": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "speakeasy-motors-whiskey-co-tasting-room-at-liquid-mercantile-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "magnanini-winery-restaurant-distillery-wedding-venue": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "rum-tropic-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "newport-craft-brewing-distilling-co": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "nashoba-valley-winery-distillery-brewery-and-restaurant": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "flag-hill-distillery-winery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "privateer-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "four-daughters-vineyard-winery-loon-juice-hard-cider-and-the-traditionalist-bourbon-distillery": {
+    "spirits": [
+      "whisky",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "whiskey-run-distilling-co": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "stable-rock-winery-distillery-kitchen": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "staller-estate-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "geneva-lake-distilling-winery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lewis-station-winery-distillery-kitchen": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "eagle-park-brewing-distilling-company": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bier-distillery-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fenton-winery-brewery-dream-machine-distillery": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "whole-hearted-winery-brewery-distillery": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "motor-city-gas-whiskey-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "willibald-farm-distillery-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brewery-distillery-tours-niagara": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "montezuma-winery-hidden-marsh-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "warfield-distillery-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "chankaska-creek-ranch-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "river-bend-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "infinity-beverages-winery-and-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "aspen-sky-winery-distillery-event-center": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "milwaukee-brewing-distilling-company": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "norden-distilling": {
+    "spirits": [
+      "aquavit"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bayfield-berry-farm-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "willibald-distillery-brewery-st-jacobs-farmers-market": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-oak-room-by-american-oak-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "batson-river-brewing-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "batson-river-brewing-distilling-kennebunk": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "dancing-rabbit-distillery": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "duck-creek-winery-denmark-distilling-new-denmark-brewing-company": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "american-oak-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "snow-farm-vineyard-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bartlett-maine-estate-winery-and-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "teaghlach-gold-distillery-and-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bird-creek-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hood-crest-winery-and-distillers": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "von-stiehl-winery-distillery-cidery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "4-degrees-brewing-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "dilley-rae-pacific-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mariana-distillery-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ocean-s-daughter-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "menaud-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mastrogiannis-distillery-winery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "le-jardin-de-la-simplicite-winery-cidery-nano-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "karma-vineyards-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "squeezed-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "canadian-flower-winery-canadian-flower-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "canadian-craft-tours-ltd-craft-brewery-distillery-and-winery-tours-vancouver-bc": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "last-best-brewing-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "minhas-brewery-distillery-tap-room-kitchen": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gin-lane-distilling-cocktails": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "minhas-sask-brewery-distillery-winery-and-cidery": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brewery-winery-distillery-workers-local-300": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "stumbletown-distilling-city-limits-brewing": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "northern-republic-brewing-distilling-services": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fuhr-estate-winery-and-craft-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "trench-brewing-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cold-lake-brewing-and-distilling-co": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hounds-tooth-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tasmanian-whisky-selectors-bogan-road-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "iron-house-brewery-distillery-vineyard": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "starward-distillery-bar": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "loch-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mates-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "king-island-distillery-airport-bar": {
+    "spirits": [
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "otway-estate-brewery-distillery-cidery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bellarine-distillery-the-whiskery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tar-barrel-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "green-gully-brewing-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "maffco-brewery-and-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "suffoir-winery-brewery-and-distillery": {
+    "spirits": [
+      "beer",
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "noodledoof-brewing-distilling-co": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "itinerant-spirits-cocktail-bar-distillery": {
+    "spirits": [
+      "gin",
+      "vodka",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "terra-australis-distillery-herbal-lore-liqueurs": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "morgans-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "nagambie-brewery-and-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "wildbrumby-schnapps-distillery": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "yack-creek-distillery-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hurdle-creek-still-small-batch-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "wild-flower-gin-distilling": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "union-bridge-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lake-meran-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "three-valleys-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "joadja-distillery-tourism-historic-site": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "dawning-day-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "moonshiner-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sons-daughters-winery-and-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "2-halfs-brewing-distilling": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sydney-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "broken-hill-distillery-wed-to-sun-from-12pm-all-day-gin-tastings": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-old-shed-distillery-bilpin-blue-mountains": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "wharf-st-distillery-restaurant": {
+    "spirits": [
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "flying-foam-brewery-distillery-manufacturing": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "black-gate-distillery-mendooran": {
+    "spirits": [
+      "whisky",
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bunker-distillery-cellar-door-bar-grafton-nsw": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "vodka",
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bent-road-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "rebellion-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "nosferatu-distillery-bar-cafe": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "vodka",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "5-star-brewing-distilling-supplies-qld": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "comiskey-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "montvale-gin-distillery-bar": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "its4u-winery-and-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ginglani-distillers-private-limited-manufacturing-plant": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "allwyn-brewery-distillery-pvt-ltd": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "solkit-distillery-brewery-p-ltd": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hui-coastal-brewery-and-distillery-limited": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "perfume-trees-gin-by-tankyu-distillery-at-soho": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tarquin-s-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "atlantic-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "country-life-brewery-and-north-shore-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-dartmouth-distillery-company": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tors-distillery": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-lost-distillery-company-whisky-lounge": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lakehouse-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ramsbury-brewery-distillery-ltd": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bristol-bath-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mousehall-distillery-winery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ludlow-distillery-the-home-of-ludlow-gin-whisky": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-citadelle-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-calvados-garnier": {
+    "spirits": [
+      "calvados"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-de-soligny": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-c-est-nous": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "nethergate-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "szicsek-palinka-distillery-handcrafted-fruit-brandy-in-the-uk": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bath-botanical-gin-distillery-and-herbal-apothecary": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hayman-s-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "old-bakery-gin-rum-whisky-distillery-est-1860": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "black-mountains-botanicals-spirit-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "scout-sage-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "stonehouse-brewery-beer-bbq-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "myrddins-brewery-distillery-ltd": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "wharf-distillery": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "rum",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "home-farm-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "liverpool-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "dropworks-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "rutland-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "poppyland-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "salford-distillery-salford-rum-salford-gin": {
+    "spirits": [
+      "gin",
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "spirit-of-rhyl-gin-bar-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "libations-rum-distillery-blending-house": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mallard-point-vineyard-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "strands-brewery-distillery": {
+    "spirits": [
+      "gin",
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bankhall-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "stable-yard-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ninefold-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "pennington-s-spirits-liqueurs-pennington-s-distillery": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-cafe": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "jacobite-spirits-scottish-spiced-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-wee-farm-distillery": {
+    "spirits": [
+      "gin",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lerwick-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "nishihira-shuzo-kokuto-shochu-distillery": {
+    "spirits": [
+      "shochu"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "yasato-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ishigura-museum-shirakane-distillery": {
+    "spirits": [
+      "shochu"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fugaku-distillery-sasakawa-whisky-co-ltd": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sugimoto-shochu-distillery": {
+    "spirits": [
+      "shochu"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "shochu-distillery-museum-toji-no-sato-kasasa": {
+    "spirits": [
+      "shochu"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "fukano-shuzo-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "yokohama-gin-distillery": {
+    "spirits": [
+      "gin",
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hida-takayama-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kirin-fuji-gotemba-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "eigashima-whiskey-distillery-white-oak-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "citrus-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sicx-gin-distillery-cafe-bar": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kyoto-whisky-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "nikka-whiskey-distillery-kashiwa-factory": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "shibataya-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hitachino-brewing-tokyo-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "menge-distillery": {
+    "spirits": [
+      "soju"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "yeoncheon-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "nanbubijin-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "whisky-student": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "herbal-kulen-gin-siem-reap-herbology-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "prakaan-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "issan-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lady-trieu-distillery-tours-gin-experiences": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "colsol-distillery-don-tikyo-rum": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-whisky-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-whisky-distillery-marina-bay-sands": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-whisky-distillery-oue-downtown": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-whisky-distillery-great-world": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hout-bay-harbour-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "van-ryn-s-distillery-and-brandy-cellar": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gember-distillery-two-gingers-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tahlia-farm-distillery-and-gin-tasting": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "l-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-george-brewery-and-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "forest-gate-brewery-distillery-backpackers": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "boplaas-winery-and-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "black-horse-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mirari-gin-time-anchor-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "drayman-s-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "boulders-brewhouse-and-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destileria-casa-palacios": {
+    "spirits": [
+      "mezcal"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destileria-de-mezcal-palenque-ancestral-el-conejo": {
+    "spirits": [
+      "mezcal"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "casa-izamal-mezcal-distillery": {
+    "spirits": [
+      "mezcal"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "el-mezcal-del-sur-destileria": {
+    "spirits": [
+      "mezcal"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "finca-18-agave-spirits-distillery-tequila-tours-weddings-and-cabins": {
+    "spirits": [
+      "tequila"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-rivesca": {
+    "spirits": [
+      "tequila"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destilerias-sierra-unidas": {
+    "spirits": [
+      "tequila"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sur-34-gin-craft-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "union-distillery-maltwhisky-do-brasil": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ararauna-craft-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destileria-del-vertice-vertice-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "malaria-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destileria-bragado-srl": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brook-brothers-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "piccola-distilleria": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "aconcagua-gin-destileria": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destileria-gin-nativo": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lowlands-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-northman-gin-the-n-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mnnerhobby-brennerei-brauerei": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hafendestillerie-und-brauerei-gmbh": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "de-kriek-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "meir-distillery": {
+    "spirits": [
+      "aquavit"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "revsunds-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "finnish-distillery-company-oy-artik-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "tipsy-tribe-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "plus-oultre-distillery-gin-de-binche": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-artisanale-jm-leisen-eaux-de-vie-whisky-gin-vodka-vins-cidre-cadeaux": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-fortemps-de-loneux-entre-nous-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "winery-distillery-jurgen-heuler": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "les-distilleries-bruxelloises-brussels-dry-gin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "winery-and-distillery-karlheinz-weis": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "weingut-und-brennerei-konzen-dehren": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "weingut-brennerei-michael-berweiler": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "briegel-schnapps-distillery": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gerlachus-bierbrouwerij-en-whiskystokerij": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "privatdestillerie-ginsan-ty-gins-und-tastings": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "pittermanns-brauerei-destillerie-gmbh": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "weingut-hausbrennerei-zum-eulenturm": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brudergeist-gmbh-brennerei-bar-tasting": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "historic-weinbrennerei-dujardin": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destillerie-brennerei-heinrich-habbel-liqueur-manufactur": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "j-d-william-s-whisky-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "groninger-genever-stokerij-jenever-likeur-en-whisky": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "coast-brewery-and-distillery-to-werdum-e-k": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "faro-whisky-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "filosoof-jenever-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "knut-hansen-dry-gin-hamburg-distilling-company-hdc-gmbh": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "alte-mackenstedter-kornbrennerei-hans-turner-gmbh": {
+    "spirits": [
+      "vodka",
+      "brandy",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "giniti-destillerie-gin-spirituosen-destillerie-und-manufaktur": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "alder-hamburg-organic-distillers": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-anaiak": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "mallorca-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "home-distillers-distillerie-des-bughes-whisky-auvergnat": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "maison-16-distillerie-de-la-loire-liqueurs-spiritueux-artisanaux-a-saint-marcellin-en-forez": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-genestine-clermont-ferrand": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "heriose-single-malt-whisky-distillerie": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-martinaud": {
+    "spirits": [
+      "cognac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-genestine-orcines": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-crozet-freres-liqueurs-sirops-artisanaux": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cognac-giraud-distillerie-de-l-etang": {
+    "spirits": [
+      "cognac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cognac-chollet-distillerie-du-planty": {
+    "spirits": [
+      "cognac"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-absinthe-artemisia-bugnon-co": {
+    "spirits": [
+      "absinthe"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-du-val-de-travers": {
+    "spirits": [
+      "absinthe"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-belmont": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "orma-whisky-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-heroult-distillerie-artisanale-en-bretagne-gin-pastis-liqueurs-eaux-de-vies": {
+    "spirits": [
+      "gin",
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-d-absinthe-la-fee-des-champs-2057-villiers-val-de-ruz": {
+    "spirits": [
+      "absinthe"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "spezialitatenbrennerei-zurcher": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "celtic-whisky-distillerie-paimpol": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "v-sinne-gin-schwarzwald-brennerei": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennereihof-eichin": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "orma-whisky-destillerie": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "antica-distilleria-di-altavilla-museo-della-grappa": {
+    "spirits": [
+      "grappa"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distilleria-monte-grappa-srl": {
+    "spirits": [
+      "grappa"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "amoroso-spirits-liqueurs-distillery-destilerija": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "blackmill-distillery-bussines-unit-of-svarog-sistemi-brewing-and-distilling-solutions-ltd": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-krauss-gin-whisky-rum-herstellung-verkostung": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-stin-styrian-gin-destillerie-sudsteiermark": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "svarog-sistemi-brewing-and-distilling-solutions-ltd": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schnaps-brennerei-stahli-gmbh": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lipp-weingut-destillerie": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schnapsbrennerei-spitaler-zillertaler-edelbrande": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destillerie-hofbrennerei-schnapsbrennerei-ebner": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schnapsbrennerei-mitteregger": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schnapsmuseum-glass-distillery": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "specialty-distillery-whiskey-distillery-liebl-gmbh": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destillerie-hochstrasser-gmbh-co-kg": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-stin-styrian-gin-destillerie-oststeiermark": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "nibelungengold-brauerei-destillerie-furstenfeld": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kohler-weingut-brennerei": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schwarzwaldimkerei-brennerei-herb": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "winery-and-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "singold-whisky-gin-rum-destillerie-und-eventlocation": {
+    "spirits": [
+      "whisky",
+      "gin",
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "emil-1868-schnapsbrennerei": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destillerie-georg-hiebl": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lore-cocktailmanufaktur-destillerie": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "egilse-single-malt-whisky-destillerie": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "regiomat-finch-whiskydestillerie": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "obstmanufaktur-greiner-edelobstbrennerei-brennerei-verschlussbrennerei-whiskydestillerie": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gustav-mayer-brennerei": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "nvremberga-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "penninger-brennerei-waldkirchen-besucherzentrum-und-whiskydestillerie": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "shadows-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-und-likorfabrik-alexander-betke": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "weingut-brennerei-borchert": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "walter-hambrech-inh-michael-hambrech-weingut-brantweinbrennerei": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brocher-brennerei-metz-die-schnapsdrossel-der-hofladen-mit-schuss": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "das-herzstuck-schaubrennerei-hausbrauerei-tagungen-events-apartments": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "weingut-brennerei-jurgen-rebhann": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "luzifer-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kirchner-menge-inh-torsten-becker-destillerie-likorfabrik": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "hartingowe-martinato-gbr-gin-brennerei": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destileria-gin-rives": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "moonshine-bar-by-moonshine-limited": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gin-mallorca-destileria-pareis": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cala-dor-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destilerias-whisky-dyc": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-du-maquis": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "lux-gin-bar-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brandystra-distillery": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "bosnjak-distillery-brewery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "belgrade-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "winery-and-distillery-gitaric": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "chopin-distillery": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brest-distillery-belalco": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "casa-bravada-distillery": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "cruzan-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sion-farm-distillery-home-of-mutiny-island-vodka": {
+    "spirits": [
+      "vodka"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "captain-morgan-rum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillerie-g-hardy": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sea-cliff-distillery-outpost": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "sea-cliff-eco-cottages-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "saddle-hill-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "juno-gin-begin-distilling": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "kaimai-brewing-and-distilling-company": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "the-heke-kitchen-brewery-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destileria-noble-indulto": {
+    "spirits": [
+      "mezcal"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "distillery-winery-of-thrace": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gin-distillery-smidgin": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "karakostas-distillery-winery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "careva-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "zaharchev-winery-and-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "iora-winery-and-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "makharadze-winery-and-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "askaneli-winery-distillery-llc": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "curacao-liqueur-distillery": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "alto-vista-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "topper-s-rhum-distillery": {
+    "spirits": [
+      "rum"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "iconic-african-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "colonel-brewery-and-distillery": {
+    "spirits": [
+      "beer"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "riachi-winery-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ardoum-winery-and-distillery": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "don-michael-andean-distillery": {
+    "spirits": [
+      "whisky"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "destileria-duende-gin-duende": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-breig-edelbrande-likore": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "brennerei-muhlenthal": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schnapsbrennerei-dominik-ritter": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "alte-brennerei-backnang": {
+    "spirits": [
+      "liqueur"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "gutsausschank-weingut-und-brennerei-andreas-kuhn": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "weingut-und-brennerei-donnermuhle": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "schnapsbrennerei-harald-scherbl": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "weingut-raritaten-brennerei-gut-lindenburg": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "weingut-destillerie-da-finz": {
+    "spirits": [
+      "wine"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "wieser-schnapsbrennerei-gmbh": {
+    "spirits": [
+      "brandy"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "everything-but-gin-distillery": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "1881-distillery-and-gin-school": {
+    "spirits": [
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  },
+  "ahascragh-distillery": {
+    "spirits": [
+      "whisky",
+      "gin"
+    ],
+    "confidence": "high",
+    "source": "rules"
+  }
+}
