@@ -137,7 +137,7 @@ export const ENTRIES: Entry[] = [
     dy: -4,
     anchor: "end",
     basis:
-      "The LYQD Irish Whiskey Supply Report (analysis Oct 2025, by independent analyst Martin Purvis), corroborated by two lines that share none of its inputs: Drinks Ireland's published count of over 3.1m casks maturing in 2020, rolled forward on production-minus-withdrawals arithmetic to ~4.1m; and a producer bottom-up — Irish Distillers 1.7m casks (2021, company blender), Great Northern 500k (company site), Bushmills 500k+ (trade, 2026), Waterford 70k+ (receivership sale) — that brackets 3.8–4.2m with an itemised allowance for Tullamore, Cooley, West Cork and the long tail.",
+      "The LYQD Irish Whiskey Supply Report (analysis Oct 2025, by independent industry analyst Martin Purvis), corroborated by two lines that share none of its inputs: Drinks Ireland's published count of over 3.1m casks maturing in 2020, rolled forward on production-minus-withdrawals arithmetic to ~4.1m; and a producer bottom-up — Irish Distillers 1.7m casks (2021, company blender), Great Northern 500k (company site), Bushmills 500k+ (trade, 2026), Waterford 70k+ (receivership sale) — that brackets 3.8–4.2m with an itemised allowance for Tullamore, Cooley, West Cork and the long tail.",
     source: "LYQD Irish Whiskey Supply Report 2026; Drinks Ireland; producer disclosures",
     sourceUrl: "https://exchange.lyqd.io/lyqd-irish-whiskey-supply-report-2026/",
     asOf: "Analysis Oct 2025, published May 2026",
