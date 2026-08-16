@@ -271,15 +271,26 @@ name would not have surfaced. Two known shapes to check next time:
 
 ## Dataset consistency
 
-**Files that carry the same entities.** Removed slugs were also purged from the
-US enrichment set, which is built from the same Google Places pull:
+**Files that carry the same entities.** The US enrichment set is built from the
+same Google Places pull and held eight of the removed entities. It was purged to
+match:
 
-- `data/enriched/us_distilleries_seed.csv` — 11 rows removed
-- `data/enriched/unmatched.csv` — 10 rows removed
-- `data/enriched/matched_review.csv` — 1 row removed (Mile Hi Distilling, which
-  had been fuzzy-matched at 80% to *Marble Distilling Company's* TTB permit
-  CO-S-20128 — a bad match on a row that should not have been in the set at all)
+- `data/enriched/us_distilleries_seed.csv` — 1,919 → 1,911
+- `data/enriched/unmatched.csv` — 597 → 590
+- `data/enriched/matched_review.csv` — 140 → 139. The row was Mile Hi Distilling,
+  fuzzy-matched at 80% to *Marble Distilling Company's* TTB permit CO-S-20128 —
+  a bad match on a row that should not have been in the set at all
 - `data/enriched/matched_high_confidence.csv` — no rows affected
+
+Note that `/data/enriched/` is gitignored (`.gitignore:44`), so this purge is
+local to the working copy and does not appear in the commit. Anyone regenerating
+that set from the Google Places pull will reintroduce the eight rows unless the
+seed step is filtered against `data/audit/pruned_non_distilleries.json`. Worth
+wiring in — the ledger now exists for exactly that.
+
+The three US tasting-room rows in the seed set (`village_garage_..._at_orvis`,
+`village_garage_..._at_sugar_bob_s`, `mad_river_distillers_at_5th_quarter...`)
+were deliberately left, matching the geojson.
 
 **Files deliberately not touched.** The spirit-categorisation sidecars in
 `data/categories/` still hold verdict entries for removed slugs:
