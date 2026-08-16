@@ -191,6 +191,11 @@ opposite of the point.
 None of these were removed. They are recorded so they get reviewed rather than
 forgotten.
 
+> **Resolved 16 August 2026.** Sections A, B and the `bismarck-brewing` row in
+> section C were worked through the same day. What was decided and done is in
+> **Actions taken** at the foot of this document. The lists below are left as
+> they were written, as the record of what was reviewed.
+
 ### A. Tasting rooms — a product-scope question, not a data defect (14)
 
 The site describes itself as "a community-built dataset of distilleries,
@@ -309,3 +314,138 @@ categorisation outputs at merge.
 **No hardcoded totals to update.** The homepage count is derived at runtime
 (`src/lib/data.ts:19`, `data.features.length`), per the standing rule in
 `CLAUDE.md`.
+
+---
+
+## Actions taken — 16 August 2026
+
+Everything below happened the same day as the pass above, after the review lists
+were written. Feature count is unchanged at **6,131** — no row was added or
+removed in this stage. Every action was checked against the producer's own
+website first, and the finding is recorded whether or not it matched what the
+review list assumed.
+
+**No `slug` was changed.** Every rename below changes `name` only. Slugs are the
+stable key and stay put even where the new name no longer matches the slug
+(`zuisen-distillery-co-ltd-head-office` now reads "Zuisen Distillery", and so on).
+
+### 1. Tasting rooms — section A closed
+
+Twelve of the fourteen were marked `entity_role: "tasting_room"` in an earlier
+commit. The remaining two were checked and **deliberately left unmarked**:
+
+| Slug | Finding | Source consulted |
+|---|---|---|
+| `left-coast-brewing-co-tasting-room-smokehouse-distillery-irvine` | Distils on site. Location menu carries a "Craft Spirits Produced on Site" section (vodka, gin, spiced rum, malt whiskey, bourbon, blanco agave); the team page lists a Head Brewer/Distiller at Irvine; the OC Weekly piece on the opening quotes the owner on building the distillery and says the brewer would be "brewing and distilling on the new system". | leftcoastbrewing.com/location/left-coast-brewing-irvine/ · leftcoastbrewing.com/about/ · ocweekly.com/what-the-ale-left-coast-brewing-bbq-and-a-distillery/ |
+| `left-coast-brewing-co-tasting-room-smokehouse-distillery-ontario` | Same "Craft Spirits Produced on Site" menu section on its own location page. | leftcoastbrewing.com/location/ontario/ |
+
+The review list flagged these two as unresolved — "whether the 'distillery' in
+the name is real was not established". It is real. Marking them `tasting_room`
+would have been wrong, so the count of marked tasting rooms stays at 12, not 14.
+
+### 2. Section B — the 16 with no parent on the map, renamed
+
+The review list assumed all sixteen were offices or shops standing in for an
+unmapped production site. **Nine of the sixteen turned out to be the producer's
+actual distilling site** with a shop, tasting counter or head office attached, so
+they carry no `entity_role` — only a corrected name. That is the reason the
+`entity_role` is set from the website and never from the pin's name.
+
+Every rename is `name` only. Format is `slug | old name → new name`.
+
+**Distils at this address — renamed, no `entity_role`:**
+
+| Slug | old name → new name | Evidence | Source consulted |
+|---|---|---|---|
+| `hastings-distillers-bottle-shop-and-refillery` | Hastings Distillers Bottle Shop and Refillery → **Hastings Distillers** | 231 Heretaunga St East is "an elegant 1930s tasting room and distillery space"; NZ's first certified organic artisan spirits producer, licensed there as a gin distillery. | hastingsdistillers.com · nzspiritguide.com/distilleries/hastings-distillers · hastingsdc.govt.nz alcohol licence notice |
+| `boutique-distillerie-louis-couderc` | Boutique Distillerie Louis Couderc → **Distillerie Louis Couderc** | The distillery founded 1908 at 14 rue Victor Hugo, inventor of Avèze. The tourist board sells a workshop tour and tasting *at that address*. | distillerie-couderc.com · paysaurillactourisme.com |
+| `distillerie-larusee-boutique` | Distillerie Larusée & Boutique → **Distillerie Larusée** | "Fenin abrite depuis 2012 la distillerie Larusée." Company is Larusée Sàrl; visits and tastings at the same address. | larusee.com |
+| `berryshka-distillery-and-chocolate-manufactory-shop` | Berryshka - distillery and chocolate manufactory & shop → **Berryshka Distillery** | Obrh 17a is the *destilarna, čokoladnica, kavarna, trgovina* — production plus visitor rooms. The retail-only site is the other one, at Škrjanče, Ivančna Gorica, which is not on the map. | berryshka.com |
+| `imagine-spirits-distillery-taste-shop` | IMAGINE SPIRITS distillery - TASTE&SHOP → **Imagine Spirits Distillery** | Marasi 60 is the distillery — customised handmade copper pot still, single-shot 200-bottle batches, built to eco standards, tastings on site. Listed on Tripadvisor as Imagine Spirits Distillery, Vrsar. | imagine-spirits.com · tripadvisor.com/…Imagine_Spirits_Distillery-Vrsar_Istria |
+| `samai-distillery-brand-house-bar-shop` | Samai Distillery - Brand House, Bar & Shop → **Samai Distillery** | #9b Street 830 is Cambodia's first boutique rum distillery, founded 2014, distilling in the heart of Phnom Penh. The bar is the distillery's own, open Thursdays and Saturdays. | samaidistillery.com · spiritedasia.com/2024/06/visit-samai-distillery-phnom-penh/ · rumgeography.com |
+| `twin-spirits-distillery-m-coffee-shop` | Twin Spirits Distillery &M Coffee Shop → **Twin Spirits Distillery** | 2931 Central Ave NE, Minneapolis — woman-founded distillery making gin, vodka, rum, whiskey and honey moonshine, with the M coffee shop inside the same building. | distillerytrail.com directory · Yelp listing |
+| `the-bond-store-fine-spirits-and-liqueurs` | The Bond Store - Fine Spirits and Liqueurs → **The Bond Store** | Family-owned Kāpiti Coast distillery at Paraparaumu — matches the pin's coordinates — with its own chief distiller and distillery tours. `website` was empty and was set to `https://thebondstore.co.nz/`. | thebondstore.co.nz · nzspiritguide.com/distilleries/the-bond-store |
+| `zuisen-distillery-co-ltd-head-office` | Zuisen Distillery Co., Ltd. Head Office → **Zuisen Distillery** | 瑞泉酒造株式会社, awamori since 1887. Its own Japanese sources give 首里崎山町1-35 as 本社・蒸留所 — head office *and* distillery at one address, with factory tours 9:00–17:00. Not an office pin at all. | zuisen.co.jp · zuisen.co.jp/factory · ja.wikipedia.org/wiki/瑞泉酒造 |
+
+**Genuinely not a distilling site — renamed and given an `entity_role`:**
+
+| Slug | old name → new name | `entity_role` | Evidence | Source consulted |
+|---|---|---|---|---|
+| `wyoming-whiskey-distillery-shop` | Wyoming Whiskey Distillery Shop → **Wyoming Whiskey** | `brand_shop` | The Whiskey Shop is the tasting room and gift shop on Main Street, "a few hundred yards away from the distillery building". Distillery tours have not resumed since Covid. Their own term for it is the shop, so `brand_shop`. | whiskeylore.org/distilleries/us/wyoming/wyoming-whiskey · thermopolis.com (Hot Springs County tourism) |
+| `saint-bernard-distillery-alpine-spirits-store` | Saint Bernard Distillery Alpine Spirits Store → **Saint Bernard Distillery** | `brand_shop` | Località Champagne 23, Chambave is a shop the company opened — *"Apre a Chambave il nuovo negozio Saint Bernard Distillery"*. The company's own registered address is Frazione Predumaz Farcoz 31, Saint-Rhémy-en-Bosses, which is not on the map. | saintbernarddistillery.com/chi-siamo · aostasera.it |
+| `hogback-distillery-office` | Hogback Distillery Office → **Hogback Distillery** | `tasting_room` | 857 Moraine Ave, Estes Park is the tasting room and bottle shop opened 2023. The distillery is in Boulder (Western Ave, near Arapahoe and 55th) and is not on the map. Their own phrase is "tasting room & bottle shop", so `tasting_room`. | hogbackdistillery.com · visitestespark.com/blog/post/estes-parks-craft-beverage-boom/ |
+| `rock-and-storm-distilleries-pvt-ltd-head-office` | Rock and Storm Distilleries Pvt. Ltd. (Head Office) → **Rock and Storm Distilleries** | `head_office` | Sector 51, Chandigarh is the head office. The distilling unit is at Village Chhajli, Jhakhal-Lehragaga Road, Sunam, Sangrur, Punjab 148030, ~150 km away and not on the map. | rockandstorm.com · zaubacorp.com company record U51909PB2008PTC031788 · indiamart.com/rock-storm-distilleries |
+| `west-midlands-distillery-waterfront-hq` | West Midlands Distillery Waterfront HQ → **West Midlands Distillery** | `head_office` | Their contact page lists two addresses: "Distillery HQ and Visitor Centre, Unit 22-24, Waterfront East, Brierley Hill" (the pin) and "Distillery, Unit 1, 153 Powke Lane, Rowley Regis B65 0AD" (not on the map). The stills are at the second. | westmidlandsdistillery.co.uk/contact-us |
+| `allianz-distillery-limited-corporate-office` | allianz distillery limited corporate office → **Allianz Distillery** | `head_office` | An ethanol and DDGS manufacturer whose site gives only a Noida office address. Nothing on the site or elsewhere puts production in Noida. Role taken from the pin's own name; the plant location could not be established. | allianzdistillery.com |
+| `rockland-distillery-bottling-plant` | Rockland Distillery Bottling Plant → **Rockland Distilleries** | `bottling_plant` | Rockland Distilleries Pvt Ltd, family distillers since 1924. **Not fully verified** — the company's own site gives only its Colombo address and says nothing about Seethawakapura. The `bottling_plant` role is carried over from the pin's own Google Places name rather than confirmed by the company, which is weaker evidence than every other row here. Worth a recheck. | rockland.lk · rockland.lk/our-story · srilankabusiness.com exporter profile |
+
+### 3. Sliabh Liag Distillers and Ardara — one business, two real sites
+
+The map carried `sliabh-liag-distillery` (Line Road, Carrick, F94 X9DX) and
+`ardara-distillery` (Ardara, F94 EH7X), 20 km apart, both pointing at
+sliabhliagdistillers.com. The question was whether that is one location
+duplicated.
+
+It is not. The company's own contact page lists both, with different roles:
+
+- **Ardara Distillery**, The Show Field, Ardara, Co Donegal F94 EH7X — the
+  distillery. Makes the Ardara and Silkie whiskeys and An Dúlamán gin, and runs
+  the tours.
+- **Sliabh Liag Distillers, Bottling and Administration Centre**, Line Road,
+  Carrick, Co Donegal F94 X9DX — the original 2017 site, where An Dúlamán gin was
+  distilled before Ardara was completed. Now bottling and administration, about
+  10 full-time jobs.
+
+Both pins stay. A tourism map should show both places. What was missing was any
+way to tell they are one business, so a minimal, neutral `operator` property was
+added and documented in `entity-roles.md`. **Nothing was merged and no slug was
+removed.**
+
+| Slug | Change |
+|---|---|
+| `ardara-distillery` | Name unchanged. `operator: "Sliabh Liag Distillers"`. `description` was empty, now "Co. Donegal — Sliabh Liag Distillers' whiskey and gin distillery, tours available". |
+| `sliabh-liag-distillery` | **Renamed: Sliabh Liag Distillery → Sliabh Liag Distillers Bottling & Administration Centre.** `entity_role: "bottling_plant"`. `operator: "Sliabh Liag Distillers"`. `description` was "Co. Donegal — tours available", which was wrong on this pin (the tours are at Ardara) and is now "Co. Donegal — bottling and administration; the distillery and tours are at Ardara". |
+
+Sources consulted: sliabhliagdistillers.com and its contact page ·
+thewhiskeywash.com on the first spirit distilled at Ardara.
+
+### 4. `bismarck-brewing` — not renamed, and why
+
+The review list said to rename this to "Bismarck Distillery" on the basis that a
+sister company distils in the same building at 1100 Canada Ave. **Checking the
+distillery's own website overturned that, so the rename was not made and the row
+was left exactly as it is.**
+
+Bismarck Distillery's site gives one address and no others: "PRODUCTION FACILITY,
+2730 Paintball Way, Lincoln, ND 58504 — NOT OPEN TO PUBLIC". Its 2021 grand
+opening was at 1100 Canada Ave, so it has moved. Bismarck Brewing, at 1100 Canada
+Ave, closed in March 2025. The pin's coordinates are 1100 Canada Ave.
+
+So the pin is a closed brewery that never distilled, and renaming it would have
+put Bismarck Distillery at an address it has left. Two defensible fixes, neither
+taken here because both go beyond a rename:
+
+1. **Move it.** Rename to "Bismarck Distillery" *and* correct the coordinates and
+   address to 2730 Paintball Way, Lincoln ND. Needs a geocode — coordinates on a
+   public map should not be guessed at. Note the site is closed to the public,
+   which makes it a thin tourism pin.
+2. **Remove it.** Under the rule at the top of this document a closed brewery
+   that does not distil comes out, and the only reason it was kept was the sister
+   company premise that has now failed.
+
+Sources consulted: bismarckdistillery.com · kfyrtv.com/2025/03/14/bismarck-brewing-closes-due-industry-challenges/
+· bismarcknd.gov agenda item, April 2021 · Yelp listings for both businesses.
+
+### 5. Left over
+
+- **`twin-spirits-distillery-m-coffee-shop` may be closed.** Renamed on the
+  evidence that it is a real distillery, but Yelp shows it closed as of April
+  2026 and `twinspirits.us` refused connection when checked. A closure check, not
+  a naming question, so it was not acted on here.
+- **Section C rows other than `bismarck-brewing`** (`boutique-ite-laster`,
+  `motel-restaurant-and-distillery-sabor-de-minas`, `doc-jaks-bbq-bakery-distillery`,
+  `distillery-museum`) were not revisited and stay as written.
+- **Section D** — the "not checked, worth a later pass" shapes are still not
+  checked.
+- `data/categories/*` sidecars were again left untouched, for the reasons given
+  above.
