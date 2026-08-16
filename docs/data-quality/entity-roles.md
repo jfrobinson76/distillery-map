@@ -27,7 +27,7 @@ A single optional string property on a feature:
 **Absence is the default and means "spirits are distilled here."** The
 overwhelming majority of the 6,131 features carry no `entity_role` at all. Only
 sites that are *not* distilling sites are marked, which keeps the public payload
-flat and means adding the field churned 30 features rather than all of them.
+flat and means adding the field churned 20 features rather than all of them.
 
 The property is declared in `src/lib/data.ts` (`DistilleryProps`).
 
@@ -36,12 +36,46 @@ The property is declared in `src/lib/data.ts` (`DistilleryProps`).
 | Value | Means | Example |
 |---|---|---|
 | `tasting_room` | Off-site tasting room, bar or cafe pouring a producer's spirits. No still on the premises. | `village-garage-distillery-tasting-room-at-orvis` — a counter inside an Orvis store, 30 km from the distillery |
-| `brand_shop` | Off-site retail shop selling a producer's own spirits. No still. | `boutique-distillerie-louis-couderc` — town-centre boutique in Aurillac |
-| `head_office` | Corporate or administrative office of a producer. No still. | `zuisen-distillery-co-ltd-head-office` — Zuisen's Naha office |
+| `brand_shop` | Off-site retail shop selling a producer's own spirits. No still. | `wyoming-whiskey-distillery-shop` — the Whiskey Shop on Main Street, Kirby, a few hundred yards from the distillery building |
+| `head_office` | Corporate or administrative office of a producer. No still. | `rock-and-storm-distilleries-pvt-ltd-head-office` — Chandigarh office; the distilling unit is at Chhajli, Sangrur |
 | `bottling_plant` | Bottling, blending or packaging site. No still. | `rockland-distillery-bottling-plant` — Seethawakapura |
 
 Add a value only when an existing one genuinely does not fit, and document it
 here in the same commit.
+
+**A shop or office in the name is not evidence of the role.** Of the 16 rows the
+August 2026 pruning pass shortlisted as "offices and brand shops", nine turned
+out to be the producer's actual distilling site with a shop or tasting counter
+attached, and were renamed with no `entity_role` at all. The role is set from the
+producer's own website, never from the pin's name.
+
+## Related convention: `operator`
+
+Added 16 August 2026, out of the Sliabh Liag Distillers case.
+
+One business can run more than one mapped site. Sliabh Liag Distillers has two:
+the distillery at Ardara and the bottling and administration centre at Carrick,
+20 km away. A tourism map wants both pins. A consumer joining this data to
+anything else needs to know they are one business.
+
+A single optional string property carries that, and nothing more:
+
+```json
+"operator": "Sliabh Liag Distillers"
+```
+
+**Absence is the default and means the pin's own name is the business.** It is
+set only where two or more pins belong to one operator, or where the pin's name
+does not say who runs it. It is a plain trading name, not a foreign key — there
+is no operator table and no id to resolve. Matching is exact string equality:
+
+```js
+const sites = data.features.filter((f) => f.properties.operator === "Sliabh Liag Distillers");
+```
+
+Deliberately not a parent/child link. Ardara is not "under" Carrick and neither
+is the head site; they are two sites of one company, which is what a flat
+operator string says and a parent pointer would not.
 
 ### What it is deliberately not
 
@@ -81,11 +115,21 @@ map, they come out of prospecting. Same shape, different reason.
 
 ## Known gaps
 
-The 30 marked rows are the ones the August 2026 pruning sweep surfaced by name.
+The 20 marked rows are the ones the August 2026 pruning sweep surfaced by name.
 The sweep only interrogated rows whose *name* carried a marker word, so a tasting
-room with a clean-looking name is still unmarked. Three US rows named "tasting
-room" were left unmarked because the address is the production site and the
-tasting room is on it:
+room with a clean-looking name is still unmarked. Five US rows named "tasting
+room" were left unmarked because the address is a distilling site:
+
+- `left-coast-brewing-co-tasting-room-smokehouse-distillery-irvine` and
+  `-ontario` (CA). Shortlisted as tasting rooms, then checked: both location
+  pages carry a menu section headed "Craft Spirits Produced on Site" listing
+  Left Coast vodka, gin, rum, malt whiskey, bourbon and blanco agave, and the
+  team page lists a Head Brewer/Distiller at Irvine. OC Weekly's account of the
+  Irvine opening quotes the owner on the distillery build and says the brewer
+  would be "brewing and distilling on the new system". The word "distillery" in
+  those two names is real, so neither is marked.
+
+And three where the tasting room sits on the production site:
 
 - `j-henry-sons-bourbon-tasting-room-farm` (Dane, WI)
 - `milam-and-greene-whiskey-distillery-and-tasting-room` (Blanco, TX)
