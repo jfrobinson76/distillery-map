@@ -211,9 +211,12 @@ The 4.5M comes from LYQD's own public announcement of the report and from trade 
 quoting it: Irish Examiner, and Irish Whiskey Magazine, both describing it as "nearly nine
 years of global supply". Same source, different communication. Grade: Estimate.
 
-Authorship is public record: Irish Whiskey Magazine's coverage names independent analyst
-Martin Purvis (Smart Distillery Solutions; co-author of Commercial Spirits Intelligence)
-as the report's author. The public citation was upgraded on 2026-08-13 from the anonymised
+Authorship is public record, verified first-hand 2026-08-13 against LYQD's own report
+page ("the report's author, Martin Purvis") and Irish Whiskey Magazine ("authored by
+independent industry analyst Martin Purvis"). Neither release mentions Commercial Spirits
+Intelligence (his separate Substack venture with Duncan McFadzean of Noble & Co) or Smart
+Distillery Solutions — the report was released under his own name as an independent
+industry analyst, and the public citation matches that release wording. The public citation was upgraded on 2026-08-13 from the anonymised
 "a cask-market platform" wording to name the report and analyst — citation hygiene, not a
 method endorsement; the unaudited caveat stands unchanged.
 
@@ -1912,7 +1915,7 @@ stock.
 | 2026-08-09 | South Africa asOf | 2018, single source | 2018 count corroborated by post-2023 Heineken Beverages-era profile (seven warehouses, >150,000 casks); number and grade unchanged | Neither source is company-published; recycled talking-point risk flagged. Part 4H |
 | 2026-08-09 | Global totals | 60.3m, scenarios 54.7 to 67.7 | 60.4m, scenarios 54.7 to 67.7 | Mechanical consequence of the Europe re-derivation |
 | 2026-08-10 | Ireland basis | 4.5m, 4–5m, estimate, resting solely on the LYQD commissioned study | Numbers and tier unchanged; now corroborated by two independent lines — Drinks Ireland's published >3.1m casks maturing (2020) rolled forward to ~4.1m on flow arithmetic, and a new producer bottom-up (Irish Distillers 1.7m, GND 500k, Bushmills >500k, Waterford >70k = 2.77m published floor, bracketing 3.8–4.2m). Both centre slightly below 4.5m; residual risk is downward. sourceUrl added. Part 3's "no company-level split exists" corrected | Full derivation in Part 4I. Totals unmoved |
-| 2026-08-13 | Ireland citation wording | "Independent supply study commissioned by a cask-market platform" | "The LYQD Irish Whiskey Supply Report (analysis Oct 2025, by independent analyst Martin Purvis)" | Authorship is public record (Irish Whiskey Magazine coverage). Prompted by the report's authors engaging with the 60.4m LinkedIn post, 13 Aug. Numbers, tier and unaudited caveat unchanged |
+| 2026-08-13 | Ireland citation wording | "Independent supply study commissioned by a cask-market platform" | "The LYQD Irish Whiskey Supply Report (analysis Oct 2025, by independent industry analyst Martin Purvis)" | Authorship is public record, verified first-hand against LYQD's report page and Irish Whiskey Magazine; citation matches the release wording. Prompted by the report's authors engaging with the 60.4m LinkedIn post, 13 Aug. Numbers, tier and unaudited caveat unchanged |
 
 ---
 
