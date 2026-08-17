@@ -82,5 +82,390 @@
     "country": "New Zealand",
     "source": "google-places",
     "reason": "holiday rental"
+  },
+  {
+    "slug": "chevalier-de-villarcon-distillery-ruins",
+    "name": "Chevalier de Villarçon distillery ruins",
+    "country": "France",
+    "source": "osm",
+    "reason": "colonial distillery ruins at Sainte-Anne, Martinique; a ruin among the sugar and rum estate remains"
+  },
+  {
+    "slug": "madrugada-brewing-company-brewpub",
+    "name": "Madrugada Brewing Company - Brewpub",
+    "country": "Portugal",
+    "source": "osm",
+    "reason": "brewpub, beer only — all-beer range, no still referenced anywhere"
+  },
+  {
+    "slug": "wuri-brewery",
+    "name": "Wuri Brewery",
+    "country": "Taiwan",
+    "source": "wikidata",
+    "reason": "brewery, beer only — one of TTL's three beer plants; TTL's distilling sits in its separate distilleries"
+  },
+  {
+    "slug": "office-range-and-proof-house-royal-lochnagar-distillery",
+    "name": "Office Range and Proof House, Royal Lochnagar Distillery",
+    "country": "United Kingdom",
+    "source": "wikidata",
+    "reason": "wikidata listed-building record for a building inside the distillery; parent royal-lochnagar-distillery"
+  },
+  {
+    "slug": "talisman-brewing-company",
+    "name": "Talisman Brewing Company",
+    "country": "United States",
+    "source": "osm",
+    "reason": "brewery, beer only — beer-only taproom; Visit Ogden lists Ogden's Own as the city's distillery"
+  },
+  {
+    "slug": "bent-river-brewing-company",
+    "name": "Bent River Brewing Company",
+    "country": "United States",
+    "source": "osm",
+    "reason": "brewery, beer only — craft brewery and brewpub; only spirits link is buying used barrels"
+  },
+  {
+    "slug": "ivory-bill-brewing",
+    "name": "Ivory Bill Brewing",
+    "country": "United States",
+    "source": "osm",
+    "reason": "brewery, beer only — craft brewery and taproom, no still; now permanently closed"
+  },
+  {
+    "slug": "71-brewery",
+    "name": "71 Brewery",
+    "country": "United Kingdom",
+    "source": "osm",
+    "reason": "brewery, beer only — 71 Brewing, Dundee; core range is five beers, tour covers brewing only"
+  },
+  {
+    "slug": "eureka-springs-brewery",
+    "name": "Eureka Springs Brewery",
+    "country": "United States",
+    "source": "osm",
+    "reason": "brewery, beer only — small-batch brewery, all beer brewed on site"
+  },
+  {
+    "slug": "coachella-valley-brewing-company",
+    "name": "Coachella Valley Brewing Company",
+    "country": "United States",
+    "source": "osm",
+    "reason": "brewery, beer only — brewery and taproom, no distilling on site"
+  },
+  {
+    "slug": "roughhouse-brewing",
+    "name": "Roughhouse Brewing",
+    "country": "United States",
+    "source": "osm",
+    "reason": "brewery, beer only — ranch brewery making ales, lagers and foeder-aged beers"
+  },
+  {
+    "slug": "grand-canyon-brewery-and-distillery-cabin-historic-tack-house",
+    "name": "Grand Canyon Brewery and Distillery Cabin-Historic Tack House",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "holiday rental — despegar.com listing; the brewery-distillery itself is mapped separately"
+  },
+  {
+    "slug": "affordable-distillery-equipment-llc",
+    "name": "Affordable Distillery Equipment, LLC",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "distillery equipment retailer"
+  },
+  {
+    "slug": "mama-bear-s-retreat-near-water-park-distillery-great-for-families",
+    "name": "Mama Bear's Retreat- Near Water Park, Distillery Great for Families",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "holiday rental — bluepillow.com listing"
+  },
+  {
+    "slug": "mile-hi-distilling",
+    "name": "Mile Hi Distilling",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "home-distilling equipment retailer, Wheat Ridge CO — sells stills and kits, not spirits"
+  },
+  {
+    "slug": "rj-cinema-distillery-taproom",
+    "name": "RJ Cinema Distillery & Taproom",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "cinema and taproom; its own copy puts production at a separate distillery in Norwood"
+  },
+  {
+    "slug": "the-distillery-at-hocking-hills-retreats",
+    "name": "The Distillery at Hocking Hills Retreats",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "holiday rental — bluepillow.com listing; Hocking Hills Moonshine is mapped separately"
+  },
+  {
+    "slug": "rustic-luxury-w-horses-historic-whiskey-distillery",
+    "name": "Rustic Luxury w/Horses-Historic Whiskey Distillery",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "holiday rental — despegar.com listing"
+  },
+  {
+    "slug": "the-distillery-restaurant-mt-hope",
+    "name": "The Distillery Restaurant Mt. Hope",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "sports bar and grill chain in Rochester NY, no spirits production"
+  },
+  {
+    "slug": "the-distillery-restaurant-henrietta",
+    "name": "The Distillery Restaurant Henrietta",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "sports bar and grill chain in Rochester NY, no spirits production"
+  },
+  {
+    "slug": "the-distillery-restaurant-victor",
+    "name": "The Distillery Restaurant Victor",
+    "country": "United States",
+    "source": "google-places",
+    "reason": "sports bar and grill chain in Rochester NY, no spirits production"
+  },
+  {
+    "slug": "seaside-cottage-at-steinhart-distillery-with-ocean-views-cottage-1",
+    "name": "Seaside Cottage at Steinhart Distillery with ocean views. Cottage 1.",
+    "country": "Canada",
+    "source": "google-places",
+    "reason": "holiday rental — despegar.com hotel listing; Steinhart's distillery is mapped separately"
+  },
+  {
+    "slug": "seaside-cottage-at-steinhart-distillery-with-ocean-views-pet-friendly",
+    "name": "Seaside Cottage at Steinhart Distillery with ocean views. Pet-friendly!",
+    "country": "Canada",
+    "source": "google-places",
+    "reason": "holiday rental — bluepillow.com listing; second pin on the same cottage"
+  },
+  {
+    "slug": "distiller-warehouse-ltd",
+    "name": "Distiller Warehouse Ltd",
+    "country": "Canada",
+    "source": "google-places",
+    "reason": "water-distiller and water-purification retailer, Western Canada — nothing to do with spirits"
+  },
+  {
+    "slug": "the-little-distillery-three-bedroom-house",
+    "name": "The Little Distillery - Three-Bedroom House",
+    "country": "Australia",
+    "source": "google-places",
+    "reason": "holiday rental — bluepillow.com listing"
+  },
+  {
+    "slug": "5-star-brewing-distilling-supplies-qld",
+    "name": "5 Star Brewing & Distilling Supplies QLD",
+    "country": "Australia",
+    "source": "google-places",
+    "reason": "brewing and distilling supply shop, Capalaba QLD"
+  },
+  {
+    "slug": "rockland-distilleries-head-office",
+    "name": "Rockland Distilleries Head Office",
+    "country": "Sri Lanka",
+    "source": "google-places",
+    "reason": "head office in Colombo, production site is at Seethawakapura; parent rockland-distillery-bottling-plant"
+  },
+  {
+    "slug": "adinco-distillery-office",
+    "name": "Adinco Distillery Office",
+    "country": "India",
+    "source": "google-places",
+    "reason": "office pin 1.8 km from the plant; parent adinco-distilleries"
+  },
+  {
+    "slug": "procient-engineering-pvt-ltd-distillery-plant-manufacturers-corporate-office",
+    "name": "Procient Engineering Pvt. Ltd. - Distillery Plant Manufacturers Corporate Office",
+    "country": "India",
+    "source": "google-places",
+    "reason": "distillery plant engineering firm; supplies distillation modules to plant owners"
+  },
+  {
+    "slug": "larco-india-pvt-ltd-etp-stp-wtp-plant-manufacturer-and-supplier-in-maharashtra-cpu-for-sugar-and-distillery",
+    "name": "Larco India Pvt. Ltd.- ETP, STP, WTP Plant Manufacturer and supplier in Maharashtra, CPU for Sugar and distillery",
+    "country": "India",
+    "source": "google-places",
+    "reason": "effluent and water treatment plant manufacturer; distilleries are its clients"
+  },
+  {
+    "slug": "grainfuel-distilleries-private-limited-head-office",
+    "name": "Grainfuel Distilleries Private Limited (Head Office)",
+    "country": "India",
+    "source": "google-places",
+    "reason": "corporate office in Ahmedabad, plant is in Matar; parent grainfuel-distilleries-private-limited"
+  },
+  {
+    "slug": "forgood-distillery-franchise-store",
+    "name": "Forgood Distillery Franchise Store",
+    "country": "China",
+    "source": "google-places",
+    "reason": "franchise retail outlet; parent forgood-distillery"
+  },
+  {
+    "slug": "forgood-distillery-general-agency",
+    "name": "Forgood Distillery General Agency",
+    "country": "China",
+    "source": "google-places",
+    "reason": "sales agency in Guangzhou; parent forgood-distillery"
+  },
+  {
+    "slug": "forgood-distillery-liyang-general-agency",
+    "name": "Forgood Distillery Liyang General Agency",
+    "country": "China",
+    "source": "google-places",
+    "reason": "sales agency in Liyang; parent forgood-distillery"
+  },
+  {
+    "slug": "plockton-distillery-flat",
+    "name": "Plockton Distillery Flat",
+    "country": "United Kingdom",
+    "source": "google-places",
+    "reason": "holiday rental — listing on isleofskyerentals.com"
+  },
+  {
+    "slug": "the-distillery-studio-s-modyrts-music",
+    "name": "The Distillery Studio's - modyrts music",
+    "country": "South Africa",
+    "source": "google-places",
+    "reason": "recording studio, Port Elizabeth"
+  },
+  {
+    "slug": "millside-craft-distilling-supplies-online-store",
+    "name": "Millside Craft Distilling Supplies Online Store",
+    "country": "South Africa",
+    "source": "google-places",
+    "reason": "online distilling-supplies store, Benoni; premises by appointment only"
+  },
+  {
+    "slug": "moonshine-distillery-supplies",
+    "name": "Moonshine Distillery Supplies",
+    "country": "South Africa",
+    "source": "google-places",
+    "reason": "equipment importer and retailer, South Africa"
+  },
+  {
+    "slug": "distillery-4-federow-distillery",
+    "name": "Distillery 4 - Federow distillery",
+    "country": "Germany",
+    "source": "google-places",
+    "reason": "holiday rental — vrbo.com listing"
+  },
+  {
+    "slug": "nynas-hostel-distillery",
+    "name": "Nynas Hostel distillery",
+    "country": "Sweden",
+    "source": "google-places",
+    "reason": "STF hostel in an 1801 farm-distillery building; distilling ceased mid-19th century"
+  },
+  {
+    "slug": "palmse-distillery-guesthouse-double-room",
+    "name": "Palmse Distillery Guesthouse - Double Room",
+    "country": "Estonia",
+    "source": "google-places",
+    "reason": "guesthouse room — bluepillow.com listing"
+  },
+  {
+    "slug": "palmse-distillery-guesthouse-viinavabriku-kulalistemaja",
+    "name": "Palmse distillery guesthouse/Viinavabriku külalistemaja",
+    "country": "Estonia",
+    "source": "google-places",
+    "reason": "guesthouse in the former distillery at Palmse manor, run by the museum; seasonal rooms, no distilling"
+  },
+  {
+    "slug": "la-distillerie-restaurant-brasserie",
+    "name": "La Distillerie | Restaurant Brasserie",
+    "country": "France",
+    "source": "google-places",
+    "reason": "brasserie inside the Domaine de la Chartreuse hotel, Gosnay; no production"
+  },
+  {
+    "slug": "garrigae-distillerie-de-pezenas-hotellerie-et-spa",
+    "name": "Garrigae Distillerie de Pézenas - Hôtellerie et Spa",
+    "country": "France",
+    "source": "google-places",
+    "reason": "hotel and spa in a rehabilitated former distillery; no production"
+  },
+  {
+    "slug": "micet-distillery-equipment-manufacturer",
+    "name": "Micet Distillery Equipment Manufacturer",
+    "country": "France",
+    "source": "google-places",
+    "reason": "brewing and distilling equipment manufacturer, turnkey systems for other producers"
+  },
+  {
+    "slug": "distilleries-et-domaines-de-provence-store-museum",
+    "name": "Distilleries et Domaines de Provence Store & Museum",
+    "country": "France",
+    "source": "google-places",
+    "reason": "town-centre store and museum, production is at Z.A. Les Chalus; parent distilleries-et-domaines-de-provence"
+  },
+  {
+    "slug": "la-boutique-by-d4f-distillerie-des-4-freres",
+    "name": "La BOUTIQUE BY D4F (DISTILLERIE DES 4 frères)",
+    "country": "France",
+    "source": "google-places",
+    "reason": "brand boutique on a different street; parent distillerie-des-4-freres"
+  },
+  {
+    "slug": "aura-distillery-shop-zagreb",
+    "name": "Aura Distillery Shop Zagreb",
+    "country": "Croatia",
+    "source": "google-places",
+    "reason": "brand shop in Zagreb, 200 km from the producer; parents aura / destilerija-aura / aura-family-distillery"
+  },
+  {
+    "slug": "art-douro-historic-distillery",
+    "name": "Art Douro - Historic Distillery",
+    "country": "Portugal",
+    "source": "google-places",
+    "reason": "holiday rental — airbnb.com listing"
+  },
+  {
+    "slug": "distillerie-bonollo-shop-anagni-fr",
+    "name": "Distillerie Bonollo Shop - Anagni (FR)",
+    "country": "Italy",
+    "source": "google-places",
+    "reason": "brand shop in Anagni; parent distillerie-bonollo-s-p-a"
+  },
+  {
+    "slug": "distillery-aura-shop",
+    "name": "Distillery AurA Shop",
+    "country": "Croatia",
+    "source": "google-places",
+    "reason": "brand shop in Rovinj; parents aura / destilerija-aura / aura-family-distillery"
+  },
+  {
+    "slug": "aura-distillery-shop-krk",
+    "name": "Aura Distillery Shop Krk",
+    "country": "Croatia",
+    "source": "google-places",
+    "reason": "brand shop on Krk; parents aura / destilerija-aura / aura-family-distillery"
+  },
+  {
+    "slug": "the-distillery-studio-room",
+    "name": "The Distillery- studio Room",
+    "country": "New Zealand",
+    "source": "google-places",
+    "reason": "named guest room at Mountain Road Estate; the farm distils lavender oil, not spirits"
+  },
+  {
+    "slug": "monument-distillers-nigeria-factory-office",
+    "name": "Monument Distillers Nigeria (Factory office)",
+    "country": "Nigeria",
+    "source": "google-places",
+    "reason": "office pin 21 km from the mapped company site, and its website points at an unrelated UK distiller; parent monument-distillers-nigeria-ltd"
+  },
+  {
+    "slug": "o-donnell-moonshine-hq-kein-verkauf",
+    "name": "O'Donnell Moonshine HQ - kein Verkauf!",
+    "country": "Germany",
+    "source": "google-places",
+    "reason": "brand head office in Berlin-Mitte, the row itself says 'kein Verkauf'; parent o-donnell-moonshine"
   }
 ]
