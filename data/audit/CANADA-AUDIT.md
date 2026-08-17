@@ -1,5 +1,34 @@
 # Canada audit — 16 August 2026
 
+> **CORRECTED 17 August 2026. Defect 1 below is wrong — retracted, not softened.**
+>
+> `region` is not a country field. It is a **map viewport**, assigned from
+> coordinates against a hand-drawn bounding box, and as a viewport it is doing
+> its job correctly.
+>
+> Verified first-hand against the source: all 143 Canadian rows tagged
+> `region: "usa"` sit between latitude 42.17°N and 49.89°N, and **zero** sit
+> above 50°N. A box drawn around the continental United States catches southern
+> Canada, which is where almost all Canadian distilleries are. The same
+> behaviour is visible everywhere once you look: the `ireland` box catches 16 UK
+> rows, which is Northern Ireland and Kintyre falling inside a geographic box
+> exactly as they should.
+>
+> So there is no country repair to do, the country field is clean, and the
+> country counts stand. **Defect 2 (Crown Royal's website) and Defect 3
+> (coverage) are unaffected and still stand.**
+>
+> The error was reading a rendering field as a geography claim, then filing it
+> as a data defect without checking the coordinates that would have settled it
+> in one query. Caught by a parallel session on 16 Aug; independently re-verified
+> here before this correction was written.
+>
+> One thing worth keeping from the wrong version: anything that *does* key on
+> `region` expecting geography will still be wrong, which is why Stillbound's
+> jurisdiction resolver was built to lead on postcode. The fix suggested in that
+> session is the right one — derive `region` from `country` and keep the
+> viewport as a separate `map_bucket` field.
+
 Findings from reading `public/data/distilleries.geojson` directly while building the
 Canadian whisky ownership map in the Stillbound Knowledge vault. Machine-readable
 companion: `data/audit/canada_worklist.json` (144 rows).

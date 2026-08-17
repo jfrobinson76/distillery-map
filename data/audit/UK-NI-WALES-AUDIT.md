@@ -1,5 +1,25 @@
 # Northern Ireland and Wales audit — 16 August 2026
 
+> **CORRECTED 17 August 2026. Defect 2 below is wrong — retracted.**
+>
+> Machrihanish is not mis-regioned. `region` is a **map viewport** assigned from
+> coordinates, not a geography field, and Campbeltown at 55.44°N, -5.66°W sits
+> inside a box drawn around Ireland — as does the rest of Kintyre. The `ireland`
+> box holds 16 UK rows for exactly this reason. Verified first-hand against the
+> source coordinates.
+>
+> **Defect 1 stands, and is sharpened by this.** The `country` field genuinely is
+> inconsistent across the island of Ireland, and that is a real defect
+> independent of the viewport question. It is also now the *only* field that
+> could carry the answer, since `region` was never claiming to.
+>
+> **Defects 3 and 4 stand** (Henstone's postcode, and Coles missing).
+>
+> Practical consequence: none for the jurisdiction resolver, which already leads
+> on postcode and treats `region` as a weak secondary. That design was right for
+> the wrong stated reason — the code comments describe `region` as unreliable
+> when it is better described as answering a different question.
+
 Found while splitting NI and Wales out as GTM jurisdictions in the Stillbound
 ops-intelligence account master (`stillbound` branch `gtm/ni-wales-jurisdictions`).
 Same class of finding as `CANADA-AUDIT.md`.
