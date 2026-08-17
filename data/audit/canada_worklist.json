@@ -1,0 +1,2306 @@
+[
+ {
+  "slug": "crown-royal-distillery",
+  "name": "Crown Royal Distillery",
+  "region": "canada",
+  "website": "http://www.theforks.com/",
+  "address": "1 Forks Market Rd, Winnipeg, MB R3C 4L9, Canada",
+  "description": "Gimli, Manitoba — Canada's most popular whisky",
+  "source": "curated",
+  "coords": [
+   -97.1289,
+   49.8844
+  ],
+  "reasons": [
+   "website-wrong-entity"
+  ]
+ },
+ {
+  "slug": "forty-creek",
+  "name": "Forty Creek",
+  "region": "usa",
+  "website": "http://www.fortycreekwhisky.com",
+  "address": "297 S Service Rd, Grimsby, ON L3M 1Y6, Canada",
+  "description": "Award-winning Canadian whisky in Grimsby, Ontario",
+  "source": "curated+wikidata",
+  "coords": [
+   -79.5831,
+   43.2025
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "okanagan-spirits-craft-distillery",
+  "name": "Okanagan Spirits Craft Distillery",
+  "region": "usa",
+  "website": "Okanaganspirits.com",
+  "address": "327 Bernard Ave, Kelowna, BC V1Y 6N6, Canada",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -119.4977136,
+   49.8861663
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "allan-s-mill",
+  "name": "Allan's Mill",
+  "region": "usa",
+  "website": "https://www.springmilldistillery.com/visit",
+  "address": "43 Arthur St S, Guelph, ON N1E 0P9, Canada",
+  "description": "",
+  "source": "osm+wikidata",
+  "coords": [
+   -80.242569,
+   43.546586
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillery-district",
+  "name": "Distillery District",
+  "region": "usa",
+  "website": "http://www.spiritofyork.com/?utm_source=GMBlisting&utm_medium=organic",
+  "address": "12 Trinity St, Toronto, ON M5A 3C4, Canada",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -79.3597,
+   43.6506
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "heretic-spirits",
+  "name": "Heretic Spirits",
+  "region": "usa",
+  "website": "https://georgianbayspiritco.com/",
+  "address": "395 Raglan St Unit 2-D, Collingwood, ON L9Y 5P9, Canada",
+  "description": "",
+  "source": "wikidata",
+  "coords": [
+   -80.19198,
+   44.492
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "the-liberty-distillery",
+  "name": "The Liberty Distillery",
+  "region": "usa",
+  "website": "https://www.thelibertydistillery.com/",
+  "address": "1494 Old Bridge St, Vancouver, BC V6H 3S6, Canada",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -123.1345786,
+   49.2704065
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "macaloney-s-island-distillery-and-twa-dogs-brewery",
+  "name": "Macaloney's Island Distillery and TWA Dogs Brewery",
+  "region": "usa",
+  "website": "http://macaloneys.com/",
+  "address": "761 Enterprise Crescent, Victoria, BC V8Z 6P7, Canada",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -123.3872068,
+   48.4846697
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "victoria-distillers",
+  "name": "Victoria Distillers",
+  "region": "usa",
+  "website": "http://www.victoriadistillers.com/",
+  "address": "9891 Seaport Pl, Sidney, BC V8L 0A5, Canada",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -123.3941279,
+   48.6501281
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "la-maison-nokomis-inc",
+  "name": "La Maison Nokomis inc.",
+  "region": "usa",
+  "website": "https://maisonnokomis.com",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -71.8406001,
+   45.4751975
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "top-shelf-distillers",
+  "name": "Top Shelf Distillers",
+  "region": "usa",
+  "website": "http://topshelfdistillers.com/",
+  "address": "14 Warren Cres, Perth, ON K7H 0A8, Canada",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -76.2401237,
+   44.8839464
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "merridale-cidery-distillery",
+  "name": "Merridale Cidery & Distillery",
+  "region": "usa",
+  "website": "https://merridale.ca",
+  "address": "1230 Merridale Rd, Cobble Hill, BC V8H 1A1, Canada",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -123.5845669,
+   48.663375
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "legend-spirits-company",
+  "name": "Legend Spirits Company",
+  "region": "usa",
+  "website": "https://legendspirits.ca/",
+  "address": "7 Great North Rd, Parry Sound, ON P2A 2X8, Canada",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -80.0307128,
+   45.3429691
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "arbutus-distillery",
+  "name": "Arbutus Distillery",
+  "region": "usa",
+  "website": "https://arbutusdistillery.com/",
+  "address": "1890 Boxwood Rd, Nanaimo, BC V9S 5Y2, Canada",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -123.9852647,
+   49.1835731
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "sheringham-distillery",
+  "name": "Sheringham Distillery",
+  "region": "usa",
+  "website": "https://www.sheringhamdistillery.com/",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -123.7242686,
+   48.3755054
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "workshop-spirits",
+  "name": "Workshop Spirits",
+  "region": "usa",
+  "website": "",
+  "address": "",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -119.5288599,
+   49.2361583
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "sternwheeler-craft-distillery",
+  "name": "Sternwheeler Craft Distillery",
+  "region": "usa",
+  "website": "https://sternwheeler.ca/",
+  "address": "1628 Canyon St, Creston, BC V0B 1G5, Canada",
+  "description": "",
+  "source": "osm",
+  "coords": [
+   -116.5055579,
+   49.0957769
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "limited-distillery",
+  "name": "Limited Distillery",
+  "region": "usa",
+  "website": "http://ltddistillery.com/",
+  "address": "14 Henegan Rd, Niagara-on-the-Lake, ON L0S 1J0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.12578119999999,
+   43.2160446
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "wolfhead-distillery-restaurant",
+  "name": "Wolfhead Distillery & Restaurant",
+  "region": "usa",
+  "website": "http://www.drinkwolfhead.com/",
+  "address": "7781 Howard Ave, Amherstburg, ON N0R 1J0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -82.9990751,
+   42.165439
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "copper-rose-distillery",
+  "name": "Copper Rose Distillery",
+  "region": "usa",
+  "website": "http://copperrose.ca/",
+  "address": "459 Ouellette Ave, Windsor, ON N9A 4J2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -83.0379442,
+   42.315564200000004
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "willibald-farm-distillery-brewery",
+  "name": "Willibald Farm Distillery & Brewery",
+  "region": "usa",
+  "website": "http://www.drinkwillibald.com/",
+  "address": "1271 Reidsville Rd, Ayr, ON N0B 1E0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -80.4232356,
+   43.2876514
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "brewery-distillery-tours-niagara",
+  "name": "Brewery & Distillery Tours Niagara",
+  "region": "usa",
+  "website": "http://www.brewerydistillerytoursniagara.com/",
+  "address": "7091 Regional Rd 57, Niagara Falls, ON L2J 1B5, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.1156122,
+   43.1155957
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "spirit-in-niagara-distillery",
+  "name": "Spirit in Niagara Distillery",
+  "region": "usa",
+  "website": "http://spiritinniagara.com/",
+  "address": "458 Lakeshore Rd, Niagara-on-the-Lake, ON L0S 1J0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.1764516,
+   43.2280914
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "wild-lot-farm-distillery",
+  "name": "Wild Lot Farm Distillery",
+  "region": "usa",
+  "website": "http://wildlot.ca/",
+  "address": "1990 Fry Rd, Prince Edward, ON K0K 2T0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -77.1336449,
+   44.093899099999994
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "bare-bones-distillery",
+  "name": "Bare Bones Distillery",
+  "region": "usa",
+  "website": "https://barebonesdistillery.ca/",
+  "address": "719 Closson Rd, Hillier, ON K0K 2J0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -77.3976184,
+   43.9975855
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "downriver-bev-co-formerly-moonshine-creek",
+  "name": "Downriver Bev. Co. (formerly Moonshine Creek)",
+  "region": "usa",
+  "website": "http://www.downriverbevco.com/",
+  "address": "11377 Route 130, Waterville, NB E7P 0B1, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -67.58030939999999,
+   46.2872
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "bayfield-berry-farm-winery-distillery",
+  "name": "Bayfield Berry Farm, Winery & Distillery",
+  "region": "usa",
+  "website": "https://bayfieldberryfarm.on.ca/",
+  "address": "77697 Orchard Line, Bayfield, ON N0M 1G0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -81.68542479999999,
+   43.6009788
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "otter-creek-distilling",
+  "name": "Otter Creek Distilling",
+  "region": "usa",
+  "website": "https://ottercreekdistilling.ca/",
+  "address": "92 Edison Dr, Vienna, ON N0J 1Z0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -80.8031539,
+   42.684610899999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "manns-distillery",
+  "name": "Manns Distillery",
+  "region": "usa",
+  "website": "http://mannsdistillery.com/",
+  "address": "581 West St, Brantford, ON N3R 7C5, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -80.24763089999999,
+   43.1691758
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "maverick-distillery-outlet",
+  "name": "Maverick Distillery Outlet",
+  "region": "usa",
+  "website": "http://maverickdirect.ca/",
+  "address": "2140 Winston Park Dr Unit 18, Oakville, ON L6H 5V5, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.6731947,
+   43.508208599999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "reid-s-distillery",
+  "name": "Reid's Distillery",
+  "region": "usa",
+  "website": "http://reidsdistillery.com/",
+  "address": "32 Logan Ave, Toronto, ON M4M 2M9, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.34054760000001,
+   43.655541199999995
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "silver-fox-distillery",
+  "name": "Silver Fox Distillery",
+  "region": "usa",
+  "website": "http://www.silverfoxdistillery.ca/",
+  "address": "7999 Wellington County Rd 109, Arthur, ON N0G 1A0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -80.5320655,
+   43.8268762
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "hamilton-distillery-company-limited",
+  "name": "Hamilton Distillery Company Limited",
+  "region": "usa",
+  "website": "http://www.hamiltondistillery.ca/",
+  "address": "21 King St W 5th Floor, Hamilton, ON L8P 4W7, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.87010389999999,
+   43.2566748
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "nickel-9-distillery-distillery-in-toronto",
+  "name": "Nickel 9 Distillery | Distillery in Toronto",
+  "region": "usa",
+  "website": "http://nickel9distillery.com/",
+  "address": "90 Cawthra Ave #100, Toronto, ON M6N 3C2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.4645713,
+   43.6707344
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "polonee-distillery-inc",
+  "name": "Polonée Distillery Inc.",
+  "region": "usa",
+  "website": "https://polonee.ca/",
+  "address": "380 Vansickle Rd Unit 450, St. Catharines, ON L2S 0B5, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.26905579999999,
+   43.1485025
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "last-straw-distillery",
+  "name": "Last Straw Distillery",
+  "region": "usa",
+  "website": "http://www.laststrawdistillery.com/",
+  "address": "40 Pippin Rd #9, Concord, ON L4K 4M6, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.525798,
+   43.809894799999995
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillery-bar",
+  "name": "Distillery Bar",
+  "region": "usa",
+  "website": "https://www.torontopearson.com/en/while-you-are-here/toronto-airport-restaurants/distillery-bar",
+  "address": "YYZ Terminal 3, Toronto Pearson International Airport, Silver Dart Dr, Mississauga, ON L4V 1E3, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.6220611,
+   43.68627250000001
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "willibald-distillery-brewery-st-jacobs-farmers-market",
+  "name": "Willibald Distillery & Brewery - St. Jacobs Farmers' Market",
+  "region": "usa",
+  "website": "http://drinkwillibald.com/",
+  "address": "878 Weber St N, Waterloo, ON N2V 0H2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -80.5536501,
+   43.511558199999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "nb-distillers",
+  "name": "NB Distillers",
+  "region": "usa",
+  "website": "http://nbdistillers.com/",
+  "address": "36 Darte Dr Unit 1, Welland, ON L3B 5Y7, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.2621704,
+   42.96356060000001
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "j-m-hutchison-distilling-co",
+  "name": "J.M. Hutchison Distilling Co.",
+  "region": "usa",
+  "website": "https://jmhdistilling.com/",
+  "address": "470 Rocher Rd, Listowel, ON N4W 3G9, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -80.9594379,
+   43.7149816
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "adam-brown-55-distilling-co",
+  "name": "Adam Brown 55 Distilling Co.",
+  "region": "usa",
+  "website": "http://www.adambrown55distillingco.com/",
+  "address": "5 Hilwood Dr, Moorefield, ON N0G 2K0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -80.7380458,
+   43.7696294
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "beattie-s-distillers",
+  "name": "Beattie's Distillers",
+  "region": "usa",
+  "website": "http://beattiesdistillers.com/",
+  "address": "Box 609, 6673 Line 13, Alliston, ON L9R 1V4, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.8296067,
+   44.1323602
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "hank-s-distillery",
+  "name": "Hank's Distillery",
+  "region": "usa",
+  "website": "http://www.hanksdistillery.com/",
+  "address": "790 Redwood Square Unit 14, Oakville, ON L6L 6N3, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.70693299999999,
+   43.434457
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "king-s-lock-craft-distillery",
+  "name": "King's Lock Craft Distillery",
+  "region": "usa",
+  "website": "http://www.kingslockcraftdistillery.com/",
+  "address": "5 Newport Dr UNIT #1, Johnstown, ON K0E 1T1, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -75.4884854,
+   44.723607799999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "canadian-mist-distillers",
+  "name": "Canadian Mist Distillers",
+  "region": "usa",
+  "website": "http://www.canadianmist.com/",
+  "address": "202 MacDonald Rd, Collingwood, ON L9Y 4J2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -80.1928928,
+   44.496852000000004
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "copperhead-distillery",
+  "name": "Copperhead Distillery",
+  "region": "usa",
+  "website": "http://www.copperhead-distillery.com/",
+  "address": "BOX 39, 68 Tower Rd, Sundridge, ON P0A 1Z0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.3810388,
+   45.780698300000005
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "vodkow-dairy-distillery",
+  "name": "VODKOW-Dairy Distillery",
+  "region": "usa",
+  "website": "https://vodkow.com/",
+  "address": "34 Industrial Dr, Almonte, ON K0A 1A0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -76.18175579999999,
+   45.2323744
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "sfr-distillery",
+  "name": "SFR Distillery",
+  "region": "usa",
+  "website": "https://sfrdistillery.com/",
+  "address": "767 Silver Seven Rd Unit 23, Ottawa, ON K2V 0H1, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -75.9146992,
+   45.301668299999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "4-degrees-brewing-distilling",
+  "name": "4 Degrees Brewing & Distilling",
+  "region": "usa",
+  "website": "http://www.4degreesbrewing.com/",
+  "address": "275 Brockville St, Smiths Falls, ON K7A 4Z6, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -76.01560490000001,
+   44.882514199999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "air-distillerie-ontario",
+  "name": "Air Distillerie, Ontario",
+  "region": "usa",
+  "website": "https://airdistillerie.com/",
+  "address": "765 Tupper St., Hawkesbury, ON K6A 3T5, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -74.5854544,
+   45.6010528
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "cirka-distilleries",
+  "name": "Cirka Distilleries",
+  "region": "usa",
+  "website": "http://cirkadistilleries.com/",
+  "address": "2075 Rue Cabot, Montréal, QC H4E 1E2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.592045,
+   45.4657352
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-3-lacs",
+  "name": "Distillerie 3 Lacs",
+  "region": "usa",
+  "website": "http://www.distillerie3lacs.ca/",
+  "address": "597 Rue Andrew, Salaberry-de-Valleyfield, QC J6S 0B1, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -74.1465482,
+   45.269386999999995
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "miellerie-king-distillery-meadery",
+  "name": "Miellerie King - Distillery & Meadery",
+  "region": "usa",
+  "website": "http://miellerieking.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=10970428110177642913",
+  "address": "15 Rue Lajeunesse #700, Kingsey Falls, QC J0A 1B0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -72.0641583,
+   45.8602844
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "gagetown-distilling-cidery",
+  "name": "Gagetown Distilling & Cidery",
+  "region": "usa",
+  "website": "https://gagetowndistillingcidery.ca/",
+  "address": "30 Court House, Gagetown, NB E5M 1E4, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -66.1511001,
+   45.785365999999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "first-light-distillery",
+  "name": "First Light Distillery",
+  "region": "usa",
+  "website": "http://www.firstlightdistillery.ca/",
+  "address": "73 Fairway Dr, Hanwell, NB E3C 0M2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -66.7142388,
+   45.9139378
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "the-cove-by-first-light-distillery",
+  "name": "The Cove by First Light Distillery",
+  "region": "usa",
+  "website": "https://www.firstlightdistillery.ca/",
+  "address": "280 King St, Fredericton, NB E3B 1G8, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -66.6469053,
+   45.962976999999995
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "black-galley-distilling",
+  "name": "Black Galley Distilling",
+  "region": "usa",
+  "website": "http://www.blackgalleydistilling.ca/",
+  "address": "3 Timothy Ave N, Hanwell, NB E3C 0E8, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -66.71800329999999,
+   45.9278562
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "crosscut-distillery",
+  "name": "Crosscut Distillery",
+  "region": "usa",
+  "website": "http://crosscutdistillery.ca/",
+  "address": "1347 Kelly Lake Rd, Sudbury, ON P3E 5P3, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -81.03053539999999,
+   46.4648681
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "whitewater-distilling-company",
+  "name": "Whitewater Distilling Company",
+  "region": "usa",
+  "website": "https://www.whitewaterspirits.ca/",
+  "address": "78 Pembroke St, Cobden, ON K0J 1K0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -76.886876,
+   45.633626899999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "air-distillerie-quebec",
+  "name": "AiR Distillerie Québec",
+  "region": "usa",
+  "website": "https://airdistillerie.com/",
+  "address": "243 Rue Bombardier, Gatineau, QC J8R 0C6, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -75.5632227,
+   45.515637399999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "dunrobin-distilleries-ltd",
+  "name": "Dunrobin Distilleries Ltd.",
+  "region": "usa",
+  "website": "http://www.dunrobindistilleries.com/",
+  "address": "10 Terry Fox Dr, Vankleek Hill, ON K0B 1R0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -74.6372674,
+   45.5169091
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "la-manufacture-distillery",
+  "name": "La Manufacture distillery",
+  "region": "usa",
+  "website": "http://distillerielamanufacture.com/",
+  "address": "195 Rue Brissette Local 26, Sainte-Agathe-des-Monts, QC J8C 3S4, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -74.268299,
+   46.0545109
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillersr-inc",
+  "name": "DistillerSR Inc.",
+  "region": "usa",
+  "website": "http://www.distillersr.com/",
+  "address": "505 March Rd Suite 450, Ottawa, ON K2K 3A4, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -75.9207692,
+   45.344790200000006
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-cote-des-saints",
+  "name": "Distillerie Côte des Saints",
+  "region": "usa",
+  "website": "http://www.cotedessaints.com/",
+  "address": "12465 Côte des Saints, Mirabel, QC J7N 2W1, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -74.031378,
+   45.6515838
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-de-montreal-rosemont",
+  "name": "Distillerie de Montréal (Rosemont)",
+  "region": "usa",
+  "website": "https://www.distilleriedemontreal.com/",
+  "address": "5447 Rue Chapleau, Montréal, QC H2G 2E3, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.5789021,
+   45.542816099999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "1769-distillery-inc",
+  "name": "1769 Distillery Inc.",
+  "region": "usa",
+  "website": "http://www.1769distillery.com/",
+  "address": "111 Bd Newman, LaSalle, QC H8R 3E6, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.646996,
+   45.4264079
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-grand-derangement",
+  "name": "Distillerie Grand Dérangement",
+  "region": "usa",
+  "website": "http://grandderangement.ca/",
+  "address": "44 Rue Marcel-Lépine, Saint-Jacques, QC J0K 2R0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.5738565,
+   45.9540459
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "projet-pilote-distillery-brewpub",
+  "name": "Projet Pilote - Distillery & Brewpub",
+  "region": "usa",
+  "website": "http://www.projetpilote.com/",
+  "address": "980 Rue Rachel E, Montréal, QC H2J 2J3, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.5748517,
+   45.525247
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "domaine-lafrance-orchards-bistro-cidery-distillery",
+  "name": "Domaine Lafrance - Orchards / Bistro / Cidery / Distillery",
+  "region": "usa",
+  "website": "https://www.domainelafrance.com/",
+  "address": "1473 Chem. Principal, Saint-Joseph-du-Lac, QC J0N 1M0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -74.0133117,
+   45.541972799999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "les-distilleries-sazerac-du-canada",
+  "name": "Les Distilleries Sazerac du Canada",
+  "region": "usa",
+  "website": "https://www.sazerac.com/",
+  "address": "950 Chem. des Moulins, Montréal, QC H3C 3W5, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.5475522,
+   45.4885586
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-shefford",
+  "name": "Distillerie Shefford",
+  "region": "usa",
+  "website": "http://distillerieshefford.com/",
+  "address": "18 Chem. Saxby N, Shefford, QC J2M 1Y9, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -72.6326849,
+   45.3815847
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "terre-a-boire-ferme-brassicole-distillerie",
+  "name": "Terre à Boire - Ferme Brassicole & Distillerie",
+  "region": "usa",
+  "website": "https://terreaboire.com/",
+  "address": "1375 Rue Principale, Saint-Blaise-sur-Richelieu, QC J0J 1W0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.307085,
+   45.224145299999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "la-distillerie-vieux-longueuil",
+  "name": "La Distillerie (Vieux-Longueuil)",
+  "region": "usa",
+  "website": "http://pubdistillerie.com/",
+  "address": "105 Rue Saint-Charles O, Longueuil, QC J4H 1C7, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.5092018,
+   45.5394903
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "maison-sivo-microdistillerie-ferme-biologique",
+  "name": "Maison Sivo - Microdistillerie & Ferme Biologique",
+  "region": "usa",
+  "website": "https://maisonsivo.ca/fr/home/",
+  "address": "1598 Chem. de Covey Hill, Franklin, QC J0S 1E0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.9203562,
+   45.0096741
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "cidrerie-et-distillerie-c-e-petch",
+  "name": "Cidrerie et Distillerie C.E.Petch",
+  "region": "usa",
+  "website": "https://www.cepetch.ca/",
+  "address": "431 Rte 202 Ouest (West, Hemmingford, QC J0L 1H0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.5960376,
+   45.0461935
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "la-distillerie-du-29-octobre",
+  "name": "La Distillerie du 29 Octobre",
+  "region": "usa",
+  "website": "https://distillerie29octobre.com/",
+  "address": "6600 Bd Choquette, Saint-Hyacinthe, QC J2S 8L1, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -72.9907036,
+   45.629329
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "bluepearl-distillerie",
+  "name": "BluePearl Distillerie",
+  "region": "usa",
+  "website": "http://bluepearldistillerie.com/",
+  "address": "5500 Rue Hochelaga Suite 650, Montréal, QC H1N 3L7, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.5369796,
+   45.5661224
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "mariana-distillery-brewery",
+  "name": "Mariana | Distillery & Brewery",
+  "region": "usa",
+  "website": "https://distilleriemariana.com/",
+  "address": "280 Rue St Georges, Trois-Rivières, QC G9A 2K4, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -72.5433053,
+   46.3409741
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-wfe",
+  "name": "Distillerie WfE",
+  "region": "usa",
+  "website": "https://wfedistillery.com/",
+  "address": "1935 Rue Patrick Farrar, Chambly, QC J3L 4N7, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.2878199,
+   45.4109299
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "tower-hill-road-distillery",
+  "name": "Tower Hill Road - Distillery",
+  "region": "usa",
+  "website": "http://towerhillroad.com/",
+  "address": "1 Pl. Monseigneur Charbonneau Bureau 4000, Montreal, QC H3B 4M4, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -73.5692531,
+   45.5014758
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-des-cantons-de-l-est",
+  "name": "Distillerie des Cantons de l'Est",
+  "region": "usa",
+  "website": "https://www.distilleriedescantons.ca/",
+  "address": "455 Rte de Mansonville, Mansonville, QC J0E 1X0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -72.3915947,
+   45.0803179
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "la-microdistillerie",
+  "name": "La Microdistillerie",
+  "region": "usa",
+  "website": "https://lamicrodistillerie.ca/",
+  "address": "66 Rue Meadow, Sherbrooke, QC J1H 5N3, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.8905664,
+   45.403335299999995
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "vignoble-distillerie-l-incantatrice",
+  "name": "Vignoble & distillerie l'incantatrice",
+  "region": "usa",
+  "website": "https://distillerielincantatrice.com/",
+  "address": "1431 B Rang Centre, Beaulac-Garthby, QC G0Y 1B0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.3918851,
+   45.8351414
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "domaine-nokomis-distillerie-vignoble-brasserie",
+  "name": "Domaine Nokomis - Distillerie-Vignoble-Brasserie",
+  "region": "usa",
+  "website": "https://www.domainenokomis.com/",
+  "address": "248 Chem. Desaulniers, Stoke, QC J0B 3G0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.8134681,
+   45.470101899999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-arsenal-economusee",
+  "name": "Distillerie Arsenal - Économusée",
+  "region": "usa",
+  "website": "https://arsenaldistillerie.com/",
+  "address": "1195 Rue Taillon, Québec, QC G1N 3V2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.2530852,
+   46.8013056
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-euclide",
+  "name": "Distillerie Euclide",
+  "region": "usa",
+  "website": "https://distillerieeuclide.ca/",
+  "address": "100A Rue Archibald-Campbell, Victoriaville, QC G6T 2V9, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.9424597,
+   46.091373499999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "la-vallee-bleue-distillerie-et-bleuetiere",
+  "name": "La Vallée bleue Distillerie et Bleuetière",
+  "region": "usa",
+  "website": "https://www.lavalleebleue.net/",
+  "address": "747 1er Rang, Val-Alain, QC G0S 3H0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.71420490000001,
+   46.4159429
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "apikol-distillery-meadery",
+  "name": "Apikol - Distillery & Meadery",
+  "region": "usa",
+  "website": "https://apikol.ca/",
+  "address": "627 Boulevard Charest E, Québec, QC G1K 3J5, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.2209903,
+   46.8145001
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "l-m-distillery",
+  "name": "L&M Distillery",
+  "region": "usa",
+  "website": "http://distillerielm.com/",
+  "address": "101 Rue Courteau, Trois-Rivières, QC G8W 2E7, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -72.5356979,
+   46.4200172
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-wabasso",
+  "name": "Distillerie Wabasso",
+  "region": "usa",
+  "website": "http://distilleriewabasso.com/",
+  "address": "1020 Rue Albert Durand, Trois-Rivières, QC G8Z 2M7, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -72.57147189999999,
+   46.338204999999995
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-stadacone",
+  "name": "Distillerie Stadaconé",
+  "region": "usa",
+  "website": "http://stadacone.com/",
+  "address": "235 2e Rue, Québec, QC G1L 2T2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.2262121,
+   46.8208378
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-de-quebec",
+  "name": "Distillerie de Québec",
+  "region": "usa",
+  "website": "https://www.distilleriedequebec.ca/",
+  "address": "400 Rue du Platine, Québec, QC G2N 2G6, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.3175029,
+   46.891687399999995
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-des-appalaches",
+  "name": "Distillerie des Appalaches",
+  "region": "usa",
+  "website": "http://www.distilleriedesappalaches.com/",
+  "address": "1570 des Riveurs Suite 103, Lévis, QC G6Y 0C2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.11551299999999,
+   46.8174547
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "cherry-river-distillerie-quebec",
+  "name": "Cherry River Distillerie - Québec",
+  "region": "usa",
+  "website": "https://cherryriver.ca/",
+  "address": "1800 Chem. Saint-Louis, Québec, QC G1S 1H7, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.2476619,
+   46.7809981
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "arboressence-distillery",
+  "name": "ArborEssence Distillery",
+  "region": "usa",
+  "website": "http://www.cimeetforet.ca/",
+  "address": "2011 Chem. Hamilton, Inverness, QC G0S 1K0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.5241547,
+   46.2297898
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "vice-vertu-distilleries",
+  "name": "Vice & Vertu Distilleries",
+  "region": "usa",
+  "website": "http://www.vicevertu.ca/",
+  "address": "15 Rue de Rotterdam #11, Saint-Augustin-de-Desmaures, QC G3A 1S8, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.4377484,
+   46.7499532
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-cap-chat",
+  "name": "Distillerie Cap-Chat",
+  "region": "usa",
+  "website": "https://distilleriecapchat.com/",
+  "address": "16 Rue Notre Dame E, Cap-Chat-Est, QC G0J 1G0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -66.67132819999999,
+   49.0994378
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-lore-legends",
+  "name": "Distillerie Lore & Legends",
+  "region": "usa",
+  "website": "http://www.loreandlegends.com/",
+  "address": "8780 Bd Guillaume-Couture, Lévis, QC G6V 9G9, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.1266651,
+   46.821723999999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "bleuetiere-goulet-cueillette-erabliere-bar-laitier-casse-croute-patinoire-distillerie-region-chaudiere-appalaches",
+  "name": "Bleuetière Goulet | Cueillette, Érablière, Bar Laitier, Casse-Croûte, Patinoire & Distillerie | Région Chaudière-Appalaches",
+  "region": "usa",
+  "website": "http://www.bleuetieregoulet.com/",
+  "address": "2041 QC-112, Saint-Frédéric, QC G0N 1P0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -70.9647974,
+   46.340968700000005
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "le-verger-a-ti-paul-restaurant-ferme-brassicole-cidrerie-distillerie-tarterie-boutique",
+  "name": "Le Verger à Ti-Paul - Restaurant - Ferme brassicole - Cidrerie - Distillerie - Tarterie - Boutique",
+  "region": "usa",
+  "website": "http://www.levergeratipaul.com/",
+  "address": "260 Rang du Bas-Saint-Jacques, Saint-Elzéar, QC G0S 2J1, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.0745228,
+   46.4144728
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "menaud-brewery-distillery",
+  "name": "Menaud - Brewery & Distillery",
+  "region": "usa",
+  "website": "http://menaud.ca/",
+  "address": "1 Rue de la Riviére, Clermont, QC G4A 1B8, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -70.2076526,
+   47.6882953
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-temiscouata",
+  "name": "Distillerie Témiscouata",
+  "region": "usa",
+  "website": "https://distillerietemiscouata.com/",
+  "address": "557 Rue des Pionniers, Auclair, QC G0L 1A0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -68.6475189,
+   47.7267711
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "ferme-du-tarieu-microbrasserie-distillerie",
+  "name": "Ferme du Tarieu - Microbrasserie & Distillerie",
+  "region": "usa",
+  "website": "https://fermedutarieu.ca/",
+  "address": "705 2e Avenue, Sainte-Anne-de-la-Pérade, QC G0X 2J0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -72.2241303,
+   46.5786757
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "verger-barry-cidrerie-distillerie",
+  "name": "Verger Barry Cidrerie & Distillerie",
+  "region": "usa",
+  "website": "https://www.vergerbarry.com/",
+  "address": "1433 Bd Lanaudière, Sainte-Anne-de-la-Pérade, QC G0X 2J0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -72.12489029999999,
+   46.592655
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "le-jardin-de-la-simplicite-winery-cidery-nano-distillery",
+  "name": "Le Jardin de la Simplicité - Winery / Cidery / Nano-Distillery",
+  "region": "usa",
+  "website": "https://www.facebook.com/Jardin-de-la-Simplicite-101411622408388",
+  "address": "314 Rue St Édouard, Saint-Urbain, QC G0A 4K0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -70.5220279,
+   47.545789
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-mitis",
+  "name": "Distillerie Mitis",
+  "region": "usa",
+  "website": "http://www.distilleriemitis.com/",
+  "address": "1034 Av. de la Gaspésie, Mont-Joli, QC G5H 3H1, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -68.20506089999999,
+   48.593941099999995
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "microdistillerie-la-ponce",
+  "name": "Microdistillerie La Ponce",
+  "region": "usa",
+  "website": "https://microdistillerielaponce.com/",
+  "address": "179A Bd Bégin, Sainte-Claire, QC G0R 2V0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -70.8589464,
+   46.6002654
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "ryes-shine-craft-distillery",
+  "name": "Ryes & Shine Craft Distillery",
+  "region": "usa",
+  "website": "https://www.ryesandshine.ca/",
+  "address": "2323 Millstream Rd #103, Langford, BC V9B 3R4, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.50022309999999,
+   48.464695
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "stillhead-distillery",
+  "name": "Stillhead Distillery",
+  "region": "usa",
+  "website": "http://www.stillhead.ca/",
+  "address": "5301 Chaster Rd #105, Duncan, BC V9L 5J2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.69296159999998,
+   48.764302199999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "holocene-distilling-project",
+  "name": "Holocene Distilling Project",
+  "region": "usa",
+  "website": "http://www.holocenedistillingproject.com/",
+  "address": "1134 Chapman Rd, Cobble Hill, BC V8H 0C5, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.57854659999998,
+   48.682881
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "salt-spring-shine-craft-distillery-ltd",
+  "name": "Salt Spring Shine Craft Distillery Ltd.",
+  "region": "usa",
+  "website": "http://www.saltspringshine.com/",
+  "address": "194 Kitchen Rd, Salt Spring Island, BC V8K 2B3, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.4696333,
+   48.8069369
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "best-coast-distillers",
+  "name": "Best Coast Distillers",
+  "region": "usa",
+  "website": "http://www.bestcoastdistillers.com/",
+  "address": "1725 McTavish Rd, North Saanich, BC V8L 5T9, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.42767539999998,
+   48.629777499999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "bee-wild-distillery",
+  "name": "Bee Wild Distillery",
+  "region": "usa",
+  "website": "http://www.beewilddistillery.ca/",
+  "address": "4306 Corbett Rd, Pender Island, BC V0N 2M1, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.28523709999999,
+   48.802378999999995
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "kootenay-west-distilling",
+  "name": "Kootenay West Distilling",
+  "region": "usa",
+  "website": "https://kootenaywestdistilling.com/",
+  "address": "1180 Cedar Ave, Trail, BC V1R 3T3, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -117.71026359999999,
+   49.096601799999995
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "fernie-distillers",
+  "name": "Fernie Distillers",
+  "region": "usa",
+  "website": "http://ferniedistillers.com/",
+  "address": "531 1st Ave, Fernie, BC V0B 1M0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -115.06056129999999,
+   49.503125
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-rheault-distillery",
+  "name": "Distillerie Rheault Distillery",
+  "region": "usa",
+  "website": "https://rheaultdistillery.ca/",
+  "address": "6 HWY 583 Nord RR 2, Hearst, ON P0L 1N0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -83.64964739999999,
+   49.731287099999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-du-fjord",
+  "name": "Distillerie du Fjord",
+  "region": "usa",
+  "website": "https://www.distilleriedufjord.com/",
+  "address": "48 Chem. de Price, Saint-David-de-Falardeau, QC G0V 1C0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.1053644,
+   48.6331773
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillerie-quebec-north-shore",
+  "name": "Distillerie Québec North Shore",
+  "region": "usa",
+  "website": "http://www.dqns.ca/",
+  "address": "127 Rue Vallilee, Chute-aux-Outardes, QC G0H 1C0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -68.3929574,
+   49.128099399999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "aurel-et-compagnie-distillerie-nordique-inc",
+  "name": "AUREL ET COMPAGNIE DISTILLERIE NORDIQUE INC.",
+  "region": "usa",
+  "website": "https://aureletcompagnie.com/",
+  "address": "1045 Rue Simard, Saint-Ambroise, QC G7P 2V2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.31238619999999,
+   48.5719552
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "antidote-distilling-co",
+  "name": "Antidote Distilling Co.",
+  "region": "usa",
+  "website": "https://www.antidotedistillingco.com/",
+  "address": "4721Johnston Rd #103, Port Alberni, BC V9Y 5M4, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -124.809099,
+   49.25955
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "ampersand-distilling-company-appointment-only",
+  "name": "Ampersand Distilling Company (appointment only)",
+  "region": "usa",
+  "website": "http://www.ampersanddistilling.com/",
+  "address": "4077 Lanchaster Rd, Duncan, BC V9L 6G2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.77857679999998,
+   48.7661022
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "the-101-brewhouse-distillery",
+  "name": "The 101 Brewhouse + Distillery",
+  "region": "usa",
+  "website": "http://www.the101.ca/",
+  "address": "1009 Gibsons Way, Gibsons, BC V0N 1V7, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.525613,
+   49.406321
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "bruinwood-estate-distillery",
+  "name": "Bruinwood Estate Distillery",
+  "region": "usa",
+  "website": "http://www.bruinwood.com/",
+  "address": "2040 Porter Rd, Roberts Creek, BC V0N 2W5, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.582659,
+   49.4168624
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "misguided-spirits-craft-distillery",
+  "name": "Misguided Spirits Craft Distillery",
+  "region": "usa",
+  "website": "https://www.misguidedspirits.ca/",
+  "address": "1343 Alberni Hwy #18, Parksville, BC V9P 2B9, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -124.35578669999998,
+   49.3063681
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "copperpenny-distilling-co",
+  "name": "Copperpenny Distilling Co.",
+  "region": "usa",
+  "website": "https://copperpennydistilling.com/",
+  "address": "288 Esplanade East Unit 103, North Vancouver, BC V7L 1A3, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.07385110000001,
+   49.3087999
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "sharpe-distillery",
+  "name": "Sharpe Distillery",
+  "region": "usa",
+  "website": "https://www.sharpedistillery.com/",
+  "address": "253 Beecroft River Rd, Cawston, BC V0X 1C1, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -119.75678269999999,
+   49.1637853
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "luckhurst-farm-distillery",
+  "name": "Luckhurst Farm & Distillery",
+  "region": "usa",
+  "website": "http://luckhurstfarm.com/",
+  "address": "4275 Goodison Rd, Kelowna, BC V1W 4C6, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -119.40631280000001,
+   49.828590899999995
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "squeezed-winery-distillery",
+  "name": "Squeezed Winery + Distillery",
+  "region": "usa",
+  "website": "https://www.squeezedwines.com/",
+  "address": "7315 Tucelnuit Dr, Oliver, BC V0H 1T2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -119.53921550000001,
+   49.209449299999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "tonik-distilling-ltd",
+  "name": "Tonik Distilling Ltd",
+  "region": "usa",
+  "website": "https://www.tonikdistillery.com/",
+  "address": "1286 BC-6, Crescent Valley, BC V0G 0A8, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -117.55693029999998,
+   49.4452381
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "lost-things-distillery",
+  "name": "Lost Things Distillery",
+  "region": "usa",
+  "website": "https://lostthingsdistillery.ca/",
+  "address": "967 Main St, Pincher Creek, AB T0K 1W0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -113.93819769999999,
+   49.485887
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "camerises-mistouk-economusee-distillerie",
+  "name": "Camerises Mistouk - Économusée & Distillerie",
+  "region": "usa",
+  "website": "http://camerisesmistouk.com/",
+  "address": "4565 2e Rang, Labrecque, QC G0W 2S0, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -71.55851109999999,
+   48.680881899999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "salish-sea-distillery",
+  "name": "Salish Sea Distillery",
+  "region": "usa",
+  "website": "https://salishseaspirits.ca/",
+  "address": "7074 Westminster St, Powell River, BC V8A 1C5, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -124.51791999999999,
+   49.802383
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "canadian-flower-winery-canadian-flower-distillery",
+  "name": "Canadian Flower Winery 加拿大之花酒庄 CANADIAN FLOWER DISTILLERY",
+  "region": "usa",
+  "website": "https://www.canadianflowerwinery.com/",
+  "address": "16060 Westminster Hwy, Richmond, BC V6V 1A8, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.04534799999998,
+   49.169185999999996
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "mad-laboratory-distilling",
+  "name": "Mad Laboratory Distilling",
+  "region": "usa",
+  "website": "http://madlabdistilling.com/",
+  "address": "618 E Kent Avenue S #119, Vancouver, BC V5X 4V6, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.09295030000001,
+   49.2066283
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "stealth-craft-distillers",
+  "name": "Stealth Craft Distillers",
+  "region": "usa",
+  "website": "http://stealthcraftdistillers.com/",
+  "address": "20 Orwell St #3, North Vancouver, BC V7J 2G1, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.02931749999999,
+   49.3005615
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "distillery-vfx",
+  "name": "Distillery VFX",
+  "region": "usa",
+  "website": "https://www.distilleryvfx.com/",
+  "address": "40 E 5th Ave, Vancouver, BC V5T 1G8, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.1037063,
+   49.2662124
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "canadian-craft-tours-ltd-craft-brewery-distillery-and-winery-tours-vancouver-bc",
+  "name": "Canadian Craft Tours Ltd | Craft Brewery, Distillery and Winery Tours, Vancouver, BC",
+  "region": "usa",
+  "website": "https://www.canadiancrafttours.ca/collections/nanaimo",
+  "address": "100 Front St, Nanaimo, BC V9R 5H7, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -123.93597399999999,
+   49.1672139
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "heritage-acres-distilling",
+  "name": "Heritage Acres Distilling",
+  "region": "usa",
+  "website": "http://www.heritageacresdistilling.com/",
+  "address": "30912 Burgess Ave, Abbotsford, BC V4X 2A6, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -122.36774609999999,
+   49.111042
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "anderson-distilleries",
+  "name": "Anderson Distilleries",
+  "region": "usa",
+  "website": "https://andersondistilleries.com/",
+  "address": "3011 Underhill Ave # 106, Burnaby, BC V5A 4S9, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -122.9289018,
+   49.2574234
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "dragon-mist-distillery",
+  "name": "Dragon Mist Distillery",
+  "region": "usa",
+  "website": "http://dragonmistdistillery.com/",
+  "address": "36904 McKamey Rd, Dewdney, BC V2V 0N2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -122.2035129,
+   49.153687
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "northwest-distilling-co",
+  "name": "Northwest Distilling Co.",
+  "region": "usa",
+  "website": "http://www.northwestdistillingco.ca/",
+  "address": "104-20120 Stewart Crescent, Maple Ridge, BC V2X 0T4, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -122.66165850000002,
+   49.2136553
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "lake-effect-distillery",
+  "name": "Lake Effect Distillery",
+  "region": "usa",
+  "website": "https://www.lakeeffect.ca/",
+  "address": "631 Lorraine Rd, Port Colborne, ON L3K 5V3, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.2119453,
+   42.8775342
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "brewery-winery-distillery-workers-local-300",
+  "name": "Brewery Winery & Distillery Workers Local 300",
+  "region": "usa",
+  "website": "https://local300.ca/",
+  "address": "7128 Gilley Ave, Burnaby, BC V5J 4X2, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -122.9716283,
+   49.219089399999994
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ },
+ {
+  "slug": "spirits-canada-association-of-canadian-distillers",
+  "name": "Spirits Canada | Association of Canadian Distillers",
+  "region": "usa",
+  "website": "http://www.spiritscanada.ca/",
+  "address": "219 Dufferin St Suite 100A-2, Toronto, ON M6K 1Y9, Canada",
+  "description": "",
+  "source": "google-places",
+  "coords": [
+   -79.42623840000002,
+   43.6368605
+  ],
+  "reasons": [
+   "region-mislabelled-usa"
+  ]
+ }
+]

@@ -65,6 +65,19 @@ type DistilleryProps = {
   address?: string;
   slug?: string;
   claimed?: boolean;
+  /**
+   * What kind of place the pin is, when it is NOT a distilling site.
+   * Absent on the overwhelming majority of features — absence means
+   * "spirits are distilled here". See docs/data-quality/entity-roles.md.
+   */
+  entity_role?: "tasting_room" | "brand_shop" | "head_office" | "bottling_plant";
+  /**
+   * The business that runs this site, when one business runs more than one
+   * mapped site. Absent on the overwhelming majority of features — absence
+   * means the pin's own name is the business. See
+   * docs/data-quality/entity-roles.md.
+   */
+  operator?: string;
 };
 
 export const getCountries = cache(async (): Promise<CountryEntry[]> => {
