@@ -1,6 +1,6 @@
 # Distillery Map
 
-> A free, open distillery map — 6,497 distilleries, tasting rooms, and spirit
+> A free, open distillery map — 6,131 distilleries, tasting rooms, and spirit
 > producers worldwide, community-built and growing. distillerymap.org
 
 ## What this site is
@@ -14,7 +14,7 @@ their listing to keep details accurate.
 
 ## Key facts
 
-- 6,497 distilleries, tasting rooms, and spirit producers mapped worldwide
+- 6,131 distilleries, tasting rooms, and spirit producers mapped worldwide
 - Data compiled from OpenStreetMap, Wikidata, and community submissions
 - Free to use; no account required
 - Dataset available as GeoJSON: https://distillerymap.org/data/distilleries.geojson
