@@ -1,0 +1,10 @@
+check	status	detail
+input_count	PASS	California source rows=501; expected=501
+reviewed_row_count	PASS	reviewed=501; pre-research groups=501
+reviewed_schema	PASS	missing=none
+duplicate_candidate_ids	PASS	duplicates=none
+required_review_provenance	PASS	rows missing classification/evidence/source/date/registry reference=0
+allowed_classifications	PASS	invalid classification rows=0
+permit_coverage	PASS	missing=0; extra=0
+unrelated_owner_dba_address_merge	PASS	duplicate groups=0; grouping script requires same normalised premise and owner/DBA token overlap
+public_geojson_guardrail	PASS	Preparation and review scripts do not read or write public/data/distilleries.geojson.

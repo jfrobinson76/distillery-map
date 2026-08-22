@@ -1,0 +1,5 @@
+source	url	retrieval_date	sha256	notes
+TTB unmatched permit queue	https://www.ttb.gov/public-information/foia/list-of-permittees	2026-08-21	2e20f6533d3f9071591f3eeef10988278aa4c6957c36c4ead280231c77bfcf45	Repository source file used to prepare 501 California rows.
+California ABC Daily Data Export	https://www.abc.ca.gov/wp-content/uploads/DailyExport-CSV.zip	2026-08-22	b581bd8497f646a08b45141eae1978661ccf62395a5160a58751479396df6637	Official state licensing data retrieved for exact-premise role verification.
+California ABC Licensing Reports	https://www.abc.ca.gov/licensing/licensing-reports/	2026-08-22		Official documentation for the daily data export.
+California ABC License Types	https://www.abc.ca.gov/licensing/license-types/	2026-08-22		Official definitions supporting licence-role interpretation.

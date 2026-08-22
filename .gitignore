@@ -53,3 +53,6 @@ __pycache__/
 # verdicts are not — keep the verdicts, drop the intermediates.
 data/categories/batch_*.json
 data/categories/fetch_cache.json
+
+# California TTB pilot: retain the source archive; regenerate the extracted state export.
+data/audit/california_ttb_pilot/source_cache/ABC-DailyDataExport.csv

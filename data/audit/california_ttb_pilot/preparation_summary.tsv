@@ -1,0 +1,12 @@
+metric	value	definition
+input_file	data/audit/us_1752_ttb_reconciliation/ttb_permits_not_matched_to_map.csv	Source unmatched TTB permit CSV
+input_sha256	2e20f6533d3f9071591f3eeef10988278aa4c6957c36c4ead280231c77bfcf45	SHA-256 of the source unmatched permit CSV
+california_permit_rows	501	Rows where state equals CA
+expected_california_permit_rows	501	Expected from 21 August audit brief
+input_count_variance	0	Actual California rows minus expected rows
+candidate_groups	501	Groups after exact-premise plus owner/DBA-token duplicate collapse
+duplicate_permit_groups	0	Candidate groups containing more than one retained TTB permit
+duplicate_rows_collapsed	0	Permit rows reduced through duplicate grouping
+duplicate_collapse_rate	0.000000	(permit rows minus candidate groups) divided by California permit rows
+grouping_rule	exact normalized street+city+state+zip AND overlap in owner or DBA identity tokens	Shared addresses alone remain separate candidates
+public_geojson_modified	false	This script does not read or write public/data/distilleries.geojson

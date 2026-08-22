@@ -1,0 +1,27 @@
+metric	value	definition
+unmatched_california_permit_rows	501	Raw unmatched TTB source rows where state equals CA.
+expected_california_permit_rows	501	Expected input count in the continuation brief.
+input_count_variance	0	Actual California permit rows minus expected permit rows.
+candidate_groups_after_duplicate_collapse	501	Distinct candidate groups after exact-premise plus owner/DBA-token grouping.
+duplicate_permit_groups	0	Candidate groups containing more than one retained permit.
+duplicate_rows_collapsed	0	Source permit rows removed through the duplicate grouping rule.
+reviewed_groups	501	Candidate groups present in the final reviewed ledger.
+production_site_confirmation_count	138	Groups classified production_site from individual research or exact-premise official state licensing evidence.
+bottling_office_nonproduction_count	37	Groups classified bottling_only, brand_or_office, or duplicate_permit.
+closed_or_unverifiable_count	279	Groups classified closed_or_unverifiable; this includes unverified cases and does not equate every row with a closure.
+needs_review_count	47	Groups with official evidence insufficient to determine a production role.
+duplicate_collapse_rate	0.000000	(California permit rows minus candidate groups) divided by California permit rows; this is not a production-quality measure.
+nonproduction_rate	0.073852	Explicit bottling/office/duplicate groups divided by reviewed candidate groups; excludes unverified/needs-review groups.
+production_site_confirmation_rate	0.275449	Confirmed production_site groups divided by reviewed candidate groups.
+false_positive_rate_against_initial_production_site_hypothesis	0.724551	Conservative screening-failure rate: groups not confirmed as production_site (explicit non-production plus closed_or_unverifiable plus needs_review) divided by reviewed groups. It is not a claim that every unresolved group is closed.
+current_operating_status_open	57	Groups with independently documented current operation.
+current_operating_status_closed	10	Groups with independently documented closure.
+current_operating_status_unknown	165	Groups with a current official licence-role match but no independent current-operation finding.
+current_operating_status_unverifiable	269	Groups without sufficient current-operation evidence; active TTB/ABC permissions alone did not determine this field.
+recommendation	revise_method	Do not scale the raw unmatched-permit approach unchanged. Use California ABC type/status and exact-premise screening before site research, retain the conservative queue, and re-test on a smaller state only after improving operator-website verification coverage.
+classification_bottling_only	28	Final reviewed-ledger count classified bottling_only.
+classification_brand_or_office	9	Final reviewed-ledger count classified brand_or_office.
+classification_closed_or_unverifiable	279	Final reviewed-ledger count classified closed_or_unverifiable.
+classification_duplicate_permit	0	Final reviewed-ledger count classified duplicate_permit.
+classification_needs_review	47	Final reviewed-ledger count classified needs_review.
+classification_production_site	138	Final reviewed-ledger count classified production_site.
