@@ -1,0 +1,183 @@
+PUBLISHED_FEATURES	6131
+UNIQUE_COUNTRIES	141
+BLANK_COUNTRY	0
+DUPLICATE_SLUGS	0
+NON_DISTILLING_ENTITY_ROLES	20
+
+COUNTRY_COUNTS_TOP_40
+1758	United States
+694	Germany
+531	United Kingdom
+481	France
+368	Australia
+251	Italy
+242	Canada
+153	Austria
+118	Japan
+108	Belgium
+105	India
+90	Switzerland
+85	South Africa
+66	Spain
+60	Brazil
+57	Ireland
+57	New Zealand
+55	Slovakia
+46	Hungary
+45	Mexico
+42	Netherlands
+39	Denmark
+38	Czech Republic
+29	Greece
+27	Argentina
+24	Croatia
+24	Sweden
+22	Taiwan
+20	Russia
+18	Poland
+18	Serbia
+17	Philippines
+16	Finland
+16	Thailand
+16	Uganda
+14	Slovenia
+14	Vietnam
+13	Chile
+13	Luxembourg
+12	Norway
+
+REGION_COUNTS
+2278	europe
+1898	usa
+499	rest
+367	australia
+278	uk
+242	scotland
+132	asia
+125	india
+118	japan
+102	canada
+73	ireland
+19	taiwan
+
+ENTITY_ROLE_COUNTS
+6111	(blank)
+13	tasting_room
+3	head_office
+2	bottling_plant
+2	brand_shop
+
+SOURCE_COUNTS
+3748	google-places
+1907	osm
+204	wikidata
+95	osm+wikidata
+85	completely-smashed+osm+wikidata
+28	curated
+18	curated+osm
+9	completely-smashed+wikidata
+9	oralytics
+7	oralytics+osm
+6	curated+osm+wikidata
+5	completely-smashed
+3	community
+3	curated+wikidata
+2	completely-smashed+osm
+2	submission
+
+REQUESTED_COUNTRY_COUNTS
+10	China
+1758	United States
+18	Poland
+38	Czech Republic
+55	Slovakia
+46	Hungary
+6	Romania
+4	Ukraine
+6	Bulgaria
+24	Croatia
+18	Serbia
+14	Slovenia
+6	Bosnia and Herzegovina
+4	Moldova
+0	Lithuania
+6	Latvia
+10	Estonia
+
+UNITED_STATES_COUNTRY_REGION_BREAKDOWN
+1752	United States | usa
+4	United States | rest
+1	United States | canada
+1	United States | europe
+
+USA_REGION_COUNTRY_BREAKDOWN
+1752	United States | usa
+143	Canada | usa
+2	Mexico | usa
+1	The Bahamas | usa
+
+SOURCES_IN_UNITED_STATES
+1188	google-places
+524	osm
+13	curated+osm
+13	osm+wikidata
+12	curated
+7	wikidata
+1	curated+wikidata
+
+SOURCES_IN_GERMANY
+364	osm
+305	google-places
+14	wikidata
+11	osm+wikidata
+
+SOURCES_IN_CHINA
+8	osm
+2	google-places
+
+SOURCES_IN_POLAND
+15	google-places
+3	osm
+
+SOURCES_IN_ROMANIA
+4	google-places
+2	osm
+
+SOURCES_IN_UKRAINE
+2	google-places
+2	osm
+
+SOURCES_IN_CROATIA
+19	google-places
+4	osm
+1	submission
+
+SOURCES_IN_SLOVAKIA
+41	osm
+14	google-places
+
+CHINA_RECORDS
+google-places	（Nanjing） Operating Center, Yanghe Distillery Co.,Ltd.	WJJM+2RQ, Feng Hui Da Dao, Yu Hua Tai Qu, Nan Jing Shi, Jiang Su Sheng, China, 210039	nanjing-operating-center-yanghe-distillery-co-ltd
+google-places	Forgood Distillery	HPG6+J57, Bing Cao Gang Da Jie, Dong Qu, Pan Zhi Hua Shi, Si Chuan Sheng, China, 617099	forgood-distillery
+osm	今缘春		distillery-china-5
+osm	今缘春酒厂		distillery-china-4
+osm	关屯酒坊		distillery-china-8
+osm	天之衡		distillery-china-7
+osm	孔府宴酒厂		distillery-china-6
+osm	山西榆州酿造有限公司		distillery-china
+osm	東引酒廠		distillery-china-3
+osm	肇庆永生酒业有限公司		distillery-china-2
+
+PROPERTY_FIELD_PRESENCE
+6131	address
+6131	country
+6131	description
+6131	name
+6131	region
+6131	slug
+6131	source
+6130	website
+20	entity_role
+2	operator
+1	claimed
+1	visitor_info

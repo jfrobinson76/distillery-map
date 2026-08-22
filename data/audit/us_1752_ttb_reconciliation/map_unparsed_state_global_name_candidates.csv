@@ -1,0 +1,156 @@
+slug,name,address,state,source,bucket,score,method,address_overlap,permit_number,permit_owner,permit_dba,global_name_score,candidate_tier,candidate_permit,candidate_owner,candidate_dba,candidate_state,candidate_city
+a-smith-bowman-distillery,A. Smith Bowman Distillery,,,wikidata,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,VA-S-20096,"SAZERAC OF NEW HAMPSHIRE, LLC",A. SMITH BOWMAN,VA,FREDERICKSBURG
+wild-turkey-distillery,Wild Turkey Distillery,,,curated+osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,KY-S-15014,CAMPARI AMERICA LLC,WILD TURKEY DISTILLERY,KY,LAWRENCEBURG
+four-roses-distillery,Four Roses Distillery,,,curated,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,KY-S-47,FOUR ROSES DISTILLERY LLC,,KY,LAWRENCEBURG
+bulleit-frontier-whiskey,Bulleit Frontier Whiskey,,,curated,unmatched,0,none,0,,,,71.4,review_name_candidate_70_84,VA-S-20163,RIVER CITY WHISKEY LLC,,VA,RICHMOND
+angel-s-envy-distillery,Angel's Envy Distillery,,,curated,unmatched,0,none,0,,,,69.6,no_name_candidate_below_70,CA-S-20077,LOS ANGELES DISTILLERY,,CA,CULVER CITY
+town-branch-distillery,Town Branch Distillery,,,curated,unmatched,0,none,0,,,,78.3,review_name_candidate_70_84,OR-S-20046,RED HILLS DISTILLERY LLC,Branch Point Distillery,OR,DAYTON
+stranahan-s-colorado-whiskey,Stranahan's Colorado Whiskey,,,curated+osm,unmatched,0,none,0,,,,67.9,no_name_candidate_below_70,TN-S-20083,"FOUR BLUE PALMS, LLC",Standard Proof Whiskey Co.,TN,NASHVILLE
+westland-distillery,Westland Distillery,,,curated+osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,WA-S-20170,THE WESTLAND DISTILLERY COMPANY LIMITED,Westland,WA,BURLINGTON
+balcones-distilling,Balcones Distilling,,,curated,unmatched,0,none,0,,,,86.5,high_name_candidate_85_94,KY-S-20093,"BALANCE DISTILLING COMPANY, LLC",,KY,SMITHS GROVE
+whistlepig-farm-distillery,WhistlePig Farm Distillery,,,curated,unmatched,0,none,0,,,,69.0,no_name_candidate_below_70,MT-S-15008,"WHISTLING ANDY, INC.","Whisting Andy, Inc.",MT,BIGFORK
+hudson-whiskey-tuthilltown,Hudson Whiskey (Tuthilltown),,,curated,unmatched,0,none,0,,,,71.4,review_name_candidate_70_84,PA-S-20195,"LAUREL HIGHLAND SPIRITS, LLC",Helltown Whiskey,PA,OAKDALE
+kings-county-distillery,Kings County Distillery,,,curated+osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,NY-S-15023,KINGS COUNTY DISTILLERY LLC,,NY,BROOKLYN
+garrison-brothers-distillery,Garrison Brothers Distillery,,,curated+osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,TX-S-15006,"LONE STAR DISTILLERY, LLC",GARRISON BROTHERS DISTILLERY,TX,HYE
+corsair-distillery,Corsair Distillery,,,curated+osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,TN-S-20110,CORSAIR ARTISAN LLC,Corsair Distillery,TN,ASHLAND CITY
+george-washington-s-distillery,George Washington's Distillery,,,curated+osm,unmatched,0,none,0,,,,75.0,review_name_candidate_70_84,WA-S-20061,"SPIRITS OF WASHINGTON, LLC",Sandstone Distillery,WA,TENINO
+leopold-bros,Leopold Bros,,,curated,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,CO-S-15012,"ANN ARBOR BREWING COMPANY, L.L.C.",LEOPOLD BROS.,CO,DENVER
+sagamore-spirit-distillery,Sagamore Spirit Distillery,,,curated,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,MD-S-20019,"SAGAMORE WHISKEY, LLC",Sagamore Spirit,MD,BALTIMORE
+catoctin-creek-distillery,Catoctin Creek Distillery,,,curated,unmatched,0,none,0,,,,75.0,review_name_candidate_70_84,OK-S-15005,CANE CREEK DISTILLERY INC,CANE CREEK DISTILLERY,OK,BOYNTON
+few-spirits,FEW Spirits,,,curated+osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,IL-S-15015,"FEW SPIRITS, LLC",,IL,EVANSTON
+woodinville-whiskey-co,Woodinville Whiskey Co,,,curated,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,WA-S-15045,"WOODINVILLE WHISKEY COMPANY, LLC",Woodinville Whiskey Co.,WA,WOODINVILLE
+eagle-cliffs-distillery,Eagle Cliffs Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,WA-S-15068,"KOEHLER ENTERPRISES, INC.",EAGLE CLIFFS DISTILLERY,WA,LONGVIEW
+bahamas-distilling-co,Bahamas Distilling Co.,"G7PV+FRW, 7 Oak St, Freeport, The Bahamas",,osm,unmatched,0,none,0,,,,81.8,review_name_candidate_70_84,WA-S-20248,DETA INVESTMENTS LLC,Base Camp Distilling Co.,WA,LEAVENWORTH
+sun-liquor-distillery,Sun Liquor Distillery,,,osm,unmatched,0,none,0,,,,83.3,review_name_candidate_70_84,WA-S-15047,"SUN LIQUOR MFG, INC.",SUN LIQUOR MFG,WA,KENMORE
+topo-distillery,TOPO Distillery,,,osm,unmatched,0,none,0,,,,85.7,high_name_candidate_85_94,NC-S-15014,TOP SPIRITS LLC,TOP OF THE HILL DISTILLERY,NC,CHAPEL HILL
+ye-old-grog-distillery,Ye Old Grog Distillery,,,osm,unmatched,0,none,0,,,,95.2,strong_name_candidate_95_plus,OR-S-15031,"YOGD, LLC",YE OL' GROG DISTILLERY,OR,SAINT HELENS
+long-table-distillery,Long Table Distillery,"1451 Hornby St, Vancouver, BC V6Z 1W8, Canada",,osm,unmatched,0,none,0,,,,70.0,review_name_candidate_70_84,OR-S-20019,"3 MILE, LLC",Table Rock Distillery,OR,EAGLE POINT
+spirit-works-distillery,Spirit Works Distillery,,,osm,unmatched,0,none,0,,,,90.9,high_name_candidate_85_94,GA-S-20135,SYMRISE INC.,bWorks,GA,COLUMBUS
+capital-k-distillery,Capital K Distillery,"1680 Dublin Ave Unit 3, Winnipeg, MB R3H 1A8, Canada",,osm,unmatched,0,none,0,,,,87.5,high_name_candidate_85_94,NY-S-20104,WINDHAM DISTILLERY LLC,Capital Distillery,NY,ALBANY
+north-of-7-distillery,North of 7 Distillery,"1733 St. Laurent Blvd, Ottawa, ON K1B 4S6, Canada",,osm,unmatched,0,none,0,,,,66.7,no_name_candidate_below_70,CO-S-20021,ROCKY RYE LLC,39 North Spirits,CO,EAGLE
+j-l-distilling,J&L Distilling,,,osm,unmatched,0,none,0,,,,88.9,high_name_candidate_85_94,WA-S-20163,JK DISTILLING LLC,Wohlfert Craft Distilling,WA,SNOHOMISH
+roots-and-wings-distillery,Roots and Wings Distillery,"7897 240 St, Langley Twp, BC V1M 3P9, Canada",,osm,unmatched,0,none,0,,,,68.8,no_name_candidate_below_70,CA-S-20283,BRAND HOUSE WINES & SPIRITS LLC,,CA,SANTA BARBARA
+the-new-york-distilling-company,The New York Distilling Company,,,osm,unmatched,0,none,0,,,,90.5,high_name_candidate_85_94,NY-S-15025,"NEW YORK DISTILLING COMPANY, LLC",NEW YORK DISTILLING,NY,BROOKLYN
+dirty-water-distillery,Dirty Water Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,MA-S-20004,"DIRTY WATER DISTILLERY, LLC",,MA,PLYMOUTH
+bowens-whiskey,Bowen’s Whiskey,,,osm,unmatched,0,none,0,,,,81.5,review_name_candidate_70_84,IN-S-20109,"IBWE WHISKEY COMPANY, LLC",Circle City Whiskey Company,IN,INDIANAPOLIS
+still-waters-distillery,Still Waters Distillery,"150 Bradwick Dr, Concord, ON L4K 4M7, Canada",,osm,unmatched,0,none,0,,,,90.9,high_name_candidate_85_94,CA-S-371,"SWEETWATER DISTILLERS, INC.",STILLWATER SPIRITS,CA,PETALUMA
+dark-island-spirits-distillery,Dark Island Spirits Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,NY-S-20012,DARK ISLAND SPIRITS INC.,Eleanor Glen Distillery,NY,ALEXANDRIA BAY
+deep-roots-distillery,Deep Roots Distillery,,,osm,unmatched,0,none,0,,,,83.3,review_name_candidate_70_84,MA-S-20057,"DEEP ROOTS DISTILLERY USA, LLC",Deep Roots Distillery USA,MA,FISKDALE
+dillon-s-small-batch-distillers,Dillon's Small Batch Distillers,"4833 Tufford Rd, Beamsville, ON L3J 1G7, Canada",,osm,unmatched,0,none,0,,,,69.1,no_name_candidate_below_70,TX-S-20062,"BLANCO VALLEY DISTILLERS, LLC",Andalusia Whiskey Co.,TX,BLANCO
+tommy-rotter-distellery,Tommy Rotter Distellery,,,osm,unmatched,0,none,0,,,,68.2,no_name_candidate_below_70,WA-S-15034,"RIVER TOWN DISTILLERS, LLC",,WA,SNOHOMISH
+old-still,Old Still,,,osm,unmatched,0,none,0,,,,87.5,high_name_candidate_85_94,MI-S-20009,"D'STILL, LLC",Motor City Gas,MI,ROYAL OAK
+murphy-s-law-distillery-ltd,Murphy's Law Distillery Ltd.,"90 Earl Martin Dr Unit 2, Elmira, ON N3B 3L4, Canada",,osm,unmatched,0,none,0,,,,56.2,no_name_candidate_below_70,WA-S-20192,RESZOLVE LLC,Maury Island Whiskey,WA,VASHON
+bulleit-distilling-co,Bulleit Distilling Co.,,,osm,unmatched,0,none,0,,,,85.0,high_name_candidate_85_94,TX-S-20035,BENDT DISTILLING LLC,Bendt Distilling Co.,TX,LEWISVILLE
+upstate-distilling,Upstate Distilling,,,osm,unmatched,0,none,0,,,,86.5,high_name_candidate_85_94,CO-S-20016,STATE 38 DISTILLING LLC,State 38 Distilling,CO,GOLDEN
+gillespie-s-fine-spirits,Gillespie's Fine Spirits,"38918 Progress Way #8, Squamish, BC V8B 0K7, Canada",,osm,unmatched,0,none,0,,,,60.6,no_name_candidate_below_70,CA-S-20490,"GIUSEPPE'S CUCINA, LLC",Giuseppe's Cucina,CA,PISMO BEACH
+ironworks-distillery,Ironworks Distillery,"2 Kempt St, Lunenburg, NS B0J 2C0, Canada",,osm,unmatched,0,none,0,,,,71.4,review_name_candidate_70_84,AL-S-20007,"IRONS DISTILLERY, LLC",,AL,HUNTSVILLE
+mt-defiance-cidery-distillery,Mt. Defiance Cidery & Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,VA-S-20152,"MOUNT DEFIANCE CIDERY & DISTILLERY, LLC",Mt. Defiance Cidery & Distillery,VA,LURAY
+distillerie-fils-du-roy-quebec,Distillerie Fils du Roy Québec,,,osm,unmatched,0,none,0,,,,62.7,no_name_candidate_below_70,NY-S-20266,DISTILLERIE DE STOLFO LLC,Distillerie de Stolfo,NY,VESTAL
+twin-spirits-distillery-m-coffee-shop,Twin Spirits Distillery,,,osm,unmatched,0,none,0,,,,66.7,no_name_candidate_below_70,OR-S-15023,"STEIN DISTILLERY, INC",,OR,JOSEPH
+cannon-beach-distillery,Cannon Beach Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,OR-S-20001,"CANNON BEACH DISTILLERY, LLC",,OR,CANNON BEACH
+lost-ark-distilling-company,Lost Ark Distilling Company,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,MD-S-20015,"LOST ARK DISTILLING COMPANY, LLC",Lost Ark Distilling Company,MD,COLUMBIA
+white-tiger-distillery,White Tiger Distillery,,,osm,unmatched,0,none,0,,,,76.2,review_name_candidate_70_84,WI-S-20077,"WHITE BEAR SPIRITS, LLC",SoLu Estate Winery,WI,CASCADE
+beach-time-distilling,Beach Time Distilling,,,osm,unmatched,0,none,0,,,,85.7,high_name_candidate_85_94,FL-S-20137,VERO BEACH DISTILLING LLC,Indian River Distillery,FL,VERO BEACH
+gold-river-distillery,Gold River Distillery,,,osm,unmatched,0,none,0,,,,73.7,review_name_candidate_70_84,NM-S-20027,"RED RIVER BREWING COMPANY, LLC",Red River Brewing Company,NM,RED RIVER
+authentic-seacoast-company,Authentic Seacoast Company,"75 Ferry Rd, Guysborough, NS B0H 1N0, Canada",,osm,unmatched,0,none,0,,,,61.9,no_name_candidate_below_70,WV-S-20027,THE AUTHENTIC HATFIELD & MCCOY FAMILIES DEVELOPMENT LLC,Authentic Hatfield & McCoy,WV,LOGAN
+compass-distillers,Compass Distillers,"2533 Agricola St, Halifax, NS B3K 4C4, Canada",,osm,unmatched,0,none,0,,,,81.1,review_name_candidate_70_84,NV-S-1,COMSTOCK DISTILLERS LLC,Comstock Distillers,NV,RENO
+steinhart-s-distillary,Steinhart's Distillary,"5963 NS-245, Antigonish, NS B2G 2L1, Canada",,osm,unmatched,0,none,0,,,,70.0,review_name_candidate_70_84,MI-S-20336,SHANKAR DISTILLERS INC.,,MI,TROY
+county-seat-spirits,County Seat Spirits,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,PA-S-20019,COUNTY SEAT SPIRITS LLC,,PA,ALLENTOWN
+dry-fly-distillery,Dry Fly Distillery,,,osm,unmatched,0,none,0,,,,62.5,no_name_candidate_below_70,MT-S-20012,DRY HILLS DISTILLERY LLC,Dry Hills Distillery,MT,BOZEMAN
+thrasher-s-rum,Thrasher's Rum,,,osm,unmatched,0,none,0,,,,62.1,no_name_candidate_below_70,OH-S-20076,"JACK'S TRANSFER, INC.",Crooked Finger Cocktails,OH,CUYAHOGA FALLS
+good-shepherd-distillery,Good Shepherd Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,NY-S-20194,GOOD SHEPHERD DISTILLERY LLC,Sound Shore Distillery,NY,MAMARONECK
+manatawny-still-works,Manatawny Still Works,,,osm,unmatched,0,none,0,,,,68.1,no_name_candidate_below_70,IN-S-20039,"DANNY BOY DISTILLING WORKS, LLC",Danny Boy Distilling Works,IN,CARMEL
+doc-water-s-cidery,Doc Water's Cidery,,,osm,unmatched,0,none,0,,,,66.7,no_name_candidate_below_70,IA-S-20044,"THE CIDER HOUSE, LLC",The Cider House,IA,FAIRFIELD
+loon-liquors,Loon Liquors,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,MN-S-20008,"LOON LIQUORS, LLC",Loon Liquors,MN,NORTHFIELD
+tenth-ward-distilling,Tenth Ward Distilling,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,MD-S-20018,"CARROLL CREEK WHISKEY, LLC",Tenth Ward Distilling Company,MD,FREDERICK
+eight-oaks-farm-distillery,Eight Oaks Farm Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,PA-S-20031,EIGHT OAKS CRAFT DISTILLERY COMPANY,Eight Oaks Farm Distillery,PA,NEW TRIPOLI
+noble-grape,Noble Grape,,,osm,unmatched,0,none,0,,,,66.7,no_name_candidate_below_70,TX-S-20320,"GARAGE OIL, LLC",Garage Oil Distillery,TX,ROCKDALE
+local-cider,Local Cider,,,osm,unmatched,0,none,0,,,,72.0,review_name_candidate_70_84,OR-S-20056,"FOX-TAIL CIDER, INC",,OR,HOOD RIVER
+la-chaufferie,La Chaufferie,,,osm,unmatched,0,none,0,,,,58.3,no_name_candidate_below_70,NH-S-20033,"NOBL COFFEE, LLC",,NH,SEABROOK
+jones-von-drehle-vineyards,Jones von Drehle Vineyards,,,osm,unmatched,0,none,0,,,,66.7,no_name_candidate_below_70,CA-S-15151,"TREFETHEN FAMILY WINERY, LLC",TREFETHEN VINEYARDS,CA,NAPA
+north-spirit-distillery-after-six-vodka,North Spirit Distillery/After Six Vodka,"2300 Finch Ave W Unit 44, North York, ON M9M 2Y3, Canada",,osm,unmatched,0,none,0,,,,60.5,no_name_candidate_below_70,CA-S-20441,ARIS VODKA CORPORATION,Aris Vodka Corporation,CA,FULLERTON
+bee-boyzz-honey,Bee Boyzz Honey,,,osm,unmatched,0,none,0,,,,66.7,no_name_candidate_below_70,WA-S-20214,"BEES N HONEY, LLC",Paddock,WA,PULLMAN
+central-standard-craft-distillery,Central Standard Craft Distillery,,,osm,unmatched,0,none,0,,,,84.2,review_name_candidate_70_84,WI-S-20010,CENTRAL STANDARD LLC,Central Standard LLC,WI,MILWAUKEE
+patent-5-spirits,Patent 5 Spirits,"108 Alexander Ave, Winnipeg, MB R3B 0L2, Canada",,osm,unmatched,0,none,0,,,,62.5,no_name_candidate_below_70,GA-S-20138,"ATHENTIC BREWING COMPANY, LLC",,GA,ATHENS
+junction-56-distillery,Junction 56 Distillery,"45 Cambria St, Stratford, ON N5A 1G8, Canada",,osm,unmatched,0,none,0,,,,90.9,high_name_candidate_85_94,TN-S-20077,"JUNCTION 35, LLC",Junction 35,TN,PIGEON FORGE
+elysian-desert-distilleries,Elysian Desert Distilleries,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,AZ-S-20029,ELYSIAN DESERT DISTILLERIES INC.,Carefree Spirits Distillery,AZ,CAREFREE
+cape-island-distillers,Cape & Island Distillers,,,osm,unmatched,0,none,0,,,,91.7,high_name_candidate_85_94,MA-S-20024,"CAPE AND ISLAND DISTILLERS, LLC",,MA,MASHPEE
+route-40-distilling-co,Route 40 Distilling Co.,,,osm,unmatched,0,none,0,,,,90.0,high_name_candidate_85_94,MD-S-20035,"TOASTED GOAT WINERY, LLC",Rout 40 Distilling Company,MD,FROSTBURG
+copper-spirit-distillery,Copper Spirit Distillery,"441 Bowen Island Trunk Rd, Bowen Island, BC V0N 1G0, Canada",,osm,unmatched,0,none,0,,,,75.0,review_name_candidate_70_84,KY-S-20004,COPPERHEAD DISTILLERY COMPANY,Kentucky Artisan Distillery,KY,CRESTWOOD
+la-barik,La Barik,,,osm,unmatched,0,none,0,,,,66.7,no_name_candidate_below_70,CO-S-20035,"VICTOR W. MATTHEWS, JR.",Black Bear Distillery,CO,GREEN MOUNTAIN FALLS
+distillerie-vent-du-nord,Distillerie Vent du Nord,"110-A Bd Comeau, Baie-Comeau, QC G4Z 3A9, Canada",,osm,unmatched,0,none,0,,,,69.8,no_name_candidate_below_70,NC-S-4,"PIEDMONT DISTILLERS, INC.",,NC,MADISON
+garden-state-distillery,Garden State Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,NJ-S-20049,GARDEN STATE DISTILLERY LLC,Garden State Distillery,NJ,BRICK
+heritage-distilling-company,Heritage Distilling Company,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,OR-S-20037,"HERITAGE DISTILLING COMPANY, INC.","Heritage Distilling Company, Inc.",OR,EUGENE
+sons-of-vancouver,Sons of Vancouver,"1431 Crown St, North Vancouver, BC V7J 1G4, Canada",,osm,unmatched,0,none,0,,,,56.2,no_name_candidate_below_70,WA-S-20014,VANCOUVER DISTILLERY WORKS LLC,,WA,VANCOUVER
+tofino-distillery,Tofino Distillery,"681 Industrial Way Unit G, Tofino, BC V0R 2Z0, Canada",,osm,unmatched,0,none,0,,,,66.7,no_name_candidate_below_70,NV-S-20023,"SALUTE SPIRITS, INC.",Ferino Distillery,NV,RENO
+yoga-pants-vodkas,Yoga Pants Vodkas,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,NY-S-20118,YOGA PANTS VODKAS LLC,,NY,BUFFALO
+distillerie-du-saint-laurent,Distillerie du Saint-Laurent,,,osm,unmatched,0,none,0,,,,66.7,no_name_candidate_below_70,NM-S-20012,CREATIVE SPIRITS DISTILLERY,Dry Point Distillers,NM,LAS CRUCES
+twin-valley-distillers,Twin Valley Distillers,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,MD-S-20005,CELICAR L.L.C.,Twin Valley Distillers,MD,ROCKVILLE
+etta-place-cider,Etta Place Cider,,,osm,unmatched,0,none,0,,,,62.1,no_name_candidate_below_70,MI-S-20220,COPPER KETTLE II LLC,Copper Kettle,MI,PRUDENVILLE
+whitefish-handcrafted-spirits,Whitefish Handcrafted Spirits,,,osm,unmatched,0,none,0,,,,64.9,no_name_candidate_below_70,PA-S-20164,ANDREW WHITEHEAD,A.R. Whitehead Distillery,PA,SUSQUEHANNA
+black-harbour-distillers-inc,Black Harbour Distillers Inc.,"419 NS-329, Hubbards, NS B0J 1T0, Canada",,osm,unmatched,0,none,0,,,,75.6,review_name_candidate_70_84,WI-S-15005,"YAHARA BAY DISTILLERS, INC.",Yahara Bay Distillers,WI,FITCHBURG
+tripp-distillery,Tripp Distillery,,,osm,unmatched,0,none,0,,,,71.4,review_name_candidate_70_84,CA-S-20149,"THE TRIPP DISTILLERY, LLC",,CA,PACIFICA
+boatskeg-distilling-co,Boatskeg Distilling Co,"23 Chem. du Pont du Marais, Lower West Pubnico, NS B0W 2C0, Canada",,osm,unmatched,0,none,0,,,,83.7,review_name_candidate_70_84,MI-S-20145,"BLAKE FARMS HARD APPLE CIDER, LLC",Blake's Distilling Co.,MI,ARMADA
+red-locks-irish-whiskey,Red Locks Irish Whiskey,,,osm,unmatched,0,none,0,,,,68.3,no_name_candidate_below_70,NY-S-20036,IRON SMOKE WHISKEY LLC,,NY,FAIRPORT
+niagara-distillery,Niagara Distillery,"4915-B Clifton Hill, Niagara Falls, ON L2G 3N5, Canada",,osm,unmatched,0,none,0,,,,70.0,review_name_candidate_70_84,NY-S-20063,NIAGARA CRAFT SPIRITS LLC,,NY,CAMBRIA
+true-north-distilleries,True North Distilleries,"680 Berwick Rd S #103, Qualicum Beach, BC V9K 1T3, Canada",,osm,unmatched,0,none,0,,,,77.8,review_name_candidate_70_84,ID-S-20011,"UP NORTH DISTILLERY, LLC",Up North Distillery,ID,POST FALLS
+distillerie-cap-aux-peches,Distillerie Cap-aux-Péchés,"396 Rue Principale E, Rivière-à-Claude, QC G0E 1Z0, Canada",,osm,unmatched,0,none,0,,,,74.5,review_name_candidate_70_84,LA-S-20012,"DISTILLERIE ACADIAN, L.L.C.",,LA,NEW IBERIA
+1832-distilling,1832 Distilling,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,MO-S-20032,V AND L HOLDINGS LLC,1832 Distilling,MO,CONCORDIA
+cherry-river-distillerie,Cherry River Distillerie,"120 Rue des Pins, Magog, QC J1X 1W7, Canada",,osm,unmatched,0,none,0,,,,75.6,review_name_candidate_70_84,CT-S-20035,DEEP RIVER DISTILLERS LLC,,CT,DEEP RIVER
+deep-blue-distilleries,Deep Blue Distilleries,"5800 Cedarbridge Way #130, Richmond, BC V6X 2A7, Canada",,osm,unmatched,0,none,0,,,,73.7,review_name_candidate_70_84,GA-S-20117,BLUE RIDGE DISTILLERY INC.,Blue Ridge Distillery,GA,BLUE RIDGE
+dubh-glas-distillery,Dubh Glas Distillery,"8486 Gallagher Lake, Frontage Road, Oliver, BC V0H 1T2, Canada",,osm,unmatched,0,none,0,,,,66.7,no_name_candidate_below_70,UT-S-20021,DUGALA DISTILLERY LLC,Eight Settlers,UT,COTTONWOOD HEIGHTS
+cidrerie-pomeloi,Cidrerie Poméloi,"33 chemin du P'tit Bois Nord, Iles-de-la-Madeleine Bassin, Communauté maritime des Îles-de-la-Madeleine, QC G4T 0H1, Canada",,osm,unmatched,0,none,0,,,,61.5,no_name_candidate_below_70,MT-S-20019,"LOLO CREEK DISTILLERY, LLC",LOLO CREEK DISTILLERY,MT,LOLO
+elora-distilling-company,Elora Distilling Company,"102 Metcalfe St Unit 4, Elora, ON N0B 1S0, Canada",,osm,unmatched,0,none,0,,,,87.5,high_name_candidate_85_94,CO-S-20001,LOCAL DISTILLING INC,Clean Man Products,CO,GOLDEN
+the-doing-time-distillery,The Doing Time Distillery,,,osm,unmatched,0,none,0,,,,83.3,review_name_candidate_70_84,PA-S-20225,"DOING TIME, LLC",Doing Time,PA,CLEARFIELD
+bomberger-s-distillery,Bomberger's Distillery,,,wikidata,unmatched,0,none,0,,,,69.6,no_name_candidate_below_70,GA-S-20035,"GREEN BOMBER, LLC",Green Bomber,GA,CARTERSVILLE
+mount-rose-distillery,Mount Rose Distillery,,,wikidata,unmatched,0,none,0,,,,70.0,review_name_candidate_70_84,KY-S-47,FOUR ROSES DISTILLERY LLC,,KY,LAWRENCEBURG
+ironton-distillery-and-crafthouse,Ironton Distillery and Crafthouse,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,CO-S-20073,"BASECAMP CONCEPTS, LLC",Ironton Distillery and Crafthouse,CO,LOUISVILLE
+lakeward-spirits-craft-distillery,Lakeward Spirits Craft Distillery,,,osm,unmatched,0,none,0,,,,69.2,no_name_candidate_below_70,CA-S-20242,"KROBAR CRAFT DISTILLERY, LLC",Krobar Craft Distillery,CA,SAN LUIS OBISPO
+murlarkey-distilled-spirits,MurLarkey Distilled Spirits,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,VA-S-20014,"MURLARKEY DISTILLED SPIRITS, LLC",MurLarkey's,VA,MANASSAS
+independent-distilling-company,Independent Distilling Company,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,GA-S-20006,"INDEPENDENT DISTILLING COMPANY, LLC",,GA,DECATUR
+oligan-distilling,Oligan Distilling,,,osm,unmatched,0,none,0,,,,86.7,high_name_candidate_85_94,IA-S-20060,OG DISTILLING LLC,,IA,CARROLL
+rise-spirits,Rise Spirits,,,osm,unmatched,0,none,0,,,,75.0,review_name_candidate_70_84,OH-S-20003,ERIE SPIRITS INC.,,OH,STRONGSVILLE
+dayton-barrel-works,Dayton Barrel Works,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,OH-S-20091,"THE DAYTON BEER COMPANY, LLC",Dayton Barrel Works,OH,DAYTON
+astraluna-brands,AstraLuna Brands,,,osm,unmatched,0,none,0,,,,72.0,review_name_candidate_70_84,MA-S-20011,"ASTRALUNA, LLC",,MA,MEDFIELD
+bourbon-30,Bourbon 30,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,KY-S-20053,BOURBON 30 SPIRITS LLC,J. Mattingly 1845,KY,FRANKFORT
+raff-distilerie,Raff Distilerie,,,osm,unmatched,0,none,0,,,,70.6,review_name_candidate_70_84,KY-S-20015,"NEW RIFF DISTILLING, LLC.",,KY,NEWPORT
+four-roses-cox-s-creek-distillery,Four Roses Cox's Creek Distillery,,,osm,unmatched,0,none,0,,,,62.5,no_name_candidate_below_70,KY-S-47,FOUR ROSES DISTILLERY LLC,,KY,LAWRENCEBURG
+nola-distillery,NOLA Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,LA-S-20030,HS BEVERAGE INC.,NOLA-Distillery,LA,NEW ORLEANS
+du-nord-craft-spirits,Du Nord Craft Spirits,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,MN-S-20010,DU NORD CRAFT SPIRITS LLC,Du Nord Social Spirits,MN,MINNEAPOLIS
+sugar-hill-distillery,Sugar Hill Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,GA-S-20051,SUGAR HILL DISTILLERY LLC,,GA,SUGAR HILL
+west-fork-whiskey-co,West Fork Whiskey Co.,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,IN-S-20028,WEST FORK WHISKEY CO.,West Fork Whiskey Co.,IN,INDIANAPOLIS
+the-distillery-high-ridge-spirits,The Distillery High Ridge Spirits,,,osm,unmatched,0,none,0,,,,83.3,review_name_candidate_70_84,AL-S-20001,"HIGH RIDGE SPIRITS, LLC.",High Ridge Spirits LLC,AL,FLORENCE
+riverhead-ciderhouse,Riverhead Ciderhouse,,,osm,unmatched,0,none,0,,,,74.3,review_name_candidate_70_84,IA-S-20044,"THE CIDER HOUSE, LLC",The Cider House,IA,FAIRFIELD
+anvil-distillery,Anvil Distillery,,,osm,unmatched,0,none,0,,,,72.7,review_name_candidate_70_84,PA-S-20256,"MUTUAL RESPECT BREWING AND DISTILLING, INC.",SPIRIT ANIMAL SPIRITS,PA,BENSALEM
+nashville-craft-distilery,Nashville Craft Distilery,,,osm,unmatched,0,none,0,,,,70.6,review_name_candidate_70_84,OK-S-20028,"QUAD T, LLC",CopperHead Hill Distilerry,OK,CADDO
+dark-door-spirits,Dark Door Spirits,,,osm,unmatched,0,none,0,,,,73.7,review_name_candidate_70_84,MI-S-20207,"ROAK BREWING CO., LLC",Dark Horse Brewing Company,MI,MARSHALL
+four-fights-distilling,Four Fights Distilling,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,NY-S-20062,FOUR FIGHTS DISTILLING LLC,Four Fights Distilling,NY,ROCHESTER
+lockhouse-distillery,Lockhouse Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,NY-S-20013,EIGHT BUFFALO SPIRITS LLC,Lockhouse Distillery,NY,BUFFALO
+dalton-distillery,Dalton Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,GA-S-20005,"DALTON DISTILLERS, LLC","Dalton Distillery, LLC",GA,DALTON
+yardley-distillery-production-site,Yardley Distillery Production Site,,,osm,unmatched,0,none,0,,,,63.2,no_name_candidate_below_70,PA-S-20199,YARDLEY LOBSTER LLC,Yardley Distillery,PA,YARDLEY
+honeoye-falls-distillery,Honeoye Falls Distillery,,,osm,unmatched,0,none,0,,,,60.9,no_name_candidate_below_70,ID-S-20021,"TWIN FALLS DISTILLERY, LLC.",Twin Falls Distillery,ID,TWIN FALLS
+old-fourth-distillery,Old Fourth Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,GA-S-20004,"OLD FOURTH DISTILLERY, LTD. CO.",Old Fourth Distillery,GA,ATLANTA
+omega-gin-company,Omega Gin Company,,,osm,unmatched,0,none,0,,,,70.0,review_name_candidate_70_84,OR-S-20077,"GOMPERS GIN, LLC",Gompers Distillery,OR,REDMOND
+graybeard-distillery,Graybeard Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,NC-S-20054,"GRAYBEARD DISTILLERY, INC.",,NC,DURHAM
+local-goat-distillery,Local Goat Distillery,,,osm,unmatched,0,none,0,,,,63.6,no_name_candidate_below_70,MD-S-20035,"TOASTED GOAT WINERY, LLC",Rout 40 Distilling Company,MD,FROSTBURG
+rlb-distillery-co,RLB Distillery Co.,,,osm,unmatched,0,none,0,,,,66.7,no_name_candidate_below_70,CA-S-20218,"SLO BREWING CO, LLC",SLO Stills,CA,SAN LUIS OBISPO
+bud-light,Bud Light,,,osm,unmatched,0,none,0,,,,66.7,no_name_candidate_below_70,TN-S-20134,"MLD GROUP, LLC",Flight Spirits,TN,HENDERSONVILLE
+caledonia-spirits-inc,Caledonia Spirits Inc.,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,VT-S-20030,"CALEDONIA SPIRITS, INC.",Caledonia Spirits,VT,MONTPELIER
+urbana-hill-distilling,Urbana Hill Distilling,,,osm,unmatched,0,none,0,,,,81.8,review_name_candidate_70_84,LA-S-20048,"LOUISIANA ROOTS, L.L.C.",Urban South Distilling,LA,NEW ORLEANS
+lux-row-distillers,Lux Row Distillers,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,KY-S-20106,"LUXCO, INC.",Lux Row Distillers,KY,BARDSTOWN
+bluegrass-distillers,Bluegrass Distillers,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,KY-S-20006,"BLUEGRASS DISTILLERS, LLC",Bluegrass Distillers,KY,MIDWAY
+wild-roots-x-wyld-cbd,Wild Roots x Wyld CBD,,,osm,unmatched,0,none,0,,,,60.0,no_name_candidate_below_70,ME-S-20036,ROOT WILD LLC,,ME,PORTLAND
+moonshine-ridge,Moonshine Ridge,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,TX-S-20074,"MOONSHINE RIDGE, INC.",,TX,JOHNSON CITY
+seven-troughs-distilling-co,Seven Troughs Distilling Co.,,,osm,unmatched,0,none,0,,,,77.6,review_name_candidate_70_84,LA-S-20052,"SEVEN THREE DISTILLING COMPANY, LLC",Seven Three Distilling Company,LA,NEW ORLEANS
+rock-solid-distillery,Rock Solid Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,GA-S-20042,"MILLER B. TWIST PRODUCTIONS, LLC",Rock Solid Distillery,GA,WINDER
+crooked-tail-distilery,Crooked Tail Distilery,,,osm,unmatched,0,none,0,,,,79.2,review_name_candidate_70_84,KY-S-20040,"CROOKED TAIL DISTILLING CO., LLC",,KY,PRINCETON
+striped-lion-distilling,Striped Lion Distilling,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,NJ-S-20035,"STRIPED LION DISTILLING, LLC",,NJ,WEST DEPTFORD
+bismarck-brewing,Bismarck Brewing,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,ND-S-20008,BISMARCK DISTILLERY LLC,Bismarck Distillery,ND,LINCOLN
+springbrook-hollow-farm-distillery,Springbrook Hollow Farm Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,NY-S-20022,"SPRINGBROOK HOLLOW FARM DISTILLERY, LLC",Springbrook Hollow Farm Distillery,NY,FORT ANN
+carmichael-brother-s-distillery,Carmichael Brother's Distillery,,,osm,unmatched,0,none,0,,,,68.4,no_name_candidate_below_70,NC-S-20192,CHURCHILL BROTHERS BREWING LLC,RudeDog Distillery & Churchill Brothers Brewing,NC,MOORESVILLE
+fierce-whiskers-distillery,Fierce Whiskers Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,TX-S-20183,"FIERCE WHISKERS DISTILLERY, LLC",,TX,AUSTIN
+new-richmond-distilleries,New Richmond Distilleries,,,osm,unmatched,0,none,0,,,,66.7,no_name_candidate_below_70,MI-S-20314,"UNION ESTATES, LLC",New Union Distillery,MI,LOWELL
+mayberry-spirits-distillery,Mayberry Spirits Distillery,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,NC-S-20007,STEVEN COX,Mayberry Distillery,NC,MOUNT AIRY
+salty-stash,Salty Stash,,,osm,unmatched,0,none,0,,,,100.0,strong_name_candidate_95_plus,VA-S-20086,SALTY STASH DISTILLERY LLC,,VA,ALLISONIA
+fernweh-distilling-co,Fernweh Distilling Co.,,,osm,unmatched,0,none,0,,,,92.3,high_name_candidate_85_94,MO-S-20037,"WEISS HOLDINGS, LLC",Fernweh Distilling Company,MO,HERMANN
+whiskey-hollow-distillery,Whiskey Hollow Distillery,,,osm,unmatched,0,none,0,,,,86.7,high_name_candidate_85_94,PA-S-20195,"LAUREL HIGHLAND SPIRITS, LLC",Helltown Whiskey,PA,OAKDALE

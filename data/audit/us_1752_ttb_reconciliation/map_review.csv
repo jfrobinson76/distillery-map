@@ -1,0 +1,123 @@
+slug,name,address,state,source,bucket,score,method,address_overlap,permit_number,permit_owner,permit_dba
+backdrop-distilling,BackDrop Distilling,"70 SW Century Dr #100, Bend, OR 97702, USA",OR,osm,review,72.2,name,0.0,OR-S-20054,COBURG DISTILLING COMPANY LLC,Coburg Distilling Company LLC
+tattersall-distilling,Tattersall Distilling,"1325 Quincy St NE Suite 100, Minneapolis, MN 55413, USA",MN,osm,review,71.8,name,0.125,MN-S-20018,LAWLESS DISTILLING COMPANY L.L.C.,Lawless Distilling Company
+tower-56-distilling,Tower 56 Distilling,"825 9th St unit b, Greeley, CO 80631, USA",CO,osm,review,75.7,name,0.0,CO-S-20171,"SHELTER DISTILLING, INC.",Shelter Distilling
+five-saints-distilling,Five Saints Distilling,"129 E Main St, Norristown, PA 19401, USA",PA,osm,review,73.7,name,0.0,PA-S-20320,ETHOS DISTILLING COMPANY LLC,Ethos Distilling
+barrel-house-distillery,Barrel House Distillery,"1228 Manchester St UNIT 100, Lexington, KY 40504, USA",KY,osm+wikidata,review,75.9,name,0.143,KY-S-20175,"LOUISVILLE BARREL COMPANY, LLC",Louisville Rickhouse
+breuckelen-distilling,Breuckelen Distilling,"77 19th St, Brooklyn, NY 11232, USA",NY,osm,review,76.4,name,0.333,NY-S-15028,BREUCKELEN DISTILLING COMPANY INCORPORATED,
+woodsmen-distilling,Woodsmen Distilling,"9603 State Hwy B, Higbee, MO 65257, USA",MO,osm,review,72.2,name,0.0,MO-S-20001,"STRONG SPIRITS DISTILLING, INC.",S.D. Strong Distilling
+hood-river-distillers-tasting-room,Hood River Distillers Tasting Room,"304 Oak St Suite #3, Hood River, OR 97031, USA",OR,osm,review,76.4,name,0.0,OR-S-20053,"HOOD RIVER DISTILLERS, INC.",
+courthouse-distillery,Courthouse Distillery,"1114 State St, Santa Barbara, CA 93101, USA",CA,osm,review,70.0,name,0.143,CA-S-20201,"HIGHWAY 101 SPIRITS, INC.",Storyhouse Spirits
+manitou-and-co-distilling,Manitou and Co Distilling,"203 W River St, Leland, MI 49654, USA",MI,osm,review,72.0,name,0.143,MI-S-20108,ATLAS DISTILLING COMPANY LLC,ALÉVRI MILL DISTILLING CO.
+jayne-st-distilling-co,Jayne St Distilling Co,"41 Jayne St, Florida, NY 10921, USA",NY,osm,review,80.0,name,0.167,NY-S-20167,"GILDED BUFFALO, LLC",Hartman's Distilling Co.
+suti-craft-distillery,SuTi Craft Distillery,"528 W Kennedale Pkwy, Kennedale, TX 76060, USA",TX,osm,review,76.2,name,0.0,TX-S-20279,STEAM CRAFT SPIRITS LLC,
+open-road-distilling-co,Open Road Distilling Co.,"1871 Fountain Dr, Reston, VA 20190, USA",VA,osm,review,72.3,name,0.0,VA-S-20153,"MOTHERWELL DISTILLING CO, LLC",Motherwell Distilling Co
+simplicity-spirits-co,Simplicity Spirits Co.,"335 W 1830 S C, Salt Lake City, UT 84115, USA",UT,osm,review,78.8,name,0.2,UT-S-20025,CRAFTED WORLD BEVERAGES LLC,Simplicity Cocktails
+maine-craft-distilling,Maine Craft Distilling,"148 Anderson St, Portland, ME 04101, USA",ME,osm,review,75.7,name,0.0,ME-S-20014,"PINE DISTILLING, LLC",
+j-rieger-co,J. Rieger & Co.,"2700 Guinotte Ave, Kansas City, MO 64120, USA",MO,osm,review,78.3,name,0.429,MO-S-20016,"JACOB RIEGER & COMPANY, LLC",Jacob Rieger & Company
+aerodrome-distilling,Aerodrome Distilling,"401 Aviation Dr, Corpus Christi, TX 78418, USA",TX,osm,review,80.0,name,0.0,TX-S-20051,"ACRE DISTILLING COMPANY, LLC",The Acre Distilling Co.
+spirits-of-st-louis-distillery,Spirits of St. Louis Distillery,"1727 Park Ave, St. Louis, MO 63104, USA",MO,osm,review,84.2,name,0.143,MO-S-15012,"ST. LOUIS DISTILLERY, LLC",ST. LOUIS DISTILLERY
+big-machine-distillery-tavern,Big Machine Distillery & Tavern,"2824 Bransford Ave, Nashville, TN 37204, USA",TN,osm,review,75.9,name,0.0,TN-S-20003,TENN SOUTH DISTILLERY LLC,Big Machine Distillery
+green-river-distilling-co,Green River Distilling Co.,"10 Distillery Rd, Owensboro, KY 42301, USA",KY,osm,review,74.4,name,0.0,KY-S-20073,"COAST 2 COAST CATTLE & LAND COMPANY, LLC",Pensive Distilling Company
+vermont-spirits,Vermont Spirits,"5573 Woodstock Rd, White River Junction, VT 05001, USA",VT,osm,review,82.4,name,0.0,VT-S-20024,VERMONTSKI SPIRITS LLC,
+american-distilling,American Distilling,"31 E High St, East Hampton, CT 06424, USA",CT,osm,review,70.0,name,0.125,CT-S-20038,"CLARK BROTHERS DISTILLERY, LLC",Clark Bros Distilling
+high-mark-distillery-high-mark-barrel-house,High Mark Distillery /High Mark Barrel House,"4690 Longley Ln # 28, Reno, NV 89502, USA",NV,osm,review,81.5,name,0.429,NV-S-20025,"HIGH MARK DISTILLERY, INC.",High Mark Barrel House
+caudill-bros-distillery,Caudill Bros Distillery,"125 W Motor Ave, Port Angeles, WA 98362, USA",WA,osm,review,73.7,name,0.375,WA-S-20109,MICHAEL R. CAUDILL,Caudill Distillery
+hemingway-distillery,Hemingway Distillery,"201 Simonton St, Key West, FL 33040, USA",FL,google-places,review,81.8,name,0.0,FL-S-20057,"HEMINGWAY RUM COMPANY, LLC",Hemingway Signature Spirits Collection
+maws-mountain-moonshine-kissimmee,Maws Mountain Moonshine - Kissimmee,"5770 W Irlo Bronson Memorial Hwy #400, Kissimmee, FL 34746, USA",FL,google-places,review,77.2,name,0.0,FL-S-20139,"MAW'S MOUNTAIN MOONSHINE, LLC",Maw's Mountain Moonshine
+devils-river-whiskey-distillery,Devils River Whiskey Distillery,"401 E Houston St, San Antonio, TX 78205, USA",TX,google-places,review,75.0,name,0.0,TX-S-20161,"DEVILS RIVER DISTILLERY, LLC",
+goldsliquorsdistillery,Gold’sLiquorsDistillery,"720 Wesley Ave, Tarpon Springs, FL 34689, USA",FL,google-places,review,70.3,name,0.429,FL-S-20183,GOLD'S LIQUORS LLC,Gold's Liquors
+rockpit-brewing-distilling,RockPit Brewing & Distilling,"10 W Illiana St, Orlando, FL 32806, USA",FL,google-places,review,75.0,name,0.143,FL-S-20006,"WINTER PARK DISTILLING COMPANY, LLC",
+the-brow-distillery,The Brow Distillery,"204 Crystal Grove Blvd, Lutz, FL 33548, USA",FL,google-places,review,73.7,name,0.0,FL-S-20133,"BREW THEORY, LLC",Florida Craft Brewery
+schitz-creek-distillery-brewery,Schitz Creek Distillery & Brewery,"101 Co Rd 257 Suite B, Liberty Hill, TX 78642, USA",TX,google-places,review,75.0,name,0.222,TX-S-20131,"D R MAREK, LLC",Schitz Creek Distillery
+hush-and-whisper-distillery-co,Hush and Whisper Distillery Co.,"219 N Main St, Bryan, TX 77803, USA",TX,google-places,review,77.4,name,0.429,TX-S-20146,"HUSH & WHISPER, LLC",
+wildcat-brothers-distilling-at-gator-cove,Wildcat Brothers Distilling at Gator Cove,"Gator Cove, 2601 SE Evangeline Thruway, Lafayette, LA 70508, USA",LA,google-places,review,79.4,name,0.333,LA-S-15004,"RANK WILDCAT SPIRITS, LLC",Wildcat Brothers Distilling
+old-alker-distillery,Old Alker Distillery,"8304 Oak St, New Orleans, LA 70118, USA",LA,google-places,review,81.8,name,0.429,LA-S-20056,"THE OLD ALKER DISTILLERY, LLC",
+burlock-and-barrel-distillery,Burlock and Barrel Distillery,"476 May St, Jacksonville, FL 32204, USA",FL,google-places,review,74.3,name,0.167,FL-S-20211,HIGH CASK DISTILLERY LLC,Marlin and Barrel Distillery
+sound-of-spirits-craft-distillery,Sound of Spirits Craft Distillery,"278 Talleyrand Ave, Jacksonville, FL 32202, USA",FL,google-places,review,76.9,name,0.167,FL-S-20208,"ORMOND CRAFT SPIRITS, LLC",Ormond Craft Spirits
+old-savannah-distillery,Old Savannah Distillery,"245 Montgomery St, Savannah, GA 31401, USA",GA,google-places,review,75.0,name,0.167,GA-S-20074,"ABW SAVANNAH, LLC",
+old-pueblo-distilling-company,Old Pueblo Distilling Company,"3810 E 44th St Suit 307, Tucson, AZ 85713, USA",AZ,google-places,review,72.2,name,0.111,AZ-S-20020,YLEM DISTILLING LLC,
+little-toad-creek-brewery-distillery,Little Toad Creek Brewery & Distillery,"200 N Bullard St, Silver City, NM 88061, USA",NM,google-places,review,81.0,name,0.0,NM-S-20001,LITTLE TOAD CREEK LLC,Little Toad Creek Distillery
+the-distillery-cloudcroft-brewing-co,The Distillery @ Cloudcroft Brewing Co.,"1303 Burro Ave, Cloudcroft, NM 88317, USA",NM,google-places,review,74.1,name,0.333,NM-S-20047,"JIM-N-I, LLC",Cloudcroft Brewing Company
+the-speakeasy-distillery,The Speakeasy Distillery,"614 7th St, Wichita Falls, TX 76301, USA",TX,google-places,review,81.8,name,0.429,TX-S-20215,HLCC VENTURES LLC,SPEAKEASY DISTILLERY
+lockwood-distilling-company-mckinney,Lockwood Distilling Company - McKinney,"205 W Louisiana St, McKinney, TX 75069, USA",TX,google-places,review,80.9,name,0.0,TX-S-20159,"LOCKWOOD DISTILLING COMPANY, LLC",
+dowling-distilling,Dowling Distilling,"126 S Main Dr, Van Alstyne, TX 75495, USA",TX,google-places,review,80.0,name,0.125,TX-S-20015,DORCOL DISTILLING COMPANY,
+otter-creek-farmstead-and-distillery,Otter Creek Farmstead and Distillery,"3165 6 Foot Rd, Ohatchee, AL 36271, USA",AL,google-places,review,74.4,name,0.143,AL-S-20024,"LOG CREEK DISTILLERY AND FARM, LLC",
+old-fourth-distillery-kitchen,Old Fourth Distillery + Kitchen,"6000 N Terminal Pkwy Concourse E Space EN-16, Atlanta, GA 30320, USA",GA,google-places,review,71.4,name,0.0,GA-S-20004,"OLD FOURTH DISTILLERY, LTD. CO.",Old Fourth Distillery
+the-lost-druid-brewery-distillery,The Lost Druid Brewery & Distillery,"2866 Washington St, Avondale Estates, GA 30002, USA",GA,google-places,review,77.8,name,0.143,GA-S-20107,THE LOST DRUID LLC,
+mutation-brewing-and-distilling-company,Mutation Brewing and Distilling Company,"5825 Roswell Rd NE, Sandy Springs, GA 30328, USA",GA,google-places,review,72.3,name,0.0,GA-S-20147,EBONY AND OAK DISTILLING LLC,
+stark-spirits-craft-distillery,Stark Spirits Craft Distillery,"1260 Lincoln Ave #1100, Pasadena, CA 91103, USA",CA,google-places,review,70.0,name,0.0,CA-S-20495,DAO CRAFT DISTILLERY LLC,Dao Distillery
+stubborn-mule-distilling,Stubborn Mule Distilling,"1836 Co Rd 2117, Gainesville, TX 76240, USA",TX,google-places,review,80.0,name,0.429,TX-S-20240,STUBBORN MULE DISTILLING CORPORATION,Stubborn Mule Distilling Corporation
+six-twenty-distillery,Six & Twenty Distillery,"556 Perry Ave B103, Greenville, SC 29611, USA",SC,google-places,review,83.3,name,0.0,SC-S-15006,"SIX AND TWENTY DISTILLERY, LLC",
+grain-vine-craft-distillery,Grain + Vine Craft Distillery,"2174 CA-46, Paso Robles, CA 93446, USA",CA,google-places,review,80.0,name,0.333,CA-S-20410,"GREY WOLF VINEYARDS & CELLARS, INC.",Grain and Vine
+tumbleroot-brewing-and-distilling,Tumbleroot Brewing and Distilling,"32 Bisbee Ct #3-4, Santa Fe, NM 87507, USA",NM,google-places,review,73.9,name,0.0,NM-S-20033,WANTED BREWING COMPANY LLC,Wanted Brewing and Distilling Company
+grandaddy-mimm-s-distilling-co-the-garage,"Grandaddy Mimm's Distilling Co. ""The Garage""","415 Hwy 53 Suite 130, Dawsonville, GA 30534, USA",GA,google-places,review,84.5,name,0.0,GA-S-20012,"GRANDADDY MIMMS, LLC",Grandaddy Mimm's Distilling Co.
+seven-jars-winery-and-distillery,Seven Jars Winery and Distillery,"6148-B Brookshire Blvd, Charlotte, NC 28216, USA",NC,google-places,review,83.3,name,0.429,NC-S-20030,"SEVEN JARS DISTILLERY, LLC",
+missouri-ridge-distillery-brewery,Missouri Ridge Distillery & Brewery,"7000 State Hwy 248, Branson, MO 65616, USA",MO,google-places,review,77.8,name,0.429,MO-S-20028,MISSOURI RIDGE DISTILLERY LLC,Missouri Ridge Distillery
+tennessee-legend-distillery-newport-hwy,Tennessee Legend Distillery - Newport Hwy,"2874 Newport Hwy, Sevierville, TN 37876, USA",TN,google-places,review,72.7,name,0.0,TN-S-20084,CRYSTAL FALLS SPIRITS GP,Tennessee Legend Distillery
+tennessee-hills-distillery-bristol,Tennessee Hills Distillery - Bristol,"90 Tennessee Hills Wy, Bristol, TN 37620, USA",TN,google-places,review,78.9,name,0.0,TN-S-20023,"TENNESSEE HILLS DISTILLERY, LLC",Tennessee Hills Distillery
+mystic-farm-distilling-company,Mystic Farm & Distilling Company,"1413 Stallings Rd, Durham, NC 27703, USA",NC,google-places,review,77.8,name,0.0,NC-S-20123,"M & T DISTILLING, LLC",
+weldon-mills-distillery-durham,Weldon Mills Distillery Durham,"300 E Main St suite 001, Durham, NC 27701, USA",NC,google-places,review,77.4,name,0.0,NC-S-20086,"WELDON MILLS DISTILLERY, LLC",Weldon Mills Distillery
+ocoee-river-distilling,Ocoee River Distilling,"307 Main St, Ducktown, TN 37326, USA",TN,google-places,review,76.2,name,0.0,TN-S-20020,"BIG RIVER DISTILLING COMPANY, LLC",Big River Distilling Company
+mossback-distilling-co,Mossback Distilling Co.,"115 W Old Andrew Johnson Hwy, Jefferson City, TN 37760, USA",TN,google-places,review,76.9,name,0.0,TN-S-20107,"HDS DISTILLING CO., LLC",Heavens Door Spirits
+ironclad-distillery-co,Ironclad Distillery Co.,"124 23rd St, Newport News, VA 23607, USA",VA,google-places,review,84.2,name,0.429,VA-S-20022,"IRONCLAD DISTILLERY, INC",Ironclad Distillery
+brucato-l-restaurant-and-distillery,Brucato l Restaurant and Distillery,"275 S Van Ness Ave, San Francisco, CA 94103, USA",CA,google-places,review,72.7,name,0.111,CA-S-20452,INGRID CHAVARRIA,La Casita Restaurant
+pinckney-bend-distillery,Pinckney Bend Distillery,"1101 Miller St, New Haven, MO 63068, USA",MO,google-places,review,70.3,name,0.429,MO-S-15013,ARTISAN SPIRITS LLC,PINCKNEY BEND DISTILLING COMPANY
+old-monroe-distilling-co-formerly-stumpys-spirits,Old Monroe Distilling Co. (Formerly Stumpy’s Spirits),"8787 Rickhouse Rd, Columbia, IL 62236, USA",IL,google-places,review,72.7,name,0.167,IL-S-20020,STUMPY'S SPIRITS CO.,Old Monroe Distilling Co.
+alpha-brewing-co-distillery,Alpha Brewing Co & Distillery,"4310 Fyler Ave, St. Louis, MO 63116, USA",MO,google-places,review,76.9,name,0.0,MO-S-20108,ABC DISTILLERY LLC,Alpha Brewing Company Distillery
+brewing-distilling-center,Brewing & Distilling Center,"130 Bearden Pl, Knoxville, TN 37917, USA",TN,google-places,review,75.0,name,0.0,TN-S-20094,"DK BUSINESS VENTURES, LLC",Adventure Distilling Co.
+napa-valley-distillery-oxbow,Napa Valley Distillery | Oxbow,"610 1st St, Napa, CA 94559, USA",CA,google-places,review,78.6,name,0.167,CA-S-15085,"NAPA VALLEY LIMONCELLO COMPANY, LLC",NAPA VALLEY DISTILLERY
+colorado-mountain-distillers,Colorado Mountain Distillers,"611 Canon St, Guffey, CO 80820, USA",CO,google-places,review,73.1,name,0.0,CO-S-20048,MOBB MOUNTAIN DISTILLERS LTD,Mobb Mountain Distillers
+art-of-the-spirits-distillery,Art of the Spirits Distillery,"3372 Adobe Ct Suite 110, Colorado Springs, CO 80907, USA",CO,google-places,review,73.7,name,0.0,CO-S-20088,"THE HEART DISTILLERY, LLC",The Heart Distillery
+heaven-hill-springs-distillery,Heaven Hill Springs Distillery,"1015 Old Bloomfield Pike, Bardstown, KY 40004, USA",KY,google-places,review,73.3,name,0.0,KY-S-779,"HEAVEN HILL DISTILLERIES, INC.",
+regeneration-distilling-co,Regeneration Distilling Co.,"31 E Broadway St, Winchester, KY 40391, USA",KY,google-places,review,73.9,name,0.143,KY-S-20158,"HENDERSON DISTILLING COMPANY, LLC",
+river-hill-distillery,River Hill Distillery,"356 Ruffners Ferry Rd, Luray, VA 22835, USA",VA,google-places,review,70.0,name,0.0,VA-S-20127,"RIVER CITY DISTILLERY, LLC",River City Distillery
+clark-co-s-distilling,Clark & Co's Distilling,"3926 US-6, Palisade, CO 81526, USA",CO,google-places,review,75.0,name,0.0,CO-S-20190,JAMES DISTILLING CO LLC,James Distilling Co
+montanya-distillers-cocktail-bar,Montanya Distillers | Cocktail Bar,"204 Elk Ave, Crested Butte, CO 81224, USA",CO,google-places,review,74.5,name,0.0,CO-S-15026,"MONTANYA DISTILLERS, LLC",
+moonshine-distiller,Moonshine Distiller,"78737 US-40 #1100, Winter Park, CO 80482, USA",CO,google-places,review,74.4,name,0.0,CO-S-20048,MOBB MOUNTAIN DISTILLERS LTD,Mobb Mountain Distillers
+ballmer-peak-distillery-sheridan,Ballmer Peak Distillery - Sheridan,"275 S Sheridan Blvd Unit #100, Lakewood, CO 80226, USA",CO,google-places,review,72.7,name,0.0,CO-S-20108,BALLMER PEAK SPIRITS COMPANY LLC,Ballmer Peak Distillery
+burnt-barrel-brewery-distillery,Burnt Barrel Brewery & Distillery,"730 Lakeside Plaza, Lake St Louis, MO 63367, USA",MO,google-places,review,75.0,name,0.125,MO-S-20115,"BURNT BARREL MEADERY, LLC",Burnt Barrel Distillery
+friendship-brewing-distilling-company,Friendship Brewing & Distilling Company,"400 Crossroads Business Park Ct, Wentzville, MO 63385, USA",MO,google-places,review,76.9,name,0.0,MO-S-20037,"WEISS HOLDINGS, LLC",Fernweh Distilling Company
+black-diamond-brewery-distillery-waverly,Black Diamond Brewery & Distillery - Waverly,"210 N Market St, Waverly, OH 45690, USA",OH,google-places,review,77.8,name,0.143,OH-S-20158,BLACK DIAMOND BREWERY & DISTILLATION COMPANY LLC,Black Diamond Brewery and Distillery
+black-diamond-brewery-and-distillery-circleville,Black Diamond Brewery and Distillery Circleville,"126 W Main St, Circleville, OH 43113, USA",OH,google-places,review,80.6,name,0.286,OH-S-20158,BLACK DIAMOND BREWERY & DISTILLATION COMPANY LLC,Black Diamond Brewery and Distillery
+bad-alfred-s-distilling,BAD Alfred's Distilling,"323 High St, Chestertown, MD 21620, USA",MD,google-places,review,71.4,name,0.0,MD-S-20015,"LOST ARK DISTILLING COMPANY, LLC",Lost Ark Distilling Company
+craft-distillers,Craft Distillers,"108 W Clay St, Ukiah, CA 95482, USA",CA,google-places,review,82.4,name,0.0,CA-S-20153,"CHARBAY DISTILLERS, LLC",Charbay  Distillery
+rocheport-distilling-co,Rocheport Distilling Co.,"12847 W Hwy Bb, Rocheport, MO 65279, USA",MO,google-places,review,77.3,name,0.0,MO-S-20024,"TEMPEST DISTILLING & SPIRITS, CO., LLC",
+hognose-distilling,Hognose Distilling,"4251 Harford Rd, Baltimore, MD 21214, USA",MD,google-places,review,78.8,name,0.0,MD-S-20003,"LYON DISTILLING COMPANY, LLC",WINDON DISTILLING COMPANY
+old-republic-distillery-tavern,Old Republic Distillery Tavern,"3 Dutchland Ave, Ephrata, PA 17522, USA",PA,google-places,review,77.4,name,0.0,PA-S-20002,"OLD REPUBLIC DISTILLERY, INC",
+crooked-creek-distillery,Crooked Creek Distillery,"415 Main St, Irwin, PA 15642, USA",PA,google-places,review,70.3,name,0.0,PA-S-20279,"CROOKED CREEK OPERATIONS, LLC",Chain Reaction Distilling
+palmer-distilling-co,Palmer Distilling Co,"220 Krams Ave, Philadelphia, PA 19127, USA",PA,google-places,review,84.2,name,0.0,PA-S-20349,SPRING HOUSE DISTILLERY INC.,Helm Distilling Co.
+lbi-distilling-company,LBI Distilling Company,"1305 Long Beach Blvd, Long Beach, NJ 08008, USA",NJ,google-places,review,81.5,name,0.0,NJ-S-20036,GK DISTILLING INC,Colts Neck Stillhouse Company
+nomad-distilling-co-new-hope,Nomad Distilling Co. - New Hope,"20 S Main St, New Hope, PA 18938, USA",PA,google-places,review,80.9,name,0.0,PA-S-20091,REVEL SPIRITS LLC,Nomad Distilling Co.
+great-jones-distilling-co,Great Jones Distilling Co,"686 Broadway, New York, NY 10012, USA",NY,google-places,review,80.9,name,0.333,NY-S-20134,"GREAT JONES DISTILLERS, LLC",The Great Jones Distillery
+tom-s-foolery-farm-and-distillery,Tom's Foolery Farm and Distillery,"17520 Rapids Rd, Burton, OH 44021, USA",OH,google-places,review,74.3,name,0.0,OH-S-15008,"TOMSFOOLERY, LLC",TOM'S FOOLERY
+hungry-run-distillery,Hungry Run Distillery,"10 Ridens Rd, Lewistown, PA 17044, USA",PA,google-places,review,83.3,name,0.333,PA-S-20043,"HUNGRY RUN WINE & SPIRITS, LLC",Hungry Run Distillery DBA
+jackazz-distilling-llc,Jackazz Distilling LLC,"48 Kushwa Rd, Spring Glen, PA 17978, USA",PA,google-places,review,81.1,name,0.429,PA-S-20105,JACK-AZZ DISTILLING LLC,
+st-julian-winery-distillery,St. Julian Winery & Distillery,"716 S Kalamazoo St, Paw Paw, MI 49079, USA",MI,google-places,review,78.3,name,0.286,MI-S-15013,"ST. JULIAN WINE COMPANY, INC.",
+flatrock-distilling-company,Flatrock Distilling Company,"621 N Perry St, Napoleon, OH 43545, USA",OH,google-places,review,78.8,name,0.143,OH-S-20023,LEO DISTILLING LLC,Northside Distilling Company
+scallywag-distilling,Scallywag Distilling,"1474 PA-208, Pulaski, PA 16143, USA",PA,google-places,review,74.4,name,0.0,PA-S-20133,"WHITE VALLEY DISTILLING, LLC",
+nomad-distilling-co-jim-thorpe,Nomad Distilling Co - Jim Thorpe,"55 Broadway, Jim Thorpe, PA 18229, USA",PA,google-places,review,77.6,name,0.0,PA-S-20091,REVEL SPIRITS LLC,Nomad Distilling Co.
+newport-craft-brewing-distilling-co,Newport Craft Brewing & Distilling Co.,"293 JT Connell Hwy, Newport, RI 02840, USA",RI,google-places,review,80.0,name,0.429,RI-S-15000,"COASTAL EXTREME BREWING CO., LLC",Newport Distilling Company
+badlands-artisan-distillery-bistro,Badlands Artisan Distillery & Bistro,"51500 US-97, La Pine, OR 97739, USA",OR,google-places,review,82.1,name,0.0,OR-S-20081,BADLANDS ARTISAN DISTILLERY LLC,Badlands Artisan Distillery
+bier-distillery-brewery,Bier Distillery & Brewery,"5295 W River Dr NE, Comstock Park, MI 49321, USA",MI,google-places,review,84.6,name,0.0,MI-S-20248,BEARDS BREWERY LLC,
+long-road-distillers-grand-haven,Long Road Distillers - Grand Haven,"18 Washington Ave, Grand Haven, MI 49417, USA",MI,google-places,review,76.9,name,0.0,MI-S-20024,LONG ROAD DISTILLERS LLC,Long Road Distillers
+crossroad-distilling-company,Crossroad Distilling Company,"6017 Sherman-Westfield Rd, Westfield, NY 14787, USA",NY,google-places,review,82.1,name,0.0,NY-S-20076,"CORTLAND BEER COMPANY, LLC",Cortland Distilling Company
+hillrock-estate-distillery,Hillrock Estate Distillery,"408 Poole Hill Rd, Ancram, NY 12502, USA",NY,google-places,review,78.6,name,0.0,NY-S-20240,"KLOCKE ESTATE DISTILLERY, LLC",Klocke Estate
+harvest-spirits-farm-distillery,Harvest Spirits Farm Distillery,"3074 US-9, Valatie, NY 12184, USA",NY,google-places,review,73.7,name,0.4,NY-S-15010,"HARVEST SPIRITS, LLC",Harvest Spirits
+killdeer-distilling-newport,Killdeer Distilling Newport,"881 NW Beach Dr, Newport, OR 97365, USA",OR,google-places,review,82.6,name,0.0,OR-S-20062,FIRST WATER SPIRITS LLC,KILLDEER DISTILLING
+glacier-45-distillery,GLACIER 45 DISTILLERY,"1901 Main St, Baker City, OR 97814, USA",OR,google-places,review,73.7,name,0.429,OR-S-20041,GLACIER45 LLC,Glacier45 Distillery
+grand-teton-distillery,Grand Teton Distillery,"1755 ID-33, Driggs, ID 83422, USA",ID,google-places,review,78.6,name,0.4,ID-S-20001,"GRAND TETON VODKA, INC.",
+la-crosse-distilling-co,La Crosse Distilling Co.,"129 Vine St, La Crosse, WI 54601, USA",WI,google-places,review,70.0,name,0.143,WI-S-20058,S&S DISTILLING CO.,Tight Barrel Distillery
+handen-distillery,Handen Distillery,"W62 N590, w62n590 Washington Ave, Cedarburg, WI 53012, USA",WI,google-places,review,83.3,name,0.375,WI-S-20026,"JKLM DISTILLING PARTNERS, LLC",Händen Distillery
+milwaukee-brewing-distilling-company,Milwaukee Brewing & Distilling Company,"2335 S Kinnickinnic Ave, Milwaukee, WI 53207, USA",WI,google-places,review,71.4,name,0.0,WI-S-20044,JACKSON WINE LLC,Geneva Lake Distilling
+moravian-sons-distillery,Moravian Sons Distillery,"315 W Main St, Lowell, MI 49331, USA",MI,google-places,review,70.3,name,0.143,MI-S-20181,MORAVIAN SONS DISTILLING LLC.,Moravian Sons Distilling
+norden-distilling,Norden Distilling,"2416 E Coon Lake Trail, Howell, MI 48843, USA",MI,google-places,review,78.9,name,0.0,MI-S-20135,WONDERLAND DISTILLING CO.,Wonderland Distilling
+tamworth-distilling-mercantile,Tamworth Distilling & Mercantile,"15 Cleveland Hill Rd, Tamworth, NH 03886, USA",NH,google-places,review,74.1,name,0.0,NH-S-20007,"SAZERAC OF NEW HAMPSHIRE, LLC",Granite State Distilling
+batson-river-brewing-distilling-kennebunk,Batson River Brewing & Distilling - Kennebunk,"12 Western Ave, Kennebunk, ME 04043, USA",ME,google-places,review,82.1,name,0.0,ME-S-20024,"LUCKY DOG DISTILLING, LLC",Batson River Brewing & Distilling
+travis-hasse-distilling-co,Travis Hasse Distilling Co.,"7071 Kickaboo Rd, Waunakee, WI 53597, USA",WI,google-places,review,79.1,name,0.0,WI-S-20058,S&S DISTILLING CO.,Tight Barrel Distillery
+wonderland-distilling-production,Wonderland Distilling Production,"2217 Lemuel St, Muskegon Heights, MI 49444, USA",MI,google-places,review,79.2,name,0.429,MI-S-20135,WONDERLAND DISTILLING CO.,Wonderland Distilling
+mad-river-distillers-burlington,Mad River Distillers Burlington,"137 St Paul St, Burlington, VT 05401, USA",VT,google-places,review,78.4,name,0.0,VT-S-20002,"COLD SPRING SPIRITS, LLC",Mad River Distillers
+obbink-distilling,Obbink Distilling,"11 Date St E, St Joseph, MN 56374, USA",MN,google-places,review,72.2,name,0.143,MN-S-20023,HENNEPIN DISTILLING LLC,HENNEPIN DISTILLING LLC
+von-stiehl-winery-distillery-cidery,Von Stiehl • Winery • Distillery • Cidery,"115 Navarino St, Algoma, WI 54201, USA",WI,google-places,review,74.1,name,0.167,WI-S-20033,VON STIEHL WINERY LTD.,von Stiehl Winery
+northern-latitudes-distillery-suttons-bay,Northern Latitudes Distillery Suttons Bay,"310 N St Joseph St, Suttons Bay, MI 49682, USA",MI,google-places,review,75.0,name,0.0,MI-S-20001,"NORTHERN LATITUDES DISTILLERY, LLC",
+olympic-distillers,Olympic Distillers,"356 Freshwater Bay Rd, Port Angeles, WA 98363, USA",WA,google-places,review,75.0,name,0.0,WA-S-20086,"DISTILLERS WAY, LLC",

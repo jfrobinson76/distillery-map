@@ -1,0 +1,88 @@
+US_1752_REMEDIATION_DETAIL
+MAP_HIGH_CONFIDENCE_ROWS	1121
+MAP_REVIEW_ROWS	122
+MAP_UNMATCHED_ROWS	509
+UNMATCHED_MAP_ROWS_WITH_UNPARSED_STATE	155
+UNMATCHED_MAP_ROWS_WITH_PARSED_STATE_LOW_SCORE	354
+HIGH_ONLY_UNIQUE_TTB_PERMITS	1088
+REVIEW_ONLY_UNIQUE_TTB_PERMITS	85
+TTB_PERMITS_MATCHED_BY_BOTH_HIGH_AND_REVIEW_MAP_ROWS	32
+TOTAL_UNIQUE_TTB_PERMITS_WITH_MAP_CANDIDATE	1205
+UNIQUE_TTB_PERMITS_MATCHED_TO_MULTIPLE_MAP_ROWS	35
+EXTRA_MAP_ROWS_BEYOND_ONE_PER_MATCHED_TTB_PERMIT	38
+TTB_PERMITS_WITHOUT_MAP_CANDIDATE	4325
+TTB_ACTIVE_UNIQUE_PREMISES	5383
+TTB_ACTIVE_UNIQUE_OWNER_NAMES	5129
+TTB_ACTIVE_UNIQUE_NONBLANK_DBA_NAMES	3177
+TTB_UNMATCHED_PERMITS_WITH_NEW_PERMIT_FLAG	0
+
+TOP_TTB_PERMITS_WITHOUT_MAP_CANDIDATE_BY_STATE
+501	CA
+277	MI
+275	NY
+265	TX
+240	PA
+191	WA
+154	FL
+151	OH
+145	KY
+144	NC
+125	OR
+121	GA
+120	VA
+117	CO
+101	TN
+98	MO
+92	IN
+89	IL
+87	MA
+84	WI
+
+TOP_UNMATCHED_MAP_ROWS_WITH_PARSED_STATE_BY_STATE
+27	CA
+26	TX
+22	PA
+17	KY
+17	NY
+15	MI
+13	OH
+12	FL
+12	WI
+11	CO
+11	NC
+11	MO
+10	VA
+10	NM
+10	OR
+9	TN
+9	AZ
+9	GA
+8	VT
+7	IN
+
+HIGH_REVIEW_PERMIT_COLLISION_EXAMPLES
+MI-S-20135	3	high_confidence:wonderland-distilling-co | review:norden-distilling | review:wonderland-distilling-production
+OH-S-20158	3	high_confidence:black-diamond-brewery-and-distillery | review:black-diamond-brewery-distillery-waverly | review:black-diamond-brewery-and-distillery-circleville
+PA-S-20091	3	high_confidence:nomad-distilling-co | review:nomad-distilling-co-new-hope | review:nomad-distilling-co-jim-thorpe
+CA-S-20153	2	high_confidence:charbay-distillery | review:craft-distillers
+CA-S-20201	2	high_confidence:storyhouse-spirits | review:courthouse-distillery
+CA-S-20211	2	high_confidence:left-coast-brewing-co-tasting-room-smokehouse-distillery-irvine | high_confidence:left-coast-brewing-co-tasting-room-smokehouse-distillery-ontario
+CO-S-15026	2	high_confidence:montanya-distillers-distillery-tour | review:montanya-distillers-cocktail-bar
+CO-S-20048	2	review:colorado-mountain-distillers | review:moonshine-distiller
+CO-S-20088	2	high_confidence:the-heart-distillery | review:art-of-the-spirits-distillery
+FL-S-20139	2	high_confidence:maw-s-mountain-moonshine | review:maws-mountain-moonshine-kissimmee
+FL-S-20211	2	high_confidence:marlin-barrel-distillery | review:burlock-and-barrel-distillery
+GA-S-20012	2	high_confidence:grandaddy-mimm-s-distilling-co-the-co-op | review:grandaddy-mimm-s-distilling-co-the-garage
+KY-S-20073	2	high_confidence:pensive-distilling-company | review:green-river-distilling-co
+KY-S-779	2	high_confidence:heaven-hill | review:heaven-hill-springs-distillery
+ME-S-20024	2	high_confidence:batson-river-brewing-distilling | review:batson-river-brewing-distilling-kennebunk
+MI-S-20001	2	high_confidence:northern-latitudes-distillery | review:northern-latitudes-distillery-suttons-bay
+MI-S-20024	2	high_confidence:long-road-distillers | review:long-road-distillers-grand-haven
+NC-S-20086	2	high_confidence:weldon-mills-distillery | review:weldon-mills-distillery-durham
+NC-S-20123	2	high_confidence:m-t-distilling | review:mystic-farm-distilling-company
+NY-S-20167	2	high_confidence:hartman-s-distilling-co | review:jayne-st-distilling-co
+NY-S-20240	2	high_confidence:klocke-estate | review:hillrock-estate-distillery
+OH-S-20023	2	high_confidence:northside-distilling-co | review:flatrock-distilling-company
+OR-S-20053	2	high_confidence:hood-river-distillers-inc | review:hood-river-distillers-tasting-room
+OR-S-20062	2	high_confidence:killdeer-distilling | review:killdeer-distilling-newport
+PA-S-20002	2	high_confidence:old-republic-distillery | review:old-republic-distillery-tavern
