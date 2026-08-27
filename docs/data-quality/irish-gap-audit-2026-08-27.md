@@ -190,19 +190,21 @@ First filed 16 August in `UK-NI-WALES-AUDIT.md` and unchanged.
 These are not defects. They are places where the map's inclusion rule does not
 give an answer, and where a decision would make the next audit faster.
 
-1. **Do in-planning and under-construction sites belong on the map?** Four of the
-   eight raw candidates are in that class, and Irish Whiskey Magazine carries them
-   as first-class listings. If yes, they need a role value (`in_planning`) so that
-   nobody drives to Boyle expecting a tour. If no, the audit can stop re-finding
-   them every pass.
-2. **Do non-distilling brands belong?** `Two Stacks Irish Whiskey` is already on
-   the map and does not distil; `The Muff Liquor Company` is not. Whichever way it
-   goes, they should be treated the same. The `entity_role` machinery already
-   supports keeping them with an honest label rather than deleting them.
+1. ~~Do in-planning and under-construction sites belong on the map?~~
+   **Decided 27 Aug 2026: no.** Planning permission is not a distillery. Curraghmore,
+   Harvest Lodge, Stewarts Mill and Gortinore's Mahon Bridge site are rejected on
+   sight and rechecked for status, not re-argued. See `inclusion-rules.md`.
+2. ~~Do non-distilling brands belong?~~ **Decided 27 Aug 2026: yes, if the brand
+   has a home** — a real, verifiable physical address, marked with the
+   `entity_role` that fits, usually `head_office`. So Gortinore qualifies at
+   17 Dame Court, Dublin 2 while its distillery does not qualify at Mahon Bridge;
+   Two Stacks stays and should carry a role; Muff Liquor becomes eligible once an
+   address is sourced; Irish Whitetail still fails, on traceability rather than on
+   being a brand. See `inclusion-rules.md`.
 3. **Gin brands made at another producer's distillery** — Jawbox, Shortcross,
    An Dúlamán, Minke, Method & Madness and roughly thirty more. These need no new
-   pins under any reading, but if the map ever wants to be findable by brand, that
-   is a search-index question, not a dataset question.
+   pins under any reading. The open question is findability, and it is answered in
+   `brand-findability.md`.
 
 ---
 
