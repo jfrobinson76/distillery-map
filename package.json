@@ -8,7 +8,15 @@
     "start": "next start",
     "lint": "eslint",
     "indexnow": "node scripts/indexnow.mjs",
-    "share-card": "node scripts/share-card.mjs"
+    "share-card": "node scripts/share-card.mjs",
+    "search:audit": "node scripts/search-intelligence.mjs audit",
+    "search:auth": "node scripts/gsc-auth.mjs",
+    "search:ingest": "node scripts/search-intelligence.mjs ingest",
+    "search:inspect": "node scripts/search-intelligence.mjs inspect",
+    "search:pull": "node scripts/search-intelligence.mjs pull",
+    "search:report": "node scripts/search-intelligence.mjs report",
+    "search:test": "node --test scripts/search-intelligence.test.mjs",
+    "search:verify": "node scripts/search-intelligence.mjs verify"
   },
   "dependencies": {
     "mapbox-gl": "^3.21.0",
