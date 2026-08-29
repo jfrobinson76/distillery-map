@@ -168,6 +168,8 @@ function SubmitPanel({ onClose }: { onClose: () => void }) {
         ) : (
           <form onSubmit={handleSubmit} className="mt-6 space-y-4">
             <input type="hidden" name="form_type" value={submitType} />
+            <input type="hidden" name="privacy_notice_version" value="2026-08-29" />
+            <input type="hidden" name="contact_permission" value="submission_follow_up_only" />
 
             <div>
               <label htmlFor="distillery_name" className="block text-xs font-medium" style={{ color: WOW.charcoal }}>
@@ -335,14 +337,19 @@ function SubmitPanel({ onClose }: { onClose: () => void }) {
 
             <p className="text-xs" style={{ color: WOW.muted }}>
               By submitting, you confirm this information is accurate and agree it may be
-              published on the Distillery Map. Your email is only used to follow up
-              on your submission.
+              published on the Distillery Map. If you provide an email, it is sent through
+              Formspree and used only to follow up on this submission — never for unrelated
+              marketing. See our{" "}
+              <Link href="/privacy" className="underline" style={{ color: WOW.amber }}>
+                privacy notice
+              </Link>
+              .
             </p>
 
             {status === "error" && (
               <p className="text-xs" style={{ color: "#dc2626" }}>
                 Something went wrong. Email{" "}
-                <a href="mailto:hello@distillerymap.ie" className="underline">hello@distillerymap.ie</a> instead.
+                <a href="mailto:hello@distillerymap.org" className="underline">hello@distillerymap.org</a> instead.
               </p>
             )}
 
@@ -445,6 +452,8 @@ function ClaimPanel({ distilleryName, onClose }: { distilleryName: string; onClo
           <form onSubmit={handleSubmit} className="mt-6 space-y-4">
             <input type="hidden" name="form_type" value="claim" />
             <input type="hidden" name="distillery_name" value={distilleryName} />
+            <input type="hidden" name="privacy_notice_version" value="2026-08-29" />
+            <input type="hidden" name="contact_permission" value="listing_management_only" />
 
             <div>
               <label htmlFor="claim_name" className="block text-xs font-medium" style={{ color: WOW.charcoal }}>
@@ -568,10 +577,20 @@ function ClaimPanel({ distilleryName, onClose }: { distilleryName: string; onClo
               />
             </div>
 
+            <p className="text-xs" style={{ color: WOW.muted }}>
+              Your contact details are sent through Formspree and used only to verify and
+              manage this listing. They are not added to marketing lists.
+              See our{" "}
+              <Link href="/privacy" className="underline" style={{ color: WOW.amber }}>
+                privacy notice
+              </Link>
+              .
+            </p>
+
             {status === "error" && (
               <p className="text-xs" style={{ color: "#dc2626" }}>
                 Something went wrong. Email{" "}
-                <a href="mailto:hello@distillerymap.ie" className="underline">hello@distillerymap.ie</a> instead.
+                <a href="mailto:hello@distillerymap.org" className="underline">hello@distillerymap.org</a> instead.
               </p>
             )}
 
@@ -1064,8 +1083,12 @@ export default function DistilleryMapApp({
               Browse by country
             </Link>{" "}
             &middot;{" "}
-            <a href="mailto:hello@distillerymap.ie" style={{ color: WOW.amberGlow }}>
-              hello@distillerymap.ie
+            <Link href="/privacy" style={{ color: WOW.amberGlow }}>
+              Privacy
+            </Link>{" "}
+            &middot;{" "}
+            <a href="mailto:hello@distillerymap.org" style={{ color: WOW.amberGlow }}>
+              hello@distillerymap.org
             </a>
           </span>
           <span>
