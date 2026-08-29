@@ -111,4 +111,25 @@ the 27 August sweep (Shortcross, An Dúlamán, Drumshanbo Gunpowder, Method &
 Madness, Xin, Minke, Symphonia). The rest need a verification pass, at the same
 evidence bar as every other row: the URL that proves it, or it does not go in.
 
-**Not built.** This is a recommendation awaiting John's go-ahead on scope.
+## Ireland pilot shipped
+
+*Implemented 29 August 2026.* The first release adds seven sourced brand names
+to six island-of-Ireland sites:
+
+| Site | Brands |
+|---|---|
+| Rademon Estate Distillery | Shortcross |
+| Ardara Distillery | An Dúlamán |
+| The Shed Distillery | Drumshanbo Gunpowder |
+| Jameson Distillery Midleton | Method & Madness |
+| Ahascragh Distillery | Xin, Symphonia |
+| Clonakilty Distillery | Minke |
+
+The field now feeds map search, explains brand matches in the result row,
+renders “Home of …” in map popups and country-page HTML, and is collected by
+the claim form. Research remains the seed; verified owner claims can maintain
+the mappings from here.
+
+This is deliberately an Ireland-only measurement release. Check the Ireland
+country page's indexation and brand-query impressions before expanding the
+research pass to country two.

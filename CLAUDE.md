@@ -77,7 +77,7 @@ Forms are distinguished by the `form_type` hidden field:
 - `correction` — suggest a fix
 - `claim` — distillery owner claiming their listing
 
-Claim submissions include: contact_name, contact_email, contact_role, plus optional listing updates (website, description, visitor_info, booking_link).
+Claim submissions include: contact_name, contact_email, contact_role, plus optional listing updates (website, description, brands, visitor_info, booking_link).
 
 ## Environment Variables
 

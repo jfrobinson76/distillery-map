@@ -181,6 +181,11 @@ export default async function CountryPage({ params }: Props) {
                     </a>
                   )}
                 </div>
+                {f.properties.brands?.length ? (
+                  <p className="mt-1 text-xs font-medium" style={{ color: WOW.amber }}>
+                    Home of {f.properties.brands.join(", ")}
+                  </p>
+                ) : null}
                 {(f.properties.address || f.properties.description) && (
                   <p className="mt-1 text-xs" style={{ color: WOW.muted }}>
                     {f.properties.address || f.properties.description}
