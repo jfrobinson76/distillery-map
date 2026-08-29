@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/constants";
 import { getCountries } from "@/lib/data";
-import { countryCopy } from "@/lib/country-copy";
+import { countryCopy, countryCopyLastModified } from "@/lib/country-copy";
 
 /**
  * Countries whose intro copy has been written and reviewed carry a real
@@ -38,9 +38,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     ...countries.map((c) => {
       const hasCopy = Boolean(countryCopy[c.slug]);
+      const editorialLastModified = countryCopyLastModified[c.slug];
       return {
         url: `${SITE_URL}/distilleries/${c.slug}`,
-        lastModified: hasCopy ? COPY_SHIPPED : FALLBACK_UNCHANGED,
+        lastModified: editorialLastModified
+          ? new Date(editorialLastModified)
+          : hasCopy
+            ? COPY_SHIPPED
+            : FALLBACK_UNCHANGED,
         changeFrequency: "monthly" as const,
         priority: hasCopy ? 0.8 : 0.5,
       };
