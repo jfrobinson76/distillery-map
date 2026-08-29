@@ -38,7 +38,15 @@ export default async function CountryPage({ params }: Props) {
   const { entry, features } = result;
   const inName = countryDisplayName(entry.name);
   const countries = await getCountries();
-  const others = countries.filter((c) => c.slug !== entry.slug).slice(0, 12);
+  const currentIndex = countries.findIndex((c) => c.slug === entry.slug);
+  const otherCount = Math.min(12, countries.length - 1);
+  // Rotate the cross-links around the complete directory instead of sending
+  // every country page to the same 12 largest markets. Every country therefore
+  // receives contextual internal links from neighbouring pages in the list.
+  const others = Array.from(
+    { length: otherCount },
+    (_, offset) => countries[(currentIndex + offset + 1) % countries.length]
+  );
 
   const faqs = [
     {
@@ -193,12 +201,9 @@ export default async function CountryPage({ params }: Props) {
                 )}
                 {!f.properties.claimed && (
                   <Link
-                    href={`/?claim=${encodeURIComponent(f.properties.name || "")}`}
-                    // Functional link, not editorial. Without nofollow this puts
-                    // ~6,100 distinct /?claim= URLs in front of the crawler, all
-                    // canonicalising to "/" — pure crawl-budget waste on a site
-                    // that is already fighting to get its country pages indexed.
-                    rel="nofollow"
+                    href={`/#claim=${encodeURIComponent(f.properties.name || "")}`}
+                    // Fragments are handled in the browser and never become
+                    // separate crawlable URLs or duplicate canonical candidates.
                     className="mt-1.5 inline-block text-[11px] underline"
                     style={{ color: WOW.muted }}
                   >

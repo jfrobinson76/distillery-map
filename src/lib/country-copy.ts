@@ -53,4 +53,35 @@ export const countryCopy: Record<string, string> = {
     "Taiwan matters more as a buyer than the count suggests. Taiwanese collectors drove much of the single-cask and independent-bottling trade over the past two decades, and distilleries on the other side of the world still price with that market in mind. Local production only became possible when the state liquor monopoly ended in 2002, and it proved a point quickly — subtropical maturation is aggressive enough that a malt of three or four years can drink like something much older. The list below is short, and the island's reputation rests on very few of the names on it.",
   spain:
     "Brandy de Jerez is aged the way sherry is — in a solera, where casks are partly drawn and refilled so the spirit never carries a single vintage. It has to happen inside the Jerez triangle, in barrels that previously held sherry. Menorca has its own protected gin, left over from the British navy's years on the island. The gin-tonic habit did the rest, and a good share of what's listed is recent gin rather than old brandy.",
+  croatia:
+    "Rakija is the backbone here, made from fruit, grape marc or herbs rather than one fixed recipe. Croatia protects several regional spirit names, including Hrvatska travarica and Zadarski maraschino. The directory runs from long-established liqueur houses to small coastal and inland distillers.",
+  ecuador:
+    "Sugar cane does most of the work in Ecuadorian spirits, particularly in aguardiente and rum. The list below spans highland sites around Quito and Cuenca and lowland producers nearer the Pacific. It is a short map and still depends heavily on local submissions.",
+  estonia:
+    "Estonian Vodka became the country's first protected geographical indication; the name requires local agricultural alcohol and Estonian water. The map itself skews newer, with gin distilleries and small mixed-spirit producers around Tallinn and beyond. Vodka is the regulated old guard, not the whole story.",
+  finland:
+    "Vodka of Finland has protected status, but rye is the more revealing grain on this map. Finnish producers have turned it into both whisky and gin, alongside cider and fruit spirits. The list below is small, geographically spread and mostly modern.",
+  greece:
+    "Ouzo and tsipouro are both protected Greek names, but they come from different parts of the still room. Ouzo is anise-led; tsipouro begins with grape marc and may be anise-flavoured. The directory is correspondingly broad, with island liqueur houses, mainland grape distillers and a smaller new-spirit fringe.",
+  israel:
+    "Single malt is the conspicuous thread in Israel's small distilling scene, alongside gin, date spirit and other local experiments. Sites sit in the Golan Heights, Jerusalem, Tel Aviv and the Arava, so there is no single maturation climate. The list is short, independent and still changing.",
+  latvia:
+    "Latvia's spirits story is broader than vodka. In Latgale, šmakovka is a traditional grain spirit, usually made from barley, rye or both. The directory below pairs that regional tradition with a small group of modern Riga distillers.",
+  poland:
+    "Polish Vodka is a protected geographical indication with tighter rules than the generic category. Its base alcohol must come from specified Polish-grown grains or potatoes, and production must remain in Poland. The directory also catches farm distilleries, liqueur makers and new whisky and gin operations outside the largest vodka groups.",
+  romania:
+    "Fruit spirit carries this page: țuică, pălincă and horincă all sit inside Romania's distilling vocabulary, alongside wine spirit. Pălincă has national geographical-indication protection, while several țuică and horincă names are regional. The commercial list below is small and centred mainly on Transylvania and the northwest.",
+};
+
+/** Real editorial publication dates for copy added after the initial batch. */
+export const countryCopyLastModified: Record<string, string> = {
+  croatia: "2026-08-29",
+  ecuador: "2026-08-29",
+  estonia: "2026-08-29",
+  finland: "2026-08-29",
+  greece: "2026-08-29",
+  israel: "2026-08-29",
+  latvia: "2026-08-29",
+  poland: "2026-08-29",
+  romania: "2026-08-29",
 };

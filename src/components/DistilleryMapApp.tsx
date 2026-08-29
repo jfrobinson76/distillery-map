@@ -727,18 +727,22 @@ export default function DistilleryMapApp({
   const [claimDistillery, setClaimDistillery] = useState("");
   const [allFeatures, setAllFeatures] = useState<GeoJSON.Feature[]>([]);
 
-  // Deep link from the country pages: /?claim=<distillery name> opens the claim
+  // Deep link from the country pages: /#claim=<distillery name> opens the claim
   // form already filled in. Those pages list every distillery by name, so an
   // owner reading their own listing can claim from that row instead of being
-  // sent to the map to hunt for their own pin.
+  // sent to the map to hunt for their own pin. The fragment keeps thousands of
+  // functional claim links out of Google's crawl queue. Query-string links from
+  // older shares remain supported for backwards compatibility.
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
-      const name = new URLSearchParams(window.location.search).get("claim");
+      const queryName = new URLSearchParams(window.location.search).get("claim");
+      const fragmentName = new URLSearchParams(window.location.hash.slice(1)).get("claim");
+      const name = fragmentName || queryName;
       if (!name) return;
       setClaimDistillery(name);
       setShowClaim(true);
       setShowWelcome(false);
-      // Drop the param so a refresh or a shared URL doesn't reopen the form.
+      // Drop the deep-link state so a refresh does not reopen the form.
       window.history.replaceState({}, "", window.location.pathname);
     });
 
