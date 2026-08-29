@@ -58,6 +58,16 @@ function WelcomeCopy({ count }: { count: number }) {
         </Link>
         .
       </p>
+      <p className="mt-2 text-xs" style={{ color: WOW.muted }}>
+        Industry research:{" "}
+        <Link
+          href="/whiskey-aging-inventory"
+          className="underline"
+          style={{ color: WOW.amber }}
+        >
+          how much whisk(e)y is aging worldwide?
+        </Link>
+      </p>
     </>
   );
 }

@@ -42,6 +42,7 @@ next-env.d.ts
 
 # data pipeline outputs
 /data/enriched/
+/data/search-intelligence/
 __pycache__/
 *.pyc
 .venv/
