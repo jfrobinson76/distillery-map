@@ -180,7 +180,11 @@ function EmbedMapInner() {
 
   return (
     <div className="fixed inset-0 z-50 w-full h-screen" style={{ background: WOW.parchment }}>
-      <div ref={mapContainer} className="absolute inset-0" />
+      {/* h-full, not `absolute inset-0`: mapbox-gl.css sets .mapboxgl-map{position:relative}
+          on this node once the map initialises, which beats the Tailwind `absolute`
+          utility. inset-0 then stretches nothing and the container collapses to 0px,
+          so the map inits into a zero-size box and never paints. */}
+      <div ref={mapContainer} className="h-full w-full" />
 
       {/* Powered by watermark */}
       <a
