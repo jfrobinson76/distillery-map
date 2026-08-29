@@ -4,12 +4,15 @@ Phase 1 — Step 2: Download TTB Spirits Producers and Bottlers permit list.
 Source: https://www.ttb.gov/public-information/foia/list-of-permittees
 File:   FRL_Spirits_Producers_and_Bottlers_List.csv (updated weekly by TTB)
 
-TTB only publishes active permits, so status = ACTIVE for all rows.
 State and permit_type are derived from the permit_number prefix (e.g. AK-S-15000).
+permit_type is the FAA Act basic-permit code ("S" on every DSP row). It is NOT a
+distiller / warehouseman / processor split; TTB does not publish operations. A
+permit proves permission, not a working still. See
+docs/data-quality/ttb-permit-type-research-2026-08-29.md before treating rows as
+distilleries.
 
 Output: data/enriched/ttb_dsp_raw.csv with columns:
-  permit_number, business_name, dba_name, street, city, state, zip,
-  permit_type, status, issue_date
+  permit_number, business_name, dba_name, street, city, state, zip, permit_type
 """
 
 import re
@@ -88,13 +91,11 @@ def main():
 
     df['state'] = df['permit_number'].apply(derive_state)
     df['permit_type'] = df['permit_number'].apply(derive_permit_type)
-    df['status'] = 'ACTIVE'   # TTB only publishes active permits
-    df['issue_date'] = ''
 
     out_cols = [
         'permit_number', 'business_name', 'dba_name',
         'street', 'city', 'state', 'zip',
-        'permit_type', 'status', 'issue_date',
+        'permit_type',
     ]
     for col in out_cols:
         if col not in df.columns:
