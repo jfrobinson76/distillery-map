@@ -56,7 +56,7 @@ export function countryDisplayName(name: string): string {
   return THE_COUNTRIES.has(name) ? `the ${name}` : name;
 }
 
-type DistilleryProps = {
+export type DistilleryProps = {
   name?: string;
   country?: string;
   region?: string;
@@ -65,6 +65,12 @@ type DistilleryProps = {
   address?: string;
   slug?: string;
   claimed?: boolean;
+  /**
+   * Brands made at this site whose names differ from the site's own.
+   * Used for search and country-page findability without creating duplicate
+   * map pins. See docs/data-quality/brand-findability.md.
+   */
+  brands?: string[];
   /**
    * What kind of place the pin is, when it is NOT a distilling site.
    * Absent on the overwhelming majority of features — absence means

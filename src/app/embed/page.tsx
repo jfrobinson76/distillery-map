@@ -8,17 +8,6 @@ import { WOW, regionViews, type Region } from "@/lib/constants";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || "";
 
-const countryToRegion: Record<string, Region> = {
-  Ireland: "ireland",
-  "United Kingdom": "scotland",
-  "United States": "usa",
-  Canada: "usa",
-  Japan: "asia",
-  India: "asia",
-  Taiwan: "asia",
-  Australia: "rest",
-};
-
 function EmbedMapInner() {
   const searchParams = useSearchParams();
   const regionParam = searchParams.get("region") as Region | null;

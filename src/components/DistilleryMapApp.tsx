@@ -5,8 +5,43 @@ import Link from "next/link";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { WOW, FORMSPREE_SUBMIT_ID, regionViews, regionLabels, type Region } from "@/lib/constants";
+import type { DistilleryProps } from "@/lib/data";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || "";
+
+function getBrands(properties: { brands?: unknown }): string[] {
+  if (Array.isArray(properties.brands)) {
+    return properties.brands.filter((brand): brand is string => typeof brand === "string");
+  }
+
+  if (typeof properties.brands === "string") {
+    try {
+      const parsed: unknown = JSON.parse(properties.brands);
+      return Array.isArray(parsed)
+        ? parsed.filter((brand): brand is string => typeof brand === "string")
+        : [];
+    } catch {
+      return [];
+    }
+  }
+
+  return [];
+}
+
+function escapeHtml(value: string): string {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function brandsHtml(brands: string[]): string {
+  return brands.length
+    ? `<div style="font-size: 11px; color: ${WOW.amber}; margin-top: 3px; font-weight: 600;">Home of ${brands.map(escapeHtml).join(", ")}</div>`
+    : "";
+}
 
 /* ─── Welcome Overlay ─── */
 /* Copy is server-rendered (passed as children from page.tsx) so it exists in
@@ -489,6 +524,23 @@ function ClaimPanel({ distilleryName, onClose }: { distilleryName: string; onClo
             </div>
 
             <div>
+              <label htmlFor="claim_brands" className="block text-xs font-medium" style={{ color: WOW.charcoal }}>
+                Brands made here
+              </label>
+              <input
+                type="text"
+                id="claim_brands"
+                name="brands"
+                placeholder="e.g. Shortcross, Drumshanbo Gunpowder"
+                className={inputClass}
+                style={{ borderColor: WOW.parchmentDark, background: WOW.white }}
+              />
+              <p className="mt-1 text-[10px]" style={{ color: WOW.muted }}>
+                Separate multiple brands with commas.
+              </p>
+            </div>
+
+            <div>
               <label htmlFor="claim_visitor_info" className="block text-xs font-medium" style={{ color: WOW.charcoal }}>
                 Visitor info <span style={{ color: WOW.muted, fontWeight: "normal" }}>(tours, tastings, shop)</span>
               </label>
@@ -543,7 +595,7 @@ function ClaimPanel({ distilleryName, onClose }: { distilleryName: string; onClo
 /* ─── Search Component ─── */
 function SearchBar({ features, onSelect }: {
   features: GeoJSON.Feature[];
-  onSelect: (coords: [number, number], name: string) => void;
+  onSelect: (coords: [number, number], name: string, brands: string[]) => void;
 }) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<GeoJSON.Feature[]>([]);
@@ -564,8 +616,11 @@ function SearchBar({ features, onSelect }: {
     const lower = q.toLowerCase();
     const matches = features
       .filter((f) => {
-        const name = (f.properties as Record<string, string>)?.name || "";
-        return name.toLowerCase().includes(lower);
+        const properties = (f.properties ?? {}) as DistilleryProps;
+        const haystack = [properties.name ?? "", ...getBrands(properties)]
+          .join(" ")
+          .toLowerCase();
+        return haystack.includes(lower);
       })
       .slice(0, 8);
     setResults(matches);
@@ -574,9 +629,14 @@ function SearchBar({ features, onSelect }: {
 
   function handleSelect(f: GeoJSON.Feature) {
     const geom = f.geometry as GeoJSON.Point;
-    const name = (f.properties as Record<string, string>)?.name || "";
-    onSelect(geom.coordinates as [number, number], name);
-    setQuery(name);
+    const properties = (f.properties ?? {}) as DistilleryProps;
+    const name = properties.name ?? "";
+    const brands = getBrands(properties);
+    const matchingBrand = brands.find((brand) =>
+      brand.toLowerCase().includes(query.toLowerCase())
+    );
+    onSelect(geom.coordinates as [number, number], name, brands);
+    setQuery(matchingBrand ?? name);
     setOpen(false);
   }
 
@@ -598,14 +658,24 @@ function SearchBar({ features, onSelect }: {
           style={{ background: WOW.parchment, border: `1px solid ${WOW.parchmentDark}` }}
         >
           {results.map((f, i) => {
-            const props = f.properties as Record<string, string>;
+            const props = (f.properties ?? {}) as DistilleryProps;
+            const matchingBrand = getBrands(props).find((brand) =>
+              brand.toLowerCase().includes(query.toLowerCase())
+            );
             return (
               <button
-                key={i}
+                key={props.slug ?? `${props.name}-${i}`}
                 onClick={() => handleSelect(f)}
                 className="w-full text-left px-3 py-2 text-xs transition-colors hover:bg-[#f0e8d4] flex flex-col"
               >
-                <span className="font-medium" style={{ color: WOW.oak }}>{props.name}</span>
+                <span className="font-medium" style={{ color: WOW.oak }}>
+                  {matchingBrand ?? props.name}
+                </span>
+                {matchingBrand ? (
+                  <span className="text-[10px]" style={{ color: WOW.muted }}>
+                    Made at {props.name}
+                  </span>
+                ) : null}
                 {props.region && (
                   <span className="text-[10px] capitalize" style={{ color: WOW.muted }}>{props.region}{props.address ? ` · ${props.address.split(",").slice(-2).join(",").trim()}` : ""}</span>
                 )}
@@ -643,13 +713,17 @@ export default function DistilleryMapApp({
   // owner reading their own listing can claim from that row instead of being
   // sent to the map to hunt for their own pin.
   useEffect(() => {
-    const name = new URLSearchParams(window.location.search).get("claim");
-    if (!name) return;
-    setClaimDistillery(name);
-    setShowClaim(true);
-    setShowWelcome(false);
-    // Drop the param so a refresh or a shared URL doesn't reopen the form.
-    window.history.replaceState({}, "", window.location.pathname);
+    const frame = window.requestAnimationFrame(() => {
+      const name = new URLSearchParams(window.location.search).get("claim");
+      if (!name) return;
+      setClaimDistillery(name);
+      setShowClaim(true);
+      setShowWelcome(false);
+      // Drop the param so a refresh or a shared URL doesn't reopen the form.
+      window.history.replaceState({}, "", window.location.pathname);
+    });
+
+    return () => window.cancelAnimationFrame(frame);
   }, []);
 
   useEffect(() => {
@@ -795,11 +869,13 @@ export default function DistilleryMapApp({
             const props = e.features[0].properties!;
 
             const hasRichData = props.visitor_info || props.booking_link;
+            const brands = getBrands(props);
             const escapedName = (props.name || "").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 
             const html = `
               <div style="font-family: system-ui, sans-serif; max-width: 260px;">
                 <strong style="font-size: 14px; color: ${WOW.oak};">${props.name}</strong>
+                ${brandsHtml(brands)}
                 ${props.region ? `<div style="font-size: 11px; color: ${WOW.muted}; margin-top: 2px; text-transform: capitalize;">${props.region}</div>` : ""}
                 ${props.address ? `<div style="font-size: 11px; color: ${WOW.muted}; margin-top: 3px;">${props.address}</div>` : ""}
                 ${props.description ? `<p style="font-size: 12px; color: #555; margin-top: 6px; line-height: 1.4;">${props.description}</p>` : ""}
@@ -895,12 +971,12 @@ export default function DistilleryMapApp({
             {loaded && (
               <SearchBar
                 features={allFeatures}
-                onSelect={(coords, name) => {
+                onSelect={(coords, name, brands) => {
                   map.current?.flyTo({ center: coords, zoom: 14, duration: 1500 });
                   setTimeout(() => {
                     new mapboxgl.Popup({ offset: 12, maxWidth: "280px" })
                       .setLngLat(coords)
-                      .setHTML(`<div style="font-family: system-ui, sans-serif;"><strong style="font-size: 14px; color: ${WOW.oak};">${name}</strong></div>`)
+                      .setHTML(`<div style="font-family: system-ui, sans-serif;"><strong style="font-size: 14px; color: ${WOW.oak};">${escapeHtml(name)}</strong>${brandsHtml(brands)}</div>`)
                       .addTo(map.current!);
                   }, 1600);
                 }}
