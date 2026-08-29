@@ -43,6 +43,25 @@ The property is declared in `src/lib/data.ts` (`DistilleryProps`).
 Add a value only when an existing one genuinely does not fit, and document it
 here in the same commit.
 
+### Non-distilling brands use these values, not a new one
+
+Decided 27 August 2026: a brand that distils nothing goes on the map if it has a
+real physical address, marked with whichever of the values above fits — usually
+`head_office`. A `brand_home` value was considered and deliberately not added,
+because the existing three cover every case seen so far. See
+`inclusion-rules.md`.
+
+### Open, awaiting a decision
+
+Two rows currently assert distilling through the absence of `entity_role`, and
+both would need a new value. Raised in `irish-gap-audit-2026-08-27.md`:
+
+- `Irish Distillers Dungourney` — a maturation warehouse complex, no still.
+  Proposed: `maturation_warehouse`, plus `operator: "Irish Distillers"`.
+- `Jameson Distillery Bow St.` — a visitor centre that has not distilled since
+  1971. Proposed: `visitor_centre`. `tasting_room` is the nearest existing value
+  and is wrong.
+
 **A shop or office in the name is not evidence of the role.** Of the 16 rows the
 August 2026 pruning pass shortlisted as "offices and brand shops", nine turned
 out to be the producer's actual distilling site with a shop or tasting counter
