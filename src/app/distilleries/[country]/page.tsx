@@ -221,15 +221,23 @@ export default async function CountryPage({ params }: Props) {
             Claim your Verified badge
           </h2>
           <p className="mt-2 text-sm" style={{ color: WOW.charcoal }}>
-            The first 50 distilleries to claim their listing get the{" "}
-            &#10003; Verified badge and an enhanced profile, free. Find your
-            name in the list above and choose &ldquo;Claim it&rdquo; — you can
-            correct your details and add tours, tastings, and booking links.
+            Claiming is free. We&apos;ll verify your connection to the distillery,
+            add the &#10003; Verified badge, and keep the enhanced profile free.
+            Find your name in the list above and choose &ldquo;Claim it&rdquo; — you
+            can correct your details and add brands, tours, tastings, and booking links.
             Not listed yet?{" "}
             <Link href="/" className="underline" style={{ color: WOW.amber }}>
               Open the map
             </Link>{" "}
             and use the Contribute button, and we&apos;ll add you.
+          </p>
+          <p className="mt-2 text-xs" style={{ color: WOW.muted }}>
+            Claim contact details are used only to verify and manage the listing — never
+            for unrelated marketing. Read the{" "}
+            <Link href="/privacy" className="underline" style={{ color: WOW.amber }}>
+              privacy notice
+            </Link>
+            .
           </p>
         </section>
 
@@ -278,6 +286,12 @@ export default async function CountryPage({ params }: Props) {
           </p>
         </section>
       </main>
+      <footer className="px-4 pb-8 text-center text-xs" style={{ color: WOW.muted }}>
+        <Link href="/privacy" className="underline" style={{ color: WOW.amber }}>
+          Privacy
+        </Link>{" "}
+        &middot; Distillery Map by Stillbound
+      </footer>
     </div>
   );
 }

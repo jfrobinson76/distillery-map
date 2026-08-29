@@ -87,12 +87,16 @@ Claim submissions include: contact_name, contact_email, contact_role, plus optio
 
 Uses the WOW (World of Whiskey) palette — amber/oak/parchment. Self-contained, no dependency on SAMAC branding. Fonts: Geist (sans) + Fraunces (display).
 
-## Monetisation (subtle, not overt)
+## Participation and commercial boundary
 
-Claimed listing model: free base layer → claim & correct → enhanced listing (paid, future).
-First 50 claims get the enhanced listing free (logo + URL); after that, €25/year (decided 24 Jul 2026, not yet public).
-Every claim submission is a warm lead. The form captures structured data that becomes the premium listing schema.
-No pricing page. No "For Business." The CRM conversation happens in email after they claim.
+Claiming, correcting, verification, and enhanced listing fields are free. There is no
+post-50 payment cliff and no €25/year listing charge. Decided 29 Aug 2026: the map is
+more valuable as a high-participation public utility and a permissioned relationship
+layer for Stillbound than as a low-price directory product.
+
+Every claim is a warm interaction with a distillery, but it is not permission to market.
+The public product remains Distillery Map by Stillbound. Executive search and recruitment
+stay completely outside the product, its messaging, its forms, and its contact data.
 
 ### Claim workflow (rule, applies to every validated claim)
 
@@ -100,10 +104,11 @@ When a claim is validated (real person from the distillery confirms via the form
 1. Apply their listing updates to the geojson.
 2. Set `"claimed": true` on the feature — this swaps the popup's "Claim it" link
    for a "✓ Verified by the distillery" badge and adds a ✓ Verified tick on country pages.
-3. Contact details (name, email, role) stay in John's Gmail ONLY — NEVER in the
-   geojson (it is publicly served) and never committed anywhere in this repo.
-   GDPR basis: they submitted the claim to manage their listing; use contacts for
-   that purpose only — no marketing without separate consent, honour deletion requests.
+3. Contact details (name, email, role) stay in John's Gmail/Formspree account ONLY —
+   NEVER in the geojson (it is publicly served) and never committed anywhere in this
+   repo. They submitted the claim to manage their listing; use contacts for that
+   purpose only — no marketing or recruitment use, honour objection/deletion requests,
+   and apply the retention schedule in `/privacy`.
 
 Claimed so far: Lough Ree Distillery (Michael Clancy, CTO — 24 Jul 2026).
 

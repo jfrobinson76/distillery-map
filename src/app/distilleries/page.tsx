@@ -78,6 +78,12 @@ export default async function DistilleriesHub() {
           </Link>{" "}
           and we&apos;ll review it.
         </p>
+        <p className="mt-3 text-xs" style={{ color: WOW.muted }}>
+          <Link href="/privacy" className="underline" style={{ color: WOW.amber }}>
+            Privacy
+          </Link>{" "}
+          &middot; Distillery Map by Stillbound
+        </p>
       </main>
     </div>
   );
