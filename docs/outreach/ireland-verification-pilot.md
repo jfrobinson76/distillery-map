@@ -112,7 +112,7 @@ Thanks,
 
 John Robinson  
 Distillery Map by Stillbound  
-hello@distillerymap.org
+hello@stillbound.ai
 
 ## Pilot measures
 

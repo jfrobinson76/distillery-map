@@ -151,9 +151,11 @@ Share image: `npm run share-card` with a dev server up, writes `public/share/`.
 
 ## Contact
 
-- hello@distillerymap.ie (forwards to John's inbox)
-- hello@distillerymap.org (forwards to John's inbox)
+- hello@stillbound.ai (active privacy, submission, and outreach reply address)
+- `distillerymap.org` and `.ie` had no MX records when checked 29 Aug 2026;
+  do not publish addresses on those domains until mail delivery is configured and tested.
 
 ## Parent Project
 
-This is a SAMAC Consulting project. See `~/.claude/CLAUDE.md` for how all projects connect.
+This is a Stillbound ecosystem product. SAMAC is historical context, not the public parent brand.
+See `~/.claude/CLAUDE.md` for how all projects connect.

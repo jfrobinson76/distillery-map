@@ -349,7 +349,7 @@ function SubmitPanel({ onClose }: { onClose: () => void }) {
             {status === "error" && (
               <p className="text-xs" style={{ color: "#dc2626" }}>
                 Something went wrong. Email{" "}
-                <a href="mailto:hello@distillerymap.org" className="underline">hello@distillerymap.org</a> instead.
+                <a href="mailto:hello@stillbound.ai" className="underline">hello@stillbound.ai</a> instead.
               </p>
             )}
 
@@ -590,7 +590,7 @@ function ClaimPanel({ distilleryName, onClose }: { distilleryName: string; onClo
             {status === "error" && (
               <p className="text-xs" style={{ color: "#dc2626" }}>
                 Something went wrong. Email{" "}
-                <a href="mailto:hello@distillerymap.org" className="underline">hello@distillerymap.org</a> instead.
+                <a href="mailto:hello@stillbound.ai" className="underline">hello@stillbound.ai</a> instead.
               </p>
             )}
 
@@ -1087,8 +1087,8 @@ export default function DistilleryMapApp({
               Privacy
             </Link>{" "}
             &middot;{" "}
-            <a href="mailto:hello@distillerymap.org" style={{ color: WOW.amberGlow }}>
-              hello@distillerymap.org
+            <a href="mailto:hello@stillbound.ai" style={{ color: WOW.amberGlow }}>
+              hello@stillbound.ai
             </a>
           </span>
           <span>
