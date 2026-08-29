@@ -82,7 +82,7 @@ export default async function Page() {
         "@id": `${SITE_URL}/#organization`,
         name: "Distillery Map",
         url: SITE_URL,
-        email: "hello@distillerymap.org",
+        email: "hello@stillbound.ai",
       },
       {
         "@type": "WebSite",

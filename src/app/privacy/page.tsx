@@ -59,8 +59,8 @@ export default function PrivacyPage() {
             Distillery Map is operated by John Robinson, trading as Stillbound in Ireland.
             Stillbound is the data controller for personal information handled through this
             site. Contact{" "}
-            <a className="underline" style={{ color: WOW.amber }} href="mailto:hello@distillerymap.org">
-              hello@distillerymap.org
+            <a className="underline" style={{ color: WOW.amber }} href="mailto:hello@stillbound.ai">
+              hello@stillbound.ai
             </a>{" "}
             with any privacy question or request.
           </p>
@@ -165,8 +165,8 @@ export default function PrivacyPage() {
             Depending on the circumstances, you can ask to access, correct, erase, restrict or
             receive your personal information, and you can object to processing based on
             legitimate interests. Email{" "}
-            <a className="underline" style={{ color: WOW.amber }} href="mailto:hello@distillerymap.org">
-              hello@distillerymap.org
+            <a className="underline" style={{ color: WOW.amber }} href="mailto:hello@stillbound.ai">
+              hello@stillbound.ai
             </a>
             . You can also complain to Ireland&apos;s{" "}
             <a className="underline" style={{ color: WOW.amber }} href="https://www.dataprotection.ie" target="_blank" rel="noopener noreferrer">
