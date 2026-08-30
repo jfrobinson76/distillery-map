@@ -82,7 +82,10 @@ export default async function DistilleriesHub() {
           <Link href="/privacy" className="underline" style={{ color: WOW.amber }}>
             Privacy
           </Link>{" "}
-          &middot; Distillery Map by Stillbound
+          &middot; Distillery Map by{" "}
+          <a href="https://stillbound.ai" className="underline" style={{ color: WOW.amber }}>
+            Stillbound
+          </a>
         </p>
       </main>
     </div>

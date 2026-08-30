@@ -970,12 +970,13 @@ export default function DistilleryMapApp({
               style={{ color: WOW.amberGlow }}
             >
               Distillery Map{" "}
-              <span
-                className="text-sm font-normal"
+              <a
+                href="https://stillbound.ai"
+                className="text-sm font-normal hover:underline"
                 style={{ color: WOW.parchmentDark }}
               >
                 by Stillbound
-              </span>
+              </a>
             </h1>
             <p className="text-xs" style={{ color: WOW.parchmentDark }}>
               {count.toLocaleString()} locations and counting &middot;{" "}
@@ -1096,7 +1097,10 @@ export default function DistilleryMapApp({
             </a>
           </span>
           <span>
-            &copy; {new Date().getFullYear()} Distillery Map by Stillbound
+            &copy; {new Date().getFullYear()} Distillery Map by{" "}
+            <a href="https://stillbound.ai" className="hover:underline" style={{ color: WOW.amberGlow }}>
+              Stillbound
+            </a>
           </span>
         </div>
       </div>

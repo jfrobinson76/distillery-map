@@ -67,8 +67,66 @@ export default async function AgingInventoryPage() {
   const total = await getDistilleryCount();
   const ranked = [...ENTRIES].sort((a, b) => b.central - a.central);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: TITLE,
+        description: DESCRIPTION,
+        url: "https://distillerymap.org/whiskey-aging-inventory",
+        datePublished: "2026-08-02",
+        author: { "@type": "Organization", name: "Stillbound", url: "https://stillbound.ai" },
+        publisher: { "@type": "Organization", name: "Distillery Map by Stillbound", url: "https://distillerymap.org" },
+        about: {
+          "@type": "Dataset",
+          name: "Global whiskey aging inventory estimate",
+          description: `Country-by-country estimate of whiskey casks in maturation, ${TOTAL.central}m central with a ${TOTAL.low}m to ${TOTAL.high}m range, each figure tiered by source quality.`,
+          creator: { "@type": "Organization", name: "Stillbound" },
+          license: "https://creativecommons.org/licenses/by/4.0/",
+        },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How many casks of whiskey are aging in the world?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `About ${TOTAL.central} million casks, with source-bounded scenarios from ${TOTAL.low} million to ${TOTAL.high} million. The United States and Scotland together hold roughly ${BIG_TWO_SHARE}% of it.`,
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Which countries hold the most maturing whiskey?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: ranked
+                .slice(0, 5)
+                .map((e) => `${e.name}: about ${e.central} million casks`)
+                .join("; ") + ".",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How reliable are these figures?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: `Each country is tiered by source quality, from counted (trade-body or government inventories) to dark (no published figure). About ${DARK_SHARE}% of the central estimate sits in countries with no counted source.`,
+            },
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="min-h-dvh" style={{ background: WOW.parchment }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+      />
       <header
         className="px-4 py-3 sm:px-6"
         style={{ background: WOW.oak, borderBottom: `1px solid ${WOW.oakLight}` }}
