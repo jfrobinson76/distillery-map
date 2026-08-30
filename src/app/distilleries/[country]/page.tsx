@@ -295,7 +295,10 @@ export default async function CountryPage({ params }: Props) {
         <Link href="/privacy" className="underline" style={{ color: WOW.amber }}>
           Privacy
         </Link>{" "}
-        &middot; Distillery Map by Stillbound
+        &middot; Distillery Map by{" "}
+        <a href="https://stillbound.ai" className="underline" style={{ color: WOW.amber }}>
+          Stillbound
+        </a>
       </footer>
     </div>
   );
