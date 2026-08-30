@@ -141,3 +141,11 @@ just a missing address, so it is not in the JSON. See Needs John.
   with a December 2025 food-safety warning and no reopening announced. Recommended
   remove on "not distilling today," but it is a real site, not a historic ruin like
   the others in class B, so flagging the call rather than burying it in the table.
+
+## Decisions, 30 August 2026 (John)
+
+1. Dallas Dhu: removed. Heritage museum, fails the inclusion rules.
+2. Kimbland: removed. Mothballed since 2023, FSS warning outstanding.
+3. Deeside Distillery: renamed Lost Loch Spirits. Live site lostlochspirits.com publishes 7 Deeside Activity Park, Dess, Aboyne AB34 5BD.
+4. Portintruan: kept, John's call, noting elixirdistillers.com describes it as their in-progress Islay distillery. Website set to portintruan.com, operator Elixir Distillers, description says it is in build and nearing opening. Recheck at first-cask news.
+5. Langholm: brandy producer per its own site title. No published address; stays blank.
