@@ -1,4 +1,4 @@
-# Brief: "Who runs Britain's stills" — ownership map card
+# Brief: "Who Runs the UK's Stills" — the ownership web
 
 For a Cursor agent. Repo `distillery-map`. Read this whole file before touching anything.
 
@@ -15,8 +15,11 @@ Another agent (Devin) is working on branch `data/company-crosswalk`, editing
 ## What we are making
 
 One square social image, 2400×2400 (retina 2×, LinkedIn downsamples), in the same
-Stillbound creative as the August aging-inventory card, showing every UK distillery we can
-tie to a registered company, coloured by **who operates it**. The claim it carries:
+Stillbound creative as the August aging-inventory card and the September Kentucky county
+card: a **network diagram** of who operates the UK's distilleries. Not a map. Eight group
+hubs, each with spokes out to the distilleries it runs; every independent distillery as its
+own small node in the surrounding field, unconnected, because that is the point. The claim it
+carries:
 
 > Of the UK distilleries tied to a company at high confidence, most have a company of their
 > own. Eight groups run the rest. Diageo alone runs 28.
@@ -68,27 +71,39 @@ distillery is by definition independent. Put a `note` on each mapping saying why
 
 ## Step 2: the card (`docs/social/ownership/ownership-card.html`)
 
-Layout, square:
-- Masthead top-left in the report-edition style of the August card: **"Who Runs Britain's
-  Stills · September 2026"**, with the Stillbound mark as the August card carries it.
-- The map fills the frame: Great Britain and Northern Ireland outline in deep brown on
-  parchment, cropped so Scotland is large (most pins are in Speyside and Islay). England's
-  gin belt matters less; it can run off the bottom edge.
-- Pins: independents as small muted dots (`#7F7262`, 60% alpha). Group sites as larger
-  filled dots, one colour per group, the top eight groups by site count. Use the palette's
-  coppers/amber/gold plus at most three additional restrained tones you pick to stay in the
-  creative; no primary blue or green.
-- Legend bottom-left: group name, site count, in JetBrains Mono. Sorted by count.
-- The number, bottom-right, large, Newsreader: the share of high-confidence UK distilleries
-  that are independent, e.g. **"79% independent"**, with two lines under it:
+Render the web with D3 force layout (or a deterministic radial layout if force is unstable
+across builds; the PNG must be reproducible). Square frame, parchment ground.
+
+- **Masthead** top-left, report-edition style as the August card: **"Who Runs the UK's
+  Stills · September 2026"**, Stillbound mark as the August card carries it. "UK", never
+  "Britain": Northern Ireland's distilleries are in the data.
+- **Hubs**: the top eight operating groups by site count, drawn as larger nodes labelled in
+  Newsreader with the group name and, in JetBrains Mono, the count. One colour per hub from
+  the palette's coppers, amber, gold and deep brown, plus at most three restrained tones you
+  add to stay inside the creative; no primary blue or green. Hub size scales with site count
+  (Diageo, 28, is visibly the largest).
+- **Spokes**: a thin line (`#6E2F14`, 35% alpha) from each hub to each of its distilleries,
+  drawn as a small filled node in the hub's colour, labelled only where there is room (Islay
+  and Speyside names are recognisable and worth showing; do not label all 28 Diageo sites if
+  they collide).
+- **Independents**: every high-confidence distillery whose company runs only that site, as a
+  small muted node (`#7F7262`, 60% alpha), unlabelled, no spokes, scattered as a field around
+  and between the hubs so the eye reads "many small, few large".
+- **The number**, bottom-right, large, Newsreader: the share of high-confidence UK
+  distilleries that are independent, e.g. **"79% independent"**, with two lines under it:
   "*n* distilleries tied to a registered company at high confidence." and
   "Eight groups run *m*. Diageo runs 28."
-- Footer, small, Instrument Sans: "Source: Companies House and Wikidata, matched to the
+- **Legend**: none needed if hubs are labelled. If a hub label will not fit, a compact legend
+  bottom-left in JetBrains Mono, sorted by count.
+- **Footer**, small, Instrument Sans: "Source: Companies House and Wikidata, matched to the
   Stillbound Distillery Map. Method and full table: stillbound.ai/research/ownership" (page
-  does not exist yet; John will decide the slug, keep it a variable at the top of the build).
-- No hashtags, no logo wall, no gradient. One idea, very little text. (John rejected an
-  earlier card for being "visually exhausting" at feed size; see the review notes in
-  `docs/linkedin-aging-inventory-post.md`.)
+  does not exist yet; keep the slug a variable at the top of the build).
+- No hashtags, no logo wall, no gradient, no glow. One idea, very little text. John rejected
+  an earlier card for being "visually exhausting" at feed size (review notes in
+  `docs/linkedin-aging-inventory-post.md`); the Kentucky county card is the recent example of
+  the density that worked.
+- **Optional variant B**, only after A ships: the same data as a map of the UK with the same
+  colours, for a carousel second slide. Do not start B before A is reviewed.
 
 ## Step 3: the build (`scripts/build-ownership-card.mjs`)
 
@@ -111,6 +126,6 @@ Layout, square:
 
 ## Done looks like
 
-A PR with the card PNG, the HTML, the build script, `groups.json`, the summary, and a PR
+A PR with the web PNG, the HTML, the build script, `groups.json`, the summary, and a PR
 description that quotes the three numbers and lists the multi-site companies you left as
 Independent.
