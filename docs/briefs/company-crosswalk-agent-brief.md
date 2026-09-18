@@ -22,30 +22,39 @@ phase. Do not merge; John merges.
 https://developer.company-information.service.gov.uk/. Rate limit 600 requests per five
 minutes; the script sleeps 0.6 s between calls. Never commit the key. Never raise the rate.
 
-## Phase 1: United Kingdom (521 distilleries)
+## Phase 1: United Kingdom (521 distilleries). State at 18 Sep 2026, 18:30
 
-1. Run `python3 scripts/build_company_crosswalk.py --companies-house --limit 20`. Check the
-   20 by hand against the register pages. Fix the matcher before scaling if more than 3 of 20
-   are wrong.
-2. Improve the matcher with the company profile endpoint
-   (`GET /company/{number}`), which returns `sic_codes`. **SIC 11010 (distilling, rectifying
-   and blending of spirits) is the strongest confidence signal available.** A name match with
-   SIC 11010 is `high`; a name match with any other SIC is `medium` at best; 11050 (beer),
-   47250 (retail of beverages) or 56xxx (hospitality) with a distillery-like name is a
-   visitor-centre or bar company, not the producer: mark `low`, note it.
-3. **Shells.** The first 20-name run (18 Sep) matched BOWMORE LTD (dissolved), ARDMORE LIMITED
-   (registered 2023) and ABERFELDY LIMITED (registered 2025) on exact name. None operates the
-   distillery; Beam Suntory, Beam Suntory and John Dewar & Sons do. The script now caps
-   dissolved or post-2023 registrations at `medium`. Go further: read the profile's
-   `accounts.last_accounts.type`; `dormant` or `micro-entity` on a famous name is a shell,
-   mark `low` and find the operator via the SIC 11010 search or the group's Wikidata owner.
-3b. Prefer the **operating company** over the holding company where both exist. Diageo plc
-   (00023307) is the correct owner of Caol Ila and the wrong entity for accounts; note the
-   group in `relation: group` and, if the operating company can be found, add it as a second
-   row for the same slug with `relation: operator`. One slug may have two rows.
-4. Run the full 521. Target: **≥ 400 UK slugs with a `high` or `verified` row.** Report the
-   distribution of `confidence` and the slugs with no match at all as a list in the PR.
-5. Do not touch the geojson.
+The Companies House name pass has **already been run** on all 521 (`--companies-house`,
+commit 861f356). Do not rerun it. Result: 365 slugs have a row; 276 `high`/`verified`,
+72 `medium`, 17 `low`, **156 unmatched**. The remaining work is judgment, not volume.
+
+**1a. The 156 unmatched.** List them with
+`python3 -c "..."` (see the commit message for the snippet) or by diffing the geojson UK
+slugs against the crosswalk. Nearly all are sites with no company of their own: Diageo
+(Dailuaine, Auchroisk, Glendullan, Glen Ord, Inchgower...), Bacardi (MacDuff, Royal Brackla,
+Aultmore, Craigellachie, Aberfeldy), Inver House (Speyburn, Balmenach, Knockdhu, Pulteney,
+Balblair), Chivas, Whyte & Mackay, Edrington, William Grant, Loch Lomond Group, Ian Macleod,
+Gordon & MacPhail, Distell/Heineken (Bunnahabhain, Deanston, Tobermory), Beam Suntory
+(Bowmore, Laphroaig, Ardmore, Glen Garioch, Auchentoshan). Find the **operating company** per
+group on Companies House (SIC 11010, files full accounts, not dormant), confirm it on the
+register page, then add one row per site to `company-crosswalk-manual.csv` with
+`relation: operator` and the group named in `note`. Roughly 15 companies cover most of the 156.
+Independent distilleries in the list (Arran, Abhainn Dearg) get their own search by hand.
+
+**1b. The 72 `medium` and 17 `low`.** For each, open the register page. Read SIC codes and
+`accounts.last_accounts.type`. Promote to `verified` in the manual CSV when SIC 11010 and
+non-dormant accounts agree with the distillery; replace with the operator when the match is
+a shell (BOWMORE LTD dissolved, ARDMORE LIMITED 2023, ABERFELDY LIMITED 2025, GLENBURGIE
+DISTILLERY LIMITED 00074809 is a dormant Chivas name-holder); leave `low` with a reason
+when neither is possible.
+
+**1c. Target:** ≥ 450 of 521 UK slugs with a `high` or `verified` row, every one of the 156
+either mapped to its operator or listed with a reason. Report the final distribution and the
+residual list in the PR.
+
+Rules from the matcher, keep them: an exact name on a dissolved or post-2023 registration is
+`medium` at best; group-level numbers (Diageo plc 00023307) are `relation: group`, and the
+operating subsidiary is a second row for the same slug when it exists.
 
 ## Phase 2: Ireland (check count with `country == "Ireland"`)
 
