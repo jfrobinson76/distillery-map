@@ -1,0 +1,151 @@
+{
+  "version": 2,
+  "description": "Display names and colours only. Grouping is by psc-parents.csv ultimate controller (ultimate_number, or ultimate_name when the chain stops at a foreign parent). A controller with one site is Independent.",
+  "hub_priority": [
+    "diageo",
+    "pernod-ricard",
+    "william-grant",
+    "whyte-mackay",
+    "inver-house",
+    "bacardi",
+    "ian-macleod",
+    "suntory"
+  ],
+  "lesser_colour": "#8A735A",
+  "groups": [
+    {
+      "id": "diageo",
+      "display": "Diageo",
+      "short": "Diageo",
+      "colour": "#6E2F14",
+      "match_numbers": ["00023307"],
+      "match_names": ["Diageo", "Diageo Plc", "Diageo plc", "DIAGEO SCOTLAND LIMITED"],
+      "note": "Diageo plc is PSC-exempt and is its own top; Wikidata rows and Diageo Scotland Limited both land here."
+    },
+    {
+      "id": "pernod-ricard",
+      "display": "Pernod Ricard",
+      "short": "Pernod Ricard",
+      "colour": "#9C4E20",
+      "match_numbers": [],
+      "match_names": ["Pernod Ricard Sa", "Pernod Ricard SA"],
+      "note": "Foreign parent: chain stops at Pernod Ricard SA."
+    },
+    {
+      "id": "william-grant",
+      "display": "William Grant",
+      "short": "William Grant",
+      "colour": "#B87333",
+      "match_numbers": ["15238251", "SC131772"],
+      "match_names": ["William Grant & Sons Holdings Limited", "WILLIAM GRANT & SONS LIMITED"],
+      "note": "William Grant & Sons Holdings Limited."
+    },
+    {
+      "id": "whyte-mackay",
+      "display": "Whyte & Mackay",
+      "short": "Whyte & Mackay",
+      "colour": "#C8852E",
+      "match_numbers": ["09094033"],
+      "match_names": ["Emperador Holdings (Gb) Limited", "Emperador Holdings"],
+      "note": "Emperador Holdings → Whyte & Mackay."
+    },
+    {
+      "id": "inver-house",
+      "display": "Inver House",
+      "short": "Inver House",
+      "colour": "#C4A574",
+      "match_numbers": ["SC222095"],
+      "match_names": [
+        "International Beverage Holdings Limited",
+        "International Beverage Holdings (Uk) Limited",
+        "International Beverage"
+      ],
+      "note": "International Beverage → Inver House. Same ultimate_number, two name spellings."
+    },
+    {
+      "id": "suntory",
+      "display": "Suntory Global Spirits",
+      "short": "Suntory",
+      "colour": "#A05A22",
+      "match_numbers": ["05608446", "05591988"],
+      "match_names": ["Beam Suntory Uk Holdings Limited", "BEAM SUNTORY UK LIMITED"],
+      "note": "Beam Suntory UK Holdings Limited."
+    },
+    {
+      "id": "bacardi",
+      "display": "Bacardi",
+      "short": "Bacardi",
+      "colour": "#D39A3D",
+      "match_numbers": ["00366786", "00613551"],
+      "match_names": ["Bacardi U.K. Limited", "JOHN DEWAR AND SONS LIMITED"],
+      "note": "Bacardi U.K. Limited."
+    },
+    {
+      "id": "ian-macleod",
+      "display": "Ian Macleod",
+      "short": "Ian Macleod",
+      "colour": "#8B5A3C",
+      "match_numbers": ["SC032696"],
+      "match_names": ["IAN MACLEOD DISTILLERS LIMITED", "Ian Macleod Distillers Ltd"],
+      "note": "Ian Macleod Distillers Limited."
+    },
+    {
+      "id": "brown-forman",
+      "display": "Brown-Forman",
+      "short": "Brown-Forman",
+      "colour": "#7A4A2A",
+      "match_numbers": [],
+      "match_names": ["Brown-Forman Corporation"],
+      "note": "Foreign parent: Brown-Forman Corporation."
+    },
+    {
+      "id": "distell",
+      "display": "Distell",
+      "short": "Distell",
+      "colour": "#9A6B4F",
+      "match_numbers": [],
+      "match_names": ["Distell Group Proprietary Limited"],
+      "note": "Foreign parent: Distell (Heineken). CVH Spirits / Burn Stewart estate."
+    },
+    {
+      "id": "edrington",
+      "display": "Edrington",
+      "short": "Edrington",
+      "colour": "#A67C52",
+      "match_numbers": ["SC428674"],
+      "match_names": ["Kintail Trustees Limited"],
+      "note": "Kintail Trustees → Edrington."
+    },
+    {
+      "id": "arran",
+      "display": "Isle of Arran",
+      "short": "Arran",
+      "colour": "#8C6A4A",
+      "match_numbers": ["SC134963"],
+      "match_names": ["ISLE OF ARRAN DISTILLERS LIMITED"],
+      "note": "Isle of Arran Distillers Limited (Lochranza and Lagg)."
+    },
+    {
+      "id": "la-martiniquaise",
+      "display": "La Martiniquaise",
+      "short": "La Martiniquaise",
+      "colour": "#7F5C3C",
+      "match_numbers": ["01595703"],
+      "match_names": [
+        "GLEN TURNER COMPANY LIMITED",
+        "Glen Turner Company Limited",
+        "Glen Turner Co"
+      ],
+      "note": "Glen Turner Co → La Martiniquaise. Key by 01595703; the PSC name casing differs by row."
+    },
+    {
+      "id": "loch-lomond",
+      "display": "Loch Lomond Group",
+      "short": "Loch Lomond",
+      "colour": "#6B4E38",
+      "match_numbers": [],
+      "match_names": ["Llg Topco Limited", "LLG Topco"],
+      "note": "LLG Topco → Loch Lomond Group."
+    }
+  ]
+}
