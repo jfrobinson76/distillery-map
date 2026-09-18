@@ -83,3 +83,16 @@ garden-county-distillery,cro,648539,GARDEN COUNTY DISTILLERY LIMITED,operator,me
 ballyvolane-house-spirits,cro,645884,BALLYVOLANE HOUSE LIMITED,operator,medium,CRO open data: Normal; NACE 5629; reg 2019. Bertha's Revenge gin; company is the house
 crafted-spirits-distillery,cro,572896,CRAFTED SPIRITS LIMITED,operator,medium,CRO open data: Normal; NACE 7490; reg 2015
 daly-s-distillery,cro,9144,J. J. DALY & COMPANY UNLIMITED COMPANY,operator,medium,CRO open data: Normal; reg 1936. Cork; name match, confirm it is the distillery
+strathmill,companies-house,SC000750,DIAGEO SCOTLAND LIMITED,operator,high,replaces name-match STRATHMILL LIMITED SC373236 (dissolved shell); Diageo malt estate
+cragganmore-distillery,companies-house,SC000750,DIAGEO SCOTLAND LIMITED,operator,high,replaces name-match CRAGGANMORE LTD SC425401 (shell); Diageo malt estate
+glenkinchie-distillery,companies-house,SC000750,DIAGEO SCOTLAND LIMITED,operator,high,replaces name-match GLENKINCHIE LIMITED SC407319 (shell); Diageo malt estate
+glen-elgin-distillery,companies-house,SC000750,DIAGEO SCOTLAND LIMITED,operator,high,replaces name-match GLEN ELGIN GROUP LTD 10192068 (unrelated); Diageo malt estate
+kininvie-distillery,companies-house,SC131772,WILLIAM GRANT & SONS LIMITED,operator,high,Wikidata carried the French subsidiary id; Grant's Dufftown estate
+ailsa-bay,companies-house,SC131772,WILLIAM GRANT & SONS LIMITED,operator,high,as above; Girvan site
+girvan-distillery,companies-house,SC131772,WILLIAM GRANT & SONS LIMITED,operator,high,as above
+glentauchers-distillery,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,high,Chivas malt estate
+glen-grant-distillery,companies-house,SC292101,GLEN GRANT LIMITED,operator,high,register-checked 18 Sep: active; SIC 11010; full accounts. Campari; replaces Wikidata French id
+ben-nevis-distillery,companies-house,SC022667,BEN NEVIS DISTILLERY (FORT WILLIAM) LIMITED,operator,high,register-checked: active; SIC 11010. Nikka; replaces Wikidata Japanese id
+glenglassaugh-distillery,companies-house,SC310871,THE GLENGLASSAUGH DISTILLERY COMPANY LIMITED,operator,high,register-checked: active; SIC 11010. Brown-Forman via PSC
+tomatin-distillery,companies-house,SC095810,"TOMATIN DISTILLERY COMPANY LIMITED,(THE)",operator,high,register-checked: active; SIC 11010; full accounts. Takara Shuzo / Marubeni
+ardnahoe-distillery,companies-house,SC507595,ARDNAHOE DISTILLERY COMPANY LIMITED,operator,high,register-checked: active; SIC 11010. Hunter Laing
