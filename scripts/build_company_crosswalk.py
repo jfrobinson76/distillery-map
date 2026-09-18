@@ -10,6 +10,12 @@ them until this file does.
 Sources, in order of trust:
   1. data/company-crosswalk/company-crosswalk-manual.csv  hand-verified rows (numbers confirmed
      against the register by the vault's filings watcher)
+  1b. data/company-crosswalk/company-crosswalk-operators.csv  site -> operating company for
+     group-run distilleries (Diageo Scotland, Dewar's, Inver House, Beam Suntory UK...) and
+     independents whose company name differs from the site name. Company checked on the
+     register (status, SIC, accounts type); the site-to-company relation is industry
+     knowledge, which is why the row is `high`, not `verified`. Takes precedence over
+     Wikidata and the name search.
   2. data/company-crosswalk/wd-direct.csv + wd-via-owner.csv  Wikidata (CC0), matched on name
      and country. Thin: 26 Companies House ids worldwide at 18 Sep 2026.
   3. Companies House search API, UK only, when COMPANIES_HOUSE_API_KEY is set.
@@ -207,6 +213,17 @@ def main() -> int:
                      "match_method": "manual", "confidence": "verified", "verified": today,
                      "source": "vault .claude/ingest/filings-watchlist.json", "note": m.get("note", "")})
     have = {r["slug"] for r in rows}
+    ops = ENR / "company-crosswalk-operators.csv"
+    for m in (list(csv.DictReader(ops.open())) if ops.exists() else []):
+        d = by_slug.get(m["slug"])
+        if not d or m["slug"] in have:
+            continue
+        rows.append({"slug": m["slug"], "distillery_name": d["name"], "country": d["country"],
+                     "registry": m["registry"], "company_number": m["company_number"],
+                     "company_name": m["company_name"], "relation": m["relation"],
+                     "match_method": "operator-map", "confidence": m.get("confidence") or "high",
+                     "verified": "", "source": "company-crosswalk-operators.csv", "note": m.get("note", "")})
+        have.add(m["slug"])
     for r in match_wikidata(dists, load_wikidata(), today):
         if r["slug"] not in have:
             rows.append(r)

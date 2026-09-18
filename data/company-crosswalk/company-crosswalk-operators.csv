@@ -1,0 +1,43 @@
+slug,registry,company_number,company_name,relation,confidence,note
+auchroisk-distillery,companies-house,SC000750,DIAGEO SCOTLAND LIMITED,operator,high,register-checked 18 Sep 2026: active since 1877; SIC 11010; full accounts. Site-to-operator per Diageo malt estate
+dailuaine,companies-house,SC000750,DIAGEO SCOTLAND LIMITED,operator,high,as above
+glendullan-distillery,companies-house,SC000750,DIAGEO SCOTLAND LIMITED,operator,high,as above
+glen-ord-distillery,companies-house,SC000750,DIAGEO SCOTLAND LIMITED,operator,high,as above
+inchgower-distillery,companies-house,SC000750,DIAGEO SCOTLAND LIMITED,operator,high,as above
+royal-lochnagar-distillery,companies-house,SC000750,DIAGEO SCOTLAND LIMITED,operator,high,as above
+roseisle,companies-house,SC000750,DIAGEO SCOTLAND LIMITED,operator,high,as above
+teaninich-distllery,companies-house,SC000750,DIAGEO SCOTLAND LIMITED,operator,high,as above
+cameronbridge-distillery,companies-house,SC000750,DIAGEO SCOTLAND LIMITED,operator,high,grain distillery; as above
+diageo-global-supply-centre,companies-house,SC000750,DIAGEO SCOTLAND LIMITED,operator,high,Leven; as above
+aultmore-distillery,companies-house,00613551,JOHN DEWAR AND SONS LIMITED,operator,high,register-checked: active 1958; SIC 11010 46342; full accounts. Bacardi malt estate
+macduff-distillery,companies-house,00613551,JOHN DEWAR AND SONS LIMITED,operator,high,as above
+royal-brackla,companies-house,00613551,JOHN DEWAR AND SONS LIMITED,operator,high,as above
+aberfeldy-distillery,companies-house,00613551,JOHN DEWAR AND SONS LIMITED,operator,high,replaces name-match ABERFELDY LIMITED 16513868 (registered 2025; shell)
+ancnoc-distillery,companies-house,SC040036,INVER HOUSE DISTILLERS LIMITED,operator,high,register-checked: active 1964; SIC 11010; full accounts. Knockdhu
+balmenach-distillery,companies-house,SC040036,INVER HOUSE DISTILLERS LIMITED,operator,high,as above
+speyburn-glenlivet-distillery,companies-house,SC040036,INVER HOUSE DISTILLERS LIMITED,operator,high,as above
+glen-garioch-distillery,companies-house,05591988,BEAM SUNTORY UK LIMITED,operator,high,register-checked: active 2005; SIC 11010; full accounts. Morrison Bowmore SC119227 and D. Johnston (Laphroaig) SC028072 both dormant
+laphroaig-distillery,companies-house,05591988,BEAM SUNTORY UK LIMITED,operator,high,as above
+bowmore-distillery,companies-house,05591988,BEAM SUNTORY UK LIMITED,operator,high,replaces name-match BOWMORE LTD 10465075 (dissolved shell)
+ardmore-distillery,companies-house,05591988,BEAM SUNTORY UK LIMITED,operator,high,replaces name-match ARDMORE LIMITED SC735261 (registered 2023)
+tobermory-distillery,companies-house,SC109881,CVH SPIRITS LIMITED,operator,high,register-checked: active 1988; SIC 11010; group accounts. Formerly Burn Stewart Distillers; Distell then Heineken
+arran-distillery,companies-house,SC134963,ISLE OF ARRAN DISTILLERS LIMITED,operator,high,register-checked: active 1991; full accounts; SIC 11060 (odd but the company). Lochranza
+lagg-distillery,companies-house,SC134963,ISLE OF ARRAN DISTILLERS LIMITED,operator,high,as above
+springbank-distillery,companies-house,SC003582,"J. & A. MITCHELL AND COMPANY, LIMITED",operator,high,register-checked: active 1897; SIC 11010; group accounts
+glenfarclas-distillery,companies-house,SC025459,J. & G. GRANT,operator,high,register-checked: active 1947; SIC 11010
+wolfburn-distillery,companies-house,07881791,AURORA BREWING LIMITED,operator,high,register-checked: active 2011; SIC 11010 82990
+penderyn-distillery,companies-house,03620949,THE WELSH WHISKY COMPANY LIMITED,operator,high,register-checked: active 1998; SIC 11010; full accounts
+ncnean-distillery,companies-house,SC445789,NC'NEAN DISTILLERY LIMITED,operator,high,register-checked: active 2013; SIC 11010. Apostrophe broke the name match
+ardnamurchan-distillery,companies-house,SC141800,ADELPHI DISTILLERY LIMITED,operator,high,register-checked: active 1992; SIC 11010
+isle-of-raasay-distillery,companies-house,SC483145,R&B DISTILLERS LIMITED,operator,high,register-checked: active 2014; SIC 11010
+lindores-abbey-distillery,companies-house,SC442379,THE LINDORES DISTILLING CO. LTD,operator,high,register-checked: active 2013; SIC 11010
+newbridge-bond-the-benriach-distillery-company-limited,companies-house,SC258480,THE BENRIACH DISTILLERY COMPANY LIMITED,operator,high,register-checked: active 2003; SIC 11010; full accounts. Brown-Forman
+thames-distillers-london-distillery,companies-house,03289012,THAMES DISTILLERS LIMITED,operator,high,register-checked: active 1996; SIC 11010 11040 46342
+langley-distillery-alcohols-ltd,companies-house,00547325,ALCOHOLS LIMITED,operator,high,register-checked: active 1955; SIC 11010 20590; group accounts
+adnams-whiskey-dunnage,companies-house,00031114,ADNAMS PLC,operator,high,register-checked: active 1890; SIC 11010 11050; full accounts
+tarquin-s-gin-distillery,companies-house,08230959,SOUTHWESTERN DISTILLERY LIMITED,operator,high,register-checked: active 2012; SIC 11010
+the-orkney-distillery,companies-house,SC525595,ORKNEY DISTILLING LIMITED,operator,high,register-checked: active 2016; SIC 11010
+portintruan-distillery,companies-house,09681748,ELIXIR DISTILLERS LTD,owner,medium,register-checked: active 2015 but SIC 74909; medium accounts. Operating entity for the Islay site may differ; Devin to check
+ardross-distillery,companies-house,11245252,GREENWOOD DISTILLERS LIMITED,owner,medium,register-checked: active 2018; SIC 46342 (wholesale) not 11010
+falkirk-distillery,companies-house,SC332343,FALKIRK WHISKY DISTILLERY COMPANY LIMITED,operator,medium,register-checked: active 2007; SIC 32990 (odd). Rosebank Distillery Camelon SC437740 is dormant
+hayman-s-gin-distillery,companies-house,00533731,HAYMAN DISTILLERS LIMITED,owner,low,register shows dormant accounts on this entity; the trading company is a sibling. Devin to find it
