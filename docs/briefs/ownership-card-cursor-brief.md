@@ -129,3 +129,63 @@ across builds; the PNG must be reproducible). Square frame, parchment ground.
 A PR with the web PNG, the HTML, the build script, `groups.json`, the summary, and a PR
 description that quotes the three numbers and lists the multi-site companies you left as
 Independent.
+
+---
+
+## Variant B is now the primary (John, 18 Sep 2026, after seeing A)
+
+A is approved and kept as the second carousel slide. **B is the lead image**: the same claim,
+drawn on a map of the UK with every distillery at its real coordinates.
+
+### Delivery route
+
+`cursor[bot]` has read-only access to this repo. Do exactly what worked for A: build on a
+local branch `viz/ownership-map` off `origin/viz/ownership-card` (PR #33 carries A), then park
+the commit as an apply-ready patch plus the PNG on `jfrobinson76/stillbound-knowledge` in
+`_meta/Product Sync/Ownership Map/` and open a PR there. Claude applies it to this repo.
+Do not edit A's files; add alongside them.
+
+### The picture
+
+- **Base**: UK outline from `data/boundaries/ne_10m_admin_0_countries.geojson` (GBR; include
+  Northern Ireland, exclude the Republic or render it at 30% so the border reads). Deep brown
+  line on parchment, no fill or a 4% brown fill. Project so **Scotland is large**: a conic or
+  transverse Mercator centred around 4°W, 56.5°N, with England running off the bottom edge
+  is acceptable; Shetland may be dropped or inset. Islay, Skye, Orkney and Speyside must be
+  distinguishable at feed size.
+- **Every high-confidence UK distillery at its real coordinates** from the geojson.
+  Independents (the 79%) as the same small muted dots as A (`#7F7262`, 60% alpha). They stay
+  dots. No lines.
+- **Group sites** as filled dots in the group's colour from A (keep A's palette assignment
+  per group so the two slides agree).
+- **Hubs = registered offices.** For each of the eight groups, take the registered office
+  address from the Companies House page of the operating company in `groups.json`
+  (`https://find-and-update.company-information.service.gov.uk/company/<number>`, public, no
+  key), geocode it once (Nominatim with a proper User-Agent and 1 request/second, or by hand
+  from the postcode), and store `hub: {lat, lng, address, source_url}` in `groups.json`.
+  Draw the hub as A's larger node with the group name and count.
+- **Lines from each hub to each of its sites**, thin, the group's colour at 45% alpha, drawn
+  under the dots. Diageo's 28 lines from Edinburgh will fan across the Highlands and out to
+  Islay and Skye; that fan is the picture. Slight curvature (quadratic, small offset) so
+  overlapping lines to Speyside separate; no arrows.
+- **Label discipline**: hub labels only, plus at most six site labels where they carry the
+  story (Lagavulin, Caol Ila, Talisker, Cardhu, Glenfiddich, Laphroaig). No label collisions;
+  drop a label rather than shrink it.
+- **Masthead, the number, footer**: identical to A. Fix A's masthead wrap (the "·" should not
+  end line one). Use one name per group across both slides; "Suntory Global Spirits" in the
+  summary and "Suntory" on the card is fine if the post uses the short form.
+- Output `docs/social/ownership/ownership-map-2400.png` and `ownership-map.html`; extend
+  `scripts/build-ownership-card.mjs` with a `--variant map` flag or add
+  `build-ownership-map.mjs`; add `npm run ownership-map`. Append the hub table (group,
+  registered office, coordinates, source URL) to `ownership-summary.md`.
+
+### Export note
+
+Headless Chrome hangs on John's Mac with the current flags. If you touch the exporter, use
+`--headless=new` and `--virtual-time-budget=8000`, and keep a 60 s timeout. Commit the PNG
+from your own export either way.
+
+### Checks
+
+Same as A, plus: every hub coordinate has a `source_url`; the 79% / 312 / 58 / 28 figures on
+B equal A's from the same build; view at 393 px, Islay and Speyside still distinguishable.
