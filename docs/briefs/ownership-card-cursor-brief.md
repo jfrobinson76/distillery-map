@@ -200,3 +200,27 @@ from your own export either way.
 
 Same as A, plus: A must be rebuilt on the same controller-based grouping so both slides carry
 the same figures (the 79% card is superseded; do not post it); view at 393 px, Islay and Speyside still distinguishable.
+
+---
+
+## Correction, 18 Sep 2026 21:40: the card is Scotch whisky only
+
+Read `data/ownership/README.md` on `data/company-crosswalk` first. The UK-wide number was two
+industries in one denominator (England's gin belt is ~100% independent by nature). The card
+that survives a hostile question is **Scotch whisky only**:
+
+- Universe: map region `scotland` AND (description says malt/grain/whisky OR the category
+  verdict in `data/categories/out_*.json` includes whisky). 178 at 18 Sep.
+- Grouping: controller from `data/ownership/psc-parents.csv`; independent = controller runs
+  one site.
+- Expected figures (recompute): ~150 matched, 14 groups running ~90, Diageo 34, independents
+  ~60 matched plus ~28 unmatched small sites. Treat unmatched Scotch sites as independent
+  dots on the map (they are all small post-2005 distilleries; list them in the summary).
+- **Title: "Who Runs Scotland's Stills · September 2026"** (Scotland, whisky; not UK).
+- **The number**: not a single percentage. Two lines, Newsreader:
+  **"Half independent."** then, smaller: "*n* Scotch whisky distilleries. Fourteen groups run
+  *m*. Diageo runs *d*, one in five." And the caveat line in Instrument Sans: "By number of
+  distilleries, not by litres." That caveat is not optional.
+- Map: Scotland only, large; Islay, Campbeltown, Speyside, Skye, Orkney legible. No England.
+- Slide two (A rebuilt): same universe and grouping, web layout.
+- The 79% PNG in PR #33 is superseded; leave it in git history, replace the file.
