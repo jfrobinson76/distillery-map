@@ -9,6 +9,7 @@
     "lint": "eslint",
     "indexnow": "node scripts/indexnow.mjs",
     "share-card": "node scripts/share-card.mjs",
+    "ownership-card": "node scripts/build-ownership-card.mjs",
     "search:audit": "node scripts/search-intelligence.mjs audit",
     "search:auth": "node scripts/gsc-auth.mjs",
     "search:ingest": "node scripts/search-intelligence.mjs ingest",
