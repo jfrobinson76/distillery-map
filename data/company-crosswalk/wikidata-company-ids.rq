@@ -1,0 +1,8 @@
+SELECT DISTINCT ?item ?itemLabel ?org ?orgLabel ?ch ?oc ?countryLabel ?coord WHERE {
+  { ?item wdt:P31/wdt:P279* wd:Q1251750 . } UNION { ?item wdt:P31/wdt:P279* wd:Q10373548 . }
+  { ?item (wdt:P127|wdt:P137|wdt:P749) ?org . } UNION { BIND(?item AS ?org) }
+  { ?org wdt:P2622 ?ch . } UNION { ?org wdt:P1320 ?oc . }
+  OPTIONAL { ?item wdt:P17 ?country . }
+  OPTIONAL { ?item wdt:P625 ?coord . }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}

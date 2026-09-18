@@ -1,0 +1,98 @@
+slug,distillery_name,country,registry,company_number,company_name,relation,match_method,confidence,verified,source,note
+belgian-owl-distillery,Belgian Owl Distillery,Belgium,opencorporates:be,0867330745,Belgian Owl Distillery,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694797,name jaccard 1.00
+biercee-distillery,Biercée Distillery,Belgium,opencorporates:be,0401630775,Biercée Distillery,self,wikidata-name,high,,http://www.wikidata.org/entity/Q24936827,name jaccard 1.00
+braeckman,Braeckman,Belgium,opencorporates:be,0454083625,Braeckman,self,wikidata-name,high,,http://www.wikidata.org/entity/Q3197953,name jaccard 1.00
+brouwerij-wilderen,Brouwerij Wilderen,Belgium,opencorporates:be,0890455842,Brouwerij Wilderen,self,wikidata-name,high,,http://www.wikidata.org/entity/Q2174139,name jaccard 1.00
+bruggeman,Bruggeman,Belgium,opencorporates:be,0434965222,Bruggeman,self,wikidata-name,high,,http://www.wikidata.org/entity/Q13445770,name jaccard 1.00
+cockney-s-distillery,Cockney's Distillery,Belgium,opencorporates:be,0558867280,Cockney's Distillery,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694289,name jaccard 1.00
+cosemans,Cosemans,Belgium,opencorporates:be,0415054882,Cosemans,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694292,name jaccard 1.00
+de-cort-distillery,De Cort Distillery,Belgium,opencorporates:be,0873089575,De Cort,self,wikidata-name,high,,http://www.wikidata.org/entity/Q123067496,name jaccard 1.00
+de-korhaan,De Korhaan,Belgium,opencorporates:be,0401320474,De Korhaan,self,wikidata-name,high,,http://www.wikidata.org/entity/Q13750103,name jaccard 1.00
+de-l-auvre,De L'Auvre,Belgium,opencorporates:be,0414893447,De L'Auvre,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694304,name jaccard 1.00
+de-moor,De Moor,Belgium,opencorporates:be,0442041569,De Moor,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694306,name jaccard 1.00
+distillerie-du-fays,DISTILLERIE DU FAYS,Belgium,opencorporates:be,0450939439,Distillerie du Centenaire,self,wikidata-name,medium,,http://www.wikidata.org/entity/Q116694823,name jaccard 0.50
+distillerie-j-de-bruyn,Distillerie J. De Bruyn,Belgium,opencorporates:be,0418977147,"De Bruyn, J.",self,wikidata-name,medium,,http://www.wikidata.org/entity/Q116694299,name jaccard 0.67
+distillerie-radermacher,Distillerie Radermacher,Belgium,opencorporates:be,0472170660,Distillerie Radermacher,self,wikidata-name,high,,http://www.wikidata.org/entity/Q20821529,name jaccard 1.00
+distillery-de-beukelaer,Distillery De Beukelaer,Belgium,opencorporates:be,0428760190,Distillery De Beukelaer,self,wikidata-name,high,,http://www.wikidata.org/entity/Q58864594,name jaccard 1.00
+distillery-de-stoop,Distillery De Stoop,Belgium,opencorporates:be,0435685002,Distillery De Stoop,self,wikidata-name,high,,http://www.wikidata.org/entity/Q1867158,name jaccard 1.00
+filliers,Filliers,Belgium,opencorporates:be,0401021457,Filliers,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694330,name jaccard 1.00
+fryns,Fryns,Belgium,opencorporates:be,0401299094,Fryns,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694332,name jaccard 1.00
+grandes-distilleries-de-charleroi,Grandes Distilleries de Charleroi,Belgium,opencorporates:be,0401635131,Grandes Distilleries de Charleroi,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694835,name jaccard 1.00
+hougardia,Hougardia,Belgium,opencorporates:be,0400951577,Hougardia,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694340,name jaccard 1.00
+konings,Konings,Belgium,opencorporates:be,0434680160,Konings,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694346,name jaccard 1.00
+likeurstokerij-t-zwaantje,Likeurstokerij 't Zwaantje,Belgium,opencorporates:be,0405086846,Likeurstokerij 't Zwaantje,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694359,name jaccard 1.00
+massy,Massy,Belgium,opencorporates:be,0452468772,Massy,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694369,name jaccard 1.00
+neefs,Neefs,Belgium,opencorporates:be,0404844049,Neefs,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694374,name jaccard 1.00
+notermans,Notermans,Belgium,opencorporates:be,0401286525,Notermans,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694378,name jaccard 1.00
+rubbens,Rubbens,Belgium,opencorporates:be,0418306758,Rubbens,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694392,name jaccard 1.00
+simkens,Simkens,Belgium,opencorporates:be,0403790610,Simkens,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694398,name jaccard 1.00
+van-goethem,Van Goethem,Belgium,opencorporates:be,0405071307,Van Goethem,self,wikidata-name,high,,http://www.wikidata.org/entity/Q15873553,name jaccard 1.00
+van-leemput,Van Leemput,Belgium,opencorporates:be,0574521496,Van Leemput,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694426,name jaccard 1.00
+vanderlinden,Vanderlinden,Belgium,opencorporates:be,0675457817,Vanderlinden,self,wikidata-name,high,,http://www.wikidata.org/entity/Q119999042,name jaccard 1.00
+verhofstede,Verhofstede,Belgium,opencorporates:be,0832597025,Verhofstede,self,wikidata-name,high,,http://www.wikidata.org/entity/Q116694437,name jaccard 1.00
+stauning-whisky,Stauning Whisky,Denmark,opencorporates:dk,30900529,Stauning Whisky,self,wikidata-name,high,,http://www.wikidata.org/entity/Q12336951,name jaccard 1.00
+helsinki-distilling-company,Helsinki Distilling Company,Finland,opencorporates:fi,0170318-9,Olvi,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q110508024,name jaccard 1.00
+distillerie-warenghem,Distillerie Warenghem,France,opencorporates:fr,436150049,Distillerie Warenghem,self,wikidata-name,high,,http://www.wikidata.org/entity/Q3030727,name jaccard 1.00
+hennessy,Hennessy,France,opencorporates:fr,775670417,LVMH,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q1229287,name jaccard 1.00
+roe-co-distillery,Roe & Co Distillery,Ireland,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,low,,http://www.wikidata.org/entity/Q85797673,"name jaccard 1.00; registry gb is not ie, likely a subsidiary id on the parent item"
+asaka-distillery,Asaka Distillery,Japan,opencorporates:jp,4380001005337,Sasanokawa Shuzo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q140446366,name jaccard 1.00
+kenten,Kenten,Japan,opencorporates:jp,2010001015762,Kenten,self,wikidata-name,high,,http://www.wikidata.org/entity/Q106678867,name jaccard 1.00
+kirin-fuji-gotemba-distillery,Kirin Fuji Gotemba Distillery,Japan,opencorporates:jp,8080101004397,Kirin Distillery,owner-or-operator,wikidata-name,medium,,http://www.wikidata.org/entity/Q14325532,name jaccard 0.67
+mars-komagatake-distillery,Mars Komagatake distillery,Japan,opencorporates:jp,6340001003887,Hombo Shuzo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q119756769,name jaccard 1.00
+mars-tsunuki-distillery,Mars Tsunuki distillery,Japan,opencorporates:jp,6340001003887,Hombo Shuzo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q127432728,name jaccard 1.00
+tagohinke-brewery-products,Tagohinke Brewery Products,Japan,opencorporates:jp,6260003000981,Tagohinke Brewery Products,self,wikidata-name,high,,http://www.wikidata.org/entity/Q38266973,name jaccard 1.00
+yoichi-distillery,Yoichi Distillery,Japan,opencorporates:jp,2010401021550,Nikka Whisky Distilling,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q3572452,name jaccard 1.00
+humdinger-gin-distillery,Humdinger Gin Distillery,New Zealand,opencorporates:nz,7617296,Humdinger Gin Distillery,self,wikidata-name,high,,http://www.wikidata.org/entity/Q136573009,name jaccard 1.00
+aurora-spirit-destillery-as,Aurora Spirit Destillery as,Norway,opencorporates:no,911812401,Aurora Spirit,self,wikidata-name,medium,,http://www.wikidata.org/entity/Q106018420,name jaccard 0.50
+berentsens-brygghus,Berentsens Brygghus,Norway,opencorporates:no,911284669,Berentsens Brygghus,self,wikidata-name,high,,http://www.wikidata.org/entity/Q11960618,name jaccard 1.00
+myken-destilleri-as,Myken destilleri AS,Norway,opencorporates:no,913072308,Myken destilleri,self,wikidata-name,medium,,http://www.wikidata.org/entity/Q123001683,name jaccard 0.67
+aberlour-distillery,Aberlour Distillery,United Kingdom,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+ailsa-bay,Ailsa Bay,United Kingdom,opencorporates:fr,490248820,William Grant & Sons,owner-or-operator,wikidata-name,low,,http://www.wikidata.org/entity/Q2827977,"name jaccard 1.00; registry fr is not gb, likely a subsidiary id on the parent item"
+allt-a-bhainne,Allt-A-Bhainne,United Kingdom,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+ardbeg,Ardbeg,United Kingdom,companies-house,SC019038,MACDONALD & MUIR LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+balvenie-distillery,Balvenie Distillery,United Kingdom,companies-house,SC131772,WILLIAM GRANT & SONS LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+ben-nevis-distillery,Ben Nevis Distillery,United Kingdom,opencorporates:jp,2010401021550,Nikka Whisky Distilling,owner-or-operator,wikidata-name,low,,http://www.wikidata.org/entity/Q816571,"name jaccard 1.00; registry jp is not gb, likely a subsidiary id on the parent item"
+benrinnes-distillery,Benrinnes Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q818145,name jaccard 1.00
+blair-athol-distillery,Blair Athol Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q881152,name jaccard 1.00
+brora-distillery,Brora Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q744308,name jaccard 1.00
+bushmills-distillery,Bushmills Distillery,United Kingdom,companies-house,NI000601,Old Bushmills Distillery,self,wikidata-name,medium,,http://www.wikidata.org/entity/Q268267,name jaccard 0.50
+caol-ila-distillery,Caol Ila Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q51913,name jaccard 1.00
+cardhu-distillery,Cardhu Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q893272,name jaccard 1.00
+clynelish-distillery,Clynelish Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q124932,name jaccard 1.00
+dalmore-distillery,Dalmore Distillery,United Kingdom,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+dalwhinnie-distillery,Dalwhinnie Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q773797,name jaccard 1.00
+dufftown-distillery,Dufftown distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q1263993,name jaccard 1.00
+fettercairn-distillery,Fettercairn Distillery,United Kingdom,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+girvan-distillery,Girvan Distillery,United Kingdom,opencorporates:fr,490248820,William Grant & Sons,owner-or-operator,wikidata-name,low,,http://www.wikidata.org/entity/Q1527141,"name jaccard 1.00; registry fr is not gb, likely a subsidiary id on the parent item"
+glen-grant-distillery,Glen Grant Distillery,United Kingdom,opencorporates:fr,582041943,Pernod Ricard,owner-or-operator,wikidata-name,low,,http://www.wikidata.org/entity/Q982683,"name jaccard 1.00; registry fr is not gb, likely a subsidiary id on the parent item"
+glen-spey-distillery,Glen Spey Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q16891693,name jaccard 1.00
+glenfiddich-distillery,Glenfiddich Distillery,United Kingdom,companies-house,SC131772,WILLIAM GRANT & SONS LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+glengoyne-distillery,Glengoyne Distillery,United Kingdom,companies-house,SC032696,IAN MACLEOD DISTILLERS LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+glenlossie,Glenlossie,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q1531018,name jaccard 1.00
+glenmorangie-distillery,Glenmorangie Distillery,United Kingdom,companies-house,SC019038,MACDONALD & MUIR LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist; SC026752 The Glenmorangie Company is the non-trading holder
+glentauchers-distillery,Glentauchers Distillery,United Kingdom,opencorporates:fr,582041943,Pernod Ricard,owner-or-operator,wikidata-name,low,,http://www.wikidata.org/entity/Q1531170,"name jaccard 1.00; registry fr is not gb, likely a subsidiary id on the parent item"
+highland-park-distillery,Highland Park Distillery,United Kingdom,companies-house,SC036374,THE EDRINGTON GROUP LIMITED,group,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+invergordon-distillery,Invergordon Distillery,United Kingdom,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+isle-of-barra-distillers,Isle of Barra Distillers,United Kingdom,companies-house,SC553952,ISLE OF BARRA DISTILLERS LTD,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist; Q100
+isle-of-harris-distillery,Isle of Harris Distillery,United Kingdom,companies-house,SC334836,ISLE OF HARRIS DISTILLERS LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist; Q100
+isle-of-jura-distillery,Isle of Jura Distillery,United Kingdom,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+jackton-distillery,Jackton Distillery,United Kingdom,companies-house,08021995,Jackton distillery,self,wikidata-name,high,,http://www.wikidata.org/entity/Q137884342,name jaccard 1.00
+johnnie-walker-princes-street,Johnnie Walker Princes Street,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,medium,,http://www.wikidata.org/entity/Q502268,name jaccard 0.50
+knockando-distillery,Knockando Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q982812,name jaccard 1.00
+lagavulin-distillery,Lagavulin Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q280,name jaccard 1.00
+linkwood-distillery,Linkwood distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q983029,name jaccard 1.00
+longmorn-distillery,Longmorn distillery,United Kingdom,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+mannochmore-distillery,Mannochmore Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q362391,name jaccard 1.00
+miltonduff-distillery,Miltonduff Distillery,United Kingdom,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+mortlach-distillery,Mortlach Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q501320,name jaccard 1.00
+oban-distillery,Oban Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q982708,name jaccard 1.00
+port-ellen-distillery,Port Ellen Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q203404,name jaccard 1.00
+rosebank-distillery,Rosebank Distillery,United Kingdom,companies-house,SC032696,IAN MACLEOD DISTILLERS LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+scapa-distillery,Scapa Distillery,United Kingdom,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+strathisla-distillery,Strathisla Distillery,United Kingdom,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+talisker-distillery,Talisker Distillery,United Kingdom,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,high,,http://www.wikidata.org/entity/Q278,name jaccard 1.00
+tamdhu-distillery,Tamdhu Distillery,United Kingdom,companies-house,SC032696,IAN MACLEOD DISTILLERS LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+tamnavulin-distillery,Tamnavulin Distillery,United Kingdom,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+the-glenlivet,The Glenlivet,United Kingdom,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+the-macallan-distillery,The Macallan Distillery,United Kingdom,companies-house,SC036374,THE EDRINGTON GROUP LIMITED,group,manual,verified,2026-09-18,vault .claude/ingest/filings-watchlist.json,vault filings watchlist
+george-dickel,George Dickel,United States,companies-house,00023307,Diageo,owner-or-operator,wikidata-name,low,,http://www.wikidata.org/entity/Q1507227,"name jaccard 1.00; registry gb is not us, likely a subsidiary id on the parent item"
