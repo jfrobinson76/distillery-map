@@ -56,16 +56,30 @@ Rules from the matcher, keep them: an exact name on a dissolved or post-2023 reg
 `medium` at best; group-level numbers (Diageo plc 00023307) are `relation: group`, and the
 operating subsidiary is a second row for the same slug when it exists.
 
-## Phase 2: Ireland (check count with `country == "Ireland"`)
+## Phase 2: Ireland (64 distilleries). State at 18 Sep 2026, 20:00
 
-The Irish register is the CRO. Two routes; use the first if it works:
-- CRO Open Services API (free, registration): https://services.cro.ie/ . Search by name,
-  returns company number, status, type. Same matching rules as UK; Irish NACE code for
-  distilling is 11.01.
-- Fallback: https://core.cro.ie/ public search, one name at a time, no scraping beyond what a
-  human would do. Record every number in the manual CSV with the CRO page as `source`.
+**No login and no API are needed.** The whole CRO register is open data
+(https://opendata.cro.ie/ -> Company Records -> companies.csv.zip, ~46 MB). The Stillbound
+vault caches it at `.claude/cache/cro-companies.csv.zip` and `scripts/match_cro_register.py`
+in this repo matches the map's Irish names against it, writing
+`data/company-crosswalk/cro-candidates.csv` for review. Already done: **43 Irish rows in
+`company-crosswalk-operators.csv`** (38 high, 5 medium), including the name-differs cases
+(Midleton and Bow St = Irish Distillers Ltd 23732; Tullamore = William Grant & Sons Irish
+Brands 485520; Kilbeggan = Cooley Distillery UC 125363; Slane = Slane Castle Irish Whiskey
+468206; The Shed = P.J. Rigney 517350; J.J. Corry = Chapel Gate 567516).
 
-Northern Ireland distilleries are on Companies House (numbers prefixed `NI`), not the CRO.
+**Remaining, for Devin.** Not found in the register under any obvious name; find the
+operating company (core.cro.ie public search is free; documents are not needed):
+Dingle Distillery (Porterhouse Group; Dingle Whiskey Co 445155 is dissolved), Walsh Whiskey,
+Lough Ree Distillery (Lanesborough), Sliabh Liag Distillers and its Ardara distillery,
+Pearse Lyons Distillery (Alltech), Stillgarden, Micil, Cape Clear, Church of Oak, Hawk's
+Rock, Achill Island, Wayward Irish, Scotts Irish, Croithlí, Glendree, Lough Mask, Blacks of
+Kinsale. Northern Ireland sites (Bushmills, Belfast Distillery, Titanic Distillers, Rademon
+Estate, The Quiet Man, Two Stacks, Limavady) are on **Companies House with an NI prefix**,
+not the CRO; do those with the UK method.
+
+Register note for later: CRO shows identity, status and `last_accounts_date` free; the
+accounts themselves cost EUR 2.50-3.50 per document through a CORE account.
 
 ## Phase 3: the rest, only where a free public register exists
 
