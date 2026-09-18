@@ -92,7 +92,7 @@ across builds; the PNG must be reproducible). Square frame, parchment ground.
 - **The number**, bottom-right, large, Newsreader: the share of high-confidence UK
   distilleries that are independent, e.g. **"79% independent"**, with two lines under it:
   "*n* distilleries tied to a registered company at high confidence." and
-  "Eight groups run *m*. Diageo runs 28."
+  "*g* groups run *m*. Diageo runs *d*." (all computed; do not write 8 or 28)
 - **Legend**: none needed if hubs are labelled. If a hub label will not fit, a compact legend
   bottom-left in JetBrains Mono, sorted by count.
 - **Footer**, small, Instrument Sans: "Source: Companies House and Wikidata, matched to the
@@ -158,12 +158,23 @@ Do not edit A's files; add alongside them.
   dots. No lines.
 - **Group sites** as filled dots in the group's colour from A (keep A's palette assignment
   per group so the two slides agree).
-- **Hubs = registered offices.** For each of the eight groups, take the registered office
-  address from the Companies House page of the operating company in `groups.json`
-  (`https://find-and-update.company-information.service.gov.uk/company/<number>`, public, no
-  key), geocode it once (Nominatim with a proper User-Agent and 1 request/second, or by hand
-  from the postcode), and store `hub: {lat, lng, address, source_url}` in `groups.json`.
-  Draw the hub as A's larger node with the group name and count.
+- **Groups come from control, not from a hand table.** `data/ownership/psc-parents.csv`
+  (now on `data/company-crosswalk`) gives each company's ultimate controller from Companies
+  House persons-with-significant-control filings. Group sites by `ultimate_number` (or
+  `ultimate_name` where the chain stops at a foreign parent such as Pernod Ricard SA). A
+  distillery is **independent when its controller runs exactly one site.** Keep
+  `groups.json` only for display names (Kintail Trustees → Edrington; Emperador Holdings →
+  Whyte & Mackay; International Beverage → Inver House; LLG Topco → Loch Lomond Group;
+  Speymalt → Gordon & MacPhail; Glen Turner Co → La Martiniquaise) and colours. At 18 Sep
+  this gives 71% independent (223/312), 15 controllers with more than one site, Diageo 30.
+  Recompute at build; the figures change after the crosswalk review.
+- **Hubs sit at the geographic centre of each group's distilleries.** No offices, no
+  addresses; a pundit reads geography, not registrations. Compute the centroid of the
+  group's site coordinates, nudge it if it lands in the sea, and draw A's larger node there
+  with the group's display name and count. Show the **top eight groups by site count** as
+  hubs with lines; the remaining multi-site groups are drawn as their sites in a shared
+  seventh/eighth tone with a short line between the sites and no hub label, so the 71% is
+  visually honest without eight more labels.
 - **Lines from each hub to each of its sites**, thin, the group's colour at 45% alpha, drawn
   under the dots. Diageo's 28 lines from Edinburgh will fan across the Highlands and out to
   Islay and Skye; that fan is the picture. Slight curvature (quadratic, small offset) so
@@ -187,5 +198,5 @@ from your own export either way.
 
 ### Checks
 
-Same as A, plus: every hub coordinate has a `source_url`; the 79% / 312 / 58 / 28 figures on
-B equal A's from the same build; view at 393 px, Islay and Speyside still distinguishable.
+Same as A, plus: A must be rebuilt on the same controller-based grouping so both slides carry
+the same figures (the 79% card is superseded; do not post it); view at 393 px, Islay and Speyside still distinguishable.
