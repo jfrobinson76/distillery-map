@@ -164,14 +164,22 @@ def match_companies_house(dists: list[dict], have: set[str], key: str, limit: in
             if s > score:
                 best, score = it, s
         if best and score >= 0.6:
+            # An exact name on a dissolved or newly registered company is usually a shell
+            # (BOWMORE LTD dissolved, ABERFELDY LIMITED registered 2025); the operator is a
+            # group company. Cap those at medium so the review pass sees them.
+            status = best.get("company_status")
+            created = str(best.get("date_of_creation") or "")
+            conf = "high" if score >= 0.9 else "medium"
+            if status != "active" or created >= "2023":
+                conf = "medium" if conf == "high" else "low"
             out.append({"slug": d["slug"], "distillery_name": d["name"], "country": d["country"],
                         "registry": "companies-house", "company_number": best["company_number"],
                         "company_name": best["title"], "relation": "name-match",
                         "match_method": "companies-house-search",
-                        "confidence": "high" if score >= 0.9 else "medium", "verified": "",
+                        "confidence": conf, "verified": "",
                         "source": "https://find-and-update.company-information.service.gov.uk/company/"
                                   + best["company_number"],
-                        "note": f"status {best.get('company_status')}; jaccard {score:.2f}"})
+                        "note": f"status {status}; created {created[:4]}; jaccard {score:.2f}"})
         if i % 25 == 0:
             print(f"  {i}/{len(uk)} searched, {len(out)} matched")
         time.sleep(0.6)

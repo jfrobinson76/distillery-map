@@ -33,7 +33,13 @@ minutes; the script sleeps 0.6 s between calls. Never commit the key. Never rais
    SIC 11010 is `high`; a name match with any other SIC is `medium` at best; 11050 (beer),
    47250 (retail of beverages) or 56xxx (hospitality) with a distillery-like name is a
    visitor-centre or bar company, not the producer: mark `low`, note it.
-3. Prefer the **operating company** over the holding company where both exist. Diageo plc
+3. **Shells.** The first 20-name run (18 Sep) matched BOWMORE LTD (dissolved), ARDMORE LIMITED
+   (registered 2023) and ABERFELDY LIMITED (registered 2025) on exact name. None operates the
+   distillery; Beam Suntory, Beam Suntory and John Dewar & Sons do. The script now caps
+   dissolved or post-2023 registrations at `medium`. Go further: read the profile's
+   `accounts.last_accounts.type`; `dormant` or `micro-entity` on a famous name is a shell,
+   mark `low` and find the operator via the SIC 11010 search or the group's Wikidata owner.
+3b. Prefer the **operating company** over the holding company where both exist. Diageo plc
    (00023307) is the correct owner of Caol Ila and the wrong entity for accounts; note the
    group in `relation: group` and, if the operating company can be found, add it as a second
    row for the same slug with `relation: operator`. One slug may have two rows.
