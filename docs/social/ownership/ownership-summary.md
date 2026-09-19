@@ -5,7 +5,7 @@ Edition: September 2026. Scotch whisky only. Built from `data/company-crosswalk/
 ## Claim on both slides
 
 - **Half independent.**
-- 176 Scotch whisky distilleries. Fourteen groups run 90. Diageo runs 34, one in five.
+- 176 Scotch whisky distilleries. Fifteen groups run 89. Diageo runs 32, one in five.
 - By number of distilleries, not by litres.
 
 | | |
@@ -13,10 +13,10 @@ Edition: September 2026. Scotch whisky only. Built from `data/company-crosswalk/
 | Scotch whisky sites | 176 |
 | Matched high/verified | 148 |
 | Unmatched (drawn as independent) | 28 |
-| Independent (controller has one site, plus unmatched) | 86 |
-| Group-run | 90 |
-| Groups >1 site | 14 |
-| Diageo | 34 |
+| Independent (controller has one site, plus unmatched) | 87 |
+| Group-run | 89 |
+| Groups >1 site | 15 |
+| Diageo | 32 |
 
 Independent means the ultimate controller in `psc-parents.csv` runs exactly one site in this universe. Unmatched Scotch sites are treated as independent dots — they are small, mostly post-2005 plants. Counts, not litres.
 
@@ -32,20 +32,19 @@ README on this branch dated the denominator 178 ±5. This rebuild is 176.
 
 | Group | Sites | Ultimate |
 |---|---:|---|
-| Diageo | 34 | Diageo Plc (00023307) |
-| Pernod Ricard | 12 | Pernod Ricard Sa (SC043917) |
-| William Grant | 6 | William Grant & Sons Holdings Limited (15238251) |
+| Diageo | 32 | Diageo (00023307) |
+| Pernod Ricard | 13 | Pernod Ricard Sa (SC043917) |
+| William Grant | 5 | William Grant & Sons Holdings Limited (15238251) |
 | Whyte & Mackay | 5 | Emperador Holdings (Gb) Limited (09094033) |
 | Inver House | 5 | International Beverage Holdings Limited (SC222095) |
 | Bacardi | 4 | Bacardi U.K. Limited (00366786) |
 | Ian Macleod | 4 | IAN MACLEOD DISTILLERS LIMITED (SC032696) |
 | Suntory Global Spirits | 4 | Beam Suntory Uk Holdings Limited (05608446) |
 
-### Diageo (34)
+### Diageo (32)
 
 Diageo plc is PSC-exempt and is its own top; Wikidata rows and Diageo Scotland Limited both land here.
 
-- Ardbeg — MACDONALD & MUIR LIMITED (SC019038) → Diageo Plc
 - Auchroisk distillery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
 - Benrinnes Distillery — Diageo (00023307) → Diageo
 - Blair Athol Distillery — Diageo (00023307) → Diageo
@@ -64,7 +63,6 @@ Diageo plc is PSC-exempt and is its own top; Wikidata rows and Diageo Scotland L
 - Glendullan Distillery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
 - Glenkinchie Distillery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
 - Glenlossie — Diageo (00023307) → Diageo
-- Glenmorangie Distillery — MACDONALD & MUIR LIMITED (SC019038) → Diageo Plc
 - Inchgower Distillery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
 - Knockando Distillery — Diageo (00023307) → Diageo
 - Lagavulin Distillery — Diageo (00023307) → Diageo
@@ -80,7 +78,7 @@ Diageo plc is PSC-exempt and is its own top; Wikidata rows and Diageo Scotland L
 - Talisker Distillery — Diageo (00023307) → Diageo
 - Teaninich Distllery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
 
-### Pernod Ricard (12)
+### Pernod Ricard (13)
 
 Foreign parent: chain stops at Pernod Ricard SA.
 
@@ -89,6 +87,7 @@ Foreign parent: chain stops at Pernod Ricard SA.
 - Braeval Distillery — BRAEVAL DISTILLERY LIMITED (SC240804) → Pernod Ricard Sa
 - Dalmunach Distillery — DALMUNACH DISTILLERY LIMITED (SC222298) → Pernod Ricard Sa
 - Glen Keith Distillery — GLEN KEITH DISTILLERY COMPANY LIMITED (SC045679) → Pernod Ricard Sa
+- Glenburgie Distillery — GLENBURGIE DISTILLERY LIMITED (00074809) → Pernod Ricard Sa
 - Glentauchers Distillery — CHIVAS BROTHERS LIMITED (SC268758) → Pernod Ricard Sa
 - Longmorn distillery — CHIVAS BROTHERS LIMITED (SC268758) → Pernod Ricard Sa
 - Miltonduff Distillery — CHIVAS BROTHERS LIMITED (SC268758) → Pernod Ricard Sa
@@ -97,7 +96,7 @@ Foreign parent: chain stops at Pernod Ricard SA.
 - Strathisla Distillery — CHIVAS BROTHERS LIMITED (SC268758) → Pernod Ricard Sa
 - The Glenlivet — CHIVAS BROTHERS LIMITED (SC268758) → Pernod Ricard Sa
 
-### William Grant (6)
+### William Grant (5)
 
 William Grant & Sons Holdings Limited.
 
@@ -105,7 +104,6 @@ William Grant & Sons Holdings Limited.
 - Balvenie Distillery — WILLIAM GRANT & SONS LIMITED (SC131772) → William Grant & Sons Holdings Limited
 - Girvan Distillery — WILLIAM GRANT & SONS LIMITED (SC131772) → William Grant & Sons Holdings Limited
 - Glenfiddich Distillery — WILLIAM GRANT & SONS LIMITED (SC131772) → William Grant & Sons Holdings Limited
-- Glenrothes Distillery — THE GLENROTHES DISTILLERY COMPANY LIMITED (SC052114) → William Grant & Sons Holdings Limited
 - Kininvie distillery — WILLIAM GRANT & SONS LIMITED (SC131772) → William Grant & Sons Holdings Limited
 
 ### Whyte & Mackay (5)
@@ -161,10 +159,11 @@ These are groups, not independents. On the map they share one tone, with a short
 
 - **Brown-Forman** (4): Glenglassaugh Distillery; The Glendronach Distillery; Newbridge Bond - The Benriach Distillery Company Limited; Benriach Distillery
 - **Distell** (3): Bunnahabhain Distillery; Tobermory Distillery; Deanston Distillery
-- **Edrington** (3): Highland Park Distillery; The Macallan Distillery; North British Distillery
+- **Edrington** (2): Highland Park Distillery; The Macallan Distillery
 - **Isle of Arran** (2): Arran Distillery; Lagg Distillery
 - **La Martiniquaise** (2): Glen Moray Distillery; Glen Turner Distillery
 - **Loch Lomond Group** (2): Loch Lomond Distillery; Glen Scotia Distillery
+- **Lvmh Moet Hennessy Louis Vuitton Se** (2): Ardbeg; Glenmorangie Distillery
 
 ## Hub table (map centroids)
 
@@ -172,9 +171,9 @@ Hubs sit at the geographic mean of each group's site coordinates, nudged onto la
 
 | Group | Sites | Centroid (nudged) | Raw mean | Nudged | Source |
 |---|---:|---|---|---|---|
-| Diageo | 34 | -3.8814, 57.1307 | -3.8814, 57.1307 | no | https://find-and-update.company-information.service.gov.uk/company/SC019038/persons-with-significant-control |
-| Pernod Ricard | 12 | -3.2626, 57.4662 | -3.2626, 57.4662 | no | https://find-and-update.company-information.service.gov.uk/company/SC043917/persons-with-significant-control |
-| William Grant | 6 | -3.7068, 56.7402 | -3.7068, 56.7402 | no | https://find-and-update.company-information.service.gov.uk/company/SC131772/persons-with-significant-control |
+| Diageo | 32 | -3.8057, 57.1556 | -3.8057, 57.1556 | no | https://find-and-update.company-information.service.gov.uk/company/00023307/persons-with-significant-control |
+| Pernod Ricard | 13 | -3.2884, 57.4742 | -3.2884, 57.4742 | no | https://find-and-update.company-information.service.gov.uk/company/SC043917/persons-with-significant-control |
+| William Grant | 5 | -3.8059, 56.5828 | -3.8059, 56.5828 | no | https://find-and-update.company-information.service.gov.uk/company/SC131772/persons-with-significant-control |
 | Whyte & Mackay | 5 | -4.0482, 57.0776 | -4.0482, 57.0776 | no | https://find-and-update.company-information.service.gov.uk/company/SC221954/persons-with-significant-control |
 | Inver House | 5 | -3.3337, 57.7081 | -3.3547, 57.7384 | yes | https://find-and-update.company-information.service.gov.uk/company/SC040036/persons-with-significant-control |
 | Bacardi | 4 | -3.3174, 57.3465 | -3.3174, 57.3465 | no | https://find-and-update.company-information.service.gov.uk/company/00613551/persons-with-significant-control |

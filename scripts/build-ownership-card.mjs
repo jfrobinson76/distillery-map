@@ -12,7 +12,7 @@
  */
 import { spawn } from "node:child_process";
 import { createServer } from "node:http";
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { statSync, existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, extname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -1123,17 +1123,36 @@ function exportOnePng(server, htmlName, pngPath) {
       ],
       { stdio: "inherit", env: { ...process.env, DISPLAY: process.env.DISPLAY || ":1" } }
     );
-    const timer = setTimeout(() => {
-      child.kill("SIGKILL");
-      reject(new Error(`Chrome screenshot timed out for ${htmlName}`));
-    }, 60000);
-    child.on("exit", () => {
+    // On macOS, headless Chrome writes the PNG and then never exits (CVDisplayLink
+    // errors). Poll for a stable file instead of waiting on exit, then kill it.
+    let settled = false;
+    let lastSize = -1;
+    const finish = (ok, err) => {
+      if (settled) return;
+      settled = true;
       clearTimeout(timer);
+      clearInterval(poll);
+      try { child.kill("SIGKILL"); } catch {}
+      ok ? resolve(true) : reject(err);
+    };
+    const poll = setInterval(() => {
+      if (!existsSync(pngPath)) return;
+      const size = statSync(pngPath).size;
+      if (size > 0 && size === lastSize) {
+        console.log(`wrote ${pngPath}`);
+        finish(true);
+      }
+      lastSize = size;
+    }, 700);
+    const timer = setTimeout(() => {
+      finish(false, new Error(`Chrome screenshot timed out for ${htmlName}`));
+    }, 90000);
+    child.on("exit", () => {
       if (existsSync(pngPath)) {
         console.log(`wrote ${pngPath}`);
-        resolve(true);
+        finish(true);
       } else {
-        reject(new Error(`Chrome exited without writing ${pngPath}`));
+        finish(false, new Error(`Chrome exited without writing ${pngPath}`));
       }
     });
     child.on("error", (err) => {
