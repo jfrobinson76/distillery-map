@@ -1,24 +1,51 @@
-slug,registry,company_number,company_name,relation,note
-the-macallan-distillery,companies-house,SC036374,THE EDRINGTON GROUP LIMITED,group,vault filings watchlist
-highland-park-distillery,companies-house,SC036374,THE EDRINGTON GROUP LIMITED,group,vault filings watchlist
-glenfiddich-distillery,companies-house,SC131772,WILLIAM GRANT & SONS LIMITED,operator,vault filings watchlist
-balvenie-distillery,companies-house,SC131772,WILLIAM GRANT & SONS LIMITED,operator,vault filings watchlist
-glengoyne-distillery,companies-house,SC032696,IAN MACLEOD DISTILLERS LIMITED,operator,vault filings watchlist
-tamdhu-distillery,companies-house,SC032696,IAN MACLEOD DISTILLERS LIMITED,operator,vault filings watchlist
-rosebank-distillery,companies-house,SC032696,IAN MACLEOD DISTILLERS LIMITED,operator,vault filings watchlist
-dalmore-distillery,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,vault filings watchlist
-isle-of-jura-distillery,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,vault filings watchlist
-fettercairn-distillery,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,vault filings watchlist
-tamnavulin-distillery,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,vault filings watchlist
-invergordon-distillery,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,vault filings watchlist
-the-glenlivet,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,vault filings watchlist
-aberlour-distillery,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,vault filings watchlist
-strathisla-distillery,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,vault filings watchlist
-scapa-distillery,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,vault filings watchlist
-longmorn-distillery,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,vault filings watchlist
-miltonduff-distillery,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,vault filings watchlist
-allt-a-bhainne,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,vault filings watchlist
-glenmorangie-distillery,companies-house,SC019038,MACDONALD & MUIR LIMITED,operator,vault filings watchlist; SC026752 The Glenmorangie Company is the non-trading holder
-ardbeg,companies-house,SC019038,MACDONALD & MUIR LIMITED,operator,vault filings watchlist
-isle-of-harris-distillery,companies-house,SC334836,ISLE OF HARRIS DISTILLERS LIMITED,operator,vault filings watchlist; Q100
-isle-of-barra-distillers,companies-house,SC553952,ISLE OF BARRA DISTILLERS LTD,operator,vault filings watchlist; Q100
+slug,registry,company_number,company_name,relation,note,source
+the-macallan-distillery,companies-house,SC036374,THE EDRINGTON GROUP LIMITED,group,vault filings watchlist,
+highland-park-distillery,companies-house,SC036374,THE EDRINGTON GROUP LIMITED,group,vault filings watchlist,
+glenfiddich-distillery,companies-house,SC131772,WILLIAM GRANT & SONS LIMITED,operator,vault filings watchlist,
+balvenie-distillery,companies-house,SC131772,WILLIAM GRANT & SONS LIMITED,operator,vault filings watchlist,
+glengoyne-distillery,companies-house,SC032696,IAN MACLEOD DISTILLERS LIMITED,operator,vault filings watchlist,
+tamdhu-distillery,companies-house,SC032696,IAN MACLEOD DISTILLERS LIMITED,operator,vault filings watchlist,
+rosebank-distillery,companies-house,SC032696,IAN MACLEOD DISTILLERS LIMITED,operator,vault filings watchlist,
+dalmore-distillery,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,vault filings watchlist,
+isle-of-jura-distillery,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,vault filings watchlist,
+fettercairn-distillery,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,vault filings watchlist,
+tamnavulin-distillery,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,vault filings watchlist,
+invergordon-distillery,companies-house,SC221954,WHYTE AND MACKAY GROUP LIMITED,group,vault filings watchlist,
+the-glenlivet,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,vault filings watchlist,
+aberlour-distillery,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,vault filings watchlist,
+strathisla-distillery,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,vault filings watchlist,
+scapa-distillery,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,vault filings watchlist,
+longmorn-distillery,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,vault filings watchlist,
+miltonduff-distillery,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,vault filings watchlist,
+allt-a-bhainne,companies-house,SC268758,CHIVAS BROTHERS LIMITED,operator,vault filings watchlist,
+glenmorangie-distillery,companies-house,SC019038,MACDONALD & MUIR LIMITED,operator,vault filings watchlist; SC026752 The Glenmorangie Company is the non-trading holder,
+ardbeg,companies-house,SC019038,MACDONALD & MUIR LIMITED,operator,vault filings watchlist,
+isle-of-harris-distillery,companies-house,SC334836,ISLE OF HARRIS DISTILLERS LIMITED,operator,vault filings watchlist; Q100,
+isle-of-barra-distillers,companies-house,SC553952,ISLE OF BARRA DISTILLERS LTD,operator,vault filings watchlist; Q100,
+isle-of-tiree-distillery,companies-house,SC421934,TIREE WHISKY COMPANY LIMITED,self,"Tiree Whisky Company Ltd; SIC 11010; reg office West Hynish, Tiree",https://find-and-update.company-information.service.gov.uk/company/SC421934
+ogilvy-distillery,companies-house,SC455172,OGILVY SPIRITS LIMITED,self,Ogilvy Spirits Ltd; SIC 11010; Hatton of Ogilvy Farm DD8 1UH = site,https://find-and-update.company-information.service.gov.uk/company/SC455172
+ninefold-rum-distillery,companies-house,SC559347,DORMONT DISTILLING LIMITED,self,Dormont Distilling Ltd; SIC 11010; reg office Ninefold Distillery DG11 1DJ,https://find-and-update.company-information.service.gov.uk/company/SC559347
+masons-distillery,companies-house,08303103,MASONS OF YORKSHIRE LTD,self,"Masons of Yorkshire Ltd; SIC 11010; reg office Masons Distillery, Leeming Bar DL7 9EE",https://find-and-update.company-information.service.gov.uk/company/08303103
+devil-s-dyke-distillery,companies-house,13852713,DEVILS DYKE GIN LTD,self,Devils Dyke Gin Ltd; SIC 11010; 28 Kings Road BN42 4RJ = site,https://find-and-update.company-information.service.gov.uk/company/13852713
+pink-house-distillery,companies-house,13080875,PINKHOUSE DISTILLERY LTD,self,Pinkhouse Distillery Ltd; SIC 11010; Bishopthorpe YO23 2RB = site,https://find-and-update.company-information.service.gov.uk/company/13080875
+mousehall-distillery-winery,companies-house,11141959,MOUSEHALL ESTATE LTD,self,"Mousehall Estate Ltd; SIC 01210, 11010, 11020; Mousehall TN5 6PG = site",https://find-and-update.company-information.service.gov.uk/company/11141959
+colwith-farm-distillery-cafe-cafe-open-9am-to-4pm-tuesday-to-saturday,companies-house,09882249,COLWITH FARM DISTILLERY LIMITED,self,"SIC 11010; reg office Colwith Farm, Par",https://find-and-update.company-information.service.gov.uk/company/09882249
+devil-s-botany-distillery,companies-house,10330594,DEVIL'S BOTANY LTD,self,SIC 11010; 16a Heybridge Way E10 7NQ = site,https://find-and-update.company-information.service.gov.uk/company/10330594
+ludlow-distillery-the-home-of-ludlow-gin-whisky,companies-house,06775395,LUDLOW DISTILLERY LIMITED,self,Ludlow Distillery Ltd; SIC 11010; Bromfield SY8 2JR = site; 07960081 Ludlow Apple Brandy Distillery Ltd dormant,https://find-and-update.company-information.service.gov.uk/company/06775395
+the-lost-distillery-company-whisky-lounge,companies-house,SC457568,THE LOST DISTILLERY COMPANY LIMITED,self,"SIC 46342 (blender, not distiller); Dumfries House KA18 2NJ = site",https://find-and-update.company-information.service.gov.uk/company/SC457568
+the-river-test-distillery-visit-by-appointment-only,companies-house,11115857,THE RIVER TEST DISTILLERY LIMITED,self,SIC 11010; Longparish SP11 6PJ = site,https://find-and-update.company-information.service.gov.uk/company/11115857
+three-wrens-cheshire-distillery,companies-house,11808836,THREE WRENS GIN LIMITED,self,Three Wrens Gin Ltd; SIC 11010; Combermere SY13 4AL = site,https://find-and-update.company-information.service.gov.uk/company/11808836
+isla-distillery,companies-house,SC552120,THE PERTH DISTILLERY COMPANY SCOTLAND LIMITED,self,The Perth Distillery Company Scotland Ltd; SIC 11010; George Inn Lane PH1 5LG = site,https://find-and-update.company-information.service.gov.uk/company/SC552120
+rutland-gin-distillery,companies-house,11243220,THE RUTLAND DISTILLERY COMPANY LTD,self,The Rutland Distillery Company Ltd; SIC 11010; Braunston-in-Rutland LE15 8QS = site,https://find-and-update.company-information.service.gov.uk/company/11243220
+wood-brothers-distillery,companies-house,10723643,WOOD BROTHERS DISTILLING COMPANY LIMITED,self,Wood Brothers Distilling Company Ltd; SIC 11010; Black Bourton OX18 2PL = site,https://find-and-update.company-information.service.gov.uk/company/10723643
+bothy-distillery,companies-house,SC501575,GIN BOTHY LIMITED,operator,"Gin Bothy Ltd; SIC 11010; reg office Bothy Distillery, Glen Prosen DD8 4SD",https://find-and-update.company-information.service.gov.uk/company/SC501575
+woodlab-distillery-home-of-symphonia-spirits,companies-house,NI649234,WOODLAB DISTILLERY LIMITED,self,"Woodlab Distillery Ltd; SIC 11010; Benburb, Dungannon BT71",https://find-and-update.company-information.service.gov.uk/company/NI649234
+ballindalloch-distillery,companies-house,SO304181,BALLINDALLOCH DISTILLERY LLP,self,"Ballindalloch Distillery LLP; reg office the distillery AB37 9AX; LLP, no SIC shown",https://find-and-update.company-information.service.gov.uk/company/SO304181
+bushmills-distillery,companies-house,NI000601,THE OLD BUSHMILLS DISTILLERY COMPANY LIMITED,self,The Old Bushmills Distillery Company Ltd; SIC 11010; 2 Distillery Road BT57 8XH = site,https://find-and-update.company-information.service.gov.uk/company/NI000601
+copeland-distillery,companies-house,NI635249,COPELAND SPIRITS LTD,self,"Copeland Spirits Ltd; SIC 11010; reg office The Copeland Distillery, Donaghadee; NI656665 dormant, NI656532 dissolved",https://find-and-update.company-information.service.gov.uk/company/NI635249
+the-cabrach-distillery,companies-house,SC538952,THE CABRACH DISTILLERY CIC,self,The Cabrach Distillery CIC; SIC 11010; Inverharroch AB54 4EU = site,https://find-and-update.company-information.service.gov.uk/company/SC538952
+cane-rat-distillery,companies-house,12787796,CANE RAT SPIRITS LIMITED,self,"SIC 11010; Moat Farm, Marsh Lane HP22 5UZ = site",https://find-and-update.company-information.service.gov.uk/company/12787796
+highland-boundary-wild-distillery,companies-house,SC525210,HIGHLAND BOUNDARY LTD,self,"SIC 11010; Kirklandbank, Alyth PH11 8LL = site",https://find-and-update.company-information.service.gov.uk/company/SC525210
+scout-sage-gin-distillery,companies-house,09965396,SCOUT AND SAGE LIMITED,self,"SIC 11010; Fairfields, Semington BA14 6JD = site",https://find-and-update.company-information.service.gov.uk/company/09965396
+stable-yard-gin-distillery,companies-house,12155938,STABLE YARD DISTILLERY LTD,self,"SIC 11010; Ribble View Farm, Alston Lane PR3 3BN = site",https://find-and-update.company-information.service.gov.uk/company/12155938
+the-welsh-wind,companies-house,11166962,IN THE WELSH WIND DISTILLERY LTD,self,"SIC 11010; Gogerddan Arms, Tanygroes SA43 2HP = site",https://find-and-update.company-information.service.gov.uk/company/11166962

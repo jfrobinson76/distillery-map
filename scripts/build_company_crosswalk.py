@@ -28,6 +28,11 @@ Run:
   COMPANIES_HOUSE_API_KEY=... python3 scripts/build_company_crosswalk.py --companies-house
   python3 scripts/build_company_crosswalk.py --companies-house --limit 20   # try 20 first
 
+Companies House search rows already in the output CSV are carried forward when
+--companies-house is not given, so a rebuild without the key does not lose them. A manual
+or operator row for a slug replaces the search row. The operators file may hold more than
+one row per slug (operator plus group) when both exist.
+
 Never writes anything but the crosswalk. Never fetches without --companies-house.
 """
 from __future__ import annotations
@@ -88,6 +93,12 @@ def load_map() -> list[dict]:
 def load_manual() -> list[dict]:
     p = ENR / "company-crosswalk-manual.csv"
     return list(csv.DictReader(p.open())) if p.exists() else []
+
+
+def load_prior_search() -> list[dict]:
+    if not OUT.exists():
+        return []
+    return [r for r in csv.DictReader(OUT.open()) if r["match_method"] == "companies-house-search"]
 
 
 def load_wikidata() -> list[dict]:
@@ -211,13 +222,17 @@ def main() -> int:
                      "registry": m["registry"], "company_number": m["company_number"],
                      "company_name": m["company_name"], "relation": m["relation"],
                      "match_method": "manual", "confidence": "verified", "verified": today,
-                     "source": "vault .claude/ingest/filings-watchlist.json", "note": m.get("note", "")})
+                     "source": m.get("source") or "vault .claude/ingest/filings-watchlist.json",
+                     "note": m.get("note", "")})
     have = {r["slug"] for r in rows}
+    manual_slugs = set(have)
+    seen = {(r["slug"], r["company_number"]) for r in rows}
     ops = ENR / "company-crosswalk-operators.csv"
     for m in (list(csv.DictReader(ops.open())) if ops.exists() else []):
         d = by_slug.get(m["slug"])
-        if not d or m["slug"] in have:
+        if not d or m["slug"] in manual_slugs or (m["slug"], m["company_number"]) in seen:
             continue
+        seen.add((m["slug"], m["company_number"]))
         rows.append({"slug": m["slug"], "distillery_name": d["name"], "country": d["country"],
                      "registry": m["registry"], "company_number": m["company_number"],
                      "company_name": m["company_name"], "relation": m["relation"],
@@ -235,6 +250,8 @@ def main() -> int:
                   "https://developer.company-information.service.gov.uk/ and export it.", file=sys.stderr)
             return 2
         rows += match_companies_house(dists, have, key, args.limit, today)
+    else:
+        rows += [r for r in load_prior_search() if r["slug"] not in have]
 
     rows.sort(key=lambda r: (r["country"], r["slug"]))
     with OUT.open("w", newline="") as fh:
