@@ -146,6 +146,19 @@
       "match_numbers": [],
       "match_names": ["Llg Topco Limited", "LLG Topco"],
       "note": "LLG Topco → Loch Lomond Group."
+    },
+    {
+      "id": "lvmh",
+      "display": "LVMH",
+      "short": "LVMH",
+      "colour": "#8E5340",
+      "match_numbers": [],
+      "match_names": [
+        "Lvmh Moet Hennessy Louis Vuitton Se",
+        "LVMH Moët Hennessy Louis Vuitton SE",
+        "LVMH"
+      ],
+      "note": "Display only. The corrected PSC file stops at LVMH for Ardbeg and Glenmorangie."
     }
   ]
 }

@@ -49,7 +49,7 @@ const SB = {
 };
 
 const CONFIDENCE_OK = new Set(["high", "verified"]);
-const SITE_LABELS = ["Lagavulin", "Caol Ila", "Talisker", "Cardhu", "Glenfiddich", "Laphroaig"];
+const SITE_LABELS = ["Talisker", "Lagavulin", "Caol Ila", "Cardhu", "Glenfiddich"];
 const GROUP_FILL_NAMES = [
   "auchroisk",
   "kininvie",
@@ -568,20 +568,18 @@ function pointOnLand(lon, lat, rings) {
   return rings.some((ring) => pointInRing(lon, lat, ring));
 }
 
-function albers(lon, lat) {
+// Spherical transverse Mercator centred on the Highlands. Albers was
+// stretching the north–south mass east–west; this is the map people know.
+function rawProject(lon, lat) {
   const rad = (d) => (d * Math.PI) / 180;
   const φ = rad(lat);
   const λ = rad(lon);
-  const φ0 = rad(57.05);
-  const φ1 = rad(55.15);
-  const φ2 = rad(58.7);
-  const λ0 = rad(-4.15);
-  const n = (Math.sin(φ1) + Math.sin(φ2)) / 2;
-  const θ = n * (λ - λ0);
-  const C = Math.cos(φ1) ** 2 + 2 * n * Math.sin(φ1);
-  const ρ = Math.sqrt(C - 2 * n * Math.sin(φ)) / n;
-  const ρ0 = Math.sqrt(C - 2 * n * Math.sin(φ0)) / n;
-  return [ρ * Math.sin(θ), ρ0 - ρ * Math.cos(θ)];
+  const φ0 = rad(57.0);
+  const λ0 = rad(-4.2);
+  const B = Math.cos(φ) * Math.sin(λ - λ0);
+  const x = 0.5 * Math.log((1 + B) / (1 - B));
+  const y = Math.atan(Math.tan(φ) / Math.cos(λ - λ0)) - φ0;
+  return [x, y];
 }
 
 function fitProjection(points, box) {
@@ -601,30 +599,43 @@ function fitProjection(points, box) {
   const ox = box.x + (box.w - (maxX - minX) * s) / 2;
   const oy = box.y + (box.h - (maxY - minY) * s) / 2;
   return (lon, lat) => {
-    const [x, y] = albers(lon, lat);
+    const [x, y] = rawProject(lon, lat);
     return [ox + (x - minX) * s, oy + (maxY - y) * s];
   };
 }
 
-function centroidLonLat(sites) {
-  const lon = sites.reduce((n, s) => n + s.lon, 0) / sites.length;
-  const lat = sites.reduce((n, s) => n + s.lat, 0) / sites.length;
-  return [lon, lat];
-}
-
-function nudgeOntoLand(lon, lat, sites, rings) {
-  if (pointOnLand(lon, lat, rings)) return [lon, lat, false];
-  const nearest = [...sites].sort((a, b) => {
-    const da = Math.hypot(a.lon - lon, a.lat - lat);
-    const db = Math.hypot(b.lon - lon, b.lat - lat);
-    return da - db;
-  })[0];
-  for (let t = 0.15; t <= 1.001; t += 0.05) {
-    const x = lon + (nearest.lon - lon) * t;
-    const y = lat + (nearest.lat - lat) * t;
-    if (pointOnLand(x, y, rings)) return [x, y, true];
+function mstEdges(sites) {
+  const n = sites.length;
+  if (n < 2) return [];
+  const parent = Array.from({ length: n }, (_, i) => i);
+  const find = (i) => {
+    while (parent[i] !== i) {
+      parent[i] = parent[parent[i]];
+      i = parent[i];
+    }
+    return i;
+  };
+  const pairs = [];
+  for (let i = 0; i < n; i += 1) {
+    for (let j = i + 1; j < n; j += 1) {
+      pairs.push({
+        a: i,
+        b: j,
+        d: Math.hypot(sites[i].x - sites[j].x, sites[i].y - sites[j].y),
+      });
+    }
   }
-  return [nearest.lon, nearest.lat, true];
+  pairs.sort((p, q) => p.d - q.d);
+  const edges = [];
+  for (const p of pairs) {
+    const ia = find(p.a);
+    const ib = find(p.b);
+    if (ia === ib) continue;
+    parent[ia] = ib;
+    edges.push([sites[p.a], sites[p.b]]);
+    if (edges.length === n - 1) break;
+  }
+  return edges;
 }
 
 function labelKey(name) {
@@ -636,107 +647,39 @@ function boxesOverlap(a, b, pad = 6) {
   return !(a.x + a.w + pad < b.x || b.x + b.w + pad < a.x || a.y + a.h + pad < b.y || b.y + b.h + pad < a.y);
 }
 
-function separateHubs(hubs) {
-  const origin = hubs.map((h) => ({ x: h.x, y: h.y }));
-  for (let iter = 0; iter < 80; iter += 1) {
-    for (let i = 0; i < hubs.length; i += 1) {
-      for (let j = i + 1; j < hubs.length; j += 1) {
-        const a = hubs[i];
-        const b = hubs[j];
-        const dx = b.x - a.x;
-        const dy = b.y - a.y;
-        const dist = Math.hypot(dx, dy) || 0.1;
-        const min = a.r + b.r + 52;
-        if (dist >= min) continue;
-        const push = (min - dist) / 2;
-        const ux = dx / dist;
-        const uy = dy / dist;
-        a.x -= ux * push;
-        a.y -= uy * push;
-        b.x += ux * push;
-        b.y += uy * push;
-      }
-    }
-    for (let i = 0; i < hubs.length; i += 1) {
-      const dx = hubs[i].x - origin[i].x;
-      const dy = hubs[i].y - origin[i].y;
-      const d = Math.hypot(dx, dy);
-      const cap = 46;
-      if (d > cap) {
-        hubs[i].x = origin[i].x + (dx / d) * cap;
-        hubs[i].y = origin[i].y + (dy / d) * cap;
-      }
-    }
-  }
-}
-
-function placeHubLabel(hub, collisions) {
-  const w = Math.max(92, hub.short.length * 11);
-  const trials = [
-    { x: hub.x - w / 2, y: hub.y + hub.r + 4, anchor: "middle", tx: hub.x, ty: hub.y + hub.r + 18 },
-    { x: hub.x - w / 2, y: hub.y - hub.r - 38, anchor: "middle", tx: hub.x, ty: hub.y - hub.r - 8 },
-    { x: hub.x + hub.r + 6, y: hub.y - 16, anchor: "start", tx: hub.x + hub.r + 8, ty: hub.y + 4 },
-    { x: hub.x - hub.r - 6 - w, y: hub.y - 16, anchor: "end", tx: hub.x - hub.r - 8, ty: hub.y + 4 },
-  ];
-  for (const t of trials) {
-    const box = { x: t.x, y: t.y, w, h: 36 };
-    if (collisions.some((c) => boxesOverlap(c, box, 4))) continue;
-    collisions.push(box);
-    return { ...t, box };
-  }
-  return null;
-}
-
 function placeMap(data, outline) {
-  const box = { x: 18, y: 128, w: 1164, h: 820 };
-  const reserved = { x: 720, y: 780, w: 450, h: 310 };
-  const rings = flattenRings(outline.geometry);
+  // Left rail + masthead + footer + the number. Map fills what remains.
+  // St Kilda (west of 8°W) is dropped from the fit so the mainland can grow.
+  const box = { x: 210, y: 36, w: 970, h: 1020 };
+  const reserved = { x: 720, y: 770, w: 450, h: 290 };
+  const rings = flattenRings(outline.geometry).filter((ring) => {
+    const lons = ring.map((p) => p[0]);
+    const lats = ring.map((p) => p[1]);
+    if (Math.min(...lats) > SHETLAND_LAT) return false;
+    if (Math.max(...lons) < -8.0) return false;
+    return true;
+  });
   const projPts = [];
   for (const ring of rings) {
     for (const [lon, lat] of ring) {
       if (lat > SHETLAND_LAT) continue;
-      projPts.push(albers(lon, lat));
+      projPts.push(rawProject(lon, lat));
     }
   }
   const project = fitProjection(projPts, box);
 
   const outlinePaths = rings
-    .filter((ring) => ring.some(([, lat]) => lat <= SHETLAND_LAT))
     .map((ring) => {
       const pts = ring.map(([lon, lat]) => project(lon, lat));
       return pts.map((p, i) => `${i ? "L" : "M"}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(" ") + "Z";
     });
 
-  const placedHubs = data.hubs.map((hub) => {
-    const [rawLon, rawLat] = centroidLonLat(hub.sites);
-    const [lon, lat, nudged] = nudgeOntoLand(rawLon, rawLat, hub.sites, rings);
-    const [x, y] = project(lon, lat);
-    const r = 8 + 3.1 * Math.sqrt(hub.sites.length);
-    const spokes = hub.sites.map((s) => {
-      const [sx, sy] = project(s.lon, s.lat);
-      return { ...s, x: sx, y: sy, label: labelKey(s.name) };
-    });
-    return {
-      ...hub,
-      lon,
-      lat,
-      rawLon,
-      rawLat,
-      nudged,
-      x,
-      y,
-      r,
-      spokes,
-    };
-  });
-  separateHubs(placedHubs);
-
-  const lesserPlaced = data.lesserGroups.map((g) => {
+  const groups = data.groups.map((g) => {
     const sites = g.sites.map((s) => {
       const [x, y] = project(s.lon, s.lat);
       return { ...s, x, y, label: labelKey(s.name) };
     });
-    return { ...g, colour: data.lesserColour, sites };
+    return { ...g, sites, edges: mstEdges(sites) };
   });
 
   const independents = data.independents.map((s) => {
@@ -746,52 +689,31 @@ function placeMap(data, outline) {
 
   const collisions = [
     { x: reserved.x, y: reserved.y, w: reserved.w, h: reserved.h },
-    { x: 24, y: 36, w: 560, h: 100 },
+    { x: 24, y: 36, w: 230, h: 110 },
+    { x: 36, y: 150, w: 200, h: 520 },
   ];
-  const hubLabels = [];
-  const unlabeled = [];
-  for (const hub of placedHubs) {
-    const lab = placeHubLabel(hub, collisions);
-    if (lab) hubLabels.push({ hub, ...lab });
-    else unlabeled.push(hub);
-  }
-
   const siteLabels = [];
   const candidates = [];
-  for (const hub of placedHubs) {
-    for (const s of hub.spokes) {
-      if (s.label) candidates.push({ ...s, colour: hub.colour });
-    }
-  }
-  for (const g of lesserPlaced) {
+  for (const g of groups) {
     for (const s of g.sites) {
       if (s.label) candidates.push({ ...s, colour: g.colour });
     }
   }
   candidates.sort((a, b) => SITE_LABELS.indexOf(a.label) - SITE_LABELS.indexOf(b.label));
   for (const s of candidates) {
-    const w = s.label.length * 7.2;
-    const boxL = { x: s.x - w / 2, y: s.y - 22, w, h: 16 };
-    if (collisions.some((c) => boxesOverlap(c, boxL))) {
-      s.dropped = true;
-      continue;
-    }
-    collisions.push(boxL);
-    siteLabels.push({ ...s, labelX: s.x, labelY: s.y - 10 });
+    const w = s.label.length * 7.4;
+    const trials = [
+      { x: s.x - w / 2, y: s.y - 22, labelX: s.x, labelY: s.y - 10, anchor: "middle" },
+      { x: s.x + 8, y: s.y - 8, labelX: s.x + 8, labelY: s.y + 4, anchor: "start" },
+      { x: s.x - w - 8, y: s.y - 8, labelX: s.x - 8, labelY: s.y + 4, anchor: "end" },
+    ];
+    const hit = trials.find((t) => !collisions.some((c) => boxesOverlap(c, { x: t.x, y: t.y, w, h: 16 }, 4)));
+    if (!hit) continue;
+    collisions.push({ x: hit.x, y: hit.y, w, h: 16 });
+    siteLabels.push({ ...s, ...hit });
   }
 
-  return { outlinePaths, placedHubs, lesserPlaced, independents, siteLabels, hubLabels, unlabeled, reserved };
-}
-
-function quadPath(x1, y1, x2, y2, bend) {
-  const mx = (x1 + x2) / 2;
-  const my = (y1 + y2) / 2;
-  const dx = x2 - x1;
-  const dy = y2 - y1;
-  const len = Math.hypot(dx, dy) || 1;
-  const cx = mx - (dy / len) * bend;
-  const cy = my + (dx / len) * bend;
-  return `M${x1.toFixed(1)},${y1.toFixed(1)} Q${cx.toFixed(1)},${cy.toFixed(1)} ${x2.toFixed(1)},${y2.toFixed(1)}`;
+  return { outlinePaths, groups, independents, siteLabels };
 }
 
 function svgMap(layout) {
@@ -801,63 +723,37 @@ function svgMap(layout) {
   }
 
   for (const n of layout.independents) {
-    out += `<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="2.7" fill="${SB.stone}" fill-opacity="0.6"/>`;
+    out += `<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="2.6" fill="${SB.stone}" fill-opacity="0.6"/>`;
   }
 
-  for (const g of layout.lesserPlaced) {
-    if (g.sites.length >= 2) {
-      for (let i = 0; i < g.sites.length - 1; i += 1) {
-        const a = g.sites[i];
-        const b = g.sites[i + 1];
-        out += `<path d="${quadPath(a.x, a.y, b.x, b.y, 10)}" fill="none" stroke="${g.colour}" stroke-width="1.2" stroke-opacity="0.45"/>`;
-      }
+  for (const g of layout.groups) {
+    for (const [a, b] of g.edges) {
+      out += `<line x1="${a.x.toFixed(1)}" y1="${a.y.toFixed(1)}" x2="${b.x.toFixed(1)}" y2="${b.y.toFixed(1)}" stroke="${g.colour}" stroke-width="1.15" stroke-opacity="0.3"/>`;
     }
+  }
+  for (const g of layout.groups) {
     for (const s of g.sites) {
-      out += `<circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="4.2" fill="${g.colour}"/>`;
+      out += `<circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="4.3" fill="${g.colour}"/>`;
     }
-  }
-
-  for (const hub of layout.placedHubs) {
-    hub.spokes.forEach((s, i) => {
-      const bend = ((i % 5) - 2) * 11;
-      out += `<path d="${quadPath(hub.x, hub.y, s.x, s.y, bend)}" fill="none" stroke="${hub.colour}" stroke-width="1.15" stroke-opacity="0.45"/>`;
-    });
-  }
-  for (const hub of layout.placedHubs) {
-    for (const s of hub.spokes) {
-      out += `<circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="4.4" fill="${hub.colour}"/>`;
-    }
-  }
-  for (const hub of layout.placedHubs) {
-    out += `<circle cx="${hub.x.toFixed(1)}" cy="${hub.y.toFixed(1)}" r="${hub.r.toFixed(1)}" fill="${hub.colour}"/>`;
-    out += `<circle cx="${hub.x.toFixed(1)}" cy="${hub.y.toFixed(1)}" r="${(hub.r * 0.58).toFixed(1)}" fill="none" stroke="${SB.page}" stroke-width="1.3" stroke-opacity="0.4"/>`;
-  }
-  const halo = `stroke="${SB.page}" stroke-width="5.5" stroke-linejoin="round" paint-order="stroke"`;
-  for (const lab of layout.hubLabels) {
-    const hub = lab.hub;
-    const nameSize = hub.sites.length >= 10 ? 24 : 20;
-    const countSize = 16;
-    out += `<text x="${lab.tx.toFixed(1)}" y="${lab.ty.toFixed(1)}" text-anchor="${lab.anchor}" font-family="Newsreader, Georgia, serif" font-size="${nameSize}" font-weight="500" fill="${SB.oak}" ${halo}>${esc(hub.short)}</text>`;
-    const countX = lab.anchor === "start" ? lab.tx : lab.anchor === "end" ? lab.tx : lab.tx;
-    out += `<text x="${countX.toFixed(1)}" y="${(lab.ty + 18).toFixed(1)}" text-anchor="${lab.anchor}" font-family="'JetBrains Mono', monospace" font-size="${countSize}" fill="${hub.colour}" ${halo}>${hub.sites.length}</text>`;
-  }
-  if (layout.unlabeled.length) {
-    let ly = 980;
-    out += `<text x="48" y="${ly}" text-anchor="start" font-family="'JetBrains Mono', monospace" font-size="13" fill="${SB.stone}">`;
-    for (const hub of layout.unlabeled) {
-      ly += 18;
-      out += `<tspan x="48" y="${ly}">${esc(hub.short)}  ${hub.sites.length}</tspan>`;
-    }
-    out += `</text>`;
   }
   for (const s of layout.siteLabels) {
     const halo = `stroke="${SB.page}" stroke-width="5" stroke-linejoin="round" paint-order="stroke"`;
-    out += `<text x="${s.labelX.toFixed(1)}" y="${s.labelY.toFixed(1)}" text-anchor="middle" font-family="'Instrument Sans', system-ui, sans-serif" font-size="15" fill="${SB.oak}" ${halo}>${esc(s.label)}</text>`;
+    out += `<text x="${s.labelX.toFixed(1)}" y="${s.labelY.toFixed(1)}" text-anchor="${s.anchor}" font-family="'Instrument Sans', system-ui, sans-serif" font-size="15" fill="${SB.oak}" ${halo}>${esc(s.label)}</text>`;
   }
   return out;
 }
 
-function cardChrome(data, svg, aria) {
+function railHtml(data) {
+  const rows = data.groups
+    .map(
+      (g) =>
+        `<div class="rail-row" style="color:${g.colour}"><span>${esc(g.short)}</span><span class="n">${g.sites.length}</span></div>`
+    )
+    .join("");
+  return `<div class="rail">${rows}</div>`;
+}
+
+function cardChrome(data, svg, aria, extras = {}) {
   const claim = claimLines(data);
   return `<!doctype html>
 <html lang="en">
@@ -923,6 +819,16 @@ function cardChrome(data, svg, aria) {
     font-family: 'JetBrains Mono', monospace; font-size: 16px;
     text-transform: uppercase; letter-spacing: 0.18em; color: ${SB.stone};
   }
+  .rail {
+    position: absolute; left: 48px; top: 168px; width: 200px; z-index: 2;
+  }
+  .rail-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 16px; font-weight: 500; line-height: 1.52;
+  }
+  .rail-row .n {
+    font-family: 'JetBrains Mono', monospace; font-size: 15px; margin-left: 14px;
+  }
 </style>
 </head>
 <body>
@@ -930,6 +836,7 @@ function cardChrome(data, svg, aria) {
   <div class="card">
     <svg class="sb" viewBox="0 0 100 100"><text x="50.5" y="59" text-anchor="middle" dominant-baseline="central" font-family="Newsreader, Georgia, serif" font-size="84" font-weight="400" letter-spacing="-3" fill="${SB.copper}">S<tspan font-style="italic" font-weight="300" fill="${SB.gold}">b</tspan></text></svg>
     <div class="eyebrow"><span class="title">${esc(data.title)}</span><span class="ed">${esc(data.edition)}</span></div>
+    ${extras.rail || ""}
     <svg class="network" viewBox="0 0 1200 1200" width="1200" height="1200" role="img" aria-label="${esc(aria)}">${svg}</svg>
     <div class="stat">
       <div class="num">${esc(claim.headline)}</div>
@@ -1014,7 +921,7 @@ function renderSummary(data, mapLayout) {
     lines.push(`## Mapped groups below the top eight`);
     lines.push("");
     lines.push(
-      "These are groups, not independents. On the map they share one tone, with a short line between their sites and no hub label."
+      "These are groups, not independents. On the map they use their own colour and join their sites with the same MST web. They appear in the left rail."
     );
     lines.push("");
     for (const g of data.lesserGroups) {
@@ -1022,18 +929,13 @@ function renderSummary(data, mapLayout) {
     }
     lines.push("");
   }
-  lines.push(`## Hub table (map centroids)`);
+  lines.push(`## Map`);
   lines.push("");
-  lines.push(`Hubs sit at the geographic mean of each group's site coordinates, nudged onto land if the mean is in the sea. No registered offices.`);
+  lines.push(
+    `No hub discs. Each group's sites stay at real coordinates and are joined by a minimum-spanning tree in the group colour at 30% alpha. Group names and counts sit in a left rail, sorted by count. Projection is a spherical transverse Mercator centred on 4.2°W, 57°N.`
+  );
   lines.push("");
-  lines.push(`| Group | Sites | Centroid (nudged) | Raw mean | Nudged | Source |`);
-  lines.push(`|---|---:|---|---|---|---|`);
-  for (const h of mapLayout.placedHubs) {
-    const src = h.sites[0]?.pscSource || "https://find-and-update.company-information.service.gov.uk/";
-    lines.push(
-      `| ${h.display} | ${h.sites.length} | ${h.lon.toFixed(4)}, ${h.lat.toFixed(4)} | ${h.rawLon.toFixed(4)}, ${h.rawLat.toFixed(4)} | ${h.nudged ? "yes" : "no"} | ${src} |`
-    );
-  }
+  lines.push(`Site labels on the map: ${(mapLayout.siteLabels || []).map((s) => s.label).join(", ") || "none"}.`);
   lines.push("");
   lines.push(`## Companies left as Independent with more than one site`);
   lines.push("");
@@ -1056,7 +958,7 @@ function renderSummary(data, mapLayout) {
   lines.push(`## Human look`);
   lines.push("");
   lines.push(
-    `- **Macdonald & Muir / Ardbeg / Glenmorangie.** Companies House PSC in this file rolls \`SC019038\` to Diageo plc in two hops (Macdonald & Muir → The Glenmorangie Company Limited → Diageo Plc). In the trade those two distilleries are LVMH. The card follows the PSC file, so they sit in Diageo's 34. Do not silently override; fix the walker or the filing and rebuild.`
+    `- **Macdonald & Muir / Ardbeg / Glenmorangie.** The corrected PSC file now stops at LVMH. They are their own two-site group, not Diageo.`
   );
   lines.push(
     `- **Newbridge Bond** is a Brown-Forman warehouse row, not a still. It is in the Brown-Forman four because the crosswalk row is high-confidence and the controller already has whisky-signal sites. A human may drop it.`
@@ -1195,7 +1097,12 @@ async function main() {
   );
   writeFileSync(
     MAP_HTML,
-    cardChrome(data, svgMap(map), "Map of Scotland with Scotch whisky distilleries by controlling group.")
+    cardChrome(
+      data,
+      svgMap(map),
+      "Map of Scotland with Scotch whisky distilleries by controlling group.",
+      { rail: railHtml(data) }
+    )
   );
   writeFileSync(SUMMARY_OUT, renderSummary(data, map));
 

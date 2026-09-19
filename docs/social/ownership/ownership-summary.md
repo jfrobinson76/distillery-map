@@ -155,7 +155,7 @@ Beam Suntory UK Holdings Limited.
 
 ## Mapped groups below the top eight
 
-These are groups, not independents. On the map they share one tone, with a short line between their sites and no hub label.
+These are groups, not independents. On the map they use their own colour and join their sites with the same MST web. They appear in the left rail.
 
 - **Brown-Forman** (4): Glenglassaugh Distillery; The Glendronach Distillery; Newbridge Bond - The Benriach Distillery Company Limited; Benriach Distillery
 - **Distell** (3): Bunnahabhain Distillery; Tobermory Distillery; Deanston Distillery
@@ -163,22 +163,13 @@ These are groups, not independents. On the map they share one tone, with a short
 - **Isle of Arran** (2): Arran Distillery; Lagg Distillery
 - **La Martiniquaise** (2): Glen Moray Distillery; Glen Turner Distillery
 - **Loch Lomond Group** (2): Loch Lomond Distillery; Glen Scotia Distillery
-- **Lvmh Moet Hennessy Louis Vuitton Se** (2): Ardbeg; Glenmorangie Distillery
+- **LVMH** (2): Ardbeg; Glenmorangie Distillery
 
-## Hub table (map centroids)
+## Map
 
-Hubs sit at the geographic mean of each group's site coordinates, nudged onto land if the mean is in the sea. No registered offices.
+No hub discs. Each group's sites stay at real coordinates and are joined by a minimum-spanning tree in the group colour at 30% alpha. Group names and counts sit in a left rail, sorted by count. Projection is a spherical transverse Mercator centred on 4.2°W, 57°N.
 
-| Group | Sites | Centroid (nudged) | Raw mean | Nudged | Source |
-|---|---:|---|---|---|---|
-| Diageo | 32 | -3.8057, 57.1556 | -3.8057, 57.1556 | no | https://find-and-update.company-information.service.gov.uk/company/00023307/persons-with-significant-control |
-| Pernod Ricard | 13 | -3.2884, 57.4742 | -3.2884, 57.4742 | no | https://find-and-update.company-information.service.gov.uk/company/SC043917/persons-with-significant-control |
-| William Grant | 5 | -3.8059, 56.5828 | -3.8059, 56.5828 | no | https://find-and-update.company-information.service.gov.uk/company/SC131772/persons-with-significant-control |
-| Whyte & Mackay | 5 | -4.0482, 57.0776 | -4.0482, 57.0776 | no | https://find-and-update.company-information.service.gov.uk/company/SC221954/persons-with-significant-control |
-| Inver House | 5 | -3.3337, 57.7081 | -3.3547, 57.7384 | yes | https://find-and-update.company-information.service.gov.uk/company/SC040036/persons-with-significant-control |
-| Bacardi | 4 | -3.3174, 57.3465 | -3.3174, 57.3465 | no | https://find-and-update.company-information.service.gov.uk/company/00613551/persons-with-significant-control |
-| Ian Macleod | 4 | -3.7463, 56.3509 | -3.7463, 56.3509 | no | https://find-and-update.company-information.service.gov.uk/company/SC032696/persons-with-significant-control |
-| Suntory Global Spirits | 4 | -4.3770, 56.5193 | -4.3770, 56.5193 | no | https://find-and-update.company-information.service.gov.uk/company/05591988/persons-with-significant-control |
+Site labels on the map: Talisker, Lagavulin, Caol Ila, Cardhu, Glenfiddich.
 
 ## Companies left as Independent with more than one site
 
@@ -217,7 +208,7 @@ None. Every multi-site controller in the matched Scotch set is a group.
 
 ## Human look
 
-- **Macdonald & Muir / Ardbeg / Glenmorangie.** Companies House PSC in this file rolls `SC019038` to Diageo plc in two hops (Macdonald & Muir → The Glenmorangie Company Limited → Diageo Plc). In the trade those two distilleries are LVMH. The card follows the PSC file, so they sit in Diageo's 34. Do not silently override; fix the walker or the filing and rebuild.
+- **Macdonald & Muir / Ardbeg / Glenmorangie.** The corrected PSC file now stops at LVMH. They are their own two-site group, not Diageo.
 - **Newbridge Bond** is a Brown-Forman warehouse row, not a still. It is in the Brown-Forman four because the crosswalk row is high-confidence and the controller already has whisky-signal sites. A human may drop it.
 - **Ian Macleod Distillers Ltd** is a name-match HQ row with an empty description and a whisky category verdict. Same treatment.
 - **Speymalt / Gordon & MacPhail.** Benromach is a matched one-site controller (independent). The Cairn is empty-description and was not group-filled — it is not one of the six named malt restorations. Including it would invent a fifteenth group the README does not carry.
