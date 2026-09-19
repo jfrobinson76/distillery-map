@@ -167,9 +167,9 @@ These are groups, not independents. On the map they use their own colour and joi
 
 ## Map
 
-No hub discs. Each group's sites stay at real coordinates and are joined by a minimum-spanning tree in the group colour at 30% alpha. Group names and counts sit in a left rail, sorted by count. Projection is a spherical transverse Mercator centred on 4.2°W, 57°N.
+No hub discs. Each group's sites stay at real coordinates and are joined by a minimum-spanning tree in the group colour at 50% alpha. Group names and counts sit in a left rail, sorted by count. Projection is a spherical transverse Mercator centred on 4.2°W, 57°N. The number sits below the southern coast.
 
-Site labels on the map: Talisker, Lagavulin, Caol Ila, Cardhu, Glenfiddich.
+Site labels on the map: Talisker, Lagavulin, Caol Ila, Cardhu.
 
 ## Companies left as Independent with more than one site
 

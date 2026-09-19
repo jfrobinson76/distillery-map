@@ -582,7 +582,7 @@ function rawProject(lon, lat) {
   return [x, y];
 }
 
-function fitProjection(points, box) {
+function fitProjection(points, box, align = "center") {
   let minX = Infinity;
   let minY = Infinity;
   let maxX = -Infinity;
@@ -596,8 +596,8 @@ function fitProjection(points, box) {
   const sx = box.w / (maxX - minX);
   const sy = box.h / (maxY - minY);
   const s = Math.min(sx, sy);
-  const ox = box.x + (box.w - (maxX - minX) * s) / 2;
-  const oy = box.y + (box.h - (maxY - minY) * s) / 2;
+  const ox = align === "topleft" ? box.x : box.x + (box.w - (maxX - minX) * s) / 2;
+  const oy = align === "topleft" ? box.y : box.y + (box.h - (maxY - minY) * s) / 2;
   return (lon, lat) => {
     const [x, y] = rawProject(lon, lat);
     return [ox + (x - minX) * s, oy + (maxY - y) * s];
@@ -650,8 +650,10 @@ function boxesOverlap(a, b, pad = 6) {
 function placeMap(data, outline) {
   // Left rail + masthead + footer + the number. Map fills what remains.
   // St Kilda (west of 8°W) is dropped from the fit so the mainland can grow.
-  const box = { x: 210, y: 36, w: 970, h: 1020 };
-  const reserved = { x: 720, y: 770, w: 450, h: 290 };
+  // Keep the southern coast above the number: box ends at y 744.
+  // Top-left align so leftover width sits in the North Sea, not on the rail.
+  const box = { x: 158, y: 18, w: 1024, h: 726 };
+  const reserved = { x: 700, y: 748, w: 480, h: 320 };
   const rings = flattenRings(outline.geometry).filter((ring) => {
     const lons = ring.map((p) => p[0]);
     const lats = ring.map((p) => p[1]);
@@ -666,7 +668,7 @@ function placeMap(data, outline) {
       projPts.push(rawProject(lon, lat));
     }
   }
-  const project = fitProjection(projPts, box);
+  const project = fitProjection(projPts, box, "topleft");
 
   const outlinePaths = rings
     .map((ring) => {
@@ -728,12 +730,12 @@ function svgMap(layout) {
 
   for (const g of layout.groups) {
     for (const [a, b] of g.edges) {
-      out += `<line x1="${a.x.toFixed(1)}" y1="${a.y.toFixed(1)}" x2="${b.x.toFixed(1)}" y2="${b.y.toFixed(1)}" stroke="${g.colour}" stroke-width="1.15" stroke-opacity="0.3"/>`;
+      out += `<line x1="${a.x.toFixed(1)}" y1="${a.y.toFixed(1)}" x2="${b.x.toFixed(1)}" y2="${b.y.toFixed(1)}" stroke="${g.colour}" stroke-width="1.15" stroke-opacity="0.5"/>`;
     }
   }
   for (const g of layout.groups) {
     for (const s of g.sites) {
-      out += `<circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="4.3" fill="${g.colour}"/>`;
+      out += `<circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="3.6" fill="${g.colour}"/>`;
     }
   }
   for (const s of layout.siteLabels) {
@@ -790,6 +792,9 @@ function cardChrome(data, svg, aria, extras = {}) {
     position: absolute; right: 56px; bottom: 148px; text-align: right;
     width: 500px;
   }
+  .card.map .stat {
+    bottom: 118px;
+  }
   .stat .num {
     font-family: Newsreader, Georgia, serif; font-weight: 400;
     font-size: 68px; line-height: 0.96; letter-spacing: -0.02em; color: ${SB.oak};
@@ -833,7 +838,7 @@ function cardChrome(data, svg, aria, extras = {}) {
 </head>
 <body>
   <script>if (location.search.includes("full")) document.body.classList.add("full");</script>
-  <div class="card">
+  <div class="card${extras.cardClass ? ` ${extras.cardClass}` : ""}">
     <svg class="sb" viewBox="0 0 100 100"><text x="50.5" y="59" text-anchor="middle" dominant-baseline="central" font-family="Newsreader, Georgia, serif" font-size="84" font-weight="400" letter-spacing="-3" fill="${SB.copper}">S<tspan font-style="italic" font-weight="300" fill="${SB.gold}">b</tspan></text></svg>
     <div class="eyebrow"><span class="title">${esc(data.title)}</span><span class="ed">${esc(data.edition)}</span></div>
     ${extras.rail || ""}
@@ -932,7 +937,7 @@ function renderSummary(data, mapLayout) {
   lines.push(`## Map`);
   lines.push("");
   lines.push(
-    `No hub discs. Each group's sites stay at real coordinates and are joined by a minimum-spanning tree in the group colour at 30% alpha. Group names and counts sit in a left rail, sorted by count. Projection is a spherical transverse Mercator centred on 4.2°W, 57°N.`
+    `No hub discs. Each group's sites stay at real coordinates and are joined by a minimum-spanning tree in the group colour at 50% alpha. Group names and counts sit in a left rail, sorted by count. Projection is a spherical transverse Mercator centred on 4.2°W, 57°N. The number sits below the southern coast.`
   );
   lines.push("");
   lines.push(`Site labels on the map: ${(mapLayout.siteLabels || []).map((s) => s.label).join(", ") || "none"}.`);
@@ -1101,7 +1106,7 @@ async function main() {
       data,
       svgMap(map),
       "Map of Scotland with Scotch whisky distilleries by controlling group.",
-      { rail: railHtml(data) }
+      { rail: railHtml(data), cardClass: "map" }
     )
   );
   writeFileSync(SUMMARY_OUT, renderSummary(data, map));
