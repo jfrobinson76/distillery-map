@@ -9,6 +9,8 @@
     "lint": "eslint",
     "indexnow": "node scripts/indexnow.mjs",
     "share-card": "node scripts/share-card.mjs",
+    "ownership-card": "node scripts/build-ownership-card.mjs",
+    "ownership-map": "node scripts/build-ownership-card.mjs --variant map",
     "search:audit": "node scripts/search-intelligence.mjs audit",
     "search:auth": "node scripts/gsc-auth.mjs",
     "search:ingest": "node scripts/search-intelligence.mjs ingest",
