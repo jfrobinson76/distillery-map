@@ -650,10 +650,12 @@ function boxesOverlap(a, b, pad = 6) {
 function placeMap(data, outline) {
   // Left rail + masthead + footer + the number. Map fills what remains.
   // St Kilda (west of 8°W) is dropped from the fit so the mainland can grow.
-  // 12% smaller than the last pass, still top-left, so the Borders sit
-  // above the headline. Legend rail is HTML and does not move.
-  const box = { x: 158, y: 18, w: 901, h: 639 };
-  const reserved = { x: 700, y: 660, w: 480, h: 400 };
+  // Fixed grid on the 1200 frame (2400 at export), set 19 Sep 2026 after two passes of
+  // relative instructions went wrong: rail x 48-300; map box x 340-1150, y 110-830, map
+  // centred in it; headline block sits below y 850 on the right. Nothing but the map,
+  // sites, webs and five labels may be drawn inside the map box.
+  const box = { x: 340, y: 110, w: 810, h: 720 };
+  const reserved = { x: 640, y: 850, w: 540, h: 260 };
   const rings = flattenRings(outline.geometry).filter((ring) => {
     const lons = ring.map((p) => p[0]);
     const lats = ring.map((p) => p[1]);
@@ -668,7 +670,7 @@ function placeMap(data, outline) {
       projPts.push(rawProject(lon, lat));
     }
   }
-  const project = fitProjection(projPts, box, "topleft");
+  const project = fitProjection(projPts, box, "center");
 
   const outlinePaths = rings
     .map((ring) => {
@@ -825,7 +827,7 @@ function cardChrome(data, svg, aria, extras = {}) {
     text-transform: uppercase; letter-spacing: 0.18em; color: ${SB.stone};
   }
   .rail {
-    position: absolute; left: 48px; top: 168px; width: 200px; z-index: 2;
+    position: absolute; left: 48px; top: 160px; width: 240px; z-index: 2;
   }
   .rail-row {
     display: flex; justify-content: space-between; align-items: baseline;
