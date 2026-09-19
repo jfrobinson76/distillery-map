@@ -59,7 +59,7 @@ const GROUP_FILL_NAMES = [
   "lagg",
   "glen turner",
 ];
-const SHETLAND_LAT = 59.85;
+const SHETLAND_LAT = 59.5; // drop Shetland; Orkney tops out at ~59.4N
 
 const CHROME_CANDIDATES = [
   process.env.CHROME,
@@ -503,6 +503,7 @@ function claimLines(data) {
       : `${data.total} Scotch whisky distilleries.`,
     groups: `${data.groupCount} groups run ${data.groupRun} of them (${pctGroup}%).`,
     indep: `At most ${data.independentCount} are independent (${pctIndep}%).`,
+    compact: `${data.total} operating distilleries. ${data.groupCount} groups run ${data.groupRun}. Diageo ${data.diageoCount}.`,
     diageo: `Diageo alone runs ${data.diageoCount} (${pctDiageo}%).`,
     caveat: "By number of distilleries, not by litres.",
   };
@@ -723,8 +724,8 @@ function placeMap(data, outline) {
   // relative instructions went wrong: rail x 48-300; map box x 340-1150, y 110-830, map
   // centred in it; headline block sits below y 850 on the right. Nothing but the map,
   // sites, webs and five labels may be drawn inside the map box.
-  const box = { x: 320, y: 70, w: 850, h: 690 };
-  const reserved = { x: 600, y: 800, w: 580, h: 300 };
+  const box = { x: 330, y: 60, w: 840, h: 1020 };
+  const reserved = { x: 0, y: 0, w: 0, h: 0 };
   const rings = flattenRings(outline.geometry).filter((ring) => {
     const lons = ring.map((p) => p[0]);
     const lats = ring.map((p) => p[1]);
@@ -786,7 +787,7 @@ function placeMap(data, outline) {
     siteLabels.push({ ...s, ...hit });
   }
 
-  return { outlinePaths, groups, independents, siteLabels };
+  return { outlinePaths, groups, independents, siteLabels: [] };
 }
 
 function svgMap(layout) {
@@ -798,7 +799,7 @@ function svgMap(layout) {
   // Independents are half the story, so they must read: a ring in oak on a paper core,
   // drawn on top of the land and under the group webs.
   for (const n of layout.independents) {
-    out += `<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="3.8" fill="${SB.page}" stroke="${SB.oak}" stroke-width="1.5" stroke-opacity="0.85"/>`;
+    out += `<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="4.4" fill="${SB.page}" stroke="${SB.oak}" stroke-width="1.6" stroke-opacity="0.9"/>`;
   }
 
   for (const g of layout.groups) {
@@ -808,7 +809,7 @@ function svgMap(layout) {
   }
   for (const g of layout.groups) {
     for (const s of g.sites) {
-      out += `<circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="4.6" fill="${g.colour}" stroke="${SB.page}" stroke-width="1"/>`;
+      out += `<circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="5.2" fill="${g.colour}" stroke="${SB.page}" stroke-width="1.1"/>`;
     }
   }
   for (const s of layout.siteLabels) {
@@ -869,8 +870,11 @@ function cardChrome(data, svg, aria, extras = {}) {
     width: 500px;
   }
   .card.map .stat {
-    bottom: 118px;
+    right: auto; left: 48px; bottom: 168px; width: 270px; text-align: left;
   }
+  .card.map .stat .num { font-size: 50px; }
+  .card.map .stat .line { font-size: 17px; margin-top: 8px; }
+  .card.map .stat .caveat { font-size: 14px; margin-top: 8px; }
   .stat .num {
     font-family: Newsreader, Georgia, serif; font-weight: 400;
     font-size: 68px; line-height: 0.96; letter-spacing: -0.02em; color: ${SB.oak};
@@ -905,7 +909,7 @@ function cardChrome(data, svg, aria, extras = {}) {
   }
   .rail-row {
     display: flex; justify-content: space-between; align-items: baseline;
-    font-size: 16px; font-weight: 500; line-height: 1.52;
+    font-size: 15px; font-weight: 500; line-height: 1.45;
   }
   .rail-indep { margin-top: 10px; padding-top: 8px; border-top: 1px solid ${SB.rule}; }
   .rail-row .n {
@@ -922,10 +926,12 @@ function cardChrome(data, svg, aria, extras = {}) {
     <svg class="network" viewBox="0 0 1200 1200" width="1200" height="1200" role="img" aria-label="${esc(aria)}">${svg}</svg>
     <div class="stat">
       <div class="num">${esc(claim.headline)}</div>
-      <div class="line">${esc(claim.body)}</div>
+      ${extras.compact
+        ? `<div class="line">${esc(claim.compact)}</div>`
+        : `<div class="line">${esc(claim.body)}</div>
       <div class="line">${esc(claim.groups)}</div>
       <div class="line">${esc(claim.indep)}</div>
-      <div class="line">${esc(claim.diageo)}</div>
+      <div class="line">${esc(claim.diageo)}</div>`}
       <div class="caveat">${esc(claim.caveat)}</div>
     </div>
     <div class="foot">
@@ -1193,7 +1199,7 @@ async function main() {
       data,
       svgMap(map),
       "Map of Scotland with Scotch whisky distilleries by controlling group.",
-      { rail: railHtml(data), cardClass: "map" }
+      { rail: railHtml(data), cardClass: "map", compact: true }
     )
   );
   writeFileSync(SUMMARY_OUT, renderSummary(data, map));

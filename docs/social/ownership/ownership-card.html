@@ -34,8 +34,11 @@
     width: 500px;
   }
   .card.map .stat {
-    bottom: 118px;
+    right: auto; left: 48px; bottom: 168px; width: 270px; text-align: left;
   }
+  .card.map .stat .num { font-size: 50px; }
+  .card.map .stat .line { font-size: 17px; margin-top: 8px; }
+  .card.map .stat .caveat { font-size: 14px; margin-top: 8px; }
   .stat .num {
     font-family: Newsreader, Georgia, serif; font-weight: 400;
     font-size: 68px; line-height: 0.96; letter-spacing: -0.02em; color: #2A1F17;
@@ -70,7 +73,7 @@
   }
   .rail-row {
     display: flex; justify-content: space-between; align-items: baseline;
-    font-size: 16px; font-weight: 500; line-height: 1.52;
+    font-size: 15px; font-weight: 500; line-height: 1.45;
   }
   .rail-indep { margin-top: 10px; padding-top: 8px; border-top: 1px solid #CDB994; }
   .rail-row .n {
