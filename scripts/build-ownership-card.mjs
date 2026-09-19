@@ -650,10 +650,10 @@ function boxesOverlap(a, b, pad = 6) {
 function placeMap(data, outline) {
   // Left rail + masthead + footer + the number. Map fills what remains.
   // St Kilda (west of 8°W) is dropped from the fit so the mainland can grow.
-  // Keep the southern coast above the number: box ends at y 744.
-  // Top-left align so leftover width sits in the North Sea, not on the rail.
-  const box = { x: 158, y: 18, w: 1024, h: 726 };
-  const reserved = { x: 700, y: 748, w: 480, h: 320 };
+  // 12% smaller than the last pass, still top-left, so the Borders sit
+  // above the headline. Legend rail is HTML and does not move.
+  const box = { x: 158, y: 18, w: 901, h: 639 };
+  const reserved = { x: 700, y: 660, w: 480, h: 400 };
   const rings = flattenRings(outline.geometry).filter((ring) => {
     const lons = ring.map((p) => p[0]);
     const lats = ring.map((p) => p[1]);
@@ -937,7 +937,7 @@ function renderSummary(data, mapLayout) {
   lines.push(`## Map`);
   lines.push("");
   lines.push(
-    `No hub discs. Each group's sites stay at real coordinates and are joined by a minimum-spanning tree in the group colour at 50% alpha. Group names and counts sit in a left rail, sorted by count. Projection is a spherical transverse Mercator centred on 4.2°W, 57°N. The number sits below the southern coast.`
+    `No hub discs. Each group's sites stay at real coordinates and are joined by a minimum-spanning tree in the group colour at 50% alpha. Group names and counts sit in a left rail, sorted by count. Projection is a spherical transverse Mercator centred on 4.2°W, 57°N. The map is 12% smaller than the first top-left fit and anchored top-left so the Borders sit above the headline.`
   );
   lines.push("");
   lines.push(`Site labels on the map: ${(mapLayout.siteLabels || []).map((s) => s.label).join(", ") || "none"}.`);
