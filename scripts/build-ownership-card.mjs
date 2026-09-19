@@ -430,11 +430,15 @@ function wordNumber(n) {
 }
 
 function claimLines(data) {
+  const pctGroup = Math.round((data.groupRun / data.total) * 100);
+  const pctIndep = Math.round((data.independentCount / data.total) * 100);
+  const pctDiageo = Math.round((data.diageoCount / data.total) * 100);
   return {
     headline: "Half independent.",
     body: `${data.total} Scotch whisky distilleries.`,
-    groups: `${wordNumber(data.groupCount)} groups run ${data.groupRun}.`,
-    diageo: `Diageo runs ${data.diageoCount}, one in five.`,
+    groups: `${data.groupCount} groups run ${data.groupRun} of them (${pctGroup}%).`,
+    indep: `${data.independentCount} are independent (${pctIndep}%).`,
+    diageo: `Diageo alone runs ${data.diageoCount} (${pctDiageo}%).`,
     caveat: "By number of distilleries, not by litres.",
   };
 }
@@ -654,8 +658,8 @@ function placeMap(data, outline) {
   // relative instructions went wrong: rail x 48-300; map box x 340-1150, y 110-830, map
   // centred in it; headline block sits below y 850 on the right. Nothing but the map,
   // sites, webs and five labels may be drawn inside the map box.
-  const box = { x: 340, y: 110, w: 810, h: 720 };
-  const reserved = { x: 640, y: 850, w: 540, h: 260 };
+  const box = { x: 320, y: 70, w: 850, h: 690 };
+  const reserved = { x: 600, y: 800, w: 580, h: 300 };
   const rings = flattenRings(outline.geometry).filter((ring) => {
     const lons = ring.map((p) => p[0]);
     const lats = ring.map((p) => p[1]);
@@ -726,8 +730,10 @@ function svgMap(layout) {
     out += `<path d="${d}" fill="${SB.ember}" fill-opacity="0.04" stroke="${SB.ember}" stroke-width="1.35" stroke-linejoin="round"/>`;
   }
 
+  // Independents are half the story, so they must read: a ring in oak on a paper core,
+  // drawn on top of the land and under the group webs.
   for (const n of layout.independents) {
-    out += `<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="2.6" fill="${SB.stone}" fill-opacity="0.6"/>`;
+    out += `<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="3.8" fill="${SB.page}" stroke="${SB.oak}" stroke-width="1.5" stroke-opacity="0.85"/>`;
   }
 
   for (const g of layout.groups) {
@@ -737,7 +743,7 @@ function svgMap(layout) {
   }
   for (const g of layout.groups) {
     for (const s of g.sites) {
-      out += `<circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="3.6" fill="${g.colour}"/>`;
+      out += `<circle cx="${s.x.toFixed(1)}" cy="${s.y.toFixed(1)}" r="4.6" fill="${g.colour}" stroke="${SB.page}" stroke-width="1"/>`;
     }
   }
   for (const s of layout.siteLabels) {
@@ -754,7 +760,8 @@ function railHtml(data) {
         `<div class="rail-row" style="color:${g.colour}"><span>${esc(g.short)}</span><span class="n">${g.sites.length}</span></div>`
     )
     .join("");
-  return `<div class="rail">${rows}</div>`;
+  const indep = `<div class="rail-row rail-indep" style="color:${SB.oak}"><span><svg width="12" height="12" viewBox="0 0 12 12" style="vertical-align:-1px;margin-right:6px"><circle cx="6" cy="6" r="4.2" fill="${SB.page}" stroke="${SB.oak}" stroke-width="1.5"/></svg>Independent</span><span class="n">${data.independentCount}</span></div>`;
+  return `<div class="rail">${rows}${indep}</div>`;
 }
 
 function cardChrome(data, svg, aria, extras = {}) {
@@ -833,6 +840,7 @@ function cardChrome(data, svg, aria, extras = {}) {
     display: flex; justify-content: space-between; align-items: baseline;
     font-size: 16px; font-weight: 500; line-height: 1.52;
   }
+  .rail-indep { margin-top: 10px; padding-top: 8px; border-top: 1px solid ${SB.rule}; }
   .rail-row .n {
     font-family: 'JetBrains Mono', monospace; font-size: 15px; margin-left: 14px;
   }
@@ -849,6 +857,7 @@ function cardChrome(data, svg, aria, extras = {}) {
       <div class="num">${esc(claim.headline)}</div>
       <div class="line">${esc(claim.body)}</div>
       <div class="line">${esc(claim.groups)}</div>
+      <div class="line">${esc(claim.indep)}</div>
       <div class="line">${esc(claim.diageo)}</div>
       <div class="caveat">${esc(claim.caveat)}</div>
     </div>
@@ -877,7 +886,7 @@ function renderSummary(data, mapLayout) {
   lines.push(`## Claim on both slides`);
   lines.push("");
   lines.push(`- **${claim.headline}**`);
-  lines.push(`- ${claim.body} ${claim.groups} ${claim.diageo}`);
+  lines.push(`- ${claim.body} ${claim.groups} ${claim.indep} ${claim.diageo}`);
   lines.push(`- ${claim.caveat}`);
   lines.push("");
   lines.push(`| | |`);

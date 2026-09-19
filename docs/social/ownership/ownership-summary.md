@@ -5,7 +5,7 @@ Edition: September 2026. Scotch whisky only. Built from `data/company-crosswalk/
 ## Claim on both slides
 
 - **Half independent.**
-- 176 Scotch whisky distilleries. Fifteen groups run 89. Diageo runs 32, one in five.
+- 176 Scotch whisky distilleries. 15 groups run 89 of them (51%). 87 are independent (49%). Diageo alone runs 32 (18%).
 - By number of distilleries, not by litres.
 
 | | |
