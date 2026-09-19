@@ -219,6 +219,68 @@ function controllerKey(ultNumber, ultName, display) {
   return `name:${normName(ultName)}`;
 }
 
+
+// ---------------------------------------------------------------------------
+// Audited universe (19 Sep 2026). An independent audit (docs/research/ownership-audit-2026-09.md)
+// replaced the category-verdict universe with the SWA's September 2026 list of operating
+// Scotch whisky distilleries and resolved every group by an outside source. When the audit
+// file is present the build uses it and ignores the category filter. Scope: SWA list
+// (155 units; Loch Lomond's malt and grain plants count as two on one site).
+// ---------------------------------------------------------------------------
+const AUDIT_UNIVERSE = join(ROOT, "data", "ownership", "scotch-universe-audit-2026-09.csv");
+const AUDIT_EXTRA_COLOURS = ["#7A5C3A", "#A8703A", "#8B5A2B", "#5E4A3A", "#B58A4A", "#6B6255", "#9A6B47", "#4E3B2E"];
+
+function loadAuditedUniverse(table) {
+  if (!existsSync(AUDIT_UNIVERSE)) return null;
+  const geo = JSON.parse(readFileSync(GEOJSON, "utf8"));
+  const bySlug = new Map();
+  for (const f of geo.features) {
+    const p = f.properties || {};
+    const [lon, lat] = f.geometry?.coordinates || [];
+    if (p.slug && lon != null) bySlug.set(p.slug, { name: p.name || p.slug, lon, lat, desc: p.description || "" });
+  }
+  const rows = parseCsv(readFileSync(AUDIT_UNIVERSE, "utf8"));
+  const inScope = (r) => r.status.startsWith("operating (SWA)") || r.status.startsWith("operating list");
+  const displayFor = (name, i) => {
+    const hit = (table.groups || []).find((g) =>
+      [g.display, g.short, ...(g.match_names || [])].some((n) => n && n.toLowerCase() === name.toLowerCase())
+      || (name.startsWith("CVH") && g.id === "distell") || (name === "Isle of Arran" && g.id === "arran"));
+    if (hit) return hit;
+    return { id: name.toLowerCase().replace(/[^a-z0-9]+/g, "-"), display: name, short: name,
+             colour: AUDIT_EXTRA_COLOURS[i % AUDIT_EXTRA_COLOURS.length], match_numbers: [], match_names: [name],
+             note: "Group named by the September 2026 audit; see docs/research/ownership-audit-2026-09.md" };
+  };
+  const included = [];
+  const jv = [];
+  let units = 0;
+  let extra = 0;
+  const seenGroups = new Map();
+  for (const r of rows) {
+    if (!inScope(r)) continue;
+    const u = Number(r.units || 0);
+    if (!u) continue;
+    const g = bySlug.get(r.slug);
+    if (!g) continue;
+    units += u;
+    const group = (r.group || "residual").trim();
+    const isJV = group === "JV";
+    const matched = group !== "residual" && !isJV;
+    let display = null;
+    if (matched) {
+      if (!seenGroups.has(group)) seenGroups.set(group, displayFor(group, extra++));
+      display = seenGroups.get(group);
+    }
+    const site = {
+      slug: r.slug, name: g.name, lon: g.lon, lat: g.lat, desc: g.desc, reason: "audit",
+      matched, company_name: "", company_number: "", confidence: "audit", relation: "",
+      ultNumber: "", ultName: group, display, key: matched ? `audit:${group}` : `unmatched:${r.slug}`,
+      pscSource: r.source || "", stopped_because: "", units: u,
+    };
+    if (isJV) jv.push(site); else included.push(site);
+  }
+  return { included, jv, units, fillNames: [] };
+}
+
 function loadUniverse(table) {
   const geo = JSON.parse(readFileSync(GEOJSON, "utf8"));
   const cats = loadCategories();
@@ -433,11 +495,14 @@ function claimLines(data) {
   const pctGroup = Math.round((data.groupRun / data.total) * 100);
   const pctIndep = Math.round((data.independentCount / data.total) * 100);
   const pctDiageo = Math.round((data.diageoCount / data.total) * 100);
+  const twoThirds = pctGroup >= 62 && pctGroup <= 71;
   return {
-    headline: "Half independent.",
-    body: `${data.total} Scotch whisky distilleries.`,
+    headline: twoThirds ? "Two-thirds group-run." : `${pctGroup}% group-run.`,
+    body: data.universe
+      ? `${data.total} operating Scotch whisky distilleries.`
+      : `${data.total} Scotch whisky distilleries.`,
     groups: `${data.groupCount} groups run ${data.groupRun} of them (${pctGroup}%).`,
-    indep: `${data.independentCount} are independent (${pctIndep}%).`,
+    indep: `At most ${data.independentCount} are independent (${pctIndep}%).`,
     diageo: `Diageo alone runs ${data.diageoCount} (${pctDiageo}%).`,
     caveat: "By number of distilleries, not by litres.",
   };
@@ -761,7 +826,9 @@ function railHtml(data) {
     )
     .join("");
   const indep = `<div class="rail-row rail-indep" style="color:${SB.oak}"><span><svg width="12" height="12" viewBox="0 0 12 12" style="vertical-align:-1px;margin-right:6px"><circle cx="6" cy="6" r="4.2" fill="${SB.page}" stroke="${SB.oak}" stroke-width="1.5"/></svg>Independent</span><span class="n">${data.independentCount}</span></div>`;
-  return `<div class="rail">${rows}${indep}</div>`;
+  const jv = data.jv && data.jv.length
+    ? `<div class="rail-row" style="color:${SB.oak}"><span>Joint venture</span><span class="n">${data.jv.length}</span></div>` : "";
+  return `<div class="rail">${rows}${indep}${jv}</div>`;
 }
 
 function cardChrome(data, svg, aria, extras = {}) {
@@ -862,7 +929,7 @@ function cardChrome(data, svg, aria, extras = {}) {
       <div class="caveat">${esc(claim.caveat)}</div>
     </div>
     <div class="foot">
-      <div class="source">Companies House PSC filings and Wikidata, matched to the Distillery Map</div>
+      <div class="source">SWA operating list (Sept 2026), Companies House PSC filings, operators' own sites</div>
       <div class="footer">
         <span><span class="wm">Still<i>bound</i></span><span class="tagline">Liquid intelligence</span></span>
         <span class="site">${esc(data.sourceSlug)}</span>
@@ -1102,8 +1169,17 @@ async function main() {
   mkdirSync(OUT_DIR, { recursive: true });
   const table = JSON.parse(readFileSync(GROUPS_PATH, "utf8"));
   const outline = JSON.parse(readFileSync(OUTLINE_PATH, "utf8"));
-  const { included, fillNames } = loadUniverse(table);
+  const audited = loadAuditedUniverse(table);
+  const { included, fillNames } = audited || loadUniverse(table);
   const data = compute(included, table);
+  if (audited) {
+    // SWA scope: units (Loch Lomond malt + grain = 2), JV counted once and shown separately.
+    data.total = audited.units; // JV units are already inside audited.units
+    data.jv = audited.jv;
+    data.universe = "SWA September 2026 operating list";
+    data.independentCount = data.independents.reduce((n, s) => n + (s.units || 1), 0);
+    data.groupRun = data.groups.reduce((n, g) => n + g.sites.reduce((m, s) => m + (s.units || 1), 0), 0);
+  }
   const web = placeWeb(data);
   const map = placeMap(data, outline);
 

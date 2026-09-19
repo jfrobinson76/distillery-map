@@ -4,19 +4,19 @@ Edition: September 2026. Scotch whisky only. Built from `data/company-crosswalk/
 
 ## Claim on both slides
 
-- **Half independent.**
-- 176 Scotch whisky distilleries. 15 groups run 89 of them (51%). 87 are independent (49%). Diageo alone runs 32 (18%).
+- **Two-thirds group-run.**
+- 155 operating Scotch whisky distilleries. 19 groups run 97 of them (63%). At most 57 are independent (37%). Diageo alone runs 29 (19%).
 - By number of distilleries, not by litres.
 
 | | |
 |---|---:|
-| Scotch whisky sites | 176 |
-| Matched high/verified | 148 |
-| Unmatched (drawn as independent) | 28 |
-| Independent (controller has one site, plus unmatched) | 87 |
-| Group-run | 89 |
-| Groups >1 site | 15 |
-| Diageo | 32 |
+| Scotch whisky sites | 155 |
+| Matched high/verified | 96 |
+| Unmatched (drawn as independent) | 57 |
+| Independent (controller has one site, plus unmatched) | 57 |
+| Group-run | 97 |
+| Groups >1 site | 19 |
+| Diageo | 29 |
 
 Independent means the ultimate controller in `psc-parents.csv` runs exactly one site in this universe. Unmatched Scotch sites are treated as independent dots — they are small, mostly post-2005 plants. Counts, not litres.
 
@@ -24,146 +24,147 @@ Independent means the ultimate controller in `psc-parents.csv` runs exactly one 
 
 Map region `scotland`, excluding Shetland (lat > 59.85), visitor (Johnnie Walker Princes Street), the Gordon & MacPhail bottler, Distillers Market, whisky lounges, and gin-named sites. A site is in if the map description says malt/grain/whisky or the category verdict includes whisky. Empty-description high-confidence sites are added only when their controller already has a whisky-signal site (the group-fill that restores Auchroisk, Dufftown, Allt-A-Bhainne, Kininvie, Lagg, Glen Turner).
 
-Group-fill sites: Auchroisk distillery; Kininvie distillery; Dufftown distillery; Allt-A-Bhainne; Glen Turner Distillery; Lagg Distillery.
-
-README on this branch dated the denominator 178 ±5. This rebuild is 176.
+README on this branch dated the denominator 178 ±5. This rebuild is 155.
 
 ## Top eight operating groups (hubs on both slides)
 
 | Group | Sites | Ultimate |
 |---|---:|---|
-| Diageo | 32 | Diageo (00023307) |
-| Pernod Ricard | 13 | Pernod Ricard Sa (SC043917) |
-| William Grant | 5 | William Grant & Sons Holdings Limited (15238251) |
-| Whyte & Mackay | 5 | Emperador Holdings (Gb) Limited (09094033) |
-| Inver House | 5 | International Beverage Holdings Limited (SC222095) |
-| Bacardi | 4 | Bacardi U.K. Limited (00366786) |
-| Ian Macleod | 4 | IAN MACLEOD DISTILLERS LIMITED (SC032696) |
-| Suntory Global Spirits | 4 | Beam Suntory Uk Holdings Limited (05608446) |
+| Diageo | 29 | Diageo |
+| Pernod Ricard | 13 | Pernod Ricard |
+| William Grant | 5 | William Grant |
+| Whyte & Mackay | 5 | Whyte & Mackay |
+| Inver House | 5 | Inver House |
+| Bacardi | 5 | Bacardi |
+| Suntory Global Spirits | 5 | Suntory |
+| Ian Macleod | 4 | Ian Macleod |
 
-### Diageo (32)
+### Diageo (29)
 
 Diageo plc is PSC-exempt and is its own top; Wikidata rows and Diageo Scotland Limited both land here.
 
-- Auchroisk distillery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
-- Benrinnes Distillery — Diageo (00023307) → Diageo
-- Blair Athol Distillery — Diageo (00023307) → Diageo
-- Brora Distillery — Diageo (00023307) → Diageo
-- Cameronbridge Distillery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
-- Caol Ila Distillery — Diageo (00023307) → Diageo
-- Cardhu Distillery — Diageo (00023307) → Diageo
-- Clynelish Distillery — Diageo (00023307) → Diageo
-- Cragganmore Distillery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
-- Dailuaine — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
-- Dalwhinnie Distillery — Diageo (00023307) → Diageo
-- Dufftown distillery — Diageo (00023307) → Diageo
-- Glen Elgin Distillery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
-- Glen Ord Distillery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
-- Glen Spey Distillery — Diageo (00023307) → Diageo
-- Glendullan Distillery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
-- Glenkinchie Distillery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
-- Glenlossie — Diageo (00023307) → Diageo
-- Inchgower Distillery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
-- Knockando Distillery — Diageo (00023307) → Diageo
-- Lagavulin Distillery — Diageo (00023307) → Diageo
-- Leven Distillery (Diageo) — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
-- Linkwood distillery — Diageo (00023307) → Diageo
-- Mannochmore Distillery — Diageo (00023307) → Diageo
-- Mortlach Distillery — Diageo (00023307) → Diageo
-- Oban Distillery — Diageo (00023307) → Diageo
-- Port Ellen Distillery — Diageo (00023307) → Diageo
-- Roseisle — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
-- Royal Lochnagar Distillery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
-- Strathmill — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
-- Talisker Distillery — Diageo (00023307) → Diageo
-- Teaninich Distllery — DIAGEO SCOTLAND LIMITED (SC000750) → Diageo Plc
+- Auchroisk distillery —  () → Diageo
+- Benrinnes Distillery —  () → Diageo
+- Blair Athol Distillery —  () → Diageo
+- Brora Distillery —  () → Diageo
+- Cameronbridge Distillery —  () → Diageo
+- Caol Ila Distillery —  () → Diageo
+- Cardhu Distillery —  () → Diageo
+- Clynelish Distillery —  () → Diageo
+- Cragganmore Distillery —  () → Diageo
+- Dailuaine —  () → Diageo
+- Dalwhinnie Distillery —  () → Diageo
+- Dufftown distillery —  () → Diageo
+- Glen Elgin Distillery —  () → Diageo
+- Glen Ord Distillery —  () → Diageo
+- Glendullan Distillery —  () → Diageo
+- Glenkinchie Distillery —  () → Diageo
+- Glenlossie —  () → Diageo
+- Inchgower Distillery —  () → Diageo
+- Knockando Distillery —  () → Diageo
+- Lagavulin Distillery —  () → Diageo
+- Linkwood distillery —  () → Diageo
+- Mannochmore Distillery —  () → Diageo
+- Mortlach Distillery —  () → Diageo
+- Oban Distillery —  () → Diageo
+- Port Ellen Distillery —  () → Diageo
+- Roseisle —  () → Diageo
+- Royal Lochnagar Distillery —  () → Diageo
+- Talisker Distillery —  () → Diageo
+- Teaninich Distllery —  () → Diageo
 
 ### Pernod Ricard (13)
 
 Foreign parent: chain stops at Pernod Ricard SA.
 
-- Aberlour Distillery — CHIVAS BROTHERS LIMITED (SC268758) → Pernod Ricard Sa
-- Allt-A-Bhainne — CHIVAS BROTHERS LIMITED (SC268758) → Pernod Ricard Sa
-- Braeval Distillery — BRAEVAL DISTILLERY LIMITED (SC240804) → Pernod Ricard Sa
-- Dalmunach Distillery — DALMUNACH DISTILLERY LIMITED (SC222298) → Pernod Ricard Sa
-- Glen Keith Distillery — GLEN KEITH DISTILLERY COMPANY LIMITED (SC045679) → Pernod Ricard Sa
-- Glenburgie Distillery — GLENBURGIE DISTILLERY LIMITED (00074809) → Pernod Ricard Sa
-- Glentauchers Distillery — CHIVAS BROTHERS LIMITED (SC268758) → Pernod Ricard Sa
-- Longmorn distillery — CHIVAS BROTHERS LIMITED (SC268758) → Pernod Ricard Sa
-- Miltonduff Distillery — CHIVAS BROTHERS LIMITED (SC268758) → Pernod Ricard Sa
-- Scapa Distillery — CHIVAS BROTHERS LIMITED (SC268758) → Pernod Ricard Sa
-- Strathclyde Distillery — STRATHCLYDE DISTILLERY LIMITED (SC043917) → Pernod Ricard Sa
-- Strathisla Distillery — CHIVAS BROTHERS LIMITED (SC268758) → Pernod Ricard Sa
-- The Glenlivet — CHIVAS BROTHERS LIMITED (SC268758) → Pernod Ricard Sa
+- Aberlour Distillery —  () → Pernod Ricard
+- Allt-A-Bhainne —  () → Pernod Ricard
+- Braeval Distillery —  () → Pernod Ricard
+- Dalmunach Distillery —  () → Pernod Ricard
+- Glen Keith Distillery —  () → Pernod Ricard
+- Glenburgie Distillery —  () → Pernod Ricard
+- Glentauchers Distillery —  () → Pernod Ricard
+- Longmorn distillery —  () → Pernod Ricard
+- Miltonduff Distillery —  () → Pernod Ricard
+- Scapa Distillery —  () → Pernod Ricard
+- Strathclyde Distillery —  () → Pernod Ricard
+- Strathisla Distillery —  () → Pernod Ricard
+- The Glenlivet —  () → Pernod Ricard
 
 ### William Grant (5)
 
 William Grant & Sons Holdings Limited.
 
-- Ailsa Bay — WILLIAM GRANT & SONS LIMITED (SC131772) → William Grant & Sons Holdings Limited
-- Balvenie Distillery — WILLIAM GRANT & SONS LIMITED (SC131772) → William Grant & Sons Holdings Limited
-- Girvan Distillery — WILLIAM GRANT & SONS LIMITED (SC131772) → William Grant & Sons Holdings Limited
-- Glenfiddich Distillery — WILLIAM GRANT & SONS LIMITED (SC131772) → William Grant & Sons Holdings Limited
-- Kininvie distillery — WILLIAM GRANT & SONS LIMITED (SC131772) → William Grant & Sons Holdings Limited
+- Ailsa Bay —  () → William Grant
+- Balvenie Distillery —  () → William Grant
+- Girvan Distillery —  () → William Grant
+- Glenfiddich Distillery —  () → William Grant
+- Kininvie distillery —  () → William Grant
 
 ### Whyte & Mackay (5)
 
 Emperador Holdings → Whyte & Mackay.
 
-- Dalmore Distillery — WHYTE AND MACKAY GROUP LIMITED (SC221954) → Emperador Holdings (Gb) Limited
-- Fettercairn Distillery — WHYTE AND MACKAY GROUP LIMITED (SC221954) → Emperador Holdings (Gb) Limited
-- Invergordon Distillery — WHYTE AND MACKAY GROUP LIMITED (SC221954) → Emperador Holdings (Gb) Limited
-- Isle of Jura Distillery — WHYTE AND MACKAY GROUP LIMITED (SC221954) → Emperador Holdings (Gb) Limited
-- Tamnavulin Distillery — WHYTE AND MACKAY GROUP LIMITED (SC221954) → Emperador Holdings (Gb) Limited
+- Dalmore Distillery —  () → Whyte & Mackay
+- Fettercairn Distillery —  () → Whyte & Mackay
+- Invergordon Distillery —  () → Whyte & Mackay
+- Isle of Jura Distillery —  () → Whyte & Mackay
+- Tamnavulin Distillery —  () → Whyte & Mackay
 
 ### Inver House (5)
 
 International Beverage → Inver House. Same ultimate_number, two name spellings.
 
-- ANCNOC Distillery — INVER HOUSE DISTILLERS LIMITED (SC040036) → International Beverage Holdings Limited
-- Balblair Distillery — THE BALBLAIR DISTILLERY COMPANY LIMITED (SC163039) → International Beverage Holdings (Uk) Limited
-- Balmenach Distillery — INVER HOUSE DISTILLERS LIMITED (SC040036) → International Beverage Holdings Limited
-- Pulteney Distillery — THE PULTENEY DISTILLERY COMPANY LIMITED (SC156412) → International Beverage Holdings (Uk) Limited
-- Speyburn Distillery — INVER HOUSE DISTILLERS LIMITED (SC040036) → International Beverage Holdings Limited
+- ANCNOC Distillery —  () → Inver House
+- Balblair Distillery —  () → Inver House
+- Balmenach Distillery —  () → Inver House
+- Pulteney Distillery —  () → Inver House
+- Speyburn Distillery —  () → Inver House
 
-### Bacardi (4)
+### Bacardi (5)
 
 Bacardi U.K. Limited.
 
-- Aberfeldy Distillery — JOHN DEWAR AND SONS LIMITED (00613551) → Bacardi U.K. Limited
-- Aultmore Distillery — JOHN DEWAR AND SONS LIMITED (00613551) → Bacardi U.K. Limited
-- MacDuff Distillery — JOHN DEWAR AND SONS LIMITED (00613551) → Bacardi U.K. Limited
-- Royal Brackla — JOHN DEWAR AND SONS LIMITED (00613551) → Bacardi U.K. Limited
+- Aberfeldy Distillery —  () → Bacardi
+- Aultmore Distillery —  () → Bacardi
+- Craigellachie —  () → Bacardi
+- MacDuff Distillery —  () → Bacardi
+- Royal Brackla —  () → Bacardi
+
+### Suntory Global Spirits (5)
+
+Beam Suntory UK Holdings Limited.
+
+- Ardmore Distillery —  () → Suntory
+- Auchentoshan Distillery —  () → Suntory
+- Bowmore Distillery —  () → Suntory
+- Glen Garioch Distillery —  () → Suntory
+- Laphroaig Distillery —  () → Suntory
 
 ### Ian Macleod (4)
 
 Ian Macleod Distillers Limited.
 
-- Glengoyne Distillery — IAN MACLEOD DISTILLERS LIMITED (SC032696) → IAN MACLEOD DISTILLERS LIMITED
-- Ian Macleod Distillers Ltd — IAN MACLEOD DISTILLERS LIMITED (SC032696) → IAN MACLEOD DISTILLERS LIMITED
-- Rosebank Distillery — IAN MACLEOD DISTILLERS LIMITED (SC032696) → IAN MACLEOD DISTILLERS LIMITED
-- Tamdhu Distillery — IAN MACLEOD DISTILLERS LIMITED (SC032696) → IAN MACLEOD DISTILLERS LIMITED
-
-### Suntory Global Spirits (4)
-
-Beam Suntory UK Holdings Limited.
-
-- Ardmore Distillery — BEAM SUNTORY UK LIMITED (05591988) → Beam Suntory Uk Holdings Limited
-- Bowmore Distillery — BEAM SUNTORY UK LIMITED (05591988) → Beam Suntory Uk Holdings Limited
-- Glen Garioch Distillery — BEAM SUNTORY UK LIMITED (05591988) → Beam Suntory Uk Holdings Limited
-- Laphroaig Distillery — BEAM SUNTORY UK LIMITED (05591988) → Beam Suntory Uk Holdings Limited
+- Glengoyne Distillery —  () → Ian Macleod
+- Laggan Bay Distillery —  () → Ian Macleod
+- Rosebank Distillery —  () → Ian Macleod
+- Tamdhu Distillery —  () → Ian Macleod
 
 ## Mapped groups below the top eight
 
 These are groups, not independents. On the map they use their own colour and join their sites with the same MST web. They appear in the left rail.
 
-- **Brown-Forman** (4): Glenglassaugh Distillery; The Glendronach Distillery; Newbridge Bond - The Benriach Distillery Company Limited; Benriach Distillery
-- **Distell** (3): Bunnahabhain Distillery; Tobermory Distillery; Deanston Distillery
-- **Edrington** (2): Highland Park Distillery; The Macallan Distillery
+- **Brown-Forman** (3): Benriach Distillery; Glenglassaugh Distillery; The Glendronach Distillery
+- **Distell** (3): Bunnahabhain Distillery; Deanston Distillery; Tobermory Distillery
+- **Edrington** (3): Glenrothes Distillery; Highland Park Distillery; The Macallan Distillery
+- **Angus Dundee** (2): Glencadam Distillery; Tomintoul Distillery
+- **Gordon & MacPhail** (2): Benromach; The Cairn
 - **Isle of Arran** (2): Arran Distillery; Lagg Distillery
-- **La Martiniquaise** (2): Glen Moray Distillery; Glen Turner Distillery
-- **Loch Lomond Group** (2): Loch Lomond Distillery; Glen Scotia Distillery
+- **J & A Mitchell** (2): Glengyle; Springbank Distillery
+- **La Martiniquaise** (2): Glen Moray Distillery; Starlaw Distillery
+- **Loch Lomond Group** (2): Glen Scotia Distillery; Loch Lomond Distillery
 - **LVMH** (2): Ardbeg; Glenmorangie Distillery
+- **Mossburn** (2): Reivers Distillery; Torabhaig
 
 ## Map
 
@@ -177,34 +178,63 @@ None. Every multi-site controller in the matched Scotch set is a group.
 
 ## Unmatched Scotch sites (independent dots)
 
-- 57° SKYE Distillery (57-skye-distillery)
 - 8 Doors Distillery (8-doors-distillery)
 - Aberargie Distillery (aberargie-distillery)
-- Abhainn Dearg Distillery (abhainn-dearg-distillery)
+- Annandale Distillery (annandale-distillery)
+- Arbikie Distillery (arbikie-distillery)
+- Ardgowan Distillery (ardgowan-distillery)
+- Ardnahoe Distillery (ardnahoe-distillery)
+- Ardnamurchan Distillery (ardnamurchan-distillery)
 - Ardross Distillery (ardross-distillery)
+- Badachro Distillery (badachro-distillery)
 - Ballindalloch Distillery (ballindalloch-distillery)
+- Balmaud Distillery (balmaud-distillery)
+- Ben Nevis Distillery (ben-nevis-distillery)
 - Benbecula Distillery (benbecula-distillery)
+- Blackness Bay Distillery (blackness-bay-distillery)
+- Bladnoch Distillery (bladnoch-distillery)
 - Bonnington (bonnington)
+- Bruichladdich Distillery (bruichladdich-distillery)
+- Burnobennie Distillery (burnobennie-distillery)
+- Clydeside Distillery (clydeside-distillery)
 - Daftmill Distillery (daftmill-distillery)
+- Deerness Distillery (deerness-distillery)
+- Dornoch Distillery (dornoch-distillery)
+- Dunphail distillery (dunphail-distillery)
+- Edradour Distillery (edradour-distillery)
 - Falkirk Distillery (falkirk-distillery)
 - Galloway distillery (galloway-distillery)
+- Glasgow Distillery (glasgow-distillery)
+- Glen Grant Distillery (glen-grant-distillery)
+- GlenAllachie Distillery (glenallachie-distillery)
+- Glenfarclas Distillery (glenfarclas-distillery)
 - GlenWyvis Distillery (glenwyvis-distillery)
-- Great Glen Distillery - Scotlands Smallest Craft Distillery (great-glen-distillery-scotlands-smallest-craft-distillery)
-- Highland Boundary Wild Distillery (highland-boundary-wild-distillery)
+- Holyrood Distillery (holyrood-distillery)
+- InchDairnie Distillery (inchdairnie-distillery)
+- Isle of Harris Distillery (isle-of-harris-distillery)
+- Isle of Raasay Distillery (isle-of-raasay-distillery)
 - Isle of Tiree distillery (isle-of-tiree-distillery)
-- Laggan Bay Distillery (laggan-bay-distillery)
-- Luss Distillery (luss-distillery)
-- Ogilvy Distillery (ogilvy-distillery)
-- Persie Distillery (persie-distillery)
+- Jackton Distillery (jackton-distillery)
+- Kilchoman Distillery (kilchoman-distillery)
+- Kingsbarns Distillery (kingsbarns-distillery)
+- Lindores Abbey Distillery (lindores-abbey-distillery)
+- Lochlea Distillery (lochlea-distillery)
+- Moffat distillery (moffat-distillery)
+- Nc’nean Distillery (ncnean-distillery)
+- North Point Distillery (north-point-distillery)
+- North Uist Distillery (north-uist-distillery)
 - Port of Leith distillery (port-of-leith-distillery)
-- Reivers Distillery (reivers-distillery)
-- Rhidorroch Distillery Cafe, Bar & Eatery (rhidorroch-distillery-cafe-bar-eatery)
-- Stannergill Distillery (stannergill-distillery)
-- Starlaw Distillery (starlaw-distillery)
-- Stornoway Distillers Co. (stornoway-distillers-co)
-- Tayport Distillery (tayport-distillery)
+- Stirling distillery (stirling-distillery)
+- Strathearn Distillery (strathearn-distillery)
+- The Borders Distillery (the-borders-distillery)
 - The Cabrach Distillery (the-cabrach-distillery)
-- The Machrihanish Distillery (the-machrihanish-distillery)
+- The Glenturret Distillery (the-glenturret-distillery)
+- The Orkney Distillery (the-orkney-distillery)
+- Tomatin Distillery (tomatin-distillery)
+- Tormore Distillery (tormore-distillery)
+- Tullibardine Distillery (tullibardine-distillery)
+- Uile-bheist Distillery (uile-bheist-distillery)
+- Wolfburn Distillery (wolfburn-distillery)
 
 ## Human look
 
