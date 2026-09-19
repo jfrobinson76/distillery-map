@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "description": "Hand-checked mapping from company_name / company_number in the crosswalk to a display group. Every company not listed here is Independent. A mapped group that resolves to exactly one distillery is Independent by definition. Do not add a parent you cannot state from the register row.",
+  "groups": [
+    {
+      "id": "diageo",
+      "display": "Diageo",
+      "short": "Diageo",
+      "company_numbers": ["00023307", "SC000750"],
+      "company_names": ["Diageo", "DIAGEO SCOTLAND LIMITED", "Diageo plc"],
+      "note": "Diageo plc (00023307) and its Scottish operating subsidiary Diageo Scotland Limited (SC000750, SIC 11010). Name variants of the same group, not a guess at ultimate ownership of other companies."
+    },
+    {
+      "id": "pernod-ricard",
+      "display": "Pernod Ricard",
+      "short": "Pernod Ricard",
+      "company_numbers": ["SC268758"],
+      "company_names": ["CHIVAS BROTHERS LIMITED"],
+      "note": "Operating subsidiary of Pernod Ricard. Only this company number; Chivas site-name companies (Glenburgie, Braeval, Dalmunach, Glen Keith) are left Independent because each is a one-row company."
+    },
+    {
+      "id": "bacardi",
+      "display": "Bacardi",
+      "short": "Bacardi",
+      "company_numbers": ["00613551"],
+      "company_names": ["JOHN DEWAR AND SONS LIMITED"],
+      "note": "Operating subsidiary of Bacardi; the Dewar's malt estate operator on Companies House (SIC 11010)."
+    },
+    {
+      "id": "suntory",
+      "display": "Suntory Global Spirits",
+      "short": "Suntory",
+      "company_numbers": ["05591988"],
+      "company_names": ["BEAM SUNTORY UK LIMITED"],
+      "note": "UK operating company for Suntory Global Spirits (formerly Beam Suntory). Morrison Bowmore and D. Johnston (Laphroaig) are dormant; this is the live SIC 11010 entity."
+    },
+    {
+      "id": "whyte-mackay",
+      "display": "Whyte & Mackay",
+      "short": "Whyte & Mackay",
+      "company_numbers": ["SC221954"],
+      "company_names": ["WHYTE AND MACKAY GROUP LIMITED"],
+      "note": "Whyte and Mackay Group Limited, the registered parent of the UK distilling estate."
+    },
+    {
+      "id": "william-grant",
+      "display": "William Grant",
+      "short": "William Grant",
+      "company_numbers": ["SC131772"],
+      "company_names": ["WILLIAM GRANT & SONS LIMITED", "William Grant & Sons"],
+      "note": "William Grant & Sons Limited, the Scottish operating company. Irish Grant entities (CRO) are out of scope for this UK card."
+    },
+    {
+      "id": "edrington",
+      "display": "Edrington",
+      "short": "Edrington",
+      "company_numbers": ["SC036374"],
+      "company_names": ["THE EDRINGTON GROUP LIMITED"],
+      "note": "The Edrington Group Limited. Site-name companies (Glenrothes Distillery Company Limited) are left Independent because they appear once."
+    },
+    {
+      "id": "ian-macleod",
+      "display": "Ian Macleod",
+      "short": "Ian Macleod",
+      "company_numbers": ["SC032696"],
+      "company_names": ["IAN MACLEOD DISTILLERS LIMITED"],
+      "note": "Ian Macleod Distillers Limited, the operating company."
+    },
+    {
+      "id": "inver-house",
+      "display": "Inver House",
+      "short": "Inver House",
+      "company_numbers": ["SC040036"],
+      "company_names": ["INVER HOUSE DISTILLERS LIMITED"],
+      "note": "Inver House Distillers Limited. Site-name companies (Balblair, Pulteney) are left Independent because they appear once."
+    },
+    {
+      "id": "lvmh",
+      "display": "LVMH",
+      "short": "LVMH",
+      "company_numbers": ["SC019038"],
+      "company_names": ["MACDONALD & MUIR LIMITED"],
+      "note": "Macdonald & Muir Limited, the Glenmorangie / Ardbeg operating company, a subsidiary of LVMH."
+    },
+    {
+      "id": "nikka",
+      "display": "Nikka",
+      "short": "Nikka",
+      "company_numbers": [],
+      "company_names": ["Nikka Whisky Distilling", "NIKKA WHISKY DISTILLING"],
+      "note": "Nikka Whisky Distilling. Included so a later UK row under this name joins the group; none in the current high-confidence UK set."
+    },
+    {
+      "id": "brown-forman",
+      "display": "Brown-Forman",
+      "short": "Brown-Forman",
+      "company_numbers": ["SC258480"],
+      "company_names": ["THE BENRIACH DISTILLERY COMPANY LIMITED"],
+      "note": "The Benriach Distillery Company Limited, Brown-Forman's Scottish operating company. Glendronach Distillery Company Limited is a one-row company and is left Independent."
+    }
+  ]
+}
