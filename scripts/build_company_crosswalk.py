@@ -20,8 +20,11 @@ Sources, in order of trust:
      and country. Thin: 26 Companies House ids worldwide at 18 Sep 2026.
   2b. data/company-crosswalk/ttb-candidates.csv (US, scripts/match_ttb_permits.py) and
      canada-candidates.csv (scripts/match_canada_registers.py): register matches written by
-     their own scripts. Only `high` and `medium` rows enter the crosswalk; `low` stays in the
-     candidates file as a lead. A manual or operator row for the slug replaces them.
+     their own scripts. Only `high` and `medium` rows with a register number enter the
+     crosswalk; `low` and number-less rows stay in the candidates file as leads. A slug may
+     carry a `self` and an `operator` row. A manual or operator-map row for the slug
+     replaces them. canada-licences.csv (provincial liquor licences) is a second identifier
+     layer and is not folded.
   3. Companies House search API, UK only, when COMPANIES_HOUSE_API_KEY is set.
      Free key: https://developer.company-information.service.gov.uk/  (register, create
      an application, copy the REST key). Rate limit 600 requests / 5 minutes; this
@@ -110,7 +113,8 @@ def load_candidates() -> list[dict]:
     for name in ("ttb-candidates.csv", "canada-candidates.csv"):
         p = ENR / name
         if p.exists():
-            rows += [r for r in csv.DictReader(p.open()) if r.get("confidence") in ("high", "medium")]
+            rows += [r for r in csv.DictReader(p.open())
+                     if r.get("confidence") in ("high", "medium") and r.get("company_number")]
     return rows
 
 
@@ -256,9 +260,11 @@ def main() -> int:
         if r["slug"] not in have:
             rows.append(r)
             have.add(r["slug"])
+    prior = set(have)
     for r in load_candidates():
-        if r["slug"] in by_slug and r["slug"] not in have:
+        if r["slug"] in by_slug and r["slug"] not in prior and (r["slug"], r["company_number"]) not in seen:
             rows.append({k: r.get(k, "") for k in FIELDS})
+            seen.add((r["slug"], r["company_number"]))
             have.add(r["slug"])
     if args.companies_house:
         key = os.environ.get("COMPANIES_HOUSE_API_KEY")
