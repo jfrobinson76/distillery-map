@@ -12,7 +12,7 @@
  */
 import { spawn } from "node:child_process";
 import { createServer } from "node:http";
-import { statSync, existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { rmSync, statSync, existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, extname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -1106,6 +1106,9 @@ function exportOnePng(server, htmlName, pngPath) {
   const profile = join("/tmp", `ownership-card-chrome-${process.pid}-${htmlName.replace(/\W/g, "")}`);
   mkdirSync(profile, { recursive: true });
   return new Promise((resolve, reject) => {
+    // Remove any previous export first, or the poll below sees the old file and returns
+    // before Chrome has written the new one.
+    try { rmSync(pngPath, { force: true }); } catch {}
     const child = spawn(
       chrome,
       [
