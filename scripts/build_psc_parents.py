@@ -10,7 +10,8 @@ script follows that chain upward for every high/verified UK company in the cross
 writes the ultimate UK parent, so "independent" can mean "the controlling entity runs one
 site" rather than "this registration runs one site".
 
-Stops when: the PSC is an individual (family-owned; the company is its own top), there is
+Stops when: two corporate PSCs share the top ownership band (joint control, recorded not
+guessed), the PSC is an individual (family-owned; the company is its own top), there is
 no PSC on record, the parent is outside Companies House (a foreign parent: Pernod Ricard
 SA, Beam Suntory Inc), or after four levels.
 
@@ -69,6 +70,28 @@ def psc_of(num: str, key: str, cache: dict) -> dict:
         active = [i for i in d.get("items", []) if not i.get("ceased_on")]
         corp = [i for i in active if i.get("kind", "").startswith("corporate-entity")]
         if corp:
+            # More than one corporate PSC: The Glenmorangie Company lists LVMH (50-75%) and
+            # Diageo (25-50%, its Moet Hennessy stake). Take the highest ownership band; if
+            # two share the top band, do not guess.
+            def band(i):
+                best = 0
+                for n in i.get("natures_of_control") or []:
+                    if "75-to-100" in n: best = max(best, 4)
+                    elif "50-to-75" in n: best = max(best, 3)
+                    elif "25-to-50" in n: best = max(best, 2)
+                    elif "significant-influence" in n or "right-to-appoint" in n: best = max(best, 1)
+                return best
+            corp.sort(key=band, reverse=True)
+            if len(corp) > 1 and band(corp[0]) == band(corp[1]):
+                sides = []
+                for c in corp[:2]:
+                    ident = c.get("identification") or {}
+                    reg = norm_num(ident.get("registration_number", ""))
+                    sides.append({"number": reg, "name": c.get("name", "")})
+                res = {"kind": "joint", "parent_number": "", "status": status, "sides": sides,
+                       "parent_name": " / ".join(c.get("name", "") for c in corp[:2])}
+                cache[num] = res
+                return res
             i = corp[0]
             ident = i.get("identification") or {}
             reg = norm_num(ident.get("registration_number", ""))
@@ -113,6 +136,34 @@ def main() -> int:
             stop = p["kind"]
             if p["kind"] == "corporate-foreign":
                 stop = f"foreign parent: {p['parent_name']} ({p.get('parent_place','')})"
+                cur_name = p["parent_name"]
+                cur = ""
+            elif p["kind"] == "joint":
+                # Two controllers in the same band. If both sides climb to the same top (the
+                # two Chivas entities both reach Pernod Ricard SA), that top is the controller.
+                # If they do not (North British: Edrington and Diageo), it is genuinely joint.
+                tops = []
+                for side in p.get("sides", []):
+                    t_num, t_name = side["number"], side["name"]
+                    for _ in range(MAX_LEVELS):
+                        if not t_num:
+                            break
+                        q = psc_of(t_num, key, cache)
+                        if q["kind"] == "corporate":
+                            t_num, t_name = q["parent_number"], q["parent_name"]
+                        elif q["kind"] == "corporate-foreign":
+                            t_num, t_name = "", q["parent_name"]
+                        else:
+                            break
+                    tops.append((t_num, t_name))
+                if len(tops) == 2 and (tops[0][1] or "").upper() == (tops[1][1] or "").upper():
+                    chain.append(f"{cur}:{cur_name} -> joint -> {tops[0][0]}:{tops[0][1]}")
+                    cur, cur_name = tops[0]
+                    stop = "individual" if cur else f"foreign parent: {cur_name}"
+                    if cur:
+                        continue
+                    break
+                stop = f"joint control: {p['parent_name']}"
                 cur_name = p["parent_name"]
                 cur = ""
             break

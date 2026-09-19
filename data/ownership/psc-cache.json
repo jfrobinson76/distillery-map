@@ -11,52 +11,10 @@
   "parent_name": "",
   "status": 200
  },
- "00074809": {
-  "kind": "corporate",
-  "parent_number": "00703977",
-  "parent_name": "Allied Domecq Spirits & Wine Limited",
-  "parent_place": "Companies House England And Wales",
-  "status": 200
- },
- "00703977": {
-  "kind": "corporate",
-  "parent_number": "SC268758",
-  "parent_name": "Chivas Brothers Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC268758": {
-  "kind": "corporate",
-  "parent_number": "02869879",
-  "parent_name": "Allied Domecq Spirits & Wine Holdings Limited",
-  "parent_place": "Companies House England",
-  "status": 200
- },
- "02869879": {
-  "kind": "corporate",
-  "parent_number": "SC331555",
-  "parent_name": "Chivas Holdings (Ip) Limited",
-  "parent_place": "Scotland Scotland",
-  "status": 200
- },
- "00547325": {
-  "kind": "corporate",
-  "parent_number": "00727228",
-  "parent_name": "W.H.Palmer & Co. (Industries) Limited",
-  "parent_place": "Companies House England",
-  "status": 200
- },
  "00727228": {
   "kind": "none",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "00613551": {
-  "kind": "corporate",
-  "parent_number": "00366786",
-  "parent_name": "Bacardi U.K. Limited",
-  "parent_place": "Companies House, England And Wales England",
   "status": 200
  },
  "00366786": {
@@ -78,13 +36,6 @@
   "parent_place": "",
   "status": 200
  },
- "03289012": {
-  "kind": "corporate",
-  "parent_number": "00470272",
-  "parent_name": "A E Chapman & Son Ltd",
-  "parent_place": "England Companies House England",
-  "status": 200
- },
  "00470272": {
   "kind": "individual",
   "parent_number": "",
@@ -103,24 +54,10 @@
   "parent_name": "",
   "status": 200
  },
- "05586226": {
-  "kind": "corporate",
-  "parent_number": "03512725",
-  "parent_name": "World Property Services Limited",
-  "parent_place": "England & Wales England",
-  "status": 200
- },
  "03512725": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "05591988": {
-  "kind": "corporate",
-  "parent_number": "05608446",
-  "parent_name": "Beam Suntory Uk Holdings Limited",
-  "parent_place": "Registrar Of Companies England",
   "status": 200
  },
  "05608446": {
@@ -141,65 +78,16 @@
   "parent_name": "",
   "status": 200
  },
- "06373864": {
-  "kind": "corporate",
-  "parent_number": "10322915",
-  "parent_name": "Suntory Uk Holdings Limited",
-  "parent_place": "England&Wales England",
-  "status": 200
- },
  "10322915": {
   "kind": "none",
   "parent_number": "",
   "parent_name": "",
   "status": 200
  },
- "06736350": {
-  "kind": "corporate",
-  "parent_number": "SC331555",
-  "parent_name": "Chivas Holdings (Ip) Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC331555": {
-  "kind": "corporate",
-  "parent_number": "SC203488",
-  "parent_name": "Chivas Brothers Pernod Ricard",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC203488": {
-  "kind": "corporate",
-  "parent_number": "04248641",
-  "parent_name": "Chivas Brothers (Holdings) Limited",
-  "parent_place": "Companies House England And Wales",
-  "status": 200
- },
- "04248641": {
-  "kind": "corporate",
-  "parent_number": "05421315",
-  "parent_name": "Goal Acquisitions (Holdings) Limited",
-  "parent_place": "Companies House England And Wales",
-  "status": 200
- },
  "07515908": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "07604280": {
-  "kind": "corporate",
-  "parent_number": "07604275",
-  "parent_name": "Quintessential Brands Uk Group Limited",
-  "parent_place": "England & Wales England",
-  "status": 200
- },
- "07604275": {
-  "kind": "corporate",
-  "parent_number": "07604265",
-  "parent_name": "Quintessential Brands Uk Holdings Limited",
-  "parent_place": "England & Wales England",
   "status": 200
  },
  "07604265": {
@@ -212,13 +100,6 @@
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "07769363": {
-  "kind": "corporate",
-  "parent_number": "15281873",
-  "parent_name": "Nyetimber Wines And Spirits Group Limited",
-  "parent_place": "England & Wales England",
   "status": 200
  },
  "15281873": {
@@ -234,13 +115,6 @@
   "parent_place": "Guernsey Guernsey",
   "status": 200
  },
- "08021995": {
-  "kind": "corporate",
-  "parent_number": "SC894346",
-  "parent_name": "Jackton Group Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
  "SC894346": {
   "kind": "individual",
   "parent_number": "",
@@ -253,24 +127,10 @@
   "parent_name": "",
   "status": 200
  },
- "08073174": {
-  "kind": "corporate",
-  "parent_number": "01595703",
-  "parent_name": "Glen Turner Company Limited",
-  "parent_place": "Companies House United Kingdom",
-  "status": 200
- },
  "08182937": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "08230959": {
-  "kind": "corporate",
-  "parent_number": "13365238",
-  "parent_name": "Leadbetter Holdings Limited",
-  "parent_place": "Companies House United Kingdom",
   "status": 200
  },
  "13365238": {
@@ -279,31 +139,10 @@
   "parent_name": "",
   "status": 200
  },
- "08300207": {
-  "kind": "corporate",
-  "parent_number": "09804220",
-  "parent_name": "Still On The Hill Limited",
-  "parent_place": "England And Wales England And Wales",
-  "status": 200
- },
- "09804220": {
-  "kind": "corporate",
-  "parent_number": "16914770",
-  "parent_name": "Fielden Limited",
-  "parent_place": "Companies House England",
-  "status": 200
- },
  "16914770": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "08338383": {
-  "kind": "corporate",
-  "parent_number": "16239761",
-  "parent_name": "Aboris Group Ltd",
-  "parent_place": "England England",
   "status": 200
  },
  "16239761": {
@@ -324,39 +163,11 @@
   "parent_name": "",
   "status": 200
  },
- "08617161": {
-  "kind": "corporate",
-  "parent_number": "08617146",
-  "parent_name": "The Littlemill Distillery Company Limited",
-  "parent_place": "Companies House, London England",
-  "status": 200
- },
- "08617146": {
-  "kind": "corporate",
-  "parent_number": "08617163",
-  "parent_name": "Loch Lomond Holdings 1 Limited",
-  "parent_place": "Companies House, London England",
-  "status": 200
- },
- "08617163": {
-  "kind": "corporate",
-  "parent_number": "12012075",
-  "parent_name": "Llg Bidco Limited",
-  "parent_place": "England And Wales England",
-  "status": 200
- },
  "12012075": {
   "kind": "corporate-foreign",
   "parent_number": "",
   "parent_name": "Llg Topco Limited",
   "parent_place": "",
-  "status": 200
- },
- "08617165": {
-  "kind": "corporate",
-  "parent_number": "08617161",
-  "parent_name": "Loch Lomond Distillery Company Limited",
-  "parent_place": "Companies House, London England",
   "status": 200
  },
  "08724654": {
@@ -387,13 +198,6 @@
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "09040283": {
-  "kind": "corporate",
-  "parent_number": "16349911",
-  "parent_name": "Mermaid Ventures (Investments) Ltd",
-  "parent_place": "Registrar Of England And Wales England",
   "status": 200
  },
  "16349911": {
@@ -488,13 +292,6 @@
   "parent_name": "",
   "status": 200
  },
- "10098181": {
-  "kind": "corporate",
-  "parent_number": "10144120",
-  "parent_name": "The Peak District Distilling Company Limited",
-  "parent_place": "England And Wales England",
-  "status": 200
- },
  "10144120": {
   "kind": "individual",
   "parent_number": "",
@@ -554,27 +351,6 @@
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "10647576": {
-  "kind": "corporate",
-  "parent_number": "03920410",
-  "parent_name": "Halewood Artisanal Spirits (Uk) Limited",
-  "parent_place": "United Kingdom United Kingdom",
-  "status": 200
- },
- "03920410": {
-  "kind": "corporate",
-  "parent_number": "03374741",
-  "parent_name": "Halewood International Holdings (Uk) Limited",
-  "parent_place": "Companies House United Kingdom",
-  "status": 200
- },
- "03374741": {
-  "kind": "corporate",
-  "parent_number": "03699814",
-  "parent_name": "Halewood Artisanal Spirits Plc",
-  "parent_place": "Companies House England",
   "status": 200
  },
  "03699814": {
@@ -655,13 +431,6 @@
   "parent_name": "",
   "status": 200
  },
- "11012871": {
-  "kind": "corporate",
-  "parent_number": "10109031",
-  "parent_name": "T Mills Financial Limited",
-  "parent_place": "Companies House England",
-  "status": 200
- },
  "10109031": {
   "kind": "individual",
   "parent_number": "",
@@ -672,13 +441,6 @@
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "11032164": {
-  "kind": "corporate",
-  "parent_number": "11024965",
-  "parent_name": "Brindle Holdings Limited",
-  "parent_place": "England And Wales England And Wales",
   "status": 200
  },
  "11024965": {
@@ -733,20 +495,6 @@
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "11447469": {
-  "kind": "corporate",
-  "parent_number": "09756868",
-  "parent_name": "The Rum Club Ltd",
-  "parent_place": "Companies House United Kingdom",
-  "status": 200
- },
- "09756868": {
-  "kind": "corporate",
-  "parent_number": "05368576",
-  "parent_name": "Rapid Response Solutions Holdings Limited",
-  "parent_place": "Register Of Companies England",
   "status": 200
  },
  "05368576": {
@@ -845,37 +593,16 @@
   "parent_name": "",
   "status": 200
  },
- "11755094": {
-  "kind": "corporate",
-  "parent_number": "06522206",
-  "parent_name": "Cheddar Ales Limited",
-  "parent_place": "Companies House United Kingdom",
-  "status": 200
- },
  "06522206": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
   "status": 200
  },
- "11766925": {
-  "kind": "corporate",
-  "parent_number": "07641698",
-  "parent_name": "West Eleven Limited",
-  "parent_place": "Companies House England And Wales",
-  "status": 200
- },
  "07641698": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "11774118": {
-  "kind": "corporate",
-  "parent_number": "12986662",
-  "parent_name": "Real English Drinks Group Ltd",
-  "parent_place": "Registrar Of Companies, Cardiff United Kingdom",
   "status": 200
  },
  "12986662": {
@@ -1053,13 +780,6 @@
   "parent_name": "",
   "status": 200
  },
- "12937552": {
-  "kind": "corporate",
-  "parent_number": "12424739",
-  "parent_name": "888 Beverages Ltd",
-  "parent_place": "England & Wales Registry England",
-  "status": 200
- },
  "12424739": {
   "kind": "individual",
   "parent_number": "",
@@ -1186,27 +906,6 @@
   "parent_name": "",
   "status": 200
  },
- "NI640001": {
-  "kind": "corporate",
-  "parent_number": "NI651291",
-  "parent_name": "Hinch Distillery Holdings Limited",
-  "parent_place": "Northern Ireland Northern Ireland",
-  "status": 200
- },
- "NI651291": {
-  "kind": "corporate",
-  "parent_number": "NI629892",
-  "parent_name": "Cross Family Group Holdings Limited",
-  "parent_place": "United Kingdom United Kingdom",
-  "status": 200
- },
- "NI629892": {
-  "kind": "corporate",
-  "parent_number": "NI692048",
-  "parent_name": "Cross Ft Limited",
-  "parent_place": "United Kingdom Northern Ireland",
-  "status": 200
- },
  "NI692048": {
   "kind": "individual",
   "parent_number": "",
@@ -1255,80 +954,10 @@
   "parent_name": "",
   "status": 200
  },
- "SC000750": {
-  "kind": "corporate",
-  "parent_number": "00507652",
-  "parent_name": "Diageo Great Britain Limited",
-  "parent_place": "Companies House England",
-  "status": 200
- },
- "00507652": {
-  "kind": "corporate",
-  "parent_number": "00291848",
-  "parent_name": "Grand Metropolitan Limited",
-  "parent_place": "Companies House United Kingdom",
-  "status": 200
- },
- "00291848": {
-  "kind": "corporate",
-  "parent_number": "03623314",
-  "parent_name": "Diageo Holdings Limited",
-  "parent_place": "Companies House England",
-  "status": 200
- },
- "03623314": {
-  "kind": "corporate",
-  "parent_number": "00023307",
-  "parent_name": "Diageo Plc",
-  "parent_place": "Companies House England",
-  "status": 200
- },
- "SC001491": {
-  "kind": "corporate",
-  "parent_number": "SC141866",
-  "parent_name": "Lothian Distillers Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC141866": {
-  "kind": "corporate",
-  "parent_number": "SC017727",
-  "parent_name": "Edrington Distillers Group Limited",
-  "parent_place": "Scotland Scotland",
-  "status": 200
- },
- "SC017727": {
-  "kind": "corporate",
-  "parent_number": "SC036374",
-  "parent_name": "The Edrington Group Limited",
-  "parent_place": "Scotland Scotland",
-  "status": 200
- },
- "SC036374": {
-  "kind": "corporate",
-  "parent_number": "SC428674",
-  "parent_name": "Kintail Trustees Limited",
-  "parent_place": "Registrar Of Companies Scotland",
-  "status": 200
- },
  "SC003582": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "SC014477": {
-  "kind": "corporate",
-  "parent_number": "SC258480",
-  "parent_name": "The Benriach Distillery Company Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC258480": {
-  "kind": "corporate",
-  "parent_number": "SC526282",
-  "parent_name": "Brown-Forman Scotland Limited",
-  "parent_place": "Companies House Scotland",
   "status": 200
  },
  "SC526282": {
@@ -1338,31 +967,10 @@
   "parent_place": "United States Kentucky",
   "status": 200
  },
- "SC019038": {
-  "kind": "corporate",
-  "parent_number": "SC026752",
-  "parent_name": "The Glenmorangie Company Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC026752": {
-  "kind": "corporate",
-  "parent_number": "00023307",
-  "parent_name": "Diageo Plc",
-  "parent_place": "Companies House England",
-  "status": 200
- },
  "SC025459": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "SC031095": {
-  "kind": "corporate",
-  "parent_number": "SC199495",
-  "parent_name": "Speyside Distillers Company Limited",
-  "parent_place": "Scotland Scotland",
   "status": 200
  },
  "SC199495": {
@@ -1384,80 +992,10 @@
   "parent_name": "",
   "status": 200
  },
- "SC040036": {
-  "kind": "corporate",
-  "parent_number": "SC222095",
-  "parent_name": "International Beverage Holdings Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
  "SC222095": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "SC043917": {
-  "kind": "corporate",
-  "parent_number": "SC203488",
-  "parent_name": "Chivas Brothers Pernod Ricard",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "05421315": {
-  "kind": "corporate",
-  "parent_number": "10702292",
-  "parent_name": "Pernod Ricard Uk Group Limited",
-  "parent_place": "Companies House England And Wales",
-  "status": 200
- },
- "SC045679": {
-  "kind": "corporate",
-  "parent_number": "SC019258",
-  "parent_name": "Chivas 2000",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC019258": {
-  "kind": "corporate",
-  "parent_number": "SC203488",
-  "parent_name": "Chivas Brothers Pernod Ricard",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC052114": {
-  "kind": "corporate",
-  "parent_number": "00379553",
-  "parent_name": "Bb&R Spirits Limited",
-  "parent_place": "England And Wales England",
-  "status": 200
- },
- "00379553": {
-  "kind": "corporate",
-  "parent_number": "SC158731",
-  "parent_name": "Highland Distillers Limited",
-  "parent_place": "Register Of Companies (Scotland) Scotland",
-  "status": 200
- },
- "SC158731": {
-  "kind": "corporate",
-  "parent_number": "SC199077",
-  "parent_name": "1887 Company Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC199077": {
-  "kind": "corporate",
-  "parent_number": "SC196614",
-  "parent_name": "William Grant &Sons (Enterprises) Limited",
-  "parent_place": "Uk Companies House Scotland",
-  "status": 200
- },
- "SC060347": {
-  "kind": "corporate",
-  "parent_number": "SC060546",
-  "parent_name": "Praban Gu Leir Limited",
-  "parent_place": "Companies House, Scotland Scotland",
   "status": 200
  },
  "SC060546": {
@@ -1480,31 +1018,10 @@
   "parent_place": "Registers Of South Africa South Africa",
   "status": 200
  },
- "SC126375": {
-  "kind": "corporate",
-  "parent_number": "SC109881",
-  "parent_name": "Cvh Spirits Limited",
-  "parent_place": "Register Of Companies Scotland",
-  "status": 200
- },
- "SC131772": {
-  "kind": "corporate",
-  "parent_number": "15238251",
-  "parent_name": "William Grant & Sons Holdings Limited",
-  "parent_place": "Companies House Uk England",
-  "status": 200
- },
  "15238251": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "SC132929": {
-  "kind": "corporate",
-  "parent_number": "SC135381",
-  "parent_name": "Ces Whisky Limited",
-  "parent_place": "Uk Companies House Scotland",
   "status": 200
  },
  "SC135381": {
@@ -1519,52 +1036,10 @@
   "parent_name": "",
   "status": 200
  },
- "SC141800": {
-  "kind": "corporate",
-  "parent_number": "06990772",
-  "parent_name": "Rain Dance Investments Limited",
-  "parent_place": "Companies House Not Specified/Other",
-  "status": 200
- },
  "06990772": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "SC156412": {
-  "kind": "corporate",
-  "parent_number": "SC140080",
-  "parent_name": "Blairmhor Distillers Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC140080": {
-  "kind": "corporate",
-  "parent_number": "SC099017",
-  "parent_name": "Blairmhor Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC099017": {
-  "kind": "corporate",
-  "parent_number": "SC222095",
-  "parent_name": "International Beverage Holdings (Uk) Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC163039": {
-  "kind": "corporate",
-  "parent_number": "SC140080",
-  "parent_name": "Blairmhor Distillers Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC209196": {
-  "kind": "corporate",
-  "parent_number": "08129324",
-  "parent_name": "Remy Cointreau Uk Limited",
-  "parent_place": "Companies Registry England And Wales England",
   "status": 200
  },
  "08129324": {
@@ -1580,38 +1055,10 @@
   "parent_name": "",
   "status": 200
  },
- "SC221954": {
-  "kind": "corporate",
-  "parent_number": "SC476923",
-  "parent_name": "Emperador Uk Limited",
-  "parent_place": "Uk Companies House Scotland",
-  "status": 200
- },
- "SC476923": {
-  "kind": "corporate",
-  "parent_number": "09094033",
-  "parent_name": "Emperador Holdings (Gb) Limited",
-  "parent_place": "Uk Companies House England",
-  "status": 200
- },
  "09094033": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "SC222298": {
-  "kind": "corporate",
-  "parent_number": "SC331555",
-  "parent_name": "Chivas Holdings (Ip) Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC225220": {
-  "kind": "corporate",
-  "parent_number": "10984243",
-  "parent_name": "Msg Uk Investments Limited",
-  "parent_place": "England And Wales England",
   "status": 200
  },
  "10984243": {
@@ -1620,31 +1067,10 @@
   "parent_name": "",
   "status": 200
  },
- "SC232984": {
-  "kind": "corporate",
-  "parent_number": "SC112957",
-  "parent_name": "Signatory Vintage Scotch Whisky Company Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
  "SC112957": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "SC240804": {
-  "kind": "corporate",
-  "parent_number": "04238946",
-  "parent_name": "The Glenlivet Distillers Limited",
-  "parent_place": "Companies House England And Wales",
-  "status": 200
- },
- "04238946": {
-  "kind": "corporate",
-  "parent_number": "05421315",
-  "parent_name": "Goal Acquisitions (Holdings) Limited",
-  "parent_place": "Companies House England And Wales",
   "status": 200
  },
  "10702292": {
@@ -1652,13 +1078,6 @@
   "parent_number": "",
   "parent_name": "Pernod Ricard Sa",
   "parent_place": "France France",
-  "status": 200
- },
- "SC241885": {
-  "kind": "corporate",
-  "parent_number": "SC109881",
-  "parent_name": "Cvh Spirits Limited",
-  "parent_place": "Scottish Register Of Scotland Scotland",
   "status": 200
  },
  "SC248732": {
@@ -1679,20 +1098,6 @@
   "parent_name": "",
   "status": 200
  },
- "SC310871": {
-  "kind": "corporate",
-  "parent_number": "SC258480",
-  "parent_name": "The Benriach Distillery Company Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC316346": {
-  "kind": "corporate",
-  "parent_number": "02304169",
-  "parent_name": "Mathematical Market Research Limited",
-  "parent_place": "England And Wales England",
-  "status": 200
- },
  "02304169": {
   "kind": "individual",
   "parent_number": "",
@@ -1705,34 +1110,6 @@
   "parent_name": "",
   "status": 200
  },
- "SC348842": {
-  "kind": "corporate",
-  "parent_number": "01595703",
-  "parent_name": "Glen Turner Company Limited",
-  "parent_place": "Companies House England And Wales",
-  "status": 200
- },
- "SC359078": {
-  "kind": "corporate",
-  "parent_number": "SC437599",
-  "parent_name": "Wemyss Distillery Limited",
-  "parent_place": "Scotland Scotland",
-  "status": 200
- },
- "SC437599": {
-  "kind": "corporate",
-  "parent_number": "SC024047",
-  "parent_name": "Wemyss Properties Limited",
-  "parent_place": "Scotland Scotland",
-  "status": 200
- },
- "SC024047": {
-  "kind": "corporate",
-  "parent_number": "SC3626",
-  "parent_name": "The Wemyss Development Company Limited",
-  "parent_place": "Scotland Scotland",
-  "status": 200
- },
  "SC3626": {
   "kind": "error",
   "parent_number": "",
@@ -1743,13 +1120,6 @@
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "SC437374": {
-  "kind": "corporate",
-  "parent_number": "SC037522",
-  "parent_name": "Speymalt Whisky Distributors Ltd",
-  "parent_place": "Edinburgh Scotland",
   "status": 200
  },
  "SC037522": {
@@ -1776,32 +1146,11 @@
   "parent_name": "",
   "status": 200
  },
- "SC442379": {
-  "kind": "corporate",
-  "parent_number": "SC600376",
-  "parent_name": "Spirex Ltd",
-  "parent_place": "Scotland Scotland",
-  "status": 200
- },
- "SC600376": {
-  "kind": "corporate",
-  "parent_number": "16203448",
-  "parent_name": "Cd Lindores Ltd",
-  "parent_place": "Companies House Register England",
-  "status": 200
- },
  "16203448": {
   "kind": "corporate-foreign",
   "parent_number": "",
   "parent_name": "Conquer Dawn Limited",
   "parent_place": "Conquer Dawn Ireland",
-  "status": 200
- },
- "SC442507": {
-  "kind": "corporate",
-  "parent_number": "SC788327",
-  "parent_name": "Thompson Independent Traders Ltd",
-  "parent_place": "Scotland Scotland",
   "status": 200
  },
  "SC788327": {
@@ -1828,24 +1177,10 @@
   "parent_name": "",
   "status": 200
  },
- "SC457756": {
-  "kind": "corporate",
-  "parent_number": "SC456414",
-  "parent_name": "Mossburn Distillers Ltd",
-  "parent_place": "Registrar Of Companies, Scotland United Kingdom",
-  "status": 200
- },
  "SC456414": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "SC460214": {
-  "kind": "corporate",
-  "parent_number": "SC032696",
-  "parent_name": "Ian Macleod Distillers Ltd",
-  "parent_place": "United Kingdom Scotland",
   "status": 200
  },
  "SC464028": {
@@ -1860,24 +1195,10 @@
   "parent_name": "",
   "status": 200
  },
- "SC483145": {
-  "kind": "corporate",
-  "parent_number": "SC499950",
-  "parent_name": "Chanrossa Group Limited",
-  "parent_place": "Scotland Scotland",
-  "status": 200
- },
  "SC499950": {
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "SC507595": {
-  "kind": "corporate",
-  "parent_number": "SC555631",
-  "parent_name": "Hunter Laing Holdings Limited",
-  "parent_place": "Companies House Edinburgh Scotland",
   "status": 200
  },
  "SC555631": {
@@ -1929,13 +1250,6 @@
   "parent_name": "",
   "status": 200
  },
- "SC531337": {
-  "kind": "corporate",
-  "parent_number": "SC462779",
-  "parent_name": "Newmake Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
  "SC462779": {
   "kind": "none",
   "parent_number": "",
@@ -1948,27 +1262,6 @@
   "parent_name": "",
   "status": 200
  },
- "SC536046": {
-  "kind": "corporate",
-  "parent_number": "SC415244",
-  "parent_name": "St Andrews Brewers Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
- "SC415244": {
-  "kind": "corporate",
-  "parent_number": "SL035289",
-  "parent_name": "Inverleith 1b Limited Partnership",
-  "parent_place": "Companies House, Scotland Scotland",
-  "status": 200
- },
- "SL035289": {
-  "kind": "corporate",
-  "parent_number": "SO302623",
-  "parent_name": "Inverleith Llp",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
  "SO302623": {
   "kind": "individual",
   "parent_number": "",
@@ -1979,13 +1272,6 @@
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "SC543737": {
-  "kind": "corporate",
-  "parent_number": "SC147083",
-  "parent_name": "Glenrinnes Farms Limited",
-  "parent_place": "United Kingdom United Kingdom",
   "status": 200
  },
  "SC147083": {
@@ -2024,13 +1310,6 @@
   "parent_name": "",
   "status": 200
  },
- "SC557862": {
-  "kind": "corporate",
-  "parent_number": "SC037522",
-  "parent_name": "Speymalt Whisky Distributors Limited",
-  "parent_place": "Companies House Scotland",
-  "status": 200
- },
  "SC559073": {
   "kind": "corporate-foreign",
   "parent_number": "",
@@ -2042,13 +1321,6 @@
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "SC560623": {
-  "kind": "corporate",
-  "parent_number": "08707353",
-  "parent_name": "Billion Global Chase Ltd",
-  "parent_place": "Companies House England",
   "status": 200
  },
  "08707353": {
@@ -2087,13 +1359,6 @@
   "parent_name": "",
   "status": 200
  },
- "SC645313": {
-  "kind": "corporate",
-  "parent_number": "SC636554",
-  "parent_name": "Ardent Spirit Holdings Limited",
-  "parent_place": "Scotland Scotland",
-  "status": 200
- },
  "SC636554": {
   "kind": "individual",
   "parent_number": "",
@@ -2104,13 +1369,6 @@
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "SC663710": {
-  "kind": "corporate",
-  "parent_number": "SC451565",
-  "parent_name": "W & G Renewables Limited",
-  "parent_place": "United Kingdom United Kingdom",
   "status": 200
  },
  "SC451565": {
@@ -2151,13 +1409,6 @@
   "parent_place": "",
   "status": 200
  },
- "SC690435": {
-  "kind": "corporate",
-  "parent_number": "SC037522",
-  "parent_name": "Speymalt Whisky Distributors Limited",
-  "parent_place": "Uk Register Of Companies United Kingdom",
-  "status": 200
- },
  "SC692764": {
   "kind": "individual",
   "parent_number": "",
@@ -2168,13 +1419,6 @@
   "kind": "individual",
   "parent_number": "",
   "parent_name": "",
-  "status": 200
- },
- "SC712327": {
-  "kind": "corporate",
-  "parent_number": "13732352",
-  "parent_name": "Mde Holding Ltd.",
-  "parent_place": "Companies House England",
   "status": 200
  },
  "13732352": {
@@ -2195,20 +1439,6 @@
   "parent_name": "",
   "status": 200
  },
- "SC196614": {
-  "kind": "corporate",
-  "parent_number": "SC131772",
-  "parent_name": "William Grant & Sons Limited",
-  "parent_place": "Uk Companies House Scotland",
-  "status": 200
- },
- "SC022667": {
-  "kind": "corporate",
-  "parent_number": "02302862",
-  "parent_name": "Demball Limited",
-  "parent_place": "Registrar Of Companies For England & Wales England",
-  "status": 200
- },
  "02302862": {
   "kind": "individual",
   "parent_number": "",
@@ -2220,6 +1450,809 @@
   "parent_number": "",
   "parent_name": "Davide Campari-Milano N.V.",
   "parent_place": "Italy Italy",
+  "status": 200
+ },
+ "00074809": {
+  "kind": "corporate",
+  "parent_number": "00703977",
+  "parent_name": "Allied Domecq Spirits & Wine Limited",
+  "parent_place": "Companies House England And Wales",
+  "status": 200
+ },
+ "00703977": {
+  "kind": "corporate",
+  "parent_number": "SC268758",
+  "parent_name": "Chivas Brothers Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC268758": {
+  "kind": "corporate",
+  "parent_number": "02869879",
+  "parent_name": "Allied Domecq Spirits & Wine Holdings Limited",
+  "parent_place": "Companies House England",
+  "status": 200
+ },
+ "02869879": {
+  "kind": "corporate",
+  "parent_number": "SC331555",
+  "parent_name": "Chivas Holdings (Ip) Limited",
+  "parent_place": "Scotland Scotland",
+  "status": 200
+ },
+ "00547325": {
+  "kind": "corporate",
+  "parent_number": "00727228",
+  "parent_name": "W.H.Palmer & Co. (Industries) Limited",
+  "parent_place": "Companies House England",
+  "status": 200
+ },
+ "00613551": {
+  "kind": "corporate",
+  "parent_number": "00366786",
+  "parent_name": "Bacardi U.K. Limited",
+  "parent_place": "Companies House, England And Wales England",
+  "status": 200
+ },
+ "03289012": {
+  "kind": "corporate",
+  "parent_number": "00470272",
+  "parent_name": "A E Chapman & Son Ltd",
+  "parent_place": "England Companies House England",
+  "status": 200
+ },
+ "05586226": {
+  "kind": "corporate",
+  "parent_number": "03512725",
+  "parent_name": "World Property Services Limited",
+  "parent_place": "England & Wales England",
+  "status": 200
+ },
+ "05591988": {
+  "kind": "corporate",
+  "parent_number": "05608446",
+  "parent_name": "Beam Suntory Uk Holdings Limited",
+  "parent_place": "Registrar Of Companies England",
+  "status": 200
+ },
+ "06373864": {
+  "kind": "corporate",
+  "parent_number": "10322915",
+  "parent_name": "Suntory Uk Holdings Limited",
+  "parent_place": "England&Wales England",
+  "status": 200
+ },
+ "06736350": {
+  "kind": "corporate",
+  "parent_number": "SC331555",
+  "parent_name": "Chivas Holdings (Ip) Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "07604280": {
+  "kind": "corporate",
+  "parent_number": "07604275",
+  "parent_name": "Quintessential Brands Uk Group Limited",
+  "parent_place": "England & Wales England",
+  "status": 200
+ },
+ "07604275": {
+  "kind": "corporate",
+  "parent_number": "07604265",
+  "parent_name": "Quintessential Brands Uk Holdings Limited",
+  "parent_place": "England & Wales England",
+  "status": 200
+ },
+ "07769363": {
+  "kind": "corporate",
+  "parent_number": "15281873",
+  "parent_name": "Nyetimber Wines And Spirits Group Limited",
+  "parent_place": "England & Wales England",
+  "status": 200
+ },
+ "08021995": {
+  "kind": "corporate",
+  "parent_number": "SC894346",
+  "parent_name": "Jackton Group Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "08073174": {
+  "kind": "corporate",
+  "parent_number": "01595703",
+  "parent_name": "Glen Turner Company Limited",
+  "parent_place": "Companies House United Kingdom",
+  "status": 200
+ },
+ "08230959": {
+  "kind": "corporate",
+  "parent_number": "13365238",
+  "parent_name": "Leadbetter Holdings Limited",
+  "parent_place": "Companies House United Kingdom",
+  "status": 200
+ },
+ "08300207": {
+  "kind": "corporate",
+  "parent_number": "09804220",
+  "parent_name": "Still On The Hill Limited",
+  "parent_place": "England And Wales England And Wales",
+  "status": 200
+ },
+ "09804220": {
+  "kind": "corporate",
+  "parent_number": "16914770",
+  "parent_name": "Fielden Limited",
+  "parent_place": "Companies House England",
+  "status": 200
+ },
+ "08338383": {
+  "kind": "corporate",
+  "parent_number": "16239761",
+  "parent_name": "Aboris Group Ltd",
+  "parent_place": "England England",
+  "status": 200
+ },
+ "08617161": {
+  "kind": "corporate",
+  "parent_number": "08617146",
+  "parent_name": "The Littlemill Distillery Company Limited",
+  "parent_place": "Companies House, London England",
+  "status": 200
+ },
+ "08617146": {
+  "kind": "corporate",
+  "parent_number": "08617163",
+  "parent_name": "Loch Lomond Holdings 1 Limited",
+  "parent_place": "Companies House, London England",
+  "status": 200
+ },
+ "08617163": {
+  "kind": "corporate",
+  "parent_number": "12012075",
+  "parent_name": "Llg Bidco Limited",
+  "parent_place": "England And Wales England",
+  "status": 200
+ },
+ "08617165": {
+  "kind": "corporate",
+  "parent_number": "08617161",
+  "parent_name": "Loch Lomond Distillery Company Limited",
+  "parent_place": "Companies House, London England",
+  "status": 200
+ },
+ "09040283": {
+  "kind": "corporate",
+  "parent_number": "16349911",
+  "parent_name": "Mermaid Ventures (Investments) Ltd",
+  "parent_place": "Registrar Of England And Wales England",
+  "status": 200
+ },
+ "10098181": {
+  "kind": "corporate",
+  "parent_number": "10144120",
+  "parent_name": "The Peak District Distilling Company Limited",
+  "parent_place": "England And Wales England",
+  "status": 200
+ },
+ "10647576": {
+  "kind": "corporate",
+  "parent_number": "03920410",
+  "parent_name": "Halewood Artisanal Spirits (Uk) Limited",
+  "parent_place": "United Kingdom United Kingdom",
+  "status": 200
+ },
+ "03920410": {
+  "kind": "corporate",
+  "parent_number": "03374741",
+  "parent_name": "Halewood International Holdings (Uk) Limited",
+  "parent_place": "Companies House United Kingdom",
+  "status": 200
+ },
+ "03374741": {
+  "kind": "corporate",
+  "parent_number": "03699814",
+  "parent_name": "Halewood Artisanal Spirits Plc",
+  "parent_place": "Companies House England",
+  "status": 200
+ },
+ "11012871": {
+  "kind": "corporate",
+  "parent_number": "10109031",
+  "parent_name": "T Mills Financial Limited",
+  "parent_place": "Companies House England",
+  "status": 200
+ },
+ "11032164": {
+  "kind": "corporate",
+  "parent_number": "11024965",
+  "parent_name": "Brindle Holdings Limited",
+  "parent_place": "England And Wales England And Wales",
+  "status": 200
+ },
+ "11447469": {
+  "kind": "corporate",
+  "parent_number": "09756868",
+  "parent_name": "The Rum Club Ltd",
+  "parent_place": "Companies House United Kingdom",
+  "status": 200
+ },
+ "09756868": {
+  "kind": "corporate",
+  "parent_number": "05368576",
+  "parent_name": "Rapid Response Solutions Holdings Limited",
+  "parent_place": "Register Of Companies England",
+  "status": 200
+ },
+ "11755094": {
+  "kind": "corporate",
+  "parent_number": "06522206",
+  "parent_name": "Cheddar Ales Limited",
+  "parent_place": "Companies House United Kingdom",
+  "status": 200
+ },
+ "11766925": {
+  "kind": "corporate",
+  "parent_number": "07641698",
+  "parent_name": "West Eleven Limited",
+  "parent_place": "Companies House England And Wales",
+  "status": 200
+ },
+ "11774118": {
+  "kind": "corporate",
+  "parent_number": "12986662",
+  "parent_name": "Real English Drinks Group Ltd",
+  "parent_place": "Registrar Of Companies, Cardiff United Kingdom",
+  "status": 200
+ },
+ "12937552": {
+  "kind": "corporate",
+  "parent_number": "12424739",
+  "parent_name": "888 Beverages Ltd",
+  "parent_place": "England & Wales Registry England",
+  "status": 200
+ },
+ "NI640001": {
+  "kind": "corporate",
+  "parent_number": "NI651291",
+  "parent_name": "Hinch Distillery Holdings Limited",
+  "parent_place": "Northern Ireland Northern Ireland",
+  "status": 200
+ },
+ "NI651291": {
+  "kind": "corporate",
+  "parent_number": "NI629892",
+  "parent_name": "Cross Family Group Holdings Limited",
+  "parent_place": "United Kingdom United Kingdom",
+  "status": 200
+ },
+ "NI629892": {
+  "kind": "corporate",
+  "parent_number": "NI692048",
+  "parent_name": "Cross Ft Limited",
+  "parent_place": "United Kingdom Northern Ireland",
+  "status": 200
+ },
+ "SC000750": {
+  "kind": "corporate",
+  "parent_number": "00507652",
+  "parent_name": "Diageo Great Britain Limited",
+  "parent_place": "Companies House England",
+  "status": 200
+ },
+ "00507652": {
+  "kind": "corporate",
+  "parent_number": "00291848",
+  "parent_name": "Grand Metropolitan Limited",
+  "parent_place": "Companies House United Kingdom",
+  "status": 200
+ },
+ "00291848": {
+  "kind": "corporate",
+  "parent_number": "03623314",
+  "parent_name": "Diageo Holdings Limited",
+  "parent_place": "Companies House England",
+  "status": 200
+ },
+ "03623314": {
+  "kind": "corporate",
+  "parent_number": "00023307",
+  "parent_name": "Diageo Plc",
+  "parent_place": "Companies House England",
+  "status": 200
+ },
+ "SC001491": {
+  "kind": "corporate",
+  "parent_number": "SC141866",
+  "parent_name": "Lothian Distillers Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC014477": {
+  "kind": "corporate",
+  "parent_number": "SC258480",
+  "parent_name": "The Benriach Distillery Company Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC258480": {
+  "kind": "corporate",
+  "parent_number": "SC526282",
+  "parent_name": "Brown-Forman Scotland Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC019038": {
+  "kind": "corporate",
+  "parent_number": "SC026752",
+  "parent_name": "The Glenmorangie Company Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC026752": {
+  "kind": "corporate-foreign",
+  "parent_number": "",
+  "parent_name": "Lvmh Moet Hennessy Louis Vuitton Se",
+  "parent_place": "Rcs Paris France",
+  "status": 200
+ },
+ "SC022667": {
+  "kind": "corporate",
+  "parent_number": "02302862",
+  "parent_name": "Demball Limited",
+  "parent_place": "Registrar Of Companies For England & Wales England",
+  "status": 200
+ },
+ "SC031095": {
+  "kind": "corporate",
+  "parent_number": "SC199495",
+  "parent_name": "Speyside Distillers Company Limited",
+  "parent_place": "Scotland Scotland",
+  "status": 200
+ },
+ "SC036374": {
+  "kind": "corporate",
+  "parent_number": "SC428674",
+  "parent_name": "Kintail Trustees Limited",
+  "parent_place": "Registrar Of Companies Scotland",
+  "status": 200
+ },
+ "SC040036": {
+  "kind": "corporate",
+  "parent_number": "SC222095",
+  "parent_name": "International Beverage Holdings Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC043917": {
+  "kind": "corporate",
+  "parent_number": "SC203488",
+  "parent_name": "Chivas Brothers Pernod Ricard",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC203488": {
+  "kind": "corporate",
+  "parent_number": "04248641",
+  "parent_name": "Chivas Brothers (Holdings) Limited",
+  "parent_place": "Companies House England And Wales",
+  "status": 200
+ },
+ "04248641": {
+  "kind": "corporate",
+  "parent_number": "05421315",
+  "parent_name": "Goal Acquisitions (Holdings) Limited",
+  "parent_place": "Companies House England And Wales",
+  "status": 200
+ },
+ "05421315": {
+  "kind": "corporate",
+  "parent_number": "10702292",
+  "parent_name": "Pernod Ricard Uk Group Limited",
+  "parent_place": "Companies House England And Wales",
+  "status": 200
+ },
+ "SC045679": {
+  "kind": "corporate",
+  "parent_number": "SC019258",
+  "parent_name": "Chivas 2000",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC019258": {
+  "kind": "corporate",
+  "parent_number": "SC203488",
+  "parent_name": "Chivas Brothers Pernod Ricard",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC052114": {
+  "kind": "corporate",
+  "parent_number": "00379553",
+  "parent_name": "Bb&R Spirits Limited",
+  "parent_place": "England And Wales England",
+  "status": 200
+ },
+ "00379553": {
+  "kind": "corporate",
+  "parent_number": "SC158731",
+  "parent_name": "Highland Distillers Limited",
+  "parent_place": "Register Of Companies (Scotland) Scotland",
+  "status": 200
+ },
+ "SC158731": {
+  "kind": "corporate",
+  "parent_number": "SC199077",
+  "parent_name": "1887 Company Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC199077": {
+  "kind": "corporate",
+  "parent_number": "SC36374",
+  "parent_name": "The Edrington Group Limited",
+  "parent_place": "Uk Companies House Scotland",
+  "status": 200
+ },
+ "SC36374": {
+  "kind": "error",
+  "parent_number": "",
+  "parent_name": "",
+  "status": 502
+ },
+ "SC060347": {
+  "kind": "corporate",
+  "parent_number": "SC060546",
+  "parent_name": "Praban Gu Leir Limited",
+  "parent_place": "Companies House, Scotland Scotland",
+  "status": 200
+ },
+ "SC126375": {
+  "kind": "corporate",
+  "parent_number": "SC109881",
+  "parent_name": "Cvh Spirits Limited",
+  "parent_place": "Register Of Companies Scotland",
+  "status": 200
+ },
+ "SC131772": {
+  "kind": "corporate",
+  "parent_number": "15238251",
+  "parent_name": "William Grant & Sons Holdings Limited",
+  "parent_place": "Companies House Uk England",
+  "status": 200
+ },
+ "SC132929": {
+  "kind": "corporate",
+  "parent_number": "SC135381",
+  "parent_name": "Ces Whisky Limited",
+  "parent_place": "Uk Companies House Scotland",
+  "status": 200
+ },
+ "SC141800": {
+  "kind": "corporate",
+  "parent_number": "06990772",
+  "parent_name": "Rain Dance Investments Limited",
+  "parent_place": "Companies House Not Specified/Other",
+  "status": 200
+ },
+ "SC156412": {
+  "kind": "corporate",
+  "parent_number": "SC140080",
+  "parent_name": "Blairmhor Distillers Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC140080": {
+  "kind": "corporate",
+  "parent_number": "SC099017",
+  "parent_name": "Blairmhor Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC099017": {
+  "kind": "corporate",
+  "parent_number": "SC222095",
+  "parent_name": "International Beverage Holdings (Uk) Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC163039": {
+  "kind": "corporate",
+  "parent_number": "SC140080",
+  "parent_name": "Blairmhor Distillers Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC209196": {
+  "kind": "corporate",
+  "parent_number": "08129324",
+  "parent_name": "Remy Cointreau Uk Limited",
+  "parent_place": "Companies Registry England And Wales England",
+  "status": 200
+ },
+ "SC221954": {
+  "kind": "corporate",
+  "parent_number": "SC476923",
+  "parent_name": "Emperador Uk Limited",
+  "parent_place": "Uk Companies House Scotland",
+  "status": 200
+ },
+ "SC476923": {
+  "kind": "corporate",
+  "parent_number": "09094033",
+  "parent_name": "Emperador Holdings (Gb) Limited",
+  "parent_place": "Uk Companies House England",
+  "status": 200
+ },
+ "SC222298": {
+  "kind": "corporate",
+  "parent_number": "SC331555",
+  "parent_name": "Chivas Holdings (Ip) Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC225220": {
+  "kind": "corporate",
+  "parent_number": "10984243",
+  "parent_name": "Msg Uk Investments Limited",
+  "parent_place": "England And Wales England",
+  "status": 200
+ },
+ "SC232984": {
+  "kind": "corporate",
+  "parent_number": "SC112957",
+  "parent_name": "Signatory Vintage Scotch Whisky Company Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC240804": {
+  "kind": "corporate",
+  "parent_number": "04238946",
+  "parent_name": "The Glenlivet Distillers Limited",
+  "parent_place": "Companies House England And Wales",
+  "status": 200
+ },
+ "04238946": {
+  "kind": "corporate",
+  "parent_number": "05421315",
+  "parent_name": "Goal Acquisitions (Holdings) Limited",
+  "parent_place": "Companies House England And Wales",
+  "status": 200
+ },
+ "SC241885": {
+  "kind": "corporate",
+  "parent_number": "SC109881",
+  "parent_name": "Cvh Spirits Limited",
+  "parent_place": "Scottish Register Of Scotland Scotland",
+  "status": 200
+ },
+ "SC310871": {
+  "kind": "corporate",
+  "parent_number": "SC258480",
+  "parent_name": "The Benriach Distillery Company Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC316346": {
+  "kind": "corporate",
+  "parent_number": "02304169",
+  "parent_name": "Mathematical Market Research Limited",
+  "parent_place": "England And Wales England",
+  "status": 200
+ },
+ "SC348842": {
+  "kind": "corporate",
+  "parent_number": "01595703",
+  "parent_name": "Glen Turner Company Limited",
+  "parent_place": "Companies House England And Wales",
+  "status": 200
+ },
+ "SC359078": {
+  "kind": "corporate",
+  "parent_number": "SC437599",
+  "parent_name": "Wemyss Distillery Limited",
+  "parent_place": "Scotland Scotland",
+  "status": 200
+ },
+ "SC437599": {
+  "kind": "corporate",
+  "parent_number": "SC024047",
+  "parent_name": "Wemyss Properties Limited",
+  "parent_place": "Scotland Scotland",
+  "status": 200
+ },
+ "SC024047": {
+  "kind": "corporate",
+  "parent_number": "SC3626",
+  "parent_name": "The Wemyss Development Company Limited",
+  "parent_place": "Scotland Scotland",
+  "status": 200
+ },
+ "SC437374": {
+  "kind": "corporate",
+  "parent_number": "SC037522",
+  "parent_name": "Speymalt Whisky Distributors Ltd",
+  "parent_place": "Edinburgh Scotland",
+  "status": 200
+ },
+ "SC442379": {
+  "kind": "corporate",
+  "parent_number": "SC600376",
+  "parent_name": "Spirex Ltd",
+  "parent_place": "Scotland Scotland",
+  "status": 200
+ },
+ "SC600376": {
+  "kind": "corporate",
+  "parent_number": "16203448",
+  "parent_name": "Cd Lindores Ltd",
+  "parent_place": "Companies House Register England",
+  "status": 200
+ },
+ "SC442507": {
+  "kind": "corporate",
+  "parent_number": "SC788327",
+  "parent_name": "Thompson Independent Traders Ltd",
+  "parent_place": "Scotland Scotland",
+  "status": 200
+ },
+ "SC457756": {
+  "kind": "corporate",
+  "parent_number": "SC456414",
+  "parent_name": "Mossburn Distillers Ltd",
+  "parent_place": "Registrar Of Companies, Scotland United Kingdom",
+  "status": 200
+ },
+ "SC460214": {
+  "kind": "corporate",
+  "parent_number": "SC032696",
+  "parent_name": "Ian Macleod Distillers Ltd",
+  "parent_place": "United Kingdom Scotland",
+  "status": 200
+ },
+ "SC483145": {
+  "kind": "corporate",
+  "parent_number": "SC499950",
+  "parent_name": "Chanrossa Group Limited",
+  "parent_place": "Scotland Scotland",
+  "status": 200
+ },
+ "SC507595": {
+  "kind": "corporate",
+  "parent_number": "SC555631",
+  "parent_name": "Hunter Laing Holdings Limited",
+  "parent_place": "Companies House Edinburgh Scotland",
+  "status": 200
+ },
+ "SC531337": {
+  "kind": "corporate",
+  "parent_number": "SC462779",
+  "parent_name": "Newmake Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC536046": {
+  "kind": "corporate",
+  "parent_number": "SC415244",
+  "parent_name": "St Andrews Brewers Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC415244": {
+  "kind": "corporate",
+  "parent_number": "SL035289",
+  "parent_name": "Inverleith 1b Limited Partnership",
+  "parent_place": "Companies House, Scotland Scotland",
+  "status": 200
+ },
+ "SC543737": {
+  "kind": "corporate",
+  "parent_number": "SC147083",
+  "parent_name": "Glenrinnes Farms Limited",
+  "parent_place": "United Kingdom United Kingdom",
+  "status": 200
+ },
+ "SC557862": {
+  "kind": "corporate",
+  "parent_number": "SC037522",
+  "parent_name": "Speymalt Whisky Distributors Limited",
+  "parent_place": "Companies House Scotland",
+  "status": 200
+ },
+ "SC560623": {
+  "kind": "corporate",
+  "parent_number": "08707353",
+  "parent_name": "Billion Global Chase Ltd",
+  "parent_place": "Companies House England",
+  "status": 200
+ },
+ "SC645313": {
+  "kind": "corporate",
+  "parent_number": "SC636554",
+  "parent_name": "Ardent Spirit Holdings Limited",
+  "parent_place": "Scotland Scotland",
+  "status": 200
+ },
+ "SC663710": {
+  "kind": "corporate",
+  "parent_number": "SC451565",
+  "parent_name": "W & G Renewables Limited",
+  "parent_place": "United Kingdom United Kingdom",
+  "status": 200
+ },
+ "SC690435": {
+  "kind": "corporate",
+  "parent_number": "SC037522",
+  "parent_name": "Speymalt Whisky Distributors Limited",
+  "parent_place": "Uk Register Of Companies United Kingdom",
+  "status": 200
+ },
+ "SC712327": {
+  "kind": "corporate",
+  "parent_number": "13732352",
+  "parent_name": "Mde Holding Ltd.",
+  "parent_place": "Companies House England",
+  "status": 200
+ },
+ "SC331555": {
+  "kind": "joint",
+  "parent_number": "",
+  "status": 200,
+  "sides": [
+   {
+    "number": "SC203488",
+    "name": "Chivas Brothers Pernod Ricard"
+   },
+   {
+    "number": "04248641",
+    "name": "Chivas Brothers (Holdings) Limited"
+   }
+  ],
+  "parent_name": "Chivas Brothers Pernod Ricard / Chivas Brothers (Holdings) Limited"
+ },
+ "SC141866": {
+  "kind": "joint",
+  "parent_number": "",
+  "status": 200,
+  "sides": [
+   {
+    "number": "SC017727",
+    "name": "Edrington Distillers Group Limited"
+   },
+   {
+    "number": "00507652",
+    "name": "Diageo Great Britain Limited"
+   }
+  ],
+  "parent_name": "Edrington Distillers Group Limited / Diageo Great Britain Limited"
+ },
+ "SC017727": {
+  "kind": "corporate",
+  "parent_number": "SC036374",
+  "parent_name": "The Edrington Group Limited",
+  "parent_place": "Scotland Scotland",
+  "status": 200
+ },
+ "SL035289": {
+  "kind": "joint",
+  "parent_number": "",
+  "status": 200,
+  "sides": [
+   {
+    "number": "SO302623",
+    "name": "Inverleith Llp"
+   },
+   {
+    "number": "SC711031",
+    "name": "Inverleith Gb 1b Limited"
+   }
+  ],
+  "parent_name": "Inverleith Llp / Inverleith Gb 1b Limited"
+ },
+ "SC711031": {
+  "kind": "corporate",
+  "parent_number": "SO302623",
+  "parent_name": "Inverleith Llp",
+  "parent_place": "United Kingdom Scotland",
   "status": 200
  }
 }
