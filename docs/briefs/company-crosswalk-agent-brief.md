@@ -81,12 +81,23 @@ not the CRO; do those with the UK method.
 Register note for later: CRO shows identity, status and `last_accounts_date` free; the
 accounts themselves cost EUR 2.50-3.50 per document through a CORE account.
 
-## Phase 3: the rest, only where a free public register exists
+## Phase 3: United States and Canada. State at 19 Sep 2026
 
-United States has no national company register; skip. Belgium, France, Norway, Denmark,
-New Zealand, Japan carry OpenCorporates-style ids from Wikidata already; leave them.
-Germany, Austria, Australia, Canada: stop and write down which register would work and
-whether it is free, do not build.
+**United States: done as a first layer, 19 Sep.** No national register, but the TTB FOIA list of
+spirits permittees is a weekly public record of the legal entity, trading name and premises
+behind every distilled spirits plant. `scripts/match_ttb_permits.py` (name pass inside the
+state, then a premises pass on ZIP + street number) writes `ttb-candidates.csv`; the builder
+folds `high`/`medium`. Result and the unmatched list: `docs/data-quality/us-ttb-crosswalk-2026-09-19.md`.
+State Secretary-of-State numbers are a second layer, per state, not started; check each
+state's terms before building.
+
+**Canada: built 19 Sep from the free registers.** `scripts/match_canada_registers.py` writes
+`canada-candidates.csv`; the per-province register survey (what is free, bulk, API, paid) is
+`docs/data-quality/canada-registers-2026-09-19.md`.
+
+**Elsewhere.** Belgium, France, Norway, Denmark, New Zealand, Japan carry OpenCorporates-style
+ids from Wikidata already; leave them. Germany, Austria, Australia: stop and write down which
+register would work and whether it is free, do not build.
 
 ## Rules
 
