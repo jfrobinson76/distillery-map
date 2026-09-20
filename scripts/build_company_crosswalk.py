@@ -48,20 +48,20 @@ import base64
 import csv
 import json
 import os
-import re
 import sys
 import time
-import unicodedata
 import urllib.parse
 import urllib.request
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from crosswalklib import grading, names, rows as xrows  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 GEO = ROOT / "public" / "data" / "distilleries.geojson"
 ENR = ROOT / "data" / "company-crosswalk"
 OUT = ENR / "company-crosswalk.csv"
-FIELDS = ["slug", "distillery_name", "country", "registry", "company_number", "company_name",
-          "relation", "match_method", "confidence", "verified", "source", "note"]
+FIELDS = xrows.FIELDS
 
 # Wikidata sometimes hangs a subsidiary's registry id on the parent item (William Grant &
 # Sons carries a French OpenCorporates id). A registry outside the distillery's own country
@@ -71,22 +71,12 @@ JURIS = {"United Kingdom": "gb", "Ireland": "ie", "Belgium": "be", "Japan": "jp"
          "Australia": "au", "Canada": "ca", "United States": "us", "Sweden": "se", "Finland": "fi",
          "Switzerland": "ch", "Austria": "at", "Italy": "it", "Spain": "es"}
 
-STOP = {"distillery", "distillers", "distilling", "distilleries", "the", "ltd", "limited", "llc",
-        "inc", "co", "company", "plc", "gmbh", "sa", "bv", "nv", "and", "of", "de", "la", "le"}
+def tokens(s: str) -> frozenset:
+    return names.tokens(s)
 
 
-def norm(s: str) -> str:
-    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode()
-    s = re.sub(r"[^a-z0-9 ]+", " ", s.lower())
-    return " ".join(t for t in s.split() if t not in STOP)
-
-
-def tokens(s: str) -> set[str]:
-    return set(norm(s).split())
-
-
-def jaccard(a: set, b: set) -> float:
-    return len(a & b) / len(a | b) if a or b else 0.0
+def jaccard(a, b) -> float:
+    return names.jaccard(frozenset(a), frozenset(b))
 
 
 def load_map() -> list[dict]:
@@ -114,14 +104,9 @@ def load_candidates() -> list[dict]:
             continue
         rows += [r for r in csv.DictReader(p.open())
                  if r.get("confidence") in ("high", "medium") and r.get("company_number")]
-    # A candidates file may list several companies for one pin. The crosswalk takes the best
-    # one per (slug, registry, relation): high before medium, then file order.
-    best: dict[tuple, dict] = {}
-    for r in rows:
-        k = (r["slug"], r["registry"], r["relation"])
-        if k not in best or (best[k]["confidence"] == "medium" and r["confidence"] == "high"):
-            best[k] = r
-    return list(best.values())
+    # A candidates file may list several companies for one pin; keep the best per
+    # (slug, registry, relation).
+    return grading.best_per_key(rows)
 
 
 def load_wikidata() -> list[dict]:
