@@ -18,6 +18,7 @@ Guarantees, none of them optional:
 from __future__ import annotations
 
 import hashlib
+import http.cookiejar
 import json
 import socket
 import ssl
@@ -44,6 +45,9 @@ class Fetcher:
         self.said_cap = False
         self.outcomes: dict[str, int] = {}
         self._ctx = ssl.create_default_context()  # verified; deliberately not configurable
+        self._jar = http.cookiejar.CookieJar()   # for sites that hand out a session before a POST
+        self._opener = urllib.request.build_opener(
+            urllib.request.HTTPSHandler(context=self._ctx), urllib.request.HTTPCookieProcessor(self._jar))
 
     # ------------------------------------------------------------------ cache ----
     def _key(self, url: str) -> Path:
@@ -94,7 +98,7 @@ class Fetcher:
         self.last = time.monotonic()
         req = urllib.request.Request(url, headers={"User-Agent": UA, **(headers or {})})
         try:
-            with urllib.request.urlopen(req, timeout=self.timeout, context=self._ctx) as r:
+            with self._opener.open(req, timeout=self.timeout) as r:
                 body = r.read()
             self._key(url).write_bytes(body)
             self._log("OK", url, str(len(body)))
@@ -109,6 +113,46 @@ class Fetcher:
             return None
         except ssl.SSLError as e:
             self._log("TLS", url, str(e.reason if hasattr(e, "reason") else e))
+            self._note("tls")
+            return None
+        except (urllib.error.URLError, socket.timeout, TimeoutError, ConnectionError, OSError) as e:
+            self._log("ERR", url, type(e).__name__)
+            self._note("error")
+            return None
+
+    def post(self, url: str, data: dict, headers: dict | None = None, timeout: int | None = None) -> bytes | None:
+        """A form POST, never cached, under the same cap, log, pacing and TLS rules as get().
+        Cookies set by earlier get()/post() calls on this Fetcher are sent (some registers hand
+        out a session token on a page before they let you download)."""
+        if not self.allow:
+            self._note("not-allowed")
+            return None
+        host = urllib.parse.urlsplit(url).netloc
+        if host in self.blocked or self.made >= self.cap:
+            self._note("host-blocked" if host in self.blocked else "cap")
+            return None
+        wait = self.delay - (time.monotonic() - self.last)
+        if wait > 0:
+            time.sleep(wait)
+        self.made += 1
+        self._log("REQ", url, "POST " + ",".join(f"{k}={str(v)[:24]}" for k, v in data.items() if "token" not in k.lower()))
+        self.last = time.monotonic()
+        req = urllib.request.Request(url, data=urllib.parse.urlencode(data).encode(),
+                                     headers={"User-Agent": UA, **(headers or {})})
+        try:
+            with self._opener.open(req, timeout=timeout or self.timeout) as r:
+                body = r.read()
+            self._log("OK", url, str(len(body)))
+            self._note("ok")
+            return body
+        except urllib.error.HTTPError as e:
+            self._log("HTTP", url, str(e.code))
+            self._note(f"http-{e.code}")
+            if e.code == 429:
+                self.blocked.add(host)
+            return None
+        except ssl.SSLError as e:
+            self._log("TLS", url, str(getattr(e, "reason", e)))
             self._note("tls")
             return None
         except (urllib.error.URLError, socket.timeout, TimeoutError, ConnectionError, OSError) as e:

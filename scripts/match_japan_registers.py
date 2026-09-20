@@ -34,6 +34,15 @@ in order of strength: (1) kanji pin name == kanji register name after normalisat
 or website-domain token, with prefecture or postcode agreement; (4) same 7-digit postcode as
 the pin and a drinks word in the company name. Hand rows carry the group operator for the
 well-known group-run sites; their 法人番号 is resolved from the register by kanji legal name.
+
+Kanji parsing, the katakana/romaji bridge and the register/licence readers are all Japan-specific
+and stay here. Fetching, the postcode-neighbour and group-run-site guards, and the row schema
+come from scripts/crosswalklib (fetch, grading, rows); Latin-token stop words are shared via
+crosswalklib.names, with a small Japan-only STOP_LATIN on top for prefecture/city names, romaji
+spelling variants and website-hosting artefacts that don't belong in a cross-country list. The
+NTA zenken download needs a CSRF token plus a session cookie for its POST; Fetcher.get() keeps
+the cookie and Fetcher.post() sends the form, so every request in this file goes through the
+one Fetcher.
 """
 from __future__ import annotations
 
@@ -47,19 +56,21 @@ import sys
 import time
 import unicodedata
 import urllib.parse
-import urllib.request
 import zipfile
 from collections import defaultdict
-from http.cookiejar import CookieJar
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from crosswalklib import fetch, grading, names, rows  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 GEO = ROOT / "public" / "data" / "distilleries.geojson"
 OUT_DIR = ROOT / "data" / "company-crosswalk"
 OUT_CANDIDATES = OUT_DIR / "japan-candidates.csv"
 OUT_LICENCES = OUT_DIR / "japan-licences.csv"
-FIELDS = ["slug", "distillery_name", "country", "registry", "company_number", "company_name",
-          "relation", "match_method", "confidence", "verified", "source", "note"]
+# Requests already spent against the NTA site before crosswalklib.fetch existed to log them
+# (research note docs/data-quality/japan-registers-2026-09-20.md); carried into Fetcher(spent=).
+SPENT_BASELINE = 62
 
 SRC_NTA = "https://www.houjin-bangou.nta.go.jp/download/zenken/"
 SRC_NTA_LICENCE = "https://www.nta.go.jp/taxes/sake/menkyo/shinki/seizo/02/zenkoku.htm"
@@ -117,18 +128,21 @@ DISTILLED = {"ウイスキー", "スピリッツ", "リキュール", "単式蒸
              "連続式蒸留しょうちゅう", "ブランデー", "原料用アルコール", "雑酒"}
 COMPANY_KINDS = {"301", "302", "303", "304", "305"}  # 株式会社 有限会社 合名 合資 合同
 NON_COMPANY = re.compile(r"商工会議所|協同組合|組合|信用金庫|税理士|学院|学校|法人|協会|財産区|教会|病院|医院")
-# Latin tokens too generic to bridge on
-STOP_LATIN = {"distillery", "distilleries", "distill", "distilling", "distillers", "whisky", "whiskey", "shuzo",
-              "shuzou", "syuzou", "jozo", "jyozo", "brewery", "brewing", "beer", "sake", "spirits", "gin", "craft",
-              "japan", "japanese", "the", "and", "co", "ltd", "inc", "www", "com", "jp", "shop", "pro", "net",
-              "org", "html", "index", "factory", "company", "kura", "tokyo", "kyoto", "osaka", "kagoshima",
-              "okinawa", "hokkaido", "nagasaki", "miyazaki", "kumamoto", "shizuoka", "nagano", "niigata", "chiba",
-              "saitama", "yamagata", "fukushima", "aichi", "gifu", "saga", "iwate", "aomori", "toyama", "shiga",
-              "hyogo", "ibaraki", "kanagawa", "yokohama", "yamanashi", "hiroshima", "yamaguchi", "ishikawa",
-              "tochigi", "oita", "amami", "goto", "onsen", "tsunuki", "komagatake", "products", "botanical",
-              "restaurant", "cafe", "bar", "salon", "head", "office", "limited", "non", "alcoholic", "mars",
-              "instagram", "nifty", "homepage3", "base", "thebase", "age", "verification", "pages", "contents",
-              "eng", "company", "visiting", "experience", "open", "home"}
+# Latin tokens too generic to bridge on. The English/legal-form words that used to live here
+# (distillery, whisky, brewery, beer, sake, the, co, ltd, shop, restaurant, cafe, bar, head,
+# office, kk, ...) are now in crosswalklib.names.STOP (folded 20 Sep 2026: "beer"/"beers" and
+# the shuzo/shuzou/jozo/kura romaji family were added there so every matcher gets them). What's
+# left here is genuinely Japan-specific: prefecture/city names, romaji spelling variants not
+# worth generalising, and website-hosting artefacts from parsing pin domains. Token filtering
+# checks this set OR names.STOP (see latin_tokens/domain_tokens below).
+STOP_LATIN = {"japan", "japanese", "www", "com", "jp", "pro", "net", "org", "html", "index", "factory",
+              "tokyo", "kyoto", "osaka", "kagoshima", "okinawa", "hokkaido", "nagasaki", "miyazaki",
+              "kumamoto", "shizuoka", "nagano", "niigata", "chiba", "saitama", "yamagata", "fukushima",
+              "aichi", "gifu", "saga", "iwate", "aomori", "toyama", "shiga", "hyogo", "ibaraki", "kanagawa",
+              "yokohama", "yamanashi", "hiroshima", "yamaguchi", "ishikawa", "tochigi", "oita", "amami",
+              "goto", "onsen", "tsunuki", "komagatake", "products", "botanical", "salon", "non", "alcoholic",
+              "mars", "instagram", "nifty", "homepage3", "base", "thebase", "age", "verification", "pages",
+              "contents", "eng", "visiting", "experience", "open", "home"}
 COMMON_DOMAIN = {"instagram.com", "tabelog.com", "shop-pro.jp", "thebase.in", "nifty.com"}
 
 # Hand rows: group operators for group-run sites, plus operating companies whose legal name
@@ -402,7 +416,8 @@ def kana_to_romaji(s: str) -> str:
 
 
 def latin_tokens(s: str) -> list[str]:
-    return [t for t in latin_norm(s).split() if len(t) >= 4 and t not in STOP_LATIN and not t.isdigit()]
+    return [t for t in latin_norm(s).split()
+            if len(t) >= 4 and t not in STOP_LATIN and t not in names.STOP and not t.isdigit()]
 
 
 def domain_tokens(url: str) -> list[str]:
@@ -418,7 +433,7 @@ def domain_tokens(url: str) -> list[str]:
     for l in labels[:1]:
         toks.append(l.replace("-", ""))
         toks.extend(p for p in l.split("-") if len(p) >= 4)
-    return [t for t in toks if len(t) >= 4 and t not in STOP_LATIN]
+    return [t for t in toks if len(t) >= 4 and t not in STOP_LATIN and t not in names.STOP]
 
 
 # ------------------------------------------------------------------- pins ----
@@ -467,19 +482,30 @@ def load_pins():
 
 
 # ----------------------------------------------------------- NTA register ----
-def fetch_nta(cache: Path, prefs: set[str], log: dict):
+def fetch_nta(cache: Path, prefs: set[str], f: fetch.Fetcher):
     """Download the CSV-Unicode 全件 zip for each prefecture not yet cached. One GET for the
-    page (form token + cookies), then one POST per zip, >= 1 s apart."""
+    page (form token + cookies), then one POST per zip, >= 1 s apart.
+
+    The NTA zenken site needs a CSRF token scraped from the page plus the session cookie that
+    request sets, then a POST per file carrying both. Fetcher.get() keeps the cookie and
+    Fetcher.post() sends the form, so cap, pacing, TLS and the request log are the same for
+    every byte this script moves."""
     ntadir = cache / "nta"
     ntadir.mkdir(parents=True, exist_ok=True)
     need = [k for k in sorted(prefs) if k and not (ntadir / f"{k}.zip").exists()]
     if not need:
         return
-    jar = CookieJar()
-    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
-    opener.addheaders = [("User-Agent", UA)]
-    page = opener.open(SRC_NTA, timeout=60).read().decode("utf-8", "replace")
-    log["nta-zenken-page"] = log.get("nta-zenken-page", 0) + 1
+    if not f.allow:
+        print("fetch_nta: not allowed (pass --fetch-nta); nothing fetched", file=sys.stderr)
+        return
+    if f.made >= f.cap:
+        print(f"fetch_nta: request cap {f.cap} reached; nothing fetched", file=sys.stderr)
+        return
+    raw = f.get(SRC_NTA, force=True)  # the page sets the session cookie the POSTs need
+    if raw is None:
+        print("fetch_nta: zenken page not fetched; " + f.summary(), file=sys.stderr)
+        return
+    page = raw.decode("utf-8", "replace")
     token = re.search(r'CNSFWTokenProcessor\.request\.token" value="([^"]+)"', page).group(1)
     sec = re.split(r'<h2 class="title" id="(csv-sjis|csv-unicode|xml-unicode)">', page)
     body = sec[sec.index("csv-unicode") + 1]
@@ -492,15 +518,17 @@ def fetch_nta(cache: Path, prefs: set[str], log: dict):
         if k not in files:
             print(f"warn: {k} not on the zenken page", file=sys.stderr)
             continue
+        if f.made >= f.cap:
+            print(f"fetch_nta: request cap {f.cap} reached; {k} and later prefectures skipped", file=sys.stderr)
+            break
         parts = []
         for fileno, label, size in files[k]:
-            time.sleep(1.0)
-            data = urllib.parse.urlencode({
+            blob = f.post(NTA_ZENKEN_POST, {
                 "jp.go.nta.houjin_bangou.framework.web.common.CNSFWTokenProcessor.request.token": token,
-                "event": "download", "selDlFileNo": fileno}).encode()
-            req = urllib.request.Request(NTA_ZENKEN_POST, data=data, headers={"Referer": SRC_NTA})
-            blob = opener.open(req, timeout=600).read()
-            log["nta-zenken-download"] = log.get("nta-zenken-download", 0) + 1
+                "event": "download", "selDlFileNo": fileno}, headers={"Referer": SRC_NTA}, timeout=600)
+            if blob is None:
+                print(f"fetch_nta: {k} file {fileno} not fetched; " + f.summary(), file=sys.stderr)
+                break
             parts.append(blob)
             print(f"nta: {k} {label.strip() or 'zip'} {size} -> {len(blob):,} bytes", file=sys.stderr)
         if len(parts) == 1:
@@ -576,18 +604,21 @@ def load_register(cache: Path, prefs: set[str], pins, wanted_numbers: set[str], 
 
 
 # ------------------------------------------------------------ licence list ---
-def fetch_licences(cache: Path, log: dict):
+def fetch_licences(cache: Path, f: fetch.Fetcher):
+    """One GET per yearly Excel file, straight to its fixed path; a clean fit for Fetcher.bulk
+    (no cookies, no form body). bulk() does not itself pace requests, so this loop keeps the
+    >= 1 s spacing between the files it actually has to fetch."""
     d = cache / "nta-licence"
     d.mkdir(parents=True, exist_ok=True)
     for path, tag in NTA_LICENCE_FILES:
         out = d / f"{tag}.xlsx"
         if out.exists():
             continue
-        time.sleep(1.0)
-        req = urllib.request.Request("https://www.nta.go.jp/taxes/sake/menkyo/shinki/seizo/" + path,
-                                     headers={"User-Agent": UA})
-        out.write_bytes(urllib.request.urlopen(req, timeout=60).read())
-        log["nta-licence-xlsx"] = log.get("nta-licence-xlsx", 0) + 1
+        time.sleep(f.delay)
+        url = "https://www.nta.go.jp/taxes/sake/menkyo/shinki/seizo/" + path
+        if not f.bulk(url, out, max_bytes=20_000_000):
+            print(f"licence: {tag}.xlsx not downloaded: {f.summary()}", file=sys.stderr)
+            continue
         print(f"licence: {tag}.xlsx {out.stat().st_size:,} bytes", file=sys.stderr)
 
 
@@ -659,9 +690,8 @@ def downgrade(g: str) -> str:
 
 
 def row(pin, registry, number, name, relation, method, conf, source, note):
-    return {"slug": pin["slug"], "distillery_name": pin["name"], "country": "Japan", "registry": registry,
-            "company_number": number, "company_name": name, "relation": relation, "match_method": method,
-            "confidence": conf, "verified": "", "source": source, "note": note}
+    return rows.make(pin["slug"], pin["name"], "Japan", registry, number, name, relation, method, conf,
+                      source, note)
 
 
 def match_register(pins, keep, by_key, by_pc, licences):
@@ -795,16 +825,6 @@ def hand_rows(pins, by_key):
     return out
 
 
-def write_csv(path: Path, rows: list[dict]):
-    rows = sorted(rows, key=lambda r: (r["slug"], {"high": 0, "medium": 1, "low": 2}[r["confidence"]],
-                                       r["relation"], r["company_number"]))
-    with path.open("w", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=FIELDS)
-        w.writeheader()
-        for r in rows:
-            w.writerow(r)
-
-
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--cache", required=True, type=Path)
@@ -812,16 +832,18 @@ def main():
     ap.add_argument("--fetch-licences", action="store_true", help="download the yearly NTA licence Excel files")
     ap.add_argument("--summary", type=Path, help="write a JSON summary (counts, request log) here")
     args = ap.parse_args()
-    log = {}
 
     pins = load_pins()
     prefs = {p["pref"] for p in pins if p["pref"]} | {pref for rows_ in HAND.values() for _, pref, *_ in rows_}
     print(f"pins: {len(pins)} Japan; {sum(1 for p in pins if p['pref'])} with prefecture; "
           f"{sum(1 for p in pins if p['postcode'])} with postcode; {len(prefs)} prefectures needed", file=sys.stderr)
+
+    f = fetch.Fetcher(args.cache / "fetch-cache", allow=(args.fetch_nta or args.fetch_licences), cap=200,
+                       delay=1.0, log=args.cache / "requests.log", spent=SPENT_BASELINE)
     if args.fetch_licences:
-        fetch_licences(args.cache, log)
+        fetch_licences(args.cache, f)
     if args.fetch_nta:
-        fetch_nta(args.cache, prefs, log)
+        fetch_nta(args.cache, prefs, f)
 
     licences = load_licences(args.cache)
     lic_numbers = {L["number"] for L in licences if L["number"]}
@@ -833,21 +855,21 @@ def main():
     # a hand row for the same slug+number supersedes the automatic row
     hand_keys = {(r["slug"], r["company_number"]) for r in hand if r["company_number"]}
     auto = [r for r in auto if (r["slug"], r["company_number"]) not in hand_keys]
-    # a kanji legal name already produced by hand (number unresolved) also drops the auto duplicate
-    # Two grading guards, 20 Sep. A postcode neighbour with a sake or liquor word is a lead,
-    # not a match: liquor shops, a clinic and a union came through at medium. And where a hand
-    # row names the group or operator of a site, machine rows for that site are town-name
-    # collisions (Yoichi Beer for Yoichi Distillery), so they become leads too.
-    operated = {r["slug"] for r in hand if r["relation"] in ("operator", "group")}
-    for r in auto:
-        if r["match_method"] == "postcode-signal" and r["confidence"] != "low":
-            r["confidence"] = "low"
-            r["note"] = "postcode neighbour only; " + r["note"]
-        elif r["slug"] in operated and r["confidence"] != "low":
-            r["confidence"] = "low"
-            r["note"] = "site is group-run per the hand row; name match is a lead; " + r["note"]
-    write_csv(OUT_CANDIDATES, auto + hand)
-    write_csv(OUT_LICENCES, lic_rows)
+    # a kanji legal name already produced by hand (number unresolved) also drops the auto duplicate.
+    # The postcode-neighbour and group-run-site guards (added 20 Sep) are now crosswalklib's shared
+    # apply_guards: a postcode/premises "self" match with no name overlap becomes a lead (liquor
+    # shops, a clinic and a union shared a postcode with a distillery), and a machine "self" row for
+    # a site a hand row already names as group/operator-run is a town-name collision, also a lead
+    # (Yoichi Beer for Yoichi Distillery). It also catches any row left with no register number.
+    # Guard 3 (no register number is never better than "low") has to see the hand rows too, not
+    # just auto: apply_guards mutates its first argument in place, so pass the combined list.
+    grading.apply_guards(auto + hand, hand)
+    # Same guard 3 catches licence-list rows from years before the 法人番号 column existed
+    # (pre-2016 lists): a trading-name bridge with no number is a lead, not a match.
+    grading.apply_guards(lic_rows, [])
+    known_slugs = {p["slug"] for p in pins}
+    rows.write(OUT_CANDIDATES, auto + hand, known_slugs)
+    rows.write(OUT_LICENCES, lic_rows, known_slugs)
 
     matched = defaultdict(lambda: "")
     order = {"high": 3, "medium": 2, "low": 1, "": 0}
@@ -862,7 +884,7 @@ def main():
     summary = {"pins": len(pins), "candidates": len(auto + hand), "licence_rows": len(lic_rows),
                "per_prefecture": {PREF_EN.get(k, k): v for k, v in sorted(per_pref.items())},
                "unmatched": sorted(p["slug"] for p in pins if not matched[p["slug"]]),
-               "requests": log}
+               "requests": {"made": f.made, "cap": f.cap, "outcomes": f.outcomes}}
     print(json.dumps(summary, ensure_ascii=False, indent=1), file=sys.stderr)
     if args.summary:
         args.summary.write_text(json.dumps(summary, ensure_ascii=False, indent=1))

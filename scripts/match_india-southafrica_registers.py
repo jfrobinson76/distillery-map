@@ -38,6 +38,14 @@ Fetch (each flag is explicit; nothing is fetched without one):
 
 Cache layout: <cache>/mca/<State>.csv, <cache>/goa-contact_us.html, <cache>/websites.json
 Idempotent: same inputs -> same outputs.
+
+Names, grading and fetching come from scripts/crosswalklib. The MCA bulk-name match and the
+Goa Excise unit-list match both carry a real location signal (registered state / "on the Goa
+Excise list for Goa") and are graded through `grading.grade(Evidence(...))`: city agreement is
+`strong`, state agreement is `weak`, a known different registered state is `conflict` (capped,
+not dropped). The website CIN/reg-number sweep has no location signal at all (the source is
+the pin's own site), so those rows are graded on name evidence alone, floored at `low` (a lead)
+when a checksum-shaped number was found but nothing else corroborates it.
 """
 from __future__ import annotations
 
@@ -47,27 +55,28 @@ import html as htmllib
 import json
 import re
 import sys
-import time
-import unicodedata
 import urllib.parse
-import urllib.request
 from collections import defaultdict
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from crosswalklib import fetch, grading, names, rows  # noqa: E402
+from crosswalklib.grading import Evidence  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 GEO = ROOT / "public" / "data" / "distilleries.geojson"
 OUT_DIR = ROOT / "data" / "company-crosswalk"
 OUT_CANDIDATES = OUT_DIR / "india-southafrica-candidates.csv"
 OUT_LICENCES = OUT_DIR / "india-southafrica-licences.csv"
-FIELDS = ["slug", "distillery_name", "country", "registry", "company_number", "company_name",
-          "relation", "match_method", "confidence", "verified", "source", "note"]
 
 SRC_MCA = "https://www.data.gov.in/catalog/company-master-data"
 MCA_FILE = "https://data.gov.in/sites/default/files/dataurl15092015/company_master_data_upto_Mar_2015_{}.csv"
 SRC_GOA = "https://excise.goa.gov.in/contact_us.aspx"
 SRC_CIPC = "https://eservices.cipc.co.za/"
-UA = "stillbound-distillery-map crosswalk (stdlib urllib; research contact via stillbound.ai)"
 REQUEST_CAP = 400
+# 379 website-sweep requests were already spent across earlier sessions (research note,
+# "Request log"), carried into the Fetcher so the cap accounts for history, not just this run.
+SPENT = 379
 
 # Indian states as they appear in pin addresses -> data.gov.in file name
 STATE_FILES = {
@@ -86,19 +95,6 @@ CIN_STATE = {"AP": "Andhra Pradesh", "AS": "Assam", "BR": "Bihar", "CH": "Chandi
              "PY": "Puducherry", "PB": "Punjab", "RJ": "Rajasthan", "TN": "Tamil Nadu", "TG": "Telangana",
              "UP": "Uttar Pradesh", "WB": "West Bengal", "UR": "Uttarakhand", "JH": "Jharkhand", "CT": "Chhattisgarh"}
 
-SUFFIX = {"ltd", "limited", "pvt", "private", "p", "llp", "inc", "co", "company", "corp", "corporation",
-          "pty", "cc", "npc", "the", "of", "and", "a", "an", "m", "s", "ms", "unit", "units", "division",
-          "head", "office", "corporate", "plant", "manufacturing", "india", "indian", "sa", "south", "africa"}
-GENERIC = {"distillery", "distilleries", "distillers", "distilling", "distillation", "distil", "spirits", "spirit",
-           "craft", "artisanal", "boutique", "micro", "brewery", "breweries", "brewers", "brewing", "brewhouse",
-           "winery", "wineries", "wine", "wines", "estate", "farm", "gin", "brandy", "beverages", "beverage",
-           "liquor", "liquors", "blenders", "bottlers", "bottling", "cellar", "cellars", "tours", "tasting",
-           "bar", "restaurant", "venue", "backpackers", "pick", "up"}
-STOP = SUFFIX | GENERIC
-SIGNAL = {"distillery", "distilleries", "distillers", "distilling", "spirits", "spirit", "liquor", "liquors",
-          "brewery", "breweries", "brewers", "brewing", "winery", "wineries", "wine", "wines", "beverages",
-          "beverage", "blenders", "bottlers", "bottling", "gin", "brandy", "rum", "vodka", "whisky", "whiskey",
-          "sugar", "sugars", "alcohol", "alcohols", "vintners", "cellar", "cellars"}
 COMMON_TOKEN_CAP = 3000
 
 CIN_RE = re.compile(r"\b([LU]\d{5}[A-Z]{2}\d{4}[A-Z]{3}\d{6})\b")
@@ -175,45 +171,23 @@ HAND_ZA = [
 ]
 
 
-def norm(s: str) -> str:
-    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower()
-    s = s.replace("&", " and ").replace("'", "").replace("’", "")
-    return re.sub(r"[^a-z0-9 ]+", " ", s)
-
-
-def toks(s: str, keep_generic: bool = False) -> frozenset:
-    stop = SUFFIX if keep_generic else STOP
-    return frozenset(t for t in norm(s).split() if t not in stop)
-
-
-def jaccard(a: frozenset, b: frozenset) -> float:
-    if not a or not b:
-        return 0.0
-    return len(a & b) / len(a | b)
-
-
 def exact_key(name: str) -> str:
-    return " ".join(sorted(toks(name, keep_generic=True)))
+    """Same folded+sorted key names.exact() itself uses (generic words kept, suffixes stripped),
+    for building an exact-name index (replaces the matcher's own `exact_key` primitive)."""
+    return names.norm(name, names.SUFFIX)
+
+
+# India's sugar-mill-run distilleries and South Africa's wine/spirits trade use a few words
+# that say "this is a drinks company" without being generic distillery vocabulary to drop
+# everywhere else on the map (a "Sugar" company or a "Vintners" company is not necessarily a
+# distillery). Keeping them out of names.GENERIC (so they stay as real distinctive tokens for
+# jaccard) but still recognising them here as a signal, exactly as the matcher's own SIGNAL set
+# used to (it was never derived from its GENERIC list either).
+SIGNAL_EXTRA = {"sugar", "sugars", "alcohol", "alcohols", "vintners"}
 
 
 def has_signal(name: str) -> bool:
-    return bool(toks(name, keep_generic=True) & SIGNAL)
-
-
-def grade(j: float, exact: bool, city_ok: bool, state_ok: bool, active: bool, distinctive: bool) -> str | None:
-    if exact or j >= 0.8:
-        if not active:
-            return "medium"
-        return "high" if (city_ok or distinctive) else "medium"
-    if j >= 0.6:
-        return "medium" if (city_ok or state_ok) else "low"
-    if j >= 0.4 and (city_ok or (state_ok and distinctive)):
-        return "low"
-    return None
-
-
-def relation_for(pin_toks: frozenset, legal_name: str) -> str:
-    return "self" if pin_toks & toks(legal_name) else "operator"
+    return names.has_signal(name) or bool(set(names.fold(name).split()) & SIGNAL_EXTRA)
 
 
 # ------------------------------------------------------------------- pins ----
@@ -237,7 +211,7 @@ def in_city(addr: str, state: str) -> str:
     if not state:
         return ""
     m = re.search(r",\s*([^,]+?),\s*" + re.escape(state.split(" and ")[0]), addr)
-    return norm(m.group(1)).strip() if m else ""
+    return names.fold(m.group(1)).strip() if m else ""
 
 
 def za_region(addr: str) -> str:
@@ -251,7 +225,7 @@ def za_region(addr: str) -> str:
 def za_city(addr: str) -> str:
     parts = [p.strip() for p in (addr or "").split(",")]
     parts = [p for p in parts if p and not re.fullmatch(r"\d{4}", p) and p != "South Africa"]
-    return norm(parts[-1]).strip() if parts else ""
+    return names.fold(parts[-1]).strip() if parts else ""
 
 
 def load_pins():
@@ -271,12 +245,12 @@ def load_pins():
             city = za_city(addr)
         pins.append({"slug": p["slug"], "name": p["name"], "country": c, "region": st, "city": city,
                      "addr": addr, "website": (p.get("website") or "").strip(),
-                     "toks": toks(p["name"]), "full": toks(p["name"], keep_generic=True)})
+                     "toks": names.tokens(p["name"]), "full": names.tokens(p["name"], names.SUFFIX)})
     return pins
 
 
 # -------------------------------------------------------------------- MCA ----
-def fetch_mca_states(cache: Path, pins, log):
+def fetch_mca_states(cache: Path, pins, f: fetch.Fetcher):
     d = cache / "mca"
     d.mkdir(parents=True, exist_ok=True)
     wanted = sorted({STATE_FILES[p["region"]] for p in pins if p["country"] == "India" and p["region"] in STATE_FILES}
@@ -286,19 +260,14 @@ def fetch_mca_states(cache: Path, pins, log):
         if path.exists() and path.stat().st_size > 0:
             continue
         url = MCA_FILE.format(st)
-        log.hit("data.gov.in file")
-        req = urllib.request.Request(url, headers={"User-Agent": UA})
-        try:
-            with urllib.request.urlopen(req, timeout=600) as r:
-                path.write_bytes(r.read())
+        if f.bulk(url, path, max_bytes=200_000_000):
             print(f"mca: fetched {st} ({path.stat().st_size} bytes)", file=sys.stderr)
-        except Exception as e:  # noqa: BLE001
-            print(f"mca: {st} failed: {e}", file=sys.stderr)
-        time.sleep(1.0)
+        else:
+            print(f"mca: {st} not fetched: {f.summary()}", file=sys.stderr)
 
 
 def load_mca(cache: Path):
-    rows, index, exact, by_cin = [], defaultdict(list), defaultdict(list), {}
+    rows_out, index, exact, by_cin = [], defaultdict(list), defaultdict(list), {}
     files = sorted((cache / "mca").glob("*.csv")) if (cache / "mca").exists() else []
     if not files:
         print(f"warn: no MCA state files in {cache / 'mca'}", file=sys.stderr)
@@ -310,20 +279,20 @@ def load_mca(cache: Path):
                 name = (r.get("COMPANY_NAME") or "").strip()
                 if not cin or not name:
                     continue
-                t = toks(name)
-                i = len(rows)
-                rows.append((cin, name, (r.get("COMPANY_STATUS") or "").strip(), (r.get("DATE_OF_REGISTRATION") or "").strip(),
-                             (r.get("REGISTERED_STATE") or "").strip(), (r.get("REGISTRAR_OF_COMPANIES") or "").strip(),
-                             (r.get("REGISTERED_OFFICE_ADDRESS") or "").strip(), (r.get("COMPANY_CLASS") or "").strip(),
-                             (r.get("PRINCIPAL_BUSINESS_ACTIVITY") or "").strip()))
+                t = names.tokens(name)
+                i = len(rows_out)
+                rows_out.append((cin, name, (r.get("COMPANY_STATUS") or "").strip(), (r.get("DATE_OF_REGISTRATION") or "").strip(),
+                                 (r.get("REGISTERED_STATE") or "").strip(), (r.get("REGISTRAR_OF_COMPANIES") or "").strip(),
+                                 (r.get("REGISTERED_OFFICE_ADDRESS") or "").strip(), (r.get("COMPANY_CLASS") or "").strip(),
+                                 (r.get("PRINCIPAL_BUSINESS_ACTIVITY") or "").strip()))
                 for tok in t:
                     index[tok].append(i)
                 exact[exact_key(name)].append(i)
                 by_cin[cin] = i
                 n += 1
         print(f"mca: {path.name} {n} companies", file=sys.stderr)
-    print(f"mca: {len(rows)} companies indexed from {len(files)} state files", file=sys.stderr)
-    return rows, index, exact, by_cin
+    print(f"mca: {len(rows_out)} companies indexed from {len(files)} state files", file=sys.stderr)
+    return rows_out, index, exact, by_cin
 
 
 def mca_note(r, j=None, city_ok=False, extra=""):
@@ -342,11 +311,11 @@ def mca_note(r, j=None, city_ok=False, extra=""):
 
 
 def mca_row(p, r, method, conf, relation, note):
-    return [p["slug"], p["name"], "India", "in-mca", r[0], r[1], relation, method, conf, "", SRC_MCA, note]
+    return rows.make(p["slug"], p["name"], "India", "in-mca", r[0], r[1], relation, method, conf, SRC_MCA, note)
 
 
 def match_mca(pins, mca):
-    rows, index, _, _ = mca
+    rows_out, index, _, _ = mca
     out = []
     for p in pins:
         if p["country"] != "India":
@@ -361,22 +330,24 @@ def match_mca(pins, mca):
                 cand.update(post)
         seen = {}
         for i in cand:
-            r = rows[i]
-            ct = toks(r[1])
-            j = jaccard(qt, ct)
-            exact = p["full"] == toks(r[1], True)
+            r = rows_out[i]
+            ct = names.tokens(r[1])
+            j = names.jaccard(qt, ct)
+            exact = p["full"] == names.tokens(r[1], names.SUFFIX)
             state_ok = bool(p["region"]) and (r[4].lower() == p["region"].lower() or
                                               (p["region"].startswith("Dadra") and r[4] in ("Daman and Diu", "Dadra and Nagar Haveli")))
-            city_ok = bool(p["city"]) and p["city"] in norm(r[6])
+            state_conflict = bool(p["region"]) and not state_ok
+            city_ok = bool(p["city"]) and p["city"] in names.fold(r[6])
             active = r[2] == "ACTIVE"
             distinctive = len(qt) >= 2 and qt <= ct
-            g = grade(j, exact, city_ok, state_ok, active, distinctive)
+            loc = "strong" if city_ok else ("weak" if state_ok else ("conflict" if state_conflict else "none"))
+            ev = Evidence(jaccard=j, exact=exact, location=loc, active=active, distinctive=distinctive,
+                          signal=has_signal(r[1]))
+            g = grading.grade(ev)
             if not g:
                 continue
             if (len(qt) <= 1 or j < 0.8) and not has_signal(r[1]):
                 continue
-            if p["region"] and not state_ok and not exact and j < 0.8:
-                continue  # registered office in another state and the name is only partly similar
             score = j + (0.3 if active else 0) + (0.2 if city_ok else 0) + (0.1 if state_ok else 0)
             if r[0] not in seen or seen[r[0]][0] < score:
                 seen[r[0]] = (score, g, r, j, city_ok)
@@ -389,8 +360,8 @@ def match_mca(pins, mca):
 
 
 def mca_exact(mca, legal_name: str):
-    rows, _, exact, _ = mca
-    return [rows[i] for i in exact.get(exact_key(legal_name), [])]
+    rows_out, _, exact, _ = mca
+    return [rows_out[i] for i in exact.get(exact_key(legal_name), [])]
 
 
 # ------------------------------------------------------------- Goa excise ----
@@ -425,96 +396,73 @@ def match_goa(pins, units, mca):
         for u in units:
             nm = re.sub(r"^(M/s\.?|Shri|Smt\.?)\s*", "", u["unit"])
             nm = re.sub(r",?\s*(Prop\.|Proprietor|Partner).*$", "", nm)
-            ct = toks(nm)
-            j = jaccard(p["toks"], ct)
-            exact = p["full"] == toks(nm, True)
-            g = grade(j, exact, False, True, True, len(p["toks"]) >= 2 and p["toks"] <= ct)
+            ct = names.tokens(nm)
+            j = names.jaccard(p["toks"], ct)
+            exact = p["full"] == names.tokens(nm, names.SUFFIX)
+            distinctive = len(p["toks"]) >= 2 and p["toks"] <= ct
+            ev = Evidence(jaccard=j, exact=exact, location="weak", active=True, distinctive=distinctive,
+                          signal=has_signal(nm))
+            g = grading.grade(ev)
             if g and (best is None or best[0] < j):
                 best = (j, g, u, nm)
         if not best:
             continue
         j, g, u, nm = best
-        lic.append([p["slug"], p["name"], "India", "in-goa-excise", "", u["unit"], "self", "goa-excise-unit-list", g, "", SRC_GOA,
-                    f"listed as a manufacturing unit ({u['type']}) under {u['station'] or 'an excise station'}; name jaccard {j:.2f}; "
-                    "no licence number is published"])
+        lic.append(rows.make(p["slug"], p["name"], "India", "in-goa-excise", "", u["unit"], "self",
+                             "goa-excise-unit-list", g, SRC_GOA,
+                             f"listed as a manufacturing unit ({u['type']}) under {u['station'] or 'an excise station'}; name jaccard {j:.2f}; "
+                             "no licence number is published"))
         for r in mca_exact(mca, nm)[:1]:
-            cands.append(mca_row(p, r, "goa-excise-unit+mca-bulk", g, relation_for(p["toks"], r[1]),
+            cands.append(mca_row(p, r, "goa-excise-unit+mca-bulk", g, grading.relation_for(p["toks"], names.tokens(r[1])),
                                  mca_note(r, j, False, f"unit name from Goa Excise list ({u['type']})")))
     return cands, lic
 
 
 # ---------------------------------------------------------- website sweep ----
-class Log:
-    def __init__(self, cap: int = REQUEST_CAP):
-        self.counts = defaultdict(int)
-        self.cap = cap
-        self.last = 0.0
-
-    def hit(self, endpoint: str) -> bool:
-        if sum(self.counts.values()) >= self.cap:
-            return False
-        wait = 1.0 - (time.time() - self.last)
-        if wait > 0:
-            time.sleep(wait)
-        self.last = time.time()
-        self.counts[endpoint] += 1
-        return True
-
-
-def fetch_page(url: str, log: Log):
-    if not log.hit("pin websites"):
-        return None
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html,*/*;q=0.5"})
-    try:
-        with urllib.request.urlopen(req, timeout=25) as r:
-            raw = r.read(1_500_000)
-            final = r.geturl()
-    except Exception as e:  # noqa: BLE001
-        return {"url": url, "error": str(e)[:120]}
-    text = raw.decode("utf-8", "replace")
-    return {"url": url, "final": final, "html": text}
-
-
 LEGAL_LINK = re.compile(r"(contact|about|terms|privacy|legal|imprint|disclaimer|impressum|company|policy)", re.I)
 
 
-def sweep_websites(pins, cache: Path, fetch: bool, log: Log):
+def sweep_websites(pins, cache: Path, fetch_allowed: bool, f: fetch.Fetcher):
     path = cache / "websites.json"
     store = json.loads(path.read_text()) if path.exists() else {}
     for p in pins:
         site = p["website"]
         if not site or p["slug"] in store:
             continue
-        if not fetch:
+        if not fetch_allowed:
             continue
         if "facebook.com" in site or "nightsbridge" in site or "yolasite" in site:
             store[p["slug"]] = {"skipped": "not the distillery's own site"}
             continue
-        rec = {"pages": []}
-        home = fetch_page(site, log)
+        rec = {"pages": [site]}
+        home = f.text(site)
         if home is None:
-            break
-        rec["pages"].append(home.get("final", site))
-        found = extract_numbers(home.get("html", ""), p["country"])
-        if not found and "html" in home:
-            base = home.get("final", site)
+            if f.made >= f.cap:
+                break  # budget exhausted: stop the sweep, leave this and later pins for next time
+            rec["error"] = "fetch failed"
+            rec["found"] = []
+            store[p["slug"]] = rec
+            path.write_text(json.dumps(store, indent=1, ensure_ascii=False))
+            continue
+        found = extract_numbers(home, p["country"])
+        if not found:
             links = []
-            for m in re.finditer(r'<a[^>]+href="([^"#]+)"[^>]*>(.*?)</a>', home["html"], flags=re.S):
+            for m in re.finditer(r'<a[^>]+href="([^"#]+)"[^>]*>(.*?)</a>', home, flags=re.S):
                 href, txt = m.group(1), re.sub(r"<[^>]+>", "", m.group(2))
                 if LEGAL_LINK.search(txt) or LEGAL_LINK.search(href):
-                    u = urllib.parse.urljoin(base, href)
-                    if urllib.parse.urlparse(u).netloc == urllib.parse.urlparse(base).netloc and u not in links:
+                    u = urllib.parse.urljoin(site, href)
+                    if urllib.parse.urlparse(u).netloc == urllib.parse.urlparse(site).netloc and u not in links:
                         links.append(u)
             for u in links[:2]:
-                pg = fetch_page(u, log)
+                pg = f.text(u)
                 if pg is None:
-                    break
-                rec["pages"].append(pg.get("final", u))
-                found = extract_numbers(pg.get("html", ""), p["country"])
+                    if f.made >= f.cap:
+                        break
+                    continue
+                rec["pages"].append(u)
+                found = extract_numbers(pg, p["country"])
                 if found:
                     break
-        if "error" in home:
-            rec["error"] = home["error"]
         rec["found"] = found
         store[p["slug"]] = rec
         path.write_text(json.dumps(store, indent=1, ensure_ascii=False))
@@ -535,6 +483,17 @@ def extract_numbers(html_text: str, country: str):
     return out
 
 
+def website_confidence(pin_name: str, j: float, subset: bool, name: str) -> str:
+    """Grade one (register number, name-guess) pair found on the distillery's own website. The
+    number sat on the distillery's own domain: the strongest location evidence there is, and
+    the trade signal is given. What varies is whether the printed name matches the pin. A
+    number with no name at all still floors at `low`, a lead for a human."""
+    exact = bool(name) and (subset or names.exact(pin_name, name))
+    ev = Evidence(jaccard=j, exact=exact, location="strong", active=True,
+                  distinctive=names.distinctive(pin_name), signal=True)
+    return grading.grade(ev) or "low"
+
+
 def match_websites(pins, store, mca):
     out = []
     for p in pins:
@@ -542,32 +501,36 @@ def match_websites(pins, store, mca):
         if not rec or not rec.get("found"):
             continue
         src = rec["pages"][-1] if rec.get("pages") else p["website"]
-        for f in rec["found"][:2]:
-            num, ctx = f["number"], f["context"]
+        for fnd in rec["found"][:2]:
+            num, ctx = fnd["number"], fnd["context"]
             if p["country"] == "India":
-                rows, _, _, by_cin = mca
-                r = rows[by_cin[num]] if num in by_cin else None
+                rows_idx, _, _, by_cin = mca
+                r = rows_idx[by_cin[num]] if num in by_cin else None
                 name = r[1] if r else ""
                 if not name:
                     m = re.search(r"([A-Z][A-Za-z0-9&.,()' -]{3,80}?(?:Limited|Ltd\.?|LLP))", ctx)
                     name = m.group(1).strip() if m else ""
-                j = jaccard(p["toks"], toks(name)) if name else 0.0
-                conf = "high" if (name and (j >= 0.5 or p["toks"] <= toks(name))) else "medium"
-                rel = relation_for(p["toks"], name) if name else "self"
+                j = names.jaccard(p["toks"], names.tokens(name)) if name else 0.0
+                subset = bool(name) and p["toks"] <= names.tokens(name)
+                conf = website_confidence(p["name"], j, subset, name)
+                rel = grading.relation_for(p["toks"], names.tokens(name)) if name else "self"
                 note = (f"CIN printed on the distillery's website ({src}); " +
                         (f"MCA 2015 snapshot: {name}, status {r[2]}, registered {r[3]}, {r[4]}" if r else
                          f"not in the 2015 MCA snapshot (incorporated later or other state); name from page: '{name or 'n/a'}'") +
                         f"; page context: '{ctx.strip()[:140]}'")
-                out.append([p["slug"], p["name"], "India", "in-mca", num, name or p["name"], rel, "website-regno", conf, "", src, note])
+                out.append(rows.make(p["slug"], p["name"], "India", "in-mca", num, name or p["name"], rel,
+                                     "website-regno", conf, src, note))
             else:
                 m = re.search(r"([A-Z][A-Za-z0-9&.,'’() -]{2,80}?\s*(?:\(Pty\)\s*Ltd\.?|Pty\s*\(?Ltd\)?|\(PTY\)\s*LTD|CC\b|Ltd\.?|NPC|Inc\.?))", ctx)
                 name = m.group(1).strip() if m else ""
-                j = jaccard(p["toks"], toks(name)) if name else 0.0
-                conf = "high" if (name and (j >= 0.5 or (p["toks"] and p["toks"] <= toks(name)))) else "medium"
-                rel = relation_for(p["toks"], name) if name else "self"
+                j = names.jaccard(p["toks"], names.tokens(name)) if name else 0.0
+                subset = bool(name) and bool(p["toks"]) and p["toks"] <= names.tokens(name)
+                conf = website_confidence(p["name"], j, subset, name)
+                rel = grading.relation_for(p["toks"], names.tokens(name)) if name else "self"
                 note = (f"registration number printed on the distillery's website ({src}); legal name from the page: "
                         f"'{name or 'n/a'}'; CIPC not queried (terms forbid automated search); page context: '{ctx.strip()[:140]}'")
-                out.append([p["slug"], p["name"], "South Africa", "za-cipc", num, name or p["name"], rel, "website-regno", conf, "", src, note])
+                out.append(rows.make(p["slug"], p["name"], "South Africa", "za-cipc", num, name or p["name"], rel,
+                                     "website-regno", conf, SRC_CIPC, note))
     return out
 
 
@@ -580,17 +543,22 @@ def main() -> int:
     args = ap.parse_args()
     cache = Path(args.cache).expanduser()
     cache.mkdir(parents=True, exist_ok=True)
-    log = Log()
 
     pins = load_pins()
     print(f"{sum(p['country'] == 'India' for p in pins)} India pins, {sum(p['country'] == 'South Africa' for p in pins)} South Africa pins", file=sys.stderr)
 
+    mca_fetcher = fetch.Fetcher(cache / "mca", allow=args.fetch_mca_states, cap=30, delay=1.0,
+                                log=cache / "mca" / "requests.log")
     if args.fetch_mca_states:
-        fetch_mca_states(cache, pins, log)
+        fetch_mca_states(cache, pins, mca_fetcher)
     mca = load_mca(cache)
     cands = match_mca(pins, mca)
     goa_c, goa_l = match_goa(pins, load_goa(cache), mca)
-    store = sweep_websites(pins, cache, args.fetch_websites, log)
+
+    web_fetcher = fetch.Fetcher(cache / "web-fetch-cache", allow=args.fetch_websites, cap=REQUEST_CAP, delay=1.0,
+                                log=cache / "web-fetch-cache" / "requests.log", spent=SPENT)
+    store = sweep_websites(pins, cache, args.fetch_websites, web_fetcher)
+    print(f"websites: {web_fetcher.summary()}", file=sys.stderr)
     web_c = match_websites(pins, store, mca)
 
     hand = []
@@ -604,55 +572,55 @@ def main() -> int:
             r = hits[0]
             hand.append(mca_row(p, r, "hand", conf, rel, mca_note(r, None, False, note)))
         else:
-            hand.append([slug, p["name"], "India", "in-mca", "", legal, rel, "hand", "medium" if conf == "high" else "low", "",
-                         SRC_MCA, note + "; legal name not found in the 2015 MCA snapshot, CIN needs an MCA21 lookup"])
+            hand.append(rows.make(slug, p["name"], "India", "in-mca", "", legal, rel, "hand",
+                                  "medium" if conf == "high" else "low",
+                                  SRC_MCA, note + "; legal name not found in the 2015 MCA snapshot, CIN needs an MCA21 lookup"))
     for slug, legal, rel, conf, note in HAND_ZA:
         p = by_slug.get(slug)
         if not p:
             continue
         num = ""
         rec = store.get(slug) or {}
-        for f in rec.get("found", []):
-            if jaccard(toks(legal), toks(f["context"])) > 0 or True:
-                num = f["number"]
-                break
+        for fnd in rec.get("found", []):
+            num = fnd["number"]
+            break
         if num:
-            hand.append([slug, p["name"], "South Africa", "za-cipc", num, legal, rel, "hand", conf, "", SRC_CIPC,
-                         note + "; number from the site's own website"])
+            hand.append(rows.make(slug, p["name"], "South Africa", "za-cipc", num, legal, rel, "hand", conf,
+                                  SRC_CIPC, note + "; number from the site's own website"))
         else:
             # No CIPC number on file or on the site, and CIPC's terms forbid an automated
-            # search, so the row cannot carry a register number. Per the crosswalk rule, a
-            # hand row without a number stays `low` rather than the researcher's hand-set
-            # confidence, and the note says so explicitly.
-            hand.append([slug, p["name"], "South Africa", "za-cipc", "", legal, rel, "hand", "low", "", SRC_CIPC,
-                         note + "; CIPC not queried (terms), number blank; name known, number not read"])
+            # search, so the row cannot carry a register number. grading.apply_guards enforces
+            # the "no register number is never better than low" rule below; the note says why.
+            hand.append(rows.make(slug, p["name"], "South Africa", "za-cipc", "", legal, rel, "hand", conf,
+                                  SRC_CIPC, note + "; CIPC not queried (terms), number blank; name known, number not read"))
 
     conf_rank = {"high": 0, "medium": 1, "low": 2}
-    hand_keys = {(r[0], r[3], r[4]) for r in hand if r[4]}
-    hand_names = {(r[0], r[3], norm(r[5]).strip()) for r in hand}
+    hand_keys = {(r["slug"], r["registry"], r["company_number"]) for r in hand if r["company_number"]}
+    hand_names = {(r["slug"], r["registry"], names.fold(r["company_name"]).strip()) for r in hand}
     machine = {}
     for r in cands + goa_c + web_c:
-        if (r[0], r[3], r[4]) in hand_keys or (r[0], r[3], norm(r[5]).strip()) in hand_names:
+        key_name = (r["slug"], r["registry"], names.fold(r["company_name"]).strip())
+        if (r["slug"], r["registry"], r["company_number"]) in hand_keys or key_name in hand_names:
             continue
-        k = (r[0], r[3], r[4] or norm(r[5]).strip())
-        if k not in machine or conf_rank[r[8]] < conf_rank[machine[k][8]]:
+        k = (r["slug"], r["registry"], r["company_number"] or names.fold(r["company_name"]).strip())
+        if k not in machine or conf_rank[r["confidence"]] < conf_rank[machine[k]["confidence"]]:
             machine[k] = r
     final = hand + list(machine.values())
-    order = {p["slug"]: i for i, p in enumerate(pins)}
-    final.sort(key=lambda r: (order[r[0]], r[3], conf_rank[r[8]], r[5]))
-    licences = sorted(goa_l, key=lambda r: (order[r[0]], r[3]))
+    grading.apply_guards(final, hand)
+    licences = goa_l
+    # Goa Excise publishes no licence numbers at all, so every licence row starts blank; the
+    # same "no register number is never better than low" guard rule applies here as everywhere.
+    grading.apply_guards(licences, hand)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    for path, rows in ((OUT_CANDIDATES, final), (OUT_LICENCES, licences)):
-        with path.open("w", newline="") as fh:
-            w = csv.writer(fh)
-            w.writerow(FIELDS)
-            w.writerows(rows)
+    known_slugs = {p["slug"] for p in pins}
+    rows.write(OUT_CANDIDATES, final, known_slugs)
+    rows.write(OUT_LICENCES, licences, known_slugs)
 
     best = {}
     for r in final:
-        if r[4]:  # only rows with a register number count as matched
-            best[r[0]] = min(best.get(r[0], 9), conf_rank[r[8]])
+        if r["company_number"]:  # only rows with a register number count as matched
+            best[r["slug"]] = min(best.get(r["slug"], 9), conf_rank[r["confidence"]])
     by_reg = defaultdict(lambda: {"pins": 0, "high": 0, "medium": 0, "low": 0, "unmatched": 0})
     for p in pins:
         d = by_reg[(p["country"], p["region"] or "(none)")]
@@ -669,7 +637,7 @@ def main() -> int:
         tot = {k: sum(d[k] for kk, d in by_reg.items() if kk[0] == c) for k in ("pins", "high", "medium", "low", "unmatched")}
         print(f"{c:13} {'total':40} {tot['pins']:4} {tot['high']:4} {tot['medium']:6} {tot['low']:3} {tot['unmatched']:9}")
         print(f"unmatched {c}:", " ".join(p["slug"] for p in pins if p["country"] == c and p["slug"] not in best))
-    print("requests this run:", dict(log.counts), f"(cap {log.cap})")
+    print("website sweep:", web_fetcher.summary())
     print(f"{len(final)} candidate rows -> {OUT_CANDIDATES.relative_to(ROOT)}; {len(licences)} licence rows -> {OUT_LICENCES.relative_to(ROOT)}")
     return 0
 

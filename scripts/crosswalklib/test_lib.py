@@ -44,29 +44,47 @@ class Grading(unittest.TestCase):
 
     def test_generic_pin_needs_a_strong_location(self):
         self.assertFalse(names.distinctive("La Distillerie"))
+        self.assertFalse(names.distinctive("Craft Spirits Co"))
+        self.assertTrue(names.distinctive("Dusty Barrel Distillery"))
+        self.assertTrue(names.distinctive("Yoichi Distillery"))
         self.assertIsNone(grading.grade(Evidence(1.0, True, "none", distinctive=False)))
         self.assertEqual(grading.grade(Evidence(1.0, True, "weak", distinctive=False)), "low")
         self.assertEqual(grading.grade(Evidence(1.0, True, "strong", distinctive=False)), "medium")
+
+    def test_name_alone_without_signal_is_nothing(self):
+        self.assertIsNone(grading.grade(Evidence(1.0, True, "none", signal=False)))
+        self.assertEqual(grading.grade(Evidence(1.0, True, "none", signal=True)), "high")
+
+    def test_weak_location_needs_signal_for_high(self):
+        self.assertEqual(grading.grade(Evidence(1.0, True, "weak", signal=False)), "medium")
+        self.assertEqual(grading.grade(Evidence(1.0, True, "weak", signal=True)), "high")
+
+    def test_guard_ambiguous_highs(self):
+        mk = lambda n: {"slug": "niagara", "relation": "self", "match_method": "m", "company_number": n,
+                        "confidence": "high", "distillery_name": "Niagara Distillery", "company_name": "Niagara " + n, "note": "", "registry": "r"}
+        rs = [mk("1"), mk("2")]
+        grading.apply_guards(rs, [])
+        self.assertEqual({r["confidence"] for r in rs}, {"medium"})
 
     def test_conflict_never_high(self):
         self.assertEqual(grading.grade(Evidence(1.0, True, "conflict")), "medium")
 
     def test_guard_group_run_site(self):
-        hand = [{"slug": "yoichi", "relation": "operator", "match_method": "hand", "company_number": "1",
+        hand = [{"slug": "yoichi", "registry": "r", "relation": "operator", "match_method": "hand", "company_number": "1",
                  "confidence": "high", "distillery_name": "Yoichi Distillery", "company_name": "Nikka", "note": ""}]
-        auto = [{"slug": "yoichi", "relation": "self", "match_method": "romaji", "company_number": "2",
+        auto = [{"slug": "yoichi", "registry": "r", "relation": "self", "match_method": "romaji", "company_number": "2",
                  "confidence": "high", "distillery_name": "Yoichi Distillery", "company_name": "Yoichi Beer", "note": ""}]
         grading.apply_guards(auto, hand)
         self.assertEqual(auto[0]["confidence"], "low")
 
     def test_guard_premises_only(self):
-        r = [{"slug": "x", "relation": "self", "match_method": "ttb-premises", "company_number": "1",
+        r = [{"slug": "x", "registry": "r", "relation": "self", "match_method": "ttb-premises", "company_number": "1",
               "confidence": "medium", "distillery_name": "Old Prentice Distillery", "company_name": "Four Roses Distillery LLC", "note": ""}]
         grading.apply_guards(r, [])
         self.assertEqual(r[0]["confidence"], "low")
 
     def test_guard_no_number(self):
-        r = [{"slug": "x", "relation": "self", "match_method": "hand", "company_number": "",
+        r = [{"slug": "x", "registry": "r", "relation": "self", "match_method": "hand", "company_number": "",
               "confidence": "high", "distillery_name": "A", "company_name": "A Ltd", "note": ""}]
         grading.apply_guards(r, [])
         self.assertEqual(r[0]["confidence"], "low")

@@ -37,10 +37,9 @@ SUFFIX = {
     "kk", "kabushiki", "kaisha", "yugen", "godo",
     # in / za
     "pvt", "private", "proprietary", "p", "cc", "npc", "m", "s", "ms", "unit", "units", "division",
-    "head", "office", "corporate", "plant", "manufacturing", "india", "indian", "south", "africa",
+    "head", "office", "corporate", "plant", "manufacturing",
     # en (additions for match_australia_registers.py, 20 Sep 2026)
-    "trustee", "trust", "family", "nominees", "for", "australia", "australian", "aust",
-    "zealand", "nz",
+    "trustee", "trust", "family", "nominees", "for",
 }
 
 # Words that say what the business does, in every language on the map. Dropped for matching
@@ -90,6 +89,8 @@ GENERIC = {
     "genussmanufaktur", "bio", "winzer", "weine", "wein", "likoerfabrik", "likorfabrik",
     "spezialitaten", "verkauf", "gastronomie", "landhotel", "gaststatte", "kraeuter", "krauter",
     "qualitatsbrand", "edelbranntweinbrennerei", "branntweinbrennerei",
+    # country and compass words: not identity, not legal forms either (Deep South, New Zealand)
+    "africa", "american", "aust", "australia", "australian", "canada", "canadian", "east", "espana", "france", "french", "india", "indian", "ireland", "irish", "italia", "italian", "japan", "japanese", "new", "north", "nz", "old", "scotland", "scottish", "south", "spanish", "usa", "west", "zealand",
 }
 STOP = SUFFIX | GENERIC
 
@@ -97,7 +98,7 @@ STOP = SUFFIX | GENERIC
 SIGNAL = {t for t in GENERIC if t not in {"craft", "artisan", "artisanal", "artisanale", "micro",
                                            "estate", "farm", "farms", "hof", "shop", "cafe",
                                            "restaurant", "hotel", "gasthof", "gasthaus", "bar",
-                                           "room", "house", "maison", "chateau", "single", "still",
+                                           "room", "door", "house", "maison", "chateau", "single", "still", "africa", "american", "aust", "australia", "australian", "canada", "canadian", "east", "espana", "france", "french", "india", "indian", "ireland", "irish", "italia", "italian", "japan", "japanese", "new", "north", "nz", "old", "scotland", "scottish", "south", "spanish", "usa", "west", "zealand",
                                            "stills", "brand", "brande", "malt", "cellar", "cellars",
                                            "aziende", "casa", "antica", "antico", "storica", "official",
                                            "sito", "web", "premium", "prodotti", "productos",
@@ -162,9 +163,27 @@ def has_signal(company_name: str) -> bool:
     return bool(set(fold(company_name).split()) & SIGNAL)
 
 
+# The subset of GENERIC that only says what kind of business this is. distinctive() discounts
+# these and nothing else: "Dusty Barrel Distillery" is a distinctive name (barrel is a product
+# word that lives inside brand names), "The Craft Distillery" is not.
+DESCRIPTORS = {
+    "distillery", "distilleries", "distillers", "distilling", "distiller", "distill", "distillerie",
+    "distillateur", "distillateurs", "microdistillerie", "microdistillery", "brennerei", "destillerie",
+    "destille", "destillation", "distilleria", "distillerie", "destileria", "destilerias", "destilaria",
+    "edelbrennerei", "obstbrennerei", "hofbrennerei", "schnapsbrennerei", "kornbrennerei",
+    "weinbrennerei", "abfindungsbrennerei", "kleinbrennerei", "privatbrennerei", "hausbrennerei",
+    "landbrennerei", "feinbrennerei", "schaubrennerei", "naturbrennerei", "spezialitatenbrennerei",
+    "spirits", "spirit", "spirituosen", "spiritueux", "spiritus", "craft", "artisan", "artisanal",
+    "artisanale", "micro", "brewing", "brewery", "brewers", "brauerei", "brasserie", "winery",
+    "weingut", "weinkellerei", "kellerei", "vineyard", "vignoble", "cidery", "cidrerie", "manufaktur",
+    "shop", "cafe", "restaurant", "hotel", "gasthof", "gasthaus", "bar", "tasting", "room", "cellar",
+    "cellars", "door", "house", "estate", "farm", "farms", "company", "co",
+}
+
+
 def distinctive(pin_name: str) -> bool:
-    """A pin name that is more than a generic label or a single common word. 'Distillerie',
-    'La Distillerie', 'Craft Spirits' are not distinctive even though tokens() keeps their
-    words; a name match on them proves nothing without a location."""
-    real = frozenset(w for w in fold(pin_name).split() if w not in STOP)
+    """A pin name that is more than a trade label or a single short word. 'Distillerie',
+    'La Distillerie', 'Craft Spirits' are not distinctive; a name match on them proves nothing
+    without a location. 'Dusty Barrel Distillery' and 'Yoichi Distillery' are."""
+    real = frozenset(w for w in fold(pin_name).split() if w not in SUFFIX and w not in DESCRIPTORS)
     return len(real) >= 2 or (len(real) == 1 and len(next(iter(real))) >= 6)

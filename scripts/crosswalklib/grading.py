@@ -43,10 +43,15 @@ def grade(e: Evidence) -> str | None:
 def _grade_ignoring_location(e: Evidence) -> str | None:
     strong = e.location == "strong"
     weak = e.location == "weak"
-    if e.exact or e.jaccard >= 0.8:
+    name_match = e.exact or e.jaccard >= 0.8
+    if not strong and not weak and not e.signal:
+        # A name alone, with no location and no trade word, is not evidence: every Müller GmbH
+        # in Germany is not Brennerei Müller.
+        return None
+    if name_match:
         if not e.active:
             return "medium"
-        if strong or (weak and (e.distinctive or e.signal)) or (e.exact and e.distinctive and e.signal):
+        if strong or (weak and e.signal) or (not weak and e.exact and e.distinctive and e.signal):
             return "high"
         return "medium"
     if e.jaccard >= 0.6:
@@ -80,6 +85,9 @@ def apply_guards(rows: list[dict], hand_rows: list[dict] | None = None) -> list[
     2. Where a hand row names the operator or group of a site, machine `self` rows for that
        site are town-name collisions and become leads.
     3. A row with no register number is never better than `low`.
+    4. When two or more different companies tie at `high` for one pin in the same register and
+       relation, none of them is a join: all become `medium` (the Niagara case, five companies
+       named Niagara in Niagara Falls).
     Rows are annotated so the reason is visible in `note`.
     """
     hand = hand_rows if hand_rows is not None else [r for r in rows if r.get("match_method") == "hand"]
@@ -98,6 +106,15 @@ def apply_guards(rows: list[dict], hand_rows: list[dict] | None = None) -> list[
         elif r["slug"] in operated and m != "hand" and r.get("relation") == "self":
             r["confidence"] = "low"
             r["note"] = "site is group-run per the hand row; name match is a lead; " + r.get("note", "")
+    highs: dict[tuple, set] = {}
+    for r in rows:
+        if r.get("confidence") == "high" and r.get("match_method") != "hand":
+            highs.setdefault((r["slug"], r["registry"], r["relation"]), set()).add(r["company_number"])
+    for r in rows:
+        k = (r["slug"], r["registry"], r["relation"])
+        if r.get("confidence") == "high" and r.get("match_method") != "hand" and len(highs.get(k, ())) > 1:
+            r["confidence"] = "medium"
+            r["note"] = f"ambiguous: {len(highs[k])} companies match equally; " + r.get("note", "")
     return rows
 
 
