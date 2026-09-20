@@ -63,8 +63,10 @@ def relation_for(pin_tokens: frozenset, company_tokens: frozenset) -> str:
 def apply_guards(rows: list[dict], hand_rows: list[dict] | None = None) -> list[dict]:
     """Rules that no matcher may skip, applied to the finished candidate list in place.
 
-    1. A match made on shared premises or postcode alone is a lead (`low`), not a join:
-       liquor shops, clinics and unions share postcodes with distilleries.
+    1. A premises or postcode match claimed as `self` when the names do not overlap is a
+       lead (`low`), not a join: liquor shops, clinics and unions share postcodes with
+       distilleries. The same match claimed as `operator` keeps its grade; that is what a
+       holding company at the distillery's address looks like.
     2. Where a hand row names the operator or group of a site, machine `self` rows for that
        site are town-name collisions and become leads.
     3. A row with no register number is never better than `low`.
