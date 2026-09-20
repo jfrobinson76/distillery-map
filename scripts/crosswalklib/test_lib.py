@@ -19,6 +19,14 @@ class Names(unittest.TestCase):
         self.assertTrue(names.exact("Yoichi Distillery", "YOICHI DISTILLERY LTD"))
         self.assertFalse(names.exact("Yoichi Distillery", "Yoichi Beer LLC"))
 
+    def test_all_generic_name_keeps_its_words(self):
+        self.assertEqual(names.tokens("CHATEAU DE COGNAC"), frozenset({"chateau", "cognac"}))
+        self.assertTrue(names.exact("Château de Cognac", "CHATEAU DE COGNAC SAS"))
+
+    def test_exact_tolerates_a_missing_generic_word(self):
+        self.assertTrue(names.exact("Distillerie L'Officine", "L'OFFICINE"))
+        self.assertFalse(names.exact("Yoichi Distillery", "Yoichi Beer LLC"))
+
     def test_signal(self):
         self.assertTrue(names.has_signal("Lake Country Libare Distilling, LLC"))
         self.assertFalse(names.has_signal("KMH Enterprises LLC"))
