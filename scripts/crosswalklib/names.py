@@ -115,9 +115,13 @@ SIGNAL = {t for t in GENERIC if t not in {"craft", "artisan", "artisanal", "arti
 
 
 def fold(s: str) -> str:
-    """Lowercase ASCII with accents stripped; punctuation to spaces."""
-    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode()
-    return re.sub(r"[^a-z0-9 ]+", " ", s.lower())
+    """Lowercase ASCII with accents stripped; apostrophes dropped so typographic and straight
+    quotes fold the same way ("King’s" and "King's" both -> "kings" - two registers spelling
+    the same company differently were silently going to different tokens, dropping real matches);
+    other punctuation to spaces."""
+    s = (s or "").replace("’", "'").replace("‘", "'").replace("ʼ", "'")
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower().replace("'", "")
+    return re.sub(r"[^a-z0-9 ]+", " ", s)
 
 
 def tokens(s: str, stop: set[str] | None = None) -> frozenset[str]:
@@ -159,6 +163,8 @@ def has_signal(company_name: str) -> bool:
 
 
 def distinctive(pin_name: str) -> bool:
-    """A pin name that is more than a generic label or a single common word."""
-    t = tokens(pin_name)
-    return len(t) >= 2 or (len(t) == 1 and len(next(iter(t))) >= 6)
+    """A pin name that is more than a generic label or a single common word. 'Distillerie',
+    'La Distillerie', 'Craft Spirits' are not distinctive even though tokens() keeps their
+    words; a name match on them proves nothing without a location."""
+    real = frozenset(w for w in fold(pin_name).split() if w not in STOP)
+    return len(real) >= 2 or (len(real) == 1 and len(next(iter(real))) >= 6)

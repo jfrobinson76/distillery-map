@@ -24,6 +24,8 @@ Fetch name searches for unmatched pins (cached in <cache>/name-search-cache.json
   python3 scripts/match_france_registers.py --cache /path/to/cache --fetch-names --max-requests 280
 
 Idempotent: same cache -> same output. Never fetches without --fetch-naf / --fetch-names.
+Names, grading and fetching come from scripts/crosswalklib (migrated 20 Sep 2026); country
+parsing (postcode/département, NAF-code caveats, the Sirene search records) stays here.
 """
 from __future__ import annotations
 
@@ -32,51 +34,33 @@ import csv
 import json
 import re
 import sys
-import time
-import unicodedata
-import urllib.error
 import urllib.parse
-import urllib.request
 from collections import defaultdict
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from crosswalklib import fetch, grading, names, rows  # noqa: E402
+from crosswalklib.grading import Evidence  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 GEO = ROOT / "public" / "data" / "distilleries.geojson"
 OUT_DIR = ROOT / "data" / "company-crosswalk"
 OUT_CANDIDATES = OUT_DIR / "france-candidates.csv"
-FIELDS = ["slug", "distillery_name", "country", "registry", "company_number", "company_name",
-          "relation", "match_method", "confidence", "verified", "source", "note"]
 
 API = "https://recherche-entreprises.api.gouv.fr/search"
 SRC_SIRENE = "https://annuaire-entreprises.data.gouv.fr/entreprise/{}"
-USER_AGENT = "distillery-map-world crosswalk (stdlib urllib; <=1 req/s; contact via github)"
 NAF = "11.01Z"
 PER_PAGE = 25
+# 395 live requests already spent against this cache before the crosswalklib migration
+# (docs/data-quality/france-registers-2026-09-20.md, "Request log, 20 Sep 2026"). Carried
+# over via Fetcher(spent=...) so a rerun from the same cache never re-fetches them.
+SPENT = 395
 
-# Legal-form suffixes and filler words dropped before comparing names.
-SUFFIX = {"sas", "sasu", "sarl", "sa", "eurl", "scea", "earl", "gaec", "snc", "sci", "scop", "sca",
-          "ste", "societe", "soc", "ets", "etablissement", "etablissements", "cie", "compagnie", "co",
-          "company", "ltd", "inc", "groupe", "holding", "fils", "freres", "frere", "pere", "et", "and",
-          "the", "de", "du", "des", "d", "l", "la", "le", "les", "a", "au", "aux", "en", "un", "une",
-          "sur", "sous", "chez", "monsieur", "madame", "mr", "mme"}
-GENERIC = {"distillerie", "distillery", "distilleries", "distillateur", "distillateurs", "distillation",
-           "domaine", "maison", "chateau", "spiritueux", "spirits", "spirit", "artisanale", "artisanal",
-           "artisanales", "craft", "micro", "microdistillerie", "brasserie", "brewery", "cave", "caves",
-           "vignoble", "vignobles", "ferme", "famille", "bouilleur", "bouilleurs", "ambulant", "cru",
-           "producteur", "producteurs", "exploitation", "agricole", "boutique", "shop", "visite", "visites",
-           "site", "production"}
-STOP = SUFFIX | GENERIC
 # NAF codes that make a name-search hit plausible as the distillery's own entity.
 DRINKS_NAF = {"11.01Z", "11.02A", "11.02B", "11.03Z", "11.04Z", "11.05Z", "11.06Z", "11.07A", "11.07B",
               "46.34Z", "47.25Z", "01.21Z", "01.28Z", "20.53Z", "20.14Z", "10.89Z", "10.39B", "10.32Z"}
 PROPERTY_NAF = ("68.", "41.", "42.", "43.")   # SCI / property / construction: never the operator
 HOLDING_NAF = ("64.20Z", "70.10Z")             # holding: a parent at best
-SIGNAL = {"distillerie", "distillery", "distilleries", "distillateur", "distillateurs", "distillation",
-          "spiritueux", "spirits", "spirit", "whisky", "whiskies", "whiskey", "gin", "rhum", "rhums", "rum",
-          "vodka", "cognac", "armagnac", "calvados", "liqueur", "liqueurs", "liquoriste", "alcool",
-          "alcools", "eau", "eaux", "vie", "absinthe", "pastis", "brandy", "alambic", "elixir",
-          "lavande", "lavandin", "huiles", "essentielles", "brasserie", "cidre", "cidrerie", "vins",
-          "vin", "champagne", "bouilleur", "bouilleurs", "marc", "kirsch", "mirabelle", "genievre"}
 
 # Hand cases: group-run sites. Register checked through the same API (cached), the
 # relation and group come from industry knowledge and are stated in the note.
@@ -130,33 +114,6 @@ ALIASES = {
 }
 
 
-def norm(s: str) -> str:
-    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower()
-    s = s.replace("&", " and ").replace("'", " ").replace("’", " ")
-    return re.sub(r"[^a-z0-9 ]+", " ", s)
-
-
-def toks(s: str, keep_generic: bool = False) -> frozenset:
-    stop = SUFFIX if keep_generic else STOP
-    return frozenset(t for t in norm(s).split() if t not in stop)
-
-
-def jaccard(a: frozenset, b: frozenset) -> float:
-    if not a or not b:
-        return 0.0
-    return len(a & b) / len(a | b)
-
-
-def has_signal(name: str) -> bool:
-    return bool(toks(name, keep_generic=True) & SIGNAL)
-
-
-def relation_for(pin_toks: frozenset, legal_name: str, naf: str = "") -> str:
-    if naf.startswith(HOLDING_NAF):
-        return "group"
-    return "self" if pin_toks & toks(legal_name) else "operator"
-
-
 def query_name(name: str) -> str:
     """Trim a Google-Places style name to its head: 'Distillerie X - gin, pastis...' -> 'Distillerie X'."""
     head = re.split(r"\s+[-|:/–—]\s+|\(|,", name, maxsplit=1)[0]
@@ -186,12 +143,12 @@ def parse_pin(p: dict) -> dict:
         before = re.search(r"([^,]+?)\s+\d{5}\b", addr)
         territory = {"", "france", "guadeloupe", "martinique", "reunion", "la reunion", "guyane",
                      "guyane francaise", "mayotte", "corse", "french guiana"}
-        if after and norm(after.group(1)).strip() not in territory:
+        if after and names.fold(after.group(1)).strip() not in territory:
             city = after.group(1)
         elif before:
             city = before.group(1)
     return {"slug": p["slug"], "name": p["name"], "address": addr, "postcode": postcode,
-            "dept": dept_of(postcode), "city": norm(city).strip(),
+            "dept": dept_of(postcode), "city": names.fold(city).strip(),
             "aliases": ALIASES.get(p["slug"], [])}
 
 
@@ -203,71 +160,36 @@ def load_pins() -> list[dict]:
 
 # --- API --------------------------------------------------------------------------------
 
-class Client:
-    """Rate-limited, capped, cached GET against the Annuaire des Entreprises search API."""
-
-    def __init__(self, cache_path: Path, allow: bool, cap: int, log: Path | None):
-        self.cache_path = cache_path
-        self.cache = json.loads(cache_path.read_text(encoding="utf-8")) if cache_path.exists() else {}
-        self.allow = allow
-        self.cap = cap
-        self.made = 0
-        self.log = log
-        self._last = 0.0
-
-    def get(self, params: dict) -> dict | None:
-        key = urllib.parse.urlencode(sorted(params.items()))
-        if key in self.cache:
-            return self.cache[key]
-        if not self.allow:
-            return None
-        if self.made >= self.cap:
-            print(f"  cap reached ({self.cap}); not fetching {key}", file=sys.stderr)
-            return None
-        wait = 1.0 - (time.monotonic() - self._last)
-        if wait > 0:
-            time.sleep(wait)
-        url = f"{API}?{key}"
-        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
-        self._last = time.monotonic()
-        self.made += 1
-        try:
-            with urllib.request.urlopen(req, timeout=30) as r:
-                data = json.loads(r.read().decode("utf-8"))
-        except urllib.error.HTTPError as e:
-            if e.code == 429:
-                retry = int(e.headers.get("Retry-After", "5"))
-                print(f"  429, sleeping {retry}s", file=sys.stderr)
-                time.sleep(retry)
-                self.made -= 1
-                return self.get(params)
-            print(f"  HTTP {e.code} for {url}", file=sys.stderr)
-            data = {"error": e.code, "results": []}
-        if self.log:
-            with self.log.open("a", encoding="utf-8") as f:
-                f.write(f"{time.strftime('%Y-%m-%dT%H:%M:%S')} GET {url} -> {data.get('total_results', data.get('error'))}\n")
-        self.cache[key] = data
-        self.cache_path.write_text(json.dumps(self.cache, ensure_ascii=False), encoding="utf-8")
-        return data
+def api_get(f: fetch.Fetcher, legacy_cache: dict, params: dict) -> dict | None:
+    """One search request against the Recherche d'entreprises API. crosswalklib's Fetcher
+    is tried first (its own cache, keyed by URL, and live fetches when allowed); a one-time
+    shim then reads responses already cached by the pre-migration client, which keyed its
+    cache by the query string instead. Never fetches beyond what allow/cap permit."""
+    key = urllib.parse.urlencode(sorted(params.items()))
+    url = f"{API}?{key}"
+    body = f.get(url)
+    if body is not None:
+        return json.loads(body)
+    return legacy_cache.get(key)
 
 
-def fetch_naf(client: Client, out: Path) -> list[dict]:
+def fetch_naf(f: fetch.Fetcher, out: Path) -> list[dict]:
     """Page through every legal unit whose principal activity is 11.01Z."""
     if out.exists():
         return json.loads(out.read_text(encoding="utf-8"))
-    if not client.allow:
+    if not f.allow:
         print(f"warning: {out.name} missing and --fetch-naf not given; NAF pass skipped", file=sys.stderr)
         return []
     base = {"activite_principale": NAF, "per_page": PER_PAGE, "minimal": "true",
             "include": "siege,dirigeants,matching_etablissements"}
-    first = client.get({**base, "page": 1})
+    first = api_get(f, {}, {**base, "page": 1})
     if not first or "results" not in first:
         return []
     results = list(first["results"])
     pages = int(first.get("total_pages") or 1)
     print(f"  NAF {NAF}: {first.get('total_results')} legal units, {pages} pages", file=sys.stderr)
     for page in range(2, pages + 1):
-        d = client.get({**base, "page": page})
+        d = api_get(f, {}, {**base, "page": page})
         if not d or "results" not in d:
             print(f"  stopped at page {page}", file=sys.stderr)
             break
@@ -281,19 +203,19 @@ def fetch_naf(client: Client, out: Path) -> list[dict]:
 def record(r: dict) -> dict:
     """Flatten one API result into the fields the matcher needs."""
     siege = r.get("siege") or {}
-    names = []
+    names_ = []
     for n in (r.get("nom_raison_sociale"), re.sub(r"\s*\(.*\)\s*$", "", r.get("nom_complet") or ""),
               r.get("sigle"), siege.get("nom_commercial")):
         if n:
-            names.append(n)
+            names_.append(n)
     for e in (siege.get("liste_enseignes") or []):
-        names.append(e)
+        names_.append(e)
     sites = [siege] + list(r.get("matching_etablissements") or [])
     for e in r.get("matching_etablissements") or []:
         for n in (e.get("liste_enseignes") or []):
-            names.append(n)
+            names_.append(n)
         if e.get("nom_commercial"):
-            names.append(e["nom_commercial"])
+            names_.append(e["nom_commercial"])
     dirigeants = []
     for d in r.get("dirigeants") or []:
         if d.get("type_dirigeant") == "personne morale":
@@ -302,11 +224,11 @@ def record(r: dict) -> dict:
             dirigeants.append(f"{(d.get('prenoms') or '').split(' ')[0]} {d.get('nom') or ''} ({d.get('qualite')})".strip())
     legal = r.get("nom_raison_sociale") or re.sub(r"\s*\(.*\)\s*$", "", r.get("nom_complet") or "")
     return {
-        "siren": r.get("siren"), "legal": legal, "names": [n for n in names if n],
+        "siren": r.get("siren"), "legal": legal, "names": [n for n in names_ if n],
         "etat": r.get("etat_administratif"), "naf": r.get("activite_principale"),
         "nature": r.get("nature_juridique"), "created": r.get("date_creation"),
         "sites": [{"siret": s.get("siret"), "postcode": s.get("code_postal") or "",
-                   "city": norm(s.get("libelle_commune") or "").strip(),
+                   "city": names.fold(s.get("libelle_commune") or "").strip(),
                    "dept": s.get("departement") or dept_of(s.get("code_postal") or ""),
                    "etat": s.get("etat_administratif"), "siege": bool(s.get("est_siege"))}
                   for s in sites if s],
@@ -331,39 +253,37 @@ def best_site(rec: dict, pin: dict) -> tuple[dict | None, bool, bool]:
     return chosen, city_ok, dept_ok or city_ok
 
 
-def grade(j: float, exact: bool, city_ok: bool, dept_ok: bool, active: bool, distinctive: bool) -> str | None:
-    if exact or j >= 0.8:
-        if not active:
-            return "medium"
-        return "high" if (city_ok or distinctive) else "medium"
-    if j >= 0.6:
-        return "medium" if (city_ok or dept_ok) else "low"
-    if j >= 0.4 and (city_ok or (dept_ok and distinctive)):
-        return "low"
-    return None
-
-
 def score_pin(pin: dict, rec: dict, in_naf_pull: bool) -> tuple[float, str, float, str] | None:
-    """Return (score, grade, jaccard, matched_name) for the best name variant, or None."""
+    """Return (score, grade, jaccard, matched_name) for the best name variant, or None.
+
+    Base grade (exact/jaccard threshold x location x active x distinctive x signal) comes
+    from crosswalklib.grading; strong location = postcode/city agree, weak = département
+    agrees. Everything below that is France-specific: the containment upgrade for Google
+    Places taglines, the département-conflict and no-signal demotions, and the NAF-code
+    caveats (SCI/property, holding companies, non-drinks activity codes).
+    """
     best = None
     queries = [pin["name"]] + pin["aliases"]
     head = query_name(pin["name"])
     if head != pin["name"]:
         queries.append(head)  # "Distillerie Octavie - Alambic & Spiritueux Haute-Savoie" -> "Distillerie Octavie"
+    has_drinks_word = any(names.has_signal(n) for n in rec["names"])
     for q in queries:
-        qt = toks(q)
+        qt = names.tokens(q)
         if not qt:
             continue
         for name in rec["names"]:
-            ct = toks(name)
+            ct = names.tokens(name)
             if not ct:
                 continue
-            j = jaccard(qt, ct)
-            exact = toks(q, True) == toks(name, True) or qt == ct
+            j = names.jaccard(qt, ct)
+            exact = names.exact(q, name)
             site, city_ok, dept_ok = best_site(rec, pin)
             active = rec["etat"] == "A" and (site is None or site["etat"] in (None, "A"))
-            distinctive = (len(qt) >= 2 and qt <= ct) or (len(qt) == 1 and len(next(iter(qt))) >= 7 and qt <= ct)
-            g = grade(j, exact, city_ok, dept_ok, active, distinctive)
+            distinctive = names.distinctive(q)
+            loc = "strong" if city_ok else ("weak" if dept_ok else "none")
+            evidence_signal = in_naf_pull or has_drinks_word
+            g = grading.grade(Evidence(j, exact, loc, active, distinctive, evidence_signal))
             shared = qt & ct
             if g in (None, "low") and city_ok and shared and (qt <= ct or ct <= qt):
                 # One name is contained in the other and the postcode or city agrees
@@ -376,7 +296,7 @@ def score_pin(pin: dict, rec: dict, in_naf_pull: bool) -> tuple[float, str, floa
                 continue
             # A single-token or partial match needs a drinks word somewhere in the company's names,
             # unless the company is in the 11.01Z pull (already a distiller) or the postcode agrees.
-            signal = in_naf_pull or city_ok or any(has_signal(n) for n in rec["names"])
+            signal = evidence_signal or city_ok
             if (len(qt) <= 1 or j < 0.8) and not signal:
                 g = {"high": "medium", "medium": "low", "low": None}[g]
                 if not g:
@@ -387,7 +307,7 @@ def score_pin(pin: dict, rec: dict, in_naf_pull: bool) -> tuple[float, str, floa
                 if not g:
                     continue
             naf = rec["naf"] or ""
-            drinks = in_naf_pull or naf in DRINKS_NAF or any(has_signal(n) for n in rec["names"])
+            drinks = in_naf_pull or naf in DRINKS_NAF or has_drinks_word
             if naf.startswith(PROPERTY_NAF):
                 g = "low"
             elif naf.startswith(HOLDING_NAF):
@@ -407,10 +327,10 @@ def disambiguate(hits: list[tuple]) -> list[tuple]:
     name alone cannot pick one: drop those a grade."""
     top = [h for h in hits if h[1] == "high" and not h[5]]
     if len(top) >= 2:
-        hits = [(h[0], "medium", h[2], h[3], h[4], h[5]) if h in top else h for h in hits]
+        hits = [(h[0], grading.cap(h[1], "medium"), h[2], h[3], h[4], h[5]) if h in top else h for h in hits]
     mid = [h for h in hits if h[1] == "medium" and not h[5]]
     if len(mid) >= 3:
-        hits = [(h[0], "low", h[2], h[3], h[4], h[5]) if h in mid else h for h in hits]
+        hits = [(h[0], grading.cap(h[1], "low"), h[2], h[3], h[4], h[5]) if h in mid else h for h in hits]
     return hits
 
 
@@ -429,18 +349,23 @@ def note_for(rec: dict, pin: dict, j: float, matched: str, method: str) -> str:
 
 
 def row(pin: dict, rec: dict, g: str, j: float, matched: str, method: str, relation: str | None = None,
-        extra: str = "") -> list[str]:
-    qt = toks(pin["name"])
+        extra: str = "") -> dict:
+    qt = names.tokens(pin["name"])
     for a in pin["aliases"]:
-        qt = qt | toks(a)
-    rel = relation or relation_for(qt, " ".join(rec["names"]), rec["naf"] or "")
+        qt = qt | names.tokens(a)
+    naf = rec["naf"] or ""
+    if relation is None:
+        # A holding company (NAF 64.20Z/70.10Z) is a parent at best, never "self", whatever
+        # the name overlap says.
+        relation = "group" if naf.startswith(HOLDING_NAF) else \
+            grading.relation_for(qt, names.tokens(" ".join(rec["names"])))
     note = note_for(rec, pin, j, matched, method)
-    if (rec["naf"] or "").startswith(PROPERTY_NAF):
+    if naf.startswith(PROPERTY_NAF):
         note = "property/construction company, not the operator; " + note
     if extra:
         note = extra + "; " + note
-    return [pin["slug"], pin["name"], "France", "fr-sirene", rec["siren"], rec["legal"], rel, method, g, "",
-            SRC_SIRENE.format(rec["siren"]), note]
+    return rows.make(pin["slug"], pin["name"], "France", "fr-sirene", rec["siren"], rec["legal"],
+                      relation, method, g, SRC_SIRENE.format(rec["siren"]), note)
 
 
 # --- passes -----------------------------------------------------------------------------
@@ -453,23 +378,24 @@ LOW_VALUE = {"lavande", "lavandin", "huiles", "essentielles", "huile", "brasseri
 def low_value(name: str) -> bool:
     """Pins that are not spirits producers (lavender stills, breweries, venues) go last when the
     request budget is short."""
-    return bool(set(norm(name).split()) & LOW_VALUE)
+    return bool(set(names.fold(name).split()) & LOW_VALUE)
+
 
 def naf_pass(pins: list[dict], recs: list[dict]) -> dict[str, list[tuple]]:
     index: dict[str, list[int]] = defaultdict(list)
     for i, r in enumerate(recs):
         seen = set()
         for n in r["names"]:
-            for t in toks(n):
+            for t in names.tokens(n):
                 if t not in seen:
                     index[t].append(i)
                     seen.add(t)
     cap = max(50, len(recs) // 10)
     out: dict[str, list[tuple]] = {}
     for p in pins:
-        qt = set(toks(p["name"]))
+        qt = set(names.tokens(p["name"]))
         for a in p["aliases"]:
-            qt |= toks(a)
+            qt |= names.tokens(a)
         cand = set()
         for t in qt:
             post = index.get(t, [])
@@ -489,7 +415,8 @@ def naf_pass(pins: list[dict], recs: list[dict]) -> dict[str, list[tuple]]:
     return out
 
 
-def name_pass(pins: list[dict], client: Client, skip: set[str]) -> tuple[dict[str, list[tuple]], list[str], list[str]]:
+def name_pass(pins: list[dict], f: fetch.Fetcher, legacy_cache: dict,
+              skip: set[str]) -> tuple[dict[str, list[tuple]], list[str], list[str]]:
     """One search per pin (plus aliases) not already matched high/medium. Returns hits, searched, unsearched."""
     out: dict[str, list[tuple]] = {}
     searched, unsearched = [], []
@@ -501,10 +428,10 @@ def name_pass(pins: list[dict], client: Client, skip: set[str]) -> tuple[dict[st
         # The API ANDs every term, so "Cognac Frapin" or "Distillery G. Miclo" returns nothing
         # when the legal name is "FRAPIN" / "DISTILLERIE G. MICLO". Second try: distinctive
         # tokens only ("frapin", "g miclo"), still filtered to the département.
-        distinct = " ".join(t for t in norm(head).split() if t not in STOP)
-        if distinct and distinct != norm(head).strip() and len(distinct) >= 3:
+        distinct = " ".join(t for t in names.fold(head).split() if t not in names.STOP)
+        if distinct and distinct != names.fold(head).strip() and len(distinct) >= 3:
             queries.append(distinct)
-        queries = [q for q in queries if toks(q)]
+        queries = [q for q in queries if names.tokens(q)]
         if not queries:
             unsearched.append(p["slug"])  # nothing distinctive to search ("Distillerie", "ancienne distillerie")
             continue
@@ -514,7 +441,7 @@ def name_pass(pins: list[dict], client: Client, skip: set[str]) -> tuple[dict[st
             params = {"q": q, "per_page": 10, "minimal": "true", "include": "siege,dirigeants,matching_etablissements"}
             if p["dept"]:
                 params["departement"] = p["dept"]
-            d = client.get(params)
+            d = api_get(f, legacy_cache, params)
             if d is None:
                 continue
             got_any = True
@@ -557,22 +484,32 @@ def main() -> int:
     pins = load_pins()
     print(f"{len(pins)} French pins; {sum(1 for p in pins if p['postcode'])} with a postcode", file=sys.stderr)
 
-    log = cache / "request-log.txt"
-    naf_client = Client(cache / "naf-search-cache.json", args.fetch_naf, args.max_requests, log)
-    recs_raw = fetch_naf(naf_client, cache / "naf-1101z.json")
+    # One-time shim for the pre-migration name-search cache: it is keyed by query string
+    # (urlencode(sorted(params))), not by URL, so crosswalklib.fetch.Fetcher's own
+    # URL-hash cache cannot see it directly. Read once here; api_get() falls back to it
+    # when the Fetcher has neither a cache hit nor permission to fetch. Never re-fetched.
+    legacy_path = cache / "name-search-cache.json"
+    legacy_cache = json.loads(legacy_path.read_text(encoding="utf-8")) if legacy_path.exists() else {}
+
+    f = fetch.Fetcher(cache, allow=False, cap=SPENT + args.max_requests, delay=1.0,
+                       log=cache / "requests.log", spent=SPENT)
+
+    f.allow = args.fetch_naf
+    recs_raw = fetch_naf(f, cache / "naf-1101z.json")
     recs = [record(r) for r in recs_raw]
     print(f"NAF pull: {len(recs)} legal units", file=sys.stderr)
     naf_hits = naf_pass(pins, recs)
     strong = {s for s, hs in naf_hits.items() if any(h[1] in ("high", "medium") for h in hs)}
     print(f"NAF pass: {len(naf_hits)} pins with a candidate, {len(strong)} high/medium", file=sys.stderr)
+    naf_made = f.made
 
-    name_client = Client(cache / "name-search-cache.json", args.fetch_names,
-                         max(0, args.max_requests - naf_client.made), log)
-    name_hits, searched, unsearched = name_pass(pins, name_client, strong)
-    print(f"name pass: {len(searched)} pins searched ({name_client.made} live requests), "
+    f.allow = args.fetch_names
+    name_hits, searched, unsearched = name_pass(pins, f, legacy_cache, strong)
+    print(f"name pass: {len(searched)} pins searched ({f.made - naf_made} live requests), "
           f"{len(name_hits)} with a candidate, {len(unsearched)} not searched", file=sys.stderr)
 
-    rows: list[list[str]] = []
+    out_rows: list[dict] = []
+    hand_rows: list[dict] = []
     for p in pins:
         hand = HAND.get(p["slug"])
         emitted = set()
@@ -582,45 +519,41 @@ def main() -> int:
                 if rec["siren"] in emitted:
                     continue
                 emitted.add(rec["siren"])
-                relation, extra = None, ""
+                relation, extra, m = None, "", method
                 if hand:
                     for legal, rel, why in hand:
-                        lt = toks(legal, True)
-                        if any(lt <= toks(n, True) or toks(n, True) <= lt for n in rec["names"]):
-                            relation, extra, method = rel, why, "hand"
+                        lt = names.tokens(legal, names.SUFFIX)
+                        if any(lt <= names.tokens(n, names.SUFFIX) or names.tokens(n, names.SUFFIX) <= lt
+                               for n in rec["names"]):
+                            relation, extra, m = rel, why, "hand"
                             if g != "high":
                                 g = "high" if rec["etat"] == "A" else "medium"
-                rows.append(row(p, rec, g, j, matched, method, relation, extra))
-    # Rows already in the generated spine (Wikidata gave Warenghem and Hennessy/LVMH) are not repeated.
-    spine = OUT_DIR / "company-crosswalk.csv"
-    if spine.exists():
-        with spine.open(encoding="utf-8") as f:
-            have = {(r["slug"], r["company_number"]) for r in csv.DictReader(f) if r.get("country") == "France"}
-        before = len(rows)
-        rows = [r for r in rows if (r[0], r[4]) not in have]
-        if before != len(rows):
-            print(f"dropped {before - len(rows)} rows already in company-crosswalk.csv", file=sys.stderr)
-    rows.sort(key=lambda r: (r[0], {"high": 0, "medium": 1, "low": 2}[r[8]], r[4]))
+                r = row(p, rec, g, j, matched, m, relation, extra)
+                out_rows.append(r)
+                if m == "hand":
+                    hand_rows.append(r)
+    grading.apply_guards(out_rows, hand_rows)
+    # Every candidate is written. The builder resolves precedence against manual, operator
+    # and Wikidata rows and keeps the best per (slug, registry, relation); a matcher that
+    # reads the spine shrinks its own output every rebuild.
+
     args.out.parent.mkdir(parents=True, exist_ok=True)
-    with args.out.open("w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
-        w.writerow(FIELDS)
-        w.writerows(rows)
+    rows.write(args.out, out_rows, {p["slug"] for p in pins})
 
     # summary to stderr
     by = defaultdict(set)
-    for r in rows:
-        by[r[8]].add(r[0])
+    for r in out_rows:
+        by[r["confidence"]].add(r["slug"])
     matched = set()
     for g in ("high", "medium", "low"):
         by[g] -= matched
         matched |= by[g]
-    print(f"wrote {args.out} ({len(rows)} rows): high {len(by['high'])}, medium {len(by['medium'])}, "
+    print(f"wrote {args.out} ({len(out_rows)} rows): high {len(by['high'])}, medium {len(by['medium'])}, "
           f"low {len(by['low'])}, unmatched {len(pins) - len(matched)} of {len(pins)}", file=sys.stderr)
     summary = {"pins": len(pins), "high": sorted(by["high"]), "medium": sorted(by["medium"]),
                "low": sorted(by["low"]), "unmatched": sorted(p["slug"] for p in pins if p["slug"] not in matched),
                "searched": searched, "unsearched": unsearched,
-               "requests": {"naf": naf_client.made, "names": name_client.made}}
+               "requests": {"naf": naf_made - SPENT, "names": f.made - naf_made}}
     (cache / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=1), encoding="utf-8")
     return 0
 

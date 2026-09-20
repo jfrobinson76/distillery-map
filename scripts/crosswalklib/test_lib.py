@@ -42,6 +42,12 @@ class Grading(unittest.TestCase):
     def test_partial_without_location_is_nothing(self):
         self.assertIsNone(grading.grade(Evidence(0.65, False, "none")))
 
+    def test_generic_pin_needs_a_strong_location(self):
+        self.assertFalse(names.distinctive("La Distillerie"))
+        self.assertIsNone(grading.grade(Evidence(1.0, True, "none", distinctive=False)))
+        self.assertEqual(grading.grade(Evidence(1.0, True, "weak", distinctive=False)), "low")
+        self.assertEqual(grading.grade(Evidence(1.0, True, "strong", distinctive=False)), "medium")
+
     def test_conflict_never_high(self):
         self.assertEqual(grading.grade(Evidence(1.0, True, "conflict")), "medium")
 

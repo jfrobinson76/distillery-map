@@ -25,9 +25,19 @@ class Evidence:
 
 
 def grade(e: Evidence) -> str | None:
+    g = _grade_ignoring_location(e)
     if e.location == "conflict":
-        return cap(_grade_ignoring_location(e), "medium")
-    return _grade_ignoring_location(e)
+        g = cap(g, "medium")
+    if not e.distinctive:
+        # A generic-label pin ('Distillerie', 'Craft Spirits') matches every company with the
+        # same generic word. Only the location can carry it, and never to a join.
+        if e.location == "strong":
+            g = cap(g, "medium")
+        elif e.location == "weak":
+            g = cap(g, "low")
+        else:
+            g = None
+    return g
 
 
 def _grade_ignoring_location(e: Evidence) -> str | None:
