@@ -18,9 +18,8 @@ Sources, in order of trust:
      Wikidata and the name search.
   2. data/company-crosswalk/wd-direct.csv + wd-via-owner.csv  Wikidata (CC0), matched on name
      and country. Thin: 26 Companies House ids worldwide at 18 Sep 2026.
-  2b. data/company-crosswalk/ttb-candidates.csv (US, scripts/match_ttb_permits.py) and
-     canada-candidates.csv (scripts/match_canada_registers.py): register matches written by
-     their own scripts. Only `high` and `medium` rows with a register number enter the
+  2b. data/company-crosswalk/*-candidates.csv (ttb- for the US, canada-, australia-, japan-,
+     france-... each written by its own scripts/match_*_registers.py): register matches. Only `high` and `medium` rows with a register number enter the
      crosswalk; `low` and number-less rows stay in the candidates file as leads. A slug may
      carry a `self` and an `operator` row. A manual or operator-map row for the slug
      replaces them. canada-licences.csv (provincial liquor licences) is a second identifier
@@ -110,11 +109,11 @@ def load_prior_search() -> list[dict]:
 
 def load_candidates() -> list[dict]:
     rows = []
-    for name in ("ttb-candidates.csv", "canada-candidates.csv"):
-        p = ENR / name
-        if p.exists():
-            rows += [r for r in csv.DictReader(p.open())
-                     if r.get("confidence") in ("high", "medium") and r.get("company_number")]
+    for p in sorted(ENR.glob("*-candidates.csv")):
+        if p.name == "cro-candidates.csv":  # review file, different shape
+            continue
+        rows += [r for r in csv.DictReader(p.open())
+                 if r.get("confidence") in ("high", "medium") and r.get("company_number")]
     return rows
 
 
