@@ -23,11 +23,19 @@ What this script does instead:
                        (LSSI art. 10 requires it, usually on the "aviso legal" page).
                        Checksum-validated. The register number field carries the NIF; the
                        Registro Mercantil hoja number is not free.
-  es-rgseaa            Licence layer for Spain: AESAN's RGSEAA food-business register
+  es-rgseaa             Licence layer for Spain: AESAN's RGSEAA food-business register
                        (bulk xlsx, key 30 "Bebidas alcoholicas", reuse allowed with
                        attribution) matched by name + province. Gives the legal name and
                        the RGSEAA number; no NIF. Rows go to italy-spain-licences.csv.
   Hand rows            Well-known group-run sites.
+
+Names, grading and fetching come from scripts/crosswalklib: token Jaccard, the legal-form
+and generic-word lists (with Italian/Spanish words appended for this matcher), and one
+grading table shared by every register matcher. The own-website VAT/CIF read has no
+location signal of its own (the source is the pin's own site, not a register lookup), so
+rows are graded with the site as a strong location (`Evidence(location="strong")`); the RGSEAA name match
+does carry a location signal (province agreement = weak) and is graded accordingly, with a
+province conflict capped rather than dropped.
 
 Run offline (from cached files):
   python3 scripts/match_italy-spain_registers.py --cache /path/to/cache
@@ -41,55 +49,36 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import html as htmlmod
 import json
 import re
-import socket
-import ssl
 import sys
-import time
-import unicodedata
-import urllib.error
 import urllib.parse
-import urllib.request
 from collections import defaultdict
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from crosswalklib import fetch, grading, names, rows  # noqa: E402
+from crosswalklib.grading import Evidence  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 GEO = ROOT / "public" / "data" / "distilleries.geojson"
 OUT_DIR = ROOT / "data" / "company-crosswalk"
 OUT_CANDIDATES = OUT_DIR / "italy-spain-candidates.csv"
 OUT_LICENCES = OUT_DIR / "italy-spain-licences.csv"
-FIELDS = ["slug", "distillery_name", "country", "registry", "company_number", "company_name",
-          "relation", "match_method", "confidence", "verified", "source", "note"]
 
 SRC_RGSEAA = "https://www.aesan.gob.es/registro-sanitario/empresas-alimentarias"
 SRC_RI = "https://www.registroimprese.it/"
 SRC_RMC = "https://www.rmc.es/"
 
-FETCH_CAP = 800          # hard cap on website requests per run
+FETCH_CAP = 800          # hard cap on website requests per run (unchanged from the research note)
 FETCH_DELAY = 1.0        # seconds between requests
 FETCH_TIMEOUT = 12
+# 518 website requests were already spent across earlier sessions (research note, "Request log,
+# 20 Sep 2026"); carried into the Fetcher so the cap accounts for history, not just this run.
+SPENT = 518
 UA = "Mozilla/5.0 (compatible; distillery-map-crosswalk/1.0; +https://github.com/) research fetch, one page per site"
-
-SUFFIX = {"srl", "spa", "snc", "sas", "ss", "sr", "sl", "slu", "sa", "sau", "sc", "scoop", "sll",
-          "soc", "societa", "sociedad", "agricola", "agr", "coop", "cooperativa", "limitada", "anonima",
-          "gmbh", "ohg", "kg", "ltd", "limited", "srls", "the", "il", "la", "le", "lo", "gli", "i",
-          "el", "los", "las", "de", "del", "della", "delle", "dei", "degli", "di", "da", "e", "y", "and",
-          "&", "a", "al", "en", "in", "con", "per", "por", "fu", "f", "lli", "flli", "fratelli", "hermanos",
-          "hnos", "figli", "hijos", "eredi", "ditta", "cav", "dott", "dr"}
-GENERIC = {"distilleria", "distillerie", "distillerias", "distillery", "distilleries", "distillatori",
-           "distillati", "destileria", "destilerias", "destilerías", "destilería", "destiladora",
-           "destilados", "destilacion", "brennerei", "destillerie", "brennereien", "spirits", "spirit",
-           "liquori", "liquorificio", "liquoristeria", "licores", "licoreria", "bodega", "bodegas",
-           "azienda", "aziende", "agricola", "cantina", "cantine", "vini", "vino", "grappa", "grappe",
-           "acquavite", "acquaviti", "aguardientes", "aguardiente", "orujos", "orujo", "gin", "vodka",
-           "whisky", "whiskey", "rum", "ron", "craft", "artigianale", "artigianali", "artesanal",
-           "artesanos", "artesana", "premium", "alcoholes", "alcoles", "elaborados", "productos",
-           "prodotti", "casa", "antica", "antico", "storica", "official", "sito", "web"}
-STOP = SUFFIX | GENERIC
-SIGNAL = GENERIC - {"azienda", "aziende", "agricola", "casa", "antica", "antico", "storica", "official",
-                    "sito", "web", "craft", "premium", "prodotti", "productos", "elaborados"}
 
 # Italian province code -> region (for the per-region table only)
 IT_REGION = {
@@ -197,31 +186,6 @@ AGENCY_RE = re.compile(r"(realizzato|sviluppato|progettato|web ?agency|designed 
                        r"credits|dise[ñn]ado por|desarrollado por|creado por|web by|site by)", re.I)
 
 
-def norm(s: str) -> str:
-    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower()
-    s = s.replace("&", " and ").replace("'", "").replace("’", "")
-    return re.sub(r"[^a-z0-9 ]+", " ", s)
-
-
-def toks(s: str, keep_generic: bool = False) -> frozenset:
-    stop = SUFFIX if keep_generic else STOP
-    return frozenset(t for t in norm(s).split() if t not in stop and len(t) > 1)
-
-
-def jaccard(a: frozenset, b: frozenset) -> float:
-    if not a or not b:
-        return 0.0
-    return len(a & b) / len(a | b)
-
-
-def has_signal(name: str) -> bool:
-    return bool(toks(name, keep_generic=True) & SIGNAL)
-
-
-def relation_for(pin_toks: frozenset, legal_name: str) -> str:
-    return "self" if pin_toks & toks(legal_name) else "operator"
-
-
 # ---------------------------------------------------------------- pins ----
 def it_prov(addr: str) -> str:
     m = re.search(r"\b\d{5}\s+[^,]+?\s+([A-Z]{2}),\s*Italy", addr or "")
@@ -230,20 +194,20 @@ def it_prov(addr: str) -> str:
 
 def it_city(addr: str) -> str:
     m = re.search(r"\b\d{5}\s+(.+?)\s+[A-Z]{2},\s*Italy", addr or "")
-    return norm(m.group(1)).strip() if m else ""
+    return names.fold(m.group(1)).strip() if m else ""
 
 
 def es_prov(addr: str) -> str:
     m = re.search(r",\s*([^,]+?),\s*Spain", addr or "")
     if not m:
         return ""
-    p = norm(m.group(1)).strip()
+    p = names.fold(m.group(1)).strip()
     return ES_PROV_ALIAS.get(p, p)
 
 
 def es_city(addr: str) -> str:
     m = re.search(r"\b\d{5}\s+([^,]+?),\s*[^,]+,\s*Spain", addr or "")
-    return norm(m.group(1)).strip() if m else ""
+    return names.fold(m.group(1)).strip() if m else ""
 
 
 def load_pins():
@@ -267,8 +231,8 @@ def load_pins():
         if site and not re.match(r"https?://", site):
             site = "https://" + site
         pins.append({"slug": p["slug"], "name": p["name"], "country": c, "prov": prov, "region": region,
-                     "city": city, "site": site, "toks": toks(p["name"]),
-                     "full": toks(p["name"], keep_generic=True)})
+                     "city": city, "site": site, "toks": names.tokens(p["name"]),
+                     "full": names.tokens(p["name"], names.SUFFIX)})
     return pins
 
 
@@ -318,66 +282,28 @@ def valid_nif_person(n: str) -> bool:
 
 
 # ---------------------------------------------------------------- fetch ----
-class Fetcher:
-    def __init__(self, cache: Path, allow: bool):
-        self.dir = cache / "websites"
-        self.dir.mkdir(parents=True, exist_ok=True)
-        self.log_path = cache / "websites-log.json"
-        self.log = json.loads(self.log_path.read_text()) if self.log_path.exists() else {}
-        self.allow = allow
-        self.requests = 0
-        self.ctx = ssl.create_default_context()  # TLS verified; sites with broken chains are logged as errors
-
-    def key(self, url: str) -> str:
-        return re.sub(r"[^a-z0-9]+", "-", url.lower())[:150]
-
-    def get(self, url: str) -> str | None:
-        """Cached page text (HTML) or None. Fetches only when allowed and under the cap."""
-        k = self.key(url)
-        path = self.dir / (k + ".html")
-        if path.exists():
-            return path.read_text(encoding="utf-8", errors="ignore")
-        if k in self.log and self.log[k].get("status") not in (None, "timeout", "error", "tls"):
-            return None  # known failure (404, 403 ...), do not retry
-        if not self.allow or self.requests >= FETCH_CAP:
-            return None
-        self.requests += 1
-        time.sleep(FETCH_DELAY)
-        entry = {"url": url, "when": time.strftime("%Y-%m-%d")}
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "it,es,en"})
-            with urllib.request.urlopen(req, timeout=FETCH_TIMEOUT, context=self.ctx) as resp:
-                raw = resp.read(2_000_000)
-                ct = resp.headers.get("Content-Type", "")
-                charset = re.search(r"charset=([\w-]+)", ct)
-                enc = charset.group(1) if charset else None
-                if not enc:
-                    m = re.search(rb'charset=["\']?([\w-]+)', raw[:4000])
-                    enc = m.group(1).decode() if m else "utf-8"
-                try:
-                    text = raw.decode(enc, errors="ignore")
-                except LookupError:
-                    text = raw.decode("utf-8", errors="ignore")
-                entry["status"] = resp.status
-                entry["final"] = resp.geturl()
-                path.write_text(text, encoding="utf-8")
-                self.log[k] = entry
-                self._save()
-                return text
-        except urllib.error.HTTPError as e:
-            entry["status"] = e.code
-        except (urllib.error.URLError, socket.timeout, TimeoutError, ssl.SSLError, ConnectionError, OSError) as e:
-            entry["status"] = "timeout" if "timed out" in str(e) else ("tls" if "SSL" in str(e) or "certificate" in str(e).lower() else "error")
-            entry["error"] = str(e)[:120]
-        except Exception as e:  # noqa: BLE001
-            entry["status"] = "error"
-            entry["error"] = str(e)[:120]
-        self.log[k] = entry
-        self._save()
-        return None
-
-    def _save(self):
-        self.log_path.write_text(json.dumps(self.log, indent=0, ensure_ascii=False))
+def prime_cache(cache_dir: Path, old_dir: Path) -> int:
+    """One-time shim: the earlier runs cached page bodies under `old_dir` (`<cache>/websites/`)
+    keyed by a URL-derived slug, logged in `<cache>/websites-log.json`. fetch.Fetcher keys by
+    sha1(url)[:20]+'.bin' in `cache_dir`. Copy bodies across by URL so nothing already fetched
+    is re-fetched. Returns the number of files primed."""
+    log_path = old_dir.parent / "websites-log.json"
+    if not log_path.exists():
+        return 0
+    old_log = json.loads(log_path.read_text())
+    primed = 0
+    for key, entry in old_log.items():
+        if entry.get("status") != 200:
+            continue
+        src = old_dir / (key + ".html")
+        if not src.exists():
+            continue
+        url = entry["url"]
+        dest = cache_dir / (hashlib.sha1(url.encode()).hexdigest()[:20] + ".bin")
+        if not dest.exists():
+            dest.write_bytes(src.read_bytes())
+            primed += 1
+    return primed
 
 
 def visible_text(page: str) -> str:
@@ -480,8 +406,49 @@ def legal_links(base: str, page: str, country: str) -> list:
     return out
 
 
-def match_websites(pins, fetcher: Fetcher):
-    rows, log = [], {}
+def website_confidence(p: dict, legal: str, j: float, subset: bool, agency: bool,
+                       own_name_near: bool, n_found: int) -> tuple[str, str]:
+    """Grade one (number, legal-name-guess) pair found on the distillery's own site. The number
+    sat on the distillery's own domain, which is the strongest location evidence there is
+    (location="strong"), and the site is the distillery's, so the trade signal is given. What
+    varies is the name: the legal name printed beside the number either matches the pin,
+    differs (an operator), or is absent (sole trader, number next to the trading name).
+    A grade of None floors at `medium`: the number is the site owner's by law."""
+    company_name = legal or p["name"]
+    sig = True
+    exact = bool(legal) and (subset or names.exact(p["name"], legal))
+    if own_name_near and not legal:
+        exact = True
+    jac = j if legal else (1.0 if own_name_near else 0.0)
+    ev = Evidence(jaccard=jac, exact=exact, location="strong", active=True,
+                  distinctive=names.distinctive(p["name"]), signal=sig)
+    # The law (IT art. 35 DPR 633/72; ES LSSI art. 10) makes the number on the site the site
+    # owner's, so a number with no name beside it, or beside a name that is not the pin's, is
+    # still the owner's: medium. Only a number next to a web-agency credit is a lead.
+    conf = grading.grade(ev) or "medium"
+    if agency:
+        conf = "low"
+    if n_found > 1 and not agency:
+        conf = grading.cap(conf, "medium")
+    if agency:
+        why = "number sits next to a web-agency credit; may be the agency's, not the distillery's"
+    elif legal and (j >= 0.5 or subset):
+        why = f"legal name on the site matches the pin (jaccard {j:.2f})"
+    elif legal and sig:
+        why = f"legal name on the site is a drinks company but differs from the pin name (jaccard {j:.2f})"
+    elif legal:
+        why = f"legal name on the site differs from the pin name (jaccard {j:.2f}); may be the operator"
+    elif own_name_near:
+        why = "no legal form printed, but the distillery's own name sits next to the number (sole trader or plain trading name); company name = pin name"
+    else:
+        why = "number found but no legal name printed next to it; company name = pin name"
+    if n_found > 1 and not agency:
+        why += f"; {n_found} distinct numbers on the page"
+    return conf, why
+
+
+def match_websites(pins, fetcher: fetch.Fetcher):
+    rows_out, log = [], {}
     for p in pins:
         if not p["site"]:
             log[p["slug"]] = "no website on the pin"
@@ -489,17 +456,16 @@ def match_websites(pins, fetcher: Fetcher):
         base = p["site"].rstrip("/")
         urls = [base]
         found, page_used = [], ""
-        first_status = None
+        home_missing = False
         i = 0
         while i < len(urls) and i < 3:  # home page + at most two legal/contact pages
             u = urls[i]
             i += 1
-            page = fetcher.get(u)
+            page = fetcher.text(u)
             if page is None:
                 if u == base:
-                    first_status = fetcher.log.get(fetcher.key(u), {}).get("status")
-                    if first_status in (None, "timeout", "error", "tls") or isinstance(first_status, int) and first_status >= 400:
-                        break  # home page unreachable: do not try sub-pages
+                    home_missing = True
+                    break  # home page unreachable: do not try sub-pages
                 continue
             if u == base:
                 urls += legal_links(base, page, p["country"])
@@ -512,48 +478,30 @@ def match_websites(pins, fetcher: Fetcher):
                 page_used = u
                 break
         if not found:
-            if first_status in (None, "timeout", "error", "tls"):
-                log[p["slug"]] = f"site unreachable ({first_status or 'not fetched'})"
-            elif isinstance(first_status, int) and first_status >= 400:
-                log[p["slug"]] = f"site returned HTTP {first_status}"
-            else:
-                log[p["slug"]] = "no VAT/tax number on home or legal pages"
+            log[p["slug"]] = "site unreachable (not fetched or an error)" if home_missing else \
+                "no VAT/tax number on home or legal pages"
             continue
         country = p["country"]
         registry = "it-registro-imprese" if country == "Italy" else "es-rmc"
         src_reg = SRC_RI if country == "Italy" else SRC_RMC
         for n, ctx, agency in found[:2]:
             legal = extract_legal(country, ctx)
-            lt = toks(legal) if legal else frozenset()
-            j = jaccard(p["toks"], lt) if legal else 0.0
+            lt = names.tokens(legal) if legal else frozenset()
+            j = names.jaccard(p["toks"], lt) if legal else 0.0
             subset = bool(p["toks"]) and p["toks"] <= lt
             if legal and (p["toks"] & lt):
                 agency = False  # the distillery's own legal name sits next to the number
-            near = toks(ctx[max(0, len(ctx) - 380):])  # the ~260 chars before the number + the number line
+            near = names.tokens(ctx[max(0, len(ctx) - 380):])  # the ~260 chars before the number + the number line
             own_name_near = len(p["toks"] & near) >= max(1, min(2, len(p["toks"])))
-            if agency:
-                conf, why = "low", "number sits next to a web-agency credit; may be the agency's, not the distillery's"
-            elif legal and (j >= 0.5 or subset):
-                conf, why = "high", f"legal name on the site matches the pin (jaccard {j:.2f})"
-            elif legal and has_signal(legal):
-                conf, why = "medium", f"legal name on the site is a drinks company but differs from the pin name (jaccard {j:.2f})"
-            elif legal:
-                conf, why = "medium", f"legal name on the site differs from the pin name (jaccard {j:.2f}); may be the operator"
-            elif own_name_near:
-                conf, why = "high", "no legal form printed, but the distillery's own name sits next to the number (sole trader or plain trading name); company name = pin name"
-            else:
-                conf, why = "medium", "number found but no legal name printed next to it; company name = pin name"
-            if len(found) > 1 and not agency:
-                conf = "medium" if conf == "high" else "low"
-                why += f"; {len(found)} distinct numbers on the page"
+            conf, why = website_confidence(p, legal, j, subset, agency, own_name_near, len(found))
             label = "P.IVA/codice fiscale" if country == "Italy" else "NIF"
             note = (f"{label} {n} read from the distillery's own website ({page_used}); {why}; "
                     f"checksum valid; not yet checked against the register ({'AdE VerificaPIVA by hand' if country == 'Italy' else 'RMC/BORME by hand'})")
-            rel = relation_for(p["toks"], legal) if legal else "self"
-            rows.append([p["slug"], p["name"], country, registry, n, legal or p["name"], rel,
-                         "own-website-vat", conf, "", page_used, note])
+            rel = grading.relation_for(p["toks"], names.tokens(legal)) if legal else "self"
+            rows_out.append(rows.make(p["slug"], p["name"], country, registry, n, legal or p["name"],
+                                      rel, "own-website-vat", conf, page_used, note))
         log[p["slug"]] = "matched"
-    return rows, log
+    return rows_out, log
 
 
 # ------------------------------------------------------------------ RGSEAA ----
@@ -563,16 +511,16 @@ def load_rgseaa(cache: Path):
         print(f"warn: missing {path}", file=sys.stderr)
         return []
     with path.open(encoding="utf-8", newline="") as fh:
-        rows = [r for r in csv.DictReader(fh) if r.get("Clave") == "30"]
-    print(f"rgseaa: {len(rows)} key-30 (bebidas alcoholicas) rows", file=sys.stderr)
-    return rows
+        rows_out = [r for r in csv.DictReader(fh) if r.get("Clave") == "30"]
+    print(f"rgseaa: {len(rows_out)} key-30 (bebidas alcoholicas) rows", file=sys.stderr)
+    return rows_out
 
 
 def match_rgseaa(pins, rg):
     lic = []
     index = defaultdict(list)
     for i, r in enumerate(rg):
-        for t in toks(r["Razon_Social"]):
+        for t in names.tokens(r["Razon_Social"]):
             index[t].append(i)
     for p in pins:
         if p["country"] != "Spain" or not p["toks"]:
@@ -585,27 +533,25 @@ def match_rgseaa(pins, rg):
         best = {}
         for i in cand:
             r = rg[i]
-            ct = toks(r["Razon_Social"])
-            j = jaccard(p["toks"], ct)
-            prov = ES_PROV_ALIAS.get(norm(r["Provincia"]).strip(), norm(r["Provincia"]).strip())
+            ct = names.tokens(r["Razon_Social"])
+            j = names.jaccard(p["toks"], ct)
+            prov = ES_PROV_ALIAS.get(names.fold(r["Provincia"]).strip(), names.fold(r["Provincia"]).strip())
             prov_ok = bool(p["prov"]) and prov == p["prov"]
             prov_conflict = bool(p["prov"]) and prov != p["prov"]
             subset = len(p["toks"]) >= 2 and p["toks"] <= ct
-            if j >= 0.8 or subset:
-                g = "high" if (prov_ok or not p["prov"]) else "medium"
-            elif j >= 0.6:
-                g = "medium" if prov_ok else "low"
-            elif j >= 0.4 and prov_ok:
-                g = "low"
-            else:
-                continue
-            if prov_conflict and j < 0.8 and not subset:
-                continue
-            if len(p["toks"]) <= 1 and toks(p["name"], True) != toks(r["Razon_Social"], True):
+            loc = "weak" if prov_ok else ("conflict" if prov_conflict else "none")
+            ev = Evidence(jaccard=j, exact=subset or names.exact(p["name"], r["Razon_Social"]), location=loc,
+                          active=True, distinctive=names.distinctive(p["name"]),
+                          signal=names.has_signal(r["Razon_Social"]))
+            g = grading.grade(ev)
+            if g and len(p["toks"]) <= 1 and names.tokens(p["name"], names.SUFFIX) != names.tokens(r["Razon_Social"], names.SUFFIX):
                 # one distinctive token only (e.g. "mallorca"): never high unless the full names agree
-                g = {"high": "medium", "medium": "low", "low": "low"}[g] if prov_ok else "low"
-                if not has_signal(r["Razon_Social"]) and not prov_ok:
-                    continue
+                if prov_ok:
+                    g = {"high": "medium", "medium": "low", "low": "low"}[g]
+                else:
+                    g = "low" if names.has_signal(r["Razon_Social"]) else None
+            if not g:
+                continue
             score = j + (0.3 if prov_ok else 0) - (0.3 if prov_conflict else 0)
             k = r["N_RGSEAA"]
             if k not in best or best[k][0] < score:
@@ -613,8 +559,9 @@ def match_rgseaa(pins, rg):
         for score, g, r, j, prov_ok in sorted(best.values(), key=lambda x: -x[0])[:2]:
             note = (f"name jaccard {j:.2f}; RGSEAA key 30 bebidas alcoholicas; establishment {r['Domicilio_industrial']}, "
                     f"{r['Provincia']} ({r['CCAA']}){' (province agrees)' if prov_ok else ''}; list dated 1 Sep 2026; no NIF in the list")
-            lic.append([p["slug"], p["name"], "Spain", "es-rgseaa", r["N_RGSEAA"], r["Razon_Social"],
-                        relation_for(p["toks"], r["Razon_Social"]), "rgseaa-bulk-name", g, "", SRC_RGSEAA, note])
+            lic.append(rows.make(p["slug"], p["name"], "Spain", "es-rgseaa", r["N_RGSEAA"], r["Razon_Social"],
+                                 grading.relation_for(p["toks"], names.tokens(r["Razon_Social"])),
+                                 "rgseaa-bulk-name", g, SRC_RGSEAA, note))
     return lic
 
 
@@ -632,43 +579,45 @@ def main() -> int:
     print(f"{sum(p['country'] == 'Italy' for p in pins)} Italian pins, {sum(p['country'] == 'Spain' for p in pins)} Spanish pins",
           file=sys.stderr)
 
-    fetcher = Fetcher(cache, args.fetch_websites)
+    website_dir = cache / "websites"
+    website_dir.mkdir(parents=True, exist_ok=True)
+    primed = prime_cache(website_dir, website_dir)
+    if primed:
+        print(f"primed {primed} cached pages from the old website cache", file=sys.stderr)
+    fetcher = fetch.Fetcher(website_dir, allow=args.fetch_websites, cap=FETCH_CAP, delay=FETCH_DELAY,
+                            log=website_dir / "requests.log", timeout=FETCH_TIMEOUT, spent=SPENT)
     web_rows, web_log = match_websites(pins, fetcher)
-    print(f"websites: {fetcher.requests} requests this run (cap {FETCH_CAP}), {len(fetcher.log)} URLs in log", file=sys.stderr)
+    print(f"websites: {fetcher.summary()}", file=sys.stderr)
     lic = match_rgseaa(pins, load_rgseaa(cache))
 
     hand = []
-    for slug, rows in HAND.items():
+    for slug, hand_rows in HAND.items():
         p = next((x for x in pins if x["slug"] == slug), None)
         if not p:
             continue
-        for reg, num, name, rel, conf, note, src in rows:
-            hand.append([slug, p["name"], p["country"], reg, num, name, rel, "hand", conf, "", src, note])
+        for reg, num, name, rel, conf, note, src in hand_rows:
+            hand.append(rows.make(slug, p["name"], p["country"], reg, num, name, rel, "hand", conf, src, note))
 
     conf_rank = {"high": 0, "medium": 1, "low": 2}
-    hand_keys = {(r[0], r[3], r[4]) for r in hand}
+    hand_keys = {(r["slug"], r["registry"], r["company_number"]) for r in hand}
     machine = {}
     for r in web_rows:
-        if (r[0], r[3], r[4]) in hand_keys:
+        k = (r["slug"], r["registry"], r["company_number"])
+        if k in hand_keys:
             continue
-        k = (r[0], r[3], r[4])
-        if k not in machine or conf_rank[r[8]] < conf_rank[machine[k][8]]:
+        if k not in machine or conf_rank[r["confidence"]] < conf_rank[machine[k]["confidence"]]:
             machine[k] = r
     final = hand + list(machine.values())
-    order = {s["slug"]: i for i, s in enumerate(pins)}
-    final.sort(key=lambda r: (order[r[0]], r[3], conf_rank[r[8]], r[5]))
-    lic.sort(key=lambda r: (order[r[0]], r[3], conf_rank[r[8]]))
+    grading.apply_guards(final, hand)
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    for path, rows in ((OUT_CANDIDATES, final), (OUT_LICENCES, lic)):
-        with path.open("w", newline="") as fh:
-            w = csv.writer(fh)
-            w.writerow(FIELDS)
-            w.writerows(rows)
+    known_slugs = {p["slug"] for p in pins}
+    rows.write(OUT_CANDIDATES, final, known_slugs)
+    rows.write(OUT_LICENCES, lic, known_slugs)
 
     best = {}
     for r in final:
-        best[r[0]] = min(best.get(r[0], 9), conf_rank[r[8]])
+        best[r["slug"]] = min(best.get(r["slug"], 9), conf_rank[r["confidence"]])
     by_reg = defaultdict(lambda: {"pins": 0, "high": 0, "medium": 0, "low": 0, "unmatched": 0})
     for p in pins:
         d = by_reg[(p["country"], p["region"] or "(no address)")]
@@ -689,7 +638,7 @@ def main() -> int:
             reasons[web_log.get(p["slug"], "no row")].append(p["slug"])
     for why, slugs in sorted(reasons.items(), key=lambda x: -len(x[1])):
         print(f"unmatched ({len(slugs)}): {why}: {' '.join(slugs)}")
-    lic_slugs = {r[0] for r in lic}
+    lic_slugs = {r["slug"] for r in lic}
     print(f"rgseaa licence rows cover {len(lic_slugs)} Spanish pins")
     print(f"{len(final)} candidate rows -> {OUT_CANDIDATES.relative_to(ROOT)}; {len(lic)} licence rows -> {OUT_LICENCES.relative_to(ROOT)}")
     return 0

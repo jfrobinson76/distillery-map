@@ -12,6 +12,8 @@ Run:
 
 Output: data/company-crosswalk/cro-candidates.csv. Nothing here enters the crosswalk until
 a row is copied into company-crosswalk-operators.csv or -manual.csv with a confidence.
+
+Name tokens and normalisation come from scripts/crosswalklib.names (shared stop/generic lists).
 """
 from __future__ import annotations
 
@@ -19,25 +21,19 @@ import argparse
 import csv
 import io
 import json
-import re
 import sys
-import unicodedata
 import zipfile
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from crosswalklib import names  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
-STOP = {"distillery", "distillers", "distilling", "distilleries", "the", "ltd", "limited", "dac",
-        "company", "co", "irish", "whiskey", "whisky", "spirits", "and", "of", "house", "unlimited",
-        "teoranta", "teo", "cuideachta"}
 
 
-def norm(s: str) -> str:
-    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower()
-    return re.sub(r"[^a-z0-9 ]+", " ", s)
-
-
-def toks(s: str) -> set[str]:
-    return {t for t in norm(s).split() if t not in STOP and len(t) > 1}
+def toks(s: str) -> frozenset[str]:
+    """names.tokens, minus single-character noise (initials from names like "D.E.W.")."""
+    return frozenset(t for t in names.tokens(s) if len(t) > 1)
 
 
 def main() -> int:

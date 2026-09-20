@@ -103,6 +103,12 @@ DACH (OffeneRegister 2017-19 dump, JustizOnline, Zefix on LINDAS), India + South
 2015 extracts on data.gov.in; CIPC terms forbid search). Coverage and the reasons for the thin
 countries are in each note. Belgium, Norway, Denmark keep their Wikidata ids.
 
+## Shared library (20 Sep 2026)
+
+Every matcher imports `scripts/crosswalklib` (names, grading, fetch, rows). Read
+`docs/data-quality/crosswalk-grading-rules.md` first: the grading table, the four guards, the
+fetcher's guarantees. A matcher that defines its own normaliser, grade or socket is rejected.
+
 ## Rules
 
 - **Claim only what was read.** `verified` means a human or the agent opened the register

@@ -256,3 +256,31 @@ collisions (Yoichi Beer LLC for Yoichi Distillery, a brewing company for Setouch
 now `low`. Result after the guards: 126 high, 16 medium, 311 low; 110 of 118 pins carry a
 high or medium 法人番号. The three unmatched pins are unchanged.
 
+## Migration onto scripts/crosswalklib, 20 Sep, later still
+
+`match_japan_registers.py` now gets fetching, the row schema and the two guards above from
+`scripts/crosswalklib` (`fetch.Fetcher`, `rows.write`, `grading.apply_guards`) instead of its
+own copies; kanji/romaji parsing stays local. `spent=62` (the count above) is passed into the
+shared `Fetcher` so its cap carries over. `fetch_licences` (13 plain GETs, no cookies) moved
+onto `Fetcher.bulk`. `fetch_nta` needs a CSRF token plus the session cookie that request sets,
+then a POST per prefecture ZIP — `Fetcher`'s public API is GET/bulk-only and can't carry a form
+body or a cookie jar across calls, so `fetch_nta` keeps its own `urllib` opener but reports its
+request count and log lines through the same `Fetcher` instance, so the cap and the audit trail
+are still one thing. Folded into `crosswalklib.names.GENERIC` (append, not remove, so every
+matcher gets them): `beer`/`beers`, and the `shuzo`/`shuzou`/`syuzou`/`jozo`/`jyozo`/`kura`
+romaji family (kept local before only because the matcher had no shared list to put them in).
+`STOP_LATIN` keeps only what's genuinely Japan-specific: prefecture/city names, romaji spelling
+variants not worth generalising, and website-hosting artefacts.
+
+Switching to `rows.write()` (which refuses a row with no register number at better than `low`)
+surfaced two pre-existing rows that the old unchecked CSV writer had let through invalid: hand
+row `sicx-gin-distillery-cafe-bar` (17 same-named register hits in Kyoto, number never
+resolved) was written `medium` with a blank `company_number`, and two licence-bridge rows
+(`distillery-japan-10`, `dewa-distillery`, both `h26`-list matches from before the 法人番号
+column existed on that list) were written `high` with a blank number. All three predate this
+migration; `apply_guards`'s "no number, never better than `low`" rule now catches them (applied
+to `auto + hand` and to `lic_rows`, not just `auto`, since the rule is about the row, not the
+method that produced it). Candidates after the migration: 126 high, 15 medium, 312 low — one
+row down from the 16 medium above, specifically `sicx-gin-distillery-cafe-bar`. Every other row
+is unchanged; the two licence-file rows affect `japan-licences.csv`, not the candidates count.
+

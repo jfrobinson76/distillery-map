@@ -30,13 +30,20 @@ One-off local filter of the OffeneRegister dump (needs de_companies_ocdata.jsonl
   python3 scripts/match_dach_registers.py --cache DIR --build-de-subset
 Fetch Zefix core data via LINDAS (16 paged SPARQL requests, cached):
   python3 scripts/match_dach_registers.py --cache DIR --fetch-lindas
-Fetch JustizOnline name searches (<= 1 request/second, hard cap 400, cached):
+Fetch JustizOnline name searches (<= 1 request/3s, cached):
   python3 scripts/match_dach_registers.py --cache DIR --fetch-justizonline
 
 Cache dir may hold: de_companies_ocdata.jsonl.bz2 (-> de-offeneregister-subset.jsonl),
 lindas-zefix-page-NN.csv, at_fbnr_oenace.csv, justizonline-cache.json,
 ch-lohnbrennereien-2026-07.txt (BAZG PDF via pdftotext -layout, licence layer). Missing inputs are
 skipped with a warning. Idempotent: same inputs -> same outputs.
+
+Names, grading, fetching and the row schema come from scripts/crosswalklib. Fetching goes
+through one crosswalklib.fetch.Fetcher (TLS verified, one request every `delay` seconds, a
+hard cap, everything logged before it is sent); 20 Sep 2026: 436 requests already spent this
+pass across LINDAS paging and JustizOnline name/detail lookups, over the historical 400
+budget, so the Fetcher is built with spent=436 and makes nothing further unless a --fetch-*
+flag is passed and the cap is raised.
 """
 from __future__ import annotations
 
@@ -46,20 +53,19 @@ import csv
 import json
 import re
 import sys
-import time
-import unicodedata
 import urllib.parse
-import urllib.request
 from collections import defaultdict
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from crosswalklib import fetch, grading, names, rows  # noqa: E402
+from crosswalklib.grading import Evidence  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 GEO = ROOT / "public" / "data" / "distilleries.geojson"
 OUT_DIR = ROOT / "data" / "company-crosswalk"
 OUT_CANDIDATES = OUT_DIR / "dach-candidates.csv"
 OUT_LICENCES = OUT_DIR / "dach-licences.csv"
-FIELDS = ["slug", "distillery_name", "country", "registry", "company_number", "company_name",
-          "relation", "match_method", "confidence", "verified", "source", "note"]
 COUNTRIES = ("Germany", "Austria", "Switzerland")
 
 SRC_OR = "https://offeneregister.de/"
@@ -67,7 +73,6 @@ OC_URL = "https://opencorporates.com/companies/de/{}"
 SRC_JOP = "https://justizonline.gv.at/jop/web/firmenbuchabfrage"
 JOP_SEARCH = "https://justizonline.gv.at/jop/service/fba/search"
 JOP_DETAIL = "https://justizonline.gv.at/jop/service/fba/{}"
-JOP_CAP = 50  # per run. 20 Sep 2026: 11 probes + 337 requests (100 answered, 237 x 429) already spent of the 400 budget
 SRC_OENACE = "https://www.data.gv.at/katalog/datasets/456ce845-5d87-3877-bc0e-33c5371c7aa7"
 SRC_ZEFIX = "https://opendata.swiss/de/dataset/zefix-zentraler-firmenindex"
 ZEFIX_URL = "https://www.zefix.admin.ch/de/search/entity/list/firm/{}"
@@ -76,39 +81,7 @@ SRC_BAZG = "https://www.bazg.admin.ch/dam/de/sd-web/7m2WSkYkaDRN/Adressliste%20L
 LINDAS_PAGE = 25000
 LINDAS_MAX_PAGES = 80
 
-SUFFIX = {"gmbh", "ag", "kg", "co", "cokg", "ohg", "ek", "e", "k", "ug", "haftungsbeschrankt", "gbr", "eu",
-          "sarl", "sa", "sagl", "kgaa", "eg", "mbh", "gesellschaft", "und", "and", "der", "die", "das",
-          "von", "vom", "zum", "zur", "am", "im", "in", "a", "an", "the", "de", "du", "la", "le", "les",
-          "des", "et", "u", "mit", "bei", "fur", "for", "inh", "inhaber", "ehem", "sohne", "sohn", "geb",
-          "sarl", "snc", "liq", "liquidation", "i", "l", "d", "ltd", "limited", "inc", "gen", "reg",
-          "genossenschaft", "verein", "stiftung", "familie", "fam"}
-GENERIC = {"brennerei", "destillerie", "distillerie", "distillery", "distillers", "distilling", "destille",
-           "destillation", "distilleria", "edelbrennerei", "obstbrennerei", "whiskydestillerie",
-           "whiskybrennerei", "whisky", "whiskey", "schnapsbrennerei", "edelbrand", "edelbrande", "brand",
-           "brande", "spirits", "spirituosen", "spirit", "likor", "likore", "likormanufaktur", "manufaktur",
-           "hofbrennerei", "brauerei", "weingut", "gasthof", "gasthaus", "hotel", "pension", "destillate",
-           "destillat", "schnaps", "obst", "weinbau", "weinhaus", "kelterei", "mosterei", "hofladen",
-           "brennhutte", "brennstube", "brennstuberl", "schaubrennerei", "hof", "wirtshaus", "landgasthof",
-           "weinstube", "edel", "getranke", "feinbrand", "feinbrennerei", "brennhaus", "abfindungsbrennerei",
-           "kleinbrennerei", "privatbrennerei", "hausbrennerei", "landbrennerei", "kornbrennerei", "korn",
-           "gin", "vodka", "rum", "absinthe", "absinth", "eaux", "vie", "eau", "geist", "brennen", "genuss",
-           "genussmanufaktur", "craft", "distiller", "bio", "weinkellerei", "kellerei", "winzer", "weine",
-           "wein", "vin", "vins", "cave", "caves", "domaine", "brasserie", "birra", "bier", "malt",
-           "single", "whiskys", "likoerfabrik", "likorfabrik", "spezialitaten", "spezialitatenbrennerei",
-           "weinbrennerei", "weinbrand", "obstbrande", "verkauf", "shop", "hofladen", "cafe", "restaurant",
-           "gastronomie", "landhotel", "gaststatte", "gasthof", "kraeuter", "krauter", "naturbrennerei",
-           "qualitatsbrand", "edelbranntweinbrennerei", "branntweinbrennerei", "mountain", "berg"}
-STOP = SUFFIX | GENERIC
 COMMON_TOKEN_CAP = 3000
-SIGNAL = {"brennerei", "destillerie", "distillerie", "distillery", "distillers", "distilling", "destille",
-          "destillation", "edelbrennerei", "obstbrennerei", "whiskydestillerie", "whiskybrennerei", "whisky",
-          "whiskey", "schnapsbrennerei", "edelbrand", "edelbrande", "brande", "spirits", "spirituosen",
-          "spirit", "likor", "likore", "likormanufaktur", "hofbrennerei", "brauerei", "destillate",
-          "destillat", "schnaps", "kelterei", "mosterei", "brennhutte", "brennstube", "schaubrennerei",
-          "feinbrand", "feinbrennerei", "brennhaus", "kornbrennerei", "korn", "gin", "vodka", "rum",
-          "absinthe", "absinth", "weinkellerei", "kellerei", "weinbrennerei", "weinbrand", "obstbrande",
-          "likorfabrik", "likoerfabrik", "getranke", "weingut", "malt", "bier", "brasserie", "naturbrennerei",
-          "edelbranntweinbrennerei", "branntweinbrennerei", "spezialitatenbrennerei", "brennen", "wein"}
 PURPOSE_RE = re.compile(r"brennerei|destill|distill|spirituos|schnaps|whisk|edelbr|obstbr|liqueur|likör|likor|"
                         r"eaux?[- ]de[- ]vie|alcool|alkohol|absinth|gin\b|vodka|wodka|rum\b|grappa", re.I)
 
@@ -184,74 +157,25 @@ ALIASES = {
 
 
 # ---------------------------------------------------------------- helpers ----
-def norm(s: str) -> str:
-    s = (s or "").lower().replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
-    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
-    s = s.replace("&", " and ").replace("'", "").replace("’", "").replace("´", "")
-    return re.sub(r"[^a-z0-9 ]+", " ", s)
-
-
-def toks(s: str, keep_generic: bool = False) -> frozenset:
-    stop = SUFFIX if keep_generic else STOP
-    return frozenset(t for t in norm(s).split() if t not in stop)
-
-
-def jaccard(a: frozenset, b: frozenset) -> float:
-    if not a or not b:
-        return 0.0
-    return len(a & b) / len(a | b)
-
-
 def city_eq(a: str, b: str) -> bool:
-    a, b = norm(a).strip(), norm(b).strip()
+    a, b = names.fold(a).strip(), names.fold(b).strip()
     if not a or not b:
         return False
     a1, b1 = a.split()[0], b.split()[0]
     return a == b or a in b or b in a or (len(a1) > 3 and a1 == b1)
 
 
-def grade(j: float, exact: bool, loc_ok: bool, active: bool, distinctive: bool) -> str | None:
-    if exact or j >= 0.8:
-        if not active:
-            return "medium"
-        return "high" if (loc_ok or distinctive) else "medium"
-    if j >= 0.6:
-        return "medium" if loc_ok else "low"
-    if j >= 0.4 and loc_ok:
-        return "low"
-    return None
-
-
-def has_signal(name: str) -> bool:
-    return bool(toks(name, keep_generic=True) & SIGNAL)
-
-
-def adjust(g: str | None, pin_toks: frozenset, company_name: str, pin_city: str, company_city: str,
-           j: float, purpose_ok: bool = False) -> str | None:
-    """Single-token or partial matches need a drinks word in the name (or a distilling purpose);
-    a known city conflict drops one level."""
-    if not g:
-        return None
-    if (len(pin_toks) <= 1 or j < 0.8) and not (has_signal(company_name) or purpose_ok):
-        return None
-    if pin_city and company_city and not city_eq(pin_city, company_city):
-        if len(pin_toks) <= 1:
-            return None
-        g = {"high": "medium", "medium": "low", "low": None}[g]
-    return g
+def location_for(pin_city: str, other_city: str) -> str:
+    """Evidence.location when the direct city/postcode check already failed: a known
+    different city is a `conflict`, otherwise there simply is not enough to say."""
+    if pin_city and other_city and not city_eq(pin_city, other_city):
+        return "conflict"
+    return "none"
 
 
 def shared_ok(pin, qt: frozenset, ct: frozenset) -> bool:
     """The overlap must contain something other than the pin's own town name."""
-    return bool((qt & ct) - toks(pin["city"]))
-
-
-def exact_key(name: str) -> str:
-    return " ".join(sorted(toks(name, keep_generic=True)))
-
-
-def relation_for(pin_toks: frozenset, legal_name: str) -> str:
-    return "self" if pin_toks & toks(legal_name) else "operator"
+    return bool((qt & ct) - names.tokens(pin["city"]))
 
 
 ADDR_RE = re.compile(r"(?:^|,)\s*([A-Z]{1,2}-)?(\d{4,5})\s+([^,]+?)\s*(?:,|$)")
@@ -274,7 +198,7 @@ def load_pins():
             continue
         pc, city = pin_location(p.get("address") or "")
         pins.append({"slug": p["slug"], "name": p["name"], "country": p["country"], "pc": pc, "city": city,
-                     "toks": toks(p["name"]), "full": toks(p["name"], keep_generic=True),
+                     "toks": names.tokens(p["name"]),
                      "aliases": ALIASES.get(p["slug"], []), "address": p.get("address") or ""})
     return pins
 
@@ -296,7 +220,7 @@ def build_de_subset(cache: Path, pins) -> Path:
         return out
     want = set()
     for p in pins:
-        for t in p["toks"] | set(t for a in p["aliases"] for t in toks(a)):
+        for t in p["toks"] | set(t for a in p["aliases"] for t in names.tokens(a)):
             if len(t) >= 3 and not t.isdigit():
                 want.add(t)
     n = kept = 0
@@ -304,7 +228,7 @@ def build_de_subset(cache: Path, pins) -> Path:
         for line in fh:
             n += 1
             d = json.loads(line)
-            if toks(d.get("name", "")) & want:
+            if names.tokens(d.get("name", "")) & want:
                 a = d.get("all_attributes", {})
                 oh.write(json.dumps({"name": d.get("name"), "number": d.get("company_number"),
                                      "native": a.get("native_company_number"), "office": a.get("registered_office"),
@@ -318,23 +242,23 @@ def build_de_subset(cache: Path, pins) -> Path:
 
 def load_de(cache: Path):
     path = cache / "de-offeneregister-subset.jsonl"
-    rows, index, exact = [], defaultdict(list), defaultdict(list)
+    recs, index, exact = [], defaultdict(list), defaultdict(list)
     if not path.exists():
         print(f"warn: missing {path} (run --build-de-subset)", file=sys.stderr)
-        return rows, index, exact
+        return recs, index, exact
     with path.open(encoding="utf-8") as fh:
         for line in fh:
             r = json.loads(line)
-            t = toks(r["name"] or "")
+            t = names.tokens(r["name"] or "")
             if not t:
                 continue
-            i = len(rows)
-            rows.append(r)
+            i = len(recs)
+            recs.append(r)
             for tok in t:
                 index[tok].append(i)
-            exact[exact_key(r["name"])].append(i)
-    print(f"de: {len(rows)} OffeneRegister records indexed", file=sys.stderr)
-    return rows, index, exact
+            exact[names.norm(r["name"], names.SUFFIX)].append(i)
+    print(f"de: {len(recs)} OffeneRegister records indexed", file=sys.stderr)
+    return recs, index, exact
 
 
 def de_note(r, j, loc_ok, extra=""):
@@ -344,14 +268,14 @@ def de_note(r, j, loc_ok, extra=""):
 
 
 def match_de(pins, de):
-    rows, index, _ = de
+    recs, index, _ = de
     out = []
     for p in pins:
         if p["country"] != "Germany" and not p["address"].endswith("Germany"):
             continue
         seen = {}
         for q in [p["name"]] + p["aliases"]:
-            qt = toks(q)
+            qt = names.tokens(q)
             if not qt:
                 continue
             cand = set()
@@ -360,16 +284,17 @@ def match_de(pins, de):
                 if 0 < len(post) <= COMMON_TOKEN_CAP:
                     cand.update(post)
             for i in cand:
-                r = rows[i]
-                ct = toks(r["name"])
+                r = recs[i]
+                ct = names.tokens(r["name"])
                 if not shared_ok(p, qt, ct):
                     continue
-                j = jaccard(qt, ct)
-                exact = toks(q, True) == toks(r["name"], True)
+                j = names.jaccard(qt, ct)
+                exact = names.exact(q, r["name"])
                 loc_ok = city_eq(p["city"], r["office"] or "") or (bool(p["pc"]) and p["pc"] in (r["address"] or ""))
                 active = (r["status"] or "") == "currently registered"
-                distinctive = len(qt) >= 2 and qt <= ct
-                g = adjust(grade(j, exact, loc_ok, active, distinctive), qt, r["name"], p["city"], r["office"] or "", j)
+                location = "strong" if loc_ok else location_for(p["city"], r["office"] or "")
+                e = Evidence(j, exact, location, active, names.distinctive(p["name"]), names.has_signal(r["name"]))
+                g = grading.grade(e)
                 if not g:
                     continue
                 score = j + (0.3 if active else 0) + (0.2 if loc_ok else 0) + (0.2 if exact else 0)
@@ -377,9 +302,11 @@ def match_de(pins, de):
                 if key not in seen or seen[key][0] < score:
                     seen[key] = (score, g, r, j, loc_ok)
         for score, g, r, j, loc_ok in rank_and_emit(seen):
-            out.append([p["slug"], p["name"], p["country"], "de-offeneregister", r["native"] or r["number"], r["name"],
-                        relation_for(p["toks"], r["name"]), "offeneregister-bulk-name", g, "",
-                        OC_URL.format(r["number"]), de_note(r, j, loc_ok)])
+            out.append(rows.make(p["slug"], p["name"], p["country"], "de-offeneregister",
+                                  r["native"] or r["number"], r["name"],
+                                  grading.relation_for(p["toks"], names.tokens(r["name"])),
+                                  "offeneregister-bulk-name", g, OC_URL.format(r["number"]),
+                                  de_note(r, j, loc_ok)))
     return out
 
 
@@ -398,49 +325,27 @@ def load_oenace(cache: Path):
 
 
 class JustizOnline:
-    """Free JustizOnline Firmenbuch search. 20 Sep 2026: the server answers 429 after roughly 100
-    requests at one per second, so the client waits 3 s between calls and stops for the run on
-    the first 429 (a 429 still counts against the cap; nothing is retried)."""
-    INTERVAL = 3.0
+    """Free JustizOnline Firmenbuch search. 20 Sep 2026: the server answers 429 after roughly
+    100 requests at one per second, so the shared Fetcher is built with a 3s delay and stops
+    for the run on the first 429. Requests, pacing, the cap, logging and TLS all come from
+    crosswalklib.fetch.Fetcher; this class keeps only its own cache file, since past answers
+    were saved keyed by search term / detail id, not by request URL (the Fetcher's cache is
+    URL-hash keyed) -- that old-format file is read as-is and never re-fetched."""
 
-    def __init__(self, cache_file: Path, fetch: bool, cap: int = 400):
+    def __init__(self, cache_file: Path, f: fetch.Fetcher):
         self.cache_file = cache_file
         self.cache = json.loads(cache_file.read_text()) if cache_file.exists() else {}
-        self.fetch, self.cap, self.requests, self.last, self.blocked = fetch, cap, 0, 0.0, False
+        self.f = f
 
-    def _get(self, url: str):
-        if self.blocked:
-            return None
-        if self.requests >= self.cap:
-            print("justizonline: request cap reached", file=sys.stderr)
-            return None
-        wait = self.INTERVAL - (time.time() - self.last)
-        if wait > 0:
-            time.sleep(wait)
-        req = urllib.request.Request(url, headers={"User-Agent": "stillbound-distillery-map crosswalk (stdlib urllib)",
-                                                   "Accept": "application/json"})
-        self.last = time.time()
-        self.requests += 1
-        try:
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                return json.loads(resp.read().decode())
-        except Exception as e:  # noqa: BLE001
-            print(f"justizonline: {url} failed: {e}", file=sys.stderr)
-            if "429" in str(e):
-                self.blocked = True
-                print("justizonline: 429 received, no further requests this run", file=sys.stderr)
-            return None
-
-    def _save(self):
+    def _save(self) -> None:
         self.cache_file.write_text(json.dumps(self.cache, indent=1, ensure_ascii=False))
 
     def search(self, q: str):
-        key = "s:" + norm(q).strip()
+        key = "s:" + names.fold(q).strip()
         if key in self.cache:
             return self.cache[key]
-        if not self.fetch:
-            return None
-        data = self._get(JOP_SEARCH + "?" + urllib.parse.urlencode({"term": q, "size": 10, "page": 0}))
+        url = JOP_SEARCH + "?" + urllib.parse.urlencode({"term": q, "size": 10, "page": 0})
+        data = self.f.json(url, headers={"Accept": "application/json"})
         if data is None:
             return None
         self.cache[key] = data.get("companies", [])
@@ -451,9 +356,7 @@ class JustizOnline:
         key = "d:" + cid
         if key in self.cache:
             return self.cache[key]
-        if not self.fetch:
-            return None
-        data = self._get(JOP_DETAIL.format(urllib.parse.quote(cid)))
+        data = self.f.json(JOP_DETAIL.format(urllib.parse.quote(cid)), headers={"Accept": "application/json"})
         if data is None:
             return None
         self.cache[key] = {"legalForm": (data.get("legalForm") or {}).get("name"),
@@ -475,7 +378,7 @@ def resolve_oenace_1101(jop: JustizOnline, oenace: dict, fetch_names: bool):
         if not code.startswith("1101"):
             continue
         term = fnr.lstrip("0")
-        res = jop.search(term) if (fetch_names or ("s:" + norm(term).strip()) in jop.cache) else None
+        res = jop.search(term) if (fetch_names or ("s:" + names.fold(term).strip()) in jop.cache) else None
         if not res:
             continue
         hit = next((r for r in res if (r.get("fnr") or "").lower() == fnr), None)
@@ -487,17 +390,18 @@ def resolve_oenace_1101(jop: JustizOnline, oenace: dict, fetch_names: bool):
 
 def grade_at(p, q, r, oenace):
     nm = r.get("name") or ""
-    qt, ct = toks(q), toks(nm)
+    qt, ct = names.tokens(q), names.tokens(nm)
     if not qt or not shared_ok(p, qt, ct):
         return None
-    j = jaccard(qt, ct)
-    exact = toks(q, True) == toks(nm, True)
+    j = names.jaccard(qt, ct)
+    exact = names.exact(q, nm)
     loc_ok = city_eq(p["city"], r.get("domicile") or "")
     active = r.get("status") == "ACTIVE"
     code = oenace.get((r.get("fnr") or "").lower(), "")
     purpose_ok = code.startswith("1101")
-    distinctive = len(qt) >= 2 and qt <= ct
-    g = adjust(grade(j, exact, loc_ok, active, distinctive or purpose_ok), qt, nm, p["city"], r.get("domicile") or "", j, purpose_ok)
+    location = "strong" if loc_ok else location_for(p["city"], r.get("domicile") or "")
+    e = Evidence(j, exact, location, active, names.distinctive(p["name"]), names.has_signal(nm) or purpose_ok)
+    g = grading.grade(e)
     if not g:
         return None
     score = j + (0.3 if active else 0) + (0.2 if loc_ok else 0) + (0.3 if purpose_ok else 0) + (0.2 if exact else 0)
@@ -525,8 +429,8 @@ def match_at(pins, jop: JustizOnline, oenace: dict, fetch_names: bool = False, f
                     seen[r["fnr"]] = hit + ("oenace-1101-list",)
         # 2. JustizOnline word search: full name first, distinctive tokens as a fallback
         for q in [p["name"]] + p["aliases"]:
-            full = [t for t in norm(q).split() if t not in SUFFIX]
-            distinct = sorted(toks(q))
+            full = [t for t in names.fold(q).split() if t not in names.SUFFIX]
+            distinct = sorted(names.tokens(q))
             terms = [" ".join(full)] if full else []
             if fallback and len(distinct) >= 2 and " ".join(distinct) != " ".join(full):
                 terms.append(" ".join(distinct))
@@ -548,9 +452,11 @@ def match_at(pins, jop: JustizOnline, oenace: dict, fetch_names: bool = False, f
                     + (f"OENACE {code[:2]}.{code[2:4]}{' = Herstellung von Spirituosen' if code.startswith('1101') else ''}"
                        if code else "no OENACE code in the Statistik Austria list")
                     + "; JustizOnline free search, legal form from the name")
-            out.append([p["slug"], p["name"], "Austria", "at-firmenbuch", fn_format(r.get("fnr") or ""), r.get("name"),
-                        relation_for(p["toks"], r.get("name") or ""), how, g, "",
-                        SRC_JOP + "/suchergebnis?search=" + urllib.parse.quote((r.get("fnr") or "").lstrip("0")), note])
+            out.append(rows.make(p["slug"], p["name"], "Austria", "at-firmenbuch", fn_format(r.get("fnr") or ""),
+                                  r.get("name"), grading.relation_for(p["toks"], names.tokens(r.get("name") or "")),
+                                  how, g,
+                                  SRC_JOP + "/suchergebnis?search=" + urllib.parse.quote((r.get("fnr") or "").lstrip("0")),
+                                  note))
     return out
 
 
@@ -564,45 +470,35 @@ SELECT ?c ?legal ?uid ?loc ?street ?zip ?typ ?desc FROM <https://lindas.admin.ch
 } ORDER BY ?c LIMIT %d OFFSET %d"""
 
 
-def fetch_lindas(cache: Path):
-    """Page through the Zefix graph on LINDAS (one request per page, cached as CSV)."""
-    n = 0
+def fetch_lindas(cache: Path, f: fetch.Fetcher) -> None:
+    """Page through the Zefix graph on LINDAS. One request per page, written straight to the
+    same page filename the matcher has always used (the cache lookup below is by filename,
+    not by the Fetcher's own URL-hash cache, so this is idempotent the same way it always was:
+    an existing page file is never re-requested)."""
     for page in range(LINDAS_MAX_PAGES):
         path = cache / f"lindas-zefix-page-{page:02d}.csv"
         if path.exists():
             continue
         q = LINDAS_Q % (LINDAS_PAGE, page * LINDAS_PAGE)
-        req = urllib.request.Request(LINDAS, data=urllib.parse.urlencode({"query": q}).encode(),
-                                     headers={"Accept": "text/csv", "User-Agent": "stillbound-distillery-map crosswalk (stdlib urllib)"})
-        t0 = time.time()
-        body = None
-        for attempt, backoff in enumerate((10, 30, 60)):
-            n += 1
-            try:
-                with urllib.request.urlopen(req, timeout=600) as resp:
-                    body = resp.read().decode("utf-8")
-                break
-            except Exception as e:  # noqa: BLE001  (504 gateway timeouts happen on big pages)
-                print(f"lindas: page {page} attempt {attempt + 1} failed: {e}; retry in {backoff}s", file=sys.stderr)
-                time.sleep(backoff)
+        url = LINDAS + "?" + urllib.parse.urlencode({"query": q})
+        body = f.text(url, headers={"Accept": "text/csv"})
         if body is None:
-            print(f"lindas: giving up on page {page}", file=sys.stderr)
+            print(f"lindas: page {page} not fetched; stopping", file=sys.stderr)
             break
         path.write_text(body, encoding="utf-8")
-        rows = sum(1 for _ in csv.reader(body.splitlines())) - 1
-        print(f"lindas: page {page} {rows} rows in {time.time() - t0:.0f}s", file=sys.stderr)
-        if rows < LINDAS_PAGE:
+        n_rows = sum(1 for _ in csv.reader(body.splitlines())) - 1
+        print(f"lindas: page {page} {n_rows} rows", file=sys.stderr)
+        if n_rows < LINDAS_PAGE:
             break
-        time.sleep(1)
-    print(f"lindas: {n} requests this run", file=sys.stderr)
+    print("lindas: " + f.summary(), file=sys.stderr)
 
 
 def load_ch(cache: Path):
-    rows, index = [], defaultdict(list)
+    recs, index = [], defaultdict(list)
     files = sorted(cache.glob("lindas-zefix-page-*.csv"))
     if not files:
         print("warn: no lindas-zefix-page-*.csv in cache (run --fetch-lindas)", file=sys.stderr)
-        return rows, index
+        return recs, index
     seen = {}
     for f in files:
         with f.open(encoding="utf-8", newline="") as fh:
@@ -610,15 +506,15 @@ def load_ch(cache: Path):
                 uid = r["uid"]
                 if uid in seen:  # a company can have several address rows; keep the first
                     continue
-                seen[uid] = len(rows)
-                rows.append({"ehraid": r["c"].rsplit("/", 1)[-1], "name": r["legal"], "uid": uid, "loc": r["loc"],
+                seen[uid] = len(recs)
+                recs.append({"ehraid": r["c"].rsplit("/", 1)[-1], "name": r["legal"], "uid": uid, "loc": r["loc"],
                              "street": r["street"], "zip": r["zip"], "typ": r["typ"].rsplit("/", 1)[-1],
                              "purpose": bool(PURPOSE_RE.search(r.get("desc") or ""))})
-                for tok in toks(r["legal"]):
+                for tok in names.tokens(r["legal"]):
                     index[tok].append(seen[uid])
-    print(f"ch: {len(rows)} Zefix entities indexed from {len(files)} LINDAS pages; "
-          f"{sum(1 for r in rows if r['purpose'])} with a distilling/spirits purpose", file=sys.stderr)
-    return rows, index
+    print(f"ch: {len(recs)} Zefix entities indexed from {len(files)} LINDAS pages; "
+          f"{sum(1 for r in recs if r['purpose'])} with a distilling/spirits purpose", file=sys.stderr)
+    return recs, index
 
 
 def uid_format(uid: str) -> str:
@@ -627,14 +523,14 @@ def uid_format(uid: str) -> str:
 
 
 def match_ch(pins, ch):
-    rows, index = ch
+    recs, index = ch
     out = []
     for p in pins:
         if p["country"] != "Switzerland":
             continue
         seen = {}
         for q in [p["name"]] + p["aliases"]:
-            qt = toks(q)
+            qt = names.tokens(q)
             if not qt:
                 continue
             cand = set()
@@ -643,15 +539,17 @@ def match_ch(pins, ch):
                 if 0 < len(post) <= COMMON_TOKEN_CAP:
                     cand.update(post)
             for i in cand:
-                r = rows[i]
-                ct = toks(r["name"])
+                r = recs[i]
+                ct = names.tokens(r["name"])
                 if not shared_ok(p, qt, ct):
                     continue
-                j = jaccard(qt, ct)
-                exact = toks(q, True) == toks(r["name"], True)
+                j = names.jaccard(qt, ct)
+                exact = names.exact(q, r["name"])
                 loc_ok = city_eq(p["city"], r["loc"]) or (bool(p["pc"]) and p["pc"] == r["zip"])
-                distinctive = len(qt) >= 2 and qt <= ct
-                g = adjust(grade(j, exact, loc_ok, True, distinctive or r["purpose"]), qt, r["name"], p["city"], r["loc"], j, r["purpose"])
+                location = "strong" if loc_ok else location_for(p["city"], r["loc"])
+                e = Evidence(j, exact, location, True, names.distinctive(p["name"]),
+                             names.has_signal(r["name"]) or r["purpose"])
+                g = grading.grade(e)
                 if not g:
                     continue
                 score = j + (0.2 if loc_ok else 0) + (0.3 if r["purpose"] else 0) + (0.2 if exact else 0)
@@ -662,9 +560,9 @@ def match_ch(pins, ch):
             note = (f"name jaccard {j:.2f}; Zefix active entity (LINDAS core data, daily); legal form eCH-0097 {r['typ']}; "
                     f"seat {r['loc']}{' (city agrees)' if loc_ok else ''}, {r['street']}, {r['zip']}; "
                     + ("Zweck mentions distilling/spirits" if r["purpose"] else "Zweck has no distilling word"))
-            out.append([p["slug"], p["name"], "Switzerland", "ch-zefix", uid_format(r["uid"]), r["name"],
-                        relation_for(p["toks"], r["name"]), "lindas-zefix-bulk-name", g, "",
-                        ZEFIX_URL.format(r["ehraid"]), note])
+            out.append(rows.make(p["slug"], p["name"], "Switzerland", "ch-zefix", uid_format(r["uid"]), r["name"],
+                                  grading.relation_for(p["toks"], names.tokens(r["name"])),
+                                  "lindas-zefix-bulk-name", g, ZEFIX_URL.format(r["ehraid"]), note))
     return out
 
 
@@ -692,39 +590,43 @@ def load_bazg(cache: Path):
 
 
 def match_bazg(pins, bazg, ch):
-    rows, index = ch
+    recs, index = ch
     lic, cands = [], []
-    exact = defaultdict(list)
-    for i, r in enumerate(rows):
-        exact[exact_key(r["name"])].append(i)
+    exact_idx = defaultdict(list)
+    for i, r in enumerate(recs):
+        exact_idx[names.norm(r["name"], names.SUFFIX)].append(i)
     for p in pins:
         if p["country"] != "Switzerland":
             continue
         best = {}
         for b in bazg:
-            bt = toks(b["name"])
+            bt = names.tokens(b["name"])
             if not bt or not shared_ok(p, p["toks"], bt):
                 continue
-            j = jaccard(p["toks"], bt)
+            j = names.jaccard(p["toks"], bt)
             loc_ok = (bool(p["pc"]) and p["pc"] == b["zip"]) or city_eq(p["city"], b["town"])
-            g = grade(j, toks(p["name"], True) == toks(b["name"], True), loc_ok, True, len(p["toks"]) >= 2 and p["toks"] <= bt)
-            if not g or (j < 0.6 and not loc_ok):
+            location = "strong" if loc_ok else location_for(p["city"], b["town"])
+            exact = names.exact(p["name"], b["name"])
+            e = Evidence(j, exact, location, True, names.distinctive(p["name"]), names.has_signal(b["name"]))
+            g = grading.grade(e)
+            if not g:
                 continue
             key = b["name"] + b["zip"]
             score = j + (0.3 if loc_ok else 0)
             if key not in best or best[key][0] < score:
                 best[key] = (score, g, b, j, loc_ok)
         for score, g, b, j, loc_ok in sorted(best.values(), key=lambda x: -x[0])[:2]:
-            lic.append([p["slug"], p["name"], "Switzerland", "ch-bazg-lohnbrennerei", "", b["name"], "self",
-                        "bazg-list-name", g, "", SRC_BAZG,
-                        f"BAZG Liste der Lohnbrennereien, Stand 01.07.2026; {b['zip']} {b['town']} {b['canton']}"
-                        f"{' (location agrees)' if loc_ok else ''}; name jaccard {j:.2f}; contract distiller, not a register number"])
-            for i in exact.get(exact_key(b["name"]), [])[:1]:
-                r = rows[i]
-                cands.append([p["slug"], p["name"], "Switzerland", "ch-zefix", uid_format(r["uid"]), r["name"],
-                              relation_for(p["toks"], r["name"]), "bazg-list+lindas-zefix", g, "", ZEFIX_URL.format(r["ehraid"]),
-                              f"legal name from the BAZG Lohnbrennerei list ({b['zip']} {b['town']}), name jaccard {j:.2f}; "
-                              f"Zefix active entity, seat {r['loc']}, {r['street']}, {r['zip']}"])
+            lic.append(rows.make(p["slug"], p["name"], "Switzerland", "ch-bazg-lohnbrennerei", "", b["name"], "self",
+                                  "bazg-list-name", g, SRC_BAZG,
+                                  f"BAZG Liste der Lohnbrennereien, Stand 01.07.2026; {b['zip']} {b['town']} {b['canton']}"
+                                  f"{' (location agrees)' if loc_ok else ''}; name jaccard {j:.2f}; contract distiller, not a register number"))
+            for i in exact_idx.get(names.norm(b["name"], names.SUFFIX), [])[:1]:
+                r = recs[i]
+                cands.append(rows.make(p["slug"], p["name"], "Switzerland", "ch-zefix", uid_format(r["uid"]), r["name"],
+                                        grading.relation_for(p["toks"], names.tokens(r["name"])),
+                                        "bazg-list+lindas-zefix", g, ZEFIX_URL.format(r["ehraid"]),
+                                        f"legal name from the BAZG Lohnbrennerei list ({b['zip']} {b['town']}), name jaccard {j:.2f}; "
+                                        f"Zefix active entity, seat {r['loc']}, {r['street']}, {r['zip']}"))
     return lic, cands
 
 
@@ -741,63 +643,74 @@ def main() -> int:
     cache = Path(args.cache).expanduser()
     cache.mkdir(parents=True, exist_ok=True)
 
+    # One Fetcher for the whole run: LINDAS paging and JustizOnline both go through it. 20 Sep
+    # 2026: 436 requests already spent this pass, over the historical 400 budget -- spent=436
+    # carries that count over, so nothing more is fetched until a --fetch-* flag raises it back
+    # under cap. delay=3.0 matches JustizOnline's tighter rate limit (the binding constraint of
+    # the two registries this touches); the slower pace is harmless for LINDAS too.
+    f = fetch.Fetcher(cache, allow=(args.fetch_lindas or args.fetch_justizonline), cap=400,
+                       delay=3.0, log=cache / "requests.log", spent=436)
+
     pins = load_pins()
     print(f"{len(pins)} DACH pins: " + ", ".join(f"{c} {sum(1 for p in pins if p['country'] == c)}" for c in COUNTRIES), file=sys.stderr)
 
     if args.build_de_subset:
         build_de_subset(cache, pins)
     if args.fetch_lindas:
-        fetch_lindas(cache)
+        fetch_lindas(cache, f)
 
     de_c = match_de(pins, load_de(cache))
-    jop = JustizOnline(cache / "justizonline-cache.json", args.fetch_justizonline, JOP_CAP)
+    jop = JustizOnline(cache / "justizonline-cache.json", f)
     at_c = match_at(pins, jop, load_oenace(cache), args.fetch_oenace_names, args.jop_fallback)
-    print(f"justizonline: {jop.requests} requests this run (cap {jop.cap}), {len(jop.cache)} cached calls", file=sys.stderr)
     ch = load_ch(cache)
     ch_c = match_ch(pins, ch)
     lic, bazg_c = match_bazg(pins, load_bazg(cache), ch)
     ch_c += bazg_c
+    print("fetch: " + f.summary(), file=sys.stderr)
 
     hand = []
-    for slug, rows in HAND.items():
+    for slug, hrows in HAND.items():
         p = next((x for x in pins if x["slug"] == slug), None)
         if not p:
             continue
-        for reg, num, name, rel, conf, note, src in rows:
-            hand.append([slug, p["name"], p["country"], reg, num, name, rel, "hand", conf, "", src, note])
+        for reg, num, name, rel, conf, note, src in hrows:
+            hand.append(rows.make(slug, p["name"], p["country"], reg, num, name, rel, "hand", conf, src, note))
 
     # a machine row that finds the hand row's company fills its number (hand rows carry the relation and evidence)
+    machine_pool = de_c + at_c + ch_c
     for h in hand:
-        if not h[4]:
-            m = next((r for r in de_c + at_c + ch_c if r[0] == h[0] and r[3] == h[3] and norm(r[5]).strip() == norm(h[5]).strip()), None)
+        if not h["company_number"]:
+            m = next((r for r in machine_pool if r["slug"] == h["slug"] and r["registry"] == h["registry"]
+                      and names.fold(r["company_name"]).strip() == names.fold(h["company_name"]).strip()), None)
             if m:
-                h[4], h[10], h[11] = m[4], m[10], h[11] + "; " + m[11]
-    hand_keys = {(r[0], r[3], r[4]) for r in hand}
-    hand_names = {(r[0], r[3], norm(r[5]).strip()) for r in hand}
-    conf_rank = {"high": 0, "medium": 1, "low": 2}
+                h["company_number"] = m["company_number"]
+                h["note"] = h["note"] + "; " + m["note"]
+    hand_keys = {(r["slug"], r["registry"], r["company_number"]) for r in hand}
+    hand_names = {(r["slug"], r["registry"], names.fold(r["company_name"]).strip()) for r in hand}
     machine = {}
-    for r in de_c + at_c + ch_c:
-        if (r[0], r[3], r[4]) in hand_keys or (r[0], r[3], norm(r[5]).strip()) in hand_names:
+    for r in machine_pool:
+        key_name = names.fold(r["company_name"]).strip()
+        if (r["slug"], r["registry"], r["company_number"]) in hand_keys or (r["slug"], r["registry"], key_name) in hand_names:
             continue
-        k = (r[0], r[3], r[4] or norm(r[5]).strip())
-        if k not in machine or conf_rank[r[8]] < conf_rank[machine[k][8]]:
+        k = (r["slug"], r["registry"], r["company_number"] or key_name)
+        if k not in machine or grading.ORDER.index(r["confidence"]) < grading.ORDER.index(machine[k]["confidence"]):
             machine[k] = r
     final = hand + list(machine.values())
+    grading.apply_guards(final, hand)
     order = {s["slug"]: i for i, s in enumerate(pins)}
-    final.sort(key=lambda r: (order[r[0]], r[3], conf_rank[r[8]], r[5]))
+    final.sort(key=lambda r: (order[r["slug"]], r["registry"], grading.ORDER.index(r["confidence"]), r["company_name"]))
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    licences = sorted(lic, key=lambda r: (order[r[0]], r[3], conf_rank[r[8]]))
-    for path, rows_ in ((OUT_CANDIDATES, final), (OUT_LICENCES, licences)):
-        with path.open("w", newline="") as fh:
-            w = csv.writer(fh)
-            w.writerow(FIELDS)
-            w.writerows(rows_)
+    licences = sorted(lic, key=lambda r: (order[r["slug"]], r["registry"], grading.ORDER.index(r["confidence"])))
+    grading.apply_guards(licences, [])
+    known_slugs = {p["slug"] for p in pins}
+    rows.write(OUT_CANDIDATES, final, known_slugs)
+    rows.write(OUT_LICENCES, licences, known_slugs)
 
     by_c = defaultdict(lambda: {"pins": 0, "high": 0, "medium": 0, "low": 0, "unmatched": 0})
     best = {}
     for r in final:
-        best[r[0]] = min(best.get(r[0], 9), conf_rank[r[8]])
+        best[r["slug"]] = min(best.get(r["slug"], 9), grading.ORDER.index(r["confidence"]))
     for p in pins:
         d = by_c[p["country"]]
         d["pins"] += 1

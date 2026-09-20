@@ -32,6 +32,10 @@ Registers and lists (research: docs/data-quality/australia-registers-2026-09-20.
   are $45.65 per licence), SA CBS register (form, no bulk since 2019), WA RGL (no public
   list found), ATO excise manufacturer licences (not published).
 
+Names, grading and the one HTTP client come from scripts/crosswalklib (see
+match_ttb_permits.py for the pattern); this script keeps its own address parsing, the
+ABR/ASIC/VIC/TAS/NZ file readers, and the drinks-vs-other category-mismatch check.
+
 Run (offline, from cached files):
   python3 scripts/match_australia_registers.py --cache /path/to/cache
 First run: build the ABR slim index (streams the two zips, ~15-30 min):
@@ -53,19 +57,19 @@ import io
 import json
 import re
 import sys
-import unicodedata
-import urllib.request
 import zipfile
 from collections import defaultdict
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from crosswalklib import fetch, grading, names, rows  # noqa: E402
+from crosswalklib.grading import Evidence  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 GEO = ROOT / "public" / "data" / "distilleries.geojson"
 OUT_DIR = ROOT / "data" / "company-crosswalk"
 OUT_CANDIDATES = OUT_DIR / "australia-candidates.csv"
 OUT_LICENCES = OUT_DIR / "australia-licences.csv"
-FIELDS = ["slug", "distillery_name", "country", "registry", "company_number", "company_name",
-          "relation", "match_method", "confidence", "verified", "source", "note"]
 
 SRC_ABR = "https://data.gov.au/data/dataset/abn-bulk-extract"
 SRC_ASIC = "https://data.gov.au/data/dataset/asic-companies"
@@ -81,19 +85,8 @@ STATES = ("NSW", "VIC", "QLD", "SA", "WA", "TAS", "NT", "ACT")
 STATE_RE = re.compile(r"\b(NSW|VIC|QLD|SA|WA|TAS|NT|ACT)\b\s*(\d{4})?", re.I)
 STATE_WORDS = {"new south wales": "NSW", "victoria": "VIC", "queensland": "QLD", "south australia": "SA",
                "western australia": "WA", "tasmania": "TAS", "northern territory": "NT"}
-SUFFIX = {"pty", "ltd", "limited", "inc", "incorporated", "co", "company", "corp", "corporation", "the",
-          "and", "of", "a", "an", "trustee", "for", "trust", "family", "unit", "nominees", "holdings",
-          "group", "australia", "australian", "aust", "nz", "new", "zealand"}
-GENERIC = {"distillery", "distillers", "distilling", "distilleries", "distiller", "distillation", "distilled",
-           "spirits", "spirit", "craft", "artisan", "micro", "microdistillery", "brewing", "brewery",
-           "brewers", "brewhouse", "winery", "wines", "wine", "vineyard", "estate", "farm", "farms",
-           "cellar", "door", "cellars", "liquor", "beverage", "beverages", "drinks"}
-STOP = SUFFIX | GENERIC
-SIGNAL = {"distillery", "distillers", "distilling", "distilleries", "distiller", "distillation", "distilled",
-          "spirits", "spirit", "whisky", "whiskey", "gin", "rum", "vodka", "liqueur", "liqueurs", "moonshine",
-          "brandy", "stillhouse", "still", "cask", "barrel", "brewing", "brewery", "brewers", "liquor",
-          "beverage", "beverages", "wines", "winery", "cider", "mead", "meadery", "absinthe", "botanical",
-          "botanicals", "agave", "schnapps", "grappa", "eau"}
+# Category words that flag a name-quality mismatch, kept local to this matcher (not identity
+# normalisation, so out of scope for crosswalklib.names).
 DIST_KIND = {"distillery", "distillers", "distilling", "distilleries", "distiller", "distillation", "distilled",
              "spirits", "spirit", "gin", "whisky", "whiskey", "rum", "vodka", "liqueur", "liqueurs", "moonshine",
              "brandy", "stillhouse", "schnapps", "absinthe", "agave"}
@@ -202,66 +195,11 @@ HAND = {
 }
 
 
-def norm(s: str) -> str:
-    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower()
-    s = s.replace("&", " and ").replace("'", "").replace("’", "")
-    return re.sub(r"[^a-z0-9 ]+", " ", s)
-
-
-def toks(s: str, keep_generic: bool = False) -> frozenset:
-    stop = SUFFIX if keep_generic else STOP
-    return frozenset(t for t in norm(s).split() if t not in stop)
-
-
-def jaccard(a: frozenset, b: frozenset) -> float:
-    if not a or not b:
-        return 0.0
-    return len(a & b) / len(a | b)
-
-
-def exact_key(name: str) -> str:
-    return " ".join(sorted(toks(name, keep_generic=True)))
-
-
-def has_signal(name: str) -> bool:
-    return bool(set(norm(name).split()) & SIGNAL)
-
-
 def kind_mismatch(pin_name: str, name: str) -> bool:
     """True when the pin says distillery/gin/... but the matched name says brewing/winery/farm/...
     with no distilling word of its own (same site may run both, but it is weaker evidence)."""
-    pt, nt = set(norm(pin_name).split()), set(norm(name).split())
+    pt, nt = set(names.fold(pin_name).split()), set(names.fold(name).split())
     return bool(pt & DIST_KIND) and bool(nt & OTHER_KIND) and not (nt & DIST_KIND)
-
-
-def cap(g: str | None, level: str) -> str | None:
-    order = ["high", "medium", "low"]
-    if g is None:
-        return None
-    return order[max(order.index(g), order.index(level))]
-
-
-def relation_for(pin_toks: frozenset, legal_name: str) -> str:
-    """self when the legal name shares a distinctive token with the pin, else operator."""
-    return "self" if pin_toks & toks(legal_name) else "operator"
-
-
-def grade(j: float, exact: bool, pc_ok: bool, state_ok: bool, active: bool, distinctive: bool,
-          signal: bool) -> str | None:
-    """pc_ok = postcode agrees (strong location signal), state_ok = state agrees (weak)."""
-    if exact or j >= 0.8:
-        if not active:
-            return "medium"
-        if pc_ok or (state_ok and (distinctive or signal)) or (exact and distinctive and signal):
-            return "high"
-        return "medium"
-    if j >= 0.6:
-        if pc_ok:
-            return "medium"
-        return "low" if (state_ok and signal) else None
-    if j >= 0.4 and pc_ok and signal:
-        return "low"
-    return None
 
 
 # ------------------------------------------------------------------- pins ----
@@ -285,11 +223,11 @@ def parse_address(addr: str):
     sub = ""
     m3 = re.search(r",\s*([^,\d]+?)\s+(?:NSW|VIC|QLD|SA|WA|TAS|NT|ACT)\b", a, re.I)
     if m3:
-        sub = norm(m3.group(1)).strip()
+        sub = names.fold(m3.group(1)).strip()
     else:
         m4 = re.search(r",\s*([^,\d]+?)\s*\d{4}\b", a)
         if m4:
-            sub = norm(m4.group(1)).strip()
+            sub = names.fold(m4.group(1)).strip()
     return state, pc, sub
 
 
@@ -307,7 +245,7 @@ def load_pins():
         if "Germany" in addr:
             state, pc, sub = "", "", ""  # mislabelled pin, matched by nothing
         pins.append({"slug": p["slug"], "name": p["name"], "country": p["country"], "state": state,
-                     "pc": pc, "suburb": sub, "toks": toks(p["name"]), "full": toks(p["name"], True),
+                     "pc": pc, "suburb": sub, "toks": names.tokens(p["name"]),
                      "aliases": ALIASES.get(p["slug"], []), "addr": addr})
     return pins
 
@@ -339,7 +277,7 @@ def build_abr_index(cache: Path, pins):
     tok_pins = defaultdict(set)
     for i, p in enumerate(pins):
         for q in pin_queries(p):
-            for t in toks(q):
+            for t in names.tokens(q):
                 tok_pins[t].add(i)
     out = cache / "abr-slim.tsv"
     kept = seen = 0
@@ -348,35 +286,35 @@ def build_abr_index(cache: Path, pins):
         w.writerow(ABR_FIELDS)
         for zp in zips:
             z = zipfile.ZipFile(zp)
-            for name in sorted(z.namelist()):
-                print(f"abr: {zp.name}/{name}", file=sys.stderr)
-                with z.open(name) as raw:
+            for zname in sorted(z.namelist()):
+                print(f"abr: {zp.name}/{zname}", file=sys.stderr)
+                with z.open(zname) as raw:
                     for line in io.TextIOWrapper(raw, encoding="utf-8", errors="replace"):
                         if "<ABR " not in line:
                             continue
                         seen += 1
-                        names = []
+                        found = []
                         m = RE_MAIN.search(line)
                         if m:
-                            names.append(("MN", html.unescape(m.group(2))))
+                            found.append(("MN", html.unescape(m.group(2))))
                         else:
                             m = RE_IND.search(line)
                             if m:
                                 parts = re.findall(r"<(?:GivenName|FamilyName)>([^<]*)</", m.group(1))
-                                names.append(("LGL", html.unescape(" ".join(parts))))
+                                found.append(("LGL", html.unescape(" ".join(parts))))
                         for t, n in RE_OTHER.findall(line):
-                            names.append((t, html.unescape(n)))
+                            found.append((t, html.unescape(n)))
                         keep = False
-                        for _, n in names:
-                            nt = toks(n)
-                            if set(norm(n).split()) & SIGNAL:
+                        for _, n in found:
+                            nt = names.tokens(n)
+                            if names.has_signal(n):
                                 keep = True
                                 break
                             cand = set()
                             for t in nt:
                                 cand |= tok_pins.get(t, set())
                             for i in cand:
-                                if jaccard(pins[i]["toks"], nt) >= 0.4:
+                                if names.jaccard(pins[i]["toks"], nt) >= 0.4:
                                     keep = True
                                     break
                             if keep:
@@ -390,8 +328,8 @@ def build_abr_index(cache: Path, pins):
                         ac = RE_ACN.search(line)
                         gs = RE_GST.search(line)
                         up = RE_UPD.search(line)
-                        main = names[0][1] if names and names[0][0] in ("MN", "LGL") else ""
-                        other = "|".join(f"{t}:{n}" for t, n in names[1:]) if names else ""
+                        main = found[0][1] if found and found[0][0] in ("MN", "LGL") else ""
+                        other = "|".join(f"{t}:{n}" for t, n in found[1:]) if found else ""
                         w.writerow([ab.group(3) if ab else "", ab.group(1) if ab else "", ab.group(2) if ab else "",
                                     ty.group(1) if ty else "", ty.group(2) if ty else "", main,
                                     ad.group(1) if ad else "", ad.group(2) if ad else "", ac.group(1) if ac else "",
@@ -401,29 +339,29 @@ def build_abr_index(cache: Path, pins):
 
 def load_abr(cache: Path):
     path = cache / "abr-slim.tsv"
-    rows, index, exact, by_abn, by_acn = [], defaultdict(list), defaultdict(list), {}, defaultdict(list)
+    recs, index, exact, by_abn, by_acn = [], defaultdict(list), defaultdict(list), {}, defaultdict(list)
     if not path.exists():
         print(f"warn: missing {path} (run --build-abr-index)", file=sys.stderr)
-        return rows, index, exact, by_abn, by_acn
+        return recs, index, exact, by_abn, by_acn
     with path.open(newline="") as fh:
         for r in csv.DictReader(fh, delimiter="\t"):
-            i = len(rows)
-            names = [("MN" if r["type"] != "IND" else "LGL", r["name"])] if r["name"] else []
+            i = len(recs)
+            names_list = [("MN" if r["type"] != "IND" else "LGL", r["name"])] if r["name"] else []
             for part in (r["other"] or "").split("|"):
                 if ":" in part:
                     t, n = part.split(":", 1)
-                    names.append((t, n))
-            r["names"] = names
-            rows.append(r)
+                    names_list.append((t, n))
+            r["names"] = names_list
+            recs.append(r)
             by_abn[r["abn"]] = i
             if r["acn"]:
                 by_acn[r["acn"]].append(i)
-            for t, n in names:
-                for tok in toks(n):
+            for t, n in names_list:
+                for tok in names.tokens(n):
                     index[tok].append(i)
-                exact[exact_key(n)].append(i)
-    print(f"abr: {len(rows)} slim records loaded", file=sys.stderr)
-    return rows, index, exact, by_abn, by_acn
+                exact[names.norm(n, names.SUFFIX)].append(i)
+    print(f"abr: {len(recs)} slim records loaded", file=sys.stderr)
+    return recs, index, exact, by_abn, by_acn
 
 
 def abr_note(r, j, via, pc_ok, state_ok):
@@ -435,14 +373,14 @@ def abr_note(r, j, via, pc_ok, state_ok):
 
 
 def match_abr(pins, abr):
-    rows, index, _, _, _ = abr
+    recs, index, _, _, _ = abr
     hits = {}
     for p in pins:
         if p["country"] != "Australia":
             continue
         best = {}
         for q in pin_queries(p):
-            qt, qfull = toks(q), toks(q, True)
+            qt = names.tokens(q)
             if not qt:
                 continue
             cand = set()
@@ -451,29 +389,31 @@ def match_abr(pins, abr):
                 if 0 < len(post) <= 20000:
                     cand.update(post)
             for i in cand:
-                r = rows[i]
+                r = recs[i]
                 for t, n in r["names"]:
-                    nt = toks(n)
-                    j = jaccard(qt, nt)
-                    exact = qfull == toks(n, True)
+                    nt = names.tokens(n)
+                    j = names.jaccard(qt, nt)
+                    exact = names.exact(q, n)
                     pc_ok = bool(p["pc"]) and p["pc"] == r["postcode"]
                     state_ok = bool(p["state"]) and p["state"] == r["state"]
                     if p["state"] and r["state"] and r["state"] != p["state"] and not exact:
                         continue
                     active = r["status"] == "ACT"
-                    distinctive = len(qt) >= 2 and qt <= nt
-                    g = grade(j, exact, pc_ok, state_ok, active, distinctive, has_signal(n) or has_signal(r["name"]))
+                    distinctive = names.distinctive(q)
+                    loc = "strong" if pc_ok else ("weak" if state_ok else "none")
+                    g = grading.grade(Evidence(j, exact, loc, active, distinctive,
+                                               names.has_signal(n) or names.has_signal(r["name"])))
                     if not g:
                         continue
-                    if len(qt) <= 1 and not (has_signal(n) or pc_ok):
+                    if len(qt) <= 1 and not (names.has_signal(n) or pc_ok):
                         continue
-                    if len(qt) <= 1 and not has_signal(n):
-                        g = cap(g, "medium")  # one shared word plus a postcode is not proof
+                    if len(qt) <= 1 and not names.has_signal(n):
+                        g = grading.cap(g, "medium")  # one shared word plus a postcode is not proof
                     if r["type"] in ({"IND"} | PARTNERSHIP_TYPES) and g == "high":
                         g = "medium"  # sole trader / partnership of persons, not a company
-                    mismatch = kind_mismatch(q, n) and not any(set(norm(x).split()) & DIST_KIND for _, x in r["names"])
+                    mismatch = kind_mismatch(q, n) and not any(set(names.fold(x).split()) & DIST_KIND for _, x in r["names"])
                     if mismatch:
-                        g = cap(g, "low" if len(qt) <= 1 else "medium")
+                        g = grading.cap(g, "low" if len(qt) <= 1 else "medium")
                     score = j + (0.3 if active else 0) + (0.3 if pc_ok else 0) + (0.1 if state_ok else 0) + (0.2 if exact else 0)
                     key = r["abn"]
                     if key not in best or best[key][0] < score:
@@ -490,30 +430,30 @@ def abr_row(p, r, g, j, via, pc_ok, state_ok, method):
     if r["type"] == "IND":
         company_name = f"(individual, sole trader ABN; trades as {trades})"
         rel = "self"
-    elif r["type"] in PARTNERSHIP_TYPES and not has_signal(r["name"]) and " & " in r["name"]:
+    elif r["type"] in PARTNERSHIP_TYPES and not names.has_signal(r["name"]) and " & " in r["name"]:
         company_name = f"(partnership of individuals, {r['type_text']}; trades as {trades})"
         rel = "self"
     else:
         company_name = r["name"]
-        rel = relation_for(p["toks"], r["name"]) if p["toks"] else "self"
-        if any(toks(n) & p["toks"] for t, n in r["names"] if t in ("BN", "TRD", "OTN")):
+        rel = grading.relation_for(p["toks"], names.tokens(r["name"])) if p["toks"] else "self"
+        if any(names.tokens(n) & p["toks"] for t, n in r["names"] if t in ("BN", "TRD", "OTN")):
             rel = "self"  # the pin name is a registered business/trading name of this ABN
-    return [p["slug"], p["name"], p["country"], "au-abr", r["abn"], company_name, rel, method, g, "",
-            SRC_ABR, abr_note(r, j, via, pc_ok, state_ok)]
+    return rows.make(p["slug"], p["name"], p["country"], "au-abr", r["abn"], company_name, rel, method, g,
+                      SRC_ABR, abr_note(r, j, via, pc_ok, state_ok))
 
 
 # -------------------------------------------------------------------- ASIC ----
 def scan_asic(cache: Path, pins, wanted_acns: set):
     """One pass over the ASIC company TSV. Returns {acn: [rows]} for wanted ACNs and name hits."""
     zips = sorted(cache.glob("company_*.zip"))
-    by_acn, name_index, rows = defaultdict(list), defaultdict(list), []
+    by_acn, name_index, recs = defaultdict(list), defaultdict(list), []
     if not zips:
         print("warn: no company_*.zip (ASIC) in cache", file=sys.stderr)
-        return by_acn, name_index, rows
+        return by_acn, name_index, recs
     tok_pins = defaultdict(set)
     for i, p in enumerate(pins):
         for q in pin_queries(p):
-            for t in toks(q):
+            for t in names.tokens(q):
                 tok_pins[t].add(i)
     z = zipfile.ZipFile(zips[-1])
     name = z.namelist()[0]
@@ -526,30 +466,30 @@ def scan_asic(cache: Path, pins, wanted_acns: set):
             nm = r.get("Company Name") or ""
             keep = acn in wanted_acns
             if not keep:
-                nt = toks(nm)
+                nt = names.tokens(nm)
                 cand = set()
                 for t in nt:
                     cand |= tok_pins.get(t, set())
                 for i in cand:
-                    if jaccard(pins[i]["toks"], nt) >= 0.5:
+                    if names.jaccard(pins[i]["toks"], nt) >= 0.5:
                         keep = True
                         break
             if not keep:
                 continue
             rec = {k: (v or "").strip() for k, v in r.items() if k}
-            i = len(rows)
-            rows.append(rec)
+            i = len(recs)
+            recs.append(rec)
             by_acn[acn].append(i)
-            for tok in toks(nm):
+            for tok in names.tokens(nm):
                 name_index[tok].append(i)
-    print(f"asic: {n} rows scanned, {len(rows)} kept ({zips[-1].name}/{name})", file=sys.stderr)
-    return by_acn, name_index, rows
+    print(f"asic: {n} rows scanned, {len(recs)} kept ({zips[-1].name}/{name})", file=sys.stderr)
+    return by_acn, name_index, recs
 
 
-def asic_current(rows, idx_list):
+def asic_current(recs, idx_list):
     """Prefer the row flagged as the current name."""
-    cur = [rows[i] for i in idx_list if rows[i].get("Current Name Indicator") == "Y"]
-    return cur[0] if cur else (rows[idx_list[0]] if idx_list else None)
+    cur = [recs[i] for i in idx_list if recs[i].get("Current Name Indicator") == "Y"]
+    return cur[0] if cur else (recs[idx_list[0]] if idx_list else None)
 
 
 def asic_note(r, evidence):
@@ -565,47 +505,48 @@ def asic_row(p, r, g, method, evidence, rel):
     name = r.get("Company Name") if r.get("Current Name Indicator") == "Y" else (r.get("Current Name") or r.get("Company Name"))
     if r.get("Status") != "REGD" and g == "high":
         g = "medium"
-    return [p["slug"], p["name"], p["country"], "au-asic", r.get("ACN"), name, rel, method, g, "",
-            SRC_ASIC, asic_note(r, evidence)]
+    return rows.make(p["slug"], p["name"], p["country"], "au-asic", r.get("ACN"), name, rel, method, g,
+                      SRC_ASIC, asic_note(r, evidence))
 
 
 def match_asic_by_name(pins, asic):
-    by_acn, name_index, rows = asic
+    by_acn, name_index, recs = asic
     out = []
     for p in pins:
         if p["country"] != "Australia":
             continue
         best = {}
         for q in pin_queries(p):
-            qt, qfull = toks(q), toks(q, True)
+            qt = names.tokens(q)
             if not qt:
                 continue
             cand = set()
             for tok in qt:
                 cand.update(name_index.get(tok, []))
             for i in cand:
-                r = rows[i]
+                r = recs[i]
                 nm = r.get("Company Name") or ""
-                nt = toks(nm)
-                j = jaccard(qt, nt)
-                exact = qfull == toks(nm, True)
+                nt = names.tokens(nm)
+                j = names.jaccard(qt, nt)
+                exact = names.exact(q, nm)
                 st = r.get("Previous State of Registration") or ""
                 state_ok = bool(p["state"]) and st == p["state"]
                 if p["state"] and st and st != p["state"] and not exact:
                     continue
                 active = r.get("Status") == "REGD"
-                distinctive = len(qt) >= 2 and qt <= nt
-                g = grade(j, exact, False, state_ok, active, distinctive, has_signal(nm))
+                distinctive = names.distinctive(q)
+                loc = "weak" if state_ok else "none"
+                g = grading.grade(Evidence(j, exact, loc, active, distinctive, names.has_signal(nm)))
                 if not g:
                     continue
-                if g == "high" and not (state_ok or (distinctive and has_signal(nm))):
+                if g == "high" and not (state_ok or (distinctive and names.has_signal(nm))):
                     g = "medium"  # no address in the ASIC file: name alone is not enough
-                if len(qt) <= 1 and not has_signal(nm):
+                if len(qt) <= 1 and not names.has_signal(nm):
                     continue
                 if kind_mismatch(q, nm):
-                    g = cap(g, "low" if len(qt) <= 1 else "medium")
-                if not has_signal(nm) or r.get("Current Name Indicator") != "Y":
-                    g = cap(g, "medium")  # no drinks word, or a former name: not proof on its own
+                    g = grading.cap(g, "low" if len(qt) <= 1 else "medium")
+                if not names.has_signal(nm) or r.get("Current Name Indicator") != "Y":
+                    g = grading.cap(g, "medium")  # no drinks word, or a former name: not proof on its own
                 score = j + (0.3 if active else 0) + (0.1 if state_ok else 0) + (0.2 if exact else 0)
                 key = r.get("ACN")
                 if key not in best or best[key][0] < score:
@@ -615,7 +556,8 @@ def match_asic_by_name(pins, asic):
             ranked = [x for x in ranked if x[1] != "low"]
         for score, g, r, j, state_ok in ranked:
             ev = f"name jaccard {j:.2f} on '{r.get('Company Name')}'" + (" (state of registration agrees)" if state_ok else "")
-            out.append(asic_row(p, r, g, "asic-bulk-name", ev, relation_for(p["toks"], r.get("Company Name") or "")))
+            out.append(asic_row(p, r, g, "asic-bulk-name", ev,
+                                 grading.relation_for(p["toks"], names.tokens(r.get("Company Name") or ""))))
     return out
 
 
@@ -628,19 +570,19 @@ def load_vic(cache: Path):
     path = files[-1]
     z = zipfile.ZipFile(path)
     x = z.read("xl/worksheets/sheet1.xml").decode("utf-8", "replace")
-    rows = re.findall(r"<row[^>]*>(.*?)</row>", x, flags=re.S)
+    rows_xml = re.findall(r"<row[^>]*>(.*?)</row>", x, flags=re.S)
 
-    def cells(row):
+    def cells(row_xml):
         d = {}
-        for m in re.finditer(r'<c [^>]*?r="([A-Z]+)\d+"[^>]*?>(.*?)</c>', row, flags=re.S):
+        for m in re.finditer(r'<c [^>]*?r="([A-Z]+)\d+"[^>]*?>(.*?)</c>', row_xml, flags=re.S):
             col, inner = m.groups()
             d[col] = html.unescape("".join(re.findall(r"<t[^>]*>(.*?)</t>", inner, flags=re.S))).strip()
         return d
     hdr = None
     out = []
     asof = ""
-    for row in rows:
-        c = cells(row)
+    for row_xml in rows_xml:
+        c = cells(row_xml)
         if not c:
             continue
         if hdr is None:
@@ -660,7 +602,7 @@ def load_vic(cache: Path):
 
 def match_vic(pins, vic, asof, abr):
     """Licence rows + legal-name bridge into ABR (exact legal name -> ABN/ACN)."""
-    rows, _, exact, _, _ = abr
+    abr_recs, _, exact, _, _ = abr
     lic, cands = [], []
     for p in pins:
         if p["state"] not in ("VIC", "") or p["country"] != "Australia":
@@ -669,16 +611,17 @@ def match_vic(pins, vic, asof, abr):
         for r in vic:
             for field in ("Trading As", "Licensee"):
                 nm = r.get(field) or ""
-                nt = toks(nm)
-                j = jaccard(p["toks"], nt)
-                exact_nm = p["full"] == toks(nm, True)
+                nt = names.tokens(nm)
+                j = names.jaccard(p["toks"], nt)
+                exact_nm = names.exact(p["name"], nm)
                 pc_ok = bool(p["pc"]) and p["pc"] == r.get("Postcode", "")
-                sub_ok = bool(p["suburb"]) and p["suburb"] == norm(r.get("Suburb", "")).strip()
-                g = grade(j, exact_nm, pc_ok or sub_ok, True, True, len(p["toks"]) >= 2 and p["toks"] <= nt,
-                          has_signal(nm))
+                sub_ok = bool(p["suburb"]) and p["suburb"] == names.fold(r.get("Suburb", "")).strip()
+                loc = "strong" if (pc_ok or sub_ok) else "weak"
+                g = grading.grade(Evidence(j, exact_nm, loc, True, names.distinctive(p["name"]),
+                                            names.has_signal(nm)))
                 if not g:
                     continue
-                if len(p["toks"]) <= 1 and not (has_signal(nm) or pc_ok):
+                if len(p["toks"]) <= 1 and not (names.has_signal(nm) or pc_ok):
                     continue
                 score = j + (0.3 if pc_ok or sub_ok else 0) + (0.2 if exact_nm else 0)
                 key = r["Licence Number"]
@@ -686,44 +629,42 @@ def match_vic(pins, vic, asof, abr):
                     best[key] = (score, g, r, j, pc_ok or sub_ok, field)
         for score, g, r, j, loc_ok, field in sorted(best.values(), key=lambda x: -x[0])[:2]:
             legal = r.get("Licensee", "")
-            lic.append([p["slug"], p["name"], "Australia", "vic-lcv", r["Licence Number"], legal, "self",
-                        "lcv-licence-name", g, "", SRC_VIC,
-                        f"Producer's Licence, stocktake as of {asof}; trading as '{r.get('Trading As', '')}', "
-                        f"{r.get('Street Address', '')}, {r.get('Suburb', '')} {r.get('Postcode', '')}"
-                        f"{' (location agrees)' if loc_ok else ''}; name jaccard {j:.2f} on {field.lower()}"])
+            lic.append(rows.make(p["slug"], p["name"], "Australia", "vic-lcv", r["Licence Number"], legal, "self",
+                                  "lcv-licence-name", g, SRC_VIC,
+                                  f"Producer's Licence, stocktake as of {asof}; trading as '{r.get('Trading As', '')}', "
+                                  f"{r.get('Street Address', '')}, {r.get('Suburb', '')} {r.get('Postcode', '')}"
+                                  f"{' (location agrees)' if loc_ok else ''}; name jaccard {j:.2f} on {field.lower()}"))
             # bridge: licensee legal name -> ABR exact name -> ABN (+ACN)
-            rel = relation_for(p["toks"], legal)
-            for i in exact.get(exact_key(legal), [])[:2]:
-                ar = rows[i]
+            rel = grading.relation_for(p["toks"], names.tokens(legal))
+            for i in exact.get(names.norm(legal, names.SUFFIX), [])[:2]:
+                ar = abr_recs[i]
                 if ar["type"] == "IND":
                     continue
                 gg = "high" if (ar["status"] == "ACT" and g in ("high", "medium")) else "medium"
                 if g == "low":
                     gg = "low"
-                pc_ok = bool(p["pc"]) and p["pc"] == ar["postcode"]
-                cands.append([p["slug"], p["name"], "Australia", "au-abr", ar["abn"], ar["name"], rel,
-                              "lcv-licensee+abr-bulk", gg, "", SRC_ABR,
-                              f"licensee of LCV producer's licence {r['Licence Number']} ('{r.get('Trading As', '')}', "
-                              f"{r.get('Suburb', '')}), name jaccard {j:.2f}; " + abr_note(ar, 1.0, "licensee legal name", pc_ok, ar["state"] == "VIC")])
+                pc_ok2 = bool(p["pc"]) and p["pc"] == ar["postcode"]
+                cands.append(rows.make(p["slug"], p["name"], "Australia", "au-abr", ar["abn"], ar["name"], rel,
+                                        "lcv-licensee+abr-bulk", gg, SRC_ABR,
+                                        f"licensee of LCV producer's licence {r['Licence Number']} ('{r.get('Trading As', '')}', "
+                                        f"{r.get('Suburb', '')}), name jaccard {j:.2f}; "
+                                        + abr_note(ar, 1.0, "licensee legal name", pc_ok2, ar["state"] == "VIC")))
     return lic, cands
 
 
 # --------------------------------------------------------------------- TAS ----
-def fetch_tas(cache: Path):
-    path = cache / "tas_list_liquor_brewery_distillery.json"
-    req = urllib.request.Request(TAS_QUERY, headers={"User-Agent": "stillbound-distillery-map crosswalk (stdlib urllib)"})
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        path.write_bytes(resp.read())
-    print(f"tas: fetched LIST layer -> {path}", file=sys.stderr)
-
-
-def load_tas(cache: Path):
-    path = cache / "tas_list_liquor_brewery_distillery.json"
-    if not path.exists():
-        print(f"warn: missing {path} (run --fetch-tas)", file=sys.stderr)
+def load_tas(cache: Path, f: fetch.Fetcher) -> list[dict]:
+    """TAS LIST liquor layer. Reuses the pre-crosswalklib cache file if present (one-time shim,
+    never re-fetched); otherwise goes through the Fetcher, which only fetches when --fetch-tas
+    is passed."""
+    legacy = cache / "tas_list_liquor_brewery_distillery.json"
+    body = legacy.read_bytes() if legacy.exists() else f.get(TAS_QUERY)
+    if body is None:
+        print(f"warn: no Tasmanian LIST data (run --fetch-tas, or place {legacy.name} in the cache)",
+              file=sys.stderr)
         return []
-    feats = json.loads(path.read_text()).get("features", [])
-    return [f["attributes"] for f in feats]
+    feats = json.loads(body).get("features", [])
+    return [feat["attributes"] for feat in feats]
 
 
 def match_tas(pins, tas):
@@ -734,26 +675,28 @@ def match_tas(pins, tas):
         best = {}
         for r in tas:
             nm = r.get("PREMISE_NA") or ""
-            nt = toks(nm)
-            j = jaccard(p["toks"], nt)
-            exact_nm = p["full"] == toks(nm, True)
+            nt = names.tokens(nm)
+            j = names.jaccard(p["toks"], nt)
+            exact_nm = names.exact(p["name"], nm)
             pc_ok = bool(p["pc"]) and p["pc"] == (r.get("POSTCODE") or "")
-            sub_ok = bool(p["suburb"]) and p["suburb"] == norm(r.get("SUBURB") or "").strip()
-            g = grade(j, exact_nm, pc_ok or sub_ok, True, True, len(p["toks"]) >= 2 and p["toks"] <= nt, has_signal(nm))
+            sub_ok = bool(p["suburb"]) and p["suburb"] == names.fold(r.get("SUBURB") or "").strip()
+            loc = "strong" if (pc_ok or sub_ok) else "weak"
+            g = grading.grade(Evidence(j, exact_nm, loc, True, names.distinctive(p["name"]),
+                                        names.has_signal(nm)))
             if not g:
                 continue
-            if len(p["toks"]) <= 1 and not (has_signal(nm) or pc_ok):
+            if len(p["toks"]) <= 1 and not (names.has_signal(nm) or pc_ok):
                 continue
             score = j + (0.3 if pc_ok or sub_ok else 0) + (0.2 if exact_nm else 0)
             key = r["LICENCE_NO"]
             if key not in best or best[key][0] < score:
                 best[key] = (score, g, r, j, pc_ok or sub_ok)
         for score, g, r, j, loc_ok in sorted(best.values(), key=lambda x: -x[0])[:2]:
-            lic.append([p["slug"], p["name"], "Australia", "tas-list", str(r["LICENCE_NO"]), "", "self",
-                        "list-premises-name", g, "", SRC_TAS,
-                        f"Special licence, sub-category Brewery/Distillery; premises '{r.get('PREMISE_NA')}', "
-                        f"{r.get('PREMISE_AD') or ''}, {r.get('SUBURB')} {r.get('POSTCODE')}{' (location agrees)' if loc_ok else ''}; "
-                        f"currency {r.get('CURRENCY')}; licensee name not in the LIST layer; name jaccard {j:.2f}"])
+            lic.append(rows.make(p["slug"], p["name"], "Australia", "tas-list", str(r["LICENCE_NO"]), "", "self",
+                                  "list-premises-name", g, SRC_TAS,
+                                  f"Special licence, sub-category Brewery/Distillery; premises '{r.get('PREMISE_NA')}', "
+                                  f"{r.get('PREMISE_AD') or ''}, {r.get('SUBURB')} {r.get('POSTCODE')}{' (location agrees)' if loc_ok else ''}; "
+                                  f"currency {r.get('CURRENCY')}; licensee name not in the LIST layer; name jaccard {j:.2f}"))
     return lic
 
 
@@ -786,29 +729,31 @@ def match_nz(pins, nz):
             continue
         for r in nz:
             for q in pin_queries(p):
-                qt = toks(q)
-                nt = toks(r["name"])
+                qt = names.tokens(q)
+                nt = names.tokens(r["name"])
                 if not qt:
                     continue
-                j = jaccard(qt, nt)
-                exact = toks(q, True) == toks(r["name"], True)
+                j = names.jaccard(qt, nt)
+                exact = names.exact(q, r["name"])
                 if not (exact or j >= 0.6):
                     continue
-                addr = norm(r["address"])
+                addr = names.fold(r["address"])
                 loc_ok = bool(p["suburb"]) and p["suburb"] in addr
                 pc_ok = bool(p["pc"]) and p["pc"] in r["address"]
                 active = r["status"] == "Registered"
-                g = grade(j, exact, pc_ok or loc_ok, True, active, len(qt) >= 2 and qt <= nt, has_signal(r["name"]))
+                loc = "strong" if (pc_ok or loc_ok) else "weak"
+                g = grading.grade(Evidence(j, exact, loc, active, names.distinctive(q), names.has_signal(r["name"])))
                 if len(qt) <= 1 and not (pc_ok or loc_ok):
-                    g = cap(g, "medium")
+                    g = grading.cap(g, "medium")
                 if not g:
                     continue
-                out.append([p["slug"], p["name"], "New Zealand", "nz-companies", r["number"], r["name"],
-                            relation_for(qt, r["name"]), "nz-search-page-name", g, "", NZ_ENTITY.format(r["number"]),
-                            f"name jaccard {j:.2f}; status {r['status']}; {r['type']}; incorporated {r['incorporated']}; "
-                            f"registered office {r['address']}{' (location agrees)' if (pc_ok or loc_ok) else ''}; "
-                            f"NZBN {r['nzbn']}; from the saved first page of results for 'distillery' (20 Sep 2026), "
-                            f"not a live query"])
+                out.append(rows.make(p["slug"], p["name"], "New Zealand", "nz-companies", r["number"], r["name"],
+                                      grading.relation_for(qt, names.tokens(r["name"])), "nz-search-page-name", g,
+                                      NZ_ENTITY.format(r["number"]),
+                                      f"name jaccard {j:.2f}; status {r['status']}; {r['type']}; incorporated {r['incorporated']}; "
+                                      f"registered office {r['address']}{' (location agrees)' if (pc_ok or loc_ok) else ''}; "
+                                      f"NZBN {r['nzbn']}; from the saved first page of results for 'distillery' (20 Sep 2026), "
+                                      f"not a live query"))
     return out
 
 
@@ -827,15 +772,15 @@ def main() -> int:
 
     if args.build_abr_index:
         build_abr_index(cache, pins)
-    if args.fetch_tas:
-        fetch_tas(cache)
+
+    f = fetch.Fetcher(cache, allow=args.fetch_tas, cap=4, delay=1.0, log=cache / "requests.log", spent=2)
 
     abr = load_abr(cache)
-    abr_rows, _, _, _, abr_by_acn = abr
+    abr_recs, _, _, _, abr_by_acn = abr
     abr_hits = match_abr(pins, abr)
     vic, vic_asof = load_vic(cache)
     vic_l, vic_c = match_vic(pins, vic, vic_asof, abr)
-    tas_l = match_tas(pins, load_tas(cache))
+    tas_l = match_tas(pins, load_tas(cache, f))
     nz_c = match_nz(pins, load_nz_sample(cache))
 
     # ABR -> rows, and the set of ACNs to resolve in the ASIC file
@@ -847,60 +792,61 @@ def main() -> int:
             if r["acn"]:
                 wanted.add(r["acn"])
     for row in vic_c:
-        acn = re.search(r"ACN (\d{9})", row[11])
+        acn = re.search(r"ACN (\d{9})", row["note"])
         if acn:
             wanted.add(acn.group(1))
 
     asic = scan_asic(cache, pins, wanted)
-    asic_by_acn, _, asic_rows = asic
+    asic_by_acn, _, asic_recs = asic
     asic_c = match_asic_by_name(pins, asic)
     # ASIC rows reached through an ABR/licence ACN link
     for row in abr_c + vic_c:
-        acn = re.search(r"ACN (\d{9})", row[11])
+        acn = re.search(r"ACN (\d{9})", row["note"])
         if not acn or acn.group(1) not in asic_by_acn:
             continue
-        r = asic_current(asic_rows, asic_by_acn[acn.group(1)])
+        r = asic_current(asic_recs, asic_by_acn[acn.group(1)])
         if not r:
             continue
-        p = next(x for x in pins if x["slug"] == row[0])
-        asic_c.append(asic_row(p, r, row[8], row[7].replace("abr-bulk-name", "abr-acn-link").replace("lcv-licensee+abr-bulk", "lcv-licensee+abr-acn-link"),
-                               f"ACN from ABN {row[4]} ({row[5]})", row[6]))
+        p = next(x for x in pins if x["slug"] == row["slug"])
+        method = row["match_method"].replace("abr-bulk-name", "abr-acn-link").replace(
+            "lcv-licensee+abr-bulk", "lcv-licensee+abr-acn-link")
+        asic_c.append(asic_row(p, r, row["confidence"], method,
+                                f"ACN from ABN {row['company_number']} ({row['company_name']})", row["relation"]))
 
     hand = []
-    for slug, rows in HAND.items():
+    for slug, entries in HAND.items():
         p = next((x for x in pins if x["slug"] == slug), None)
         if not p:
             continue
-        for reg, num, name, rel, conf, note, src in rows:
-            hand.append([slug, p["name"], p["country"], reg, num, name, rel, "hand", conf, "", src, note])
+        for reg, num, name, rel, conf, note, src in entries:
+            hand.append(rows.make(slug, p["name"], p["country"], reg, num, name, rel, "hand", conf, src, note))
 
     machine_all = abr_c + vic_c + asic_c + nz_c
-    hand_keys = {(r[0], r[3], r[4]) for r in hand}
+    hand_keys = {(r["slug"], r["registry"], r["company_number"]) for r in hand}
     conf_rank = {"high": 0, "medium": 1, "low": 2}
     machine = {}
     for r in machine_all:
-        if (r[0], r[3], r[4]) in hand_keys:
+        if (r["slug"], r["registry"], r["company_number"]) in hand_keys:
             continue
-        k = (r[0], r[3], r[4] or norm(r[5]).strip())
-        if k not in machine or conf_rank[r[8]] < conf_rank[machine[k][8]]:
+        k = (r["slug"], r["registry"], r["company_number"] or names.fold(r["company_name"]).strip())
+        if k not in machine or conf_rank[r["confidence"]] < conf_rank[machine[k]["confidence"]]:
             machine[k] = r
     final = hand + list(machine.values())
+    grading.apply_guards(final, hand)
     order = {s["slug"]: i for i, s in enumerate(pins)}
-    final.sort(key=lambda r: (order[r[0]], r[3], conf_rank[r[8]], r[5]))
-    licences = sorted(vic_l + tas_l, key=lambda r: (order[r[0]], r[3], conf_rank[r[8]]))
+    final.sort(key=lambda r: (order[r["slug"]], r["registry"], conf_rank[r["confidence"]], r["company_name"]))
+    licences = sorted(vic_l + tas_l, key=lambda r: (order[r["slug"]], r["registry"], conf_rank[r["confidence"]]))
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    for path, rows in ((OUT_CANDIDATES, final), (OUT_LICENCES, licences)):
-        with path.open("w", newline="") as fh:
-            w = csv.writer(fh)
-            w.writerow(FIELDS)
-            w.writerows(rows)
+    known_slugs = {p["slug"] for p in pins}
+    rows.write(OUT_CANDIDATES, final, known_slugs)
+    rows.write(OUT_LICENCES, licences, known_slugs)
 
     # summary
     by_state = defaultdict(lambda: {"pins": 0, "high": 0, "medium": 0, "low": 0, "unmatched": 0})
     best = {}
     for r in final:
-        best[r[0]] = min(best.get(r[0], 9), conf_rank[r[8]])
+        best[r["slug"]] = min(best.get(r["slug"], 9), conf_rank[r["confidence"]])
     for p in pins:
         d = by_state[p["state"] or "(none)"]
         d["pins"] += 1
@@ -917,6 +863,7 @@ def main() -> int:
     print("unmatched:", " ".join(p["slug"] for p in pins if p["slug"] not in best))
     print(f"{len(final)} candidate rows -> {OUT_CANDIDATES.relative_to(ROOT)}; "
           f"{len(licences)} licence rows -> {OUT_LICENCES.relative_to(ROOT)}")
+    print(f.summary(), file=sys.stderr)
     return 0
 
 
