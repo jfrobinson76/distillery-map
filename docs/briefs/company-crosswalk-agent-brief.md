@@ -95,9 +95,13 @@ state's terms before building.
 `canada-candidates.csv`; the per-province register survey (what is free, bulk, API, paid) is
 `docs/data-quality/canada-registers-2026-09-19.md`.
 
-**Elsewhere.** Belgium, France, Norway, Denmark, New Zealand, Japan carry OpenCorporates-style
-ids from Wikidata already; leave them. Germany, Austria, Australia: stop and write down which
-register would work and whether it is free, do not build.
+**Rest of the world, 20 Sep.** One matcher and one dated register note per country group in
+`docs/data-quality/*-registers-2026-09-20.md`: Australia + NZ (ABR bulk + ASIC dataset, CC-BY),
+Japan (NTA 法人番号 bulk, PDL 1.0), France (Sirene via the open search API, Licence Ouverte),
+Italy + Spain (no open register; tax numbers read from the pins' own sites, RGSEAA licences),
+DACH (OffeneRegister 2017-19 dump, JustizOnline, Zefix on LINDAS), India + South Africa (MCA
+2015 extracts on data.gov.in; CIPC terms forbid search). Coverage and the reasons for the thin
+countries are in each note. Belgium, Norway, Denmark keep their Wikidata ids.
 
 ## Rules
 
