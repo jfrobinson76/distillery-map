@@ -114,7 +114,14 @@ def load_candidates() -> list[dict]:
             continue
         rows += [r for r in csv.DictReader(p.open())
                  if r.get("confidence") in ("high", "medium") and r.get("company_number")]
-    return rows
+    # A candidates file may list several companies for one pin. The crosswalk takes the best
+    # one per (slug, registry, relation): high before medium, then file order.
+    best: dict[tuple, dict] = {}
+    for r in rows:
+        k = (r["slug"], r["registry"], r["relation"])
+        if k not in best or (best[k]["confidence"] == "medium" and r["confidence"] == "high"):
+            best[k] = r
+    return list(best.values())
 
 
 def load_wikidata() -> list[dict]:
