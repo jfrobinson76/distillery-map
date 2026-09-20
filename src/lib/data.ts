@@ -84,6 +84,49 @@ export type DistilleryProps = {
    * docs/data-quality/entity-roles.md.
    */
   operator?: string;
+  /**
+   * Register facts about the company behind the pin, when the crosswalk has one at
+   * high confidence. Not on the geojson: joined at build time from
+   * data/company-crosswalk/company-crosswalk.csv and data/health/company-health.csv.
+   * Every value carries the day it was read. See data/health/README.md.
+   */
+  health?: DistilleryHealth;
+};
+
+export type HealthStatus =
+  | "live"
+  | "dormant"
+  | "dissolved"
+  | "liquidation"
+  | "administration"
+  | "receivership"
+  | "strike-off-listed"
+  | "insolvency"
+  | "unknown";
+
+export type DistilleryHealth = {
+  /** Register code, e.g. "companies-house", "cro", "ttb-basic-permit". */
+  registry: string;
+  company_number: string;
+  company_name: string;
+  /** self = the pin's own entity, operator = a group company runs the site, group = parent. */
+  relation: "self" | "operator" | "group";
+  /** ISO date the register was read. A value without a date is not a value. */
+  read_on: string;
+  status: HealthStatus;
+  status_detail?: string;
+  incorporated?: string;
+  last_accounts_date?: string;
+  last_accounts_type?: string;
+  next_due?: string;
+  /** UK: the register's own flag. Ireland: computed from next_due. Elsewhere: absent. */
+  accounts_overdue?: boolean;
+  confirmation_overdue?: boolean;
+  charges_total?: number;
+  charges_outstanding?: number;
+  charges_latest?: string;
+  /** Register page for this company. */
+  source: string;
 };
 
 export const getCountries = cache(async (): Promise<CountryEntry[]> => {
