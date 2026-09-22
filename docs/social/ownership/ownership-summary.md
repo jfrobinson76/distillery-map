@@ -4,33 +4,34 @@ Edition: September 2026. Scotch whisky only. Built from `data/company-crosswalk/
 
 ## Claim on both slides
 
-- **Two-thirds group-run.**
-- 155 operating Scotch whisky distilleries. 19 groups run 97 of them (63%). At most 57 are independent (37%). Diageo alone runs 29 (19%).
+- **Two-thirds answer to a bigger company.**
+- 163 operating Scotch whisky distilleries. 19 groups run 99 of them (61%). At most 56 are independent (34%). Diageo alone runs 31 (19%).
 - By number of distilleries, not by litres.
 
 | | |
 |---|---:|
-| Scotch whisky sites | 155 |
-| Matched high/verified | 96 |
-| Unmatched (drawn as independent) | 57 |
-| Independent (controller has one site, plus unmatched) | 57 |
-| Group-run | 97 |
+| Scotch whisky sites | 163 |
+| Matched high/verified | 98 |
+| Unmatched (drawn as independent) | 63 |
+| One Scotch site, but part of a larger drinks company | 7 |
+| Independent (one site, no larger drinks company above it) | 56 |
+| Group-run | 99 |
 | Groups >1 site | 19 |
-| Diageo | 29 |
+| Diageo | 31 |
 
-Independent means the ultimate controller in `psc-parents.csv` runs exactly one site in this universe. Unmatched Scotch sites are treated as independent dots — they are small, mostly post-2005 plants. Counts, not litres.
+Universe (22 Sep 2026): Scotch whisky distilleries that distilled on site in the last 12 months or are temporarily paused, evidenced by the SWA September 2026 list or the operator / trade press. Gin-only, closed and not-yet-distilling sites are out. Independent means one Scotch site AND no larger drinks company above it; seven one-site owners sit under Campari, Rémy Cointreau, Nikka, Takara, Picard, Lalique and Halewood and are counted separately (`parent` column in the audit file). Counts, not litres.
 
 ## Universe
 
 Map region `scotland`, excluding Shetland (lat > 59.85), visitor (Johnnie Walker Princes Street), the Gordon & MacPhail bottler, Distillers Market, whisky lounges, and gin-named sites. A site is in if the map description says malt/grain/whisky or the category verdict includes whisky. Empty-description high-confidence sites are added only when their controller already has a whisky-signal site (the group-fill that restores Auchroisk, Dufftown, Allt-A-Bhainne, Kininvie, Lagg, Glen Turner).
 
-README on this branch dated the denominator 178 ±5. This rebuild is 155.
+README on this branch dated the denominator 178 ±5. This rebuild is 163.
 
 ## Top eight operating groups (hubs on both slides)
 
 | Group | Sites | Ultimate |
 |---|---:|---|
-| Diageo | 29 | Diageo |
+| Diageo | 31 | Diageo |
 | Pernod Ricard | 13 | Pernod Ricard |
 | William Grant | 5 | William Grant |
 | Whyte & Mackay | 5 | Whyte & Mackay |
@@ -39,7 +40,7 @@ README on this branch dated the denominator 178 ±5. This rebuild is 155.
 | Suntory Global Spirits | 5 | Suntory |
 | Ian Macleod | 4 | Ian Macleod |
 
-### Diageo (29)
+### Diageo (31)
 
 Diageo plc is PSC-exempt and is its own top; Wikidata rows and Diageo Scotland Limited both land here.
 
@@ -57,6 +58,7 @@ Diageo plc is PSC-exempt and is its own top; Wikidata rows and Diageo Scotland L
 - Dufftown distillery —  () → Diageo
 - Glen Elgin Distillery —  () → Diageo
 - Glen Ord Distillery —  () → Diageo
+- Glen Spey Distillery —  () → Diageo
 - Glendullan Distillery —  () → Diageo
 - Glenkinchie Distillery —  () → Diageo
 - Glenlossie —  () → Diageo
@@ -70,6 +72,7 @@ Diageo plc is PSC-exempt and is its own top; Wikidata rows and Diageo Scotland L
 - Port Ellen Distillery —  () → Diageo
 - Roseisle —  () → Diageo
 - Royal Lochnagar Distillery —  () → Diageo
+- Strathmill —  () → Diageo
 - Talisker Distillery —  () → Diageo
 - Teaninich Distllery —  () → Diageo
 
@@ -155,7 +158,7 @@ Ian Macleod Distillers Limited.
 These are groups, not independents. On the map they use their own colour and join their sites with the same MST web. They appear in the left rail.
 
 - **Brown-Forman** (3): Benriach Distillery; Glenglassaugh Distillery; The Glendronach Distillery
-- **Distell** (3): Bunnahabhain Distillery; Deanston Distillery; Tobermory Distillery
+- **CVH Spirits** (3): Bunnahabhain Distillery; Deanston Distillery; Tobermory Distillery
 - **Edrington** (3): Glenrothes Distillery; Highland Park Distillery; The Macallan Distillery
 - **Angus Dundee** (2): Glencadam Distillery; Tomintoul Distillery
 - **Gordon & MacPhail** (2): Benromach; The Cairn
@@ -180,6 +183,7 @@ None. Every multi-site controller in the matched Scotch set is a group.
 
 - 8 Doors Distillery (8-doors-distillery)
 - Aberargie Distillery (aberargie-distillery)
+- Abhainn Dearg Distillery (abhainn-dearg-distillery)
 - Annandale Distillery (annandale-distillery)
 - Arbikie Distillery (arbikie-distillery)
 - Ardgowan Distillery (ardgowan-distillery)
@@ -201,6 +205,7 @@ None. Every multi-site controller in the matched Scotch set is a group.
 - Deerness Distillery (deerness-distillery)
 - Dornoch Distillery (dornoch-distillery)
 - Dunphail distillery (dunphail-distillery)
+- Eden Mill St Andrews (eden-mill-st-andrews)
 - Edradour Distillery (edradour-distillery)
 - Falkirk Distillery (falkirk-distillery)
 - Galloway distillery (galloway-distillery)
@@ -217,6 +222,8 @@ None. Every multi-site controller in the matched Scotch set is a group.
 - Jackton Distillery (jackton-distillery)
 - Kilchoman Distillery (kilchoman-distillery)
 - Kingsbarns Distillery (kingsbarns-distillery)
+- Kythe Distillery (kythe-distillery)
+- Lerwick Distillery (lerwick-distillery)
 - Lindores Abbey Distillery (lindores-abbey-distillery)
 - Lochlea Distillery (lochlea-distillery)
 - Moffat distillery (moffat-distillery)
@@ -224,6 +231,7 @@ None. Every multi-site controller in the matched Scotch set is a group.
 - North Point Distillery (north-point-distillery)
 - North Uist Distillery (north-uist-distillery)
 - Port of Leith distillery (port-of-leith-distillery)
+- Stannergill Distillery (stannergill-distillery)
 - Stirling distillery (stirling-distillery)
 - Strathearn Distillery (strathearn-distillery)
 - The Borders Distillery (the-borders-distillery)
@@ -232,6 +240,7 @@ None. Every multi-site controller in the matched Scotch set is a group.
 - The Orkney Distillery (the-orkney-distillery)
 - Tomatin Distillery (tomatin-distillery)
 - Tormore Distillery (tormore-distillery)
+- Toulvaddie Distillery (toulvaddie-distillery)
 - Tullibardine Distillery (tullibardine-distillery)
 - Uile-bheist Distillery (uile-bheist-distillery)
 - Wolfburn Distillery (wolfburn-distillery)

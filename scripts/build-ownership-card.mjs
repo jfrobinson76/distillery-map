@@ -240,7 +240,10 @@ function loadAuditedUniverse(table) {
     if (p.slug && lon != null) bySlug.set(p.slug, { name: p.name || p.slug, lon, lat, desc: p.description || "" });
   }
   const rows = parseCsv(readFileSync(AUDIT_UNIVERSE, "utf8"));
-  const inScope = (r) => r.status.startsWith("operating (SWA)") || r.status.startsWith("operating list");
+  // Definition (22 Sep 2026): distilled whisky on site in the last 12 months or temporarily paused,
+  // evidenced by the SWA list or the operator / trade press. Gin-only, closed and not-yet-distilling
+  // sites carry units 0 in the audit file and drop out here.
+  const inScope = (r) => Number(r.units || 0) > 0;
   const displayFor = (name, i) => {
     const hit = (table.groups || []).find((g) =>
       [g.display, g.short, ...(g.match_names || [])].some((n) => n && n.toLowerCase() === name.toLowerCase())
@@ -275,6 +278,7 @@ function loadAuditedUniverse(table) {
       matched, company_name: "", company_number: "", confidence: "audit", relation: "",
       ultNumber: "", ultName: group, display, key: matched ? `audit:${group}` : `unmatched:${r.slug}`,
       pscSource: r.source || "", stopped_because: "", units: u,
+      parent: (r.parent || "").trim(),
     };
     if (isJV) jv.push(site); else included.push(site);
   }
@@ -495,15 +499,20 @@ function claimLines(data) {
   const pctGroup = Math.round((data.groupRun / data.total) * 100);
   const pctIndep = Math.round((data.independentCount / data.total) * 100);
   const pctDiageo = Math.round((data.diageoCount / data.total) * 100);
-  const twoThirds = pctGroup >= 62 && pctGroup <= 71;
+  const parentCount = data.parentCount || 0;
+  const bigger = data.groupRun + parentCount;
+  const pctBigger = Math.round((bigger / data.total) * 100);
+  const twoThirds = pctBigger >= 62 && pctBigger <= 71;
   return {
-    headline: twoThirds ? "Two-thirds group-run." : `${pctGroup}% group-run.`,
+    headline: twoThirds ? "Two-thirds answer to a bigger company." : `${pctBigger}% answer to a bigger company.`,
     body: data.universe
       ? `${data.total} operating Scotch whisky distilleries.`
       : `${data.total} Scotch whisky distilleries.`,
     groups: `${data.groupCount} groups run ${data.groupRun} of them (${pctGroup}%).`,
     indep: `At most ${data.independentCount} are independent (${pctIndep}%).`,
-    compact: `${data.total} operating distilleries. ${data.groupCount} groups run ${data.groupRun}. Diageo ${data.diageoCount}.`,
+    compact: parentCount
+      ? `${data.total} distilleries. ${data.groupCount} groups run ${data.groupRun}; ${parentCount} more belong to a larger drinks company. Diageo ${data.diageoCount}.`
+      : `${data.total} operating distilleries. ${data.groupCount} groups run ${data.groupRun}. Diageo ${data.diageoCount}.`,
     diageo: `Diageo alone runs ${data.diageoCount} (${pctDiageo}%).`,
     caveat: "By number of distilleries, not by litres.",
   };
@@ -760,6 +769,10 @@ function placeMap(data, outline) {
     const [x, y] = project(s.lon, s.lat);
     return { ...s, x, y };
   });
+  const parentOwned = (data.parentOwned || []).map((s) => {
+    const [x, y] = project(s.lon, s.lat);
+    return { ...s, x, y };
+  });
 
   const collisions = [
     { x: reserved.x, y: reserved.y, w: reserved.w, h: reserved.h },
@@ -787,7 +800,7 @@ function placeMap(data, outline) {
     siteLabels.push({ ...s, ...hit });
   }
 
-  return { outlinePaths, groups, independents, siteLabels: [] };
+  return { outlinePaths, groups, independents, parentOwned, siteLabels: [] };
 }
 
 function svgMap(layout) {
@@ -800,6 +813,10 @@ function svgMap(layout) {
   // drawn on top of the land and under the group webs.
   for (const n of layout.independents) {
     out += `<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="4.4" fill="${SB.page}" stroke="${SB.oak}" stroke-width="1.6" stroke-opacity="0.9"/>`;
+  }
+
+  for (const n of layout.parentOwned || []) {
+    out += `<circle cx="${n.x.toFixed(1)}" cy="${n.y.toFixed(1)}" r="5.2" fill="${SB.oak}" stroke="${SB.page}" stroke-width="1.1"/>`;
   }
 
   for (const g of layout.groups) {
@@ -826,10 +843,12 @@ function railHtml(data) {
         `<div class="rail-row" style="color:${g.colour}"><span>${esc(g.short)}</span><span class="n">${g.sites.length}</span></div>`
     )
     .join("");
-  const indep = `<div class="rail-row rail-indep" style="color:${SB.oak}"><span><svg width="12" height="12" viewBox="0 0 12 12" style="vertical-align:-1px;margin-right:6px"><circle cx="6" cy="6" r="4.2" fill="${SB.page}" stroke="${SB.oak}" stroke-width="1.5"/></svg>Independent</span><span class="n">${data.independentCount}</span></div>`;
+  const indep = `<div class="rail-row${data.parentCount ? "" : " rail-indep"}" style="color:${SB.oak}"><span><svg width="12" height="12" viewBox="0 0 12 12" style="vertical-align:-1px;margin-right:6px"><circle cx="6" cy="6" r="4.2" fill="${SB.page}" stroke="${SB.oak}" stroke-width="1.5"/></svg>Independent</span><span class="n">${data.independentCount}</span></div>`;
+  const parent = data.parentCount
+    ? `<div class="rail-row rail-indep" style="color:${SB.oak}"><span><svg width="12" height="12" viewBox="0 0 12 12" style="vertical-align:-1px;margin-right:6px"><circle cx="6" cy="6" r="4.2" fill="${SB.oak}" stroke="${SB.page}" stroke-width="1"/></svg>Part of a larger company</span><span class="n">${data.parentCount}</span></div>` : "";
   const jv = data.jv && data.jv.length
     ? `<div class="rail-row" style="color:${SB.oak}"><span>Joint venture</span><span class="n">${data.jv.length}</span></div>` : "";
-  return `<div class="rail">${rows}${indep}${jv}</div>`;
+  return `<div class="rail">${rows}${parent}${indep}${jv}</div>`;
 }
 
 function cardChrome(data, svg, aria, extras = {}) {
@@ -935,7 +954,7 @@ function cardChrome(data, svg, aria, extras = {}) {
       <div class="caveat">${esc(claim.caveat)}</div>
     </div>
     <div class="foot">
-      <div class="source">SWA operating list (Sept 2026), Companies House PSC filings, operators' own sites</div>
+      <div class="source">SWA operating list (Sept 2026), Companies House PSC filings, operators and trade press</div>
       <div class="footer">
         <span><span class="wm">Still<i>bound</i></span><span class="tagline">Liquid intelligence</span></span>
         <span class="site">${esc(data.sourceSlug)}</span>
@@ -967,13 +986,14 @@ function renderSummary(data, mapLayout) {
   lines.push(`| Scotch whisky sites | ${data.total} |`);
   lines.push(`| Matched high/verified | ${data.matched} |`);
   lines.push(`| Unmatched (drawn as independent) | ${data.unmatched.length} |`);
-  lines.push(`| Independent (controller has one site, plus unmatched) | ${data.independentCount} |`);
+  if (data.parentCount) lines.push(`| One Scotch site, but part of a larger drinks company | ${data.parentCount} |`);
+  lines.push(`| Independent (one site, no larger drinks company above it) | ${data.independentCount} |`);
   lines.push(`| Group-run | ${data.groupRun} |`);
   lines.push(`| Groups >1 site | ${data.groupCount} |`);
   lines.push(`| Diageo | ${data.diageoCount} |`);
   lines.push("");
   lines.push(
-    `Independent means the ultimate controller in \`psc-parents.csv\` runs exactly one site in this universe. Unmatched Scotch sites are treated as independent dots — they are small, mostly post-2005 plants. Counts, not litres.`
+    `Universe (22 Sep 2026): Scotch whisky distilleries that distilled on site in the last 12 months or are temporarily paused, evidenced by the SWA September 2026 list or the operator / trade press. Gin-only, closed and not-yet-distilling sites are out. Independent means one Scotch site AND no larger drinks company above it; seven one-site owners sit under Campari, Rémy Cointreau, Nikka, Takara, Picard, Lalique and Halewood and are counted separately (\`parent\` column in the audit file). Counts, not litres.`
   );
   lines.push("");
   lines.push(`## Universe`);
@@ -1182,7 +1202,12 @@ async function main() {
     // SWA scope: units (Loch Lomond malt + grain = 2), JV counted once and shown separately.
     data.total = audited.units; // JV units are already inside audited.units
     data.jv = audited.jv;
-    data.universe = "SWA September 2026 operating list";
+    data.universe = "September 2026 audited universe";
+    // A one-Scotch-site owner is not independent when a larger drinks company sits above it
+    // (Glen Grant/Campari, Bruichladdich/Rémy Cointreau ...). Those are split out of Independent.
+    data.parentOwned = data.independents.filter((s) => s.parent);
+    data.independents = data.independents.filter((s) => !s.parent);
+    data.parentCount = data.parentOwned.reduce((n, s) => n + (s.units || 1), 0);
     data.independentCount = data.independents.reduce((n, s) => n + (s.units || 1), 0);
     data.groupRun = data.groups.reduce((n, g) => n + g.sites.reduce((m, s) => m + (s.units || 1), 0), 0);
   }
