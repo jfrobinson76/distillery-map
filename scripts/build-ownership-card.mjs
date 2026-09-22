@@ -19,7 +19,7 @@ import { fileURLToPath } from "node:url";
 const here = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(here, "..");
 
-const SOURCE_SLUG = "stillbound.ai/research/ownership";
+const SOURCE_SLUG = "stillbound.ai/research";
 const EDITION = "September 2026";
 const TITLE = "Who Runs Scotland's Stills";
 
